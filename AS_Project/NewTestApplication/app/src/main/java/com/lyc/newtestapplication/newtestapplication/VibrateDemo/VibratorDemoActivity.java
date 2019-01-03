@@ -1,6 +1,9 @@
 package com.lyc.newtestapplication.newtestapplication.VibrateDemo;
 
 import android.annotation.SuppressLint;
+import android.media.AudioAttributes;
+import android.os.Message;
+import android.os.Vibrator;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -85,12 +88,28 @@ public class VibratorDemoActivity extends BaseActivity {
         }
     };
 
+
+    private static final long[] DOUBLE_CLICK_EFFECT_FALLBACK_TIMINGS = { 0, 40, 100, 40 };
+    private static final long[] CLICK_EFFECT_FALLBACK_TIMINGS = { 0, 10, 20, 30 };
+    private static final long[] HEAVY_CLICK_EFFECT_FALLBACK_TIMINGS = { 0, 1, 20, 21 };
+
+    private static final AudioAttributes FINGERPRINT_SONFICATION_ATTRIBUTES =
+            new AudioAttributes.Builder()
+                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                    .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
+                    .build();
+    Vibrator vibrator;
+    private static final int START_VIBRATE=0;
+    private static final int STOP_VIBRATE=1;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_vibrator_demo);
 
+        vibrator= (Vibrator) getSystemService(VIBRATOR_SERVICE);
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
         mContentView = findViewById(R.id.fullscreen_content);
@@ -121,11 +140,17 @@ public class VibratorDemoActivity extends BaseActivity {
     }
 
     private void toggle() {
+
+
+
         if (mVisible) {
             hide();
+            mVibrateHandler.sendEmptyMessage(STOP_VIBRATE);
         } else {
             show();
+            mVibrateHandler.sendEmptyMessage(START_VIBRATE);
         }
+
     }
 
     private void hide() {
@@ -162,4 +187,37 @@ public class VibratorDemoActivity extends BaseActivity {
         mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
+
+    private void goVibrate(long[] pattern){
+        vibrator.vibrate(pattern,-1,FINGERPRINT_SONFICATION_ATTRIBUTES);
+    }
+
+
+    private void goVibrateUntilStop(long[] pattern){
+        vibrator.vibrate(pattern,0,FINGERPRINT_SONFICATION_ATTRIBUTES);
+
+    }
+
+    public void cancelVibrate() {
+        if (vibrator.hasVibrator()) {
+            vibrator.cancel();
+        }
+    }
+
+    private  Handler mVibrateHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+//            Log.d(TAG, "handleMessage=>what: " + msg.what + " start: " + mIsStartTest);
+            switch (msg.what) {
+                case START_VIBRATE:
+                    goVibrateUntilStop(DOUBLE_CLICK_EFFECT_FALLBACK_TIMINGS);
+                    break;
+                case STOP_VIBRATE:
+                    cancelVibrate();
+                    break;
+                default:
+                    break;
+            }
+        }
+    };
 }

@@ -1,23 +1,26 @@
-package com.lyc.newtestapplication.newtestapplication.VibrateDemo;
+package com.lyc.newtestapplication.newtestapplication.LifeBalance;
 
 import android.annotation.SuppressLint;
-import android.media.AudioAttributes;
-import android.os.Message;
-import android.os.Vibrator;
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import com.jakewharton.rxbinding3.view.RxView;
 import com.lyc.newtestapplication.newtestapplication.BaseActivity;
 import com.lyc.newtestapplication.newtestapplication.R;
+import io.reactivex.functions.Consumer;
+import kotlin.Unit;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-public class VibratorDemoActivity extends BaseActivity {
+public class LifeBalanceLaunchActivity extends BaseActivity {
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -88,30 +91,23 @@ public class VibratorDemoActivity extends BaseActivity {
         }
     };
 
-
-    private static final long[] DOUBLE_CLICK_EFFECT_FALLBACK_TIMINGS = { 0, 80, 100, 80 };
-    private static final long[] CLICK_EFFECT_FALLBACK_TIMINGS = { 0, 10, 20, 30 };
-    private static final long[] HEAVY_CLICK_EFFECT_FALLBACK_TIMINGS = { 0, 1, 20, 21 };
-
-    private static final AudioAttributes FINGERPRINT_SONFICATION_ATTRIBUTES =
-            new AudioAttributes.Builder()
-                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-                    .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
-                    .build();
-    Vibrator vibrator;
-    private static final int START_VIBRATE=0;
-    private static final int STOP_VIBRATE=1;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_vibrator_demo);
+        setContentView(R.layout.activity_life_balance_launch);
 
-        vibrator= (Vibrator) getSystemService(VIBRATOR_SERVICE);
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
+
+        RxView.clicks(mContentView)
+                .throttleFirst(2,TimeUnit.SECONDS)
+                .subscribe(new Consumer<Unit>() {
+            @Override
+            public void accept(Unit unit) throws Exception {
+                startDetermindActivity(FunctionItemsListActivity.class);
+            }
+        });
         mContentView = findViewById(R.id.fullscreen_content);
 
 
@@ -140,17 +136,11 @@ public class VibratorDemoActivity extends BaseActivity {
     }
 
     private void toggle() {
-
-
-        goVibrate(DOUBLE_CLICK_EFFECT_FALLBACK_TIMINGS);
         if (mVisible) {
             hide();
-//            mVibrateHandler.sendEmptyMessage(STOP_VIBRATE);
         } else {
             show();
-//            mVibrateHandler.sendEmptyMessage(START_VIBRATE);
         }
-
     }
 
     private void hide() {
@@ -188,36 +178,9 @@ public class VibratorDemoActivity extends BaseActivity {
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
 
-    private void goVibrate(long[] pattern){
-        vibrator.vibrate(pattern,-1,FINGERPRINT_SONFICATION_ATTRIBUTES);
+    private void startDetermindActivity(Class c) {
+        Intent intent = new Intent();
+        intent.setClass(this, c);
+        startActivity(intent);
     }
-
-
-    private void goVibrateUntilStop(long[] pattern){
-        vibrator.vibrate(pattern,0,FINGERPRINT_SONFICATION_ATTRIBUTES);
-
-    }
-
-    public void cancelVibrate() {
-        if (vibrator.hasVibrator()) {
-            vibrator.cancel();
-        }
-    }
-
-    private  Handler mVibrateHandler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-//            Log.d(TAG, "handleMessage=>what: " + msg.what + " start: " + mIsStartTest);
-            switch (msg.what) {
-                case START_VIBRATE:
-                    goVibrateUntilStop(DOUBLE_CLICK_EFFECT_FALLBACK_TIMINGS);
-                    break;
-                case STOP_VIBRATE:
-                    cancelVibrate();
-                    break;
-                default:
-                    break;
-            }
-        }
-    };
 }

@@ -38,6 +38,25 @@
                 android:label="@string/title_activity_vibrator_demo"
                 android:theme="@style/FullscreenTheme">
         </activity>
+        <activity android:name=".ViewModelTest.ViewModelTestActivity">
+        </activity>
+        <activity
+                android:name=".LifeBalance.LifeBalanceLaunchActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:icon="@mipmap/ic_launcher_lifebalance"
+                android:label="@string/title_activity_life_balance_launch"
+                android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".LifeBalance.FunctionItemsListActivity"
+                android:label="@string/title_activity_function_items_list"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

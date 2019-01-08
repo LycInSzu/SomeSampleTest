@@ -10,6 +10,7 @@ import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.MemoryFile;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.util.DisplayMetrics;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 import com.lyc.newtestapplication.newtestapplication.AboutSurfaceView.SurfaceViewTestActivity;
 import com.lyc.newtestapplication.newtestapplication.DialogTest.DialogTestActivity;
 import com.lyc.newtestapplication.newtestapplication.VibrateDemo.VibratorDemoActivity;
+import com.lyc.newtestapplication.newtestapplication.ViewModelTest.ViewModelTestActivity;
 
 
 import java.util.Locale;
@@ -127,6 +129,7 @@ public class FullscreenActivity extends BaseActivity {
 
 
         ContentResolver contentResolver = getContentResolver();
+
 
 
         int[] position = new int[2];
@@ -384,6 +387,10 @@ public class FullscreenActivity extends BaseActivity {
                 break;
             case Utils.VibratorDemoActivity:
                 startDetermindActivity(VibratorDemoActivity.class);
+                break;
+            case Utils.ViewModelTestActivity:
+                startDetermindActivity(ViewModelTestActivity.class);
+                break;
             default:
                 break;
         }

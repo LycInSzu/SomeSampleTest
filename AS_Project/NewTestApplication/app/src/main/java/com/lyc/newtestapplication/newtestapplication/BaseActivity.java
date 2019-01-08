@@ -99,5 +99,9 @@ public class BaseActivity extends AppCompatActivity {
         intent.setData(uri);
         startActivityForResult(intent, 123);
     }
-
+//    public void startDetermindActivity(Class c) {
+//        Intent intent = new Intent();
+//        intent.setClass(this, c);
+//        startActivity(intent);
+//    }
 }

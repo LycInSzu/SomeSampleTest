@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">Please Happy Everyday</string>
+
+    <string name="title_activity_life_balance_launch">生活收支</string>
+</resources>

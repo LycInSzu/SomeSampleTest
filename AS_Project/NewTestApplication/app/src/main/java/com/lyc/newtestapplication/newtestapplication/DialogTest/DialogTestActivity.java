@@ -33,7 +33,7 @@ public class DialogTestActivity extends AppCompatActivity {
         //设置构造器标题
         builder.setTitle("提示");
         //构造器对应的图标
-        builder.setIcon(R.mipmap.ic_launcher);
+        builder.setIcon(R.mipmap.ic_launcher_lifebalance);
         //构造器内容,为对话框设置文本项(之后还有列表项的例子)
         builder.setMessage("你是否要狠心离我而去？");
         //为构造器设置确定按钮,第一个参数为按钮显示的文本信息，第二个参数为点击后的监听事件，用匿名内部类实现

@@ -5,6 +5,7 @@ public class Utils {
 
     public static final int DialogTestActivity=2;
     public static final int VibratorDemoActivity=3;
+    public static final int  ViewModelTestActivity=4;
 
 
 
@@ -14,5 +15,5 @@ public class Utils {
 
 
 
-    public static int jumpToNewActivity=VibratorDemoActivity;
+    public static int jumpToNewActivity=ViewModelTestActivity;
 }

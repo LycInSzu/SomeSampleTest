@@ -21,11 +21,7 @@
                 android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|mcc|mnc"
                 android:label="@string/app_name"
                 android:theme="@style/FullscreenTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name=".AboutSurfaceView.SurfaceViewTestActivity"/>
         <activity
@@ -37,8 +33,6 @@
                 android:configChanges="orientation|keyboardHidden|screenSize"
                 android:label="@string/title_activity_vibrator_demo"
                 android:theme="@style/FullscreenTheme">
-        </activity>
-        <activity android:name=".ViewModelTest.ViewModelTestActivity">
         </activity>
         <activity
                 android:name=".LifeBalance.LifeBalanceLaunchActivity"
@@ -56,6 +50,8 @@
                 android:name=".LifeBalance.FunctionItemsListActivity"
                 android:label="@string/title_activity_function_items_list"
                 android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".ViewModelTest.ViewModelTestActivity">
         </activity>
     </application>
 

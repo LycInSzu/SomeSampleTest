@@ -1,6 +1,6 @@
 package com.lyc.newtestapplication.newtestapplication.ViewModelTest;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.lyc.newtestapplication.newtestapplication.R;
 import com.lyc.newtestapplication.newtestapplication.ViewModelTest.ui.viewmodeltest.ViewModelTestFragment;

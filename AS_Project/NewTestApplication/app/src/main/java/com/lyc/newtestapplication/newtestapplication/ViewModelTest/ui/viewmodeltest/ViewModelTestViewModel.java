@@ -1,6 +1,6 @@
 package com.lyc.newtestapplication.newtestapplication.ViewModelTest.ui.viewmodeltest;
 
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel;
 
 public class ViewModelTestViewModel extends ViewModel {
     // TODO: Implement the ViewModel

@@ -2,8 +2,9 @@ package com.lyc.newtestapplication.newtestapplication.LifeBalance;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
@@ -21,6 +22,7 @@ import java.util.concurrent.TimeUnit;
  * status bar and navigation/system bar) with user interaction.
  */
 public class LifeBalanceLaunchActivity extends BaseActivity {
+
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -38,6 +40,7 @@ public class LifeBalanceLaunchActivity extends BaseActivity {
      * and a change of the status and navigation bar.
      */
     private static final int UI_ANIMATION_DELAY = 300;
+    private static final String TAG = "LifeBalanceLaunchActivity" ;
     private final Handler mHideHandler = new Handler();
     private View mContentView;
     private final Runnable mHidePart2Runnable = new Runnable() {
@@ -100,25 +103,41 @@ public class LifeBalanceLaunchActivity extends BaseActivity {
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
 
-        RxView.clicks(mContentView)
+        RxView.clicks(mControlsView)
                 .throttleFirst(2,TimeUnit.SECONDS)
-                .subscribe(new Consumer<Unit>() {
-            @Override
-            public void accept(Unit unit) throws Exception {
-                startDetermindActivity(FunctionItemsListActivity.class);
-            }
-        });
+                .subscribe(new Consumer<Object>() {
+                    @Override
+                    public void accept(Object unit) throws Exception {
+                        Log.i(TAG,"on click consumer");
+                        startDetermindActivity(FunctionItemsListActivity.class);
+                    }
+                });
+
         mContentView = findViewById(R.id.fullscreen_content);
 
 
         // Set up the user interaction to manually show or hide the system UI.
-        mContentView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                toggle();
-            }
-        });
-
+//        mContentView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                toggle();
+//            }
+//        });
+        RxView.clicks(mControlsView)
+                .throttleFirst(2,TimeUnit.SECONDS)
+                .subscribe(new Consumer<Unit>() {
+                    @Override
+                    public void accept(Unit unit) throws Exception {
+                        Log.i(TAG,"  mControlsView   on click consumer");
+                        toggle();
+                    }
+                });
+//        RxView.clicks(mContentView).subscribe(new Consumer<Unit>() {
+//            @Override
+//            public void accept(Unit unit) throws Exception {
+//
+//            }
+//        });
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
@@ -178,9 +197,9 @@ public class LifeBalanceLaunchActivity extends BaseActivity {
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
 
-    private void startDetermindActivity(Class c) {
-        Intent intent = new Intent();
-        intent.setClass(this, c);
-        startActivity(intent);
-    }
+//    private void startDetermindActivity(Class c) {
+//        Intent intent = new Intent();
+//        intent.setClass(this, c);
+//        startActivity(intent);
+//    }
 }

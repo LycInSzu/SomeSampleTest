@@ -14,9 +14,12 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
+
+    public String TAG = getCurrentActivityName().getSimpleName();
 
 
+    public abstract Class getCurrentActivityName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

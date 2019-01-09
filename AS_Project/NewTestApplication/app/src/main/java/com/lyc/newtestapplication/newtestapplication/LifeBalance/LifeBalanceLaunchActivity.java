@@ -1,21 +1,19 @@
 package com.lyc.newtestapplication.newtestapplication.LifeBalance;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.util.Log;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import com.jakewharton.rxbinding3.view.RxView;
+import android.widget.Button;
+import androidx.appcompat.app.ActionBar;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import com.lyc.newtestapplication.newtestapplication.BaseActivity;
+import com.lyc.newtestapplication.newtestapplication.LifeBalance.UI.ZhiMaManManActivity;
 import com.lyc.newtestapplication.newtestapplication.R;
-import io.reactivex.functions.Consumer;
-import kotlin.Unit;
 
-import java.util.concurrent.TimeUnit;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -40,8 +38,11 @@ public class LifeBalanceLaunchActivity extends BaseActivity {
      * and a change of the status and navigation bar.
      */
     private static final int UI_ANIMATION_DELAY = 300;
-    private static final String TAG = "LifeBalanceLaunchActivity" ;
     private final Handler mHideHandler = new Handler();
+
+    @BindView(R.id.dummy_button)
+    Button dummyButton;
+
     private View mContentView;
     private final Runnable mHidePart2Runnable = new Runnable() {
         @SuppressLint("InlinedApi")
@@ -99,49 +100,51 @@ public class LifeBalanceLaunchActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_life_balance_launch);
+        ButterKnife.bind(this);
 
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
 
-        RxView.clicks(mControlsView)
-                .throttleFirst(2,TimeUnit.SECONDS)
-                .subscribe(new Consumer<Object>() {
-                    @Override
-                    public void accept(Object unit) throws Exception {
-                        Log.i(TAG,"on click consumer");
-                        startDetermindActivity(FunctionItemsListActivity.class);
-                    }
-                });
+
+        dummyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(TAG, "on click consumer");
+                startDetermindActivity(ZhiMaManManActivity.class);
+            }
+        });
+//        RxView.clicks(mControlsView)
+//                .throttleFirst(2,TimeUnit.SECONDS)
+//                .subscribe(new Consumer<Object>() {
+//                    @Override
+//                    public void accept(Object unit) throws Exception {
+//                        Log.i(TAG,"on click consumer");
+//                        startDetermindActivity(FunctionItemsListActivity.class);
+//                    }
+//                });
 
         mContentView = findViewById(R.id.fullscreen_content);
 
 
         // Set up the user interaction to manually show or hide the system UI.
-//        mContentView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                toggle();
-//            }
-//        });
-        RxView.clicks(mControlsView)
-                .throttleFirst(2,TimeUnit.SECONDS)
-                .subscribe(new Consumer<Unit>() {
-                    @Override
-                    public void accept(Unit unit) throws Exception {
-                        Log.i(TAG,"  mControlsView   on click consumer");
-                        toggle();
-                    }
-                });
-//        RxView.clicks(mContentView).subscribe(new Consumer<Unit>() {
-//            @Override
-//            public void accept(Unit unit) throws Exception {
-//
-//            }
-//        });
+        mContentView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toggle();
+            }
+        });
+
+
+
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
-        findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+//        findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+    }
+
+    @Override
+    public Class getCurrentActivityName() {
+        return LifeBalanceLaunchActivity.class;
     }
 
     @Override
@@ -197,9 +200,5 @@ public class LifeBalanceLaunchActivity extends BaseActivity {
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
 
-//    private void startDetermindActivity(Class c) {
-//        Intent intent = new Intent();
-//        intent.setClass(this, c);
-//        startActivity(intent);
-//    }
+
 }

@@ -21,7 +21,6 @@
                 android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|mcc|mnc"
                 android:label="@string/app_name"
                 android:theme="@style/FullscreenTheme">
-
         </activity>
         <activity android:name=".AboutSurfaceView.SurfaceViewTestActivity"/>
         <activity
@@ -46,12 +45,14 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-                android:name=".LifeBalance.FunctionItemsListActivity"
-                android:label="@string/title_activity_function_items_list"
-                android:theme="@style/AppTheme.NoActionBar">
-        </activity>
         <activity android:name=".ViewModelTest.ViewModelTestActivity">
+        </activity>
+        <activity android:name=".LifeBalance.UI.ZhiMaManManActivity">
+        </activity>
+        <activity
+                android:name=".LifeBalance.UI.Countdown.CountdownActivity"
+                android:label="@string/title_activity_countdown"
+                android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 

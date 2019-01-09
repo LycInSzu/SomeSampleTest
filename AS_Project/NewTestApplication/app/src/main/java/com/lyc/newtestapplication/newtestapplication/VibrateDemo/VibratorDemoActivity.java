@@ -104,6 +104,11 @@ public class VibratorDemoActivity extends BaseActivity {
 
 
     @Override
+    public Class getCurrentActivityName() {
+        return VibratorDemoActivity.class;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 

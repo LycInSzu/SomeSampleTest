@@ -73,7 +73,7 @@ public class ZhiMaManManActivity extends BaseActivity {
             case    toIncomeActivity:
                 break;
             case    toCountdownActivity:
-                startDetermindActivity(CountdownActivity.class);
+                startDetermindActivity(CountdownActivity.class,null);
                 break;
             default:
                 break;

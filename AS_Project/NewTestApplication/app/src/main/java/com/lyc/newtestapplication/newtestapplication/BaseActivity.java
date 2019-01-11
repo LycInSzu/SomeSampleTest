@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatActivity;
@@ -102,9 +103,22 @@ public abstract class BaseActivity extends AppCompatActivity {
         intent.setData(uri);
         startActivityForResult(intent, 123);
     }
-    public void startDetermindActivity(Class c) {
+    public void startDetermindActivity(Class c,@Nullable Bundle data) {
         Intent intent = new Intent();
+        if (data!=null){
+
+        }
         intent.setClass(this, c);
         startActivity(intent);
+    }
+
+
+    public void startDetermindActivityForResult(Class c,@Nullable String flagName,@Nullable Bundle bundle, int requestCode) {
+        Intent intent = new Intent();
+        if (bundle!=null){
+            intent.putExtra(flagName,bundle);
+        }
+        intent.setClass(this, c);
+        startActivityForResult(intent,requestCode);
     }
 }

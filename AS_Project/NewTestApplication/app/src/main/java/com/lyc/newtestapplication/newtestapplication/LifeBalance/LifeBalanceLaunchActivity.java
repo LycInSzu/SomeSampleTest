@@ -110,7 +110,7 @@ public class LifeBalanceLaunchActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Log.i(TAG, "on click consumer");
-                startDetermindActivity(ZhiMaManManActivity.class);
+                startDetermindActivity(ZhiMaManManActivity.class,null);
             }
         });
 //        RxView.clicks(mControlsView)

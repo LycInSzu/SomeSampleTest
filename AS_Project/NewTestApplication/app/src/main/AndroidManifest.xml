@@ -26,7 +26,6 @@
         <activity
                 android:name=".DialogTest.DialogTestActivity"
                 android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|mcc|mnc"/>
-
         <activity
                 android:name=".VibrateDemo.VibratorDemoActivity"
                 android:configChanges="orientation|keyboardHidden|screenSize"
@@ -53,6 +52,8 @@
                 android:name=".LifeBalance.UI.Countdown.CountdownActivity"
                 android:label="@string/title_activity_countdown"
                 android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".LifeBalance.UI.Countdown.AddNewCountdownActivity">
         </activity>
     </application>
 

@@ -378,7 +378,7 @@ public class FullscreenActivity extends BaseActivity {
             case Utils.SurfaceViewTestActivity:
 
                 if (checkDangerousPermissions(this, permissions)) {
-                    startDetermindActivity(SurfaceViewTestActivity.class);
+                    startDetermindActivity(SurfaceViewTestActivity.class,null);
                 } else {
 
                     requestNeedPermissions(this, permissions, 342);
@@ -390,10 +390,10 @@ public class FullscreenActivity extends BaseActivity {
                 startActivity(intent2);
                 break;
             case Utils.VibratorDemoActivity:
-                startDetermindActivity(VibratorDemoActivity.class);
+                startDetermindActivity(VibratorDemoActivity.class,null);
                 break;
             case Utils.ViewModelTestActivity:
-                startDetermindActivity(ViewModelTestActivity.class);
+                startDetermindActivity(ViewModelTestActivity.class,null);
                 break;
             default:
                 break;
@@ -415,7 +415,7 @@ public class FullscreenActivity extends BaseActivity {
                     } else
                         finish();
                 } else {
-                    startDetermindActivity(SurfaceViewTestActivity.class);
+                    startDetermindActivity(SurfaceViewTestActivity.class,null);
                 }
                 break;
 

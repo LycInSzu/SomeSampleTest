@@ -1,9 +1,11 @@
 package com.lyc.newtestapplication.newtestapplication.LifeBalance.UI.Countdown;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -37,6 +39,7 @@ public class AddNewCountdownActivity extends BaseActivity {
     @BindView(R2.id.countdown_submit)
     Button countdownSubmit;
 
+    private long submitTime;
 
     @Override
     public Class getCurrentActivityName() {
@@ -51,6 +54,7 @@ public class AddNewCountdownActivity extends BaseActivity {
         countdownSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                submitTime = System.currentTimeMillis();
                 String name = countdownname.getText().toString().trim();
                 int days = Integer.parseInt(countdownDays.getText().toString());
                 int hours = Integer.parseInt(countdownHours.getText().toString());
@@ -95,11 +99,20 @@ public class AddNewCountdownActivity extends BaseActivity {
 
     private void addNewCountDownBean(String name, int days, int hours, int minutes, int seconds) {
 
-        long durition = MyTimeUtil.convertToMilliSeconds(days, hours, minutes, seconds);
-        CountDownBean countDownBean = new CountDownBean( name, false, durition);
-        addToDatabase(countDownBean);
+        long durition = MyTimeUtil.convertUserDateToMilliSeconds(days, hours, minutes, seconds);
+        long allTime=durition+submitTime;
+        Log.d(TAG," the durition is  "+durition+"  and the submitTime is "+submitTime+"   and plus is "+allTime);
+        String endtime = MyTimeUtil.convertToDate(allTime);
+        Log.d(TAG," the end date is set as "+endtime+"  and now is "+MyTimeUtil.convertToDate(submitTime));
 
-        setResult(RESULT_OK, null);
+        CountDownBean countDownBean = new CountDownBean(name, false, endtime, durition);
+        addToDatabase(countDownBean);
+        Intent intent=new Intent();
+        Bundle bundle=new Bundle();
+        bundle.putParcelable("newItem",countDownBean);
+        intent.putExtra("data",bundle);
+
+        setResult(RESULT_OK, intent);
 
     }
 
@@ -109,9 +122,9 @@ public class AddNewCountdownActivity extends BaseActivity {
 
         ContentValues cValue = new ContentValues();
         cValue.put("name", countDownBean.getName());
+        cValue.put("endTime", countDownBean.getEntTime());
+//        cValue.put("resttime", countDownBean.getDurition());
         cValue.put("isFinished", countDownBean.isFinished() ? 1 : 0);
-        cValue.put("resttime", countDownBean.getDurition());
-
         db.insert("countdown", null, cValue);
         db.close();
     }

@@ -37,4 +37,14 @@ public class MyCountdownTimeFormat {
     public int getSeconds() {
         return seconds;
     }
+
+    @Override
+    public String toString() {
+        return "MyCountdownTimeFormat{" +
+                "days=" + days +
+                ", hours=" + hours +
+                ", minutes=" + minutes +
+                ", seconds=" + seconds +
+                '}';
+    }
 }

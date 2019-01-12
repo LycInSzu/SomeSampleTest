@@ -32,11 +32,11 @@ public class LifeBalanceDatabaseHelper extends SQLiteOpenHelper {
     }
 
     private void createCountDownTable(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE "+TABLE_COUNTDOWN+" (" +
+        db.execSQL("CREATE TABLE " + TABLE_COUNTDOWN + " (" +
                 "_id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "name TEXT," +
-                "isFinished INTEGER ," +
-                "resttime INTEGER" +
+                "endTime TEXT ," +
+                "isFinished INTEGER" +
                 ");");
     }
 

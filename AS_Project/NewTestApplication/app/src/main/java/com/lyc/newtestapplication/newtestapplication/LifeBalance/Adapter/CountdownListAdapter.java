@@ -70,6 +70,7 @@ public class CountdownListAdapter extends RecyclerView.Adapter {
             ((MyViewHolder) holder).secondsLeft.setText("0");
         }else {
             MyCountdownTimeFormat format = MyTimeUtil.convertToTime(bean.getDurition());
+            Log.i("temp", " format is " + format);
             ((MyViewHolder) holder).daysLeft.setText(format.getDays()+"");
             ((MyViewHolder) holder).hoursLeft.setText(format.getHours()+"");
             ((MyViewHolder) holder).minutesLeft.setText(format.getMinutes()+"");

@@ -28,6 +28,7 @@ import com.lyc.newtestapplication.newtestapplication.LifeBalance.Beans.CountDown
 import com.lyc.newtestapplication.newtestapplication.LifeBalance.Beans.MyCountDownTimer;
 import com.lyc.newtestapplication.newtestapplication.LifeBalance.DatabaseHelper.LifeBalanceDatabaseHelper;
 import com.lyc.newtestapplication.newtestapplication.LifeBalance.Interfaces.TimeTrickerInterface;
+import com.lyc.newtestapplication.newtestapplication.LifeBalance.Utils.MyTimeUtil;
 import com.lyc.newtestapplication.newtestapplication.R;
 
 import java.util.ArrayList;
@@ -45,7 +46,7 @@ public class CountdownActivity extends BaseActivity
     private long startTime;
     private long endTime;
     private MyCountDownTimer myCountDownTimer;
-    private boolean getDataSuccess=false;
+    private boolean getDataSuccess = false;
 
     @Override
     public Class getCurrentActivityName() {
@@ -100,28 +101,31 @@ public class CountdownActivity extends BaseActivity
         countdownRecyclerView.setAdapter(adapter);
 
         myCountDownTimer = new MyCountDownTimer(1000 * 60 * 60 * 34 * 10, 1000, this);
+        startCountdownTimer();
 
         queryAllCountdownFromDB(countdownItemLits);
-        myCountDownTimer.start();
+
+
     }
 
     private void queryAllCountdownFromDB(ArrayList<CountDownBean> countdownItemLits) {
         countdownItemLits.clear();
         LifeBalanceDatabaseHelper databaseHelper = new LifeBalanceDatabaseHelper(CountdownActivity.this);
         SQLiteDatabase db = databaseHelper.getReadableDatabase();
-        Cursor cursor = db.query("countdown", new String[]{"name", "isFinished", "resttime"}, null, null, null, null, null);
+        Cursor cursor = db.query("countdown", new String[]{"name", "endTime", "isFinished"}, null, null, null, null, null);
 
         while (cursor.moveToNext()) {
             String name = cursor.getString(cursor.getColumnIndex("name"));
+            String endTime = cursor.getString(cursor.getColumnIndex("endTime"));
+            long durition = MyTimeUtil.convertToMilliSeconds(endTime) - startTime;
             boolean isFinished = cursor.getInt(cursor.getColumnIndex("isFinished")) == 1;
-            long durition = cursor.getLong(cursor.getColumnIndex("resttime"));
-            Log.d(TAG, "  cursor content name is " + name + "   durition is " + durition);
-            CountDownBean bean = new CountDownBean(name, isFinished, durition);
+            Log.d(TAG, "  cursor content name is " + name + "   startcountdownTime is " + startTime+"  and the date is "+MyTimeUtil.convertToDate(startTime)+ ";   endTime is " + endTime+ "   durition is " + durition);
+            CountDownBean bean = new CountDownBean(name, isFinished, endTime, durition);
             Log.d(TAG, "  new  CountDownBean is " + bean);
             countdownItemLits.add(bean);
         }
         db.close();
-        getDataSuccess=true;
+        getDataSuccess = true;
         adapter.notifyDataSetChanged();
     }
 
@@ -185,16 +189,11 @@ public class CountdownActivity extends BaseActivity
         return System.currentTimeMillis();
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        startCountdownTimer();
-    }
 
     private void startCountdownTimer() {
         //TODO: getdata from database
         startTime = getCurrentTimeMIllins();
-
+        myCountDownTimer.start();
         //TODO: calculate period between and update data and start countdowntimer
 
         //TODO: show in recycle view
@@ -203,9 +202,15 @@ public class CountdownActivity extends BaseActivity
     @Override
     protected void onStop() {
         super.onStop();
+
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
         cancelCountdownTimer();
         updateDatabase(countdownItemLits);
-
     }
 
     private void updateDatabase(ArrayList<CountDownBean> countdownItemLits) {
@@ -213,13 +218,10 @@ public class CountdownActivity extends BaseActivity
         SQLiteDatabase db = databaseHelper.getWritableDatabase();
         for (int i = 0; i < countdownItemLits.size(); i++) {
             CountDownBean bean = countdownItemLits.get(i);
-            if (bean.isFinished()||(bean.getDurition() < 1000)){
-                String sql = "update countdown set isFinished = 1 where name = '"+bean.getName()+"'";
+            if (bean.isFinished() || (bean.getDurition() < 1000)) {
+                String sql = "update countdown set isFinished = 1 where name = '" + bean.getName() + "'";
                 db.execSQL(sql);
                 continue;
-            } else {
-                String sql = "update countdown set resttime ="+bean.getDurition()+" where name = '"+bean.getName()+"'";
-                db.execSQL(sql);
             }
         }
         db.close();
@@ -237,7 +239,11 @@ public class CountdownActivity extends BaseActivity
         switch (requestCode) {
             case 1:
                 if (resultCode == RESULT_OK) {
-                    queryAllCountdownFromDB(countdownItemLits);
+//                    queryAllCountdownFromDB(countdownItemLits);
+                    Bundle bundle=data.getBundleExtra("data");
+                    CountDownBean bean=bundle.getParcelable("newItem");
+                    countdownItemLits.add(bean);
+                    adapter.notifyDataSetChanged();
                 } else {
 
                 }
@@ -247,18 +253,20 @@ public class CountdownActivity extends BaseActivity
 
     @Override
     public void onTick(long millisUntilFinished) {
-        if (!getDataSuccess){
+        Log.d(TAG,"  ---OnTrick run");
+        if (!getDataSuccess) {
             return;
         }
         for (int i = 0; i < countdownItemLits.size(); i++) {
             CountDownBean bean = countdownItemLits.get(i);
-            if (bean.isFinished()){
+            if (bean.isFinished()) {
                 continue;
             }
             if (bean.getDurition() - 1000 > 1000) {
                 bean.setDurition(bean.getDurition() - 1000);
             } else {
                 bean.setFinished(true);
+                bean.setDurition(0);
             }
 
         }

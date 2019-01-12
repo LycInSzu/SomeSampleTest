@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
-    public String TAG = getCurrentActivityName().getSimpleName();
+    public String TAG ="my"+ getCurrentActivityName().getSimpleName();
 
 
     public abstract Class getCurrentActivityName();

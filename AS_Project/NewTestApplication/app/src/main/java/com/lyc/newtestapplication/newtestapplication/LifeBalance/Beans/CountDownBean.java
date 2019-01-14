@@ -4,15 +4,15 @@ import android.os.CountDownTimer;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.NonNull;
+import com.lyc.newtestapplication.newtestapplication.LifeBalance.Utils.MyTimeUtil;
 
-public class CountDownBean  implements Parcelable{
+public class CountDownBean implements Parcelable {
 
-    public CountDownBean(String name,boolean finishend,String entTime, long durition) {
+    public CountDownBean(String name, boolean finishend, String entTime) {
 
-        this.name=name;
-        this.isFinished=finishend;
-        this.entTime=entTime;
-        this.durition=durition;
+        this.name = name;
+        this.isFinished = finishend;
+        this.entTime = entTime;
     }
 
 
@@ -20,7 +20,7 @@ public class CountDownBean  implements Parcelable{
 
     protected CountDownBean(Parcel in) {
         name = in.readString();
-        durition = in.readLong();
+//        durition = in.readLong();
         isFinished = in.readByte() != 0;
         entTime = in.readString();
     }
@@ -41,29 +41,28 @@ public class CountDownBean  implements Parcelable{
         this.name = name;
     }
 
-    public void setDurition(long durition) {
-        this.durition = durition;
-    }
+//    public void setDurition(long durition) {
+//        this.durition = durition;
+//    }
 
     public void setFinished(boolean finished) {
         isFinished = finished;
     }
 
-    long durition;
 
     public String getName() {
         return name;
     }
 
     public long getDurition() {
-        return durition;
+        return MyTimeUtil.convertToMilliSeconds(entTime) > 0 ? MyTimeUtil.convertToMilliSeconds(entTime) - System.currentTimeMillis() : 0;
     }
 
     public boolean isFinished() {
         return isFinished;
     }
 
-    boolean isFinished=false;//0:未结束， 1:结束；
+    boolean isFinished = false;//0:未结束， 1:结束；
 
     public String getEntTime() {
         return entTime;
@@ -78,7 +77,7 @@ public class CountDownBean  implements Parcelable{
     @NonNull
     @Override
     public String toString() {
-        return "name is :"+name+" ;  entTime is :"+entTime+" ;  durition is :"+durition+"  isFinished :"+isFinished;
+        return "name is :" + name + " ;  entTime is :" + entTime + " ;  durition is :" + getDurition() + "  isFinished :" + isFinished;
     }
 
     @Override
@@ -89,7 +88,7 @@ public class CountDownBean  implements Parcelable{
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(name);
-        dest.writeLong(durition);
+//        dest.writeLong(durition);
         dest.writeByte((byte) (isFinished ? 1 : 0));
         dest.writeString(entTime);
     }

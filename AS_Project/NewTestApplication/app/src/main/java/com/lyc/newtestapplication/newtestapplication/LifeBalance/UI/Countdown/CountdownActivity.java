@@ -2,9 +2,13 @@ package com.lyc.newtestapplication.newtestapplication.LifeBalance.UI.Countdown;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteStatement;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -41,12 +45,29 @@ public class CountdownActivity extends BaseActivity
 
 
     private RecyclerView.LayoutManager layoutManager;
-    private ArrayList<CountDownBean> countdownItemLits = new ArrayList<>();
-    private CountdownListAdapter adapter;
-    private long startTime;
-    private long endTime;
+    private final ArrayList<CountDownBean> countdownItemLits = new ArrayList<>();
+    private static CountdownListAdapter adapter;
+    //    private long endTime;
     private MyCountDownTimer myCountDownTimer;
-    private boolean getDataSuccess = false;
+    private static boolean getDataSuccess = false;
+
+    private static final int QUERYDATA_FROMDATABASE_OK = 1;
+
+    private static Handler countDownHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case QUERYDATA_FROMDATABASE_OK:
+                    Log.d("countDownHandler", "---------QUERYDATA_FROMDATABASE_OK-------");
+                    getDataSuccess = true;
+                    adapter.notifyDataSetChanged();
+                    break;
+                default:
+                    break;
+            }
+        }
+    };
 
     @Override
     public Class getCurrentActivityName() {
@@ -85,48 +106,49 @@ public class CountdownActivity extends BaseActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         layoutManager = new LinearLayoutManager(CountdownActivity.this, RecyclerView.VERTICAL, false);
         countdownRecyclerView.setLayoutManager(layoutManager);
-
-//        countdownItemLits.add(new CountDownBean(120,2));
-//        countdownItemLits.add(new CountDownBean(120,2));
-//        countdownItemLits.add(new CountDownBean(120,2));
-
-
         adapter = new CountdownListAdapter(countdownItemLits);
         countdownRecyclerView.setAdapter(adapter);
-
         myCountDownTimer = new MyCountDownTimer(1000 * 60 * 60 * 34 * 10, 1000, this);
+
+        queryAllCountdownFromDB();
         startCountdownTimer();
-
-        queryAllCountdownFromDB(countdownItemLits);
-
-
     }
 
-    private void queryAllCountdownFromDB(ArrayList<CountDownBean> countdownItemLits) {
-        countdownItemLits.clear();
-        LifeBalanceDatabaseHelper databaseHelper = new LifeBalanceDatabaseHelper(CountdownActivity.this);
-        SQLiteDatabase db = databaseHelper.getReadableDatabase();
-        Cursor cursor = db.query("countdown", new String[]{"name", "endTime", "isFinished"}, null, null, null, null, null);
+//    private void getEndTime() {
+//        SharedPreferences countdownSharedPreferences = getSharedPreferences("countdown", 0);
+//        endTime = countdownSharedPreferences.getLong("endTime", 0);
+//    }
 
-        while (cursor.moveToNext()) {
-            String name = cursor.getString(cursor.getColumnIndex("name"));
-            String endTime = cursor.getString(cursor.getColumnIndex("endTime"));
-            long durition = MyTimeUtil.convertToMilliSeconds(endTime) - startTime;
-            boolean isFinished = cursor.getInt(cursor.getColumnIndex("isFinished")) == 1;
-            Log.d(TAG, "  cursor content name is " + name + "   startcountdownTime is " + startTime+"  and the date is "+MyTimeUtil.convertToDate(startTime)+ ";   endTime is " + endTime+ "   durition is " + durition);
-            CountDownBean bean = new CountDownBean(name, isFinished, endTime, durition);
-            Log.d(TAG, "  new  CountDownBean is " + bean);
-            countdownItemLits.add(bean);
-        }
-        db.close();
-        getDataSuccess = true;
-        adapter.notifyDataSetChanged();
+    private void queryAllCountdownFromDB() {
+        Log.d(TAG, "--------------queryAllCountdownFromDB-------------------");
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                countdownItemLits.clear();
+                LifeBalanceDatabaseHelper databaseHelper = LifeBalanceDatabaseHelper.getInstance(CountdownActivity.this);
+                SQLiteDatabase db = databaseHelper.getReadableDatabase();
+                Cursor cursor = db.query("countdown", new String[]{"name", "endTime", "isFinished"}, null, null, null, null, null);
+
+                while (cursor.moveToNext()) {
+                    String name = cursor.getString(cursor.getColumnIndex("name"));
+                    String endTime = cursor.getString(cursor.getColumnIndex("endTime"));
+//                    long durition = MyTimeUtil.convertToMilliSeconds(endTime) - startTime;
+                    boolean isFinished = cursor.getInt(cursor.getColumnIndex("isFinished")) == 1;
+//                    Log.d(TAG, "  cursor content name is " + name + "   startcountdownTime is " + startTime + "  and the date is " + MyTimeUtil.convertToDate(startTime) + ";   endTime is " + endTime + "   durition is " + durition);
+                    CountDownBean bean = new CountDownBean(name, isFinished, endTime);
+                    Log.d(TAG, "  new  CountDownBean is " + bean);
+                    countdownItemLits.add(bean);
+                }
+                cursor.close();
+                db.close();
+                countDownHandler.sendEmptyMessage(QUERYDATA_FROMDATABASE_OK);
+            }
+        }).start();
     }
 
     @Override
@@ -184,52 +206,55 @@ public class CountdownActivity extends BaseActivity
         return true;
     }
 
-
-    private long getCurrentTimeMIllins() {
-        return System.currentTimeMillis();
-    }
-
-
     private void startCountdownTimer() {
-        //TODO: getdata from database
-        startTime = getCurrentTimeMIllins();
         myCountDownTimer.start();
-        //TODO: calculate period between and update data and start countdowntimer
-
-        //TODO: show in recycle view
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-
-
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         cancelCountdownTimer();
-        updateDatabase(countdownItemLits);
+        updateDatabase();
     }
 
-    private void updateDatabase(ArrayList<CountDownBean> countdownItemLits) {
-        LifeBalanceDatabaseHelper databaseHelper = new LifeBalanceDatabaseHelper(CountdownActivity.this);
-        SQLiteDatabase db = databaseHelper.getWritableDatabase();
-        for (int i = 0; i < countdownItemLits.size(); i++) {
-            CountDownBean bean = countdownItemLits.get(i);
-            if (bean.isFinished() || (bean.getDurition() < 1000)) {
-                String sql = "update countdown set isFinished = 1 where name = '" + bean.getName() + "'";
-                db.execSQL(sql);
-                continue;
+    private void updateDatabase() {
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                LifeBalanceDatabaseHelper databaseHelper = LifeBalanceDatabaseHelper.getInstance(CountdownActivity.this);
+                SQLiteDatabase db = databaseHelper.getWritableLifeBalanceDatabase();
+                String sql = "update countdown set isFinished = 1 where name = ?";
+                SQLiteStatement sqLiteStatement = db.compileStatement(sql);
+                for (int i = 0; i < countdownItemLits.size(); i++) {
+                    CountDownBean bean = countdownItemLits.get(i);
+
+                    if (bean.isFinished() || (bean.getDurition() < 1000)) {
+                        sqLiteStatement.clearBindings();
+                        sqLiteStatement.bindString(1, bean.getName());
+                        sqLiteStatement.execute();
+//                String sql = "update countdown set isFinished = 1 where name = '" + bean.getName() + "'";
+//                db.execSQL(sql);
+                    }
+                }
+                databaseHelper.closeWritableLifeBalanceDatabase();
             }
-        }
-        db.close();
+        }).start();
+
     }
 
     private void cancelCountdownTimer() {
         //TODO: cancel  and  update database
-        endTime = getCurrentTimeMIllins();
+//        endTime = getCurrentTimeMIllins();
+//        SharedPreferences countdownSharedPreferences = getSharedPreferences("countdown", 0);
+//        SharedPreferences.Editor editor = countdownSharedPreferences.edit();
+//        editor.putLong("endTime", endTime);
+//        editor.apply();
         myCountDownTimer.cancel();
     }
 
@@ -240,8 +265,8 @@ public class CountdownActivity extends BaseActivity
             case 1:
                 if (resultCode == RESULT_OK) {
 //                    queryAllCountdownFromDB(countdownItemLits);
-                    Bundle bundle=data.getBundleExtra("data");
-                    CountDownBean bean=bundle.getParcelable("newItem");
+                    Bundle bundle = data.getBundleExtra("data");
+                    CountDownBean bean = bundle.getParcelable("newItem");
                     countdownItemLits.add(bean);
                     adapter.notifyDataSetChanged();
                 } else {
@@ -253,22 +278,9 @@ public class CountdownActivity extends BaseActivity
 
     @Override
     public void onTick(long millisUntilFinished) {
-        Log.d(TAG,"  ---OnTrick run");
+        Log.d(TAG, "  ---OnTrick run");
         if (!getDataSuccess) {
             return;
-        }
-        for (int i = 0; i < countdownItemLits.size(); i++) {
-            CountDownBean bean = countdownItemLits.get(i);
-            if (bean.isFinished()) {
-                continue;
-            }
-            if (bean.getDurition() - 1000 > 1000) {
-                bean.setDurition(bean.getDurition() - 1000);
-            } else {
-                bean.setFinished(true);
-                bean.setDurition(0);
-            }
-
         }
         adapter.notifyDataSetChanged();
     }

@@ -55,11 +55,11 @@ public class AddNewCountdownActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 submitTime = System.currentTimeMillis();
-                String name = countdownname.getText().toString().trim();
-                int days = Integer.parseInt(countdownDays.getText().toString());
-                int hours = Integer.parseInt(countdownHours.getText().toString());
-                int minutes = Integer.parseInt(countdownMinutes.getText().toString());
-                int seconds = Integer.parseInt(countdownSeconds.getText().toString());
+                final String name = countdownname.getText().toString().trim();
+                final int days = Integer.parseInt(countdownDays.getText().toString());
+                final int hours = Integer.parseInt(countdownHours.getText().toString());
+                final int minutes = Integer.parseInt(countdownMinutes.getText().toString());
+                final int seconds = Integer.parseInt(countdownSeconds.getText().toString());
 
                 if (TextUtils.isEmpty(name)) {
                     Toast.makeText(AddNewCountdownActivity.this, "name can not be null!!!", Toast.LENGTH_SHORT).show();
@@ -92,6 +92,7 @@ public class AddNewCountdownActivity extends BaseActivity {
                 }
 
                 addNewCountDownBean(name, days, hours, minutes, seconds);
+
                 AddNewCountdownActivity.this.finish();
             }
         });
@@ -100,33 +101,39 @@ public class AddNewCountdownActivity extends BaseActivity {
     private void addNewCountDownBean(String name, int days, int hours, int minutes, int seconds) {
 
         long durition = MyTimeUtil.convertUserDateToMilliSeconds(days, hours, minutes, seconds);
-        long allTime=durition+submitTime;
-        Log.d(TAG," the durition is  "+durition+"  and the submitTime is "+submitTime+"   and plus is "+allTime);
+        long allTime = durition + submitTime;
+        Log.d(TAG, " the durition is  " + durition + "  and the submitTime is " + submitTime + "   and plus is " + allTime);
         String endtime = MyTimeUtil.convertToDate(allTime);
-        Log.d(TAG," the end date is set as "+endtime+"  and now is "+MyTimeUtil.convertToDate(submitTime));
+        Log.d(TAG, " the end date is set as " + endtime + "  and now is " + MyTimeUtil.convertToDate(submitTime));
 
-        CountDownBean countDownBean = new CountDownBean(name, false, endtime, durition);
+        final CountDownBean countDownBean = new CountDownBean(name, false, endtime);
+
         addToDatabase(countDownBean);
-        Intent intent=new Intent();
-        Bundle bundle=new Bundle();
-        bundle.putParcelable("newItem",countDownBean);
-        intent.putExtra("data",bundle);
-
+        Intent intent = new Intent();
+        Bundle bundle = new Bundle();
+        bundle.putParcelable("newItem", countDownBean);
+        intent.putExtra("data", bundle);
         setResult(RESULT_OK, intent);
-
     }
 
     private void addToDatabase(CountDownBean countDownBean) {
-        LifeBalanceDatabaseHelper databaseHelper = new LifeBalanceDatabaseHelper(AddNewCountdownActivity.this);
-        SQLiteDatabase db = databaseHelper.getWritableDatabase();
+        final CountDownBean countDownBean1=countDownBean;
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                LifeBalanceDatabaseHelper databaseHelper = LifeBalanceDatabaseHelper.getInstance(AddNewCountdownActivity.this);
+                SQLiteDatabase db = databaseHelper.getWritableLifeBalanceDatabase();
 
-        ContentValues cValue = new ContentValues();
-        cValue.put("name", countDownBean.getName());
-        cValue.put("endTime", countDownBean.getEntTime());
+                ContentValues cValue = new ContentValues();
+                cValue.put("name", countDownBean1.getName());
+                cValue.put("endTime", countDownBean1.getEntTime());
 //        cValue.put("resttime", countDownBean.getDurition());
-        cValue.put("isFinished", countDownBean.isFinished() ? 1 : 0);
-        db.insert("countdown", null, cValue);
-        db.close();
+                cValue.put("isFinished", countDownBean1.isFinished() ? 1 : 0);
+                db.insert("countdown", null, cValue);
+                databaseHelper.closeWritableLifeBalanceDatabase();
+            }
+        }).start();
+
     }
 
 }

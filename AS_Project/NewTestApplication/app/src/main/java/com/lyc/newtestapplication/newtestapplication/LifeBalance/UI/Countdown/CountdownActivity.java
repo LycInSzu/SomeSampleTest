@@ -242,6 +242,7 @@ public class CountdownActivity extends BaseActivity
 //                db.execSQL(sql);
                     }
                 }
+                sqLiteStatement.close();
                 databaseHelper.closeWritableLifeBalanceDatabase();
             }
         }).start();

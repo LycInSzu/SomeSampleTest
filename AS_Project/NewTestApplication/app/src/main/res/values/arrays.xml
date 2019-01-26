@@ -4,6 +4,6 @@
         <item>Pay</item>
         <item>Income</item>
         <item>CountDown</item>
-
+        <item>TextToSpeech</item>
     </string-array>
 </resources>

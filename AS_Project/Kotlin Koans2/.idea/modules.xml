@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Builders/Builders how it works/Builders-Builders_how_it_works.iml" filepath="$PROJECT_DIR$/.idea/modules/Builders/Builders how it works/Builders-Builders_how_it_works.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Builders/Function literals with receiver/Builders-Function_literals_with_receiver.iml" filepath="$PROJECT_DIR$/.idea/modules/Builders/Function literals with receiver/Builders-Function_literals_with_receiver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Builders/Html builders/Builders-Html_builders.iml" filepath="$PROJECT_DIR$/.idea/modules/Builders/Html builders/Builders-Html_builders.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Builders/String and map builders/Builders-String_and_map_builders.iml" filepath="$PROJECT_DIR$/.idea/modules/Builders/String and map builders/Builders-String_and_map_builders.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Builders/The function apply/Builders-The_function_apply.iml" filepath="$PROJECT_DIR$/.idea/modules/Builders/The function apply/Builders-The_function_apply.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Collections/All Any and other predicates/Collections-All_Any_and_other_predicates.iml" filepath="$PROJECT_DIR$/.idea/modules/Collections/All Any and other predicates/Collections-All_Any_and_other_predicates.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Collections/Compound tasks/Collections-Compound_tasks.iml" filepath="$PROJECT_DIR$/.idea/modules/Collections/Compound tasks/Collections-Compound_tasks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Collections/Filter map/Collections-Filter_map.iml" filepath="$PROJECT_DIR$/.idea/modules/Collections/Filter map/Collections-Filter_map.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Collections/FlatMap/Collections-FlatMap.iml" filepath="$PROJECT_DIR$/.idea/modules/Collections/FlatMap/Collections-FlatMap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Collections/Fold/Collections-Fold.iml" filepath="$PROJECT_DIR$/.idea/modules/Collections/Fold/Collections-Fold.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Collections/Get used to new style/Collections-Get_used_to_new_style.iml" filepath="$PROJECT_DIR$/.idea/modules/Collections/Get used to new style/Collections-Get_used_to_new_style.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Collections/GroupBy/Collections-GroupBy.iml" filepath="$PROJECT_DIR$/.idea/modules/Collections/GroupBy/Collections-GroupBy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Collections/Introduction/Collections-Introduction.iml" filepath="$PROJECT_DIR$/.idea/modules/Collections/Introduction/Collections-Introduction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Collections/Max min/Collections-Max_min.iml" filepath="$PROJECT_DIR$/.idea/modules/Collections/Max min/Collections-Max_min.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Collections/Partition/Collections-Partition.iml" filepath="$PROJECT_DIR$/.idea/modules/Collections/Partition/Collections-Partition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Collections/Sort/Collections-Sort.iml" filepath="$PROJECT_DIR$/.idea/modules/Collections/Sort/Collections-Sort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Collections/Sum/Collections-Sum.iml" filepath="$PROJECT_DIR$/.idea/modules/Collections/Sum/Collections-Sum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Conventions/Comparison/Conventions-Comparison.iml" filepath="$PROJECT_DIR$/.idea/modules/Conventions/Comparison/Conventions-Comparison.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Conventions/Destructuring declarations/Conventions-Destructuring_declarations.iml" filepath="$PROJECT_DIR$/.idea/modules/Conventions/Destructuring declarations/Conventions-Destructuring_declarations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Conventions/For loop/Conventions-For_loop.iml" filepath="$PROJECT_DIR$/.idea/modules/Conventions/For loop/Conventions-For_loop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Conventions/In range/Conventions-In_range.iml" filepath="$PROJECT_DIR$/.idea/modules/Conventions/In range/Conventions-In_range.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Conventions/Invoke/Conventions-Invoke.iml" filepath="$PROJECT_DIR$/.idea/modules/Conventions/Invoke/Conventions-Invoke.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Conventions/Operators overloading/Conventions-Operators_overloading.iml" filepath="$PROJECT_DIR$/.idea/modules/Conventions/Operators overloading/Conventions-Operators_overloading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Conventions/Range to/Conventions-Range_to.iml" filepath="$PROJECT_DIR$/.idea/modules/Conventions/Range to/Conventions-Range_to.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Generics/Generic functions/Generics-Generic_functions.iml" filepath="$PROJECT_DIR$/.idea/modules/Generics/Generic functions/Generics-Generic_functions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Introduction/Data classes/Introduction-Data_classes.iml" filepath="$PROJECT_DIR$/.idea/modules/Introduction/Data classes/Introduction-Data_classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Introduction/Default arguments/Introduction-Default_arguments.iml" filepath="$PROJECT_DIR$/.idea/modules/Introduction/Default arguments/Introduction-Default_arguments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Introduction/Extension functions/Introduction-Extension_functions.iml" filepath="$PROJECT_DIR$/.idea/modules/Introduction/Extension functions/Introduction-Extension_functions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Introduction/Extensions on collections/Introduction-Extensions_on_collections.iml" filepath="$PROJECT_DIR$/.idea/modules/Introduction/Extensions on collections/Introduction-Extensions_on_collections.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Introduction/Hello, world!/Introduction-Hello,_world!.iml" filepath="$PROJECT_DIR$/.idea/modules/Introduction/Hello, world!/Introduction-Hello,_world!.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Introduction/Java to Kotlin conversion/Introduction-Java_to_Kotlin_conversion.iml" filepath="$PROJECT_DIR$/.idea/modules/Introduction/Java to Kotlin conversion/Introduction-Java_to_Kotlin_conversion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Introduction/Lambdas/Introduction-Lambdas.iml" filepath="$PROJECT_DIR$/.idea/modules/Introduction/Lambdas/Introduction-Lambdas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Introduction/Named arguments/Introduction-Named_arguments.iml" filepath="$PROJECT_DIR$/.idea/modules/Introduction/Named arguments/Introduction-Named_arguments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Introduction/Nullable types/Introduction-Nullable_types.iml" filepath="$PROJECT_DIR$/.idea/modules/Introduction/Nullable types/Introduction-Nullable_types.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Introduction/Object expressions/Introduction-Object_expressions.iml" filepath="$PROJECT_DIR$/.idea/modules/Introduction/Object expressions/Introduction-Object_expressions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Introduction/SAM conversions/Introduction-SAM_conversions.iml" filepath="$PROJECT_DIR$/.idea/modules/Introduction/SAM conversions/Introduction-SAM_conversions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Introduction/Smart casts/Introduction-Smart_casts.iml" filepath="$PROJECT_DIR$/.idea/modules/Introduction/Smart casts/Introduction-Smart_casts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Introduction/Strings/Introduction-Strings.iml" filepath="$PROJECT_DIR$/.idea/modules/Introduction/Strings/Introduction-Strings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Kotlin_Koans2.iml" filepath="$PROJECT_DIR$/.idea/Kotlin_Koans2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Properties/Delegates examples/Properties-Delegates_examples.iml" filepath="$PROJECT_DIR$/.idea/modules/Properties/Delegates examples/Properties-Delegates_examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Properties/Delegates how it works/Properties-Delegates_how_it_works.iml" filepath="$PROJECT_DIR$/.idea/modules/Properties/Delegates how it works/Properties-Delegates_how_it_works.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Properties/Lazy property/Properties-Lazy_property.iml" filepath="$PROJECT_DIR$/.idea/modules/Properties/Lazy property/Properties-Lazy_property.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Properties/Properties/Properties-Properties.iml" filepath="$PROJECT_DIR$/.idea/modules/Properties/Properties/Properties-Properties.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util.iml" />
+    </modules>
+  </component>
+</project>

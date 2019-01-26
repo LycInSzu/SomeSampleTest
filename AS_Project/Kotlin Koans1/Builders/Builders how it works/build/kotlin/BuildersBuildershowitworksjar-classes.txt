@@ -1,0 +1,1 @@
+F:\GitHub Repositories\SomeSampleTest\AS_Project\Kotlin Koans1\Builders\Builders how it works\build\classes\java\main\Answer.class;F:\GitHub Repositories\SomeSampleTest\AS_Project\Kotlin Koans1\Builders\Builders how it works\build\classes\java\main\TaskKt.class

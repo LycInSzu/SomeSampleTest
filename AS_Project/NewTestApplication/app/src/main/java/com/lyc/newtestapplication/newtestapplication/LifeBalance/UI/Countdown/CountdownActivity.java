@@ -37,6 +37,7 @@ import com.lyc.newtestapplication.newtestapplication.R;
 
 import java.util.ArrayList;
 
+
 public class CountdownActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener, TimeTrickerInterface {
 
@@ -117,6 +118,8 @@ public class CountdownActivity extends BaseActivity
 
         queryAllCountdownFromDB();
         startCountdownTimer();
+
+
     }
 
 //    private void getEndTime() {

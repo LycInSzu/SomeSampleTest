@@ -131,6 +131,7 @@ public class AddNewCountdownActivity extends BaseActivity {
                 cValue.put("isFinished", countDownBean1.isFinished() ? 1 : 0);
                 db.insert("countdown", null, cValue);
                 databaseHelper.closeWritableLifeBalanceDatabase();
+
             }
         }).start();
 

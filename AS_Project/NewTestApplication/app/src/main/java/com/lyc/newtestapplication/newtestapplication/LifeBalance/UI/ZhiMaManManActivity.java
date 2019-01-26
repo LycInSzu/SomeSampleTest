@@ -13,6 +13,7 @@ import com.lyc.newtestapplication.newtestapplication.*;
 import com.lyc.newtestapplication.newtestapplication.LifeBalance.Adapter.FunctionItemsListAdapter;
 import com.lyc.newtestapplication.newtestapplication.LifeBalance.Interfaces.MyRecycleviewItemClickListener;
 import com.lyc.newtestapplication.newtestapplication.LifeBalance.UI.Countdown.CountdownActivity;
+import com.lyc.newtestapplication.newtestapplication.LifeBalance.UI.TextToSpeech.TextToSpeechActivity;
 
 
 import java.util.ArrayList;
@@ -30,6 +31,7 @@ public class ZhiMaManManActivity extends BaseActivity {
     private final int toPayActivity=0;
     private final int toIncomeActivity=1;
     private final int toCountdownActivity=2;
+    private final int textToSpeech=3;
 
     @Override
     public Class getCurrentActivityName() {
@@ -74,6 +76,9 @@ public class ZhiMaManManActivity extends BaseActivity {
                 break;
             case    toCountdownActivity:
                 startDetermindActivity(CountdownActivity.class,null);
+                break;
+            case textToSpeech:
+                startDetermindActivity(TextToSpeechActivity.class,null);
                 break;
             default:
                 break;

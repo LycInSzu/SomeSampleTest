@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	
+    android:orientation="vertical" >
+
+    <!-- title part starts -->
+
+    <include
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+		android:layout_marginTop="@dimen/title_margintop_height"
+        layout="@layout/actionbar_prize" />
+
+    <!-- middle part starts -->
+
+    <RelativeLayout
+        android:id="@+id/view_middle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_middile_height" >
+        
+        <FrameLayout 
+            android:id="@+id/view_scale"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_scale_height"
+            android:layout_alignParentBottom="true">
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_fm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_tip_height"
+            android:gravity="center_horizontal|bottom"
+            android:textColor="@color/white"
+            android:textSize="@dimen/powerup_text_size"
+            android:textStyle="bold" 
+            android:paddingBottom="@dimen/main_tip_padding_bottom"/>
+    </RelativeLayout>
+
+    <!-- middle part ends -->
+
+    <RelativeLayout
+        android:id="@+id/view_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_favorite_height" >
+
+        <View
+            android:id="@+id/divier_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/recyclerview_divier" 
+            android:layout_alignParentBottom="true"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/id_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_favorite_recyclerview_height"
+            android:layout_above="@id/divier_bottom" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_above="@id/id_recyclerview"
+            android:background="@color/recyclerview_divier" />
+    </RelativeLayout>
+<!--prize modified by liyuchong, fix layout direction even in Arabic,20190226-begin-->
+    <LinearLayout
+        android:id="@+id/view_fm_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_control_margin_top"
+        android:orientation="horizontal"
+		android:layoutDirection="ltr"
+        android:paddingStart="@dimen/main_control_padding_h"
+        android:paddingEnd="@dimen/main_control_padding_h"
+        android:weightSum="3" >
+<!--prize modified by liyuchong, fix layout direction even in Arabic,20190226-end-->
+        <ImageView
+            android:id="@+id/im_pre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/sel_fm_pre" />
+
+        <ImageView
+            android:id="@+id/im_power"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/sel_fm_stop" />
+
+        <ImageView
+            android:id="@+id/im_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/sel_fm_next" />
+    </LinearLayout>
+
+</LinearLayout>

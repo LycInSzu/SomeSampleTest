@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
+<!--prize modified by liyuchong, config launcher layout ,20190124-begin-->
+    <!-- GoogleQuickSearchBox -->
+    <appwidget
+        launcher:className="com.google.android.googlequicksearchbox.SearchWidgetProvider"
+        launcher:packageName="com.google.android.googlequicksearchbox"
+        launcher:screen="0"
+        launcher:x="0"
+        launcher:y="0"
+        launcher:spanX="4"
+        launcher:spanY="1" />
+
+    <favorite
+        launcher:packageName="com.google.android.apps.photos"
+        launcher:className="com.google.android.apps.photos.home.HomeActivity"
+        launcher:screen="0"
+        launcher:x="0"
+        launcher:y="3" />
+
+    <favorite
+        launcher:packageName="com.google.android.apps.tachyon"
+        launcher:className="com.google.android.apps.tachyon.MainActivity"
+        launcher:screen="0"
+        launcher:x="1"
+        launcher:y="3" />
+
+    <favorite
+        launcher:packageName="com.mediatek.camera"
+        launcher:className="com.mediatek.camera.CameraLauncher"
+        launcher:screen="0"
+        launcher:x="2"
+        launcher:y="3" />
+
+    <favorite
+        launcher:packageName="com.android.notepads"
+        launcher:className="com.android.notepad.NotePadActivity"
+        launcher:screen="0"
+        launcher:x="3"
+        launcher:y="3" />
+
+    <folder
+    	launcher:screen="0"
+		launcher:title="@string/google_folder"
+		launcher:x="0"
+		launcher:y="4"	>
+        <favorite
+            launcher:packageName="com.google.android.googlequicksearchbox"
+            launcher:className="com.google.android.googlequicksearchbox.SearchActivity"/>
+        <favorite
+            launcher:packageName="com.google.android.gm"
+            launcher:className="com.google.android.gm.ConversationListActivityGmail"/>
+        <favorite
+            launcher:packageName="com.google.android.apps.maps"
+            launcher:className="com.google.android.maps.MapsActivity"/>
+        <favorite
+            launcher:packageName="com.google.android.youtube"
+            launcher:className="com.google.android.youtube.app.honeycomb.Shell$HomeActivity"/>
+        <favorite
+            launcher:packageName="com.google.android.apps.docs"
+            launcher:className="com.google.android.apps.docs.app.NewMainProxyActivity"/>
+        <favorite
+            launcher:packageName="com.google.android.music"
+            launcher:className="com.android.music.activitymanagement.TopLevelActivity"/>
+        <favorite
+            launcher:packageName="com.google.android.videos"
+            launcher:className="com.google.android.youtube.videos.EntryPoint"/>
+        <favorite
+            launcher:packageName="com.google.android.calendar"
+            launcher:className="com.android.calendar.AllInOneActivity"/>
+    </folder>
+
+	
+	<favorite
+        launcher:packageName="dz.condor.Condorpassport"
+        launcher:className="com.condorpassport.activity.Splash"
+	    launcher:screen="0"
+        launcher:x="1"
+        launcher:y="4"/>
+
+    <favorite
+        launcher:packageName="dz.condor.ThemeParc"
+        launcher:className="com.condor.condortheme.ui.SplashActivity"
+        launcher:screen="0"
+        launcher:x="2"
+        launcher:y="4" />
+
+    <favorite
+        launcher:packageName="com.android.vending"
+        launcher:className="com.android.vending.AssetBrowserActivity"
+        launcher:screen="0"
+        launcher:x="3"
+        launcher:y="4" />
+<!--prize add by liyuchong  for 客户需求，在桌面增加Tools文件夹，提交原文件 20190220 begin-->
+    <favorite
+        launcher:packageName="com.android.deskclock"
+        launcher:className="com.android.deskclock.DeskClock"
+        launcher:screen="1"
+        launcher:x="0"
+        launcher:y="0" />
+	<favorite
+        launcher:packageName="com.android.settings"
+        launcher:className="com.android.settings.Settings"
+        launcher:screen="1"
+        launcher:x="1"
+        launcher:y="0" />
+	<favorite
+        launcher:packageName="com.google.android.apps.nbu.files"
+        launcher:className="com.google.android.apps.nbu.files.home.HomeActivity"
+        launcher:screen="1"
+        launcher:x="2"
+        launcher:y="0" />
+	<folder
+    	launcher:screen="1"
+		launcher:title="@string/condor_tools_folder"
+		launcher:x="3"
+		launcher:y="0"	>
+		<favorite
+			launcher:packageName="com.android.fmradio"
+			launcher:className="com.android.fmradio.FmMainActivity"/>
+		<favorite
+			launcher:packageName="com.android.soundrecorder"
+			launcher:className="com.android.soundrecorder.SoundRecorder"/>
+		<favorite
+			launcher:packageName="com.android.calculator3"
+			launcher:className="com.android.calculator3.Calculator"/>
+		<favorite
+			launcher:packageName="com.android.stk"
+			launcher:className="com.android.stk.StkMain"/>
+
+    </folder>
+<!--prize add by liyuchong  for 客户需求，在桌面增加Tools文件夹，提交原文件 20190220 end-->
+    <!-- Hotseat -->
+    <include launcher:workspace="@xml/dw_phone_hotseat" />
+	
+<!--prize modified by liyuchong, config launcher layout ,20190124-end-->
+
+</favorites>

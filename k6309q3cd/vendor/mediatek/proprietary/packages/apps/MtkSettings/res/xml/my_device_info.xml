@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2018 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:key="my_device_info_pref_screen"
+    android:title="@string/about_settings">
+
+    <!--prize-yuanlongjun-20180905-add-PRIZE_CUSTOMER_LOGO_ICON-start-->
+    <Preference android:key ="customer_logo_icon"
+        android:order="0"
+        android:layout="@layout/preference_customer_logo_icon"/>
+    <!--prize-yuanlongjun-20180905-add-PRIZE_CUSTOMER_LOGO_ICON-end-->
+    <!-- prize modified by longzhongping, Settings, SpecialFunction, 2018.12.26-start -->
+    <com.android.settings.applications.LayoutPreference
+        android:key="prize_grid_info"
+        android:order="0"
+        android:layout="@layout/prize_settings_grid_layout"
+        android:selectable="false"/>
+    <!-- prize modified by longzhongping, Settings, SpecialFunction, 2018.12.26-end -->
+    <com.android.settings.applications.LayoutPreference
+        android:key="my_device_info_header"
+        android:order="1"
+        android:layout="@layout/settings_entity_header"
+        android:selectable="false"/>
+
+    <!-- Device name -->
+    <com.android.settings.widget.ValidatedEditTextPreference
+        android:key="device_name"
+        android:layout="@layout/preference"
+        android:widgetLayout="@layout/prize_preference_arrow"
+        android:order="2"
+        android:title="@string/my_device_info_device_name_preference_title"
+        android:summary="@string/summary_placeholder"/>
+<!-- prize modified by liyuchong, change device model item position as condor request  ,20190124-begin -->
+    <!-- Model & hardware -->
+    <Preference
+        android:key="device_model"
+        android:order="3"
+        android:title="@string/hardware_info"
+        settings:keywords="@string/keywords_model_and_hardware"
+        android:summary="@string/summary_placeholder"/>
+
+    <!-- Account name -->
+    <Preference
+        android:key="branded_account"
+        android:order="4"
+        android:title="@string/my_device_info_account_preference_title"
+        android:summary="@string/summary_placeholder"/>
+
+    <!-- Phone number -->
+    <Preference
+        android:key="phone_number"
+        android:order="5"
+        android:title="@string/status_number"
+        android:summary="@string/summary_placeholder"
+        android:selectable="false"/>
+
+    <Preference
+        android:key="emergency_info"
+        android:order="6"
+        android:title="@string/emergency_info_title"
+        android:summary="@string/summary_placeholder"/>
+
+    <!-- Legal information -->
+    <Preference
+        android:key="legal_container"
+        android:order="7"
+        android:title="@string/legal_information"
+        android:fragment="com.android.settings.LegalSettings"
+        settings:allowDividerAbove="true"/>
+
+    <!--prize-yuanlongjun-20180131-add-PRIZE_REGALTORY_LEGAL-start-->
+    <Preference
+        android:key="regaltory_legal"
+	android:order="8"
+        android:title="@string/regaltory_legal_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.settings"
+            android:targetClass="com.android.settings.SettingsRegaltoryActivity"/>
+    </Preference>
+    <!--prize-yuanlongjun-20180131-add-PRIZE_REGALTORY_LEGAL-end-->
+
+    <!-- Regulatory labels -->
+    <Preference
+        android:key="regulatory_info"
+        android:order="9"
+        android:title="@string/regulatory_labels">
+        <intent android:action="android.settings.SHOW_REGULATORY_INFO"/>
+    </Preference>
+
+    <!-- SIM status -->
+    <Preference
+        android:key="sim_status"
+        android:order="10"
+        android:title="@string/sim_status_title"
+        settings:keywords="@string/keywords_sim_status"
+        android:summary="@string/summary_placeholder"/>
+
+<!-- prize modified by liyuchong, change device model item position as condor request  ,20190124-end -->
+    <!-- IMEI -->
+    <Preference
+        android:key="imei_info"
+        android:order="22"
+        android:title="@string/status_imei"
+        settings:keywords="@string/keywords_imei_info"
+        android:summary="@string/summary_placeholder"/>
+
+    <!-- Android version -->
+    <Preference
+        android:key="firmware_version"
+        android:order="32"
+        android:title="@string/firmware_version"
+        settings:keywords="@string/keywords_android_version"
+        android:summary="@string/summary_placeholder"/>
+
+    <!--IP address -->
+    <Preference
+        android:key="wifi_ip_address"
+        android:order="34"
+        android:title="@string/wifi_ip_address"
+        android:summary="@string/summary_placeholder"
+        android:selectable="false"/>
+
+    <!-- Wi-Fi MAC address -->
+    <Preference
+        android:key="wifi_mac_address"
+        android:order="35"
+        android:title="@string/status_wifi_mac_address"
+        android:summary="@string/summary_placeholder"
+        android:selectable="false"/>
+
+    <!-- Bluetooth address -->
+    <Preference
+        android:key="bt_address"
+        android:order="36"
+        android:title="@string/status_bt_address"
+        android:summary="@string/summary_placeholder"
+        android:selectable="false"/>
+
+    <!-- Safety & regulatory manual -->
+    <Preference
+        android:key="safety_info"
+        android:order="39"
+        android:title="@string/safety_and_regulatory_info">
+        <intent android:action="android.settings.SHOW_SAFETY_AND_REGULATORY_INFO"/>
+    </Preference>
+    
+    <!--prize-peisaisai-20181109-modify for show_user_guide-begin-->
+    <!-- Manual -->
+    <!--<Preference
+        android:key="manual"
+        android:order="39"
+        android:title="@string/manual">
+        <intent android:action="android.settings.SHOW_MANUAL"/>
+    </Preference>-->
+    <!--prize-peisaisai-20181109-modify for show_user_guide-end-->
+
+    <!-- Feedback on the device -->
+    <Preference
+        android:key="device_feedback"
+        android:order="40"
+        android:title="@string/device_feedback"/>
+
+    <!-- Device FCC equipment id -->
+    <Preference
+        android:key="fcc_equipment_id"
+        android:order="41"
+        android:title="@string/fcc_equipment_id"
+        android:summary="@string/summary_placeholder"/>
+
+    <!-- Build number -->
+    <Preference
+        android:key="build_number"
+        android:order="42"
+        android:title="@string/build_number"
+        android:summary="@string/summary_placeholder"/>
+
+    <!-- /// M: Device Baseband version2 -->
+    <Preference
+        android:key="baseband_version_2"
+        android:order="50"
+        android:title="@string/baseband_version"
+        android:summary="@string/device_info_default"/>
+
+    <!-- /// M: Custom build version -->
+    <Preference
+        android:key="custom_build_version"
+        android:order="51"
+        android:title="@string/custom_build_version"/>
+
+    <!-- /// M: MTK_SYSTEM_UPDATE -->
+    <Preference android:key="mtk_system_update"
+        android:order="52"/>
+    
+    <!--prize-peisaisai-20181109-modify for show_user_guide-begin-->
+    <!-- Manual -->
+    <Preference
+        android:key="manual"
+        android:order="53"
+        android:title="@string/manual">
+        <intent android:action="android.settings.SHOW_MANUAL"/>
+    </Preference>
+    <!--prize-peisaisai-20181109-modify for show_user_guide-end-->
+    
+</PreferenceScreen>

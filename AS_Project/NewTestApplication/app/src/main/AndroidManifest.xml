@@ -8,6 +8,7 @@
     <uses-feature android:name="android.hardware.Camera"/>
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
             android:allowBackup="true"
@@ -57,6 +58,17 @@
         </activity>
         <activity android:name=".LifeBalance.UI.TextToSpeech.TextToSpeechActivity">
         </activity>
+
+        <!-- <receiver android:name=".LifeBalance.UI.TextToSpeech.TextToSpeechActivity$ThemeChangeReceiver"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.cyee.intent.action.theme.change"/> -->
+
+
+        <!-- <category android:name="com.cyee.intent.category.theme.V2"/> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+
+
     </application>
 
 </manifest>

@@ -1,6 +1,8 @@
 package com.lyc.newtestapplication.newtestapplication.LifeBalance;
 
 import android.annotation.SuppressLint;
+import android.content.BroadcastReceiver;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -38,7 +40,7 @@ public class LifeBalanceLaunchActivity extends BaseActivity {
      * and a change of the status and navigation bar.
      */
     private static final int UI_ANIMATION_DELAY = 300;
-    private final Handler mHideHandler = new Handler();
+    private static final Handler mHideHandler = new Handler();
 
     @BindView(R.id.dummy_button)
     Button dummyButton;
@@ -140,6 +142,10 @@ public class LifeBalanceLaunchActivity extends BaseActivity {
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
 //        findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+
+
+
+
     }
 
     @Override

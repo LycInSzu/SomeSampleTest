@@ -429,7 +429,11 @@ public class StatusBarMobileView extends FrameLayout implements DarkReceiver,
         /*prize delete zhaojian 20180906 start*/
 //        mMobileDrawable.setDarkIntensity(intensity);
         /*prize delete zhaojian 20180906 end*/
-
+		//prize add by liyuchong, change mobile data inout icon color  ,20190213-begin
+        if (PrizeSystemUIOption.PRIZE_NETWORK_STYLE) {
+            mInOut.setImageTintList(list);
+        }
+		//prize add by liyuchong, change mobile data inout icon color  ,20190213-end
         mIn.setImageTintList(list);
         mOut.setImageTintList(list);
         mMobileType.setImageTintList(list);

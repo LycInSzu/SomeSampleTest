@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_delete_station"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical" >
+    
+     <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+    <TextView
+        android:id="@+id/fm_recording_title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="45.5dp"
+        android:gravity="center_vertical"
+        android:text="@string/dlg_save_recording_title"
+        android:textColor="@color/dialog_front_color"
+        android:textSize="@dimen/dialog_title_size"
+        />
+     </LinearLayout>
+    <View
+        android:layout_width="283dp"
+        android:layout_height="0.5dp"
+        android:background="@color/favorite_recyclerview_divider" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+        android:id="@+id/save_recording_storage_warning"
+        android:layout_width="match_parent"
+        android:layout_height="66.5dp"
+        android:visibility="gone"
+        android:paddingLeft="12dip"
+        android:paddingRight="12dip"
+        android:text="@string/dlg_save_recording_storage_warning"
+        android:textColor="@color/dialog_front_color"
+        android:textSize="@dimen/dialog_msg_size"
+        android:gravity="center"/>
+    </LinearLayout>
+    
+    <LinearLayout 
+    	android:id="@+id/contentPanel"
+        android:layout_width="265dp"
+        android:layout_height="66.5dp"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal">
+		<EditText 
+			android:id="@+id/fm_recording_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:singleLine="true"
+			android:maxLength="80"
+			android:textDirection="locale"
+			android:layout_gravity="center_horizontal"
+			android:textColor="@color/dialog_front_color"
+        	android:textSize="@dimen/dialog_msg_size"
+        	android:gravity="left|center_vertical"
+        	android:background="@android:color/transparent"
+        	android:layout_marginTop="30dp"
+        	android:textColorHint="@color/dialog_disable_color"
+        	/>
+		<View
+        android:layout_width="200dp"
+        android:layout_height="0.5dp"
+        android:background="@drawable/ic_divide_middle" 
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="2dp"/>
+	</LinearLayout>
+
+    <View
+        android:layout_width="253.5dp"
+        android:layout_height="0.5dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/favorite_recyclerview_divider"/>
+
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="76.5dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal" 
+        android:weightSum="2"
+        android:layoutDirection="ltr">
+        <Button
+            android:id="@+id/fm_recording_btn_discard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/sel_dialog_edit_btn_left"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/btn_discard_recording"
+            android:textColor="@color/rename_dialog_button_color"
+            android:textSize="@dimen/rename_dialog_title_textsize" 
+            android:layout_gravity="center_vertical"
+            android:textAllCaps="false"/>
+		<View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/favorite_recyclerview_divider" />
+
+        <Button
+            android:id="@+id/fm_recording_btn_save"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/sel_dialog_edit_btn_right"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/btn_save_recording"
+            android:textColor="@color/rename_dialog_button_color"
+            android:textSize="@dimen/rename_dialog_title_textsize" 
+            android:layout_gravity="center_vertical"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+</LinearLayout>

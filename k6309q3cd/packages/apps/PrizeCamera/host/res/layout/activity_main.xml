@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:splitMotionEvents="false">
+ <!--prize-modify-transition animation of change mode -xiaoping-20180929-start-->
+    <FrameLayout
+        android:id="@+id/preview_frame_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:splitMotionEvents="false">
+        <!--prize-remove fixbug:[70734][70006][69414][69396][69295]-huangpengfei-2019-01-14-start-->
+        <!--<ImageView
+            android:id="@+id/sf_screenshot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/shutter_group_height"
+            android:background="@color/prize_black_translucence_color"
+            android:layout_gravity="bottom"/>-->
+        <!--prize-remove fixbug:[70734][70006][69414][69396][69295]-huangpengfei-2019-01-14-end-->
+        <!--prize-modify-transition animation of change mode -xiaoping-20180929-end-->
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/preview_cover"
+        android:background="@android:color/black"
+        android:visibility="gone"/>
+
+    <!--prize-add fixbug:[70734][70006][69414][69396][69295]-huangpengfei-2019-01-14-start-->
+    <ImageView
+        android:id="@+id/sf_screenshot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"/>
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/shutter_group_height"
+        android:background="@color/prize_black_translucence_color"
+        android:layout_gravity="bottom"/>
+    <!--prize-add fixbug:[70734][70006][69414][69396][69295]-huangpengfei-2019-01-14-end-->
+
+    <FrameLayout
+        android:id="@+id/app_ui_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:splitMotionEvents="false" />
+    <!--prize-add-beauty parameter ui-xiaoping-20180911-start-->
+    <FrameLayout
+        android:id="@+id/preview_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:splitMotionEvents="false" />
+    <!--prize-add-beauty parameter ui-xiaoping-20180911-end-->
+
+    <com.mediatek.camera.common.widget.PreviewFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/preview_layout_container"
+        android:layout_gravity="center"
+        android:layoutDirection="ltr"
+        android:splitMotionEvents="false">
+    </com.mediatek.camera.common.widget.PreviewFrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/camera_cover"
+        android:background="@android:color/black"
+        android:visibility="gone"/>
+
+    <!--prize add huangpengfei-20190306-start-->
+    <FrameLayout
+        android:id="@+id/plugin_mode_fragment_root"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <!--prize add huangpengfei-20190306-end-->
+
+    <LinearLayout
+        android:id="@+id/setting_ui_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <include layout="@layout/setting_layout"/>
+        <LinearLayout
+            android:id="@+id/setting_tail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:background="@android:color/black">
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/brightness_view"
+        android:background="#FFFFFF"
+        android:visibility="gone"/>
+
+    <!-- prize-add-screen flash-huangzhanbin-20190226-start-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/screen_view"
+        android:background="@color/screen_light"
+        android:visibility="gone"/>
+    <!--prize-add-screen flash-huangzhanbin-20190226-end-->
+</FrameLayout>

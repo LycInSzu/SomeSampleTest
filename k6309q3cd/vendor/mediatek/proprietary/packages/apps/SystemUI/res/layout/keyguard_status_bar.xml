@@ -63,20 +63,20 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:visibility="gone" />
-
+<!-- prize modified by liyuchong, fix systemui layout oritation for condor ,20190305-begin -->
     <com.android.keyguard.CarrierText
         android:id="@+id/keyguard_carrier_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="@dimen/keyguard_carrier_text_margin"
         android:layout_toStartOf="@id/system_icons_container"
-        android:gravity="center_vertical"
+        android:gravity="center_vertical|left"
         android:ellipsize="marquee"
         android:textDirection="locale"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="?attr/wallpaperTextColorSecondary"
         android:singleLine="true" />
-
+<!-- prize modified by liyuchong, fix systemui layout oritation for condor ,20190305-end -->
     <!--PRIZE-add for liuhai screen, OPEN_LIUHAI_SCREEN-liufan-2018-09-21-start-->
     <com.android.keyguard.AlphaOptimizedLinearLayout
         android:id="@+id/prize_liuhai_area"

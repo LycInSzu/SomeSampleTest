@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pref_camera_volumekeys_title">Volume key feature</string>
+    <string name="pref_camera_volumekeys_content_description">Volume key feature</string>
+    <string name="pref_camera_volumekeys_volume">Volume</string>
+    <string name="pref_camera_volumekeys_shoot">Shutter</string>
+    <string name="pref_camera_volumekeys_zoom">Zoom</string>
+    <string name="volume" translatable="false">0</string>
+    <string name="shoot" translatable="false">1</string>
+    <string name="zoom" translatable="false">2</string>
+</resources>

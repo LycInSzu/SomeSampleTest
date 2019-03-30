@@ -5593,7 +5593,9 @@ public class TextView extends View implements ViewTreeObserver.OnPreDrawListener
 	
 	private boolean specialBegin(CharSequence text) {
 
-        String pattern = "(^الجوال)[\\(\\)+0-9 -]{3,}($)";
+        //String pattern = "(^الجوال)[\\(\\)+0-9 -]{3,}($)";
+		String pattern = "(^(الجوال|مخصص|المنزل|العمل|فاكس العمل|فاكس المنزل|جهاز نداء|آخر|هاتف معاودة الاتصال|هاتف سيارة|هاتف الشركة الرئيسي|رئيسي|فاكس آخر|لاسلكي|تلكس|جوال العمل|جهاز نداء العمل|مساعد|رسالة وسائط متعددة))[\\(\\)+0-9 -]{3,}($)";
+
         Pattern r = Pattern.compile(pattern);
         Matcher m = r.matcher(text);
         if (m.find()) {

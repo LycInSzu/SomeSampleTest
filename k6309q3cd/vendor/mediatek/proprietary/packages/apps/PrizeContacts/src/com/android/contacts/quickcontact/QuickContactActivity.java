@@ -530,6 +530,10 @@ AggregationSuggestionEngine.Listener,JoinContactsDialogFragment.JoinContactsList
     private boolean mIsPersonalInfoFromEditor = false;
     /*prize-add-hpf-2018-1-6-end*/
     
+    //prize modified by qiaohu, Contact ringTone, DEFAULT_SYSTEM_RINGTONE maybe null ,20190312-start
+    private String mDefaultSystemRingTone;
+    //prize modified by qiaohu, Contact ringTone, DEFAULT_SYSTEM_RINGTONE maybe null ,20190312-end
+    
     final OnClickListener mEntryClickHandler = new OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -1675,7 +1679,31 @@ AggregationSuggestionEngine.Listener,JoinContactsDialogFragment.JoinContactsList
         }
         return false;
     }
-
+    
+    //prize modified by qiaohu, Ringtone, when file is deleted, set default system ringtone ,20190301-start
+    public boolean isNumeric(String str){
+        Pattern pattern = Pattern.compile("[0-9]*");
+        return pattern.matcher(str).matches();   
+    }
+    //prize modified by qiaohu, Ringtone, when file is deleted, set default system ringtone ,20190301-end
+    
+    //prize modified by qiaohu, Contact ringTone, DEFAULT_SYSTEM_RINGTONE maybe null ,20190312-start
+	private void setDefaultRingTone() {
+		String systemRingTone = "";
+		mDefaultSystemRingTone = Settings.System.getString(getContentResolver(),
+				Settings.System.DEFAULT_SYSTEM_RINGTONE);
+		if (!TextUtils.isEmpty(mDefaultSystemRingTone)) {
+			systemRingTone = RingtoneManager.getRingtone(this, Uri.parse(mDefaultSystemRingTone)).getTitle(this);
+		}
+		android.util.Log.d(TAG, "[bindContactData]   systemRingTone = " + systemRingTone);
+		if ("".equals(systemRingTone)) {
+			prizeQuickDefaultMusicName.setText("");
+		} else {
+			prizeQuickDefaultMusicName.setText(systemRingTone);
+		}
+	}
+    //prize modified by qiaohu, Contact ringTone, DEFAULT_SYSTEM_RINGTONE maybe null ,20190312-end
+    
     /**
      * Handle the result from the ContactLoader
      */
@@ -1700,35 +1728,28 @@ AggregationSuggestionEngine.Listener,JoinContactsDialogFragment.JoinContactsList
         	prizeContactsShareLayout.setVisibility(View.GONE);
         }
         
-        /* prize-add-set default music-hpf-2018-1-12-start */
+        //prize modified by qiaohu, Ringtone, when file is deleted, set default system ringtone ,20190301-start
         if(mContactData!= null){
             mCustomRingtone = mContactData.getCustomRingtone();
             Log.d(TAG,"[bindContactData]   mCustomRingtone = " + mCustomRingtone);
             if(mCustomRingtone != null){
             	String contactRingTone = RingtoneManager.getRingtone(this, Uri.parse(mCustomRingtone)).getTitle(this);
             	Log.d(TAG,"[bindContactData]   contactRingTone = "+contactRingTone);
-            	if (!"".equals(contactRingTone)) {
+            	if (!"".equals(contactRingTone) && !isNumeric(contactRingTone)) {
  					prizeQuickDefaultMusicName.setText(contactRingTone);
  				} else {
- 					String systemRingTone = "";//Settings.System.getString(getContentResolver(),Settings.System.PRIZE_RINGTONE_NAME);
- 					Log.d(TAG,"[bindContactData]   systemRingTone = "+systemRingTone);
- 					if("".equals(systemRingTone)){
- 						prizeQuickDefaultMusicName.setText("");
- 					}else{
- 						prizeQuickDefaultMusicName.setText(systemRingTone);
- 					}
+ 					mCustomRingtone = null;
+ 					//prize modified by qiaohu, Contact ringTone, DEFAULT_SYSTEM_RINGTONE maybe null ,20190312-start
+ 					setDefaultRingTone();
+ 		        	//prize modified by qiaohu, Contact ringTone, DEFAULT_SYSTEM_RINGTONE maybe null ,20190312-end
  				}
 	        }else{
-	        	String systemRingTone = RingtoneManager.getRingtone(this, Uri.parse(Settings.System.getString(getContentResolver(),Settings.System.DEFAULT_SYSTEM_RINGTONE))).getTitle(this);
-	        	Log.d(TAG,"[bindContactData]   systemRingTone = "+systemRingTone);
-				if("".equals(systemRingTone)){
-					prizeQuickDefaultMusicName.setText("");
-				}else{
-					prizeQuickDefaultMusicName.setText(systemRingTone);
-				}
+	        	//prize modified by qiaohu, Contact ringTone, DEFAULT_SYSTEM_RINGTONE maybe null ,20190312-start
+	        	setDefaultRingTone();
+	        	//prize modified by qiaohu, Contact ringTone, DEFAULT_SYSTEM_RINGTONE maybe null ,20190312-end
 	        }
         }
-        /* prize-add-set default music-hpf-2018-1-12-end */
+        //prize modified by qiaohu, Ringtone, when file is deleted, set default system ringtone ,20190301-end
         
         /*PRIZE-remove defaultmusi when is user profile -huangliemin-2016-5-27 -start*/
         if(mExtraMode !=31){
@@ -4424,8 +4445,13 @@ AggregationSuggestionEngine.Listener,JoinContactsDialogFragment.JoinContactsList
             // Otherwise pick default ringtone Uri so that something is selected.
             /*prize-change fix bug:[44796][44988] -hpf-2017-12-11-start*/
             //ringtoneUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
-            //ringtoneUri = RingtoneManager.getActualDefaultRingtoneUri(this,RingtoneManager.TYPE_RINGTONE);
-            ringtoneUri = Uri.parse(Settings.System.getString(getContentResolver(),Settings.System.DEFAULT_SYSTEM_RINGTONE));
+        	//prize modified by qiaohu, Contact ringTone, DEFAULT_SYSTEM_RINGTONE maybe null ,20190312-start
+        	if (TextUtils.isEmpty(mDefaultSystemRingTone)) {
+        		ringtoneUri = RingtoneManager.getActualDefaultRingtoneUri(this,RingtoneManager.TYPE_RINGTONE);
+        	} else {
+        		ringtoneUri = Uri.parse(mDefaultSystemRingTone);
+        	}
+        	//prize modified by qiaohu, Contact ringTone, DEFAULT_SYSTEM_RINGTONE maybe null ,20190312-end
             /*prize-change fix bug:[44796][44988] -hpf-2017-12-11-end*/
         }
 

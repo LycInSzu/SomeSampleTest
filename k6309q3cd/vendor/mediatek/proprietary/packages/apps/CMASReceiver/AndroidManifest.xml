@@ -78,7 +78,7 @@
                   android:label="@string/menu_preferences"
                   android:launchMode="singleTask"
 				  android:screenOrientation="portrait"
-                  android:exported="false"
+                  android:exported="true"
                   android:resizeableActivity="true">
              <meta-data android:name="android.app.searchable"
                     android:resource="@xml/searchable" />
@@ -87,7 +87,7 @@
         <activity android:name="CellBroadcastSubSettings"
                   android:label="@string/enable_cmas_imminent_threat_alerts_title"
                   android:launchMode="singleTask"
-                  android:exported="false"
+                  android:exported="true"
 				  android:screenOrientation="portrait"
                   android:resizeableActivity="true"/>
 <!--prize modified by liyuchong, config CMASReceiver fot TRA test,20190124-end-->
@@ -108,10 +108,6 @@
             android:exported="true">
             <intent-filter>
                  <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-
-            <intent-filter>
-                 <action android:name="android.intent.action.AIRPLANE_MODE" />
             </intent-filter>
 
             <intent-filter>

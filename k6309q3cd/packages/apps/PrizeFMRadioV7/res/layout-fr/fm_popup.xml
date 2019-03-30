@@ -23,6 +23,22 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:background="@color/favorite_recyclerview_divider"/>
+     <TextView
+        android:id="@+id/fm_record"
+        android:layout_height="@dimen/pop_item_height"
+        android:layout_width="match_parent"
+        android:gravity="start|center_vertical"
+        android:paddingStart="@dimen/pop_item_padding"
+        android:paddingEnd="@dimen/pop_item_padding"
+        android:text="@string/optmenu_record"
+        android:textAllCaps="false"
+        android:textColor="@color/top_btn_text"
+        android:textSize="@dimen/item_text_size" />
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/favorite_recyclerview_divider"/>
 
     <TextView
         android:id="@+id/fm_channel_list"

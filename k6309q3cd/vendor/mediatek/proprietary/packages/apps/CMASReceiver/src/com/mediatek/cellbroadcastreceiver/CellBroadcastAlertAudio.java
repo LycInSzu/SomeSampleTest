@@ -228,7 +228,9 @@ public class CellBroadcastAlertAudio extends Service implements TextToSpeech.OnI
         @Override
         public void onReceive(Context arg0, Intent arg1) {
             Log.d(TAG, "receive volume change broadcast, stop sound and vibration alert");
-            stop();
+        //prize modified-liyuchong-20190326 MTK_CMASReceiver for Condor_TRA begin
+            //stop();
+		//prize modified-liyuchong-20190326 MTK_CMASReceiver for Condor_TRA end
         }
 
     };

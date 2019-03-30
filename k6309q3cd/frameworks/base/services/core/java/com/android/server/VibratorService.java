@@ -697,8 +697,9 @@ public class VibratorService extends IVibratorService.Stub
                 vib.usageHint == AudioAttributes.USAGE_NOTIFICATION_COMMUNICATION_REQUEST) {
             return true;
         }
-
-        return false;
+        //prize modified-liyuchong-20190326 MTK_CMASReceiver for Condor_TRA begin
+        return true;
+	    //prize modified-liyuchong-20190326 MTK_CMASReceiver for Condor_TRA end
     }
 
     private int getCurrentIntensityLocked(Vibration vib) {

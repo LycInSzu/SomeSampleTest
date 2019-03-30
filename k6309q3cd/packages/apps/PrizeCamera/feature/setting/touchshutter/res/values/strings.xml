@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="touch_shutter_title">Touch screen to take photo</string>
+    <string name="touch_shutter_content_description">TouchShutter</string>
+</resources>

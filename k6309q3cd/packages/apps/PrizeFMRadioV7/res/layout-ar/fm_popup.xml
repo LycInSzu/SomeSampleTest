@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_delete_station"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:minWidth="@dimen/pop_item_min_width"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/fm_search"
+        android:layout_height="@dimen/pop_item_height"
+        android:layout_width="match_parent"
+        android:gravity="start|center_vertical"
+        android:paddingStart="@dimen/pop_item_padding"
+        android:paddingEnd="@dimen/pop_item_padding"
+        android:text="@string/optmenu_search"
+        android:textAllCaps="false"
+        android:textColor="@color/top_btn_text"
+        android:textSize="@dimen/item_text_size" />
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/favorite_recyclerview_divider"/>
+     <TextView
+        android:id="@+id/fm_record"
+        android:layout_height="@dimen/pop_item_height"
+        android:layout_width="match_parent"
+        android:gravity="start|center_vertical"
+        android:paddingStart="@dimen/pop_item_padding"
+        android:paddingEnd="@dimen/pop_item_padding"
+        android:text="@string/optmenu_record"
+        android:textAllCaps="false"
+        android:textColor="@color/top_btn_text"
+        android:textSize="@dimen/item_text_size" />
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/favorite_recyclerview_divider"/>
+
+    <TextView
+        android:id="@+id/fm_channel_list"
+        android:layout_height="@dimen/pop_item_height"
+        android:layout_width="@dimen/pop_item_min_width"
+        android:gravity="start|center_vertical"
+        android:paddingStart="@dimen/pop_item_padding"
+        android:paddingEnd="@dimen/pop_item_padding"
+        android:text="@string/favorite_manager"
+        android:textAllCaps="false"
+        android:textColor="@color/top_btn_text"
+        android:textSize="@dimen/item_text_size" />
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/favorite_recyclerview_divider"/>
+
+    <TextView
+        android:id="@+id/fm_setting"
+        android:layout_height="@dimen/pop_item_height"
+        android:layout_width="@dimen/pop_item_min_width"
+        android:gravity="start|center_vertical"
+        android:paddingStart="@dimen/pop_item_padding"
+        android:paddingEnd="@dimen/pop_item_padding"
+        android:text="@string/fm_auto_close_value"
+        android:textAllCaps="false"
+        android:textColor="@color/top_btn_text"
+        android:textSize="@dimen/item_text_size" />
+
+</LinearLayout>

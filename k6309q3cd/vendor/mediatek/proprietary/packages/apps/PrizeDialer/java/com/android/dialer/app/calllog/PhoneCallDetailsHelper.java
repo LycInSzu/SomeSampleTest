@@ -230,6 +230,11 @@ public class PhoneCallDetailsHelper
         CharSequence nameText;
         final CharSequence displayNumber = details.displayNumber;
         String countString = "";
+        //prize added by lijimeng,display groupeSize,20190308-start
+        if(count > 1){
+            countString = " (" + count + ")";
+        }
+        //prize added by lijimeng,display groupeSize,20190308-end
         if (TextUtils.isEmpty(details.getPreferredName())) {
             nameText = "";
             // We have a real phone number as "nameView" so make it always LTR
@@ -252,7 +257,10 @@ public class PhoneCallDetailsHelper
         views.nameView.setText(nameText);
         if(PhoneNumberUtils.isEmergencyNumber((String) displayNumber)){
             views.numberView.setText("");
-            views.nameView.setText(context.getResources().getText(R.string.prize_emergency_title));
+            //prize modified by lijimeng,display groupeSize,20190308-start
+            //views.nameView.setText(context.getResources().getText(R.string.prize_emergency_title));
+            views.nameView.setText(context.getResources().getText(R.string.prize_emergency_title) + countString);
+            //prize modified by lijimeng,display groupeSize,20190308-end
             views.callLocation.setText(displayNumber);
         }
         /*PRIZE-Add-DialerV8-wangzhong-2017_7_19-start*/

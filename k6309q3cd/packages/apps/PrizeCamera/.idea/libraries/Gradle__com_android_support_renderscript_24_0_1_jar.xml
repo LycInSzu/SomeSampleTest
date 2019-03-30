@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: com.android.support:renderscript:24.0.1@jar">
+    <CLASSES>
+      <root url="jar://E:/android-sdk-windows/build-tools/24.0.1/renderscript/lib/renderscript-v8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

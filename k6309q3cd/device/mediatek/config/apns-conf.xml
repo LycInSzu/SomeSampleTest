@@ -2854,7 +2854,7 @@
       roaming_protocol="IP"
   />
 
-  <apn carrier="C&amp;W Guernsey Internet"
+  <apn carrier="Sure Mobile"
       mcc="234"
       mnc="55"
       apn="internet"
@@ -17994,11 +17994,11 @@
       type="default,supl" 
   /> 
   
-  <apn carrier="Tunisie Telecom" 
+  <apn carrier="Wap telecom" 
       mcc="605" 
       mnc="02" 
-      apn="Wap.tn"
-      user="wap@tt1" 
+      apn="internet.tn"
+      user="internet" 
       password="internet" 
       type="default,supl" 
   />   
@@ -18014,7 +18014,7 @@
       mmsport="8080" 
       type="mms" 
   />
-   <apn carrier="internet.ooredoo.tn" 
+   <apn carrier="Ooredoo TN Internet" 
       mcc="605" 
       mnc="03" 
       apn="internet.ooredoo.tn"
@@ -20431,7 +20431,7 @@
 	mcc="603"
 	mnc="02"
 	authtype="1"
-	apn="Djezzy internet"
+	apn="Djezzy.internet"
 	user=""
 	password=""
 	server=""
@@ -20482,5 +20482,5 @@
 	emsi="default"
 	type="mms"/>
 
-<!-- APN Condor end -->
+<!-- APN Condor end Date 25_03_2019-->
 </apns>

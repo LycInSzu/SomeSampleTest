@@ -157,7 +157,7 @@
 <!--prize add default config by zhouerlong 20190213-->
     <bool name="cricle_icon">false</bool>   <!--这个图标表示 当前图标是否用圆角图标，true表示圆角，false表示原始图标（只是针对双层）-->
     <bool name="is_google_icon">true</bool><!--google 应用为原始圆角图标 ，不跟主题变化（只是针对单层）-->
-    <bool name="default_screen_style">true</bool><!--单双层默认值（true 单层，false 双层  ）  默认为 false 双层-->
+    <bool name="default_screen_style">false</bool><!--单双层默认值（true 单层，false 双层  ）  默认为 false 双层-->
     <bool name="cricle_icon_standard">false</bool>   <!--这个图标表示 当前图标是否用圆角图标，true表示圆角，false表示原始图标  默认为false（只是针单层）-->
 <!--prize add default config by zhouerlong 20190126-->
 </resources>

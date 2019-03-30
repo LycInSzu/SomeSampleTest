@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="camera_label">Camera</string>
+    <string name="video_camera_label">Camcorder</string>
+    <string name="accessibility_shutter">Shutter button</string>
+    <string name="accessibility_thumbnail">Most recent photo</string>
+    <string name="accessibility_mode">Camera mode</string>
+    <string name="accessibility_setting">Setting</string>
+    <string name="setting_title">Settings</string>
+    <string name="mode_fragment_title">Modes</string>
+    <string name="normal_mode_title">Normal</string>
+    <string name="saving_dialog_default_string">Saving...</string>
+    <string name="shutter_type_photo">Photo</string>
+    <string name="shutter_type_video">Video</string>
+    <string name="video_recording_not_available">Please stop other recording applications before using video camera.</string>
+    <string name="video_bad_performance_auto_stop">Low memory,auto stop recording.</string>
+    <string name="video_bad_performance_drop_quality">Low memory,auto change quality.</string>
+    <string name="video_recording_error">Error during recording!</string>
+    <string name="video_reach_size_limit">Size limit reached.</string>
+    <string name="can_not_use_storage">SD Card not available</string>
+    <string name="storage_full">The default storage is full,please release some space or manage the storage options in settings</string>
+    <string name="cannot_connect_camera_new">Can\'t connect to the camera. Please make sure to close other apps that may use camera or flashlight.</string>
+    <string name="camera_disabled">Camera has been disabled because of security policies.</string>
+    <string name="dialog_ok">OK</string>
+    <!-- String for Thermal Throttle -->
+    <string name="pref_thermal_dialog_title">Warning</string>
+    <string name="pref_thermal_dialog_content_launch">Device temperature is too high,please use the camera later.</string>
+    <string name="pref_thermal_dialog_content">Device temperature is too high and camera will exit automatically in 30 seconds. Please try to use it later.</string>
+    <string name="pref_thermal_preview_toast">Touch screen to continue.</string>
+    <!--prize-add-add mode-xiaoping-20180901-start-->
+    <string name="beautiful_title_composite">Auto Beauty</string>
+    <string name="beautiful_title_smoothing">Smoother</string>
+     <string name="beautiful_title_slimming">Slimming</string>
+    <string name="beautiful_title_catchlight">Whitening</string>
+    <string name="beautiful_title_eyes_enlargement">Eye Enlarger</string>
+    <string name="shutter_type_photo_beauty">Beauty</string>
+    <string name="shutter_type_photo_picturezoom">UHD</string>
+    <string name="shutter_type_photo_picturezoom_bl">52MP</string>    
+    <string name="shutter_type_photo_lowlight">Night Mode</string>
+    <string name="cannot_continus_shot_hint">Continuous shot is not supported in the current status</string>
+    <string name="setting_dialog_cancel">Cancel</string>
+    <string name="flash_failed_when_battery_is_low">Flash can not work while battery level is low</string>
+    <string name="close_camera_when_battery_is_low">The battery is too low to continue using the camera</string>
+    <string name="camera_timeout_warning_message">If you do not use Camera within 2 minutes,it will close itself.</string>
+    <string name="camera_setting_reset_title">Reset</string>
+    <string name="camera_setting_reset_message">Do you want to restore camera default settings?</string>
+    <string name="shutter_type_photo_picsefile">Portrait</string>
+    <string name="secondary_camera_blocked">To ensure the shooting,make sure the lens is unobstructed and bright.</string>
+    <string name="beauty_level">Beauty Level</string>
+    <string name="zsd_title">ZSD</string>
+    <string name="zsd_content_description">ZSD</string>
+    <!--prize-modify-add front lift camera interaction-xiaoping-20190304-start-->
+    <string name="switch_cameras_frequently">To protect your front camera, please do not switch frequently</string>
+    <string name="camera_not_raised">Camera can not pop up</string>
+    <!--prize-modify-add front lift camera interaction-xiaoping-20190304-end-->
+    <!--prize-add-add mode-xiaoping-20180901-end-->
+    <!--prize-modify-Camera application should be closed as pressing 2 times back button-xiaoping-20190301-start-->
+    <string name="exit_camera_toast">Press again to exit</string>
+    <!--prize-modify-Camera application should be closed as pressing 2 times back button-xiaoping-20190301-end-->
+    <!--prize-modify-Do not use the flash when the battery is low-xiaoping-20190306-start-->
+    <string name="can_not_open_front_camera_on_lowpower">can not open front camera in low battery state</string>
+    <!--prize-modify-Do not use the flash when the battery is low-xiaoping-20190306-end-->
+    <!--prize add huangpengfei-20190306-start-->
+    <string name="shutter_type_photo_aperture">Aperture</string>
+    <string name="shutter_type_photo_gif">Gif</string>
+    <string name="shutter_type_photo_slow_motion">Slow Motion</string>
+    <string name="shutter_type_photo_intelligent_scanning">Intelligent Scanning</string>
+    <string name="aperture_level">Aperture Level</string>
+    <!--prize add huangpengfei-20190306-end-->
+    <!--prize-add-xiaoping-20190309-start-->
+    <string name="other_devices_take_up_microphone_reminders">Other devices are recording, the camera is temporarily unable to record sound</string>
+    <!--prize-add-xiaoping-20190309-end-->
+    <!--prize-modify-add professional mode function-xiaoping-20190319-start-->
+    <string name="professional_title_ev">EV</string>
+    <!--prize-modify-add professional mode function-xiaoping-20190319-end-->
+    <!--prize-modify-add for PicselfieMode-xiaoping-20190320-start-->
+    <string name="camera_slr_mode_tips">Taking photos with wide openings can produce pictures with shallow depth of field. It is recommended that photographs of people within 2 meters be taken.</string>
+    <!--prize-modify-add for PicselfieMode-xiaoping-20190320-end-->
+    <string name="hdr_guide_capture">Do not move device during HDR capturing</string>
+    
+    <string name="shutter_type_photo_hdr">HDR</string>
+    <string name="shutter_type_photo_filter">Filter</string>
+    <string name="shutter_type_photo_panorama">Panorama</string>
+</resources>

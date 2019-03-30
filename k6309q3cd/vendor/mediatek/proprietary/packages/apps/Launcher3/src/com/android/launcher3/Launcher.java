@@ -89,6 +89,14 @@ import com.android.launcher3.allapps.AllAppsContainerView;
 import com.android.launcher3.allapps.AllAppsTransitionController;
 import com.android.launcher3.allapps.DiscoveryBounce;
 import com.android.launcher3.badge.BadgeInfo;
+//prize add by zhouerlong badgeUnread begin
+import java.util.HashMap;
+import com.android.launcher3.badge.BadgeTool;
+import com.android.launcher3.badge.PrizeObserver;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.Manifest;
+//prize add by zhouerlong badgeUnread begin
 import com.android.launcher3.compat.AppWidgetManagerCompat;
 import com.android.launcher3.compat.LauncherAppsCompatVO;
 import com.android.launcher3.config.FeatureFlags;
@@ -110,6 +118,9 @@ import com.android.launcher3.shortcuts.DeepShortcutManager;
 import com.android.launcher3.states.InternalStateHandler;
 import com.android.launcher3.states.RotationHelper;
 //add by zhouerlong prize launcher 20180906
+//prize add by zhouerlong badgeUnread begin
+import com.android.launcher3.theme.table.UnreadTable;
+//prize add by zhouerlong badgeUnread begin
 import com.android.launcher3.theme.tools.FindTools;
 import com.android.launcher3.theme.tools.PrefTools;
 import com.android.launcher3.theme.tools.ThemeIconTool;
@@ -191,8 +202,11 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
 
     private static final int REQUEST_PERMISSION_CALL_PHONE = 14;
 //prize add by liyuchong, adapte Condor theme park, 20190218-begin
-    private static final int REQUEST_PERMISSION_READ_STORAGE = 15;
+    private static final int REQUEST_PERMISSION_READ_STORAGE = 16;
 //prize add by liyuchong, adapte Condor theme park, 20190218-end
+//prize add by zhouerlong badgeUnread begin
+    public static final int REQUEST_PERMISSION_CALL_SMS_LOG = 15;
+//prize add by zhouerlong badgeUnread begin
     private static final float BOUNCE_ANIMATION_TENSION = 1.3f;
 
     /**
@@ -308,7 +322,11 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
 //add by zhouerlong prize launcher 20180906
 
     AlertDialog changeThemeDialog;
-//add by zhouerlong prize launcher 20180906
+//prize add by zhouerlong badgeUnread begin
+    static public boolean sBadge =true;
+//prize add by zhouerlong badgeUnread begin
+
+    //add by zhouerlong prize launcher 20180906
 //prize add default config by zhouerlong 20190126
     private void initDefaultConfig() {
         Resources res = this.getResources();
@@ -330,6 +348,9 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
 
     private final Handler mHandler = new Handler();
     private final Runnable mLogOnDelayedResume = this::logOnDelayedResume;
+//prize add by zhouerlong badgeUnread begin
+    private PrizeObserver mObserver = new PrizeObserver();
+//prize add by zhouerlong badgeUnread begin
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -354,7 +375,11 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         //prize add by zhouerlong screen____style
 	//prize add by zhouerlong screen____style
 		boolean screnstyle = PrefTools.getBoolean("screen_style", default_screen_style, this);
-
+//prize add by zhouerlong badgeUnread begin
+		if(sBadge) {
+            BadgeTool.getInstance().setLauncher(this);
+        }
+//prize add by zhouerlong badgeUnread begin
 		mScreenStyle=screnstyle;
 		LauncherAppState.setmIsDisableAllApps(mScreenStyle);
 	//prize add by zhouerlong screen____style
@@ -404,6 +429,10 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
 				PrefTools.putBoolean("first",true,this);
 			}
 		}
+//prize add by zhouerlong badgeUnread begin
+        if(sBadge)
+		mObserver.register(this);
+//prize add by zhouerlong badgeUnread begin
 //add by zhouerlong prize launcher 20180906
         restoreState(savedInstanceState);
 
@@ -744,6 +773,19 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         }
     }
 
+//prize add by zhouerlong badgeUnread begin
+    private boolean checkNeedPermissions(Launcher t) {
+        if (ContextCompat.checkSelfPermission(t, android.Manifest.permission.READ_CALL_LOG)
+                == PackageManager.PERMISSION_GRANTED&&ContextCompat.checkSelfPermission(t, android.Manifest.permission.READ_SMS) == PackageManager.PERMISSION_GRANTED) {
+            return true;
+        } else {
+
+            ActivityCompat.requestPermissions(t, new String[]{android.Manifest.permission.READ_CALL_LOG, Manifest.permission.READ_SMS}, 100);
+            return false;
+        }
+    }
+//prize add by zhouerlong badgeUnread begin
+
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions,
             int[] grantResults) {
@@ -768,6 +810,17 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
                         getString(R.string.derived_app_name)), Toast.LENGTH_SHORT).show();
             }
         }
+		
+		
+		
+//prize add by zhouerlong badgeUnread begin
+        if(requestCode == REQUEST_PERMISSION_CALL_SMS_LOG&&grantResults.length>0
+                && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            if(Launcher.sBadge)
+            mObserver.registerOnly(this);
+
+        }
+//prize add by zhouerlong badgeUnread begin
 //prize modified by liyuchong, adapte Condor theme park, 20190218-begin
         if (requestCode == REQUEST_PERMISSION_READ_STORAGE ){
             Log.d(TAG, "----------requestCode == REQUEST_PERMISSION_READ_STORAGE------------");
@@ -943,6 +996,9 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         }
 //prize modified by liyuchong, adapte Condor theme park, 20190218-end
 
+//prize add by zhouerlong badgeUnread begin
+        mAppsView.getAppsStore().notifyUpdate();
+//prize add by zhouerlong badgeUnread begin
     }
 
 //add by zhouerlong prize launcher 20180906
@@ -990,7 +1046,11 @@ boolean mScreenStyle = LauncherAppState.isDisableAllApps();
 			this.getContentResolver().delete(LauncherSettings.Favorites.CONTENT_URI,null,null);
 			Utilities.getPrefs(this).edit().putBoolean(LauncherProvider.EMPTY_DATABASE_CREATED, true).commit();
 			mIconCache.clear();
-			System.exit(0);
+//			//prize by zhouerlong apply sytle change 20190311 begin
+//			System.exit(0);
+
+            mModel.forceReload();
+//			//prize by zhouerlong apply sytle change 20190311 end
         }
 		}
 	//prize add by zhouerlong screen____style
@@ -1530,7 +1590,10 @@ boolean mScreenStyle = LauncherAppState.isDisableAllApps();
             LauncherAppState.getInstance(this).setLauncher(null);
         }
         mRotationHelper.destroy();
-
+//prize add by zhouerlong badgeUnread begin
+        if(Launcher.sBadge)
+        mObserver.unRegister(this);
+//prize add by zhouerlong badgeUnread begin
         try {
             mAppWidgetHost.stopListening();
         } catch (NullPointerException ex) {
@@ -2386,6 +2449,12 @@ boolean mScreenStyle = LauncherAppState.isDisableAllApps();
 			}
 		});
 
+//prize add by zhouerlong badgeUnread begin
+        if(Launcher.sBadge) {
+            BadgeTool.getInstance().loadUnreadTask();
+        }
+//prize add by zhouerlong badgeUnread begin
+
 	}
 	//add by zhouerlong 20180125
     private boolean canRunNewAppsAnimation() {
@@ -2639,7 +2708,15 @@ boolean mScreenStyle = LauncherAppState.isDisableAllApps();
         }
         return ((Launcher) ((ContextWrapper) context).getBaseContext());
     }
+//prize add by zhouerlong badgeUnread begin
+    public void bindUnreadInfoIfNeeded(HashMap<String, UnreadTable> unreadTables) {
+        mWorkspace.updateShortcutsAndFoldersUnread(unreadTables);
+    }
 
+    public void bindUnreadChange(UnreadTable t) {
+        mWorkspace.onChangeUnread(t);
+    }
+//prize add by zhouerlong badgeUnread begin
     /**
      * Callback for listening for onResume
      */

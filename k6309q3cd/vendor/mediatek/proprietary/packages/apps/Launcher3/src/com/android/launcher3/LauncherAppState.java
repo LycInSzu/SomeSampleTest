@@ -19,6 +19,10 @@ package com.android.launcher3;
 //add by zhouerlong prize launcher 20180906
 import android.app.Activity;
 import android.os.Build;
+
+//prize add by zhouerlong badgeUnread begin
+import com.android.launcher3.badge.BadgeTool;
+//prize add by zhouerlong badgeUnread begin
 import com.android.launcher3.theme.tools.AppConfig;
 import com.android.launcher3.theme.tools.DefaultConfig;
 
@@ -298,6 +302,12 @@ public class LauncherAppState {
             // TODO: handle exception
         }
         x.Ext.setDebug(AppConfig.ISDEBUG);
+
+//prize add by zhouerlong badgeUnread begin
+        if(Launcher.sBadge) {
+            BadgeTool.getInstance().init();
+        }
+//prize add by zhouerlong badgeUnread begin
     }
 
     public static DbManager getDbManager() {

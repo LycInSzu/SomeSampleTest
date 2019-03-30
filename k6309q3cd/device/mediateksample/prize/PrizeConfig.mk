@@ -1,14 +1,14 @@
 #prize PrizeConfig.mk-lanwm 20180106
 #=======================常用============================
 PRIZE_PRODUCT_MODEL             = Allure X
-PRIZE_TARGET_DEVICE_FOR_CONDOR  = SP646
 PRIZE_TARGET_DEVICE             = Allure_X
 PRIZE_PRODUCT_BRAND             = Condor
-PRIZE_PRODUCT_BOARD             = Allure X
 PRIZE_PRODUCT_MANUFACTURER      = SPA Condor Electronics
+PRIZE_PRODUCT_BOARD             = Allure_X
+PRIZE_TARGET_DEVICE_FOR_CONDOR  = SP646
 #========================CTS============================
 BUILD_GMS                       = yes
-PRIZE_CURRENT_GMS               = gms_201902
+PRIZE_CURRENT_GMS               = gms_201903
 #[NONE,FASTPASS,FASTPASS_PLUS,RUSSIA]
 PRIZE_GMS_SEND_TEST_TYPE		= FASTPASS_PLUS
 #是否是运营商
@@ -51,7 +51,7 @@ PRIZE_DEFAULT_VALUE_SHOW_BATTERY_PERCENT = 0
 #电池剩余可用时间字串是否显示[0,1]
 PRIZE_SHOW_BATTERY_REMAININGLABEL = 0
 #电池最大容量
-PRIZE_BATTERY_CAPACITY          = 3500
+PRIZE_BATTERY_CAPACITY          = 3400
 #待机智能省电
 PRIZE_BG_POWER_SAVING_ENABLE    = yes
 
@@ -129,10 +129,10 @@ PRIZE_AUTO_TIME=yes
 PRIZE_KERNEL_VERSION    =
 PRIZE_BASEBAND_VERSION  =
 
-PRIZE_SW_VERSION=K6309Q3CD.KBEE.HDJ.P0.$(PRIZE_FLASH_CODE).$(shell date +%m%d_%H%M)
-#PRIZE_SW_VERSION= SP646_V03_20190228
+#PRIZE_SW_VERSION=K6309Q3CD.KBEE.HDJ.P0.$(PRIZE_FLASH_CODE).$(shell date +%m%d_%H%M)
+PRIZE_SW_VERSION= SP646_V06_20190329
 #自定义版本号
-PRIZE_CUSTOM_BUILD_VERSION      = SP646_V04_20190301
+#PRIZE_CUSTOM_BUILD_VERSION      = SP646_V06_20190329
 #自定义真实编译版本号 锁定版本查看	 		  
 PRIZE_REAL_CUSTOM_BUILD_VERSION      = 
 #版本号
@@ -216,11 +216,17 @@ PRIZE_CAMERA_MAXBRIGHTNRSS     = no
 #假对焦
 PRIZE_CAMERA_FALSE_FOCUS	   = no	
 #专业模式
-PRIZE_PROFESSIONAL_MODE		   = no	
+PRIZE_PROFESSIONAL_MODE		   = yes
 #前后摄18:9比例
 PRIZE_CAMERA_SCALE_EIGHTEEN_TO_NINE = no
 #前摄补光灯
-PRIZE_FRONT_FLASH = no
+PRIZE_FRONT_FLASH = yes
+#更多拍照模式
+PRIZE_PLUGIN_MODE = no
+#大光圈模式
+PRIZE_APERTURE_MODE = no
+#假双摄副摄遮挡提示
+PRIZE_SIMULATE_DUAL_CAMERA_TIP = no
 #前后摄默认像素比例[1.3333,1.7778]
 PRIZE_CAMERA_PRE_DEFAULT_ROTATION     = 1.3333
 PRIZE_CAMERA_BACK_DEFAULT_ROTATION     = 1.7778
@@ -228,11 +234,15 @@ PRIZE_CAMERA_BACK_DEFAULT_ROTATION     = 1.7778
 PRIZE_CAMERA_PRE_DEFAULT_SIZE     = max
 PRIZE_CAMERA_BACK_DEFAULT_SIZE     = max
 #yes:normal no:facebeauty
-PRIZE_DEFAULT_FRONT_MODE_NORMAL=no
+PRIZE_DEFAULT_FRONT_MODE_NORMAL= yes
 #yes:hide NUM no:show NUM
 PRIZE_HIDE_PICTURE_NUM=no
 #录制视频时音量键作用[no:开始/停止录制 yes:拍照]
 PRIZE_VIDEO_TAKESNAPSHOT=no
+#判断当前项目为代码做差分,请配置未使用的值,0：默认值,不代表任何工程 1：Blu KD项目 2:k6203s3vs 3:K6309Q2AW 4:K6309QCD
+PRIZE_CURRENT_PROJECT = 4
+#前摄是否是升降摄像头
+PRIZE_LIFTCAMERA_SUPPORT = yes
 
 #prize-custom camera f_number info-tangan-20181101-begin
 PRIZE_BACK_CAMERA_FNUMBER = 
@@ -258,6 +268,11 @@ PRIZE_GALLERY_MAGNIFY                 = 2
 #prize-camera  add for Insertion resolution by zhuzhengjiang 20190222-begin
 PRIZE_CAMERA_INSERT_RESOLUTION_SUPPORT =yes
 #prize-camera  add for Insertion resolution by zhuzhengjiang 20190222-end
+
+#双摄标定
+ARCSOFT_DUALCAMERA=yes
+
+PRIZE_APERTURE_MODE = yes
 #=====================电话/联系人=======================
 #号码匹配位数
 PRIZE_NUMBER_MIN_MATCH                          = 9
@@ -326,11 +341,12 @@ PRIZE_LED_SWITCH_SUPPORT        = 0
 ADUPS_FOTA_SUPPORT              = no
 ADUPS_FOTA_WITH_ICON            = no
 ADUPS_FOTA_WITHOUT_MENU         = no
+ADUPS_FOTA_SUPPORT_OVERLAY      = no
 
 #IMEI
-PRIZE_IMEI                      = yes
-PRIZE_AUTO_IMEI                 = yes
-PRIZE_CUSTOM_IMEI_DISPLAY       = yes
+PRIZE_IMEI                      = no
+PRIZE_AUTO_IMEI                 = no
+PRIZE_CUSTOM_IMEI_DISPLAY       = no
 #imei length [14,15]
 PRIZE_IMEI_LENGTH		= 14
 
@@ -489,6 +505,10 @@ PRIZE_SPLIT_SCREEN = yes
 PRIZE_GOODIX_FINGER_SWITCH = yes
 #prize add by liufan,PRIZE_GOODIX_FINGER_SWITCH,屏下指纹开关,2018-1-15-end
 
+#prize added by lihuangyuan, open apps by fingerprint, 20190315-start
+PRIZE_FINGERUNLOCK_OPENAPP = yes
+#prize added by lihuangyuan, open apps by fingerprint, 20190315-end
+
 #pcba 海外客户宏
 PCBA_OVERSEA_CUSTOMER =none
 
@@ -508,6 +528,20 @@ BUILD_NUMBER := $(shell date +%s)
 PRIZE_LANGUAGE_CHANGE_PROGRESS = no
 #prize-add for language change by xiekui-20190123-start
 
+#prize-add by xiekui, screen zoom,20190302-start
+#设置中显示大小
+PRIZE_SCREEN_ZOOM = yes
+#prize-add by xiekui, screen zoom,20190302-end
+
+#prize added by xiekui, configuration of wifi call(settings menu), 20190308-start
+#设置中WLAN通话菜单
+PRIZE_WIFI_CALL = yes
+#prize added by xiekui, configuration of wifi call(settings menu), 20190308-end
+
+#prize added by xiekui, configuration of elastic effect, 20190321-start
+#设置下拉回弹效果
+PRIZE_SETTINGS_ELASTIC = yes
+#prize added by xiekui, configuration of elastic effect, 20190321-end
 
 #===========================增减APP==============================
 #普通版本去掉 google messages CarrierServices 简化宏

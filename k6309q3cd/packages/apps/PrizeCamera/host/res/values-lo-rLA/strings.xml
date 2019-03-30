@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--prize-add-add mode-xiaoping-20180901-start-->
+    <string name="beautiful_title_composite">ກົດປຸ່ມເສີມສວຍໜ້າຕາ</string>
+    <string name="beautiful_title_smoothing">ບົດໜັງ</string>
+    <string name="beautiful_title_slimming">ເຮັດໜ້າຈອ່ຍ</string>
+    <string name="beautiful_title_catchlight">ເສີມສວຍຂາວຂຶ້ນ</string>
+    <string name="beautiful_title_eyes_enlargement">ຕາໃຫຍ່</string>
+    <string name="shutter_type_photo_beauty">ເສີມເສວນໜ້າຕາ</string>
+    <string name="shutter_type_photo_picturezoom">ຄຸນນະພາບຮູບແຈ້ງຊັ້ນເລີດ</string>
+    <string name="shutter_type_photo_picturezoom_bl">52MP</string>  
+    <string name="shutter_type_photo_lowlight">ຖ່າຍຮູບກາງຄືນ</string>
+    <string name="cannot_continus_shot_hint">ຮູບແບບຂະນະນີ້ບໍ່ສະໜູນຖ່າຍຮູບລຽງຕໍ່</string>
+    <string name="pref_camera_cameramute_title">ຖ່າຍຮູບແບບບໍ່ໃຊ້ສຽງ</string>
+    <string name="continuous_shot_num_title">ຖ່າຍຮູບລຽງຕໍ່</string>
+    <string name="continuous_shot_num_entry_5">5ໃບ</string>
+    <string name="pref_camera_grid_title">ສາຍອິນເຕີເນັດ</string>
+    <string name="mirror_title">ຮູບພາບໃນກ້ອງ</string>
+    <string name="picselfie_open_tips_on">ໄດ້ເປີດການຫັນເປັນປອມພູມຫຼັງກ້ອງທາງໜ້າ</string>
+    <string name="picselfie_open_tips_off">ໄດ້ປິດການຫັນເປັນປອມພູມຫຼັງກ້ອງທາງໜ້າ</string>
+    <string name="pref_camera_professional_title">ຮູບແບບວິຊາສະເພາະ</string>
+    <string name="touch_shutter_title">ແຕະຈໍພາບເພື່ອຖ່າຍຮູບ</string>
+    <string name="pref_camera_volumekeys_title">ປຸ່ມພາລະບົດບາດບໍລິມາດສຽງ</string>
+    <string name="pref_camera_volumekeys_volume">ບໍລິສັດສຽງ</string>
+    <string name="pref_camera_volumekeys_shoot">ປະຕູໄວ</string>
+    <string name="pref_camera_volumekeys_zoom">ຂະຫຍາຍກ້ວາງໃຫຍ່</string>
+    <string name="watermark_title">ຮູບສາຍນ້ຳຍີ່ຫໍ້</string>
+    <string name="zsd_title">ຖ່າຍຮູບແບບສູນເລື່ອນເວລາ</string>
+    <string name="flash_failed_when_battery_is_low">ເມື່ອມີໄຟຕ່ຳເກີນໄປ,ໄຟສາກແສງຈະເປັນໂມຄະ</string>
+    <string name="close_camera_when_battery_is_low">ມີໄຟຕ່ຳເກີນໄປ,ບໍ່ສາມາດສືບຕໍ່ໃຊ້ກ້ອງຖ່າຍຮູບໄດ້</string>
+    <string name="camera_timeout_warning_message">ກ້ອງຖ່າຍຮູບຈະມອບອັດຕະໂນມັດພາຍຫຼັງ2ນາທີແລ້ວ</string>
+    <string name="camera_setting_reset_title">ຕັ້ງໃໝ່</string>
+    <string name="camera_setting_reset_message">ຈະຟື້ນຟູການຕັ້ງເອງຂອງກ້ອງຖ່າຍຮູບຫຼືບໍ່?</string>
+    <string name="shutter_type_photo_picsefile">ຮູບພາບຄົນ</string>
+    <string name="secondary_camera_blocked">ເພື່ອຮັບປະກັນຜົນຖ່າຍຮູບພາບ,ກະລຸນາຮັກສາໜ້າກ້ອງບໍ່ຖືກກິດຕັນແລະຢູ່ບ່ອນທີ່ມີແສງສະຫວ່າງແຈ້ງດີ</string>
+    <string name="pref_camera_location_title">ທີ່ຕັ້ງພູມສາດ</string>
+    <string name="pref_camera_storagepath_title">ຊ່ອງທາງຈຳຮັກສາ</string>
+    <string name="hdr_open_tips_on">HDRໄດ້ເປີດແລ້ວ</string>
+    <string name="hdr_open_tips_off">HDRໄດ້ມອບແລ້ວ</string>
+    <string name="dialog_ok">"ຮັບຮອງ"</string>
+    <string name="setting_dialog_cancel">ຍົກເລີກ</string>
+    <string name="aperture_level">ຄວາມເຂັ້ມແຂງປະຕູແສງ</string>
+    <string name="beauty_level">ຄວາມເຂັ້ມແຂງເສີມສວຍ</string>
+    <string name="switch_cameras_frequently">ເພື່ອຮັກສາເລັນຖ່າຍຮູບທາງໜ້າຂອງທ່ານ,ກະລຸນາບໍ່ໃຫ້ປ່ຽນການປະຕິບັດຢ່າງເລື່ອຍໆ</string>
+    <string name="camera_not_raised">ເລັນຖ່າຍຮູບບໍ່ສາມາດສະເດັນອອກໄດ້</string>
+    <string name="exit_camera_toast">ກົດອີກຄັ້ງຈະຖອຍອອກ</string>
+    <!--prize-add-add mode-xiaoping-20180901-end-->
+
+</resources>

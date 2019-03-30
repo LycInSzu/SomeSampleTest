@@ -353,7 +353,7 @@
     <string name="theme_text">Theme</string>
 	<!--prize add by huhuan,change Theme Dialog  20181113-->
     <string name="setting_theme">Setting theme...</string>
-	<string name="recents_avail_memory">available</string>
+	<string name="recents_avail_memory">Available</string>
 	<string name="recents_clean_release" >"Release memory:"</string>
 	<string name="recents_clean_available" >"Now available memory:"</string>
 	<string name="recents_clean_release_best">Release to the best condition</string>
@@ -368,8 +368,8 @@
 	<string name="standard">Home Screen</string>	
 	<string name="screen_style_drawer">Show all apps in App Drawer</string>
 	<string name="screen_style_title">Show all apps on Home Screen</string>
-	<!--prize added by huhuan screen style string,20190213-end  -->
-<!--prize add by liyuchong  for 客户需求，在桌面增加Tools文件夹，提交原文件 20190220 begin-->	
+	<!--prize added by huhuan screen style string,20190220-end  -->
+<!--prize add by liyuchong  for Condor add a folder  20190220 begin-->	
 	<string name="condor_tools_folder">Tools</string>
-<!--prize add by liyuchong  for 客户需求，在桌面增加Tools文件夹，提交原文件 20190220 end-->
+<!--prize add by liyuchong  for Condor add a folder  20190220 end-->
 </resources>

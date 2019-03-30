@@ -77,11 +77,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical">
+	    <!-- prize modified by liyuchong, change network type icon positon for condor ,20190309-begin -->
             <com.android.systemui.statusbar.AnimatedImageView
                 android:id="@+id/mobile_signal"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:paddingEnd="1dp"
+				android:paddingTop="2dp"
+				android:paddingStart="2dp"
                 systemui:hasOverlappingRendering="false"
             />
             <ImageView
@@ -89,6 +92,15 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:visibility="gone" />
+			<ImageView
+            android:id="@+id/network_type"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+			android:scaleType="fitXY"
+            android:visibility="gone"
+            />
+	    <!-- prize modified by liyuchong, change network type icon positon for condor ,20190309-end -->
         </FrameLayout>
         <ImageView
             android:id="@+id/mobile_roaming"
@@ -111,14 +123,16 @@
             android:gravity="center"
             android:paddingTop="3dp"
             android:paddingBottom="3dp">
+	    <!-- prize modified by liyuchong, change network type icon positon for condor ,20190309-begin -->
             <!-- MTK customized icons -->
-            <ImageView
+           <!-- <ImageView
                 android:id="@+id/network_type"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:scaleType="fitXY"
-                android:visibility="gone" />
+                android:visibility="gone" /> -->
             <!-- end -->
+	    <!-- prize modified by liyuchong, change network type icon positon for condor ,20190309-end -->
             <ImageView
                 android:id="@+id/mobile_inout"
                 android:layout_height="wrap_content"

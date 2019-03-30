@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mediatek.camera.common.widget.RotateLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_ui"
+    android:splitMotionEvents="false">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/animation_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:background="@android:color/black"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/animation_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layerType="hardware"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/camera_ui_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_marginBottom="@dimen/console_margin_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+		<!--prize-tangan-20180921-add prize camera-begin-->
+                <RelativeLayout
+                    android:id="@+id/top_bar"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/top_bar_margintop">
+
+                    <com.mediatek.camera.common.widget.RotateImageView
+                        android:id="@+id/mode"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="5.25dp"
+                        android:clickable="true"
+                        android:contentDescription="@string/accessibility_mode"
+                        android:focusable="false"
+                        android:scaleType="fitCenter"
+                        android:visibility="gone" />
+                    <!--prize-add-hpf-2018-09-04-start-->
+                    <com.mediatek.camera.common.widget.RotateImageView
+                        android:id="@+id/camera_settings"
+                        android:src="@drawable/ic_setting_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:scaleType="fitCenter" />
+                    <!--prize-add-hpf-2018-09-04-end-->
+                    <LinearLayout
+                        android:id="@+id/quick_switcher"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/top_bar_height"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/camera_settings"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"/>
+
+                    <!--prize-add-hpf-2018-10-08-start-->
+                    <com.mediatek.camera.feature.setting.flash.PrizeFlashMenuContainer
+                        android:id="@+id/prize_flash_menu_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="45dp"
+                        android:layout_centerVertical="true">
+
+                        <LinearLayout
+                            android:id="@+id/falsh_menu"
+                            android:layout_width="@dimen/prize_flash_container_width"
+                            android:layout_height="@dimen/top_bar_height"
+                            android:orientation="horizontal"
+                            android:background="@android:color/transparent"
+                            android:visibility="invisible">
+
+                            <com.mediatek.camera.common.widget.RotateImageView
+                                android:id="@+id/prize_flash_on"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:src="@drawable/prize_ic_flash_status_on"/>
+
+                            <com.mediatek.camera.common.widget.RotateImageView
+                                android:id="@+id/prize_flash_off"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:src="@drawable/prize_ic_flash_status_off"/>
+
+                            <com.mediatek.camera.common.widget.RotateImageView
+                                android:id="@+id/prize_flash_auto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:src="@drawable/prize_ic_flash_status_auto"/>
+                        </LinearLayout>
+
+                    </com.mediatek.camera.feature.setting.flash.PrizeFlashMenuContainer>
+                    <!--prize-add-hpf-2018-10-08-end-->
+                    <!--
+                    <ImageView
+                        android:id="@+id/picsfile"
+                        android:background="@drawable/picselfie_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="11dp"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:scaleType="fitCenter"
+                        android:visibility="gone"/>
+                        -->
+                </RelativeLayout>
+		<!--prize-tangan-20180921-add prize camera-end-->
+
+                <!--prize-add fixbug[72772]-huangpengfei-20190315-start-->
+                <com.mediatek.camera.common.widget.RotateImageView
+                    android:id="@+id/prize_front_flash_tips_icon"
+                    android:layout_below="@id/top_bar"
+                    android:layout_marginTop="38dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <!--prize-add fixbug[72772]-huangpengfei-20190315-end-->
+
+                <!--prize-add-hpf-2018-12-12-start-->
+                <com.mediatek.camera.feature.setting.grid.GridLineView
+                    android:id="@+id/grid_line"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <!--prize-add-hpf-2018-12-12-end-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:background="@color/transparent_background"
+                    android:layout_alignParentBottom="true">
+                </LinearLayout>
+
+    		<!--prize-added by tangan-custom ui-begin-->
+                <com.mediatek.camera.ui.shutter.ShutterRootLayout
+                    android:id="@+id/shutter_root"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/shutter_root_margin_bottom">
+                </com.mediatek.camera.ui.shutter.ShutterRootLayout>
+                <!--prize-modify-add animation of takepictur-xiaoping-20181105-start-->
+                <com.mediatek.camera.prize.CaptureAnimation
+                    android:layout_width="@dimen/mode_text_width"
+                    android:layout_height="@dimen/mode_text_width"
+                    android:id="@+id/shutter_captureanimation"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:scaleType="centerInside"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/shutter_root_margin_bottom"
+                    android:visibility="gone"
+                    />
+                <!--prize-modify-add animation of takepictur-xiaoping-20181105-end-->
+                <com.mediatek.camera.ui.shutter.SelectHorizontalScrollerLayout
+                    android:id="@+id/mode_scrollview"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_above="@id/shutter_root"
+                    android:layout_marginBottom="@dimen/mode_scrollview_margin_bottom">
+
+                </com.mediatek.camera.ui.shutter.SelectHorizontalScrollerLayout>
+		<!--prize-add AI CAMERA-huangpengfei-2019-01-29-start-->
+                <com.mediatek.camera.prize.PrizeRelativeLayout
+                    android:id="@+id/ai_scene_text_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/mode_scrollview"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/prize_shape_ai_scene_text_bg"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/ai_scene_mode_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/pref_camera_scenemode_entry_portrait"
+                        android:textColor="@android:color/white" />
+
+                    <ImageButton
+                        android:id="@+id/ai_scene_mode_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/ai_scene_mode_title"
+                        android:background="@null"
+                        android:src="@drawable/prize_ic_ai_close" />
+                </com.mediatek.camera.prize.PrizeRelativeLayout>
+		<!--prize-add AI CAMERA-huangpengfei-2019-01-29-end-->
+                <!--prize-added by tangan-custom ui-end-->
+                <!--prize-modify-add professional mode function-xiaoping-20190216-start-->
+                <LinearLayout
+                    android:id="@+id/progress_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/progress_layout_margin_bottom"
+                    android:visibility="gone">
+                    <com.mediatek.camera.prize.PrizeArcProgressBarView
+                        android:id="@+id/progress1"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        />
+                    <com.mediatek.camera.prize.PrizeArcProgressBarView
+                        android:id="@+id/progress2"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        />
+                    <com.mediatek.camera.prize.PrizeArcProgressBarView
+                        android:id="@+id/progress3"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/professional_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/professional_title_marginbottom"
+                    android:visibility="gone"
+                    >
+                    <TextView
+                        style="@style/professional_title"
+                        android:text="@string/pref_camera_whitebalance_title"
+                        />
+                    <TextView
+                        style="@style/professional_title"
+                        android:layout_marginTop="@dimen/professional_title_item_margintop"
+                        android:layout_marginBottom="@dimen/professional_title_item_margintop"
+                        android:text="@string/iso_title"
+                        />
+                    <TextView
+                        style="@style/professional_title"
+                        android:text="@string/professional_title_ev"
+                        />
+                </LinearLayout>
+                <com.mediatek.camera.prize.PrizeRelativeLayout
+                    android:id="@+id/progress_layout_rlt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/professional_controlview_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/professional_controlview_marginbottom"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/alpht"
+                    android:visibility="gone">
+                    <ImageView
+                        android:id="@+id/progress_layout_controlview"
+                        android:layout_width="@dimen/professional_controlview_height"
+                        android:layout_height="@dimen/professional_controlview_height"
+                        android:layout_marginStart="@dimen/professional_controlview_marginstart"
+                        android:src="@drawable/prize_professional_expand"
+                        />
+                    <ImageView
+                        android:id="@+id/progress_layout_reset"
+                        android:layout_width="@dimen/professional_controlview_height"
+                        android:layout_height="@dimen/professional_controlview_height"
+                        android:layout_toEndOf="@+id/progress_layout_controlview"
+                        android:src="@drawable/prize_professional_reset"
+                        />
+                </com.mediatek.camera.prize.PrizeRelativeLayout>
+
+                <!--prize-modify-add professional mode function-xiaoping-20190216-end-->
+                <View
+                    android:id="@+id/center"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout_centerInParent="true"
+                    android:clickable="false"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:id="@+id/indicator_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/center"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/top_bar"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="bottom"
+                    android:orientation="vertical"></LinearLayout>
+
+                <View
+                    android:id="@+id/center_bottom"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:clickable="false"
+                    android:visibility="invisible" />
+		<!--prize-added by tangan-custom ui-begin-->
+                <RelativeLayout
+                    android:id="@+id/effect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginStart="117dp"
+                    android:layout_toEndOf="@id/center_bottom"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:visibility="gone"
+                    android:scaleType="center">
+                </RelativeLayout>
+                <RelativeLayout
+                        android:id="@+id/camera_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="19.5dp"
+                        android:layout_marginStart="100dp"
+                        android:layout_toEndOf="@id/center_bottom"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:scaleType="center">
+
+                </RelativeLayout>
+
+
+                <com.mediatek.camera.common.widget.RotateImageView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_toStartOf="@id/center_bottom"
+                    android:clickable="true"
+                    android:background="#383838"
+                    android:contentDescription="@string/accessibility_thumbnail"
+                    android:focusable="false"
+                    android:scaleType="center" />
+		<!--prize-added by tangan-custom ui-end-->
+
+                <com.mediatek.camera.common.widget.RotateImageView
+                    android:id="@+id/thumbnail_animation"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignStart="@id/thumbnail"
+                    android:layout_alignTop="@id/thumbnail"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:scaleType="center"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/feature_root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/quick_switcher_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"></FrameLayout>
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/screen_hint_root"
+            android:clickable="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/on_screen_hint" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_all_blur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+			android:visibility="gone"
+            android:layout_marginBottom="@dimen/blur_layout_marginbottom">
+
+            <ImageButton
+                android:id="@+id/control_view"
+                android:layout_width="@dimen/blur_control_view_width"
+                android:layout_height="@dimen/blur_control_view_width"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="@dimen/blur_seekbar_layout_margin_start"
+                android:layout_marginBottom="@dimen/blur_control_view_marginbottom"
+                android:background="@drawable/blur_background"
+                android:src="@drawable/blur_expand" />
+
+        <RelativeLayout
+            android:id="@+id/layout_blur_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/control_view"
+            android:layout_marginLeft="@dimen/blur_seekbar_layout_margin_start"
+            android:layout_marginRight="@dimen/blur_seekbar_layout_margin_start"
+            android:layout_marginBottom="@dimen/blur_seekbar_layout_margin_start">
+
+            <LinearLayout
+                android:id="@+id/layout_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/blur_seekbar_layout_margin_bottom"
+                android:background="@drawable/blur_background"
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/blur_seekbar_layout_margin_start"
+                    android:textColor="@android:color/white"
+                    android:text="Size" />
+
+                <com.mediatek.camera.prize.PrizeSeekBar
+                    android:id="@+id/seekbar_size"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/blur_seekbar_height"
+                    android:layout_weight="1.0"
+                    android:paddingStart="@dimen/blur_seekbar_padding_start"
+                    android:paddingEnd="@dimen/blur_seekbar_padding_start"
+                    app:circleButtonColor="@android:color/white"
+                    app:circleButtonRadius="10dp"
+                    app:circleButtonTextColor="@color/blur_button_text"
+                    app:circleButtonTextSize="@dimen/blur_seekbar_circlebuttontextsize"
+                    app:isShowButtonText="true"
+                    app:maxProgress="96"
+                    app:progressColor="@android:color/white"
+                    app:progressHeight="@dimen/blur_seekbar_progressheight"
+                    app:selectProgress="50"
+                    app:tickBarColor="@android:color/darker_gray"
+                    app:tickBarHeight="@dimen/blur_seekbar_progressheight"></com.mediatek.camera.prize.PrizeSeekBar>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_blur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/layout_size"
+                android:background="@drawable/blur_background"
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                android:clickable="true"
+                android:layout_marginBottom="@dimen/blur_seekbar_layout_margin_start">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/blur_seekbar_layout_margin_start"
+                    android:textColor="@android:color/white"
+                    android:text="Blur" />
+
+                <com.mediatek.camera.prize.PrizeSeekBar
+                    android:id="@+id/seekbar_blur"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/blur_seekbar_height"
+                    android:layout_weight="1.0"
+                    android:paddingStart="@dimen/blur_seekbar_padding_start"
+                    android:paddingEnd="@dimen/blur_seekbar_padding_start"
+                    app:circleButtonColor="@android:color/white"
+                    app:circleButtonRadius="10dp"
+                    app:circleButtonTextColor="@color/blur_button_text"
+                    app:circleButtonTextSize="@dimen/blur_seekbar_circlebuttontextsize"
+                    app:isShowButtonText="true"
+                    app:maxProgress="96"
+                    app:progressColor="@android:color/white"
+                    app:progressHeight="@dimen/blur_seekbar_progressheight"
+                    app:selectProgress="50"
+                    app:tickBarColor="@android:color/darker_gray"
+                    app:tickBarHeight="@dimen/blur_seekbar_progressheight"></com.mediatek.camera.prize.PrizeSeekBar>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <com.mediatek.camera.prize.PrizeCircleView
+            android:id="@+id/cicle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+    </FrameLayout>
+</com.mediatek.camera.common.widget.RotateLayout>

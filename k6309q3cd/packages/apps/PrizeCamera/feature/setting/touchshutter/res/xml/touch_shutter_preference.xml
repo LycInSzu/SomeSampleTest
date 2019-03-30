@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.mediatek.camera.common.preference.SwitchPreference
+        android:key="key_touch_shutter"
+        android:title="@string/touch_shutter_title"
+        android:persistent="false"
+        android:order="55"/>
+</PreferenceScreen>

@@ -129,7 +129,7 @@ public class ContactGridManager {
     deviceNumberTextView = view.findViewById(R.id.contactgrid_device_number_text);
     deviceNumberDivider = view.findViewById(R.id.contactgrid_location_divider);
 
-    /// M: add for OP02 plugin. @{
+    /// M: add for OP02/OP08 plugin. @{
     ExtensionManager.getCallCardExt().onViewCreated(context, view);
     /// @}
   }

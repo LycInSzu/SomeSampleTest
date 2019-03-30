@@ -9,4 +9,5 @@ LOCAL_PATH :=$(TOPDIR)packages/apps/PreBuildApps/project
 #ifeq ($(strip $(PRIZE_PRODUCT_BRAND)), Condor)
     PRODUCT_PACKAGES += CondorPassport
     PRODUCT_PACKAGES += CondorThemePark
+	PRODUCT_PACKAGES += DigitalWellbeing
 #endif

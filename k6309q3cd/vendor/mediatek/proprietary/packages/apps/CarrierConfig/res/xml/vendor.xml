@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<!-- This is a place for vendor-specific config values. The format and
+     filtering rules are the same as those in carrier_config*.xml files. This
+     file is read after any specific config file from the assets folder, so it
+     must use explicit filters for MCC ad MNC if that is desired. -->
+<carrier_config_list>
+    <carrier_config mcc="460" mnc="11">
+        <int name="mtk_cdma_sms_7bit_encoding_type_int" value="2"/>
+    </carrier_config>
+    <carrier_config mcc="460" mnc="03">
+        <int name="mtk_cdma_sms_7bit_encoding_type_int" value="2"/>
+    </carrier_config>
+    <carrier_config mcc="455" mnc="02">
+        <int name="mtk_cdma_sms_7bit_encoding_type_int" value="2"/>
+    </carrier_config>
+    <carrier_config mcc="455" mnc="07">
+        <int name="mtk_cdma_sms_7bit_encoding_type_int" value="2"/>
+    </carrier_config>
+    <carrier_config  mcc="310" mnc="180">
+        <boolean name="mtk_rtt_advanced_features_support_bool" value="true" />
+    </carrier_config>
+    <carrier_config  mcc="310" mnc="410">
+        <boolean name="mtk_rtt_advanced_features_support_bool" value="true" />
+    </carrier_config>
+    <carrier_config  mcc="310" mnc="150">
+        <boolean name="mtk_rtt_advanced_features_support_bool" value="true" />
+    </carrier_config>
+    <carrier_config  mcc="310" mnc="170">
+        <boolean name="mtk_rtt_advanced_features_support_bool" value="true" />
+    </carrier_config>
+    <carrier_config  mcc="310" mnc="380">
+        <boolean name="mtk_rtt_advanced_features_support_bool" value="true" />
+    </carrier_config>
+    <carrier_config  mcc="311" mnc="560">
+        <boolean name="mtk_rtt_advanced_features_support_bool" value="true" />
+    </carrier_config>
+    <carrier_config  mcc="310" mnc="680">
+        <boolean name="mtk_rtt_advanced_features_support_bool" value="true" />
+    </carrier_config>
+    <carrier_config  mcc="310" mnc="070">
+        <boolean name="mtk_rtt_advanced_features_support_bool" value="true" />
+    </carrier_config>
+    <carrier_config  mcc="310" mnc="090">
+        <boolean name="mtk_rtt_advanced_features_support_bool" value="true" />
+    </carrier_config>
+    <carrier_config  mcc="310" mnc="030">
+        <boolean name="mtk_rtt_advanced_features_support_bool" value="true" />
+    </carrier_config>
+    <carrier_config  mcc="310" mnc="030">
+        <boolean name="mtk_rtt_advanced_features_support_bool" value="true" />
+    </carrier_config>
+    <carrier_config  mcc="311" mnc="180">
+        <boolean name="mtk_rtt_advanced_features_support_bool" value="true" />
+    </carrier_config>
+    <carrier_config  mcc="310" mnc="00">
+        <boolean name="config_telephony_use_own_number_for_voicemail_bool" value="true" />
+    </carrier_config>
+    <carrier_config  mcc="310" mnc="120">
+        <boolean name="config_telephony_use_own_number_for_voicemail_bool" value="true" />
+    </carrier_config>
+    <carrier_config  mcc="311" mnc="870">
+        <boolean name="config_telephony_use_own_number_for_voicemail_bool" value="true" />
+    </carrier_config>
+    <carrier_config  mcc="311" mnc="880">
+        <boolean name="config_telephony_use_own_number_for_voicemail_bool" value="true" />
+    </carrier_config>
+    <carrier_config  mcc="312" mnc="010">
+        <boolean name="config_telephony_use_own_number_for_voicemail_bool" value="true" />
+    </carrier_config>
+    <carrier_config  mcc="312" mnc="190">
+        <boolean name="config_telephony_use_own_number_for_voicemail_bool" value="true" />
+    </carrier_config>
+    <carrier_config  mcc="312" mnc="530">
+        <boolean name="config_telephony_use_own_number_for_voicemail_bool" value="true" />
+    </carrier_config>
+	<!-- prize add by liyuchong, fix GTS fail of CarrierServices not the default IMS package,20190308-begin--> 
+    <carrier_config>
+        <string name="config_ims_package_override_string">com.google.android.ims</string>
+    </carrier_config>
+	<!-- prize add by liyuchong, fix GTS fail of CarrierServices not the default IMS package,20190308-end--> 
+</carrier_config_list>

@@ -219,7 +219,7 @@ public class StatusBarNotifier
   @Override
   @RequiresPermission(Manifest.permission.READ_PHONE_STATE)
   public void onStateChange(InCallState oldState, InCallState newState, CallList callList) {
-    LogUtil.d("StatusBarNotifier.onStateChange", "%s->%s oldState: "+oldState+ " newState: "+newState);
+    LogUtil.d("StatusBarNotifier.onStateChange", "%s->%s", oldState, newState);
     updateNotification();
   }
 
@@ -293,7 +293,7 @@ public class StatusBarNotifier
     Trace.beginSection("StatusBarNotifier.showNotification");
     final boolean isIncoming =
         (call.getState() == DialerCall.State.INCOMING
-                || call.getState() == DialerCall.State.CALL_WAITING);
+            || call.getState() == DialerCall.State.CALL_WAITING);
     setStatusBarCallListener(new StatusBarCallListener(call));
 
     // we make a call to the contact info cache to query for supplemental data to what the
@@ -329,7 +329,12 @@ public class StatusBarNotifier
     final int iconResId = getIconToDisplay(call);
     Bitmap largeIcon = getLargeIconToDisplay(context, contactInfo, call);
     final CharSequence content = getContentString(call, contactInfo.userType);
-    final String contentTitle = getContentTitle(contactInfo, call);
+    /// M: [WWOP] STIR/SHAKEN support for OP08. @{
+    /// Google code:
+    /// final String contentTitle = getContentTitle(contactInfo, call);
+    final String contentTitle = ExtensionManager.getStatusBarExt().getContentTitle(call,
+        getContentTitle(contactInfo, call));
+    /// @}
     Trace.endSection();
     Log.i("StatusBarNotifier.buildAndSendNotification", "buildAndSendNotification content="+content+ ", contentTitle="+contentTitle);
     final boolean isVideoUpgradeRequest =

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pref_camera_location_title">Location info</string>
+    <string name="location_content_description">Location info</string>
+</resources>

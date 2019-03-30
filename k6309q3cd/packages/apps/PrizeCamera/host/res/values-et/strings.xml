@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--prize-add-add mode-xiaoping-20180901-start-->
+    <string name="beautiful_title_composite">Automaatne retušeerimine</string>
+    <string name="beautiful_title_smoothing">Silumine</string>
+    <string name="beautiful_title_slimming">Näosalendus</string>
+    <string name="beautiful_title_catchlight">Valgendamine</string>
+    <string name="beautiful_title_eyes_enlargement">Silmade laiendamine</string>
+    <string name="shutter_type_photo_beauty">Retušeerimine</string>
+    <string name="shutter_type_photo_picturezoom">FHD pildikvaliteet</string>
+    <string name="shutter_type_photo_picturezoom_bl">52MP</string>  
+    <string name="shutter_type_photo_lowlight">Öövõte</string>
+    <string name="cannot_continus_shot_hint">See olek ei toeta pidevat võtet</string>
+    <string name="pref_camera_cameramute_title">Vaigista kaamera</string>
+    <string name="continuous_shot_num_title">Pidev võte</string>
+    <string name="continuous_shot_num_entry_5">5 kaadrid</string>
+    <string name="pref_camera_grid_title">Võrgustik</string>
+    <string name="mirror_title">Peegelpilt</string>
+    <string name="picselfie_open_tips_on">Eesmise kaamera Bokeh’ efekt on sisse lülitatud</string>
+    <string name="picselfie_open_tips_off">Eesmise kaamera Bokeh’ efekt on välja lülitatud</string>
+    <string name="pref_camera_professional_title">Profirežiim</string>
+    <string name="touch_shutter_title">Pildistamiseks puuduta ekraani</string>
+    <string name="pref_camera_volumekeys_title">Helinupu funktsioon</string>
+    <string name="pref_camera_volumekeys_volume">Helitugevus</string>
+    <string name="pref_camera_volumekeys_shoot">Katik</string>
+    <string name="pref_camera_volumekeys_zoom">Suumi sisse</string>
+    <string name="watermark_title">Loo vesimärk</string>
+    <string name="zsd_title">Nullviivitusega fotograafia</string>
+    <string name="flash_failed_when_battery_is_low">Välk ei tööta, kui aku on tühi</string>
+    <string name="close_camera_when_battery_is_low">Sulgege kaamera, kui aku on tühi</string>
+    <string name="camera_timeout_warning_message">Kaamera lülitub pärast 2-minutilist ooterežiimi automaatselt välja</string>
+    <string name="camera_setting_reset_title">Lähtesta</string>
+    <string name="camera_setting_reset_message">Kas soovite taastada kaamera vaikeseaded?</string>
+    <string name="shutter_type_photo_picsefile">Portree</string>
+    <string name="secondary_camera_blocked">Fotograafiaefekti tagamiseks veenduge, et lääts ei oleks takistatud ega eredas valguses</string>
+    <string name="pref_camera_location_title">Geograafiline asukoht</string>
+    <string name="pref_camera_storagepath_title">Salvestuskoht</string>
+    <string name="hdr_open_tips_on">HDR on sisse lülitatud</string>
+    <string name="hdr_open_tips_off">HDR on välja lülitatud</string>
+    <string name="dialog_ok">"OK"</string>
+    <string name="setting_dialog_cancel">Tühista</string>
+    <string name="aperture_level">Ava tase</string>
+    <string name="beauty_level">Ilu tase</string>
+    <string name="switch_cameras_frequently">Kaamera kaitsmiseks ära palun režiimi liiga tihti vaheta</string>
+    <string name="camera_not_raised">Kaamera ei saa välja hüpata</string>
+    <string name="exit_camera_toast">Väljumiseks vajuta uuesti</string>
+    <!--prize-add-add mode-xiaoping-20180901-end-->
+
+
+</resources>

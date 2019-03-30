@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--prize-add-add mode-xiaoping-20180901-start-->
+    <string name="beautiful_title_composite">ස්වයංක්‍රීය සපර්ශනය</string>
+    <string name="beautiful_title_smoothing">ලිහිල් කිරීම</string>
+    <string name="beautiful_title_slimming">මුහුණ හැඩ කිරීම</string>
+    <string name="beautiful_title_catchlight">පැහැපත් කිරීම</string>
+    <string name="beautiful_title_eyes_enlargement">ඇස් ලොකු කිරීම</string>
+    <string name="shutter_type_photo_beauty">නැවත සපර්ශනය</string>
+    <string name="shutter_type_photo_picturezoom">FHD පින්තූර තත්ත්වය</string>
+    <string name="shutter_type_photo_picturezoom_bl">52MP</string>  
+    <string name="shutter_type_photo_lowlight">නයිට් ෂොට්</string>
+    <string name="cannot_continus_shot_hint">මෙම අවස්ථාවේදී දීර්ග පටිගත කිරීම අසාර්ථකයි</string>
+    <string name="pref_camera_cameramute_title">නිශ්ශබ්ද කැමරාව</string>
+    <string name="continuous_shot_num_title">ක්‍රමාණුකූල පටිගත කිරීම</string>
+    <string name="continuous_shot_num_entry_5">පටිගත ගණන 5</string>
+    <string name="pref_camera_grid_title">දිර්ග පෙළ</string>
+    <string name="mirror_title">කණ්ණාඩිය</string>
+    <string name="picselfie_open_tips_on">ඉදිරි පස කැමරාවේදී බෝකේ එෆැක්ට් ක්‍රියාත්මකයි.</string>
+    <string name="picselfie_open_tips_off">ඉදිරි පස කැමරාවේදී බෝකේ එෆැක්ට් වසා ඇත.</string>
+    <string name="pref_camera_professional_title">නිපුණත්ව මාදිරිය</string>
+    <string name="touch_shutter_title">පින්තූර ගැනීමට තිරම ස්පර්ශනය කරන්න</string>
+    <string name="pref_camera_volumekeys_title">ශබ්ද අඩු වැඩි කිරීමේ පහසුකම</string>
+    <string name="pref_camera_volumekeys_volume">ශබ්ද අඩු වැඩි කිරීම</string>
+    <string name="pref_camera_volumekeys_shoot">ශටර්</string>
+    <string name="pref_camera_volumekeys_zoom">ලොකු කිරීම</string>
+    <string name="watermark_title">වෙළෙඳ නාම සලකුණ</string>
+    <string name="zsd_title">බිංදුව ප්‍රමාද ඡායාරූප කරණය</string>
+    <string name="flash_failed_when_battery_is_low">බැටරිය අඩු වූ විට ෆ්ලෑෂ් අසමත් විය</string>
+    <string name="close_camera_when_battery_is_low">බැටරිය අඩු වූ විට කැමරාව වසන්න</string>
+    <string name="camera_timeout_warning_message">විනාඩි 2ක් නිෂ්ක්රීයව තිබීමෙන් පසු කැමරාව ස්වයංක්රීයව වසා දැමේ</string>
+    <string name="camera_setting_reset_title">යළි සකසන්න</string>
+    <string name="camera_setting_reset_message">ඔබට කැමරාවේ පෙරනිමි සැකසුම් ප්‍රතිස්ථාපනය කිරීමට අවශ්‍ය ද?</string>
+    <string name="shutter_type_photo_picsefile">ඡායාරූපය</string>
+    <string name="secondary_camera_blocked">ඡායාරූපකරණ බලපෑම තහවුරු කිරීමට, කරුණාකර කාචය අවහිර නොකර සහ දීප්තිමත් ආලෝකයක තිබෙන බව තහවුරු කරගන්න</string>
+    <string name="pref_camera_location_title">භූගෝලීය පිහිටීම</string>
+    <string name="pref_camera_storagepath_title">ගබඩා මාර්ගය</string>
+    <string name="hdr_open_tips_on">HDR සක්‍රීයයි</string>
+    <string name="hdr_open_tips_off">HDR අක්‍රීයයි</string>
+    <string name="dialog_ok">"හරි"</string>
+    <string name="setting_dialog_cancel">අවලංගු කරන්න</string>
+    <string name="aperture_level">විවරයේ මට්ටම</string>
+    <string name="beauty_level">ලස්සන මට්ටම</string>
+    <string name="switch_cameras_frequently">ඔබේ ඉදිරිපස කැමරාව ආරක්ෂා කිරීමට, කරුණාකර නිතර ක්‍රියාකාරකම මාරු නොකරන්න</string>
+    <string name="camera_not_raised">කැමරාවෙන් ඉවත්විය නොහැක</string>
+    <string name="exit_camera_toast">පිටවීමට නැවත ඔබන්න</string>
+    <!--prize-add-add mode-xiaoping-20180901-end-->
+
+
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--prize-add-add mode-xiaoping-20180901-start-->
+    <string name="beautiful_title_composite">ავტომატური რეტუშირება</string>
+    <string name="beautiful_title_smoothing">დაგლუვება</string>
+    <string name="beautiful_title_slimming">სახის დათხელება</string>
+    <string name="beautiful_title_catchlight">გათეთრება</string>
+    <string name="beautiful_title_eyes_enlargement">თვალის გადიდება</string>
+    <string name="shutter_type_photo_beauty">რეტუშირება</string>
+    <string name="shutter_type_photo_picturezoom">FHD სურათის ხარისხი</string>
+    <string name="shutter_type_photo_picturezoom_bl">52MP</string>  
+    <string name="shutter_type_photo_lowlight">ღამით გადაღება</string>
+    <string name="cannot_continus_shot_hint">მიმდინარე მდგომარეობით უწყვეტი კადრის გადაღება არ არის მხარდაჭერილი.</string>
+    <string name="pref_camera_cameramute_title">კამერის გამორთვა.</string>
+    <string name="continuous_shot_num_title">უწყვეტი კადრის გადაღება</string>
+    <string name="continuous_shot_num_entry_5">5 კადრი</string>
+    <string name="pref_camera_grid_title">ბადის ხაზი</string>
+    <string name="mirror_title">სარკე</string>
+    <string name="picselfie_open_tips_on">წინა კამერის ბოკე ეფექტი ჩართულია.</string>
+    <string name="picselfie_open_tips_off">წინა კამერის ბოკე ეფექტი გამორთულია.</string>
+    <string name="pref_camera_professional_title">პროფესიონალური რეჟიმი</string>
+    <string name="touch_shutter_title">სურათის გადასაღებად დააჭირეთ ეკრანს</string>
+    <string name="pref_camera_volumekeys_title">ხმის ღილაკის ფუნქცია</string>
+    <string name="pref_camera_volumekeys_volume">ხმის სიძლიერე</string>
+    <string name="pref_camera_volumekeys_shoot">ჩამკეტი</string>
+    <string name="pref_camera_volumekeys_zoom">მიახლოება</string>
+    <string name="watermark_title">ბრენდის ნიშანი</string>
+    <string name="zsd_title">ფოტოგადაღება ნულოვანი დაგვიანებით</string>
+    <string name="flash_failed_when_battery_is_low">წარუმატებელი ფლეშ განათება ბატარეაში დაბალი ენერგიის დროს</string>
+    <string name="close_camera_when_battery_is_low">დახურეთ კამერა ბატარეაში დაბალი ენერგიის დროს</string>
+    <string name="camera_timeout_warning_message">კამერა ავტომატურად ითიშება 2 წუთიანი უმოქმედობის შემდეგ</string>
+    <string name="camera_setting_reset_title">გადატვირთვა</string>
+    <string name="camera_setting_reset_message">გსურთ კამერის სტანდარტული პარამეტრების აღდგენა?</string>
+    <string name="shutter_type_photo_picsefile">პორტრეტი</string>
+    <string name="secondary_camera_blocked">ფოტოგადაღების ეფექტის უზრუნველსაყოფად, დარწმუნდით, რომ ობიექტივი არ არის დაბლოკილი და იმყოფება ნათელ შუქზე</string>
+    <string name="pref_camera_location_title">გეოგრაფიული ადგილმდებარეობა</string>
+    <string name="pref_camera_storagepath_title">შენახვის გზა</string>
+    <string name="hdr_open_tips_on">HDR ჩართულია</string>
+    <string name="hdr_open_tips_off">HDR გამოთულია</string>
+    <string name="dialog_ok">"OK"</string>
+    <string name="setting_dialog_cancel">გაუქმება</string>
+    <string name="aperture_level">დიაპაზონის დონე</string>
+    <string name="beauty_level">სილამაზის დონე</string>
+    <string name="switch_cameras_frequently">თქვენი წინა კამერის დასაცავად, გთხოვთ არ შეცვალოთ ოპერაცია ხშირად</string>
+    <string name="camera_not_raised">კამერიდან სწრაფი გამოსვლა ვერ ხერხდება</string>
+    <string name="exit_camera_toast">კვლავ დააჭირეთ გამოსასვლელად</string>
+    <!--prize-add-add mode-xiaoping-20180901-end-->
+
+
+</resources>

@@ -15,11 +15,15 @@
 -->
 
 <!--prize-remove the icon in the network and internet by xiekui-20180910-start-->
+
+<!--prize modify by xiekui,rename the title,20190304-start-->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="network_and_internet_screen"
-    android:title="@string/network_dashboard_title">
+    android:title="@string/prize_more_network_and_intent">
+    <!--prize modify by xiekui,rename the title,20190304-end-->
+    
     <!-- prize-remove for bug 66448 the Expanded preference by xiekui-20181101-line-->
     <!-- settings:initialExpandedChildrenCount="5"> -->
 
@@ -81,6 +85,13 @@
         android:fragment="com.android.settings.ProxySelector"
         android:key="proxy_settings"
         android:title="@string/proxy_settings_title" />
+        
+    <!--prize-add by xiekui, wifi call menu,20190304-start-->
+    <Preference
+       android:key="wifi_calling_settings"
+       android:title="@string/wifi_calling_settings_title"
+       android:fragment="com.android.settings.wifi.calling.WifiCallingSettings"/>
+    <!--prize-add by xiekui, wifi call menu,20190304-end-->
 
     <!--<com.android.settingslib.RestrictedPreference
         android:fragment="com.android.settings.vpn2.VpnSettings"
@@ -113,7 +124,7 @@
         android:widgetLayout="@layout/prize_preference_arrow"
         android:positiveButtonText="@string/save"
         android:negativeButtonText="@android:string/cancel" />
-    <!--prize-add for setting new UI by xiekui-20190117-end-->
+    <!--prize-add for new UI of settings by xiekui-20190127-end-->
     <!--prize add by liyuchong , MTK_CMASReceiver for Condor , 20190124-begin -->
     <Preference
         android:key="emergency_broadcast_listactivity"

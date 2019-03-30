@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pref_camera_videomute_title">录像静音</string>
+    <string name="videomute_content_description">录像静音</string>
+</resources>

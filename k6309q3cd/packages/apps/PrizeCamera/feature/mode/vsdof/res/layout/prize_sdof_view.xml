@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sdof_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true">
+
+    <com.mediatek.camera.prize.PrizeRelativeLayout
+        android:id="@+id/sdof_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/aperture_seekbar_layout_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/shutter_group_height"
+        android:background="@color/prize_black_translucence_color"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/sdof_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/beauty_title_upMargin"
+            android:text="@string/aperture_level"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/beautiful_text_size" />
+        <!-- 光圈调节进度条 -->
+        <SeekBar
+            android:id="@+id/sdof_bar"
+            style="@style/SeekBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sdof_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/seakbar_progress_leftMargin"
+            android:max="96"
+            android:paddingBottom="@dimen/seekbar_progress_topmargin" />
+
+    </com.mediatek.camera.prize.PrizeRelativeLayout>
+</RelativeLayout>

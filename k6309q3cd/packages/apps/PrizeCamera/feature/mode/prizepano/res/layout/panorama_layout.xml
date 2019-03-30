@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/panorama_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/pano_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/pano_middle_preview_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:src="#000000" />
+
+        <View
+            android:id="@+id/pano_background_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_centerInParent="true"
+            android:background="#FFFC9400"/>
+
+        <SurfaceView
+            android:id="@+id/small_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <SurfaceView
+            android:id="@+id/thumb_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/textview_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pano_layout"/>
+
+</RelativeLayout>

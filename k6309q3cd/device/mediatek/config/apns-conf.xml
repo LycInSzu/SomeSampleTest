@@ -612,7 +612,7 @@
       password="orange"
       mmsc="http://mms.orange.fr"
       mmsproxy="192.168.10.200"
-      mmsport="9201"
+      mmsport="8080"
       type="mms"
   />
 
@@ -20431,7 +20431,7 @@
 	mcc="603"
 	mnc="02"
 	authtype="1"
-	apn="Djezzy.internet"
+	apn="djezzy.internet"
 	user=""
 	password=""
 	server=""
@@ -20462,9 +20462,9 @@
 	carrier="OoredooINTERNET"
 	mcc="603"
 	mnc="03"
-	apn=" internet"
-	user="Ooredoo"
-	password="Ooredoo"
+	apn="internet"
+	user="ooredoo"
+	password="ooredoo"
 	server=""
 	proxy=""
 	type="default,supl"/>
@@ -20482,5 +20482,5 @@
 	emsi="default"
 	type="mms"/>
 
-<!-- APN Condor end Date 25_03_2019-->
+<!-- APN Condor end Date 13_04_2019-->
 </apns>

@@ -56,6 +56,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
 		android:resizeableActivity="false"
+		android:persistent="true"
         >
         <activity
             android:name=".FmMainActivity"
@@ -63,7 +64,7 @@
             android:configChanges="orientation|mcc|mnc|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:launchMode="singleTask"
+            android:launchMode="standard"
             android:theme="@style/FmMainTheme"
             android:usesCleartextTraffic="false" >
             <intent-filter>
@@ -81,6 +82,7 @@
         <service
             android:name=".FmService"
             android:exported="false" >
+			
             <intent-filter>
                 <action android:name="com.android.fmradio.IFmRadioService" />
             </intent-filter>
@@ -112,7 +114,7 @@
             android:name=".FmRecordActivity"
             android:label="@string/record_title"
             android:configChanges="keyboardHidden|screenSize|mcc|mnc"
-            android:theme="@style/LightTheme"
+            android:theme="@style/FavoriteTheme"
             android:launchMode="singleTask" >
         </activity>
         

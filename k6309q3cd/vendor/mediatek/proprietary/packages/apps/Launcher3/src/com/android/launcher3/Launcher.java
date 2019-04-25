@@ -39,11 +39,20 @@ import android.app.ActivityOptions;
 //add by zhouerlong prize launcher 20180906
 import android.app.AlertDialog;
 //add by zhouerlong prize launcher 20180906
+//prize add by zhouerlong  add notification default open 20190410 begin
+import android.app.NotificationManager;
+//prize add by zhouerlong  add notification default open 20190410 begin
 import android.appwidget.AppWidgetHostView;
 import android.appwidget.AppWidgetManager;
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.ComponentCallbacks2;
+//prize add by zhouerlong space dialog 20190330 begin
+import android.content.ComponentName;
+import android.os.Environment;
+import android.os.StatFs;
+import android.view.Gravity;
+//prize add by zhouerlong space dialog 20190330 begin
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
@@ -90,6 +99,9 @@ import com.android.launcher3.allapps.AllAppsTransitionController;
 import com.android.launcher3.allapps.DiscoveryBounce;
 import com.android.launcher3.badge.BadgeInfo;
 //prize add by zhouerlong badgeUnread begin
+//prize add by zhouerlong  add notification default open 20190410 begin
+import java.lang.reflect.InvocationTargetException;
+//prize add by zhouerlong  add notification default open 20190410 begin
 import java.util.HashMap;
 import com.android.launcher3.badge.BadgeTool;
 import com.android.launcher3.badge.PrizeObserver;
@@ -185,7 +197,7 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         LauncherModel.Callbacks, LauncherProviderChangeListener, UserEventDelegate{
     public static final String TAG = "Launcher";
 //prize add by liyuchong, adapte Condor theme park, 20190218-begin
-    private String[] permissions = {"android.permission.READ_EXTERNAL_STORAGE"};
+    private String[] permissionsInCondorLauncher = {android.Manifest.permission.READ_EXTERNAL_STORAGE,android.Manifest.permission.READ_CALL_LOG,android.Manifest.permission.READ_SMS};
 //prize add by liyuchong, adapte Condor theme park, 20190218-end
     static final boolean LOGD = false;
 
@@ -326,6 +338,10 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
     static public boolean sBadge =true;
 //prize add by zhouerlong badgeUnread begin
 
+//prize add by zhouerlong  add notification default open 20190410 begin
+	//prize by tian test 
+	private NotificationManager mNm;
+//prize add by zhouerlong  add notification default open 20190410 begin	
     //add by zhouerlong prize launcher 20180906
 //prize add default config by zhouerlong 20190126
     private void initDefaultConfig() {
@@ -345,7 +361,9 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         default_screen_style =res.getBoolean(R.bool.default_screen_style);
     }
 //prize add default config by zhouerlong 20190126
-
+//prize add by zhouerlong  add notification default open 20190410 begin
+    ComponentName mComNotification =new ComponentName("com.android.launcher3","com.android.launcher3.notification.NotificationListener");
+//prize add by zhouerlong  add notification default open 20190410 begin
     private final Handler mHandler = new Handler();
     private final Runnable mLogOnDelayedResume = this::logOnDelayedResume;
 //prize add by zhouerlong badgeUnread begin
@@ -400,6 +418,10 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         mStateManager = new LauncherStateManager(this);
         UiFactory.onCreate(this);
 
+
+//prize add by zhouerlong  add notification default open 20190410 begin
+        enable(mComNotification);
+//prize add by zhouerlong  add notification default open 20190410 begin
         mAppWidgetManager = AppWidgetManagerCompat.getInstance(this);
 
         mAppWidgetHost = new LauncherAppWidgetHost(this);
@@ -429,10 +451,7 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
 				PrefTools.putBoolean("first",true,this);
 			}
 		}
-//prize add by zhouerlong badgeUnread begin
-        if(sBadge)
-		mObserver.register(this);
-//prize add by zhouerlong badgeUnread begin
+
 //add by zhouerlong prize launcher 20180906
         restoreState(savedInstanceState);
 
@@ -509,6 +528,45 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
             setWorkspaceLoading(true);
         }
     }
+
+
+//prize add by zhouerlong  add notification default open 20190410 begin
+    protected boolean isServiceEnabled(ComponentName cn) {
+        boolean isServiceEnable = false;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
+            try {
+                isServiceEnable = (boolean)mNm.getClass().getMethod("isNotificationListenerAccessGranted",ComponentName.class).invoke(mNm,cn);
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();
+            } catch (NoSuchMethodException e) {
+                e.printStackTrace();
+            }
+        }
+        return isServiceEnable;
+    }
+
+    protected void enable(ComponentName service) {
+        boolean first=PrefTools.getBoolean("notification_first_default",false,this);
+        if(!first) {
+            mNm = (NotificationManager) getSystemService(NotificationManager.class);
+            if (!isServiceEnabled(service)) {
+                try {
+                    mNm.getClass().getMethod("setNotificationListenerAccessGranted",ComponentName.class,boolean.class).invoke(mNm,service,true);
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                } catch (NoSuchMethodException e) {
+                    e.printStackTrace();
+                }
+            }
+            PrefTools.putBoolean("notification_first_default",true,this);
+        }
+        	//mNm.setNotificationListenerAccessGranted(service, true);
+    }
+//prize add by zhouerlong  add notification default open 20190410 begin
 
     private void initDeviceProfile(InvariantDeviceProfile idp) {
         // Load configuration-specific DeviceProfile
@@ -823,16 +881,31 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
 //prize add by zhouerlong badgeUnread begin
 //prize modified by liyuchong, adapte Condor theme park, 20190218-begin
         if (requestCode == REQUEST_PERMISSION_READ_STORAGE ){
-            Log.d(TAG, "----------requestCode == REQUEST_PERMISSION_READ_STORAGE------------");
-            if (grantResults.length>0&&grantResults[0] != PackageManager.PERMISSION_GRANTED) {
+            if (grantResults.length>0) {
+                ArrayList<String> permisionArrayList=new ArrayList<>();
+                boolean b=true;
+                if (grantResults.length>0 && grantResults[0] != PackageManager.PERMISSION_GRANTED){
+                    permisionArrayList.add(permissions[0]);
+                     b &= shouldShowRequestPermissionRationale(permissions[0]);
+                }
+                if (grantResults.length>1 && grantResults[1] != PackageManager.PERMISSION_GRANTED){
+                    permisionArrayList.add(permissions[1]);
+                    b &= shouldShowRequestPermissionRationale(permissions[1]);
+                }
+                if (grantResults.length>2 && grantResults[2] != PackageManager.PERMISSION_GRANTED){
+                    permisionArrayList.add(permissions[2]);
+                    b &= shouldShowRequestPermissionRationale(permissions[2]);
+                }
 
-                boolean b = shouldShowRequestPermissionRationale(permissions[0]);
                 if (!b) {
                     SharedPreferences sPreferences = getSharedPreferences("UserStorageConfig", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sPreferences.edit();
                     editor.putBoolean("deny", true);
                     editor.apply();
                     
+                }else {
+                    int size=permisionArrayList.size();
+                    permissionsInCondorLauncher= (String[]) permisionArrayList.toArray(new String[size]);
                 }
             }
 //prize modified by liyuchong, adapte Condor theme park, 20190218-end
@@ -985,16 +1058,25 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         UiFactory.onLauncherStateOrResumeChanged(this);
 
         TraceHelper.endSection("ON_RESUME");
-//prize modified by liyuchong, adapte Condor theme park, 20190218-begin
+//prize add by zhouerlong space dialog 20190330 begin
+        checkspace();
+//prize add by zhouerlong space dialog 20190330 begin
+        //prize modified by liyuchong, adapte Condor theme park, 20190218-begin
         SharedPreferences ssPreferences = getSharedPreferences("UserStorageConfig", Context.MODE_PRIVATE);
         boolean deniedByUser= ssPreferences.getBoolean("deny",false);
         Log.d(TAG, "----------onResume------------  deniedByUser is "+deniedByUser);
         if (!deniedByUser){
-            if (!checkDangerousPermissions(Launcher.this, permissions)) {
-                requestNeedPermissions(Launcher.this, permissions, REQUEST_PERMISSION_READ_STORAGE);
+            if (!checkDangerousPermissions(Launcher.this, permissionsInCondorLauncher)) {
+                requestNeedPermissions(Launcher.this, permissionsInCondorLauncher, REQUEST_PERMISSION_READ_STORAGE);
             }
         }
-//prize modified by liyuchong, adapte Condor theme park, 20190218-end
+        //prize modified by liyuchong, adapte Condor theme park, 20190218-end
+//prize add by zhouerlong badgeUnread begin
+        //prize modified by liyuchong, adapte Condor theme park, 20190401-begin
+        if(sBadge&&!deniedByUser)
+        //prize modified by liyuchong, adapte Condor theme park, 20190401-end
+            mObserver.register(this);
+//prize add by zhouerlong badgeUnread begin
 
 //prize add by zhouerlong badgeUnread begin
         mAppsView.getAppsStore().notifyUpdate();
@@ -1237,6 +1319,67 @@ boolean mScreenStyle = LauncherAppState.isDisableAllApps();
         favorite.setOnFocusChangeListener(mFocusHandler);
         return favorite;
     }
+
+//prize add by zhouerlong space dialog 20190330 begin
+    public long getInternalStorageAvailableSpace()
+    {
+        long ret=0;
+        File path = Environment.getDataDirectory();
+        StatFs stat = new StatFs(path.getPath());
+        long blockSize = stat.getBlockSize();
+        long availableBlocks = stat.getAvailableBlocks();
+        ret = availableBlocks * blockSize;
+        return ret;
+    }
+    public void checkspace() {
+
+        float t = getInternalStorageAvailableSpace()/1000/1000f;
+
+         final long BETWEEN_TIME = 1000 * 60 *10;
+       // final long BETWEEN_TIME = 1000 * 5;
+
+        long time = System.currentTimeMillis();
+        long pre =PrefTools.getLong("space_key",0,this);
+        long dt = time - pre;
+        if(dt>BETWEEN_TIME) {
+            if(t<200f) {
+                showspaceDialog();
+            }
+            PrefTools.putLong("space_key",time,this);
+        }
+    }
+
+    public void showspaceDialog() {
+
+        AlertDialog.Builder Dialog = new AlertDialog.Builder(this);
+
+        View change_theme_dialog = LayoutInflater.from(this).inflate(R.layout.space_dialog, null);
+        Dialog.setView(change_theme_dialog);
+        AlertDialog    spaceDialog =Dialog.create();
+        spaceDialog.getWindow().setGravity(Gravity.BOTTOM);
+        spaceDialog.setCanceledOnTouchOutside(false);
+        change_theme_dialog.findViewById(R.id.to_clear).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent t  =   new Intent();
+                t.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                try {
+                    t.setComponent(new ComponentName("com.google.android.apps.nbu.files","com.google.android.apps.nbu.files.home.HomeActivity"));
+                    startActivity(t);
+                } catch (Exception e) {
+                    t.setComponent(new ComponentName("com.mediatek.filemanager","com.mediatek.filemanager.FileManagerOperationActivity"));
+                    startActivity(t);
+
+
+                }finally {
+                    spaceDialog.dismiss();
+                }
+            }
+        });
+        spaceDialog.show();
+    }
+//prize add by zhouerlong space dialog 20190330 begin
 
     /**
      * Add a shortcut to the workspace or to a Folder.
@@ -2728,6 +2871,7 @@ boolean mScreenStyle = LauncherAppState.isDisableAllApps();
 
 //prize add by liyuchong, adapte Condor theme park, 20190218-begin
     public boolean checkDangerousPermissions(Activity ac, String[] permissions) {
+        Log.d(TAG, "----------checkDangerousPermissions -------");
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             return true;
         }
@@ -2735,6 +2879,8 @@ boolean mScreenStyle = LauncherAppState.isDisableAllApps();
         for (String permission : permissions) {
             if (ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED ||
                     ActivityCompat.shouldShowRequestPermissionRationale(ac, permission)) {
+                Log.d(TAG, "----------checkDangerousPermissions  return false-------");
+
                 return false;
             }
         }

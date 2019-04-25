@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+	<!-- Track fastpass log -->
+    <feature name="com.google.android.feature.GMSEXPRESS_PLUS_BUILD"/>
+    <feature name="com.google.android.feature.WELLBEING"/>
+</config>

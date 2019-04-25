@@ -66,6 +66,9 @@
     <string name="alert_volume_summary">Adjust alert sound volume</string>
     <string name="chile_emergency_alert">ALERTA DE EMERGENCIA</string>
 
+    <string name="public_safety_dialog_title">Public Safety Alert</string>
+    <string name="wea_test_dialog_title">State/Local Test Alert</string>
+
     <!-- add for TRA test-->
     <string name="enable_tra_class1_threat_alerts_title">National Emergency Alerts</string>
     <string name="enable_tra_class1_threat_alerts_summary">Enable national emergency alerts</string>

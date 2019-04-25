@@ -348,8 +348,6 @@ public class StatusBarMobileView extends FrameLayout implements DarkReceiver,
         /// M: Add for [Network Type and volte on Statusbar] @{
         if (mState.networkIcon != state.networkIcon) {
             setNetworkIcon(state.networkIcon);
-            // if network icon change to LTE, need to update dis volte icon.
-            mStatusBarExt.setDisVolteView(mState.subId, state.volteIcon, mVolteType);
         }
         //PRIZE-add for liuhai screen, OPEN_LIUHAI_SCREEN-liufan-2018-10-10-start
 		if(PrizeSystemUIOption.OPEN_LIUHAI_SCREEN){
@@ -358,6 +356,11 @@ public class StatusBarMobileView extends FrameLayout implements DarkReceiver,
         //PRIZE-add for liuhai screen, OPEN_LIUHAI_SCREEN-liufan-2018-10-10-end
         if (mState.volteIcon != state.volteIcon) {
             setVolteIcon(state.volteIcon);
+        }
+        if (mState.mCustomizedState != state.mCustomizedState
+                || mState.networkIcon != state.networkIcon) {
+            // if cs reg state has changed or network icon change to LTE,need to update.
+            mStatusBarExt.setDisVolteView(mState.subId, state.volteIcon, mVolteType);
         }
         /// @}
 

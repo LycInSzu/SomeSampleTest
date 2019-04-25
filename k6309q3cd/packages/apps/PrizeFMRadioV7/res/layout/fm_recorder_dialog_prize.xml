@@ -14,18 +14,13 @@
     <TextView
         android:id="@+id/fm_recording_title_bar"
         android:layout_width="wrap_content"
-        android:layout_height="45.5dp"
+        android:layout_height="40dp"
         android:gravity="center_vertical"
         android:text="@string/dlg_save_recording_title"
         android:textColor="@color/dialog_front_color"
         android:textSize="@dimen/dialog_title_size"
         />
      </LinearLayout>
-    <View
-        android:layout_width="283dp"
-        android:layout_height="0.5dp"
-        android:background="@color/favorite_recyclerview_divider" />
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -34,20 +29,20 @@
         <TextView
         android:id="@+id/save_recording_storage_warning"
         android:layout_width="match_parent"
-        android:layout_height="66.5dp"
-        android:visibility="gone"
+        android:layout_height="35dp"
+        android:visibility="invisible"
         android:paddingLeft="12dip"
         android:paddingRight="12dip"
         android:text="@string/dlg_save_recording_storage_warning"
         android:textColor="@color/dialog_front_color"
-        android:textSize="@dimen/dialog_msg_size"
+        android:textSize="@dimen/small_text_size"
         android:gravity="center"/>
     </LinearLayout>
     
     <LinearLayout 
     	android:id="@+id/contentPanel"
         android:layout_width="265dp"
-        android:layout_height="66.5dp"
+        android:layout_height="60dp"
         android:orientation="vertical"
         android:layout_gravity="center_horizontal">
 		<EditText 
@@ -62,28 +57,23 @@
         	android:textSize="@dimen/dialog_msg_size"
         	android:gravity="left|center_vertical"
         	android:background="@android:color/transparent"
-        	android:layout_marginTop="30dp"
+        	android:layout_marginTop="5dp"
         	android:textColorHint="@color/dialog_disable_color"
         	/>
 		<View
         android:layout_width="200dp"
         android:layout_height="0.5dp"
-        android:background="@drawable/ic_divide_middle" 
+        android:background="@color/rename_dialog_button_color"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="2dp"/>
 	</LinearLayout>
 
-    <View
-        android:layout_width="253.5dp"
-        android:layout_height="0.5dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@color/favorite_recyclerview_divider"/>
 
    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="76.5dp"
-        android:layout_gravity="center_horizontal"
+        android:layout_height="@dimen/rename_dialog_bottom_height"
         android:orientation="horizontal" 
+        android:gravity="bottom"
         android:weightSum="2"
         android:layoutDirection="ltr">
         <Button
@@ -100,7 +90,7 @@
             android:layout_gravity="center_vertical"
             android:textAllCaps="false"/>
 		<View
-        android:layout_width="1px"
+        android:layout_width="0.5px"
         android:layout_height="match_parent"
         android:background="@color/favorite_recyclerview_divider" />
 

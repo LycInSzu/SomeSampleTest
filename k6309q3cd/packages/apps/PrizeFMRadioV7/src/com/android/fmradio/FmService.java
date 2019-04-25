@@ -261,6 +261,7 @@ public class FmService extends Service implements FmRecorder.OnRecorderStateChan
     private AudioPatch mAudioPatch = null;
     private Object mRenderLock = new Object();
     private Object mRenderingLock = new Object();
+    private Object mNotificationLock = new Object();
     private Object mAudioPatchLock = new Object();
     private boolean mIsParametersSet = false;
     private boolean mIsOutputDeviceChanged = false;
@@ -518,7 +519,7 @@ public class FmService extends Service implements FmRecorder.OnRecorderStateChan
 	}
 	
 	private boolean isUsb() {
-		boolean enable = SystemProperties.getInt("ro.prize_fm_usb", 0) == 1 ? true : false;
+		boolean enable = SystemProperties.getInt("ro.pri_fm_usb", 0) == 1 ? true : false;
         Log.d(TAG, "isUsb = " + enable);
         return enable;
 	}
@@ -1771,6 +1772,7 @@ public class FmService extends Service implements FmRecorder.OnRecorderStateChan
         registerFmBroadcastReceiver();
         registerSdcardReceiver();
         registerAudioPortUpdateListener();
+		registerUsbReceiver();
 
         HandlerThread handlerThread = new HandlerThread("FmRadioServiceThread");
         handlerThread.start();
@@ -2509,7 +2511,7 @@ public class FmService extends Service implements FmRecorder.OnRecorderStateChan
                 }
             } else {
                 //remove the notification & then recreate the notifiction with updated language
-                synchronized (mAudioPatchLock) {
+                synchronized (mNotificationLock) {
                     removeNotification();
                     if (mNotificationBuilder != null) {
                         mNotificationBuilder = null;
@@ -2963,12 +2965,14 @@ public class FmService extends Service implements FmRecorder.OnRecorderStateChan
     /**
      * Show notification
      */
-    private void showPlayingNotification() {
-        /*if (isActivityForeground() || mIsScanning
-                || (getRecorderState() == FmRecorder.STATE_RECORDING)) {
-            Log.w(TAG, "showPlayingNotification, do not show main notification.");
-            return;
-        }*/
+    private synchronized void showPlayingNotification() {
+         synchronized (mNotificationLock) {
+            Log.d(TAG, "showPlayingNotification");
+            if (isActivityForeground() || mIsScanning
+                    || (getRecorderState() == FmRecorder.STATE_RECORDING)) {
+                Log.w(TAG, "showPlayingNotification, do not show main notification.");
+                return;
+            }
         String stationName = "";
         String radioText = "";
         ContentResolver resolver = mContext.getContentResolver();
@@ -2998,7 +3002,8 @@ public class FmService extends Service implements FmRecorder.OnRecorderStateChan
             }
 
         showNotification(stationName, radioText);
-    }
+       }
+	}
     private void showNotification(String stationName, String radioText) {
     	RemoteViews views = new RemoteViews(getPackageName(), R.layout.statusbar);
             Intent aIntent = new Intent(Intent.ACTION_MAIN);
@@ -3066,8 +3071,13 @@ public class FmService extends Service implements FmRecorder.OnRecorderStateChan
      * Remove notification
      */
     public void removeNotification() {
+        synchronized (mNotificationLock) {
             Log.d(TAG, "removeNotification()");
             stopForeground(true);
+            if (mNotificationBuilder != null) {
+                mNotificationBuilder = null;
+            }
+        }
     }
 
     /**
@@ -4316,7 +4326,7 @@ public class FmService extends Service implements FmRecorder.OnRecorderStateChan
                     .setContentText(getText(R.string.record_notification_message))
                     .setShowWhen(false)
                     .setAutoCancel(true)
-                    .setSmallIcon(R.drawable.ic_launcher)
+                    .setSmallIcon(R.drawable.ic_prize_launcher)
                     .setLargeIcon(largeIcon)
                     .addAction(R.drawable.btn_fm_rec_stop_enabled, getText(R.string.stop_record),
                             pendingIntent);

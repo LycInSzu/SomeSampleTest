@@ -1,0 +1,93 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="prize_call_log_list_item_message">&#160;&#160;SMS</string>
+    <string name="prize_call_log_list_item_phone">&#160;&#160;Appeler</string>
+    <string name="prize_call_log_list_item_unknown">Inconnu</string>
+    <!-- PRIZE-Add-DialerV8_InCallStatusBar-wangzhong-2017_7_19-start -->
+    <string name="prize_incallwindow_outgoing">Toucher cet endroit pour retourner à la communication&#160;&#160; On est en train de composer le numéro</string>
+    <string name="prize_incallwindow_incall">Toucher cet endroit pour retourner à la communication&#160;&#160;</string>
+    <string name="prize_notch_incallwindow_incall">Communication en cours&#160;&#160;</string> 
+    <!-- PRIZE-Add-DialerV8_InCallStatusBar-wangzhong-2017_7_19-end -->
+    <string name="prize_phone_location_default">Région à laquelle on est affiliée n\'est pas identifiée</string>
+    <string name="prize_call_log_multiple_delete_dialog_title">Supprimer</string>
+	<!-- Dialog -->
+    <string name="prize_dialog_item_delete">Supprimer</string>
+    <string name="prize_dialog_item_cancel">Annuler</string>
+    <string name="prize_call_feature_settings_header">Réglage</string>
+    <!-- PRIZE-Add-InCallUI_VideoCall-wangzhong-2017_5_22-start -->
+    <string name="prize_video_call_unallowed_multi_call">Communication à multipartie en cours, impossible de passer à la visiophonie！</string>
+    <!-- PRIZE-Add-InCallUI_VideoCall-wangzhong-2017_5_22-end -->
+
+    <string name="prize_quick_reply_message_warning">Le message de réponse rapide ne peut pas être vide！</string>
+    <string name="prize_quick_reply_message_warning2">Le message de réponse rapide est trop long. Il est composé d\'au plus de 50 caractères！</string>
+    <string name="recentCalls_empty">L\'historique de communication est vide</string>
+    <string name="prize_selected_item_count">Vous avez sélectionné<xliff:g id="count">%d</xliff:g>articles</string>
+    <string name="insert_number_succes">ajouté avec succès dans la liste noire</string>
+    <string name="delete_number_succes">Eliminé avec succès à partir la liste noire</string>
+    <string name="prize_colection_text_string">Favoris</string>
+    <string name="prize_calllog_no_selected_item_count">Sélectionnez appel(s) du journal d\'appels</string>
+    <string name="prize_calllog_selected_item_count"><xliff:g id="count">%d</xliff:g>Sélectionnés du journal d\'appels</string>
+    <string name="prize_calllog_selected_item_count_one"><xliff:g id="count">%d</xliff:g>Sélectionné du journal d\'appels</string>
+	<!-- PRIZE- add-yuandailin-2015-4-27-start -->
+    <string name="all_calls">Tous les appels</string>
+    <string name="unreceive_calls">Appels manqués</string>
+    <string name="received_calls">Appels reçus</string>
+    <string name="outgoing_calls">Appels sortants</string>
+    <string name="menu_clear_frequents">Supprimer l\'historique de communication</string>
+    <string name="tab_dialer">Communication</string>
+    <string name="speed_dial_text">composer le numéro rapidement</string>
+    <string name="clear_calls">Vider</string>
+    <string name="speed_number_set">Réglage des touches à composer le numéro</string>
+    <!-- PRIZE- add-yuandailin-2015-4-27-end -->
+    <!-- PRIZE- add-yuandailin-2015-7-17-start -->
+    <string name="calllog_yesterday">Hier</string>
+    <string name="calllog_time_now"> Tout à l\'heure</string>
+    <string name="prize_no_call_records">Pas d\'historique de communication</string>
+    <!-- PRIZE- add-yuandailin-2015-7-17-end -->
+    <!-- PRIZE- add-yuandailin-2015-9-12-start -->
+    <string name="Prize_life_tips_title">Conseil</string>
+    <string name="Prize_life_tips_line2_part1">Par exemple, on recherche</string>
+    <string name="Prize_life_tips_line2_part2">ZENG Xiaoku</string>
+    <string name="Prize_life_tips_line3">Vous pouvez entrer par taper le clavier:</string>
+    <!-- PRIZE- add-yuandailin-2015-9-12-end -->
+    <!-- PRIZE- add-yuandailin-2016-1-22-start -->
+    <string name="send_message">Envoyer SMS</string>
+    <string name="add_to_blacklist">Ajouter à la liste noire</string>
+    <string name="delete_from_blacklist">Eliminer-le à partir de la liste noire</string>
+    <string name="delete_this_calllog">Supprimer du journal d\'appels</string>
+    <!-- PRIZE- add-yuandailin-2016-1-22-end -->
+    <!-- PRIZE- add-yuandailin-2016-5-10 -->
+    <string name="black_number_list_label">Tableau de listes noires</string>
+    <!-- PRIZE- add-hekeyi-2016-5-11-start -->
+    <string name="dialog_ok">OK</string>
+    <!-- PRIZE- add-hekeyi-2016-5-11-end -->
+    <!-- PRIZE- add-yuandailin-2016-6-2-start-->
+    <string name="general_settings_label" msgid="5748319557716674189">"Conventionnel"</string>
+    <string name="sounds_and_vibrate_category_title" msgid="7589787045192519254">"Signal sonore et vibration"</string>
+    <string name="other_settings_title" msgid="7976283601445863248">"Autres"</string>
+    <!-- PRIZE- add-yuandailin-2016-6-2-end-->
+    <!-- PRIZE- add-yuandailin-2016-6-2-end-->
+    <string name="prize_description_video_call">Vidéotéléphonie</string>
+    <!-- PRIZE- add-yuandailin-2016-6-2-start-->
+    <!-- PRIZE- add-yuandailin-2016-7-13-start -->
+    <string name="prize_dialer_text_string">Composer le numéro</string>
+    <string name="prize_contacts_text_string">Contacts</string>
+    <string name="delete_some_calls_label">Modifier</string>
+    <string name="prize_delete_string">Supprimer</string>
+    <string name="prize_select_all_string">Sélectionner tous</string>
+    <string name="prize_not_select_all_string">Antisélection</string>
+    <string name="prize_cancel_string">Annuler</string>
+    <string name="prize_clip_number">Copier le numéro</string>
+    <string name="prize_black_number_mind_string">Vous ne recevrez pas les appels et les SMS de cette personne. Etes-vous sûr de l\'ajouter dans la liste noire？</string>
+    <!-- PRIZE- add-yuandailin-2016-7-13-end -->
+    <!--prize add pyx  2016-7-19-start -->
+    <string name="prize_incall_answer">Glisser vers le haut pour répondre l\'appel</string>
+    <string name="prize_incall_reject">Refuser</string>
+    <string name="prize_incall_message">SMS</string>
+    <!--prize add pyx  2016-7-19-end -->
+    <!-- PRIZE-feture add hotline-zhoushuanghua-2018-06-28-start -->
+    <string name="visit_hotline">Hotline de visite en retour de koobee</string>
+    <!-- PRIZE-feture add hotline-zhoushuanghua-2018-06-28-end -->
+    <string name="prize_emergency_title">"Numéro d\'urgence"</string>
+	
+	
+</resources>

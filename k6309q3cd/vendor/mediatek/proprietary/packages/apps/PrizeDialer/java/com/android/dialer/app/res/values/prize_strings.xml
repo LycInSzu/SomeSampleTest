@@ -1,0 +1,145 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="prize_call_log_list_item_message">&#160;&#160;Message</string>
+    <string name="prize_call_log_list_item_phone">&#160;&#160;Call</string>
+    <string name="prize_call_log_list_item_unknown">Unknown</string>
+
+    <!-- PRIZE-Add-TMSDK_Call_Mark-wangzhong-2017_5_5-start -->
+    <string name="prize_call_mark_cloud_fetch">result</string>
+    <string name="prize_call_mark_prop_tag">=tag</string>
+    <string name="prize_call_mark_prop_yellow">=yellow</string>
+    <string name="prize_call_mark_prop_tag_yellow">=tag yellow</string>
+    <string name="prize_call_mark_number">number:</string>
+    <string name="prize_call_mark_name">name:</string>
+    <string name="prize_call_mark_tagtype">tag type:</string>
+    <string name="prize_call_mark_tagcount">tag count:</string>
+    <string name="prize_call_mark_warning">warning:</string>
+    <string name="prize_call_mark_used_for_common">=common</string>
+    <string name="prize_call_mark_used_for_calling">=outcall</string>
+    <string name="prize_call_mark_used_for_called">=incall</string>
+    <string name="prize_call_mark_location">location:</string>
+    <string name="prize_call_mark_eoperator">eoperator:</string>
+
+    <item name="prize_tag_number" type="id"></item>
+    <item name="prize_tag_data" type="id"></item>
+    <item name="prize_tag_flag" type="id"></item>
+
+    <string name="prize_primary_call_info_call_mark_tag">Tencent Mobile Manager recognize</string>
+    <!-- PRIZE-Add-TMSDK_Call_Mark-wangzhong-2017_5_5-end -->
+
+    <!-- PRIZE-Add-DialerV8_InCallStatusBar-wangzhong-2017_7_19-start -->
+    <string name="prize_incallwindow_outgoing">Touch here and return to call&#160;&#160;Dialing</string>
+    <string name="prize_incallwindow_incall">Touch here and return to call&#160;&#160;</string>
+    <string name="prize_notch_incallwindow_incall">In the call&#160;&#160;</string> 
+    <!-- PRIZE-Add-DialerV8_InCallStatusBar-wangzhong-2017_7_19-end -->
+    <!-- PRIZE-Add-SIMPLE_LAUNCHER_TTS-hpf-2017_11_25-start -->
+    <string name="incoming_call">Calling</string>
+    <string name="dialpad_one">one</string>
+    <string name="dialpad_two">two</string>
+    <string name="dialpad_three">three</string>
+    <string name="dialpad_four">four</string>
+    <string name="dialpad_five">five</string>
+    <string name="dialpad_six">six</string>
+    <string name="dialpad_seven">seven</string>
+    <string name="dialpad_eight">eight</string>
+    <string name="dialpad_night">night</string>
+    <string name="dialpad_zero">zero</string>
+    <string name="dialpad_star">star</string>
+    <string name="dialpad_pound">pound</string>
+    <!-- PRIZE-Add-SIMPLE_LAUNCHER_TTS-hpf-2017_11_25-end -->
+
+    <string name="prize_phone_location_default">No attribution to inquiries</string>
+
+    <string name="prize_call_log_multiple_delete_dialog_title">Delete</string>
+	
+	<!-- Dialog -->
+    <string name="prize_dialog_item_delete">Delete</string>
+    <string name="prize_dialog_item_cancel">Cancel</string>
+
+
+    <string name="prize_call_feature_settings_header">Settings</string>
+
+    <!-- PRIZE-Add-InCallUI_VideoCall-wangzhong-2017_5_22-start -->
+    <string name="prize_video_call_unallowed_multi_call">There is a multi channel call that is not being upgraded to video calls!</string>
+    <!-- PRIZE-Add-InCallUI_VideoCall-wangzhong-2017_5_22-end -->
+
+    <string name="prize_quick_reply_message_warning">Quick reply message cannot be empty!</string>
+    <string name="prize_quick_reply_message_warning2">Quick reply message character is too long, please control within 50 characters!</string>
+    <string name="recentCalls_empty">The recent calls is empty.</string>
+    <string name="prize_selected_item_count">Select<xliff:g id="count">%d</xliff:g>item(s)</string>
+    <string name="insert_number_succes">Successfully add to the blacklist</string>
+    <string name="delete_number_succes">Successfully delete from blacklist</string>
+    <string name="prize_colection_text_string">Favorites</string>
+    <!--<string name="prize_calllog_no_selected_item_count">Please select call records</string>-->
+    <!--prize modified by lijimeng,translation,20190408-start-->
+    <!--<string name="prize_calllog_no_selected_item_count">Select call records</string>-->
+    <string name="prize_calllog_no_selected_item_count">Select from call log</string>
+
+    <!--<string name="prize_calllog_selected_item_count">Selected<xliff:g id="count">%d</xliff:g>recent calls</string>-->
+    <string name="prize_calllog_selected_item_count"><xliff:g id="count">%d</xliff:g> Recent call selected</string>
+    <string name="prize_calllog_selected_item_count_one"><xliff:g id="count">%d</xliff:g> Recent call selected</string>
+    <!--prize modified by lijimeng,translation,20190408-end-->
+	<!-- PRIZE- add-yuandailin-2015-4-27-start -->
+    <string name="all_calls">All calls</string>
+    <string name="unreceive_calls">Missed calls</string>
+    <string name="received_calls">Received call</string>
+    <string name="outgoing_calls">Outgoing call</string>
+    <string name="menu_clear_frequents">Clear call records</string>
+    <string name="tab_dialer">Calls</string>
+    <string name="speed_dial_text">Fast dialing</string>
+    <string name="clear_calls">Clear</string>
+    <string name="speed_number_set">Numeric key dialing settings</string>
+    <!-- PRIZE- add-yuandailin-2015-4-27-end -->
+    <!-- PRIZE- add-yuandailin-2015-7-17-start -->
+    <string name="calllog_yesterday">Yesterday</string>
+    <string name="calllog_time_now">Just now</string>
+    <string name="prize_no_call_records">No call records</string>
+    <!-- PRIZE- add-yuandailin-2015-7-17-end -->
+    <!-- PRIZE- add-yuandailin-2015-9-12-start -->
+    <string name="Prize_life_tips_title">Tips</string>
+    <string name="Prize_life_tips_line2_part1">If search</string>
+    <string name="Prize_life_tips_line2_part2">Zeng Xiaoku</string>
+    <string name="Prize_life_tips_line3">You can input in proper order in keyboard: </string>
+    <!-- PRIZE- add-yuandailin-2015-9-12-end -->
+    <!-- PRIZE- add-yuandailin-2016-1-22-start -->
+    <string name="send_message">Send message</string>
+    <string name="add_to_blacklist">Add to blacklist</string>
+    <string name="delete_from_blacklist">Delete from blacklist</string>
+    <string name="delete_this_calllog">Delete from call log</string>
+    <!-- PRIZE- add-yuandailin-2016-1-22-end -->
+    <!-- PRIZE- add-yuandailin-2016-5-10 -->
+    <string name="black_number_list_label">Blacklist</string>
+    <!-- PRIZE- add-hekeyi-2016-5-11-start -->
+    <string name="dialog_ok">OK</string>
+    <!-- PRIZE- add-hekeyi-2016-5-11-end -->
+    <!-- PRIZE- add-yuandailin-2016-6-2-start-->
+    <string name="general_settings_label" msgid="5748319557716674189">"General"</string>
+    <string name="sounds_and_vibrate_category_title" msgid="7589787045192519254">"Warning tone and vibration"</string>
+    <string name="other_settings_title" msgid="7976283601445863248">"Other"</string>
+    <!-- PRIZE- add-yuandailin-2016-6-2-end-->
+    <!-- PRIZE- add-yuandailin-2016-6-2-end-->
+    <string name="prize_description_video_call">Vedio call</string>
+    <!-- PRIZE- add-yuandailin-2016-6-2-start-->
+    <!-- PRIZE- add-yuandailin-2016-7-13-start -->
+    <string name="prize_dialer_text_string">Dial</string>
+    <string name="prize_contacts_text_string">Contacts</string>
+    <string name="delete_some_calls_label">Edit</string>
+    <string name="prize_delete_string">Delete</string>
+    <string name="prize_select_all_string">Select all</string>
+    <!--<string name="prize_not_select_all_string">Reverse selection</string>-->
+    <string name="prize_not_select_all_string">Reverse</string>
+    <string name="prize_cancel_string">Cancel</string>
+    <string name="prize_clip_number">Copy number</string>
+    <string name="prize_black_number_mind_string">You will not receive the call and information from this contact. Do you want to add it to the blacklist?</string>
+    <!-- PRIZE- add-yuandailin-2016-7-13-end -->
+    <!--prize add pyx  2016-7-19-start -->
+    <string name="prize_incall_answer">Slide up to answer</string>
+    <string name="prize_incall_reject">Reject</string>
+    <string name="prize_incall_message">Message</string>
+    <!--prize add pyx  2016-7-19-end -->
+    <!-- PRIZE-feture add hotline-zhoushuanghua-2018-06-28-start -->
+    <string name="visit_hotline">"Kubi's callback hotline"</string>
+    <!-- PRIZE-feture add hotline-zhoushuanghua-2018-06-28-end -->
+    <string name="prize_emergency_title">Emergency number</string>
+	
+	
+</resources>

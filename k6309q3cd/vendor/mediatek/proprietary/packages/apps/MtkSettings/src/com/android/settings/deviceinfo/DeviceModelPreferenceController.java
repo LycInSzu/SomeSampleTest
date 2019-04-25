@@ -54,13 +54,13 @@ public class DeviceModelPreferenceController extends AbstractPreferenceControlle
         super.displayPreference(screen);
         final Preference pref = screen.findPreference(KEY_DEVICE_MODEL);
         if (pref != null) {
-			//prize modified by liyuchong, show model name for condor in about phone,20190124-begin
+            //prize modified by liyuchong, show model name for condor in about phone,20190124-begin
             pref.setSummary(mContext.getResources().getString(R.string.model_summary,
                     getCondorDeviceModel()));
             mExt.updateSummary(pref, Build.MODEL,
                     mContext.getResources().getString(R.string.model_summary,
                             getCondorDeviceModel()));
-			//prize modified by liyuchong, show model name for condor in about phone,20190124-begin
+            //prize modified by liyuchong, show model name for condor in about phone,20190124-begin
         }
     }
 
@@ -80,16 +80,18 @@ public class DeviceModelPreferenceController extends AbstractPreferenceControlle
     }
 
     public static String getDeviceModel() {
-		// prize modify for bug66476 by houjian start
+        // prize modify for bug66476 by houjian start
         String deviceName = SystemProperties.get("prize.system.boot.rsc");
-		// prize modify for bug66476 by houjian end
+        // prize modify for bug66476 by houjian end
         deviceName = !TextUtils.isEmpty(deviceName) ? deviceName : Build.MODEL + DeviceInfoUtils.getMsvSuffix();
-        return UtilsExt.useDeviceInfoSettingsExt().customeModelInfo(deviceName);
+        //prize modified by xiekui, fix bug 74122, 20190408-start
+        return UtilsExt.useDeviceInfoSettingsExt() == null ? deviceName : UtilsExt.useDeviceInfoSettingsExt().customeModelInfo(deviceName);
+        //prize modified by xiekui, fix bug 74122, 20190408-end
     }
-	//prize add by liyuchong, show model name for condor in about phone,20190124-begin
-	    public static  String getCondorDeviceModel() {
+    //prize add by liyuchong, show model name for condor in about phone,20190124-begin
+        public static  String getCondorDeviceModel() {
             String deviceModel = SystemProperties.get("ro.pri_condor_market_model");
             return !TextUtils.isEmpty(deviceModel) ? deviceModel : "";
     }
-	//prize add by liyuchong, show model name for condor in about phone,20190124-end
+    //prize add by liyuchong, show model name for condor in about phone,20190124-end
 }

@@ -739,7 +739,7 @@
     </string-array>
 	
     <string-array name="enabled_networks_auto_values_for_condor" translatable="false">
-        <item>"9"</item>
+        <item>"10"</item>
         <item>"0"</item>
         <item>"2"</item>
         <item>"1"</item>

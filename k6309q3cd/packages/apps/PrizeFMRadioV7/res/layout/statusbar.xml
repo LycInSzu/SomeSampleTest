@@ -84,7 +84,6 @@
 
                 <ImageView
                     android:id="@+id/btn_prev"
-					android:layout_gravity="center"
                     style="@style/fm_notification_btn"
                     android:src="@drawable/btn_fm_prevstation" />
             </FrameLayout>
@@ -96,7 +95,6 @@
 
                 <ImageView
                     android:id="@+id/btn_stop"
-					android:layout_gravity="center"
                     style="@style/fm_notification_btn"
                     android:src="@drawable/btn_fm_rec_stop_enabled" />
             </FrameLayout>
@@ -108,7 +106,6 @@
 
                 <ImageView
                     android:id="@+id/btn_next"
-					android:layout_gravity="center"
                     style="@style/fm_notification_btn"
                     android:src="@drawable/btn_fm_nextstation" />
             </FrameLayout>

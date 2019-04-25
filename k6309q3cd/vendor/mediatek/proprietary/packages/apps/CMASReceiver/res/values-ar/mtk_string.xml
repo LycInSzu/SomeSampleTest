@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
 /*
  * Copyright (C) 2007-2008 Esmertec AG.
  * Copyright (C) 2007-2008 The Android Open Source Project
@@ -16,19 +15,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
---><resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-   <string name="alerts">التنبيهات</string>
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="alerts">التنبيهات</string>
     <string name="select_all">"تحديد الكل"</string>
     <string name="unselect_all">"إلغاء تحديد الكل"</string>
     <string name="delete">"حذف"</string>
     <string name="select_cellbroadcasts">حدد تنبيه الطوارئ</string>
     <plurals name="message_view_selected_message_count">
-        <item quantity="one"><xliff:g id="message_count" example="1">%d</xliff:g> محدد</item>
-        <item quantity="other"><xliff:g id="message_count" example="9">%d</xliff:g> محدد</item>
+        <item quantity="one"><xliff:g example="1" id="message_count">%d</xliff:g> محدد</item>
+        <item quantity="other"><xliff:g example="9" id="message_count">%d</xliff:g> محدد</item>
     </plurals>
     <plurals name="confirm_delete_broadcast">
         <item quantity="one">سيتم حذف 1 رسالة تنبيه</item>
-        <item quantity="other">سيتم حذف <xliff:g id="number" example="15">%1$s</xliff:g> رسالة تنبيه محددة</item>
+        <item quantity="other">سيتم حذف <xliff:g example="15" id="number">%1$s</xliff:g> رسالة تنبيه محددة</item>
     </plurals>
     <string name="enable_cmas_presidential_threat_alerts_title">إظهار التنبيه الرئاسي</string>
     <string name="enable_cmas_presidential_threat_alerts_summary">عرض تنبيهات المستوى الرئاسي</string>
@@ -40,10 +40,10 @@
     <string name="cmas_disable_cmas">لن تصلك أية تنبيهات إذا قمت بتعطيل البث الخلوي.</string>
     <string name="cmas_enable_cmas_failed">تعذر الفتح.</string>
     <string name="enable_repeat_alert_title">تكرار التنبيه</string>
-    <string name="enable_repeat_alert_summary">تذكير المستخدم بالتنبيه غير المقروء بشكل متواصل</string>
+    <string name="enable_repeat_alert_summary">لتذكير المستخدم بالتنبيه غير المقروء بشكل متواصل</string>
     <string name="enable_all_alert_title">تشغيل كل التنبيهات</string>
     <string name="enable_all_imminent_alerts_title">كل رسائل التنبيهات الوشيكة</string>
-    <string name="enable_cell_broadcast_title">تنبيهات طوارئ</string>
+    <string name="enable_cell_broadcast_title">شبكة تنبيهات الطوارئ</string>
     <string name="alert_sound_volume">مستوى صوت التنبيه</string>
     <string name="alert_volume_summary">ضبط مستوى صوت التنبيه</string>
     <!--prize modified by liyuchong, config CMASReceiver fot TRA test,20190124-begin-->
@@ -61,5 +61,34 @@
     <string name="enable_tra_class6_threat_alerts_summary">تمكين تمرين</string>
     <string name="emergency_other_settings_title">اعدادات اخرى</string>
     <!--prize modified by liyuchong, config CMASReceiver fot TRA test,20190124-end-->
+    <string name="menu_language_settings">إعدادات اللغة</string>
+    <string name="cb_dialog_title_language_choice">تحديد اللغة</string>
+    <string name="ok">تم</string>
+    <string name="cancel">إلغاء</string>
+
+    <string-array name="language_list_values">
+        <item>كل اللغات</item>
+        <item>الألمانية</item>
+        <item>الإنجليزية</item>
+        <item>الإيطالية</item>
+        <item>الفرنسية</item>
+        <item>الإسبانية</item>
+        <item>الهولندية</item>
+        <item>السويدية</item>
+        <item>الدانماركية</item>
+        <item>البرتغالية</item>
+        <item>الفنلندية</item>
+        <item>النرويجية</item>
+        <item>اليونانية</item>
+        <item>التركية</item>
+        <item>الهنجارية</item>
+        <item>البولندية</item>
+        <item>أخرى</item>
+        <item>التشيكية</item>
+        <item>العبرية</item>
+        <item>العربية</item>
+        <item>الروسية</item>
+        <item>الايسلندية</item>
+    </string-array>
 
 </resources>

@@ -299,6 +299,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/effects/ogg/camera_click.ogg:system/media/audio/ui/camera_click.ogg \
     $(LOCAL_PATH)/effects/ogg/camera_shutter.ogg:system/media/audio/ui/camera_shutter.ogg \
     $(LOCAL_PATH)/effects/ogg/Charger_Connection.ogg:system/media/audio/ui/Charger_Connection.ogg \
+    $(LOCAL_PATH)/effects/ogg/ChargingStarted.ogg:system/media/audio/ui/ChargingStarted.ogg \
 
 #//!++
 #prize-add for fixbug:67902 remove the duplicate alarm ringtones by xiekui-20181109-end

@@ -250,7 +250,9 @@ public class FmUtils {
                 long blockSize = fs.getBlockSize();
                 long spaceLeft = blocks * blockSize;
                 ret = spaceLeft > LOW_SPACE_THRESHOLD ? true : false;
-        	}
+        	}else{
+			   ret = true;
+			}
         } catch (IllegalArgumentException e) {
             Log.e(TAG, "hasEnoughSpace, sdcard may be unmounted:" + recordingSdcard);
         }

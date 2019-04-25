@@ -603,12 +603,12 @@ public class ScrollShotView {
         } else {
             long start = System.currentTimeMillis();
             Bitmap last2 = (Bitmap) mBitmapList.get((mBitmapList.size() - 2));
-            //prize modified by xiekui, fixbug 72756, create bitmap y < 0 exception, 20190318-start
+            //prize modified by xiekui, fixbug 72756, create bitmap y < 0 exception, 20190330-start
             int height = last2.getHeight();
             Bitmap target = Bitmap.createBitmap(last2, 0,
                     (height - mActionBarHeight > 0) ? (height - mActionBarHeight) : 0, 
-                    this.mCropW, mActionBarHeight);
-            //prize modified by xiekui, fixbug 72756, create bitmap y < 0 exception, 20190318-end
+                    this.mCropW, (height - mActionBarHeight > 0) ? mActionBarHeight : 1);
+            //prize modified by xiekui, fixbug 72756, create bitmap y < 0 exception, 20190330-end
             target = target.copy(Bitmap.Config.ARGB_8888, true);
             Bitmap last1 = (Bitmap) mBitmapList.get((mBitmapList.size() - 1));
             Bitmap source = Bitmap.createBitmap(last1, 0, 0, this.mCropW,

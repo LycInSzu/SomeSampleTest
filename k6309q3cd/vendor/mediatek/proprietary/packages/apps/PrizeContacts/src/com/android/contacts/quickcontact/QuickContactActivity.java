@@ -3215,14 +3215,15 @@ AggregationSuggestionEngine.Listener,JoinContactsDialogFragment.JoinContactsList
                 int i1 = i / 3600;
                 int i2 = (i % 3600) / 60;
                 int i3 = i % 60;
+                //prize modified by qiaohu, Contact calllog, calllog duration display ,20190413-start
                 if (i1 != 0) {
-                    s.append(i1 + getResources().getString(R.string.prize_hours));
+                    s.append(" " + i1 + " " + getResources().getString(R.string.prize_hours));
                 }
                 if (i2 != 0) {
-                    s.append(i2 + getResources().getString(R.string.prize_minutes));
+                    s.append(" " + i2 + " " + getResources().getString(R.string.prize_minutes));
                 }
-                s.append(i3 + getResources().getString(R.string.prize_seconds));
-               
+                s.append(" " + i3 + " " + getResources().getString(R.string.prize_seconds));
+                //prize modified by qiaohu, Contact calllog, calllog duration display ,20190413-end
                 entries.add(new Entry(/* id = */ -1,
                 	/*mainIcon = */interaction.getIcon(this),
                 	/*header = */interaction.getViewHeader(this),

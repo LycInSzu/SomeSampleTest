@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2014 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <!-- Application name shown in Launcher [CHAR LIMIT=20] -->
+    <string name="app_name">FM radio</string>
+    <string name="favorite_manager">Channel list</string>
+    <string name="add_to_favorite">Add to favorites</string>
+    <string name="optmenu_search">Search</string>
+    <string name="optmenu_exit">Exit</string>
+    <string name="contmenu_title">Operations</string>
+    <string name="contmenu_item_edit">Edit</string>
+    <string name="contmenu_item_delete">Remove from favorites</string>
+    <string name="dlg_noantenna_text">You need an earphone as antenna. Please plug in your earphone.</string>
+    <string name="dlg_noantenna_title">Plug in earphone</string>
+    <string name="btn_yes">Yes</string>
+    <string name="btn_no">No</string>
+    <string name="btn_ok">Ok</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="dlg_progress_title">Search</string>
+    <string name="dlg_progress_text">Search channels...</string>
+    <string name="dlg_addedit_station_name">Name:</string>
+    <string name="dlg_addedit_station_freq">Frequency:</string>
+    <string name="dlg_addedit_title_edit">Edit channels</string>
+    <string name="default_station_name">New channel</string>
+    <string name="dlg_delete_confirm_title">Confirm remove from favorites</string>
+    <string name="dlg_delete_confirm_text">Are you sure you want to remove this channel from favorites?</string>
+    <string name="toast_station_searched">Searched out available stations:</string>
+    <string name="toast_already_favorite">This channel is already in favorite list.</string>
+    <string name="toast_channel_deleted">Successfully removed from favorites.</string>
+    <string name="toast_channel_added">Successfully added to favorites.</string>
+    <string name="toast_channel_searched">Searched out available channels:</string>
+    <string name="toast_cannot_search">Cannot search out available channel.</string>
+    <string name="toast_invalid_frequency">Invalid frequency band. Effective frequency range: 87.5-108.0.</string>
+    <string name="toast_invalid_input">The last input is invalid, and the valid value is 0 or 5.</string>
+
+    <string name="dlg_rds_settings_channel_information">Channel information</string>
+    <string name="dlg_rds_settings_alternative_frequency">Alternative frequency</string>
+    <string name="sound_mode">Sound mode</string>
+    <!-- Dialog "Save" button to save a new station name [CHAR LIMIT=20] -->
+    <string name="save">Save</string>
+    <string name="toast_in_call">The radio cannot be turn on while talking.</string>
+    <string name="empty_list">The channel list is empty.</string>
+    <string name="edit_frequency_overwrite_text">Overwrite</string>
+    <string name="fm_unit">MHz</string>
+    <string name="no_antenna_info">Plug in your earphones to use as a radio antenna.</string>
+    <!-- For FM recording -->
+    <string name="fm_recorder_name">FM recorder</string>
+    <string name="toast_recording_lost_warning">Your recording will be lost due to SD removal!</string>
+    <string name="toast_start_recording">Start recording...</string>
+    <string name="toast_sdcard_missing">Your SD card is missing!</string>
+    <!-- Toast message shown when we record but sdcard has no free space [CHAR LIMIT=50] -->
+    <string name="toast_sdcard_insufficient_space">Insufficient SD card space!</string>
+    <!-- Toast message shown when record or playback record has some internal error
+         [CHAR LIMIT=NONE] -->
+    <string name="toast_recorder_internal_error">An internal error occured in recorder!</string>
+    <string name="toast_player_internal_error">An internal error occured in player!</string>
+    <string name="toast_powerup_before_record_warning">Please power up FM first!</string>
+    <string name="optmenu_record">Record FM</string>
+    <string name="btn_save_recording">Save</string>
+    <!-- Dialog "Discard" button to discard the FM recording [CHAR LIMIT=20] -->
+    <string name="btn_discard_recording">Discard</string>
+    <!-- EditText hint for save recording dialog [CHAR LIMIT=50] -->
+    <string name="edit_recording_name_hint">Type file name here</string>
+    <string name="dlg_save_recording_title">Save recording file</string>
+    <string name="dlg_save_recording_storage_warning">Insufficient storage! Do you want to save current recording?</string>
+    <string name="already_exists">Already exists</string>
+    <string name="optmenu_speaker">Loudspeaker</string>
+    <string name="optmenu_earphone">Earphone</string>
+    <string name="not_available">Current unavailable</string>
+    <!-- Talkback message for previous station button [CHAR LIMIT=30] -->
+    <string name="talk_prev_station">Previous station</string>
+    <!-- Talkback message for decrease frequency button [CHAR LIMIT=30] -->
+    <string name="talk_decrease">Decrease frequency</string>
+    <!-- Talkback message for increase frequency button [CHAR LIMIT=30] -->
+    <string name="talk_increase">Increase frequency</string>
+    <!-- Talkback message for next station button [CHAR LIMIT=30] -->
+    <string name="talk_next_station">Next station</string>
+    <!-- Talkback message for next station button [CHAR LIMIT=30] -->
+    <string name="talk_add_favorite">Add to favorite</string>
+    <!-- Talkback message for start recording button [CHAR LIMIT=30] -->
+    <string name="talk_start_recording">Start recording</string>
+    <!-- Talkback message for favorit card more menu [CHAR LIMIT=30] -->
+    <!-- The tips shown when we start recording [CHAR LIMIT=30] -->
+    <string name="recording_tips">Recording…</string>
+    <!-- The text "FM" shown in FM main screen [CHAR LIMIT=30] -->
+    <string name="fm_symbol">FM</string>
+    <!-- Talkback message for the floating button which will play or stop FM sound
+         [CHAR LIMIT=30] -->
+    <string name="fm_turn_on">Play or stop FM radio</string>
+    <!-- Title of a menu item to start recording FM sound [CHAR LIMIT=30] -->
+    <string name="fm_over_start_record">Start recording</string>
+    <!-- Title of a menu item to see the saved recordings in play music  [CHAR LIMIT=30] -->
+    <string name="fm_over_record_list">Saved recordings</string>
+    <!-- Title of a menu item to refresh the station list  [CHAR LIMIT=30] -->
+    <string name="fm_station_list_menu_refresh">Refresh</string>
+    <!-- The tips shown when without an earphone or plug out the earphone [CHAR LIMIT=NONE] -->
+    <string name="fm_no_headset_text">To start listening, plug in headphones (used as an antenna).</string>
+    <!-- Actionbar title for station list. It will show in the action bar [CHAR LIMIT=50] -->
+    <string name="station_title">Radio Stations</string>
+    <!-- The tips shown when we refresh in station list [CHAR LIMIT=50] -->
+    <string name="station_searching_tips">Getting stations</string>
+    <!-- The tips shown when we refresh in station list but no stations found [CHAR LIMIT=50] -->
+    <string name="station_empty_text">No stations found</string>
+    <!-- It means "minutes" that shown in record screen [CHAR LIMIT=2] -->
+    <string name="minutes_label">M</string>
+    <!-- It means "seconds" that shown in record screen [CHAR LIMIT=2] -->
+    <string name="seconds_label">S</string>
+    <!-- The default number for record screen. It will show "00M 00S" [CHAR LIMIT=2] -->
+    <string name="timer_default">00</string>
+    <!-- Actionbar title for recording FM. It will show in the action bar [CHAR LIMIT=20] -->
+    <string name="record_title">Recording</string>
+    <!-- The text shown in notification when currently is recording [CHAR LIMIT=50] -->
+    <string name="record_notification_message">Recording in progress</string>
+    <!-- Stop recording button shown when currently is recording [CHAR LIMIT=20] -->
+    <string name="stop_record">STOP RECORDING</string>
+    <!-- Title of save dialog shown when stop recording [CHAR LIMIT=40] -->
+    <string name="save_dialog_title">Save recording?</string>
+    <!-- Tips of save dialog shown when stop recording [CHAR LIMIT=NONE] -->
+    <string name="save_dialog_caption">To listen to recordings, open the Play Music app.</string>
+    <!-- Title of favorite area shown when we have favorite stations [CHAR LIMIT=50] -->
+    <string name="favorites">Favorites</string>
+    <!-- Title of a menu in favorite card more menu. It means rename a station [CHAR LIMIT=50] -->
+    <!-- EditText hint for rename station dialog [CHAR LIMIT=50] -->
+    <string name="station_rename_hint">Enter station name</string>
+    <!-- Title of a menu in favorite card more menu. It means remove a station from favorite
+         [CHAR LIMIT=50] -->
+    <string name="remove_favorite">Remove favorite</string>
+    <!-- Snackbar message shown after we save a recording [CHAR LIMIT=50] -->
+    <string name="toast_record_saved">Recording saved</string>
+    <!-- Snackbar message shown after we discard a recording [CHAR LIMIT=50] -->
+    <string name="toast_record_not_saved">Recording not saved</string>
+    <!-- Button in snackbar shown we save a recording. It will enter play music to listen recording
+         [CHAR LIMIT=12] -->
+    <string name="toast_listen">LISTEN</string>
+    <!-- Snackbar message shown after we rename a favorite station [CHAR LIMIT=50] -->
+    <string name="toast_station_renamed">The station has been renamed</string>
+
+    <!-- For Em Rx -->
+    <string name="FMR_Freq_text" translatable="false">Freq(MHz)</string>
+    <string name="FMR_Freq_tune" translatable="false">Tune</string>
+    <string name="FMR_Antenna_text" translatable="false">Antenna Type</string>
+    <string name="FMR_Antenna_short" translatable="false">Short</string>
+    <string name="FMR_Antenna_long" translatable="false">EarPhone</string>
+    <string name="FMR_Status_text" translatable="false">Status</string>
+    <string name="FMR_Force_Stereomono_text" translatable="false">Force Set:</string>
+    <string name="FMR_Status_Stereomono_text" translatable="false">Stereo/Mono:</string>
+    <string name="FMR_Stereomono_stereo" translatable="false">Stereo</string>
+    <string name="FMR_Stereomono_mono" translatable="false">Mono</string>
+    <string name="FMR_Status_Stereomono" translatable="false">detecting...</string>
+    <string name="FMR_Status_RSSI_text" translatable="false">RSSI(dBm):</string>
+    <string name="FMR_Status_RSSI" translatable="false">detecting...</string>
+    <string name="FMR_Status_Caparray_text" translatable="false">CapArray(pF):</string>
+    <string name="FMR_Status_Caparray" translatable="false">detecting...</string>
+    <string name="FMR_RDS_text" translatable="false">RDS</string>
+    <string name="FMR_RDS_Ratio_text" translatable="false">Ratio:</string>
+    <string name="FMR_RDS_Ratio" translatable="false">detecting...</string>
+    <string name="FMR_RDS_PS_text" translatable="false">PS:</string>
+    <string name="FMR_RDS_PS" translatable="false">None.</string>
+    <string name="FMR_RDS_RT_text" translatable="false">RT:</string>
+    <string name="FMR_RDS_RT" translatable="false">None.</string>
+    <string name="FMR_Hardware_version" translatable="false">Hardware Version</string>
+    <string name="FMR_Chip_ID_text" translatable="false">Chip ID</string>
+    <string name="FMR_Chip_ID" translatable="false">None.</string>
+    <string name="FMR_ECO_Version_text" translatable="false">ECO Version</string>
+    <string name="FMR_ECO_Version" translatable="false">None.</string>
+    <string name="FMR_Patch_Version_text" translatable="false">Patch Version</string>
+    <string name="FMR_Patch_Version" translatable="false">None.</string>
+    <string name="FMR_DSP_Version_text" translatable="false">DSP Version</string>
+    <string name="FMR_DSP_Version" translatable="false">None.</string>
+    <string name="FMR_EM_RSSI_THRESHOLD_text" translatable="false">RSSI THRESHOLD</string>
+    <string name="FMR_EM_MUTE_GAIN_text" translatable="false">SMG</string>
+    <string name="FMR_EM_DESENSE_RSSI_text" translatable="false">Desense RSSI</string>
+    <string name="FMR_EM_OK_TEXT" translatable="false">OK</string>
+    <string name="FMR_EM_CMD_text" translatable="false">0X</string>
+    <string name="FMR_EM_CMD_title" translatable="false">CMD EXPAND</string>
+    <string name="FMR_EM_CMD_return" translatable="false">CMD EXPAND RETURN VALUE</string>
+    <string name="FMR_EM_DEFAULT_VALUE" translatable="false">0</string>
+    <!-- Runtime Permission -->
+    <string name="missing_required_permission">Permissions denied. You can change them in Settings > Apps.</string>
+
+    <!-- Notification strings added for android N -->
+    <string name="previous_channel">Previous</string>
+    <string name="stop_fm">Stop</string>
+    <string name="next_channel">Next</string>
+<!-- prize-add-by-zhongweilin-20150416-start -->
+    <string name="fm_settings">Settings</string>
+    <string name="fm_auto_close_value">Timed shutdown</string>
+    <string name="fm_auto_close_summary">Off</string>
+    <string name="fm_dialog_confirm">Save</string>
+    <string name="fm_dialog_cancel">Cancel</string>
+    
+    <string name="fm_channel_list_title">List</string>
+    
+    <!-- prize-add-by-zhongweilin-20150416-end -->
+    
+    <string name="powerdown_tip_click">Click</string>
+    <string name="powerdown_tip_start_fm">On the radio</string>
+    <string name="recording_tip">Recording in progress\u2026</string>
+    <string name="play_record_tip">Click the play button to play the recording!</string>
+    <string name="rename">Rename</string>
+    <string name="fm_channel_delete">Delete</string>
+	<string name="fm_channel_delete_all">Select all</string>
+	<string name="airplane_mode_fm_disable">The radio is not available in flight mode.</string>
+	<string name="dlg_delete_confirm_msg">Would you like to delete the selected channel?</string>
+	<string name="fm_channel_cancel_delete_all">Unselect all</string>
+	<string name="fm">FM</string>
+	<string name="favorite_title">My favorites</string>
+	<string name="channel_title">Channel list</string>
+    <string name="zero">Choose channel</string>
+	<plurals name="number_of_items_selected">
+        <item quantity="one">%1$d selected</item>
+        <item quantity="other">%1$d selected</item>
+    </plurals>
+    <string name="usb_dialog_title">Prompt</string>
+  <string name="usb_dialog_msg">In order to ensure the quality of the radio, do not plug in the USB to listen to the radio.</string>
+  <string name="toast_channel_added1">Successfully added to preset channels.</string>
+  <string name="toast_channel_deleted1">Successfully removed from preset channels.</string>
+  <string name="toast_already_favorite1">This channel is already in preset channel list.</string>
+  <string name="toast_favorite_full1">Cannot add the channel to preset channel list because it is full.</string>
+  <string name="dlg_delete_confirm_text1">Are you sure you want to remove this channel from preset channels?</string>
+  <string name="dlg_delete_confirm_title1">Confirm remove from preset channels</string>
+  <string name="contmenu_item_delete1">Remove from preset channels</string>
+  <string name="add_to_favorite1">Add to the preset channel.</string>
+  <string name="toast_favorite_full">Cannot add the channel to favorite list because it is full.</string>
+  <string name="optmenu_rds_settings">RDS settings</string>
+  <string name="more">More</string>
+  <string name="power">Power</string>
+</resources>

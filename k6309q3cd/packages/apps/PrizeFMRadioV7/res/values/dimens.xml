@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2014 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+
+    <!-- Height of the floating action button -->
+    <dimen name="play_button_height">64dp</dimen>
+    <!-- Width of the floating action button -->
+    <dimen name="play_button_width">64dp</dimen>
+    <!-- Corner radius of the floating action button -->
+    <dimen name="play_button_radius">28dp</dimen>
+    <!-- Z translation of the floating action button -->
+    <dimen name="play_button_translation_z">2dp</dimen>
+    <!-- Padding to be applied to the bottom of lists to make space for the floating action
+         button -->
+    <dimen name="play_button_list_bottom_padding">88dp</dimen>
+    <!-- Right margin of the floating action button -->
+    <dimen name="play_button_margin_right">16dp</dimen>
+    <!-- Bottom margin of the floating action button -->
+    <dimen name="play_button_margin_bottom">16dp</dimen>
+    <!-- Offset of bottom margin of the floating action button used when dialpad is up -->
+    <dimen name="play_button_dialpad_margin_bottom_offset">4dp</dimen>
+    <!-- The middle shadow elevation value between top and bottom layouts -->
+    <dimen name="fm_middle_shadow">4dp</dimen>
+
+    <!-- FM no headset page port-->
+    <dimen name="fm_noheadset_img_part_height">320dp</dimen>
+    <dimen name="fm_noheadset_text_margin_top">64dp</dimen>
+    <dimen name="fm_noheadset_text_margin_bottom">75dp</dimen>
+    <dimen name="fm_noheadset_text_size">16dp</dimen>
+    <dimen name="fm_noheadset_text_width">260dp</dimen>
+    <!-- FM no headset page land-->
+    <dimen name="fm_noheadset_img_part_height_land">192dp</dimen>
+    <dimen name="fm_noheadset_text_margin_top_land">10dp</dimen>
+    <dimen name="fm_noheadset_text_margin_bottom_land">10dp</dimen>
+    <dimen name="fm_noheadset_text_size_land">22dp</dimen>
+
+    <!-- FM main page -->
+    <dimen name="fm_main_view_margin_left">16dp</dimen>
+    <dimen name="fm_main_view_margin_right">16dp</dimen>
+    <dimen name="fm_rl_middlepart_up_padding_top">64dp</dimen>
+    <dimen name="fm_rl_middlepart_up_noName_padding_top">88dp</dimen>
+    <dimen name="fm_rl_middlepart_down_height">92dp</dimen>
+    <dimen name="fm_main_station_value_padding_top">20dp</dimen>
+    <dimen name="fm_main_station_name_padding_top">24dp</dimen>
+    <dimen name="fm_main_station_rds_padding_top">12dp</dimen>
+    <dimen name="fm_rl_imgbtnpart_margin_left">8dp</dimen>
+    <dimen name="fm_rl_imgbtnpart_margin_right">8dp</dimen>
+    <dimen name="fm_rl_imgbtnpart_padding_top">48dp</dimen>
+    <dimen name="fm_rl_imgbtn_size">48dp</dimen>
+    <dimen name="fm_rl_imgbtn_touch_size">48dp</dimen>
+    <dimen name="fm_rl_imgbtn_decrease_padding_left">48dp</dimen>
+    <dimen name="fm_rl_imgbtn_add_to_favorite_padding_left">24dp</dimen>
+
+    <dimen name="fm_gridview_item_padding">8dp</dimen>
+    <dimen name="fm_gridview_item_height">88dp</dimen>
+    <dimen name="fm_main_header_small">212dp</dimen>
+    <dimen name="fm_main_header_big">320dp</dimen>
+
+    <!-- FM main page text size -->
+    <dimen name="text_fm_size">14dp</dimen>
+    <dimen name="station_value_size">88dp</dimen>
+    <dimen name="station_name_size">24dp</dimen>
+    <dimen name="station_rds_size">14dp</dimen>
+
+    <!-- FM station list page -->
+    <dimen name="fm_title">20dp</dimen>
+    <dimen name="fm_station_name">30dp</dimen>
+    <dimen name="fm_station_value">70dp</dimen>
+    <dimen name="fm_station_rds">20dp</dimen>
+
+    <!-- Station layout padding -->
+    <dimen name="fm_station_layout_padding_top">90dp</dimen>
+    <dimen name="fm_station_layout_padding_left">20dp</dimen>
+
+    <!-- button layout padding -->
+    <dimen name="fm_button_layout_padding_top">30dp</dimen>
+
+    <!-- station list page port-->
+    <dimen name="fm_station_list_margin_left">16dp</dimen>
+    <dimen name="fm_station_list_margin_right">16dp</dimen>
+    <dimen name="fm_list_item_left_up_margin_top">16dp</dimen>
+    <dimen name="fm_list_item_left_down_margin_top">16dp</dimen>
+    <dimen name="fm_search_progress_margin_top">16dp</dimen>
+    <dimen name="fm_empty_text_margin_top">16dp</dimen>
+    <dimen name="fm_list_item_height">70dp</dimen>
+    <dimen name="fm_list_name_width">150dp</dimen>
+    <dimen name="fm_list_freq_width">50dp</dimen>
+    <dimen name="fm_list_rds_width">150dp</dimen>
+    <dimen name="fm_list_star_width">24dp</dimen>
+    <dimen name="fm_list_star_height">24dp</dimen>
+    <dimen name="fm_list_star_touch_width">48dp</dimen>
+    <dimen name="fm_primary_text_size">16dp</dimen>
+    <dimen name="fm_rds_text_size">14dp</dimen>
+    <dimen name="fm_station_searching_tips_size">16dp</dimen>
+    <dimen name="fm_list_progress_width">120dp</dimen>
+    <!-- station list page land-->
+    <dimen name="fm_list_item_height_land">72dp</dimen>
+
+    <!-- text size -->
+    <dimen name="fm_description_text_size">14dp</dimen>
+    <dimen name="fm_station_rds_text_size">14dp</dimen>
+    <!-- start text size and margin -->
+    <dimen name="fm_frequency_text_size_start">88dp</dimen>
+    <dimen name="fm_station_name_text_size_start">24dp</dimen>
+    <dimen name="fm_description_margin_top_start">64dp</dimen>
+    <dimen name="fm_frequency_margin_top_start">-10dp</dimen>
+    <dimen name="fm_station_name_margin_top_start">24dp</dimen>
+    <dimen name="fm_station_rds_margin_top_start">12dp</dimen>
+    <dimen name="fm_control_buttons_margin_top_start">32dp</dimen>
+
+    <!-- first region target text size and margin -->
+    <dimen name="fm_frequency_text_size_first_target">88dp</dimen>
+    <dimen name="fm_station_name_text_size_first_target">16dp</dimen>
+    <dimen name="fm_description_margin_top_first_target">8dp</dimen>
+    <dimen name="fm_frequency_margin_top_first_target">-10dp</dimen>
+    <dimen name="fm_station_name_margin_top_first_target">20dp</dimen>
+    <dimen name="fm_station_rds_margin_top_first_target">8dp</dimen>
+    <dimen name="fm_control_buttons_margin_top_first_target">12dp</dimen>
+
+    <!-- second region target text size and margin -->
+    <dimen name="fm_frequency_text_size_second_target">20dp</dimen>
+    <dimen name="fm_station_name_text_size_second_target">16dp</dimen>
+    <dimen name="fm_description_margin_top_second_target">0dp</dimen>
+    <dimen name="fm_frequency_margin_top_second_target">0dp</dimen>
+    <dimen name="fm_station_name_margin_top_second_target">12dp</dimen>
+    <dimen name="fm_station_rds_margin_top_second_target">8dp</dimen>
+    <dimen name="fm_control_buttons_margin_top_second_target">16dp</dimen>
+
+    <!-- recording page -->
+    <dimen name="fm_recording_station_detail_margin_bottom">36dp</dimen>
+    
+    <dimen name="dialog_front_title_size">16sp</dimen>
+    <dimen name="dialog_front_content_size">14sp</dimen>
+    
+    <dimen name="dialog_check_box_width_height">30dp</dimen>
+    
+    <dimen name="custom_dialog_height">186dp</dimen>
+    <dimen name="edit_dialog_height">227dp</dimen>
+    <dimen name="custom_dialog_width">310dp</dimen>
+    <dimen name="dialog_title_size">16sp</dimen>
+    <dimen name="dialog_msg_size">14sp</dimen>
+    
+    <dimen name="popupwindow_height">160dp</dimen>
+    <dimen name="popupwindow_width">160dp</dimen>
+    <dimen name="popupwindow_padding_left">15dp</dimen>
+    <dimen name="popupwindow_text_size">14sp</dimen>
+    <dimen name="popupwindow_margin_right">0dp</dimen>
+    <dimen name="popupwindow_margin_top">0dp</dimen>
+    <dimen name="btn_width">126dp</dimen>
+    <dimen name="btn_height">37.5dp</dimen>
+    
+    <dimen name="btn_favorite_width">142dp</dimen>
+    <dimen name="btn_favorite_height">37.5dp</dimen>
+    
+    <dimen name="favorite_text_size">13sp</dimen>
+    <dimen name="favorite_op_menu_size">15sp</dimen>
+    <dimen name="favorite_op_title_size">17sp</dimen>
+    <dimen name="favorite_channal_title_height">31dp</dimen>
+    <dimen name="favorite_actionbar_height">48dp</dimen>
+    
+    <dimen name="btn_search_width">252dp</dimen>
+    <dimen name="btn_search_height">37.5dp</dimen>
+    <dimen name="setting_dialog_width">283dp</dimen>
+    <dimen name="setting_dialog_diff_width">40dp</dimen>
+    <dimen name="setting_dialog_height">335dp</dimen>
+    <dimen name="middle_text_size">14sp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+    <dimen name="large_text_size">16sp</dimen>
+    <dimen name="powerup_text_size">76sp</dimen>
+    <dimen name="powerdown_hint_padding">2dp</dimen>
+    <dimen name="middle_padding_bottom">80dp</dimen>
+    <dimen name="notification_btn_length">21dp</dimen>
+    <dimen name="actionbar_height">40dp</dimen>
+    <dimen name="actionbar_padding_left">8dp</dimen>
+    <dimen name="setting_content_height">55dp</dimen>
+    <dimen name="setting_dialog_item_height">42dp</dimen>
+    <dimen name="setting_dialog_item_padding_h">15dp</dimen>
+    <dimen name="setting_dialog_title_height">49dp</dimen>
+    <dimen name="setting_dialog_bottom_height">77dp</dimen>
+    <dimen name="setting_dialog_bottom_padding_h">12dp</dimen>
+    <dimen name="setting_content_padding_h">25dp</dimen>
+    <dimen name="dialog_title_padding_l">25dp</dimen>
+    <dimen name="comm_small_text_size">10sp</dimen>
+    <dimen name="item_text_size">15sp</dimen>
+    <dimen name="setting_item_padding_h">65.5dp</dimen>
+    <dimen name="setting_item_radio_padding_h">17.5dp</dimen>
+    <dimen name="setting_item_text_size">13sp</dimen>
+    <dimen name="setting_dialog_margin_h">25dp</dimen>
+    <dimen name="dialog_margin_left">42.5dp</dimen>
+    <dimen name="dialog_search_margin_left">92.5dp</dimen>
+    <dimen name="search_margin_top">20dp</dimen>
+    
+    
+    <dimen name="main_tip_height">137dp</dimen>
+    <dimen name="main_tip_padding_bottom">25dp</dimen>
+    <dimen name="main_control_padding_h">30dp</dimen>
+    <dimen name="main_control_margin_top">62dp</dimen>
+    <dimen name="favorite_margin_top">0dp</dimen>
+    <dimen name="bottom_eidt_interval">40dp</dimen>
+    <dimen name="title_padding_h">15dp</dimen>
+    <dimen name="title_padding_bottom">10dp</dimen>
+    <dimen name="title_back_padding_h">9dp</dimen>
+    <dimen name="title_more_padding_h">5dp</dimen>
+    <dimen name="title_more_margin_r">10dp</dimen>
+    <dimen name="view_favorite_height">113dp</dimen>
+    <dimen name="view_favorite_recyclerview_height">59dp</dimen>
+    <dimen name="view_recyclerview_item_width">79dp</dimen>
+    <dimen name="view_middile_height">236dp</dimen>
+    <dimen name="view_scale_height">99dp</dimen>
+    <dimen name="favorite_bottom_height">51dp</dimen>
+    <dimen name="favorite_item_height">48dp</dimen>
+    <dimen name="favorite_title_height">40dp</dimen>
+    <dimen name="favorite_item_freq_width">65dp</dimen>
+    <dimen name="favorite_item_checkbox_size">27dp</dimen> 
+    <dimen name="favorite_item_collect_r">4dp</dimen> 
+    <dimen name="favorite_item_checkbox_r">10dp</dimen> 
+    <dimen name="favorite_item_checkbox_padding">5dp</dimen>
+    <dimen name="search_tip_margin">10dp</dimen>
+    <dimen name="search_progress_size">30dp</dimen>
+    <dimen name="pop_item_height">60dp</dimen>
+    <dimen name="pop_item_min_width">109dp</dimen>
+    <dimen name="pop_item_padding">15dp</dimen>
+    <dimen name="dialog_content_padding">10dp</dimen>
+    <dimen name="dialog_item_height">50dp</dimen>
+    <dimen name="center_item_width">33dp</dimen>
+    <dimen name="center_item_height">25dp</dimen>
+    <dimen name="container_bottom_padding">60dp</dimen>
+
+    <dimen name="rename_dialog_title_height">56dp</dimen>
+    <dimen name="rename_dialog_title_textsize">16sp</dimen>
+    <dimen name="rename_dialog_msg_size">14sp</dimen>
+    <dimen name="rename_dialog_bottom_height">50dp</dimen>
+	
+	<dimen name="title_margintop_height">20dp</dimen>
+</resources>

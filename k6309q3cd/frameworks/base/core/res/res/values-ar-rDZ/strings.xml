@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <string name="lockscreen_sim_locked_message">بطاقة SIM مقفلة</string>
+    <!--prize modified by xiekui, add translation, 20190326-start-->
+    <string name="fingerprint_acquired_partial" msgid="735082772341716043">"تم رصد جزء من بصمة الاصبع. رجاء حاول مجدداً"</string>
+    <string name="fingerprint_acquired_insufficient" msgid="4596546021310923214">"تعذرت معالجة بصمة الإصبع. يُرجى إعادة المحاولة."</string>
+    <string name="fingerprint_acquired_imager_dirty" msgid="1087209702421076105">"مستشعر بصمة الإصبع غير نظيف، يرجى تنظيفه ثم المحاولة مجددا"</string>
+    <string name="fingerprint_acquired_too_fast" msgid="6470642383109155969">"قمت بتحريك الاصبع بسرعة. رجاء حاول مجدداً"</string>
+    <!--prize modified by xiekui, add translation, 20190326-end-->
+	<string name="lockscreen_emergency_call">مكالمات الطوارئ</string>
+</resources>

@@ -249,28 +249,6 @@ public class FmMainActivity extends Activity implements
 			setSpeakerPhoneOn(!mService.isSpeakerUsed());
 		}
 	};
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {//按下事件处理，同onKeyUp()方法。
-        switch(keyCode){
-        case KeyEvent.KEYCODE_MEDIA_PREVIOUS:
-    	    seekStation(mCurrentStation, false);
-			break;
-        case KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE:
-        case KeyEvent.KEYCODE_HEADSETHOOK:
-    	    if (mService != null) {
-                if (mService.getPowerStatus() == FmService.POWER_UP) {
-                    powerDownFm();
-                } else {
-                    powerUpFm();
-                }
-            }
-			break;
-        case KeyEvent.KEYCODE_MEDIA_NEXT:
-    	     seekStation(mCurrentStation, true);
-			 break;
-        }
-        return false;//为true,则其它后台按键处理再也无法处理到该按键，为false,则其它后台按键处理可以继续处理该按键事件。
-    }
     /**
      * 
      * If after PowerUp, detection PowerUp
@@ -706,9 +684,15 @@ public class FmMainActivity extends Activity implements
         super.onStart();
         Log.d(TAG, "FmRadioActivity.onStart start");
      // Should start FM service first.
-        if (null == startService(new Intent(FmMainActivity.this, FmService.class))) {
-            Log.e(TAG, "onStart, cannot start FM service");
+        try {
+            if (null == startService(new Intent(FmMainActivity.this, FmService.class))) {
+                Log.e(TAG, "onStart, cannot start FM service");
+                return;
+            }
+        } catch (IllegalStateException e) {
+            Log.d(TAG, "unable to start service due to illegal state");
             return;
+
         }
 
         if (!mIsServiceStarted || mService == null) {

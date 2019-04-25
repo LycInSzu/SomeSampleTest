@@ -38,6 +38,8 @@ All rights reserved
 #include "data_pix/koobee_f1_1968_4160_h.h"
 #include "data_pix/koobee_f1_2160_3840_h.h"
 #include "data_pix/koobee_f1_6912_9216_h.h"
+#include "data_pix/koobee_f1_1536_2048_h.h"
+#include "data_pix/koobee_f1_8112_10816_h.h"
 //namespace android 
 
 
@@ -235,6 +237,20 @@ static void	 add_watermark(int w,int h,int format,unsigned char *frame_buffer, u
 			margin_bottom= mPictureHeight - dg_height - digital_height_6912_9216_bottom_margin;  
 			margin_left = digital_width_6912_9216_left_margin;
 			str = &koobee_f1_6912_9216_h[0];
+		}
+		else if((8112 == mPictureWidth && 10816 == mPictureHeight) || (10816 == mPictureWidth && 8112 == mPictureHeight)){
+			dg_width = digital_width_8112_10816_H;
+			dg_height = digital_height_8112_10816_H;					
+			margin_bottom= mPictureHeight - dg_height - digital_height_8112_10816_bottom_margin;  
+			margin_left = digital_width_8112_10816_left_margin;
+			str = &koobee_f1_8112_10816_h[0];
+		}		
+		else if((1536 == mPictureWidth && 2048 == mPictureHeight) || (2048 == mPictureWidth && 1536 == mPictureHeight)){
+			dg_width = digital_width_1536_2048_H;
+			dg_height = digital_height_1536_2048_H;					
+			margin_bottom= mPictureHeight - dg_height - digital_height_1536_2048_bottom_margin;  
+			margin_left = digital_width_1536_2048_left_margin;
+			str = &koobee_f1_1536_2048_h[0];
 		}
 		else
 		{

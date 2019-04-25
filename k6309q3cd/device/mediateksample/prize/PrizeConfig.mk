@@ -130,9 +130,9 @@ PRIZE_KERNEL_VERSION    =
 PRIZE_BASEBAND_VERSION  =
 
 #PRIZE_SW_VERSION=K6309Q3CD.KBEE.HDJ.P0.$(PRIZE_FLASH_CODE).$(shell date +%m%d_%H%M)
-PRIZE_SW_VERSION= SP646_V06_20190329
+PRIZE_SW_VERSION= SP646_V11_$(shell date +%Y%m%d)
 #自定义版本号
-#PRIZE_CUSTOM_BUILD_VERSION      = SP646_V06_20190329
+#PRIZE_CUSTOM_BUILD_VERSION      = SP646_V11_$(shell date +%Y%m%d)
 #自定义真实编译版本号 锁定版本查看	 		  
 PRIZE_REAL_CUSTOM_BUILD_VERSION      = 
 #版本号
@@ -206,6 +206,10 @@ PRIZE_LOWLIGHT_FROM_ARCSOFT    = yes
 PRIZE_HDR_FROM_ARCSOFT         = yes
 PRIZE_PICSELFIE_FROM_ARCSOFT   = yes
 PRIZE_FACEBEAUTY_FROM_ARCSOFT = yes
+#合纵视界圆圈虚化
+PRIZE_BOKEH_FROM_UV = no
+#合纵视界滤镜
+PRIZE_FILTER_FROM_UV = yes
 #人像
 PRIZE_PORTRAIT_MODE			  = yes	
 #水印相机
@@ -222,9 +226,9 @@ PRIZE_CAMERA_SCALE_EIGHTEEN_TO_NINE = no
 #前摄补光灯
 PRIZE_FRONT_FLASH = yes
 #更多拍照模式
-PRIZE_PLUGIN_MODE = no
+PRIZE_PLUGIN_MODE = yes
 #大光圈模式
-PRIZE_APERTURE_MODE = no
+PRIZE_APERTURE_MODE = yes
 #假双摄副摄遮挡提示
 PRIZE_SIMULATE_DUAL_CAMERA_TIP = no
 #前后摄默认像素比例[1.3333,1.7778]
@@ -243,6 +247,19 @@ PRIZE_VIDEO_TAKESNAPSHOT=no
 PRIZE_CURRENT_PROJECT = 4
 #前摄是否是升降摄像头
 PRIZE_LIFTCAMERA_SUPPORT = yes
+#前后摄默认VideoSize(配值如720P:5,1080P:6)
+PRIZE_CAMERA_FRONT_DEFAULT_VIDEOSIZE     = 
+PRIZE_CAMERA_BACK_DEFAULT_VIDEOSIZE     = 
+#超清所需要的PictureSize(如9216x6912,解决超清绿屏问题，不影响功能)
+PRIZE_CAMERA_PICTUREZOOOM_PICTURESIZE     = 
+#水印开关默认值（value:on 默认打开 value:off 默认关闭）
+PRIZE_BRAND_WATERMARK_DEFAULT_VALUE          = on
+#存储开关的默认位置（value:phone 内部存储 value:sd 外置sd卡存储，不配的时候默认phone）
+PRIZE_CAMERA_STORAGEPATH_DEFAULT_VALUE          = phone
+#连拍张数设置开关(yes,no)
+PRIZE_CAMERA_CONTINUOUSSHOTNUM_ON = no
+#连拍张数默认值设置(5,20,40,99)
+PRIZE_CAMERA_CONTINUOUSSHOTNUM_DEFAULT_VALUE = 20
 
 #prize-custom camera f_number info-tangan-20181101-begin
 PRIZE_BACK_CAMERA_FNUMBER = 
@@ -265,14 +282,14 @@ PRIZE_NXP_CAL =no
 #图库图片双击最大放大倍数
 PRIZE_GALLERY_MAGNIFY                 = 2
 
-#prize-camera  add for Insertion resolution by zhuzhengjiang 20190222-begin
+#prize-camera  add for Insertion resolution by zhuzhengjiang 20190328-begin
+#相机插值功能，yes：需要插值，no：不需要插值，如需要插值除了配置这里外，还需要配置sensor对应的metadata
 PRIZE_CAMERA_INSERT_RESOLUTION_SUPPORT =yes
-#prize-camera  add for Insertion resolution by zhuzhengjiang 20190222-end
+#prize-camera  add for Insertion resolution by zhuzhengjiang 20190328-end
 
 #双摄标定
 ARCSOFT_DUALCAMERA=yes
 
-PRIZE_APERTURE_MODE = yes
 #=====================电话/联系人=======================
 #号码匹配位数
 PRIZE_NUMBER_MIN_MATCH                          = 9
@@ -504,6 +521,12 @@ PRIZE_SPLIT_SCREEN = yes
 #prize add by liufan,PRIZE_GOODIX_FINGER_SWITCH,屏下指纹开关,2019-1-15-start
 PRIZE_GOODIX_FINGER_SWITCH = yes
 #prize add by liufan,PRIZE_GOODIX_FINGER_SWITCH,屏下指纹开关,2018-1-15-end
+#prize added by liufan,锁屏充电动画开关,2019-4-9-start
+PRIZE_KEYGUARD_CHARGE_ANIM = yes
+#prize added by liufan,锁屏充电动画开关,2019-4-9-end
+#prize added by liufan,快充开关,2019-4-9-start
+PRIZE_FAST_CHARGE = yes
+#prize added by liufan,快充开关,2019-4-9-end
 
 #prize added by lihuangyuan, open apps by fingerprint, 20190315-start
 PRIZE_FINGERUNLOCK_OPENAPP = yes
@@ -543,9 +566,13 @@ PRIZE_WIFI_CALL = yes
 PRIZE_SETTINGS_ELASTIC = yes
 #prize added by xiekui, configuration of elastic effect, 20190321-end
 
+
+#进入FM增加连接USB不能播放FM提示 yes ： 提示 , no ： 不提示
+PRIZE_FM_USB_CHARGING_PROMPT = yes
+
+
 #===========================增减APP==============================
 #普通版本去掉 google messages CarrierServices 简化宏
-PRIZE_MESSAGES_AND_CS_NOT_BUILD_IN = no
 #增加APP
 PRODUCT_PACKAGES += \
     CalendarGoogle \

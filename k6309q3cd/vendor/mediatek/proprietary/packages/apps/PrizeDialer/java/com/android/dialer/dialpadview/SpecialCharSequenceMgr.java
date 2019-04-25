@@ -680,7 +680,7 @@ public class SpecialCharSequenceMgr {
 //prize modified by liyuchong 20190328 for remove MEID shown in *#06#---end	
           for (int slot = 0; slot < telephonyManager.getPhoneCount(); slot++) {
             String deviceId = telephonyManager.getImei(slot);
-            if (!TextUtils.isEmpty(deviceId)) {
+			  if (!TextUtils.isEmpty(deviceId)) {
               addDeviceIdRow(
                   holder,
                   "IMEI" + (slot + 1) + ": " + deviceId,

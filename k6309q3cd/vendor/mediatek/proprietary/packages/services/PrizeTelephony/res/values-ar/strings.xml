@@ -436,7 +436,10 @@
     <string name="pin2_or_fdn_invalid" msgid="6025144083384701197">"‏لم يتم تحديث FDN. رقم PIN2 غير صحيح، أو تم رفض رقم الهاتف."</string>
     <string name="fdn_failed" msgid="540018079008319747">"‏تعذّر إتمام عملية FDN!"</string>
     <string name="simContacts_emptyLoading" msgid="2203331234764498011">"‏جارٍ القراءة من شريحة SIM..."</string>
-    <string name="simContacts_empty" msgid="5270660846489561932">"‏ليس هناك جهات اتصال على شريحة SIM."</string>
+    <!--prize modified by lijimeng,translation,20190408-start-->
+    <!--<string name="simContacts_empty" msgid="5270660846489561932">"‏ليس هناك جهات اتصال على شريحة SIM."</string>-->
+    <string name="simContacts_empty" msgid="5270660846489561932">"ليست هناك جهات اتصال على بطاقة SIM."</string>
+    <!--prize modified by lijimeng,translation,20190408-end-->
     <string name="simContacts_title" msgid="1861472842524839921">"حدد جهات اتصال لاستيرادها"</string>
     <string name="simContacts_airplaneMode" msgid="5254946758982621072">"‏عليك إيقاف وضع الطائرة لاستيراد جهات الاتصال من شريحة SIM."</string>
     <string name="enable_pin" msgid="5422767284133234860">"‏تفعيل/إيقاف رمز PIN لبطاقة SIM"</string>

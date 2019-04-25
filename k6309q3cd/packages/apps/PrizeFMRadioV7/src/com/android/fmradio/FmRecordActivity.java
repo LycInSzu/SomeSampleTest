@@ -93,7 +93,8 @@ public class FmRecordActivity extends Activity implements
         mContext = getApplicationContext();
         mFragmentManager = getFragmentManager();
         setContentView(R.layout.fm_record_activity);
-        
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR | View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+		
         mBack =  (ImageView) findViewById(R.id.im_back);
         mBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -334,7 +335,7 @@ public class FmRecordActivity extends Activity implements
         Log.d(TAG, "onBackPressed");
         if (mService != null & !isStopRecording()) {
             // Stop recording and wait service notify stop record state to show dialog
-            mService.stopRecordingAsync();
+            mService.stopRecordingAsync();			
             return;
         }
         super.onBackPressed();

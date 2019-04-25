@@ -372,4 +372,10 @@
 <!--prize add by liyuchong  for Condor add a folder  20190220 begin-->	
 	<string name="condor_tools_folder">Tools</string>
 <!--prize add by liyuchong  for Condor add a folder  20190220 end-->
+
+    <!--prize add by zhouerlong space dialog  20190315-->
+    <string name="desc">Mobile phone is running slowly, some applications will not be available. In order to ensure the normal operation of the system, please delete the useless files in time and release the internal storage space.</string>
+    <string name="space_low">Serious shortage of space</string>
+    <string name="to_clear">To process</string>
+    <!--prize add by zhouerlong space dialog  20190315-->
 </resources>

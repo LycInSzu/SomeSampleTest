@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--prize-add-add mode-xiaoping-20180901-start-->
+    <string name="beautiful_title_composite">Обробка фото</string>
+    <string name="beautiful_title_smoothing">Гладка шкіра</string>
+    <string name="beautiful_title_slimming">Худе обличчя</string>
+    <string name="beautiful_title_catchlight">Вибілити</string>
+    <string name="beautiful_title_eyes_enlargement">Вкликі очі</string>
+    <string name="shutter_type_photo_beauty">Автоматична обробка фото</string>
+    <string name="shutter_type_photo_picturezoom">Висока якість зображення</string>
+    <string name="shutter_type_photo_picturezoom_bl">52MP</string>  
+    <string name="shutter_type_photo_lowlight">Нічна зйомка</string>
+    <string name="cannot_continus_shot_hint">У поточному стані не підтримується серійна зйомка</string>
+    <string name="pref_camera_cameramute_title">Безшумне фото</string>
+    <string name="continuous_shot_num_title">Скрійна зйомка</string>
+    <string name="continuous_shot_num_entry_5">5 фотографій</string>
+    <string name="pref_camera_grid_title">Лінії сітки</string>
+    <string name="mirror_title">Дзеркальне відображення</string>
+    <string name="picselfie_open_tips_on">Розмиття фону увімкнено</string>
+    <string name="picselfie_open_tips_off">Розмиття фону вимкнено</string>
+    <string name="pref_camera_professional_title">Професійний режим</string>
+    <string name="touch_shutter_title">Фотографування за допомогою сенсорного екрану</string>
+    <string name="pref_camera_volumekeys_title">Функції кнопки гучності</string>
+    <string name="pref_camera_volumekeys_volume">Гучність</string>
+    <string name="pref_camera_volumekeys_shoot">Затвор</string>
+    <string name="pref_camera_volumekeys_zoom">Збільшити</string>
+    <string name="watermark_title">Фірмовий водяний знак</string>
+    <string name="zsd_title">Фотографування з нульовою затримкою</string>
+    <string name="flash_failed_when_battery_is_low">При низькому заряді спалах камери може не спрацьувати</string>
+    <string name="close_camera_when_battery_is_low">Низький рівень заряду, неможливо продовжити використання камери</string>
+    <string name="camera_timeout_warning_message">Після двох хвилин очікування камера автоматично вимкнеться</string>
+    <string name="camera_setting_reset_title">Скидання налаштувань</string>
+    <string name="camera_setting_reset_message">Відновити налаштування камери за замовчуванням?</string>
+    <string name="shutter_type_photo_picsefile">Портрет</string>
+    <string name="secondary_camera_blocked">Щоб гарантувати ефективність зйомки, переконайтеся, що об\'єктив не перекритий іншими предметами, а зйомка відбувається у освітленому місці</string>
+    <string name="pref_camera_location_title">Географічне положення</string>
+    <string name="pref_camera_storagepath_title">Шлях збереження</string>
+    <string name="hdr_open_tips_on">HDR вже запущений</string>
+    <string name="hdr_open_tips_off">HDR вже вимкнений</string>
+    <string name="dialog_ok">"Ок"</string>
+    <string name="setting_dialog_cancel">Скасувати</string>
+    <string name="aperture_level">Рівень діафрагми</string>
+    <string name="beauty_level">Рівень прикрашення</string>
+    <string name="switch_cameras_frequently">Щоб захистити передню камеру, будь ласка, не переключайте її занадто часто</string>
+    <string name="camera_not_raised">Неможливо висунути камеру</string>
+    <string name="exit_camera_toast">Натисніть ще раз, щоб вийти</string>
+    <!--prize-add-add mode-xiaoping-20180901-end-->
+
+</resources>

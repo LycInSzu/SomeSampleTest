@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="camera_label">"相机"</string>
+    <string name="video_camera_label">"摄像机"</string>
+    <string name="accessibility_shutter">"“快门”按钮"</string>
+    <string name="accessibility_thumbnail">"最新照片"</string>
+    <string name="accessibility_mode">相机模式</string>
+    <string name="accessibility_setting">"设置"</string>
+	<string name="setting_title">"设置"</string>
+    <string name="mode_fragment_title">"模式"</string>
+    <string name="normal_mode_title">"标准"</string>
+    <string name="saving_dialog_default_string">正在保存...</string>
+    <string name="shutter_type_photo">"照片"</string>
+    <string name="shutter_type_video">"视频"</string>
+	<string name="video_recording_not_available">"无法录影，请检查是否有其他应用程序正在录影。"</string>
+    <string name="video_bad_performance_auto_stop">系统内存不足，自动停止录像。</string>
+    <string name="video_bad_performance_drop_quality">系统内存不足，自动调整录像质量。</string>
+    <string name="video_reach_size_limit">"已达到大小上限。"</string>
+    <string name="video_recording_error">录制时发生错误！</string>
+	<string name="can_not_use_storage">"SD Card 现在无法使用"</string>
+	<string name="storage_full">"默认存储空间不足，请释放部分空间或更改默认存储位置"</string>
+    <string name="camera_disabled">由于安全政策的限制，相机已被停用。"</string>
+    <string name="cannot_connect_camera_new">无法连接到相机。请确保已关闭会使用相机或闪光灯的应用程序。</string>
+    <string name="dialog_ok">"确定"</string>
+    <string name="pref_thermal_dialog_title">警告</string>
+    <string name="pref_thermal_dialog_content_launch">手机温度过高，请稍候再使用相机。</string>
+    <string name="pref_thermal_dialog_content">手机温度过高，相机将在30秒后自动退出。请稍候再使用相机。</string>
+    <string name="pref_thermal_preview_toast">轻触屏幕后继续。</string>
+    <!--prize-add-add mode-xiaoping-20180901-start-->
+    <string name="beautiful_title_composite">一键美颜</string>
+    <string name="beautiful_title_smoothing">磨皮</string>
+    <string name="beautiful_title_slimming">瘦脸</string>
+    <string name="beautiful_title_catchlight">美白</string>
+    <string name="beautiful_title_eyes_enlargement">大眼</string>
+    <string name="shutter_type_photo_beauty">美颜</string>
+    <string name="shutter_type_photo_picturezoom">超清画质</string>
+    <string name="shutter_type_photo_lowlight">夜拍</string>
+    <string name="cannot_continus_shot_hint">当前状态不支持连拍</string>
+    <string name="setting_dialog_cancel">取消</string>
+    <string name="flash_failed_when_battery_is_low">电量过低时，闪光灯可能无效</string>
+    <string name="close_camera_when_battery_is_low">电量过低,无法继续使用相机</string>
+    <string name="camera_timeout_warning_message">相机闲置2分钟之后会自动关闭</string>
+    <string name="camera_setting_reset_title">重置</string>
+    <string name="camera_setting_reset_message">要恢复相机默认设置吗？</string>
+    <string name="shutter_type_photo_picsefile">人像</string>
+    <string name="secondary_camera_blocked">为保证拍摄效果,请确保镜头未遮挡且在光线明亮处</string>
+    <string name="beauty_level">美颜强度</string>
+    <string name="zsd_title">零延迟拍照</string>
+    <string name="zsd_content_description">零延迟拍照</string>
+    <!--prize-modify-add front lift camera interaction-xiaoping-20190304-start-->
+    <string name="switch_cameras_frequently">为保护你的前置摄像头，请不要频繁切换操作</string>
+    <string name="camera_not_raised">摄像头无法弹出</string>
+    <!--prize-modify-add front lift camera interaction-xiaoping-20190304-end-->
+    <!--prize-add-add mode-xiaoping-20180901-end-->
+    <!--prize-modify-Camera application should be closed as pressing 2 times back button-xiaoping-20190301-start-->
+    <string name="exit_camera_toast">再按一次退出</string>
+    <!--prize-modify-Camera application should be closed as pressing 2 times back button-xiaoping-20190301-end-->
+    <!--prize-modify-Do not use the flash when the battery is low-xiaoping-20190306-start-->
+    <string name="can_not_open_front_camera_on_lowpower">低电量状态下无法使用前摄</string>
+    <!--prize-modify-Do not use the flash when the battery is low-xiaoping-20190306-end-->
+    <!--prize add huangpengfei-20190306-start-->
+    <string name="shutter_type_photo_aperture">大光圈</string>
+    <string name="shutter_type_photo_gif">动态照片</string>
+    <string name="shutter_type_photo_slow_motion">慢动作</string>
+    <string name="shutter_type_photo_intelligent_scanning">智能扫描</string>
+    <string name="aperture_level">光圈强度</string>
+    <!--prize add huangpengfei-20190306-end-->
+    <!--prize-add-xiaoping-20190309-start-->
+    <string name="other_devices_take_up_microphone_reminders">当前已有录音应用正在后台运行，如需使用相机录像，请先关闭其他录音应用</string>
+    <!--prize-add-xiaoping-20190309-end-->
+    <!--prize-modify-add professional mode function-xiaoping-20190319-start-->
+    <string name="professional_title_ev">补光</string>
+    <!--prize-modify-add professional mode function-xiaoping-20190319-start-->
+    <string name="camera_slr_mode_tips">该模式可以拍摄背景虚化的照片，建议拍摄2米范围内的人物照片</string>
+    <string name="hdr_guide_capture">HDR拍照期间请勿移动相机</string>
+    
+    <string name="shutter_type_photo_hdr">HDR</string>
+    <string name="shutter_type_photo_filter">滤镜</string>
+    <string name="shutter_type_photo_panorama">全景</string>
+
+    <string name="pref_camera_coloreffect_entry_mono">"黑白"</string>
+    <string name="pref_camera_coloreffect_entry_sepia">"暖色"</string>
+    <string name="pref_camera_coloreffect_entry_aqua">"蓝调"</string>
+    <string name="pref_camera_coloreffect_entry_hefe">"电影"</string>
+    <string name="pref_camera_coloreffect_entry_valencia">"自然"</string>
+    <string name="pref_camera_coloreffect_entry_xproll">"怀旧"</string>
+    <string name="pref_camera_coloreffect_entry_lofi">"艳丽"</string>
+    <string name="pref_camera_coloreffect_entry_sierra">"淡雅"</string>
+    <string name="pref_camera_coloreffect_entry_none">"无"</string>
+    
+    <string name="pano_status_normal">保持箭头在中心线</string>
+    <string name="pano_status_move_down">请向下移动</string>
+    <string name="pano_status_move_up">请向上移动</string>
+    <string name="pano_status_slow_down">请减速</string>
+</resources>

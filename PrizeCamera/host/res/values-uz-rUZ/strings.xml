@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--prize-add-add mode-xiaoping-20180901-start-->
+    <string name="beautiful_title_composite">Avto Retushlash</string>
+    <string name="beautiful_title_smoothing">Silloqlash</string>
+    <string name="beautiful_title_slimming">Yuzni kichraytirish</string>
+    <string name="beautiful_title_catchlight">Oqartirish</string>
+    <string name="beautiful_title_eyes_enlargement">Koʻzlarni kattalashtirish</string>
+    <string name="shutter_type_photo_beauty">Retushlash</string>
+    <string name="shutter_type_photo_picturezoom">FHD Tasvir sifati</string>
+    <string name="shutter_type_photo_picturezoom_bl">52MP</string>  
+    <string name="shutter_type_photo_lowlight">Tunda olingan surat</string>
+    <string name="cannot_continus_shot_hint">Bu statusda muntazam suratga olish funksiyasi imkonsiz</string>
+    <string name="pref_camera_cameramute_title">Kamera ovozsiz rejimda</string>
+    <string name="continuous_shot_num_title">Muntazam suratga olish</string>
+    <string name="continuous_shot_num_entry_5">5 tushirish</string>
+    <string name="pref_camera_grid_title">Toʻr chiziqlari</string>
+    <string name="mirror_title">Koʻzgu</string>
+    <string name="picselfie_open_tips_on">Old kameraning (Bokeh) sur tasvir effecti yoqildi.</string>
+    <string name="picselfie_open_tips_off">Old kameraning(Bokeh) sur tasvir effecti oʻchirildi.</string>
+    <string name="pref_camera_professional_title">Professional rejim</string>
+    <string name="touch_shutter_title">Suratga olish uchun ekranga teging</string>
+    <string name="pref_camera_volumekeys_title">Ovozning asosiy funksiyalari</string>
+    <string name="pref_camera_volumekeys_volume">Ovoz</string>
+    <string name="pref_camera_volumekeys_shoot">Zatvor</string>
+    <string name="pref_camera_volumekeys_zoom">Masshtabni yaqinlashtirish</string>
+    <string name="watermark_title">Brend suv izi</string>
+    <string name="zsd_title">Sekinlashtirilgan fotosuratga olish</string>
+    <string name="flash_failed_when_battery_is_low">Batareya quvvati ozayganda vspishka ishlamadi</string>
+    <string name="close_camera_when_battery_is_low">Batareya quvvati ozayganda kamerani oʻchiring</string>
+    <string name="camera_timeout_warning_message">2 daqiqa ishlatilmay turgandan keyin, kamera avtomatik ravishda oʻchadi</string>
+    <string name="camera_setting_reset_title">Dastlabki holatga qaytish</string>
+    <string name="camera_setting_reset_message">Kameraning dastlabki sozlamalarini tiklashni istaysizmi?</string>
+    <string name="shutter_type_photo_picsefile">Kitob formati</string>
+    <string name="secondary_camera_blocked">Fotosurat effektini taʻminlash uchun, linzalar toʻsilib qolmaganiga va ravshan yorugʻlik taʻminlanganiga ishonch hosil qiling</string>
+    <string name="pref_camera_location_title">Jugʻrofiy joylashuv</string>
+    <string name="pref_camera_storagepath_title">Saqlash joyi</string>
+    <string name="hdr_open_tips_on">HDR yoqiq</string>
+    <string name="hdr_open_tips_off">HDR oʻchik</string>
+    <string name="dialog_ok">"Ok"</string>
+    <string name="setting_dialog_cancel">Bekor qilish</string>
+    <string name="aperture_level">Teshik kattaligi</string>
+    <string name="beauty_level">Koʻrkamlik darajasi</string>
+    <string name="switch_cameras_frequently">Old kamerangizni himoya qilish uchun, amaldan amalga tez-tez oʻtmang</string>
+    <string name="camera_not_raised">Kamerani yangi oynada ocha olmaydi</string>
+    <string name="exit_camera_toast">Chiqish uchun yana bosing</string>
+    <!--prize-add-add mode-xiaoping-20180901-end-->
+
+
+</resources>

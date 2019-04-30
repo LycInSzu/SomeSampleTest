@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recording_root_group"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+	<!--prize-added by tangan-custom ui-begin-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/record_margin_top"
+        android:id="@+id/recording_time_group">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerInParent="true">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/recording_indicator"/>
+            <com.mediatek.camera.common.widget.StrokeTextView
+                 android:id="@+id/recording_time"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                 android:layout_marginStart="13dp"
+                android:textSize="20sp"
+                 android:textColor="#FFFFFFFF"
+                 android:maxLines="1"
+                 android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="104dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/console_margin_bottom"
+        android:id="@+id/video_shutter_root"
+        android:clickable="true">
+
+        <com.mediatek.camera.common.widget.ScaleAnimationButton
+            android:id="@+id/video_stop_shutter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/btn_video_mask"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+	<!--prize-added by tangan-custom ui-end-->
+        <!--prize-modify-huangpengfei-2019-01-21-start-->
+        <com.mediatek.camera.common.widget.ScaleAnimationButton
+            android:id="@+id/btn_vss"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@id/video_stop_shutter"
+            android:layout_marginStart="63dp"
+            android:clickable="true"
+            android:layout_marginBottom="19.5dp"
+            android:soundEffectsEnabled="false"
+            app:srcCompat="@drawable/prize_selector_vss_shutter" />
+        <com.mediatek.camera.common.widget.ScaleAnimationButton
+            android:id="@+id/btn_pause_resume"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@id/video_stop_shutter"
+            android:layout_marginEnd="63dp"
+            android:clickable="true"
+            android:layout_marginBottom="19.5dp"
+            android:soundEffectsEnabled="false"
+            app:srcCompat="@drawable/prize_selector_recording_pause"/>
+        <!--prize-modify-huangpengfei-2019-01-21-end-->
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/recording_size_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/video_shutter_root"
+            android:layout_marginTop="24dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible" >
+            <SeekBar
+                android:id="@+id/recording_progress"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:focusable="false"
+                android:clickable="false"
+                android:color="#F19A21"
+                android:minHeight="4dp"
+                android:maxHeight="4dp"
+                android:progressDrawable="@drawable/progress_draw"
+                android:thumb="@null"/>
+            <com.mediatek.camera.common.widget.RotateStrokeTextView
+                android:id="@+id/recording_current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFFFF"
+                android:textSize="20dp"
+                android:maxLines="1"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/recording_progress"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <com.mediatek.camera.common.widget.RotateStrokeTextView
+                android:id="@+id/recording_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFFFF"
+                android:textSize="20dp"
+                android:maxLines="1"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/recording_progress"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </RelativeLayout>
+</RelativeLayout>

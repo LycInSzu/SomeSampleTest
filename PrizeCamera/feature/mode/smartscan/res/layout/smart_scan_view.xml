@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/smart_scan_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.prize.camera.feature.mode.smartscan.view.ViewfinderView
+        android:id="@+id/viewfinder_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:corner_color="@color/corner_color"
+        app:frame_color="@color/viewfinder_frame"
+        app:label_text="@string/smart_scan_tips"
+        app:label_text_color="@color/smart_scan_tips_color"
+        app:laser_color="@color/laser_color"
+        app:mask_color="@color/viewfinder_mask"
+        app:result_color="@color/result_view"
+        app:result_point_color="@color/result_point_color" />
+
+    <com.mediatek.camera.common.widget.RotateImageView
+        android:id="@+id/scan_album"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="44dp"
+        android:layout_marginRight="38dp"
+        android:src="@drawable/btn_gallery_selector"
+        android:clickable="true"
+        android:focusable="false"
+        android:scaleType="center"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/console_margin_bottom"
+        android:focusable="true">
+        <ImageView
+            android:id="@+id/btn_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            android:clickable="false"
+            android:src="@drawable/btn_shutter_disable"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--prize-add-add mode-xiaoping-20180901-start-->
+    <string name="beautiful_title_composite">A key pulchritudo</string>
+    <string name="beautiful_title_smoothing">Dermabrasion</string>
+    <string name="beautiful_title_slimming">Faciem-levare</string>
+    <string name="beautiful_title_catchlight">Albentes</string>
+    <string name="beautiful_title_eyes_enlargement">Oculis magnis</string>
+    <string name="shutter_type_photo_beauty">Pulchritudo</string>
+    <string name="shutter_type_photo_picturezoom">Patet qualis imago ultra</string>
+    <string name="shutter_type_photo_picturezoom_bl">52MP</string>  
+    <string name="shutter_type_photo_lowlight">Noctem dirigentes</string>
+    <string name="cannot_continus_shot_hint">Current status non continua dirigentes support</string>
+    <string name="pref_camera_cameramute_title">Silens camera</string>
+    <string name="continuous_shot_num_title">Gaudete</string>
+    <string name="continuous_shot_num_entry_5">5 fotos</string>
+    <string name="pref_camera_grid_title">Gridlines</string>
+    <string name="mirror_title">Mirroring</string>
+    <string name="picselfie_open_tips_on">Priusquam his quae sumpta bokeh</string>
+    <string name="picselfie_open_tips_off">Off fronte camera est bokeh</string>
+    <string name="pref_camera_professional_title">Modus professio</string>
+    <string name="touch_shutter_title">Tangere screen imaginibus</string>
+    <string name="pref_camera_volumekeys_title">Key munus volumine</string>
+    <string name="pref_camera_volumekeys_volume">Volubilis</string>
+    <string name="pref_camera_volumekeys_shoot">Lorem</string>
+    <string name="pref_camera_volumekeys_zoom">Dilata</string>
+    <string name="watermark_title">Brand Cursum perficio</string>
+    <string name="zsd_title">Nulla mora taking imaginibus</string>
+    <string name="flash_failed_when_battery_is_low">Potestas cum humilitate mico non valebit</string>
+    <string name="close_camera_when_battery_is_low">Virtus preme, non possumus uti in camera continue</string>
+    <string name="camera_timeout_warning_message">Frustra ad cameram minuta automatically clausa</string>
+    <string name="camera_setting_reset_title">Reponi</string>
+    <string name="camera_setting_reset_message">Default occasus ut restituo camera?</string>
+    <string name="shutter_type_photo_picsefile">Effigies</string>
+    <string name="secondary_camera_blocked">Ut dirigentes, lens, scrutare non ad clara clausae</string>
+    <string name="pref_camera_location_title">Locum</string>
+    <string name="pref_camera_storagepath_title">Viam repono</string>
+    <string name="hdr_open_tips_on">HDR verterunt</string>
+    <string name="hdr_open_tips_off">HDR claudi</string>
+    <string name="dialog_ok">"Decernite"</string>
+    <string name="setting_dialog_cancel">Delens</string>
+    <string name="aperture_level">apertura fortitudinem</string>
+    <string name="beauty_level">summa pulchritudo</string>
+    <string name="switch_cameras_frequently">Tueri prima camera, ne frequenti rebus mutandi</string>
+    <string name="camera_not_raised">Eiecit tamen camera</string>
+    <string name="exit_camera_toast">Rursus quispiam egredi torcular</string>
+    <!--prize-add-add mode-xiaoping-20180901-end-->
+
+</resources>

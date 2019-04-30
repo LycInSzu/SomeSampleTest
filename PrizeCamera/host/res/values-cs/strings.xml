@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="camera_label">"Fotoaparát"</string>
+    <string name="video_camera_label">"Videokamera"</string>
+    <string name="accessibility_shutter">"Tlačítko závěrky"</string>
+    <string name="accessibility_thumbnail">"Poslední fotografie"</string>
+    <string name="accessibility_mode">Režim kamery</string>
+    <string name="accessibility_setting">Nastavení</string>
+    <string name="setting_title">"Nastavení"</string>
+    <string name="mode_fragment_title">Režimy</string>
+    <string name="normal_mode_title">"Normální"</string>
+    <string name="saving_dialog_default_string">Ukládání...</string>
+    <string name="shutter_type_photo">"Obrázek"</string>
+    <string name="shutter_type_video">"Video"</string>
+    <string name="video_recording_not_available">Před používáním videokamery zastavte ostatní záznamové aplikace.</string>
+    <string name="video_bad_performance_auto_stop">Nedostatek paměti, automatické zastavení záznamu.</string>
+    <string name="video_bad_performance_drop_quality">Nedostatek paměti, automatická změna kvality.</string>
+    <string name="video_recording_error">Chyba během záznamu!</string>
+    <string name="video_reach_size_limit">"Bylo dosaženo limitu velikosti."</string>
+    <string name="can_not_use_storage">Karta SD není k dispozici</string>
+    <string name="storage_full">Výchozí úložiště je plné, prosím uvolněte část prostoru nebo upravte možnosti úložiště v nastavení</string>
+    <string name="pref_thermal_dialog_title">Varování</string>
+    <string name="pref_thermal_dialog_content_launch">Přílišvysokáteplotazařízení,použijtefotoaparátpozději.</string>
+    <string name="pref_thermal_dialog_content">Teplotazařízeníjepřílišvysokáafotoaparátseza30sekundautomatickyukončí.Zkustejejpoužítpozději.</string>
+    <string name="pref_thermal_preview_toast">Pro pokračování se dotkněte displeje. </string>
+    <!--prize-add-add mode-xiaoping-20180901-start-->
+    <string name="beautiful_title_composite">kompozitní</string>
+    <string name="beautiful_title_smoothing"> vyhlazení </string>
+    <string name="beautiful_title_slimming"> hubnutí</string>
+    <string name="beautiful_title_catchlight">záchytné světlo</string>
+    <string name="beautiful_title_eyes_enlargement">zvětšení očí</string>
+    <string name="shutter_type_photo_beauty">fotografická krása typu závěrky</string>
+    <string name="shutter_type_photo_picturezoom">Zvětšení fotografie závěrky</string>
+    <string name="shutter_type_photo_picturezoom_bl">52MP</string>  
+    <string name="shutter_type_photo_lowlight">fotografie s nízkou hladinou světla typu závěrky</string>
+    <string name="cannot_continus_shot_hint">Aktuální stav nepodporuje nepřetržité fotografování</string>
+    <string name="pref_camera_cameramute_title">vypnutí kamery fotoaparátu</string>
+    <string name="continuous_shot_num_title">kontinuální záběr</string>
+    <string name="continuous_shot_num_entry_5">5 listů </string>
+    <string name="pref_camera_grid_title">mřížka kamery</string>
+    <string name="mirror_title">zrcadlo</string>
+    <string name="picselfie_open_tips_on">otevřené tipy Před fotografováním virtuální background</string>
+    <string name="picselfie_open_tips_off">zavřené tipy Před fotografováním virtuální background</string>
+    <string name="pref_camera_professional_title">profesionální</string>
+    <string name="touch_shutter_title">dotkněte se spouště na fotografování</string>
+    <string name="pref_camera_volumekeys_title">fenkce hlasitosti</string>
+    <string name="pref_camera_volumekeys_volume">hlasitost</string>
+    <string name="pref_camera_volumekeys_shoot">klíče fotoaparátu</string>
+    <string name="pref_camera_volumekeys_zoom">zvýšit hlasitost</string>
+    <string name="watermark_title">vodoznak</string>
+    <string name="zsd_title">Při fotografování je zpoždění nuly</string>
+    <string name="flash_failed_when_battery_is_low">Při slabém stavu baterie se blesk nepodařilo</string>
+    <string name="close_camera_when_battery_is_low">zavřete fotoaparát, když je baterie nízká</string>
+    <string name="camera_timeout_warning_message">Po 2 minutách časový limit fotoaparátu se  automaticky vypne</string>
+    <string name="camera_setting_reset_title">resetování </string>
+    <string name="camera_setting_reset_message">Chcete obnovit výchozí nastavení fotoaparátu?</string>
+    <string name="shutter_type_photo_picsefile">Soubor fotografií</string>
+    <string name="secondary_camera_blocked">Pro zajištění efektu fotografování,ujistěte se, že  sekundární fotoaparát není zablokován a na jasném místě</string>
+    <string name="pref_camera_location_title">umístění kamery</string>
+    <string name="pref_camera_storagepath_title">úložiště kamery</string>
+    <string name="hdr_open_tips_on">HDR otevřené tipy</string>
+    <string name="hdr_open_tips_off">HDR zavřené tipy</string>
+    <string name="dialog_ok">"určit"</string>
+    <string name="setting_dialog_cancel">zrušit</string>
+    <string name="aperture_level">Úroveň Aperture</string>
+    <string name="beauty_level">Intenzita krásy</string>
+    <string name="switch_cameras_frequently">Chcete-li chránit přední fotoaparát,prosím, nepřepínejte činnost často</string>
+    <string name="camera_not_raised">Fotoaparát nelze vysunout</string>
+    <string name="exit_camera_toast">Opět stiskněte tlačítko pro opuštění</string>
+    
+    <string name="camera_slr_mode_tips">Fotografování s širokými otvory může vytvářet snímky s malou hloubkou ostrosti. Doporučuje se pořídit fotografie osob do 2 metrů.</string>
+    <string name="hdr_guide_capture">Během záznamu HDR nepohybujte zařízením.</string>
+    
+    <!--prize-add-add mode-xiaoping-20180901-end-->
+</resources>

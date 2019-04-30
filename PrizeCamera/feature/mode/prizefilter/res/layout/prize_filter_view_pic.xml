@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/filter_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/aperture_seekbar_layout_height"
+    android:focusableInTouchMode="true"
+    android:layout_marginBottom="@dimen/progress_layout_margin_bottom"
+    android:layout_gravity="bottom"
+    android:layout_alignParentBottom="true">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:scrollbars="none"
+        android:layout_marginBottom="@dimen/progress_layout_margin_bottom">
+
+        <LinearLayout
+            android:id="@+id/uvfilter_sub_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/FilterTextViewStyle"
+                    android:text="@string/pref_camera_coloreffect_entry_none"/>
+
+                <ImageView
+                    android:id="@+id/sv_sml_prvw_0"
+                    android:tag="0"
+                    style="@style/FilterBitmapStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/FilterTextViewStyle"
+                    android:text="@string/pref_camera_coloreffect_entry_mono"/>
+
+                <ImageView
+                    android:id="@+id/sv_sml_prvw_1"
+                    android:tag="1"
+                    style="@style/FilterBitmapStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/FilterTextViewStyle"
+                    android:text="@string/pref_camera_coloreffect_entry_sepia"/>
+
+                <ImageView
+                    android:id="@+id/sv_sml_prvw_2"
+                    android:tag="2"
+                    style="@style/FilterBitmapStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/FilterTextViewStyle"
+                    android:text="@string/pref_camera_coloreffect_entry_aqua"/>
+
+                <ImageView
+                    android:id="@+id/sv_sml_prvw_3"
+                    android:tag="3"
+                    style="@style/FilterBitmapStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/FilterTextViewStyle"
+                    android:text="@string/pref_camera_coloreffect_entry_hefe"/>
+
+                <ImageView
+                    android:id="@+id/sv_sml_prvw_4"
+                    android:tag="4"
+                    style="@style/FilterBitmapStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/FilterTextViewStyle"
+                    android:text="@string/pref_camera_coloreffect_entry_valencia"/>
+
+                <ImageView
+                    android:id="@+id/sv_sml_prvw_5"
+                    android:tag="5"
+                    style="@style/FilterBitmapStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/FilterTextViewStyle"
+                    android:text="@string/pref_camera_coloreffect_entry_xproll"/>
+
+                <ImageView
+                    android:id="@+id/sv_sml_prvw_6"
+                    android:tag="6"
+                    style="@style/FilterBitmapStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/FilterTextViewStyle"
+                    android:text="@string/pref_camera_coloreffect_entry_lofi"/>
+
+                <ImageView
+                    android:id="@+id/sv_sml_prvw_7"
+                    android:tag="7"
+                    style="@style/FilterBitmapStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/FilterTextViewStyle"
+                    android:text="@string/pref_camera_coloreffect_entry_sierra"/>
+
+                <ImageView
+                    android:id="@+id/sv_sml_prvw_8"
+                    android:tag="8"
+                    style="@style/FilterBitmapStyle" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+<!--
+    <TextView android:id="@+id/filter_pre"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:background="#ffff0000"/>
+
+    <ImageView android:id="@+id/filter_after"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:background="#ff0000ff"
+        android:layout_toRightOf="@id/filter_pre"/>
+-->
+</RelativeLayout>

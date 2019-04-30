@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="camera_gray_background">#1b1b1b</color>
+    <color name="setting_title_background">#ff263238</color>
+    <!--prize-tangan-20180921-add prize camera-begin-->
+    <color name="prize_setting_bg_color">#d5000000</color>
+    <color name="prize_setting_title_text_color">#FFFFFF</color>
+    <color name="prize_setting_divider_color">#4dffffff</color>
+    <color name="prize_setting_summary_text_color">#FFFFFF</color>
+    <color name="beautiful_text_color_normal">#7fffffff</color>
+    <color name="beautiful_text_color_select">#fffecb00</color>
+    <color name="prize_icon_selected_color">#fecb00</color>
+    <color name="black">#000000</color>
+    <color name="alpht">#00000000</color>
+    <color name="divider_color">#dcdcdc</color>
+    <color name="dialog_title_text_color">#212121</color>
+    <color name="dialog_blue">#3478f6</color>
+    <!--prize-tangan-20180921-add prize camera-end-->
+    <!--prize-modify-Change beauty UI interaction-xiaoping-20180103-start-->
+    <color name="shutter_video_background">#4c000000</color>
+    <!--prize-modify-Change beauty UI interaction-xiaoping-20180103-end-->
+    <color name="prize_black_translucence_color">#66000000</color>
+    <!--prize-modify-add professional mode function-xiaoping-20190216-start-->
+    <color name="prize_arcprogressbar_text_color">#fecb00</color>
+    <!--prize-modify-add professional mode function-xiaoping-20190216-end-->
+    <!-- prize-add-screen flash-huangzhanbin-2019-2-26-start-->
+    <color name="screen_light">#F0F0F0</color>
+    <color name="screen_light_blinck">#FFFFFF</color>
+    <color name="prize_screenflash_text_white">#FFFFFF</color>
+    <color name="prize_screenflash_text_select">#dcab68</color>
+    <!-- prize-add-screen flash-huangzhanbin-2019-2-26-end-->
+    <!--prize-modify-Camera application should be closed as pressing 2 times back button-xiaoping-20190301-start-->
+    <color name="setting_item_text_color_normal">#FFFFFFFF</color>
+    <!--prize-modify-Camera application should be closed as pressing 2 times back button-xiaoping-20190301-end-->
+
+    <color name="blur_button_text">#fecb00</color>
+</resources>

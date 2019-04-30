@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="camera_label">"Kamera"</string>
+    <string name="video_camera_label">"Video Kamera"</string>
+    <string name="accessibility_shutter">"Deklanşör düğmesi"</string>
+    <string name="accessibility_thumbnail">"En son fotoğraf"</string>
+    <string name="accessibility_mode">Kamera modu</string>
+    <string name="accessibility_setting">"Ayarlar"</string>
+    <string name="setting_title">"Ayarlar"</string>
+    <string name="mode_fragment_title">Modlar</string>
+    <string name="normal_mode_title">"Normal"</string>
+    <string name="saving_dialog_default_string">Kaydediliyor...</string>
+    <!-- prize modify by wuliang 20190304 start -->
+    <string name="shutter_type_photo">"Fotoğraf"</string>
+    <!-- prize modify by wuliang 20190304 end -->
+    <string name="shutter_type_video">"Video"</string>
+    <string name="video_recording_not_available">Lütfen, video kamerayı kullanmadan önce diğer kayıt uygulamalarını duraklatın.</string>
+    <string name="video_bad_performance_auto_stop">Yetersiz bellek, kayıt otomatik olarak durduruldu.</string>
+    <string name="video_bad_performance_drop_quality">Yetersiz bellek kalite otomatik olarak değiştirildi.</string>
+    <string name="video_recording_error">Kayıt sırasında hata oluştu!</string>
+    <string name="video_reach_size_limit">"Boyut sınırına ulaşıldı."</string>
+    <string name="can_not_use_storage">SD Kart kullanılamıyor</string>
+    <string name="storage_full">Varsayılan depolama alanı dolu; lütfen biraz yer açın veya ayarlar kısmında depolama seçeneklerini yönetin.</string>
+    <string name="pref_thermal_dialog_title">Uyarı</string>
+    <string name="pref_thermal_dialog_content_launch">Aygıtsıcaklığıçokyüksek;lütfenkamerayıdahasonrakullanın.</string>
+    <string name="pref_thermal_dialog_content">Aygıtsıcaklığıçokyüksekvekamera30saniyesonraotomatikolarakkapanacak.Lütfendahasonrakullanmayıdeneyin.</string>
+    <string name="pref_thermal_preview_toast">Devam etmek için ekrana dokunun.</string>
+    <!--prize-add-add mode-xiaoping-20180901-start-->
+    <string name="beautiful_title_composite">Tek tıklamayla güzeleşme</string>
+    <string name="beautiful_title_smoothing">dermabrazyon</string>
+    <string name="beautiful_title_slimming">Yüz inceltme</string>
+    <string name="beautiful_title_catchlight">Yüz beyazlatma</string>
+    <string name="beautiful_title_eyes_enlargement">Göz büyütme</string>
+    <string name="shutter_type_photo_beauty">güzeleşme</string>
+    <string name="shutter_type_photo_picturezoom">Ultra net görüntü kalitesi</string>
+    <string name="shutter_type_photo_picturezoom_bl">52MP</string>  
+    <!-- prize modify by wuliang 20190304 start -->
+    <string name="shutter_type_photo_lowlight">Gece modu</string>
+    <!-- prize modify by wuliang 20190304 end -->
+    <string name="cannot_continus_shot_hint">Mevcut durum sürekli çekimi desteklemiyor</string>
+    <string name="pref_camera_cameramute_title">Sessiz çekim</string>
+    <string name="continuous_shot_num_title">Sürekli çekim</string>
+    <string name="continuous_shot_num_entry_5">5 tane</string>
+    <string name="pref_camera_grid_title">Kamera ızgarası</string>
+    <string name="mirror_title">ayna görüntüsü</string>
+    <string name="picselfie_open_tips_on">ön kamera arka plan bulanıklığı açık</string>
+    <string name="picselfie_open_tips_off">ön kamera arka plan bulanıklığı kapalı</string>
+    <string name="pref_camera_professional_title">Profesyonel mod</string>
+    <string name="touch_shutter_title">Ekran dokunma çekim</string>
+    <!-- prize modify by wuliang 20190304 start -->
+    <string name="pref_camera_volumekeys_title">Ses düğmeleri</string>
+    <string name="pref_camera_volumekeys_volume">Ses</string>
+    <string name="pref_camera_volumekeys_shoot">Çek</string>
+    <string name="pref_camera_volumekeys_zoom">Yakınlaştır</string>
+    <!-- prize modify by wuliang 20190304 end -->
+    <string name="watermark_title">Marka filigran</string>
+    <string name="zsd_title">Sıfır gecikme fotoğraf çekimi</string>
+    <string name="flash_failed_when_battery_is_low">Batarya çok zayıf olduğunda flaş etkili olmayabilir</string>
+    <string name="close_camera_when_battery_is_low">Pil çok zayıf, kamera kullanamaz</string>
+    <!-- prize modify by wuliang 20190304 start -->
+    <string name="camera_timeout_warning_message">2 dakika boyunca işlem yapılmazsa kamera kapanır.</string>
+    <!-- prize modify by wuliang 20190304 end -->
+    <string name="camera_setting_reset_title">Sıfırlama</string>
+    <string name="camera_setting_reset_message">Kamera varsayılanlarını geri yüklemek ister misiniz?</string>
+    <string name="shutter_type_photo_picsefile">Portre</string>
+    <string name="secondary_camera_blocked">Çekimi sağlamak için merceğin engelsiz ve parlak olduğundan emin olunuz</string>
+    <string name="pref_camera_location_title">Coğrafi konum</string>
+    <string name="pref_camera_storagepath_title">Depolama yolu</string>
+    <string name="hdr_open_tips_on">HDR açık</string>
+    <string name="hdr_open_tips_off">HDR Kapalı</string>
+    <string name="dialog_ok">"Tamam"</string>
+    <string name="setting_dialog_cancel">İptal</string>
+    <string name="exit_camera_toast">Çıkmak için geri tuşuna tekrar basınız</string>
+    <string name="aperture_level">Diyafram seviyesi</string>
+    <string name="beauty_level">Güzellik seviyesi</string>
+    <string name="switch_cameras_frequently">Ön kameranızı korumak için, lütfen işlemi sık sık değiştirmeyiniz</string>
+    <string name="camera_not_raised">Kamera açılmıyor</string>
+    <string name="camera_slr_mode_tips">Geniş açıklığa sahip fotoğraflar çekmek,sığ alan derinliğine sahip resimler üretebilir.2 metre içindeki insanların fotoğraflarının çekilmesi önerilir.</string>
+    <string name="hdr_guide_capture">HDR çekim sırasında aygıtı hareket ettirmeyin</string>
+    <string name="other_devices_take_up_microphone_reminders">Kayıt uygulaması şu anda arka planda çalışıyor. Kamera kaydını kullanmak istiyorsanız, lütfen önce diğer kayıt uygulamalarını kapatın.</string>
+    <!--prize-add-add mode-xiaoping-20180901-end-->
+</resources>

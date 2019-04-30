@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_camera_volumekeys_entries" translatable="false">
+        <item>@string/pref_camera_volumekeys_volume</item>
+        <item>@string/pref_camera_volumekeys_shoot</item>
+        <item>@string/pref_camera_volumekeys_zoom</item>
+    </string-array>
+
+    <string-array name="pref_camera_volumekeys_entryvalues" translatable="false">
+        <item>@string/volume</item>
+        <item>@string/shoot</item>
+        <item>@string/zoom</item>
+    </string-array>
+</resources>

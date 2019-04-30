@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/gif_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true">
+
+    <com.mediatek.camera.prize.PrizeRelativeLayout
+        android:id="@+id/gif_container"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/console_margin_bottom"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/gif_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:gravity="center"
+            android:paddingTop="@dimen/beauty_title_upMargin"
+            android:layout_centerHorizontal="true"
+            android:text="@string/aperture_level"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/beautiful_text_size" />
+        <!-- 光圈调节进度条 -->
+        <SeekBar
+            android:id="@+id/gif_process_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:thumb="@null"
+            android:minHeight="1dip"
+            android:maxHeight="1dip"
+            android:clickable="false"
+            android:focusable="false"
+            android:thumbOffset="0dp"
+            android:layout_marginLeft="-16dp"
+            android:layout_marginRight="-16dp"
+            android:layout_alignParentTop="true"
+            android:progressDrawable="@drawable/progress_horizontal"/>
+
+        <com.mediatek.camera.common.widget.ScaleAnimationButton
+            android:id="@+id/gif_stop_shutter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/btn_video_mask"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+    </com.mediatek.camera.prize.PrizeRelativeLayout>
+</RelativeLayout>

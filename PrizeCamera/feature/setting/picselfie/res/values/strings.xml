@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="picselfie_open_tips_on">Bokeh effect of front camera has been turned on.</string>
+    <string name="picselfie_open_tips_off">Bokeh effect of front camera has been turned off.</string>
+</resources>

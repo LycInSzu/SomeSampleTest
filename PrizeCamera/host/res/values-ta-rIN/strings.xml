@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--prize-add-add mode-xiaoping-20180901-start-->
+    <string name="beautiful_title_composite">தன்னியக்க மீள்தொடுகை</string>
+    <string name="beautiful_title_smoothing">மிருதுவாக்கல்</string>
+    <string name="beautiful_title_slimming">முகத்தை ஒல்லியாக்குதல்</string>
+    <string name="beautiful_title_catchlight">வெள்ளையடித்தல்</string>
+    <string name="beautiful_title_eyes_enlargement">கண்களை விசாலமாக்குதல்</string>
+    <string name="shutter_type_photo_beauty">மீளத் தொடுக</string>
+    <string name="shutter_type_photo_picturezoom">FHD உருவ தரம்</string>
+    <string name="shutter_type_photo_picturezoom_bl">52MP</string>  
+    <string name="shutter_type_photo_lowlight">இரவுக் காட்சி</string>
+    <string name="cannot_continus_shot_hint">தற்போதைய நிலையில் தொடர் காட்சிக்கு ஆதரவு இல்லை</string>
+    <string name="pref_camera_cameramute_title">கேமரா அமைதி</string>
+    <string name="continuous_shot_num_title">தொடர் காட்சி</string>
+    <string name="continuous_shot_num_entry_5">5 காட்சிகள்</string>
+    <string name="pref_camera_grid_title">கட்டக் கோடு</string>
+    <string name="mirror_title">கண்ணாடி</string>
+    <string name="picselfie_open_tips_on">முன் கேமராவின் பொகேஹ் எஃபெக்ட் ஆன் செய்யப்பட்டது.</string>
+    <string name="picselfie_open_tips_off">முன் கேமராவின் பொகேஹ் எஃபெக்ட் ஆஃப் செய்யப்பட்டது.</string>
+    <string name="pref_camera_professional_title">தொழில்முறை விதம்</string>
+    <string name="touch_shutter_title">நிழற்படம் எடுக்க திரையைத் தொடுக</string>
+    <string name="pref_camera_volumekeys_title">ஒலி அளவின் முக்கிய பண்பு</string>
+    <string name="pref_camera_volumekeys_volume">ஒலி அளவு</string>
+    <string name="pref_camera_volumekeys_shoot">ஷட்டர்</string>
+    <string name="pref_camera_volumekeys_zoom">பெரிதாக்குக</string>
+    <string name="watermark_title">வணிகச்சின்ன நீர்க்குறி</string>
+    <string name="zsd_title">பூச்சி-தாமத நிழற்படம்</string>
+    <string name="flash_failed_when_battery_is_low">பட்டரி குறைவாக இருக்கும் போது ஃபிலாஷ் தோல்வியடைந்தது</string>
+    <string name="close_camera_when_battery_is_low">பட்டரி குறைவாக இருக்கும் போது கேமராவை மூடவும்</string>
+    <string name="camera_timeout_warning_message">2 நிமிடங்கள் செயலற்ற நிலையில் இருந்த பின் கேமரா தானாகவே மூடப்படும்</string>
+    <string name="camera_setting_reset_title">மீளமைக்கவும்</string>
+    <string name="camera_setting_reset_message">நீங்கள் கேமராவின் இயல்புநிலை அமைவுகளை மீளமைக்க விரும்புகிறீர்களா?</string>
+    <string name="shutter_type_photo_picsefile">உருவப்படம்</string>
+    <string name="secondary_camera_blocked">நிழற்பட விளைவுகளை உறுதிப்படுத்த, தயவுசெய்து வில்லைகள் தடுக்கப்படவில்லை என்பதை பிரகாசமான ஒளியில் இருப்பதையும் உறுதிப்படுத்துங்கள்</string>
+    <string name="pref_camera_location_title">பூகோள அமைவிடம்</string>
+    <string name="pref_camera_storagepath_title">களஞ்சியப் பாதை</string>
+    <string name="hdr_open_tips_on">HDR இயக்கத்தில் உள்ளது</string>
+    <string name="hdr_open_tips_off">HDR முடக்கப்பட்டுள்ளது</string>
+    <string name="dialog_ok">"சரி"</string>
+    <string name="setting_dialog_cancel">ரத்துச்செய்யவும்</string>
+    <string name="aperture_level">துவார மட்டம்</string>
+    <string name="beauty_level">அழகு மட்டம்</string>
+    <string name="switch_cameras_frequently">உங்கள் முன்பகுதி கேமராவைப் பாதுகாப்பதற்கு, தயதுசெய்து தொழிற்பாட்டை அடிக்கடி மாற்ற வேண்டாம்</string>
+    <string name="camera_not_raised">கேமராவிலிருந்து வெளியேற முடியவில்லை</string>
+    <string name="exit_camera_toast">வெளியேறுவதற்கு மீண்டும் அழுத்தவும்</string>
+    <!--prize-add-add mode-xiaoping-20180901-end-->
+
+
+</resources> 

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--prize-add-add mode-xiaoping-20180901-start-->
+    <string name="beautiful_title_composite">Автоматско ретуширање</string>
+    <string name="beautiful_title_smoothing">Измазнување</string>
+    <string name="beautiful_title_slimming">Слабеење на лице</string>
+    <string name="beautiful_title_catchlight">Белење</string>
+    <string name="beautiful_title_eyes_enlargement">Зголемување на очите</string>
+    <string name="shutter_type_photo_beauty">Ретуширање</string>
+    <string name="shutter_type_photo_picturezoom">Целосен квалитет на слика со висока дефиниција</string>
+    <string name="shutter_type_photo_picturezoom_bl">52MP</string>  
+    <string name="shutter_type_photo_lowlight">Ноќно сликање</string>
+    <string name="cannot_continus_shot_hint">Континуираната сликање не е поддржана во тековниот статус</string>
+    <string name="pref_camera_cameramute_title">Исклучите камерата</string>
+    <string name="continuous_shot_num_title">Континуираната сликање</string>
+    <string name="continuous_shot_num_entry_5">5 слики</string>
+    <string name="pref_camera_grid_title">Линија решетка</string>
+    <string name="mirror_title">Огледало</string>
+    <string name="picselfie_open_tips_on">Ефектот на Bokeh на предната камера е вклучен.</string>
+    <string name="picselfie_open_tips_off">Ефектот на Bokeh на предната камера е исклучен.</string>
+    <string name="pref_camera_professional_title">Професионален режим</string>
+    <string name="touch_shutter_title">Го допирете екранот за фотографирање</string>
+    <string name="pref_camera_volumekeys_title">Функција за јачина на звук</string>
+    <string name="pref_camera_volumekeys_volume">Јачина на звук</string>
+    <string name="pref_camera_volumekeys_shoot">Бленда</string>
+    <string name="pref_camera_volumekeys_zoom">Зумирање</string>
+    <string name="watermark_title">Бренд воден печат</string>
+    <string name="zsd_title">Фотографирање без одложување</string>
+    <string name="flash_failed_when_battery_is_low">Блицот не успеа кога батеријата е слаба</string>
+    <string name="close_camera_when_battery_is_low">Затворете ја камерата кога батеријата е слаба</string>
+    <string name="camera_timeout_warning_message">Камерата се исклучува автоматски откако е неактивна 2 минути</string>
+    <string name="camera_setting_reset_title">Ресетирај</string>
+    <string name="camera_setting_reset_message">Дали сакате да ги вратите стандардните поставувања на камерата?</string>
+    <string name="shutter_type_photo_picsefile">Портрет</string>
+    <string name="secondary_camera_blocked">За да се обезбеди ефект на фотографија, молам осигурете се дека објективот не е блокиран и има силна светлин</string>
+    <string name="pref_camera_location_title">Географска локација</string>
+    <string name="pref_camera_storagepath_title">Пат за складирање</string>
+    <string name="hdr_open_tips_on">HDR е вклучен</string>
+    <string name="hdr_open_tips_off">HDR е исклучен</string>
+    <string name="dialog_ok">"Добро"</string>
+    <string name="setting_dialog_cancel">Откажите</string>
+    <string name="aperture_level">Ниво на отворот</string>
+    <string name="beauty_level">Ниво на убавина</string>
+    <string name="switch_cameras_frequently">За да ја заштитите предната камера, Ве молиме, не ја менувајте операцијата често</string>
+    <string name="camera_not_raised">Не може да се појави камерата</string>
+    <string name="exit_camera_toast">Притиснете повторно за да излезете</string>
+    <!--prize-add-add mode-xiaoping-20180901-end-->
+
+
+</resources>

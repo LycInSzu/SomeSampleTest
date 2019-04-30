@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--prize-tangan-20180921-add prize camera-begin-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/prize_setting_container"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/prize_navigation_bar_height"
+    android:background="@drawable/camera_setting_bg">
+    <!--<android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="?attr/toolbarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:background="@color/setting_title_background"/>-->
+
+    <RelativeLayout
+        android:id="@+id/prize_setting_actionbar"
+        android:background="@color/prize_setting_bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/prize_setting_actionbar_height"
+        android:layout_marginTop="@dimen/top_bar_margintop">
+
+        <ImageButton
+            android:id="@+id/prize_setting_back"
+            android:layout_centerVertical="true"
+            android:src="@drawable/prize_setting_ic_back"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/prize_setting_reset"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/prize_setting_ic_reset"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/prize_setting_title"
+            android:textSize="@dimen/prize_setting_title_text_size"
+            android:textColor="@color/prize_setting_title_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:background="@color/prize_setting_divider_color"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/prize_divider_height"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/setting_container"
+        android:orientation="vertical"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
+<!--prize-tangan-20180921-add prize camera-end-->

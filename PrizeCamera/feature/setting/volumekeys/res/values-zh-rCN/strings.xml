@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pref_camera_volumekeys_title" >音量键功能</string>
+    <string name="pref_camera_volumekeys_content_description" >音量键功能</string>
+    <string name="pref_camera_volumekeys_volume" >音量</string>
+    <string name="pref_camera_volumekeys_shoot" >快门</string>
+    <string name="pref_camera_volumekeys_zoom" >变焦</string>
+</resources>

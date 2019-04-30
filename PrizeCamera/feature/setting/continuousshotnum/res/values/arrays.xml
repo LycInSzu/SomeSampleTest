@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="continuous_shotnum_entries" translatable="false">
+        <item>@string/continuous_shot_num_entry_1</item>
+        <item>@string/continuous_shot_num_entry_5</item>
+        <item>@string/continuous_shot_num_entry_20</item>
+        <item>@string/continuous_shot_num_entry_40</item>
+        <item>@string/continuous_shot_num_entry_99</item>
+    </string-array>
+
+    <string-array name="continuous_shotnum_entryvalues" translatable="false">
+        <item>1</item>
+        <item>5</item>
+        <item>20</item>
+        <item>40</item>
+        <item>99</item>
+    </string-array>
+</resources>

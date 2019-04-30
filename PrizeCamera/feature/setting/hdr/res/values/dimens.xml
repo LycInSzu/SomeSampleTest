@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="hdr_tips_margin_top">50dp</dimen>
+</resources>

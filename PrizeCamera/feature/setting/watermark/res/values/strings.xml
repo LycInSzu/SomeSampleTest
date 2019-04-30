@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watermark_title">Brand watermark</string>
+    <string name="watermark_content_description">Watermark</string>
+</resources>

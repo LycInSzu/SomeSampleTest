@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="camera_label">"Cameră foto"</string>
+    <string name="video_camera_label">"Cameră video"</string>
+    <string name="accessibility_shutter">"Butonul Declanşaţi"</string>
+    <string name="accessibility_thumbnail">"Cea mai recentă fotografie"</string>
+    <string name="accessibility_mode">Mod cameră</string>
+    <string name="accessibility_setting">Setare</string>
+    <string name="setting_title">"Setări"</string>
+    <string name="mode_fragment_title">Moduri</string>
+    <string name="normal_mode_title">"Normală"</string>
+    <string name="saving_dialog_default_string">Salvare...</string>
+    <string name="shutter_type_photo">"Imagine"</string>
+    <string name="shutter_type_video">"Video"</string>
+    <string name="video_recording_not_available">Opriţi alte aplicaţii de înregistrare înainte de a utiliza camera video.</string>
+    <string name="video_bad_performance_auto_stop">Nivel redus de memorie, se opreste automat inregistrarea.</string>
+    <string name="video_bad_performance_drop_quality">Nivel redus de memorie, se schimă automat calitatea.</string>
+    <string name="video_recording_error">Eroare în timpul înregistrării!</string>
+    <string name="video_reach_size_limit">"Dimensiune limită depăşită."</string>
+    <string name="can_not_use_storage">Cardul SD nu este disponibil</string>
+    <string name="storage_full">Stocarea implicită este plină. Eliberaţi spaţiu sau modificaţi opţiunile de stocare din setări.</string>
+    <string name="pref_thermal_dialog_title">Avertisment</string>
+    <string name="pref_thermal_dialog_content_launch">Temperaturadispozitivuluiesteprearidicată.Utilizațicameramaitârziu.</string>
+    <string name="pref_thermal_dialog_content">Temperaturadispozitivuluiesteprearidicată.Camerasevaînchideautomatîn30desecunde.Încercațisăoutilizațimaitârziu.</string>
+    <string name="pref_thermal_preview_toast">Atingeţi ecranul pentru a continua.</string>
+    <!--prize-add-add mode-xiaoping-20180901-start-->
+    <string name="beautiful_title_composite">Retușare automată</string>
+    <string name="beautiful_title_smoothing">Netezire</string>
+    <string name="beautiful_title_slimming">Subțiere față</string>
+    <string name="beautiful_title_catchlight">Albire</string>
+    <string name="beautiful_title_eyes_enlargement">Mărire ochi</string>
+    <string name="shutter_type_photo_beauty">Retușare</string>
+    <string name="shutter_type_photo_picturezoom">Calitate imagine FHD</string>
+    <string name="shutter_type_photo_picturezoom_bl">52MP</string>  
+    <string name="shutter_type_photo_lowlight">Fotografiere noaptea</string>
+    <string name="cannot_continus_shot_hint">Fotografierea continuă nu este acceptată în starea curentă</string>
+    <string name="pref_camera_cameramute_title">Dezactivare sunet cameră</string>
+    <string name="continuous_shot_num_title">Fotografiere continuă</string>
+    <string name="continuous_shot_num_entry_5">5 fotografii</string>
+    <string name="pref_camera_grid_title">Linie grilă</string>
+    <string name="mirror_title">Oglindă</string>
+    <string name="picselfie_open_tips_on">Efectul Bokeh al camerei frontale a fost pornit.</string>
+    <string name="picselfie_open_tips_off">Efectul Bokeh al camerei frontale a fost oprit.</string>
+    <string name="pref_camera_professional_title">Mod profesional</string>
+    <string name="touch_shutter_title">Atingeți ecranul pentru a realiza fotografia</string>
+    <string name="pref_camera_volumekeys_title">Caracteristică tastă volum</string>
+    <string name="pref_camera_volumekeys_volume">Volum</string>
+    <string name="pref_camera_volumekeys_shoot">Diafragmă</string>
+    <string name="pref_camera_volumekeys_zoom">Mărire</string>
+    <string name="watermark_title">Filigran marcă</string>
+    <string name="zsd_title">Fotografie cu întârziere zero</string>
+    <string name="flash_failed_when_battery_is_low">Blițul nu s-a aprins atunci când bateria este descărcată</string>
+    <string name="close_camera_when_battery_is_low">Închideți camera atunci când bateria este descărcată</string>
+    <string name="camera_timeout_warning_message">Camera se închide automat după ce este inactivă timp de 2 minute</string>
+    <string name="camera_setting_reset_title">Resetare</string>
+    <string name="camera_setting_reset_message">Doriți să restabiliți setările implicite ale camerei?</string>
+    <string name="shutter_type_photo_picsefile">Portret</string>
+    <string name="secondary_camera_blocked">Pentru a asigura efectul fotografic, vă rugăm să vă asigurați că obiectivul nu este blocat și că nu se află într-o lumină strălucitoare</string>
+    <string name="pref_camera_location_title">Locație geografică</string>
+    <string name="pref_camera_storagepath_title">Cale de stocare</string>
+    <string name="hdr_open_tips_on">HDR-ul este pornit</string>
+    <string name="hdr_open_tips_off">HDR-ul este oprit</string>
+    <string name="dialog_ok">„OK”</string>
+    <string name="setting_dialog_cancel">Anulare</string>
+    <string name="aperture_level">Nivel de apertură</string>
+    <string name="beauty_level">Grožio lygis</string>
+    <string name="switch_cameras_frequently">Apsaugodami priekinį fotoaparatą neperjunginėkite operacijų dažnai</string>
+    <string name="camera_not_raised">Nepavyksta atidaryti fotoaparato</string>
+    <string name="exit_camera_toast">Išeidami paspauskite dar kartą</string>
+    <string name="can_not_open_front_camera_on_lowpower">nu se poate deschide camera frontală când bateria are nive scăzut de încărcare</string>
+    
+    
+    <string name="camera_slr_mode_tips">Fotografiile cu nivel maxim de apertură pot avea o profunzime redusă. Se recomandă fotografierea oamenilor pe o rază de maxim 2 metri.</string>
+    <string name="hdr_guide_capture">Nu mișcați dispozitivul în timpul capturii HDR.</string>
+    
+    
+    
+    <!--prize-add-add mode-xiaoping-20180901-end-->
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--prize-add-add mode-xiaoping-20180901-start-->
+    <string name="beautiful_title_composite">स्वत पुन: टच गर्नुहोस्</string>
+    <string name="beautiful_title_smoothing">स्मुथिङ</string>
+    <string name="beautiful_title_slimming">अनुहार स्लिमिङ</string>
+    <string name="beautiful_title_catchlight">सेतोपन</string>
+    <string name="beautiful_title_eyes_enlargement">आँखाहरू ठूलो बनाउनुहोस्</string>
+    <string name="shutter_type_photo_beauty">पुन: टच गर्नुहोस्</string>
+    <string name="shutter_type_photo_picturezoom">FHD छवि गुणस्तर</string>
+    <string name="shutter_type_photo_picturezoom_bl">52MP</string>  
+    <string name="shutter_type_photo_lowlight">रात्री शट</string>
+    <string name="cannot_continus_shot_hint">हालको स्थितिहरूमा निरन्तर शटलाई समर्थित छैन</string>
+    <string name="pref_camera_cameramute_title">क्यामेरा म्यूट गर्नुहोस्</string>
+    <string name="continuous_shot_num_title">निरन्तर शट</string>
+    <string name="continuous_shot_num_entry_5">5 शटहरू</string>
+    <string name="pref_camera_grid_title">ग्रिड लाइन</string>
+    <string name="mirror_title">ऐना</string>
+    <string name="picselfie_open_tips_on">अगाडिको क्यामेराको बोके प्रभाव चालू गरिएको छ।</string>
+    <string name="picselfie_open_tips_off">अगाडिको क्यामेराको बोके प्रभाव बन्द गरिएको छ।</string>
+    <string name="pref_camera_professional_title">व्यावसायिक मोड</string>
+    <string name="touch_shutter_title">फोटो लिनको लागि स्क्रिनलाई टच गर्नुहोस्</string>
+    <string name="pref_camera_volumekeys_title">भोल्यूम कुञ्जी सुविधा</string>
+    <string name="pref_camera_volumekeys_volume">भोल्यूम</string>
+    <string name="pref_camera_volumekeys_shoot">सटर</string>
+    <string name="pref_camera_volumekeys_zoom">जुम इन गर्नुहोस्</string>
+    <string name="watermark_title">ब्राण्ड वाटरमार्क</string>
+    <string name="zsd_title">शुन्य ढिलाई फोटोग्राफी</string>
+    <string name="flash_failed_when_battery_is_low">ब्याट्रि न्यून हुँदा फ्लयाश असफल भयो</string>
+    <string name="close_camera_when_battery_is_low">ब्याट्रि न्यून हुँदा क्यामेरा बन्द गर्नुहोस्</string>
+    <string name="camera_timeout_warning_message"> क्यामेरा 2 मिनेटसम्म निष्कर्य भएपछि स्वचाललित रूोमा बन्द हुन्छ।</string>
+    <string name="camera_setting_reset_title">रिसेट गर्नुहोस्</string>
+    <string name="camera_setting_reset_message"> तपाईंले क्यामेराका पूर्वनिर्धारित सेटिङहरूलाई पूर्वावस्थामा ल्याउन चाहनुहुन्छ?</string>
+    <string name="shutter_type_photo_picsefile">पोट्रेट</string>
+    <string name="secondary_camera_blocked">फोटोग्राफीको प्रभावलाफ सुनिश्चित गर्नको लागि, कृपया सुनुश्चित गर्नुहोस् कि लेन्सलाई ब्लक गरिएको छैन र चम्किलो प्रकाशमा छ।</string>
+    <string name="pref_camera_location_title">भौगोलिक स्थान</string>
+    <string name="pref_camera_storagepath_title">भण्डारण अन छ</string>
+    <string name="hdr_open_tips_on">HDR अन छ</string>
+    <string name="hdr_open_tips_off">HDR अफ छ</string>
+    <string name="dialog_ok">"ठीक छ"</string>
+    <string name="setting_dialog_cancel">रद्द गर्नुहोस्</string>
+    <string name="aperture_level">एपर्चर स्तर</string>
+    <string name="beauty_level">ब्युटि स्तर</string>
+    <string name="switch_cameras_frequently">तपाईंको अगाडिको क्यामेराको रक्षा गर्न, कृपया परिचालनलाई स्विच गरि नरहनुहोस्</string>
+    <string name="camera_not_raised">क्यामेरा पपअप गर्न असमर्थ</string>
+    <string name="exit_camera_toast">बाहिर निस्कन फेरि थिच्नुहोस्</string>
+    <!--prize-add-add mode-xiaoping-20180901-end-->
+
+
+</resources>

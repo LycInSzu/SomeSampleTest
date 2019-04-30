@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from Y:\6739P\alps\vendor\mediatek\proprietary\packages\apps\Camera2\feature\pluginroot\AndroidManifest.xml:1:1-5:12
+	package
+		ADDED from Y:\6739P\alps\vendor\mediatek\proprietary\packages\apps\Camera2\feature\pluginroot\AndroidManifest.xml:2:5-39
+		INJECTED from Y:\6739P\alps\vendor\mediatek\proprietary\packages\apps\Camera2\feature\pluginroot\AndroidManifest.xml
+		INJECTED from Y:\6739P\alps\vendor\mediatek\proprietary\packages\apps\Camera2\feature\pluginroot\AndroidManifest.xml
+	android:versionName
+		ADDED from Y:\6739P\alps\vendor\mediatek\proprietary\packages\apps\Camera2\feature\pluginroot\AndroidManifest.xml:4:5-30
+		INJECTED from Y:\6739P\alps\vendor\mediatek\proprietary\packages\apps\Camera2\feature\pluginroot\AndroidManifest.xml
+		INJECTED from Y:\6739P\alps\vendor\mediatek\proprietary\packages\apps\Camera2\feature\pluginroot\AndroidManifest.xml
+	android:versionCode
+		ADDED from Y:\6739P\alps\vendor\mediatek\proprietary\packages\apps\Camera2\feature\pluginroot\AndroidManifest.xml:3:5-28
+		INJECTED from Y:\6739P\alps\vendor\mediatek\proprietary\packages\apps\Camera2\feature\pluginroot\AndroidManifest.xml
+		INJECTED from Y:\6739P\alps\vendor\mediatek\proprietary\packages\apps\Camera2\feature\pluginroot\AndroidManifest.xml
+	xmlns:android
+		ADDED from Y:\6739P\alps\vendor\mediatek\proprietary\packages\apps\Camera2\feature\pluginroot\AndroidManifest.xml:1:11-69
+uses-sdk
+INJECTED from Y:\6739P\alps\vendor\mediatek\proprietary\packages\apps\Camera2\feature\pluginroot\AndroidManifest.xml reason: use-sdk injection requested
+	android:targetSdkVersion
+		INJECTED from Y:\6739P\alps\vendor\mediatek\proprietary\packages\apps\Camera2\feature\pluginroot\AndroidManifest.xml
+		INJECTED from Y:\6739P\alps\vendor\mediatek\proprietary\packages\apps\Camera2\feature\pluginroot\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from Y:\6739P\alps\vendor\mediatek\proprietary\packages\apps\Camera2\feature\pluginroot\AndroidManifest.xml
+		INJECTED from Y:\6739P\alps\vendor\mediatek\proprietary\packages\apps\Camera2\feature\pluginroot\AndroidManifest.xml

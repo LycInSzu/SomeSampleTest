@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- prize add by wuliang 20190418 allview start -->
+    <string name="storage_path_phone">Teléfono</string>
+    <string name="storage_path_sd">Tarjeta SD</string>
+    <!-- prize add by wuliang 20190418 allview start -->
+    
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="camera_label">"Камера"</string>
+    <string name="video_camera_label">"Видеокамера"</string>
+    <string name="accessibility_shutter">"Кнопка \"Затвор\""</string>
+    <string name="accessibility_thumbnail">"Недавние фото"</string>
+    <string name="accessibility_mode">Режим камеры</string>
+    <string name="accessibility_setting">"Настройки"</string>
+    <string name="setting_title">"Настройки"</string>
+    <string name="mode_fragment_title">Режимы</string>
+    <string name="normal_mode_title">"Нормальное"</string>
+    <string name="saving_dialog_default_string">Сохранение...</string>
+    <string name="shutter_type_photo">"Картинка"</string>
+    <string name="shutter_type_video">"Видео"</string>
+    <string name="video_recording_not_available">Перед использованием видеокамеры остановите другие приложения записи.</string>
+    <string name="video_bad_performance_auto_stop">Недостаточно памяти, автоматически останавливать запись</string>
+    <string name="video_bad_performance_drop_quality">Недостаточно памяти, автоматически снижать качество записи.</string>
+    <string name="video_recording_error">Ошибка в процессе записи!</string>
+    <string name="video_reach_size_limit">"Достигнут предельный размер видео."</string>
+    <string name="can_not_use_storage">SD-карта недоступна</string>
+    <string name="storage_full">Хранилище по умолчанию заполнено, освободите место или управляйте параметрами хранилища в настройках</string>
+    <string name="pref_thermal_dialog_title">Предупреждение</string>
+    <string name="pref_thermal_dialog_content_launch">Температураустройстваслишкомвысокая,отложитеиспользованиекамеры.</string>
+    <string name="pref_thermal_dialog_content">Температураустройстваслишкомвысокая,камераавтоматическизавершитсвоюработучерез30секунд.Отложитеиспользованиекамерынанекотороевремя.</string>
+    <string name="pref_thermal_preview_toast">Для продолжения коснитесь экрана</string>
+    <!--prize-add-add mode-xiaoping-20180901-start-->
+    <string name="beautiful_title_composite">клавишей украшение лица</string>
+    <string name="beautiful_title_smoothing">точение кожи</string>
+    <string name="beautiful_title_slimming">похудение лица</string>
+    <string name="beautiful_title_catchlight">отбеливание</string>
+    <string name="beautiful_title_eyes_enlargement">большие глаза</string>
+    <string name="shutter_type_photo_beauty">украшение лица</string>
+    <string name="shutter_type_photo_picturezoom">сверхясное изображение</string>
+    <string name="shutter_type_photo_picturezoom_bl">52MP</string>  
+    <string name="shutter_type_photo_lowlight">ночная съемка</string>
+    <string name="cannot_continus_shot_hint">В таком состоянии не поддержать непрерывную съемку</string>
+    <string name="pref_camera_cameramute_title">беззвучный режим во время съемки</string>
+    <string name="continuous_shot_num_title">непрерывная съемка</string>
+    <string name="continuous_shot_num_entry_5">5 стр.</string>
+    <string name="pref_camera_grid_title">линия координатной сетки</string>
+    <string name="mirror_title">зеркальное изображение</string>
+    <string name="picselfie_open_tips_on">потемнение фона передней съемки включено</string>
+    <string name="picselfie_open_tips_off">потемнение фона передней съемки выключено</string>
+    <string name="pref_camera_professional_title">профессиональная модель</string>
+    <string name="touch_shutter_title">сенсорный экран и съемка</string>
+    <string name="pref_camera_volumekeys_title">функция клавиши громкости</string>
+    <string name="pref_camera_volumekeys_volume">громкость</string>
+    <string name="pref_camera_volumekeys_shoot">затвор</string>
+    <string name="pref_camera_volumekeys_zoom">увеличение</string>
+    <string name="watermark_title">клеймо марки</string>
+    <string name="zsd_title">Съемка нулевой задержкой</string>
+    <string name="flash_failed_when_battery_is_low">При низком числе электричества вспышка не работает</string>
+    <string name="close_camera_when_battery_is_low">Число электричества низкое, нельзя дальше использовать фотоаппарат</string>
+    <string name="camera_timeout_warning_message">Через 2 мин. на отдых фотоаппарат автоматически выключен</string>
+    <string name="camera_setting_reset_title">Переустановка</string>
+    <string name="camera_setting_reset_message">Восстановите молчаливую установку фотоаппарата?</string>
+    <string name="shutter_type_photo_picsefile">Портрет</string>
+    <string name="secondary_camera_blocked">В целях обеспечения эффекта съемки не накрывайте кадр и в ярком свете</string>
+    <string name="pref_camera_location_title">Географическое положение</string>
+    <string name="pref_camera_storagepath_title">Путь хранения</string>
+    <string name="hdr_open_tips_on">HDR включен</string>
+    <string name="hdr_open_tips_off">HDR выключено</string>
+    <string name="dialog_ok">"ОК"</string>
+    <string name="setting_dialog_cancel">снят</string>
+    <string name="aperture_level">Интенсивность диафрагмы</string>
+    <string name="beauty_level">Интенсивность украшения</string>
+    <string name="switch_cameras_frequently">В целях защиты вашей передней фотокамеры часто переключать операцию запретится</string>
+    <string name="camera_not_raised">Фотокамера не выталкивает</string>
+    <string name="exit_camera_toast">Еще раз нажните для выхода</string>
+    
+    <string name="camera_slr_mode_tips">Фотографирование с широкими отверстиями могут производить снимки с малой глубиной резкости. Рекомендуется, чтобы фотографии людей в пределах 2-х метров будут приняты.</string>
+    <string name="hdr_guide_capture">Не перемещайте устройство во время захвата HDR.</string>
+    
+    <!--prize-add-add mode-xiaoping-20180901-end-->
+</resources>

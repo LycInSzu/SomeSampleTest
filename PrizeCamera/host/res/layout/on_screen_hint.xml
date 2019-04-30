@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mediatek.camera.common.widget.RotateLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false">
+
+    <RelativeLayout
+        android:id="@+id/hint_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:paddingTop="@dimen/hint_root_padding_top"
+        android:clickable="false">
+
+        <TextView
+            android:id="@+id/top_always_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:background="@drawable/hint_text_background"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/top_always_hint_topmargin"
+            android:layout_marginBottom="@dimen/top_always_hint_marginbottoom"
+            android:visibility="gone"
+             />
+        <TextView
+            android:id="@+id/auto_hide_hint"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:background="@drawable/hint_text_background"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_below="@id/top_always_hint"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/bottom_always_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textColor="@android:color/white"
+            android:background="@drawable/hint_text_background"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_below="@id/auto_hide_hint"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+        <!--prize-modify fixbug[72772]-huangpengfei-20190315-start-->
+        <!-- prize-add-screen flash-huangzhanbin-20190226-start-->
+        <!--<ImageView
+            android:id="@+id/bottom_always_icon_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="45dp"
+            android:background="@drawable/hint_text_background"
+            android:gravity="center"
+            android:scaleType="fitCenter"
+            android:layout_below="@id/bottom_always_hint"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>-->
+        <!-- prize-add-screen flash-huangzhanbin-20190226-end-->
+        <!--prize-modify fixbug[72772]-huangpengfei-20190315-end-->
+
+    </RelativeLayout>
+
+</com.mediatek.camera.common.widget.RotateLayout>

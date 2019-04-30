@@ -15,5 +15,5 @@ public class Utils {
 
 
 
-    public static int jumpToNewActivity=ViewModelTestActivity;
+    public static int jumpToNewActivity=SurfaceViewTestActivity;
 }

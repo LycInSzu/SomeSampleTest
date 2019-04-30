@@ -3,11 +3,11 @@
           package="com.lyc.newtestapplication.newtestapplication">
 
     <uses-permission android:name="android.permission.VIBRATE"/>
+
     <uses-permission android:name="android.permission.CAMERA"/>
-
     <uses-feature android:name="android.hardware.Camera"/>
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
@@ -22,6 +22,11 @@
                 android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|mcc|mnc"
                 android:label="@string/app_name"
                 android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
         <activity android:name=".AboutSurfaceView.SurfaceViewTestActivity"/>
         <activity
@@ -39,11 +44,7 @@
                 android:icon="@mipmap/ic_launcher_lifebalance"
                 android:label="@string/title_activity_life_balance_launch"
                 android:theme="@style/FullscreenTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name=".ViewModelTest.ViewModelTestActivity">
         </activity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.mediatek.camera.common.preference.SwitchPreference
+        android:key="key_watermark"
+        android:title="@string/watermark_title"
+        android:icon="@drawable/ic_prize_setting_item_watermark"
+        android:persistent="false"
+        android:order="45"/>
+</PreferenceScreen>

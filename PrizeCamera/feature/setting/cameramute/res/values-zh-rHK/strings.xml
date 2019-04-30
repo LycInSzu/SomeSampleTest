@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pref_camera_cameramute_title">拍照靜音</string>
+    <string name="cameramute_content_description" >拍照靜音</string>
+</resources>

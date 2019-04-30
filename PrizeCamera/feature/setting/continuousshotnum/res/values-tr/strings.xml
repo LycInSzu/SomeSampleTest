@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pref_camera_continuous_number_one">1 çekim</string>
+    <string name="pref_camera_continuous_number_small">5\'li çekim</string>
+    <string name="pref_camera_continuous_number_middle">20\'li çekim</string>
+    <string name="pref_camera_continuous_number_normal">40\'lı çekim</string>
+    <string name="pref_camera_continuous_number_large">99\'lı çekim</string>
+</resources>

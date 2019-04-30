@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="camera_label">"Aparat"</string>
+    <string name="video_camera_label">"Kamera"</string>
+    <string name="accessibility_shutter">"Przycisk migawki"</string>
+    <string name="accessibility_thumbnail">"Najnowsze zdjęcie"</string>
+    <string name="accessibility_mode">Tryb kamery</string>
+    <string name="accessibility_setting">Ustawienie</string>
+    <string name="setting_title">"Ustawienia"</string>
+    <string name="mode_fragment_title">Tryby</string>
+    <string name="normal_mode_title">"Normalny"</string>
+    <string name="saving_dialog_default_string">trwa zapisywanie...</string>
+    <string name="shutter_type_photo">"Obraz"</string>
+    <string name="shutter_type_video">"Film"</string>
+    <string name="video_recording_not_available">Przed rozpoczęciem korzystania z kamery wideo wyłącz inne aplikacje do nagrywania.</string>
+    <string name="video_bad_performance_auto_stop">Mało pamięci; nagrywanie zostało automatycznie zatrzymane.</string>
+    <string name="video_bad_performance_drop_quality">Mało pamięci; jakość została automatycznie zmieniona.</string>
+    <string name="video_recording_error">Błąd podczas nagrywania!</string>
+    <string name="video_reach_size_limit">"Osiągnięto limit rozmiaru."</string>
+    <string name="can_not_use_storage">Karta SD jest niedostępna</string>
+    <string name="storage_full">Domyślna pamięć jest pełna. Zwolnij trochę miejsca lub zmodyfikuj opcje pamięci w ustawieniach</string>
+    <string name="pref_thermal_dialog_title">Ostrzeżenie</string>
+    <string name="pref_thermal_dialog_content_launch">Zbytwysokatemperaturaurządzenia,poczekajzużyciemaparatu.</string>
+    <string name="pref_thermal_dialog_content">Zbytwysokatemperaturaurządzenia,aparatzostaniezamkniętyautomatycznieza30s.Spróbujużyćgopóźniej.</string>
+    <string name="pref_thermal_preview_toast">Dotknij ekranu, by kontynuować</string>
+    <!--prize-add-add mode-xiaoping-20180901-start-->
+    <string name="beautiful_title_composite">Retusz automatyczny</string>
+    <string name="beautiful_title_smoothing">Wygładzanie</string>
+    <string name="beautiful_title_slimming">Wyszczuplenie twarzy</string>
+    <string name="beautiful_title_catchlight">Bielenie</string>
+    <string name="beautiful_title_eyes_enlargement">Powiększanie oczu</string>
+    <string name="shutter_type_photo_beauty">Retusz</string>
+    <string name="shutter_type_photo_picturezoom">Jakość zdjęć FHD</string>
+    <string name="shutter_type_photo_picturezoom_bl">52MP</string>  
+    <string name="shutter_type_photo_lowlight">Nocne zdjęcie</string>
+    <string name="cannot_continus_shot_hint">Ciągłe ujęcie nie jest obsługiwane w aktualnym stanie</string>
+    <string name="pref_camera_cameramute_title">Wyciszenie kamery</string>
+    <string name="continuous_shot_num_title">Ujęcie ciągłe</string>
+    <string name="continuous_shot_num_entry_5">5 zdjęć</string>
+    <string name="pref_camera_grid_title">Linia siatki</string>
+    <string name="mirror_title">Lusterko</string>
+    <string name="picselfie_open_tips_on">Efekt bokeh przedniej kamery został włączony.</string>
+    <string name="picselfie_open_tips_off">Efekt bokeh przedniej kamery został wyłączony.</string>
+    <string name="pref_camera_professional_title">Tryb profesjonalny</string>
+    <string name="touch_shutter_title">Dotknij ekran, aby zrobić zdjęcie</string>
+    <string name="pref_camera_volumekeys_title">Funkcja przycisku głośności</string>
+    <string name="pref_camera_volumekeys_volume">Głośność</string>
+    <string name="pref_camera_volumekeys_shoot">Migawka</string>
+    <string name="pref_camera_volumekeys_zoom">Zbliżenie</string>
+    <string name="watermark_title">Znak wodny marki</string>
+    <string name="zsd_title">Fotografia bez opóźnienia</string>
+    <string name="flash_failed_when_battery_is_low">Lampa błyskowa nie zadziałała z powodu niskiego poziomu baterii</string>
+    <string name="close_camera_when_battery_is_low">Zamknięcie aparatu, gdy poziom baterii jest niski</string>
+    <string name="camera_timeout_warning_message">Aparat wyłącza się automatycznie po 2 minutach bezczynności</string>
+    <string name="camera_setting_reset_title">Reset</string>
+    <string name="camera_setting_reset_message">Czy chcesz przywrócić domyślne ustawienia aparatu?</string>
+    <string name="shutter_type_photo_picsefile">Portret</string>
+    <string name="secondary_camera_blocked">Aby zdjęcie zostało zrobione, należy upewnić się, że obiektyw nie jest zasłonięty i nie znajduje się w jasnym świetle.</string>
+    <string name="pref_camera_location_title">Lokalizacja geograficzna</string>
+    <string name="pref_camera_storagepath_title">Ścieżka zapisu</string>
+    <string name="hdr_open_tips_on">HDR włączone</string>
+    <string name="hdr_open_tips_off">HDR wyłączone</string>
+    <string name="dialog_ok">"OK"</string>
+    <string name="setting_dialog_cancel">Anuluj</string>
+    <string name="aperture_level">Poziom przysłony</string>
+    <string name="beauty_level">Poziom piękna</string>
+    <string name="switch_cameras_frequently">Aby chronić przedni aparat, nie należy często przełączać tej funkcji</string>
+    <string name="camera_not_raised">Aparat nie wyskakuje</string>
+    <string name="exit_camera_toast">Naciśnij ponownie, aby zakończyć</string>
+    <string name="can_not_open_front_camera_on_lowpower">nie można otworzyć przedniej kamery, gdy poziom naładowania baterii jest niski</string>
+    
+    <string name="camera_slr_mode_tips">Wykonywanie zdjęć z szerokimi otworami pozwala na tworzenie zdjęć z płytką głębią ostrości. Zaleca się zrobienie zdjęć ludzi w promieniu 2 metrów.</string>
+    <string name="hdr_guide_capture">Nie przenoś urządzenia podczas przechwytywania HDR.</string>
+    
+    <!--prize-add-add mode-xiaoping-20180901-end-->
+</resources>

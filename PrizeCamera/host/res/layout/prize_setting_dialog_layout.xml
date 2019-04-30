@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/single_content_height"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/prize_selector_popup_window_uppder_btn_bg"
+        android:gravity="center"
+        android:textColor="@color/dialog_title_text_color"
+        android:textSize="@dimen/single_content_textsize" />
+
+    <View
+        android:id="@+id/dialog_title_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider_color" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_dialog_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent" />
+
+    <RelativeLayout
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="@dimen/dialog_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/cancel"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/single_content_height"
+            android:layout_centerInParent="true"
+            android:background="@drawable/prize_selector_popup_window_single_btn_bg"
+            android:text="@string/setting_dialog_cancel"
+            android:textColor="@color/dialog_blue"
+            android:textSize="@dimen/single_content_textsize"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</LinearLayout>

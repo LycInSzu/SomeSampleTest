@@ -395,6 +395,9 @@ public class FullscreenActivity extends BaseActivity {
             case Utils.ViewModelTestActivity:
                 startDetermindActivity(ViewModelTestActivity.class,null);
                 break;
+            case Utils.Camera2TestActivity:
+                startDetermindActivity(MyCameraActivity.class,null);
+                break;
             default:
                 break;
         }

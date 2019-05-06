@@ -3,11 +3,11 @@
           package="com.lyc.newtestapplication.newtestapplication">
 
     <uses-permission android:name="android.permission.VIBRATE"/>
-
     <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-feature android:name="android.hardware.Camera"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
+    <uses-feature android:name="android.hardware.Camera"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
@@ -44,7 +44,6 @@
                 android:icon="@mipmap/ic_launcher_lifebalance"
                 android:label="@string/title_activity_life_balance_launch"
                 android:theme="@style/FullscreenTheme">
-
         </activity>
         <activity android:name=".ViewModelTest.ViewModelTestActivity">
         </activity>
@@ -69,7 +68,8 @@
         <!-- </intent-filter> -->
         <!-- </receiver> -->
 
-
+        <activity android:name=".Camera2Test.MyCameraActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -39,6 +39,7 @@ package com.mediatek.camera.feature.setting.videoquality;
 import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.preference.PreferenceFragment;
+import android.util.Size;
 
 import com.mediatek.camera.R;
 import com.mediatek.camera.common.debug.LogHelper;
@@ -46,6 +47,7 @@ import com.mediatek.camera.common.debug.LogUtil;
 import com.mediatek.camera.common.preference.Preference;
 import com.mediatek.camera.common.setting.ICameraSettingView;
 import com.mediatek.camera.common.widget.PrizeSettingDialog;//prize-add-huangpengfei-2018-11-6
+import com.mediatek.camera.ui.prize.PrizeCameraSettingView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +55,7 @@ import java.util.List;
 /**
  * Video quality setting view.
  */
-public class VideoQualitySettingView implements ICameraSettingView,
+public class VideoQualitySettingView extends PrizeCameraSettingView implements ICameraSettingView,
                        VideoQualitySelector.OnItemClickListener {
     private static final LogUtil.Tag TAG =
             new LogUtil.Tag(VideoQualitySettingView.class.getSimpleName());
@@ -170,6 +172,7 @@ public class VideoQualitySettingView implements ICameraSettingView,
         mCameraID = Integer.parseInt(mVideoQuality.getCameraId());
         List<String> tempValues = new ArrayList<>(mEntryValues);
         mFilteredEntryValues.clear();
+        mIcons = new int[mEntryValues.size()];
         String[] strings = new String[mEntryValues.size()];
         for (int i = 0; i < tempValues.size(); i++) {
             String value = tempValues.get(i);
@@ -178,6 +181,23 @@ public class VideoQualitySettingView implements ICameraSettingView,
             if (title != null) {
                 strings[i] = title + "  " + resolution;
                 mFilteredEntryValues.add(value);
+            }
+
+            Size size = valueToSize(resolution);
+            if(Math.abs(size.getHeight() - 1440) < 30){
+                mIcons[i] = R.drawable.prize_selector_video_1440p;
+            }else if(Math.abs(size.getHeight() - 1080) < 30){
+                mIcons[i] = R.drawable.prize_selector_video_1080p;
+            }else if(Math.abs(size.getHeight() - 720) < 30){
+                mIcons[i] = R.drawable.prize_selector_video_720p;
+            }else if(Math.abs(size.getHeight() - 480) < 30){
+                mIcons[i] = R.drawable.prize_selector_video_480p;
+            }else if(Math.abs(size.getHeight() - 288) < 30){
+                mIcons[i] = R.drawable.prize_selector_video_cif;
+            }else if(Math.abs(size.getHeight() - 144) < 30){
+                mIcons[i] = R.drawable.prize_selector_video_qcif;
+            }else{
+                mIcons[i] = R.drawable.prize_selector_video_cif;
             }
         }
         return strings;
@@ -229,6 +249,8 @@ public class VideoQualitySettingView implements ICameraSettingView,
      */
     public void setEntryValues(List<String> entryValues) {
         mEntryValues = entryValues;
+
+        mSettingEntrys = null; // zhangguo add 20190508, for camera new setting style
     }
 
     /**
@@ -241,5 +263,74 @@ public class VideoQualitySettingView implements ICameraSettingView,
         mSummary = VideoQualityHelper.getCurrentResolution(
                 Integer.parseInt(mVideoQuality.getCameraId()), value);
         mListener.onValueChanged(value);
+    }
+
+
+
+    private List<String> mSettingEntryValues;
+    private List<String> mSettingEntrys;
+    private int[] mIcons;
+
+    private static Size valueToSize(String value) {
+        int index = value.indexOf('x');
+        int width = Integer.parseInt(value.substring(0, index));
+        int height = Integer.parseInt(value.substring(index + 1));
+        Size size = new Size(width, height);
+        return size;
+    }
+
+    public int[] getIcons() {
+        initData();
+        return mIcons;
+    }
+
+    private void initData(){
+        if(null == mSettingEntrys){
+            mSettingEntrys = new ArrayList<>();
+            String[] entrys = filterValuesOnShown();
+            for(String s : entrys){
+                mSettingEntrys.add(s);
+            }
+        }
+    }
+
+    @Override
+    public List<String> getEntryValues() {
+        initData();
+        return mFilteredEntryValues;
+    }
+
+    public void setContext(Activity activity){
+        mActivity = activity;
+    }
+
+    @Override
+    public List<String> getEntrys() {
+        initData();
+        return mSettingEntrys;
+    }
+
+    public String getValue() {
+        return mSelectedValue;
+    }
+
+    public int getTitle() {
+        return R.string.video_quality_title;
+    }
+
+    public void onValueChanged(String newValue){
+        mSelectedValue = newValue;
+        if (mListener != null) {
+            mListener.onValueChanged(newValue);
+        }
+    }
+
+    @Override
+    public int getSettingType() {
+        return SETTING_TYPE_LIST;
+    }
+
+    public int getOrder(){
+        return 36;
     }
 }

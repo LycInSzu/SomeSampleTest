@@ -47,6 +47,7 @@ import com.mediatek.camera.common.debug.LogHelper;
 import com.mediatek.camera.common.debug.LogUtil;
 import com.mediatek.camera.common.preference.Preference;
 import com.mediatek.camera.common.setting.ICameraSettingView;
+import com.mediatek.camera.ui.prize.PrizeCameraSettingView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,7 +56,7 @@ import java.util.List;
  * Scene mode setting view.
  */
 
-public class SceneModeSettingView implements ICameraSettingView,
+public class SceneModeSettingView extends PrizeCameraSettingView implements ICameraSettingView,
         SceneModeSelector.OnItemClickListener {
     private static final LogUtil.Tag TAG
             = new LogUtil.Tag(SceneModeSettingView.class.getSimpleName());
@@ -246,5 +247,9 @@ public class SceneModeSettingView implements ICameraSettingView,
         if (index >= 0 && index < mEntries.size()) {
             mSummary = mEntries.get(index);
         }
+    }
+
+    public int getOrder(){
+        return 10;
     }
 }

@@ -65,6 +65,7 @@ VideoQualitySettingView.OnValueChangeListener {
         super.init(app, cameraContext, settingController);
         mSettingView = new VideoQualitySettingView(getKey(), this);
         mSettingView.setOnValueChangeListener(this);
+        mSettingView.setContext(app.getActivity());
     }
 
     @Override

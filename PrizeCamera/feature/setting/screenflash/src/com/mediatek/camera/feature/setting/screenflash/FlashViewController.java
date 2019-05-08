@@ -42,6 +42,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -520,8 +521,9 @@ public class FlashViewController {
     class FlashOnTouchListener implements IApp.OnTouchListener{
 
         @Override
-        public void onTouch() {
+        public boolean onTouch(MotionEvent event) {
             hideFlashMenuContainer();
+            return false;
         }
     }
 }

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.ContentValues;
 import android.graphics.Bitmap;
 import android.graphics.ImageFormat;
+import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.HandlerThread;
@@ -21,6 +22,7 @@ import com.mediatek.camera.common.debug.LogUtil;
 import com.mediatek.camera.common.device.CameraDeviceManagerFactory;
 import com.mediatek.camera.common.sound.ISoundPlayback;
 import com.mediatek.camera.feature.mode.panorama.PanoramaRestriction;
+import com.mediatek.camera.portability.SystemProperties;
 import com.prize.camera.feature.mode.pano.IPanoDeviceController.JpegCallback;
 import com.prize.camera.feature.mode.pano.IPanoDeviceController.DeviceCallback;
 import com.prize.camera.feature.mode.pano.IPanoDeviceController.PreviewSizeCallback;
@@ -36,7 +38,10 @@ import com.mediatek.camera.common.utils.CameraUtil;
 import com.mediatek.camera.common.utils.Size;
 
 import javax.annotation.Nonnull;
+import com.mediatek.camera.portability.SystemProperties;
 
+import java.io.ByteArrayOutputStream;
+import com.mediatek.camera.R;
 /**
  * Created by yangming.jiang on 2018/10/17.
  */
@@ -285,6 +290,9 @@ public class PanoMode extends CameraModeBase implements JpegCallback,DeviceCallb
 
     @Override
     protected void takePictrue(){
+        /*prize-modify-bugid:74669 Panorama mode just took pictures without sound-xiaoping-20190429-start*/
+        mICameraContext.getSoundPlayback().play(ISoundPlayback.SHUTTER_CLICK);
+        /*prize-modify-bugid:74669 Panorama mode just took pictures without sound-xiaoping-20190429-end*/
         startCaptureAnimation();
         //mPhotoStatusResponder.statusChanged(KEY_PHOTO_CAPTURE, PHOTO_CAPTURE_START);
         updateModeDeviceState(MODE_DEVICE_STATE_CAPTURING);
@@ -380,12 +388,25 @@ public class PanoMode extends CameraModeBase implements JpegCallback,DeviceCallb
     }
 
     @Override
+    public void onPlaySound() {
+        if (mIsResumed && mModeHelper != null && mSaveResultPic) {
+            mICameraContext.getSoundPlayback().play(ISoundPlayback.SHUTTER_CLICK);
+
+            mIApp.getAppUi().showSavingDialog(mActivity.getString(R.string.saving_dialog_default_string), false);
+        }
+    }
+
+    @Override
     public void onCaptureDataReciver(Bitmap result) {
         if (mIsResumed && result != null && mModeHelper != null && mSaveResultPic){
             mSaveResultPic = false;
-            mICameraContext.getSoundPlayback().play(ISoundPlayback.SHUTTER_CLICK);
-            mModeHelper.savePanoData(result);
-            updateThumbnail();
+            //mICameraContext.getSoundPlayback().play(ISoundPlayback.SHUTTER_CLICK);
+            //mModeHelper.savePanoData(result);
+
+            mIApp.getAppUi().hideSavingDialog();
+
+            saveData(result);
+            updateThumbnail(result);
 
             mIApp.getActivity().runOnUiThread(new Runnable() {
                 @Override
@@ -403,6 +424,51 @@ public class PanoMode extends CameraModeBase implements JpegCallback,DeviceCallb
                     updateModeDeviceState(MODE_DEVICE_STATE_PREVIEWING);
                 }
             });
+        }
+    }
+
+    private void saveData(Bitmap bitmap) {
+        if (bitmap != null) {
+            //check memory to decide whether it can take next picture.
+            //if not, show saving
+
+            byte[] data = null;
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            try{
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 95, baos);
+                data = baos.toByteArray();
+                baos.close();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+
+            if(null == data){
+                return;
+            }
+
+            ISettingManager.SettingController controller = mISettingManager.getSettingController();
+            long saveDataSize = data.length;
+            /*prize-modify-increase external storage-xiaoping-20190111-start*/
+            String fileDirectory = mICameraContext.getStorageService().getFileDirectory();
+            /*prize-modify-bugid:72856-Change camera default storage to sd card-xiaoping-20190322-start*/
+            String defaultvalue = "phone";
+            if (SystemProperties.getInt("ro.pri.current.project",0) == 3 || "sd".equals(android.os.SystemProperties.get("ro.pri.storagepath.default.value", "phone"))) {
+                defaultvalue = "sd";
+            }
+            if (mIApp.isExtranelStorageMount() /*&& mIApp.isHasPermissionForSD() modify for bug 71247*/
+                    && "sd".equals(mIApp.getSettingValue("key_storagepath",defaultvalue,mIApp.getAppUi().getCameraId()))) {
+                /*prize-modify-bugid:72856-Change camera default storage to sd card-xiaoping-20190322-end*/
+                fileDirectory = mIApp.getCameraDirectorySD();
+            } else {
+                fileDirectory = mICameraContext.getStorageService().getFileDirectory();
+            }
+            /*prize-modify-increase external storage-xiaoping-20190111-end*/
+            //Size exifSize = CameraUtil.getSizeFromExif(data);
+            ContentValues contentValues = mModeHelper.createContentValues(data,
+                    fileDirectory, bitmap.getWidth(), bitmap.getHeight());
+            mICameraContext.getMediaSaver().addSaveRequest(data, contentValues, null,
+                    mMediaSaverListener);
+            //reset the switch camera to null
         }
     }
 
@@ -634,15 +700,15 @@ public class PanoMode extends CameraModeBase implements JpegCallback,DeviceCallb
         LogHelper.i(TAG, "[destroyAnimationHandler]-");
     }
 
-    private void updateThumbnail(){
-        if(!mIsResumed){
+    private void updateThumbnail(Bitmap bitmap){
+        if(!mIsResumed || null == bitmap){
             return;
         }
 
-        Bitmap lastFrame = getPreviewBitmap(mPreviewWidth,mPreviewHeight);
-        if(null != lastFrame){
-            Bitmap thumbmailBitmap =  Bitmap.createScaledBitmap(lastFrame, com.mediatek.camera.common.mode.photo.ThumbnailHelper.getThumbnailHeight(), com.mediatek.camera.common.mode.photo.ThumbnailHelper.getThumbnailWidth(), true);
-            mIApp.getAppUi().updateThumbnail(thumbmailBitmap);
+        Bitmap thumbnail = zoomBitmap(bitmap, com.mediatek.camera.common.mode.photo.ThumbnailHelper.getThumbnailWidth(), com.mediatek.camera.common.mode.photo.ThumbnailHelper.getThumbnailHeight());
+        if(null != thumbnail){
+            mIApp.getAppUi().setMirrorEnable(false);
+            mIApp.getAppUi().updateThumbnail(thumbnail);
         }
     }
 
@@ -703,5 +769,37 @@ public class PanoMode extends CameraModeBase implements JpegCallback,DeviceCallb
         }
         updateModeDeviceState(MODE_DEVICE_STATE_PREVIEWING);
         unlock3A();
+    }
+
+    private static Bitmap zoomBitmap(Bitmap bitmap, int w, int h) {
+        int width = bitmap.getWidth();
+        int height = bitmap.getHeight();
+        float scaleWidht, scaleHeight, x, y;
+        Bitmap newbmp;
+        Matrix matrix = new Matrix();
+        if (width > height) {
+            scaleWidht = ((float) h / height);
+            scaleHeight = ((float) h / height);
+            x = (width - w * height / h) / 2;
+            y = 0;
+        } else if (width < height) {
+            scaleWidht = ((float) w / width);
+            scaleHeight = ((float) w / width);
+            x = 0;
+            y = (height - h * width / w) / 2;
+        } else {
+            scaleWidht = ((float) w / width);
+            scaleHeight = ((float) w / width);
+            x = 0;
+            y = 0;
+        }
+        matrix.postScale(scaleWidht, scaleHeight);
+        try {
+            newbmp = Bitmap.createBitmap(bitmap, (int) x, (int) y, (int) (width - x), (int) (height - y), matrix, true);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+        return newbmp;
     }
 }

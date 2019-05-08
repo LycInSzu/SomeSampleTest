@@ -128,6 +128,7 @@ import com.mediatek.camera.ui.modepicker.ModePickerManager;
 import com.mediatek.camera.ui.modepicker.ModeProvider;
 import com.mediatek.camera.ui.photo.IntentPhotoUi;
 import com.mediatek.camera.ui.preview.PreviewManager;
+import com.mediatek.camera.ui.prize.SettingViewManager;
 import com.mediatek.camera.ui.shutter.ShutterButtonManager;
 import com.mediatek.camera.ui.video.VideoUI;
 
@@ -354,6 +355,11 @@ public class CameraAppUI implements IAppUi,IArcProgressBarUI,PrizeSeekBar.OnProg
     private Size mFocusPoint; // prize add by zhangguo 20190419, for bug#74593, dualcam focus point error
     private int mFilterIndex; // prize add by zhangguo 20190419, for bug#74679, filter is none after switch camera
 
+
+    private SettingViewManager mSettingManager;
+    private boolean mSettingsNewStyle = false;
+
+
     public CameraAppUI(IApp app) {
         mApp = app;
         mOrientationChangeListener = new OnOrientationChangeListenerImpl();
@@ -367,6 +373,9 @@ public class CameraAppUI implements IAppUi,IArcProgressBarUI,PrizeSeekBar.OnProg
         /*prize-modify-bugid:67064 adjust the position of the focus area-xiaoping-20181102-start*/
         getScreenPix();
         /*prize-modify-bugid:67064 adjust the position of the focus area-xiaoping-20181102-end*/
+
+        mSettingsNewStyle = FeatureSwitcher.isNewSettingStyleSupport();
+
         ViewGroup rootView = (ViewGroup) mApp.getActivity()
                 .findViewById(R.id.app_ui_root);
 
@@ -433,9 +442,19 @@ public class CameraAppUI implements IAppUi,IArcProgressBarUI,PrizeSeekBar.OnProg
         mIndicatorViewManager.setVisibility(View.VISIBLE);
         mViewManagers.add(mIndicatorViewManager);
 
-        mSettingFragment = new SettingFragment();
+        if(!mSettingsNewStyle){
+            mSettingFragment = new SettingFragment();
 
-        mSettingFragment.setStateListener(new SettingStateListener());
+            mSettingFragment.setStateListener(new SettingStateListener());
+
+            mSettingFragment.setOnBackPressListener(new SettingFragment.OnBackPressListener() {
+                @Override
+                public void onBackPress() {
+                    hideSetting();
+                }
+            });
+        }
+
         /*prize-add-hpf-2018-09-04-start*/
         mPrizePluginModeManager = new PrizePluginModeManager(mApp,mScreenPixWidth);
         mSettingButton = mApp.getActivity().findViewById(R.id.camera_settings);
@@ -445,12 +464,7 @@ public class CameraAppUI implements IAppUi,IArcProgressBarUI,PrizeSeekBar.OnProg
                 showSetting();
             }
         });
-        mSettingFragment.setOnBackPressListener(new SettingFragment.OnBackPressListener() {
-            @Override
-            public void onBackPress() {
-                hideSetting();
-            }
-        });
+
         mGridManager = new GridManager(mApp, parentView,this);
 		/*prize-add AI CAMERA-huangpengfei-2019-01-29-start*/
         mPrizeModeAnimation = new PrizeModeAnimation(mApp);
@@ -488,6 +502,12 @@ public class CameraAppUI implements IAppUi,IArcProgressBarUI,PrizeSeekBar.OnProg
         mPrizeReadNodeValue = new PrizeReadNodeValue();
         mImplLifaCamera = new ImplLifaCamera();
         /*prize-modify-add front lift camera interaction-xiaoping-20190304-end*/
+
+        // zhangguo add 20190506, for new setting style start
+        if(mSettingsNewStyle){
+            mSettingManager = new SettingViewManager(mApp);
+        }
+        // zhangguo add 20190506, for new setting style end
     }
 
     /**
@@ -932,6 +952,11 @@ public class CameraAppUI implements IAppUi,IArcProgressBarUI,PrizeSeekBar.OnProg
         if (mCurrentCameraId.equals(cameraId)) {
             return;
         }
+// zhangguo add 20190506, for new setting style start
+        if(mSettingsNewStyle){
+            hideSetting();
+        }
+// zhangguo add 20190506, for new setting style end
         /*prize-add mirror fixbug[72686]-huangpengfei-2019-03-02-start*/
         if ("0".equals(cameraId) && mThumbnailViewManager != null){
             mThumbnailViewManager.setMirrorEnable(false);
@@ -968,6 +993,18 @@ public class CameraAppUI implements IAppUi,IArcProgressBarUI,PrizeSeekBar.OnProg
             public void run() {
                 /*prize-remove for model merging-huangpengfei-2019-02-23-start*/
                 //mShutterManager.onCameraSelected(Integer.valueOf(cameraId));
+                
+                /*prize-modify-bugid:75473 Limit preview size in portrait mode-xiaoping-2019056-start*/
+                if ( FeatureSwitcher.isSupportDualCam()) {
+                    if ("0".equals(cameraId) && "Picselfie".equals(mCurrentModeType)) {
+                        mCurrentModeType = "Picture";
+                    }
+                } else {
+                    if ("off".equals(mApp.getSettingValue("picsefile_switch","off",Integer.valueOf(cameraId))) && "Picselfie".equals(mCurrentModeType)) {
+                        mCurrentModeType = "Picture";
+                    }
+                }
+                /*prize-modify-bugid:75473 Limit preview size in portrait mode-xiaoping-2019056-end*/
                 selectMode(mCurrentModeType);
                 /*prize-remove for model merging-huangpengfei-2019-02-23-end*/
 
@@ -1403,12 +1440,20 @@ public class CameraAppUI implements IAppUi,IArcProgressBarUI,PrizeSeekBar.OnProg
 
     @Override
     public void addSettingView(ICameraSettingView view) {
-        mSettingFragment.addSettingView(view);
+        if(mSettingsNewStyle){
+            mSettingManager.addSettingView(view);
+        }else{
+            mSettingFragment.addSettingView(view);
+        }
     }
 
     @Override
     public void removeSettingView(ICameraSettingView view) {
-        mSettingFragment.removeSettingView(view);
+        if(mSettingsNewStyle){
+            mSettingManager.removeSettingView(view);
+        }else{
+            mSettingFragment.removeSettingView(view);
+        }
     }
 
     @Override
@@ -1416,17 +1461,28 @@ public class CameraAppUI implements IAppUi,IArcProgressBarUI,PrizeSeekBar.OnProg
         mApp.getActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                mSettingFragment.refreshSettingView();
+                if(mSettingsNewStyle){
+                    mSettingManager.refreshSettingView();
+                }else{
+                    mSettingFragment.refreshSettingView();
+                }
             }
         });
     }
 
     @Override
     public void updateSettingIconVisibility() {
-        boolean visible = mSettingFragment.hasVisibleChild();
+        boolean visible = true;
+
+        if(mSettingsNewStyle){
+            visible = mSettingManager.hasVisibleChild();
+        }else{
+            visible = mSettingFragment.hasVisibleChild();
+        }
+
         /*prize-modify-huangpengfei-2018-12-19-start*/
         //mModePickerManager.setSettingIconVisible(visible);
-        if (isThirdPartyIntent()){
+        if (isThirdPartyIntent() || (mCurrentModeItem != null && (mCurrentModeItem.mModeTitle == ModeTitle.SMARTSCAN || mCurrentModeItem.mModeTitle == ModeTitle.PANO))){
             mSettingButton.setVisibility(View.INVISIBLE);
         }else{
             mSettingButton.setVisibility(visible?View.VISIBLE:View.INVISIBLE);
@@ -1556,13 +1612,22 @@ public class CameraAppUI implements IAppUi,IArcProgressBarUI,PrizeSeekBar.OnProg
     /*prize-change-hpf-2018-09-04-start*/
     private boolean mIsAnimationFinish = true;
     private void showSetting() {
+// zhangguo add 20190506, for new setting style start
+        if(mSettingsNewStyle){
+            if(mSettingManager.isSettingShowing()){
+                mSettingManager.hideSettings();
+            }else{
+                mSettingManager.showSettings();
+            }
+            return;
+        }
+// zhangguo add 20190506, for new setting style end
         /*prize-modify-bugid 71670 optimize UI Caton of ProfessionalMode-xiaoping-20190221-start*/
         if (mCurrentModeItem.mModeTitle == ModeTitle.PROFESSIONAL) {
             setProfessionalViewVisibility(false);
             if (mProgressLayout != null) {
                 mProgressLayout.setVisibility(View.GONE);
             }
-
         }
         /*prize-modify-bugid 71670 optimize UI Caton of ProfessionalMode-xiaoping-20190221-end*/
         LogHelper.d(TAG, "[showSetting]");
@@ -1614,6 +1679,12 @@ public class CameraAppUI implements IAppUi,IArcProgressBarUI,PrizeSeekBar.OnProg
 
     public void hideSetting() {
         LogHelper.d(TAG, "[hideSetting]");
+// zhangguo add 20190506, for new setting style start
+        if(mSettingsNewStyle){
+            mSettingManager.hideSettings();
+            return;
+        }
+// zhangguo add 20190506, for new setting style end
         /*mApp.getActivity().getFragmentManager().popBackStackImmediate("setting_fragment",
                 FragmentManager.POP_BACK_STACK_INCLUSIVE);*/
         View view = mApp.getActivity().findViewById(R.id.setting_ui_root);
@@ -1767,6 +1838,16 @@ public class CameraAppUI implements IAppUi,IArcProgressBarUI,PrizeSeekBar.OnProg
         public void onShutterTypeChanged(String newShutterType) {
             mCurrentModeType = newShutterType;
             ModeItem item = mModeProvider.getModeEntryName(mCurrentModeName, mCurrentModeType);
+// zhangguo add 20190506, for new setting style start
+            if(mSettingsNewStyle){
+                mApp.getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        hideSetting();
+                    }
+                });
+            }
+// zhangguo add 20190506, for new setting style end
             selectMode(newShutterType);
 //            mModeChangeListener.onModeSelected(item.mClassName);
             /*prize-add-add mode-xiaoping-20180901-end*/
@@ -1981,8 +2062,14 @@ public class CameraAppUI implements IAppUi,IArcProgressBarUI,PrizeSeekBar.OnProg
 
         @Override
         public void onClick(View view) {
-            if (mSettingFragment.hasVisibleChild()) {
-                showSetting();
+            if(mSettingsNewStyle){
+                if (mSettingManager.hasVisibleChild()) {
+                    showSetting();
+                }
+            }else{
+                if (mSettingFragment.hasVisibleChild()) {
+                    showSetting();
+                }
             }
         }
     }
@@ -1995,6 +2082,11 @@ public class CameraAppUI implements IAppUi,IArcProgressBarUI,PrizeSeekBar.OnProg
         @Override
         public void onModeChanged(String modeName) {
             mCurrentModeName = modeName;
+			// zhangguo add 20190506, for new setting style start
+            if(mSettingsNewStyle){
+                hideSetting();
+            }
+			// zhangguo add 20190506, for new setting style end
             ModeItem item = mModeProvider.getModeEntryName(mCurrentModeName, mCurrentModeType);
             mCurrentModeType = item.mType; // prize add by zhangguo, for bug#73878
             mModeChangeListener.onModeSelected(item.mClassName);
@@ -2677,32 +2769,6 @@ public class CameraAppUI implements IAppUi,IArcProgressBarUI,PrizeSeekBar.OnProg
         if (mConcurrentHashMap != null && mConcurrentHashMap.size() >0) {
             mConcurrentHashMap.clear();
         }
-
-        // zhangguo add for bug#74475 reset settings start
-        DataStore ds = mApp.getModeManger().getCameraContext().getDataStore();
-        if(null != ds){
-            ds.setValue("picsefile_switch", "off", ds.getCameraScope(mCameraId),true);
-        }
-
-        if(getModeItem() != null && (getModeItem().mModeTitle == ModeTitle.PHOTO || getModeItem().mModeTitle == ModeTitle.APERTURE)){
-            View picselfie = mQuickSwitcherManager.getQuickSwitcher(PicselfieParameterViewController.PICSELFIE_PRIORITY);
-            if(null != picselfie && "on".equals(picselfie.getTag())){
-                picselfie.performClick();
-            }
-        }
-
-        if(null != mBlurSeekBar){
-            mBlurSeekBar.reset();
-        }
-
-        if(null != mSizeSeekBar){
-            mSizeSeekBar.reset();
-        }
-
-        if(null != mPrizeCircleView){
-            mPrizeCircleView.reset();
-        }
-        // zhangguo add for bug#74475 reset settings end
     }
 
     private void cleaSelected() {
@@ -3332,4 +3398,38 @@ public class CameraAppUI implements IAppUi,IArcProgressBarUI,PrizeSeekBar.OnProg
         isZoomState = isZoom;
     }
     /*prize-modify-75105 do not trigger touch screen when adjusting the focus-xiaoping-20190425-end*/
+	
+    public void resetSettings(){
+
+        reset();
+
+        DataStore ds = mApp.getModeManger().getCameraContext().getDataStore();
+        if(null != ds){
+            ds.setValue("picsefile_switch", "off", ds.getCameraScope(mCameraId),true);
+        }
+
+        if(getModeItem() != null && (getModeItem().mModeTitle == ModeTitle.PHOTO || getModeItem().mModeTitle == ModeTitle.APERTURE)){
+            View picselfie = mQuickSwitcherManager.getQuickSwitcher(PicselfieParameterViewController.PICSELFIE_PRIORITY);
+            if(null != picselfie && "on".equals(picselfie.getTag())){
+                picselfie.performClick();
+            }
+        }else {
+            View picselfie = mQuickSwitcherManager.getQuickSwitcher(PicselfieParameterViewController.PICSELFIE_PRIORITY);
+            if(null != picselfie){
+                picselfie.setTag("off");
+            }
+        }
+
+        if(null != mBlurSeekBar){
+            mBlurSeekBar.reset();
+        }
+
+        if(null != mSizeSeekBar){
+            mSizeSeekBar.reset();
+        }
+
+        if(null != mPrizeCircleView){
+            mPrizeCircleView.reset();
+        }
+    }
 }

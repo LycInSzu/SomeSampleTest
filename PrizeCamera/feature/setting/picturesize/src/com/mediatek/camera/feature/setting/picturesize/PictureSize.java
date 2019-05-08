@@ -45,10 +45,14 @@ import com.mediatek.camera.common.app.IApp;
 import com.mediatek.camera.common.debug.LogHelper;
 import com.mediatek.camera.common.debug.LogUtil;
 import com.mediatek.camera.common.mode.ICameraMode;
+import com.mediatek.camera.common.mode.beauty.FaceBeautyMode;
+import com.mediatek.camera.common.mode.picselfie.PicselfieMode;
 import com.mediatek.camera.common.mode.picturezoom.PictureZoomMode;
 import com.mediatek.camera.common.setting.ISettingManager.SettingController;
 import com.mediatek.camera.common.setting.SettingBase;
 import com.mediatek.camera.prize.FeatureSwitcher;
+import com.prize.camera.feature.mode.gif.GifMode;
+import com.prize.camera.feature.mode.filter.FilterMode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -106,6 +110,7 @@ public class PictureSize extends SettingBase implements
             mSettingView.setPictureZoomSize(mPictureZoomSize);
             mSettingView.setHasPictureZoomSize(isHasPictureZoomSize());
             /*prize-modify-add get maxpicturesize for picturezoom-xiaoping-20181207-end*/
+            mSettingView.setContext(mActivity);
         }
         mAppUi.addSettingView(mSettingView);
     }
@@ -121,7 +126,7 @@ public class PictureSize extends SettingBase implements
             mSettingView.setValue(getValue());
             mSettingView.setEntryValues(getEntryValues());
             /*prize-modify-set picturesize of picturezoom -xiaoping-20181017-start*/
-            if (PictureZoomMode.class.getName().equals(mCurrentMode)) {
+            if (PictureZoomMode.class.getName().equals(mCurrentMode) || GifMode.class.getName().equals(mCurrentMode)) {
                 mSettingView.setEnabled(false);
             } else {
                 mSettingView.setEnabled(getEntryValues().size() > 1);
@@ -199,6 +204,12 @@ public class PictureSize extends SettingBase implements
 
         desiredAspectRatios.add(PictureSizeHelper.RATIO_16_9);
         desiredAspectRatios.add(PictureSizeHelper.RATIO_4_3);
+        /*prize-modify-Limit the preview size and picturesize of the algorithm mode-xiaoping-20190430-start*/
+        if (FeatureSwitcher.getCurrentProjectValue() == 5 && (FaceBeautyMode.class.getName().equals(mCurrentMode) || FilterMode.class.getName().equals(mCurrentMode) || PicselfieMode.class.getName().equals(mCurrentMode))) {
+            desiredAspectRatios.clear();
+            desiredAspectRatios.add(PictureSizeHelper.RATIO_4_3);
+        }
+        /*prize-modify-Limit the preview size and picturesize of the algorithm mode-xiaoping-20190430-end*/
         PictureSizeHelper.setDesiredAspectRatios(desiredAspectRatios);
 
         String valueInStore = mDataStore.getValue(getKey(), null, getStoreScope());

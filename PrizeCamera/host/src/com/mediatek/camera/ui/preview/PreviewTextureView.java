@@ -49,6 +49,7 @@ import android.widget.FrameLayout;
 import android.view.Gravity;
 import android.util.DisplayMetrics;
 import com.mediatek.camera.R;
+import com.mediatek.camera.common.debug.LogHelper;
 //prize-added by tangan-custom ui-end
 
 /**
@@ -169,9 +170,15 @@ public class PreviewTextureView extends TextureView {
 		//prize-added by tangan-custom ui-begin
         /*prize-modify-huangpengfei-2019-3-1-start*/
         int dy = (mScreenPixHeight/2+longSide/2) - (mScreenPixHeight - mShutterGroupHeight);
+        LogHelper.i("","dy: "+dy+",mScreenPixHeight: "+mScreenPixHeight);
         if(((Math.abs((mAspectRatio - 1.3333))) < ASPECT_TOLERANCE)
                 || ((Math.abs((mAspectRatio - 1.2222)) < ASPECT_TOLERANCE))){
             // video size 176/144=1.2222...
+            /*prize-modify-bugid:74670-The camera has a gray border on the 4:3 preview interface-xiaoping-20190505-start*/
+            if (mScreenPixHeight == 2268 && dy == 111) {
+                dy = dy +10;
+            }
+            /*prize-modify-bugid:74670-The camera has a gray border on the 4:3 preview interface-xiaoping-20190505-end*/
             adapterdisplay(dy);
         }else{
             FrameLayout.LayoutParams p = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT,

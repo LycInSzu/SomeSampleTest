@@ -703,6 +703,7 @@ public class ShutterButtonManager extends AbstractViewManager implements
                 Map.Entry map = (Map.Entry) iterator.next();
                 listener = (OnShutterButtonListener) map.getValue();
                 if (listener != null && listener.onShutterButtonClick()) {
+                    mApp.getAppUi().hideSetting(); // zhangguo add 20190506, for new setting style
                     /*prize-modify-add animation of takepictur-xiaoping-20181105-start*/
                     LogHelper.i(TAG,"listener: "+listener);
                     /*prize-modify-bugid:71466 take picture fail on picturezoom mode -xiaoping-20190326-start*/

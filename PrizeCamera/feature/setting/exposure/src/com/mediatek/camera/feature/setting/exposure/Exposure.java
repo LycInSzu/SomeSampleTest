@@ -667,4 +667,13 @@ public class Exposure extends SettingBase implements ExposureView.ExposureViewCh
         return /*super.getValue()*/mDataStore.getValue(getKey(),"0",getStoreScope());
     }
     /*prize-modify-add professional mode function-xiaoping-20190216-end*/
+
+    // zhangguo add 20190507, for smartscan torch mode start
+    public boolean isTorchMode(){
+        if(mAppUi.getModeItem() != null && mAppUi.getModeItem().mModeTitle == IAppUi.ModeTitle.SMARTSCAN){
+            return true;
+        }
+        return false;
+    }
+    // zhangguo add 20190507, for smartscan torch mode end
 }

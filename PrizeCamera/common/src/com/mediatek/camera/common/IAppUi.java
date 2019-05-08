@@ -776,4 +776,8 @@ public interface IAppUi {
     /*prize-modify-75105 do not trigger touch screen when adjusting the focus-xiaoping-20190425-start*/
     void setZoomState(boolean isZoom);
     /*prize-modify-75105 do not trigger touch screen when adjusting the focus-xiaoping-20190425-start*/
+
+    public void resetSettings(); // zhangguo add 20190429, for bug#75110 picselfie icon state is error
+
+    public void hideSetting();
 }

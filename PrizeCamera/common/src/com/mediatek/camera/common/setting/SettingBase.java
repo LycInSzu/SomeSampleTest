@@ -37,12 +37,14 @@
 package com.mediatek.camera.common.setting;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
 
 import com.mediatek.camera.common.IAppUi;
 import com.mediatek.camera.common.ICameraContext;
 import com.mediatek.camera.common.app.IApp;
+import com.mediatek.camera.common.mode.CameraApiHelper;
 import com.mediatek.camera.common.mode.ICameraMode;
 import com.mediatek.camera.common.relation.DataStore;
 import com.mediatek.camera.common.relation.StatusMonitor;
@@ -461,4 +463,13 @@ public abstract class SettingBase implements ICameraSetting {
         return mDataStore.getCameraScope(1);
     }
     /*prize-modify-feature Camera front and rear settings remain the same-xiaoping-20190420-end*/
+
+    /*prize-modify-Ensure that the values of the setting items of each camera id are the same-xiaoping-20190429-start*/
+    public void  setAllCameraIdSettingValue(Context context,String value,boolean cached) {
+        List<String> cameraidlist = CameraApiHelper.getCameraIdList(context);
+        for (int i = 0; i < cameraidlist.size(); i++) {
+            mDataStore.setValue(getKey(),value,mDataStore.getCameraScope(Integer.valueOf(cameraidlist.get(i))),cached);
+        }
+    }
+    /*prize-modify-Ensure that the values of the setting items of each camera id are the same-xiaoping-20190429-end*/
 }

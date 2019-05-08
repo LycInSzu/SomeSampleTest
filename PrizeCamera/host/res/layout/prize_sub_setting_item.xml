@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.mediatek.camera.ui.modepicker.RotateLayout
+        android:layout_width="@dimen/prize_setting_icon_size"
+        android:layout_height="@dimen/prize_setting_icon_size"
+        android:layout_marginTop="4dp"
+        android:layout_gravity="center">
+
+        <TextView android:id="@+id/grid_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:paddingLeft="@dimen/function_griditem_paddingLeft"
+            android:paddingRight="@dimen/function_griditem_paddingRight"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:textColor="#ffffffff"/>
+
+    </com.mediatek.camera.ui.modepicker.RotateLayout>
+</FrameLayout>

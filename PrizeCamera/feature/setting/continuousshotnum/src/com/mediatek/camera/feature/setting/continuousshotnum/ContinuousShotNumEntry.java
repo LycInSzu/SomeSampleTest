@@ -50,6 +50,7 @@ import com.mediatek.camera.common.device.CameraDeviceManagerFactory.CameraApi;
 import com.mediatek.camera.common.loader.FeatureEntryBase;
 import com.mediatek.camera.common.setting.ICameraSetting;
 import com.mediatek.camera.portability.SystemProperties;
+import com.mediatek.camera.prize.FeatureSwitcher;
 
 /**
  * This class is for self timer feature entry.
@@ -72,7 +73,7 @@ public class ContinuousShotNumEntry extends FeatureEntryBase {
         Intent intent = activity.getIntent();
         String action = intent.getAction();
         boolean support = !(MediaStore.ACTION_IMAGE_CAPTURE.equals(action) || MediaStore
-                .ACTION_VIDEO_CAPTURE.equals(action)) && SystemProperties.getInt("ro.pri.continuousshotnum.on", 0) == 1 ? true : false;
+                .ACTION_VIDEO_CAPTURE.equals(action)) && FeatureSwitcher.isContinuousShotnumSupport();
         LogHelper.i(TAG, "[isSupport] : " + support);
         return support;
     }

@@ -94,8 +94,8 @@ public class StoragePath extends SettingBase  implements StoragePathSettingView.
         if (!getValue().equals(value)) {
             setValue(value);
             /*prize-modify-feature Camera front and rear settings remain the same-xiaoping-20190420-start*/
-            mDataStore.setValue(getKey(), value, getBackStoreScope(), false);
-            mDataStore.setValue(getKey(), value, getFrontStoreScope(), false);
+//            mDataStore.setValue(getKey(), value, getStoreScope(), false);
+            setAllCameraIdSettingValue(mActivity,value,false);
             /*prize-modify-feature Camera front and rear settings remain the same-xiaoping-20190420-end*/
         }
     }

@@ -41,6 +41,7 @@ package com.mediatek.camera.common.app;
 import android.app.Activity;
 import android.net.Uri;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 
 import com.mediatek.camera.common.IAppUi;
 import com.mediatek.camera.common.mode.ModeManager;
@@ -242,7 +243,7 @@ public interface IApp {
 
     /*prize-add-huangpengfei-2019-02-28-start*/
     interface OnTouchListener {
-        void onTouch();
+        boolean onTouch(MotionEvent event);
     }
     void  unregisterOnTouchListener(OnTouchListener listener);
 

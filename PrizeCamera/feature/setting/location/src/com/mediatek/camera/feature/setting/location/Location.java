@@ -35,6 +35,9 @@ public class Location extends SettingBase {
             String value = mDataStore.getValue(getKey(), defaultValue, getStoreScope());
             LogHelper.i(TAG,"mDataStore.getValue: "+value);
             setValue(value);
+            /*prize-modify-bugid:75388 Location information in photo details with photo location turned off by default-xiaoping-20190506-start*/
+            mDataStore.setValue(getKey(), value, getStoreScope(), false);
+            /*prize-modify-bugid:75388 Location information in photo details with photo location turned off by default-xiaoping-20190506-end*/
         }
     }
 

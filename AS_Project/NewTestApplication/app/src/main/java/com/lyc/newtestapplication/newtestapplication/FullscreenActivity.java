@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.lyc.newtestapplication.newtestapplication.AboutSurfaceView.SurfaceViewTestActivity;
+import com.lyc.newtestapplication.newtestapplication.Camera2Test.MyCameraActivity;
 import com.lyc.newtestapplication.newtestapplication.DialogTest.DialogTestActivity;
 import com.lyc.newtestapplication.newtestapplication.VibrateDemo.VibratorDemoActivity;
 import com.lyc.newtestapplication.newtestapplication.ViewModelTest.ViewModelTestActivity;

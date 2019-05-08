@@ -46,12 +46,13 @@ import com.mediatek.camera.common.debug.LogHelper;
 import com.mediatek.camera.common.debug.LogUtil;
 import com.mediatek.camera.common.preference.SwitchPreference;
 import com.mediatek.camera.common.setting.ICameraSettingView;
+import com.mediatek.camera.ui.prize.PrizeCameraSettingView;
 
 /**
  * EIS setting view.
  */
 
-public class EISSettingView implements ICameraSettingView {
+public class EISSettingView extends PrizeCameraSettingView implements ICameraSettingView {
     private static final LogUtil.Tag TAG = new LogUtil.Tag(EISSettingView.class.getSimpleName());
     private static final String KEY_NOISE_REDUCTION = "key_eis";
     private OnEISViewListener mViewListener;
@@ -126,5 +127,34 @@ public class EISSettingView implements ICameraSettingView {
     public void setChecked(boolean checked) {
         mChecked = checked;
         refreshView();
+    }
+
+
+    private static final int ICONS[] = new int[]{
+            R.drawable.prize_setting_eis_on,
+            R.drawable.prize_setting_eis_off,
+    };
+
+    public int[] getIcons() {
+        return ICONS;
+    }
+
+    public String getValue() {
+        return mChecked ? VALUES_ON : VALUES_OFF;
+    }
+
+    public int getTitle() {
+        return R.string.eis_title;
+    }
+
+    public void onValueChanged(String newValue){
+        mChecked = VALUES_ON.equals(newValue);
+        if(null != mViewListener){
+            mViewListener.onItemViewClick(mChecked);
+        }
+    }
+
+    public int getOrder(){
+        return 30;
     }
 }

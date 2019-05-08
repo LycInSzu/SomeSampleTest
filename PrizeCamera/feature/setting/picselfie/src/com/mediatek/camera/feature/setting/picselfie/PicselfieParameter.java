@@ -27,6 +27,7 @@ public class PicselfieParameter extends SettingBase implements IAppUi.UVPicselfi
     /*prize-modify-bugid:67420 turn off HDR when opening beauty mode -xiaoping-20181031-end*/
     private String KEY_PICSELFIE = "status_key_picselfie";
     private String KEY_AI_STATUS = "status_key_ai_status";
+    private String KEY_RESTORE_SETTINGS = "key_restore_settings";
     private StatusMonitor.StatusResponder mPicselfieStatusResponder;
 
     @Override
@@ -35,6 +36,7 @@ public class PicselfieParameter extends SettingBase implements IAppUi.UVPicselfi
         mPicselfieParameterViewController = null;
         mPicselfieRequestConfigure = null;
         mStatusMonitor.unregisterValueChangedListener(KEY_AI_STATUS, mStatusListener);
+        mStatusMonitor.unregisterValueChangedListener(KEY_RESTORE_SETTINGS, mStatusListener);
     }
 
     @Override
@@ -46,6 +48,7 @@ public class PicselfieParameter extends SettingBase implements IAppUi.UVPicselfi
         }
         mPicselfieStatusResponder = mStatusMonitor.getStatusResponder(KEY_PICSELFIE);
         mStatusMonitor.registerValueChangedListener(KEY_AI_STATUS, mStatusListener);
+        mStatusMonitor.registerValueChangedListener(KEY_RESTORE_SETTINGS, mStatusListener);
     }
 
     @Override
@@ -98,13 +101,25 @@ public class PicselfieParameter extends SettingBase implements IAppUi.UVPicselfi
             }
         });
 
-        if(FeatureSwitcher.isSupportDualCam()){
-            if("on".equals(value) && 0 == getCameraId() && mAppUi.getModeItem() != null && mAppUi.getModeItem().mModeTitle != IAppUi.ModeTitle.FICSEFILE){
-                mApp.getAppUi().selectPluginMode(SdofPhotoEntry.class.getName(), false, false);
+        if (FeatureSwitcher.isSupportDualCam()) {
+            /*prize-modify-bugid:75473 Limit preview size in portrait mode-xiaoping-2019056-start*/
+            if (0 == getCameraId()) {
+                if ("on".equals(value) && mAppUi.getModeItem() != null && mAppUi.getModeItem().mModeTitle != IAppUi.ModeTitle.FICSEFILE) {
+                    mApp.getAppUi().selectPluginMode(SdofPhotoEntry.class.getName(), false, false);
+                } else if ("off".equals(value) && mAppUi.getModeItem() != null && mAppUi.getModeItem().mModeTitle == IAppUi.ModeTitle.FICSEFILE) {
+                    mApp.getAppUi().selectPluginMode(PhotoModeEntry.class.getName(), false, false);
+                }
+            } else if (1 == getCameraId()) {
+                if ("on".equals(value) && mAppUi.getModeItem() != null && mAppUi.getModeItem().mModeTitle == IAppUi.ModeTitle.PHOTO) {
+                    mApp.getAppUi().selectPluginMode(PicselfieModeEntry.class.getName(), false, false);
+                } else if ("off".equals(value) && mAppUi.getModeItem() != null && mAppUi.getModeItem().mModeTitle == IAppUi.ModeTitle.FICSEFILE) {
+                    mApp.getAppUi().selectPluginMode(PhotoModeEntry.class.getName(), false, false);
+                }
             }
-        }else{
-            if(FeatureSwitcher.isSupportUVSelfie()){
-                if(mAppUi.getModeItem() != null){
+            /*prize-modify-bugid:75473 Limit preview size in portrait mode-xiaoping-2019056-end*/
+        } else {
+            if (FeatureSwitcher.isSupportUVSelfie()) {
+                if (mAppUi.getModeItem() != null) {
                     boolean show = 0 == getCameraId() && "on".equals(value);
                     if(mAppUi.getModeItem().mModeTitle == IAppUi.ModeTitle.FICSEFILE){
                         if(!show){
@@ -118,6 +133,14 @@ public class PicselfieParameter extends SettingBase implements IAppUi.UVPicselfi
 
                     mAppUi.showBlurView(show, this);
                 }
+                /*prize-modify-bugid:75473 Limit preview size in portrait mode-xiaoping-2019056-start*/
+            } else if (FeatureSwitcher.isPortraitupported()) {
+                if ("on".equals(value) && mAppUi.getModeItem() != null && mAppUi.getModeItem().mModeTitle == IAppUi.ModeTitle.PHOTO) {
+                    mApp.getAppUi().selectPluginMode(PicselfieModeEntry.class.getName(), false, false);
+                } else if ("off".equals(value) && mAppUi.getModeItem() != null && mAppUi.getModeItem().mModeTitle == IAppUi.ModeTitle.FICSEFILE) {
+                    mApp.getAppUi().selectPluginMode(PhotoModeEntry.class.getName(), false, false);
+                }
+                /*prize-modify-bugid:75473 Limit preview size in portrait mode-xiaoping-2019056-end*/
             }
         }
     }
@@ -234,6 +257,10 @@ public class PicselfieParameter extends SettingBase implements IAppUi.UVPicselfi
             if (KEY_AI_STATUS.equalsIgnoreCase(key)){
                 if ("on".equals(value) && null != mPicselfieParameterViewController){
                     mPicselfieParameterViewController.onAiTurnsOn();
+                }
+            }else if(KEY_RESTORE_SETTINGS.equalsIgnoreCase(key)){
+                if(null != mPicselfieParameterViewController){
+                    mPicselfieParameterViewController.restoreSettings();
                 }
             }
         }

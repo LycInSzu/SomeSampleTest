@@ -394,4 +394,12 @@ public class Flash extends SettingBase implements PrizeDataRevert {
     }
     /*prize-add -huangpengfei-2019-04-17-end*/
 
+    // zhangguo add 20190507, for smartscan torch mode start
+    public boolean isTorchMode(){
+        if(mAppUi.getModeItem() != null && mAppUi.getModeItem().mModeTitle == IAppUi.ModeTitle.SMARTSCAN){
+            return true;
+        }
+        return false;
+    }
+    // zhangguo add 20190507, for smartscan torch mode end
 }

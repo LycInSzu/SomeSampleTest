@@ -911,12 +911,21 @@ public final class CameraUtil {
                 // find the size closest to panel size
 
                 if (app.getAppUi().getModeItem() != null && (app.getAppUi().getModeItem().mModeTitle == IAppUi.ModeTitle.BEAUTY
-                                            || app.getAppUi().getModeItem().mModeTitle == IAppUi.ModeTitle.FICSEFILE)
-                                            ) {
+                        || app.getAppUi().getModeItem().mModeTitle == IAppUi.ModeTitle.FICSEFILE)
+                        ) {
                     minDiff = Math.abs(size.getWidth() * size.getHeight() - panelWidth * panelHeight);
-                    if (minDiff <= minDiffMax) {
-                        minDiffMax = minDiff;
-                        bestMatchSize = size;
+                    /*prize-modify-bugid:75473 Limit preview size in portrait mode-xiaoping-2019056-start*/
+                    if (app.getAppUi().getModeItem().mModeTitle == IAppUi.ModeTitle.FICSEFILE) {
+                        if (minDiff <= minDiffMax && Math.min(size.getWidth(), size.getHeight()) <= 720) {
+                            minDiffMax = minDiff;
+                            bestMatchSize = size;
+                        }
+                        /*prize-modify-bugid:75473 Limit preview size in portrait mode-xiaoping-2019056-end*/
+                    } else {
+                        if (minDiff <= minDiffMax) {
+                            minDiffMax = minDiff;
+                            bestMatchSize = size;
+                        }
                     }
                 } else {
                     /*prize-modify-add a larger preview size for 19:9-xiaoping-20190226-start*/

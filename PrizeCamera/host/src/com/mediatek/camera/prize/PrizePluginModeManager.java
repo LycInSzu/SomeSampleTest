@@ -24,6 +24,7 @@ import com.mediatek.camera.common.mode.video.VideoModeEntry;
 import com.mediatek.camera.common.widget.RotateImageView;
 import com.mediatek.camera.R;
 import com.mediatek.camera.ui.prize.PrizePluginModeFragment;
+import com.prize.camera.feature.mode.pano.PanoModeEntry;
 
 /**
  * Created by huangpengfei on 2019/3/5.
@@ -226,8 +227,13 @@ public class PrizePluginModeManager {
 
     public static String getPluginMode(Context context){
         SharedPreferences preferences = context.getSharedPreferences(PREF_FILE, Context.MODE_PRIVATE);
-        return preferences.getString(PLUGIN_MODE_KEY, ProfessionalModeEntry.class.getName());
-    }    
+        if(FeatureSwitcher.isProfessionalSupport()){
+            return preferences.getString(PLUGIN_MODE_KEY, ProfessionalModeEntry.class.getName());
+        }else{
+            return preferences.getString(PLUGIN_MODE_KEY, PanoModeEntry.class.getName());
+        }
+    }
+
     public boolean isPluginFragmentShowed() {
         if (FragmentRootView != null){
             return FragmentRootView.getVisibility() == View.VISIBLE;

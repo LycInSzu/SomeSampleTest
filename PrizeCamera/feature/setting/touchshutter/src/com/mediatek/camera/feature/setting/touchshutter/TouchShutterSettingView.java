@@ -49,12 +49,13 @@ import com.mediatek.camera.common.debug.LogUtil;
 import com.mediatek.camera.common.preference.SwitchPreference;
 import com.mediatek.camera.common.setting.ICameraSettingView;
 import com.mediatek.camera.common.utils.CameraUtil;
+import com.mediatek.camera.ui.prize.PrizeCameraSettingView;
 
 /**
  * EIS setting view.
  */
 
-public class TouchShutterSettingView implements ICameraSettingView {
+public class TouchShutterSettingView extends PrizeCameraSettingView implements ICameraSettingView {
     private static final LogUtil.Tag TAG = new LogUtil.Tag(TouchShutterSettingView.class.getSimpleName());
 
     private OnTouchShutterClickListener mListener;
@@ -186,4 +187,30 @@ public class TouchShutterSettingView implements ICameraSettingView {
         };
     }
     // @}
+
+    private static final int ICONS[] = new int[]{
+            R.drawable.prize_setting_touch_on,
+            R.drawable.prize_setting_touch_off,
+    };
+
+    public int[] getIcons() {
+        return ICONS;
+    }
+
+    public String getValue() {
+        return mChecked ? VALUES_ON : VALUES_OFF;
+    }
+
+    public int getTitle() {
+        return R.string.touch_shutter_title;
+    }
+
+    public void onValueChanged(String newValue){
+        mChecked = VALUES_ON.equals(newValue);
+        mListener.onTouchShutterClicked(mChecked);
+    }
+
+    public int getOrder(){
+        return 55;
+    }
 }

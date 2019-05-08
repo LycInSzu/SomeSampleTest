@@ -207,6 +207,9 @@ public class Mirror extends SettingBase implements MirrorSettingView.OnMirrorCli
             setEntryValues(platformSupportedValues);
             String value = mDataStore.getValue(getKey(), defaultValue, getStoreScope());
             setValue(value);
+            /*prize-modify-opt-Write data to Preferences when the setting item is initialized-xiaoping-20190506-start*/
+            mDataStore.setValue(getKey(), value, getStoreScope(), false);
+            /*prize-modify-opt-Write data to Preferences when the setting item is initialized-xiaoping-20190506-end*/
         }
     }
 

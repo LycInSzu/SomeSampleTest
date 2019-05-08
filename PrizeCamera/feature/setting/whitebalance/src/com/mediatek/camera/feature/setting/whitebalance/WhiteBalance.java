@@ -96,7 +96,8 @@ public class WhiteBalance extends SettingBase implements
     @Override
     public void addViewEntry() {
         LogHelper.d(TAG, "[addViewEntry] entryValue:" + getEntryValues());
-        mActivity.runOnUiThread(new Runnable() {
+		// zhangguo delete 20190506, for new setting style start
+        /*mActivity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
                     if (mSettingView == null) {
@@ -112,15 +113,18 @@ public class WhiteBalance extends SettingBase implements
                     mAppUi.addToIndicatorView(mIndicatorView.getView(),
                             mIndicatorView.getViewPriority());
                 }
-            });
+            });*/
+			// zhangguo delete 20190506, for new setting style end
     }
 
     @Override
     public void removeViewEntry() {
-        mAppUi.removeSettingView(mSettingView);
+	// zhangguo delete 20190506, for new setting style start
+        /*mAppUi.removeSettingView(mSettingView);
         if (mIndicatorView != null) {
             mAppUi.removeFromIndicatorView(mIndicatorView.getView());
-        }
+        }*/
+	// zhangguo delete 20190506, for new setting style end
     }
 
     @Override

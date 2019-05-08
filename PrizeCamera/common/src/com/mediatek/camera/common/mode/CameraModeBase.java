@@ -239,21 +239,21 @@ public abstract class CameraModeBase implements
             case KeyEvent.KEYCODE_CAMERA:
             case KeyEvent.KEYCODE_HEADSETHOOK:
                 getVolumeKey();
-                if ("0".equals(mValue)){
-                    return false;
-                }else if ("1".equals(mValue)){
-                    if (!mIsCameraKeyLongPressed){
+                /*prize-modify-bugid:75538 Long press fingerprint to take effect-xiaoping-20190505-start*/
+                if ("1".equals(mValue) || keyCode == KeyEvent.KEYCODE_CAMERA || keyCode == KeyEvent.KEYCODE_HEADSETHOOK) {
+                    if (!mIsCameraKeyLongPressed) {
                         mIApp.getAppUi().triggerShutterButtonClick(LOWEST_PRIORITY);
                         LogHelper.d(mTag, "[onKeyUp]  triggerShutterButtonClick.. ");
-                    }else{
+                    } else {
                         mIApp.getAppUi().stopContinuousShot();
                         mIApp.getAppUi().setVolumekeyState(VolumekeyState.VOLUME_KEY_STATE_UP);//prize-add-huangpengfei-2018-12-19
                     }
                     mIsCameraKeyLongPressed = false;
                     return true;
-                }else if ("2".equals(mValue)){
+                }else if ("2".equals(mValue) || "0".equals(mValue)){
                     return false;
                 }
+                /*prize-modify-bugid:75538 Long press fingerprint to take effect-xiaoping-20190505-end*/
             default:
                 break;
         }

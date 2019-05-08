@@ -51,10 +51,11 @@ public class PicselfieParameterRequestConfig implements ICameraSetting.ICaptureR
         if(captureBuilder == null){
             return;
         }
-        LogHelper.i("",",mPicselfieParameter value: "+mPicselfieParameter.getValue());
+        String picselfieValue = mPicselfieParameter.getValue();
+        LogHelper.i("",",mPicselfieParameter value: "+picselfieValue);
         int value = 0;
 
-        if ("on".equals(mPicselfieParameter.getValue())) {
+        if ("on".equals(picselfieValue)) {
             value = 1;
         }
 
@@ -66,7 +67,14 @@ public class PicselfieParameterRequestConfig implements ICameraSetting.ICaptureR
             }
         } else if(mPicselfieParameter.getCameraId() == 1 || !FeatureSwitcher.isSupportUVSelfie()){
             try{
-                captureBuilder.set(CaptureRequest.VENDOR_ARCSOFT_PICSELFIE_MODE, value);
+                /*prize-modify-bugid:75473 Limit preview size in portrait mode-xiaoping-2019056-start*/
+                if((mApp.getAppUi().getModeItem() != null && mApp.getAppUi().getModeItem().mModeTitle != IAppUi.ModeTitle.PHOTO)
+                        || "off".equals(mApp.getSettingValue("picsefile_switch","off",mApp.getAppUi().getCameraId()))) {
+                    captureBuilder.set(CaptureRequest.VENDOR_ARCSOFT_PICSELFIE_MODE, 0);
+                    /*prize-modify-bugid:75473 Limit preview size in portrait mode-xiaoping-2019056-end*/
+                } else {
+                    captureBuilder.set(CaptureRequest.VENDOR_ARCSOFT_PICSELFIE_MODE, value);
+                }
             }catch (Exception e){
                 e.printStackTrace();
             }

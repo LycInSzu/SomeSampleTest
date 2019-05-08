@@ -49,12 +49,13 @@ import com.mediatek.camera.common.debug.LogUtil;
 import com.mediatek.camera.common.preference.SwitchPreference;
 import com.mediatek.camera.common.setting.ICameraSettingView;
 import com.mediatek.camera.common.utils.CameraUtil;
+import com.mediatek.camera.ui.prize.PrizeCameraSettingView;
 
 /**
  * EIS setting view.
  */
 
-public class WatermarkSettingView implements ICameraSettingView {
+public class WatermarkSettingView extends PrizeCameraSettingView implements ICameraSettingView {
     private static final LogUtil.Tag TAG = new LogUtil.Tag(WatermarkSettingView.class.getSimpleName());
 
     private OnWatermarkClickListener mListener;
@@ -186,4 +187,31 @@ public class WatermarkSettingView implements ICameraSettingView {
         };
     }
     // @}
+
+
+    private static final int ICONS[] = new int[]{
+            R.drawable.prize_setting_water_on,
+            R.drawable.prize_setting_water_off,
+    };
+
+    public int[] getIcons() {
+        return ICONS;
+    }
+
+    public String getValue() {
+        return mChecked ? VALUES_ON : VALUES_OFF;
+    }
+
+    public int getTitle() {
+        return R.string.watermark_title;
+    }
+
+    public void onValueChanged(String newValue){
+        mChecked = VALUES_ON.equals(newValue);
+        mListener.onWatermarkClicked(mChecked);
+    }
+
+    public int getOrder(){
+        return 45;
+    }
 }

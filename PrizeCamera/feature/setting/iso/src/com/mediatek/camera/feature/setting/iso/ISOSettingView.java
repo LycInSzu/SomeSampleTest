@@ -47,6 +47,7 @@ import com.mediatek.camera.common.debug.LogHelper;
 import com.mediatek.camera.common.debug.LogUtil;
 import com.mediatek.camera.common.preference.Preference;
 import com.mediatek.camera.common.setting.ICameraSettingView;
+import com.mediatek.camera.ui.prize.PrizeCameraSettingView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +55,7 @@ import java.util.List;
 /**
  * ISO setting view.
  */
-public class ISOSettingView implements ICameraSettingView,
+public class ISOSettingView extends PrizeCameraSettingView implements ICameraSettingView,
         ISOSelector.OnItemClickListener {
     private static final LogUtil.Tag TAG =
             new LogUtil.Tag(ISOSettingView.class.getSimpleName());
@@ -198,5 +199,9 @@ public class ISOSettingView implements ICameraSettingView,
         mEntries.addAll(entryValues);
         mEntryValues.addAll(entryValues);
         mEntries.set(0, mAutoEntry);
+    }
+
+    public int getOrder(){
+        return 70;
     }
 }

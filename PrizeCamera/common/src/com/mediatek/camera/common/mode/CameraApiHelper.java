@@ -62,6 +62,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -182,4 +184,22 @@ public class CameraApiHelper {
         }
         return length;
     }
+
+    /*prize-modify-Ensure that the values of the setting items of each camera id are the same-xiaoping-20190429-start*/
+    public static List<String> getCameraIdList(Context context) {
+        String[] cameraids = null;
+        List<String> cameraidlist = null;
+        CameraCharacteristics cs = null;
+        CameraManager cameraManager =
+                (CameraManager) context.getSystemService(context.CAMERA_SERVICE);
+        try {
+            cameraids = cameraManager.getCameraIdList();
+        } catch (CameraAccessException e) {
+            e.printStackTrace();
+        }
+        cameraidlist =Arrays.asList(cameraids);
+        LogHelper.i(TAG,"cameraidlist: "+cameraidlist);
+        return cameraidlist;
+    }
+    /*prize-modify-Ensure that the values of the setting items of each camera id are the same-xiaoping-20190429-end*/
 }

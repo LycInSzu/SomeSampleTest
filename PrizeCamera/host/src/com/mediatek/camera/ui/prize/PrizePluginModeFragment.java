@@ -66,14 +66,17 @@ public class PrizePluginModeFragment extends Fragment {
 
         mModeItemMap.add(new Item(mContext.getResources().getString(R.string.shutter_type_photo_gif), mContext.getDrawable(R.drawable.prize_gif_selector), GifModeEntry.class.getName()));
         mModeItemMap.add(new Item(mContext.getResources().getString(R.string.shutter_type_photo_filter), mContext.getDrawable(R.drawable.prize_filter_selector), FilterModeEntry.class.getName()));
-
+        mModeItemMap.add(new Item(mContext.getResources().getString(R.string.shutter_type_photo_panorama), mContext.getDrawable(R.drawable.prize_pano_selector), PanoModeEntry.class.getName()));
         if(mCameraId == 0){
-            mModeItemMap.add(new Item(mContext.getResources().getString(R.string.shutter_type_photo_panorama), mContext.getDrawable(R.drawable.prize_pano_selector), PanoModeEntry.class.getName()));
+
             if(FeatureSwitcher.isSupportSlowMotion()){
                 mModeItemMap.add(new Item(mContext.getResources().getString(R.string.shutter_type_photo_slow_motion), mContext.getDrawable(R.drawable.prize_slow_motion_selector), SlowMotionEntry.class.getName()));
             }
             mModeItemMap.add(new Item(mContext.getResources().getString(R.string.shutter_type_photo_intelligent_scanning), mContext.getDrawable(R.drawable.prize_scanner_selector), SmartScanModeEntry.class.getName()));
-            mModeItemMap.add(new Item(mContext.getResources().getString(R.string.pref_camera_professional_title), mContext.getDrawable(R.drawable.prize_professional_selector), ProfessionalModeEntry.class.getName()));
+
+            if(FeatureSwitcher.isProfessionalSupport()){
+                mModeItemMap.add(new Item(mContext.getResources().getString(R.string.pref_camera_professional_title), mContext.getDrawable(R.drawable.prize_professional_selector), ProfessionalModeEntry.class.getName()));
+            }
         }
 
         mCurPluginMode = PrizePluginModeManager.getPluginMode(mContext);

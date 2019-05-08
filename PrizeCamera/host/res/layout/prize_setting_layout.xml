@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--prize-tangan-20180921-add prize camera-begin-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridView android:id="@+id/grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:numColumns="4"
+        android:background="@color/prize_setting_background"
+        android:layout_marginTop="68dp"
+        android:paddingTop="@dimen/settings_grid_item_padding_top"/>
+
+    <com.mediatek.camera.ui.prize.PrizeSettingSubView android:id="@+id/sub_setting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp"
+        android:background="@color/prize_setting_background"
+        android:visibility="gone"
+        android:clickable="true"/>
+
+</LinearLayout>
+<!--prize-tangan-20180921-add prize camera-end-->

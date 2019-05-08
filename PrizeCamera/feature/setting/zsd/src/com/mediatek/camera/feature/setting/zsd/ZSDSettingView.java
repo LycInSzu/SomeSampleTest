@@ -49,12 +49,13 @@ import com.mediatek.camera.common.debug.LogUtil;
 import com.mediatek.camera.common.preference.SwitchPreference;
 import com.mediatek.camera.common.setting.ICameraSettingView;
 import com.mediatek.camera.common.utils.CameraUtil;
+import com.mediatek.camera.ui.prize.PrizeCameraSettingView;
 
 /**
  * EIS setting view.
  */
 
-public class ZSDSettingView implements ICameraSettingView {
+public class ZSDSettingView extends PrizeCameraSettingView implements ICameraSettingView {
     private static final LogUtil.Tag TAG = new LogUtil.Tag(ZSDSettingView.class.getSimpleName());
 
     private OnZsdClickListener mListener;
@@ -186,4 +187,32 @@ public class ZSDSettingView implements ICameraSettingView {
         };
     }
     // @}
+
+
+
+    private static final int ICONS[] = new int[]{
+            R.drawable.prize_setting_zsd_on,
+            R.drawable.prize_setting_zsd_off,
+    };
+
+    public int[] getIcons() {
+        return ICONS;
+    }
+
+    public String getValue() {
+        return mChecked ? VALUES_ON : VALUES_OFF;
+    }
+
+    public int getTitle() {
+        return R.string.zsd_title;
+    }
+
+    public void onValueChanged(String newValue){
+        mChecked = VALUES_ON.equals(newValue);
+        mListener.onZsdClicked(mChecked);
+    }
+
+    public int getOrder(){
+        return 70;
+    }
 }

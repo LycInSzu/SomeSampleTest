@@ -11,10 +11,11 @@ import com.mediatek.camera.common.preference.PrizeListPreference;
 import com.mediatek.camera.common.setting.ICameraSettingView;
 import com.mediatek.camera.common.widget.PrizeSettingDialog;
 import com.mediatek.camera.prize.PrizeLifeCycle;
+import com.mediatek.camera.ui.prize.PrizeCameraSettingView;
 
 import java.util.ArrayList;
 import java.util.List;
-public class StoragePathSettingView implements ICameraSettingView,StoragePathSelector.OnItemClickListener,PrizeLifeCycle {
+public class StoragePathSettingView extends PrizeCameraSettingView implements ICameraSettingView,StoragePathSelector.OnItemClickListener,PrizeLifeCycle {
     private static final LogUtil.Tag TAG =
             new LogUtil.Tag(StoragePathSettingView.class.getSimpleName());
 
@@ -182,4 +183,51 @@ public class StoragePathSettingView implements ICameraSettingView,StoragePathSel
     }
 
     /*prize-add-huangpengfei-2018-10-25-end*/
+
+    private static final int[] mIcons = new int[]{
+        R.drawable.prize_selector_storage_phone,
+        R.drawable.prize_selector_storage_sdcard,
+    };
+
+    public int[] getIcons() {
+        return mIcons;
+    }
+
+    @Override
+    public List<String> getEntryValues() {
+        return mEntryValues;
+    }
+
+    public void setContext(Activity activity){
+        mActivity = activity;
+    }
+
+    @Override
+    public List<String> getEntrys() {
+        return mEntries;
+    }
+
+    public String getValue() {
+        return mSelectedValue;
+    }
+
+    public int getTitle() {
+        return R.string.pref_camera_storagepath_title;
+    }
+
+    public void onValueChanged(String newValue){
+        mSelectedValue = newValue;
+        if (mOnValueChangeListener != null) {
+            mOnValueChangeListener.onValueChanged(newValue);
+        }
+    }
+
+    @Override
+    public int getSettingType() {
+        return SETTING_TYPE_LIST;
+    }
+
+    public int getOrder(){
+        return 100;
+    }
 }

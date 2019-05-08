@@ -58,7 +58,7 @@ public class FilterRestriction {
                         KEY_FACE_DETECTION + "," +
                         KEY_AIS + "," +
                         KEY_DNG + "," +
-                        KEY_SELF_TIMER + "," +
+                        //KEY_SELF_TIMER + "," +
                         KEY_EXPOSURE + "," +
                         KEY_DUAL_ZOOM + "," +
                         KEY_CSHOT + "," +
@@ -82,7 +82,7 @@ public class FilterRestriction {
                         .addBody(KEY_FACE_DETECTION, "off", "off")
                         .addBody(KEY_AIS, "off", "off")
                         .addBody(KEY_DNG, "off", "off")
-                        .addBody(KEY_SELF_TIMER, "0", "0")
+                        //.addBody(KEY_SELF_TIMER, "0", "0")
                         .addBody(KEY_EXPOSURE, "0", "0")
                         .addBody(KEY_DUAL_ZOOM, "off", "off")
                         .addBody(KEY_CSHOT, "off", "off")

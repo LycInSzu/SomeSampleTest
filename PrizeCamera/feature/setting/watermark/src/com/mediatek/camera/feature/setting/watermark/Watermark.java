@@ -41,6 +41,7 @@ package com.mediatek.camera.feature.setting.watermark;
 import android.content.Intent;
 import android.provider.MediaStore;
 
+import com.mediatek.camera.common.IAppUi;
 import com.mediatek.camera.common.ICameraContext;
 import com.mediatek.camera.common.app.IApp;
 import com.mediatek.camera.common.debug.LogHelper;
@@ -126,7 +127,11 @@ public class Watermark extends SettingBase implements WatermarkSettingView.OnWat
     public void refreshViewEntry() {
         if (mSettingView != null) {
             mSettingView.setChecked(VALUE_ON.equals(getValue()));
-            mSettingView.setEnabled(getEntryValues().size() > 1);
+            if (mAppUi.getModeItem() != null && mAppUi.getModeItem().mModeTitle == IAppUi.ModeTitle.GIF) {
+                mSettingView.setEnabled(false);
+            } else {
+                mSettingView.setEnabled(getEntryValues().size() > 1);
+            }
         }
     }
 
@@ -201,6 +206,9 @@ public class Watermark extends SettingBase implements WatermarkSettingView.OnWat
             setEntryValues(platformSupportedValues);
             String value = mDataStore.getValue(getKey(), defaultValue, getStoreScope());
             setValue(value);
+            /*prize-modify-opt-Write data to Preferences when the setting item is initialized-xiaoping-20190506-start*/
+            mDataStore.setValue(getKey(), value, getStoreScope(), false);
+            /*prize-modify-opt-Write data to Preferences when the setting item is initialized-xiaoping-20190506-end*/
         }
     }
 }

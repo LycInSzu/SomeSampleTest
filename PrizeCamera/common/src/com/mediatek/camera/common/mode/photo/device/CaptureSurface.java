@@ -217,7 +217,12 @@ public class CaptureSurface {
     }
 
     public void setCaptureCallback(ImageCallback captureCallback) {
-        mImageCallback = captureCallback;
+        // zhangguo add 20190430, for continus shot can not callback start
+        LogHelper.i(TAG,"setCaptureCallback:" + captureCallback+" mIsContinusShot="+mIsContinusShot);
+        if(!mIsContinusShot){
+            mImageCallback = captureCallback;
+        }
+        // zhangguo add 20190430, for continus shot can not callback end
     }
 
 
@@ -280,4 +285,10 @@ public class CaptureSurface {
         }
     }
 
+    // zhangguo add 20190430, for continus shot can not callback start
+    private boolean mIsContinusShot;
+    public void setContinusShot(boolean isContinusShot){
+        mIsContinusShot = isContinusShot;
+    }
+    // zhangguo add 20190430, for continus shot can not callback end
 }

@@ -48,6 +48,7 @@ import com.mediatek.camera.common.debug.LogHelper;
 import com.mediatek.camera.common.debug.LogUtil;
 import com.mediatek.camera.common.preference.Preference;
 import com.mediatek.camera.common.setting.ICameraSettingView;
+import com.mediatek.camera.ui.prize.PrizeCameraSettingView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,7 +57,7 @@ import java.util.List;
  * White balance setting view.
  */
 
-public class WhiteBalanceSettingView implements ICameraSettingView,
+public class WhiteBalanceSettingView extends PrizeCameraSettingView implements ICameraSettingView,
         WhiteBalanceSelector.OnItemClickListener {
     private static final LogUtil.Tag TAG
             = new LogUtil.Tag(WhiteBalanceSettingView.class.getSimpleName());
@@ -233,5 +234,9 @@ public class WhiteBalanceSettingView implements ICameraSettingView,
         if (index >= 0) {
             mSummary = mEntries.get(index);
         }
+    }
+
+    public int getOrder(){
+        return 60;
     }
 }

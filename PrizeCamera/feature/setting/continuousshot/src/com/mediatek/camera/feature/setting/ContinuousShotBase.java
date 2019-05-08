@@ -445,6 +445,7 @@ class ContinuousShotBase extends SettingBase implements
             stopContinuousShot();
             return;
         }
+
         if (!mIsCshotStopped && mCurrentShotsNum <= MAX_CAPTURE_NUMBER) {
             updateThumbnail(data);
             mContinuousShotView.showIndicatorView(mCurrentShotsNum);
@@ -559,4 +560,10 @@ class ContinuousShotBase extends SettingBase implements
         mAppUi.setUIEnabled(IAppUi.SHUTTER_BUTTON, true);
         mAppUi.setUIEnabled(IAppUi.SHUTTER_TEXT, false);
     }
+
+    // zhangguo add 20190507, for continus shot can not callback start
+    protected boolean isContinusStoped(){
+        return mIsCshotStopped;
+    }
+    // zhangguo add 20190507, for continus shot can not callback end
 }

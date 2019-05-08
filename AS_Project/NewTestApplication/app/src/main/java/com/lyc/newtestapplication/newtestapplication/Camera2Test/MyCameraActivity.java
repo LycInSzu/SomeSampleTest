@@ -3,6 +3,9 @@ package com.lyc.newtestapplication.newtestapplication.Camera2Test;
 import android.content.Context;
 import android.graphics.SurfaceTexture;
 import android.hardware.camera2.CameraManager;
+import android.hardware.camera2.params.OutputConfiguration;
+import android.media.ImageReader;
+import android.util.Log;
 import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
@@ -12,9 +15,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.lyc.newtestapplication.newtestapplication.BaseActivity;
 import com.lyc.newtestapplication.newtestapplication.FullscreenActivity;
+import com.lyc.newtestapplication.newtestapplication.R;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MyCameraActivity extends FullscreenActivity implements View.OnClickListener {
 
@@ -23,6 +28,7 @@ public class MyCameraActivity extends FullscreenActivity implements View.OnClick
     private CameraHelper cameraHelper;
     private CameraManager cameraManager;
     private ArrayList<Surface> outputs=new ArrayList<>();
+    private ImageReader imageReader=ImageReader.newInstance(900,900,1,1);
 
 
     @Override
@@ -40,16 +46,18 @@ public class MyCameraActivity extends FullscreenActivity implements View.OnClick
         textureView.setSurfaceTextureListener(textureListener);
 
         cameraManager= (CameraManager) getSystemService(Context.CAMERA_SERVICE);
-        cameraHelper=new CameraHelper(cameraManager,outputs);
+
     }
 
     private TextureView.SurfaceTextureListener textureListener=new TextureView.SurfaceTextureListener() {
         @Override
         public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
+            Log.d("MyCameraActivity","  ------------------ textureListener  onSurfaceTextureAvailable----------------");
             outputs.add(new Surface(surface));
+            cameraHelper=new CameraHelper(cameraManager,outputs);
             cameraHelper.init();
             cameraHelper.openCamera();
-            cameraHelper.startPreview();
+
         }
 
         @Override
@@ -59,6 +67,7 @@ public class MyCameraActivity extends FullscreenActivity implements View.OnClick
 
         @Override
         public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
+            cameraHelper.releaseCamera();
             return false;
         }
 

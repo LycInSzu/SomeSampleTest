@@ -68,6 +68,7 @@ import com.mediatek.camera.common.mode.picturezoom.PictureZoomModeEntry;
 import com.mediatek.camera.common.mode.photo.PhotoMode;
 import com.mediatek.camera.common.mode.video.VideoMode;
 import com.mediatek.camera.common.mode.video.intentvideo.IntentVideoModeEntry;
+import com.mediatek.camera.common.relation.StatusMonitor;
 import com.mediatek.camera.common.setting.SettingManager;
 /*prize-add-huangpengfei-2018-11-2-end*/
 /*prize-add for model merging-huangpengfei-2019-02-23-start*/
@@ -145,6 +146,9 @@ public class ModeManager implements IModeListener, IAppUiListener.OnModeChangeLi
     /*prize-modify-bugid:72030-duplicate opencamera will appear in proactive switching mode-xiaoping-20190308-start*/
     private DeviceUsage mNewDeviceUsage = null;
     /*prize-modify-bugid:72030-duplicate opencamera will appear in proactive switching mode-xiaoping-20190308-end*/
+
+    // zhangguo add 20190429, for bug#75110 picselfie icon state is error
+    private String KEY_RESTORE_SETTINGS = "key_restore_settings";
 
     @Override
     public void create(@Nonnull IApp app) {
@@ -524,6 +528,12 @@ public class ModeManager implements IModeListener, IAppUiListener.OnModeChangeLi
             onModeSelected(PhotoModeEntry.class.getName());
         }
         mAppUi.setDefaultShutterIndex();
+
+        // zhangguo add 20190429, for bug#75110 picselfie icon state is error start
+        StatusMonitor statusMonitor = mCameraContext.getStatusMonitor(String.valueOf(currentCameraId));
+        StatusMonitor.StatusResponder responder = statusMonitor.getStatusResponder(KEY_RESTORE_SETTINGS);
+        responder.statusChanged(KEY_RESTORE_SETTINGS, null);
+        // zhangguo add 20190429, for bug#75110 picselfie icon state is error end
     }
 
     /*prize-add for model merging-huangpengfei-2019-02-23-start*/

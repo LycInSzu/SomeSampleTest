@@ -38,7 +38,6 @@ public class SmartScanRestriction {
     private static final String KEY_ZSD = "key_zsd";
     private static final String KEY_DUAL_ZOOM = "key_dual_zoom";
     private static final String KEY_CSHOT = "key_continuous_shot";
-    private static final String KEY_INO_HDR = "key_ino_hdr";
     private static final String KEY_CAMERA_SWITCHER = "key_camera_switcher";
 
 
@@ -50,7 +49,7 @@ public class SmartScanRestriction {
                         KEY_MICROPHONE + "," +
                         KEY_HDR + "," +
                         KEY_COLOR_EFFECT + "," +
-                        KEY_FLASH + "," +
+                        //KEY_FLASH + "," +
 
                         KEY_WHITE_BALANCE + "," +
                         KEY_NOISE_REDUCTION + "," +
@@ -64,12 +63,11 @@ public class SmartScanRestriction {
                         KEY_FACE_DETECTION + "," +
                         KEY_AIS + "," +
                         KEY_DNG + "," +
-                        KEY_SELF_TIMER + "," +
+                        //KEY_SELF_TIMER + "," +
                         KEY_EXPOSURE + "," +
                         KEY_ZSD + "," +
                         KEY_DUAL_ZOOM + "," +
-                        KEY_CSHOT + "," +
-                        KEY_INO_HDR);
+                        KEY_CSHOT);
         sRelationGroup.addRelation(
                 new Relation.Builder(LONG_EXPOSURE_MODE_KEY, "on")
                         .addBody(KEY_EIS, VALUE_OFF, VALUE_OFF)
@@ -88,13 +86,12 @@ public class SmartScanRestriction {
                         .addBody(KEY_FACE_DETECTION, "off", "off")
                         .addBody(KEY_AIS, "off", "off")
                         .addBody(KEY_DNG, "off", "off")
-                        .addBody(KEY_SELF_TIMER, "0", "0")
+                        //.addBody(KEY_SELF_TIMER, "0", "0")
                         .addBody(KEY_EXPOSURE, "0", "0")
                         .addBody(KEY_ZSD, "off", "off")
                         .addBody(KEY_DUAL_ZOOM, "off", "off")
                         .addBody(KEY_CSHOT, "off", "off")
-                        .addBody(KEY_FLASH, "off", "off")
-                        .addBody(KEY_INO_HDR, VALUE_OFF, VALUE_OFF)
+                        //.addBody(KEY_FLASH, null, "off,on")
                         .build());
     }
 

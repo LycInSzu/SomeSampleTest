@@ -17,7 +17,7 @@ public class UVPanoramaUI {
 
     private static final String TAG = "UVPanoramaUI";
 
-    private static final float     mScale     = 0.1172f;
+    private static final float     mScale     = 0.12f;//0.1667f;
     private static final float     mMarginTop = 0.3f;
     private static final float     mRatio     = 9.0f / 16;
 
@@ -26,23 +26,31 @@ public class UVPanoramaUI {
     private int mScreenWidth       = 0;
     private int mScreenHeight      = 0;
 
+    private int mMaxThumbWidth     = 0;
+
     private Bitmap mBmpArrowL2R;
     private Bitmap mBmpArrowR2L;
-    public UVPanoramaUI(Activity activity, RelativeLayout mPanoramaLayout, int width, int height) {
+    public UVPanoramaUI(Activity activity, RelativeLayout mPanoramaLayout, int width, int height, boolean isFrontCamera) {
 
         mScreenWidth  = width;
         mScreenHeight = height;
 
+        Log.e(TAG, "UVPanoramaUI isFrontCamera:" + isFrontCamera);
         //LayoutInflater layoutInflater = LayoutInflater.from(activity);
         //layoutInflater.inflate(R.layout.panorama_layout, root, true);
         //RelativeLayout mPanoramaLayout = root.findViewById(R.id.panorama_layout);
 
 
         RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)mPanoramaLayout.getLayoutParams();
-        params.width     = ViewGroup.LayoutParams.MATCH_PARENT;
         params.height    = (int)(height * mScale);
+        /*if(isFrontCamera){
+            params.width     = (int)(params.height * mRatio * 2.6);
+        }else*/{
+            params.width     = ViewGroup.LayoutParams.MATCH_PARENT;
+        }
         params.topMargin = (int)(height * mMarginTop);
         params.addRule(RelativeLayout.ALIGN_PARENT_TOP, RelativeLayout.TRUE);
+        params.addRule(RelativeLayout.CENTER_HORIZONTAL, RelativeLayout.TRUE);
         mPanoramaLayout.setLayoutParams(params);
 
 
@@ -50,7 +58,11 @@ public class UVPanoramaUI {
         RelativeLayout.LayoutParams spParams = (RelativeLayout.LayoutParams)mSmallPreview.getLayoutParams();
         spParams.height  = mSmallPreviewHeight = (int)(height * mScale);
         spParams.width   = mSmallPreviewWidth  = (int)(params.height * mRatio);
-        spParams.addRule(RelativeLayout.ALIGN_PARENT_START);
+        if (isFrontCamera) {
+            spParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+        } else {
+            spParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
+        }
         mSmallPreview.setLayoutParams(spParams);
         mSmallPreview.setVisibility(View.VISIBLE);
 
@@ -58,12 +70,25 @@ public class UVPanoramaUI {
         RelativeLayout.LayoutParams tpParams = (RelativeLayout.LayoutParams)mThumbPreview.getLayoutParams();
         tpParams.width   = ViewGroup.LayoutParams.WRAP_CONTENT;
         tpParams.height  = (int)(height * mScale);
-        tpParams.addRule(RelativeLayout.ALIGN_PARENT_START);
+
+        if (isFrontCamera) {
+            tpParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+        } else {
+            tpParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
+        }
+
+        tpParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
         mThumbPreview.setLayoutParams(tpParams);
         mThumbPreview.setVisibility(View.INVISIBLE);
 
         mBmpArrowL2R = BitmapFactory.decodeResource(activity.getResources(), R.drawable.ltr);
         mBmpArrowR2L = BitmapFactory.decodeResource(activity.getResources(), R.drawable.rtl);
+
+        if (isFrontCamera) {
+            mMaxThumbWidth = mScreenWidth / 3;
+        } else {
+            mMaxThumbWidth = mScreenWidth;
+        }
     }
 
     private SurfaceView mSmallPreview;
@@ -95,10 +120,11 @@ public class UVPanoramaUI {
         }
     }
 
-    public void initThumbPreview(int previewWidth, int previewHeight, int format, int capDirection) {
+    public void initThumbPreview(int previewWidth, int previewHeight, int format, int capDirection, boolean isFrontCamera) {
 
         if (null != mUVPanoramaInterface) {
-            mUVPanoramaInterface.initThumbPreview(mThumbPreview, previewWidth, previewHeight, format, capDirection);
+            mUVPanoramaInterface.initThumbPreview(mThumbPreview, previewWidth, previewHeight, mMaxThumbWidth,
+                    mSmallPreviewWidth, mSmallPreviewHeight, format, capDirection, isFrontCamera);
 
             mUVPanoramaInterface.setThumbPreviewScreenSize(mScreenWidth, mScreenHeight, mScale);
         } else {
@@ -123,7 +149,7 @@ public class UVPanoramaUI {
         if (null != mUVPanoramaInterface) {
             mUVPanoramaInterface.startThumbPreview(object);
         } else {
-            Log.e(TAG, "updateThumbPreview null == mUVPanoramaInterface err");
+            Log.e(TAG, "startThumbPreview null == mUVPanoramaInterface err");
         }
     }
 

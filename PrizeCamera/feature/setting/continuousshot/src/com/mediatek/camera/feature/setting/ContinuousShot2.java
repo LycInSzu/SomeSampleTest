@@ -49,6 +49,7 @@ import android.hardware.camera2.TotalCaptureResult;
 import android.os.Build;
 import android.view.Surface;
 
+import com.mediatek.camera.common.IAppUi;
 import com.mediatek.camera.common.IAppUiListener.OnShutterButtonListener;
 import com.mediatek.camera.common.ICameraContext;
 import com.mediatek.camera.common.app.IApp;
@@ -218,6 +219,15 @@ public class ContinuousShot2 extends ContinuousShotBase implements ICaptureReque
     }
 
     protected boolean stopContinuousShot() {
+
+        // zhangguo add 20190430, for continus shot can not callback start
+        if(mAppUi.getModeItem() != null && mAppUi.getModeItem().mModeTitle == IAppUi.ModeTitle.PHOTO){
+            CaptureSurface sharedCaptureSurface = mSettingDevice2Requester
+                    .getModeSharedCaptureSurface();
+            sharedCaptureSurface.setContinusShot(false);
+        }
+        // zhangguo add 20190430, for continus shot can not callback end
+
         if (mState.getCShotState() == State.STATE_ERROR) {
             onContinuousShotStopped();
             onContinuousShotDone(0);
@@ -244,6 +254,13 @@ public class ContinuousShot2 extends ContinuousShotBase implements ICaptureReque
                     onContinuousShotDone(mImageCallbackNumber);
                     stopSound();
                     mState.updateState(State.STATE_INIT);
+                    // zhangguo add 20190507, for continus shot can not callback start
+                    if(mAppUi.getModeItem() != null && mAppUi.getModeItem().mModeTitle == IAppUi.ModeTitle.PHOTO){
+                        CaptureSurface sharedCaptureSurface = mSettingDevice2Requester
+                                .getModeSharedCaptureSurface();
+                        sharedCaptureSurface.setContinusShot(false);
+                    }
+                    // zhangguo add 20190507, for continus shot can not callback end
                 }
             });
             return true;
@@ -279,7 +296,11 @@ public class ContinuousShot2 extends ContinuousShotBase implements ICaptureReque
         Surface captureSurface = sharedCaptureSurface.getSurface();
         Assert.assertNotNull(captureSurface);
         captureBuilder.addTarget(captureSurface);
+        sharedCaptureSurface.setContinusShot(false);
         sharedCaptureSurface.setCaptureCallback(mImageCallback);
+        if(!isContinusStoped() && mAppUi.getModeItem() != null && mAppUi.getModeItem().mModeTitle == IAppUi.ModeTitle.PHOTO){
+            sharedCaptureSurface.setContinusShot(true);// zhangguo add 20190430, for continus shot can not callback
+        }
         Surface thumbnailSurface = mSettingDevice2Requester.getModeSharedThumbnailSurface();
         captureBuilder.removeTarget(thumbnailSurface);
         prepareCaptureInfo(captureBuilder);
@@ -316,7 +337,11 @@ public class ContinuousShot2 extends ContinuousShotBase implements ICaptureReque
                 if (data != null) {
                     mImageCallbackNumber ++;
                     LogHelper.d(TAG, "[mImageCallback] Number = " + mImageCallbackNumber);
-                    saveJpeg(data);
+                    // zhangguo add 20190507, for continus shot can not callback start
+                    if(!isContinusStoped()){
+                        saveJpeg(data);
+                    }
+                    // zhangguo add 20190507, for continus shot can not callback end
                     if (mImageCallbackNumber >= MAX_CAPTURE_NUMBER) {
                         CaptureSurface sharedCaptureSurface = mSettingDevice2Requester
                                 .getModeSharedCaptureSurface();

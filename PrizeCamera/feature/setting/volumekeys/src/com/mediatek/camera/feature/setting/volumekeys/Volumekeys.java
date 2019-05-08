@@ -57,6 +57,7 @@ public class Volumekeys extends SettingBase {
         super.addViewEntry();
         if (mSettingView == null) {
             mSettingView = new VolumekeysSettingView(getKey());
+            mSettingView.setContext(mActivity);
         }
         mSettingView.setOnDataChangeListener(new VolumekeysSettingView.OnDataChangeListener() {
             @Override
@@ -74,6 +75,7 @@ public class Volumekeys extends SettingBase {
         });
         mAppUi.addSettingView(mSettingView);
         mSettingView.setValue(getValue());
+        mSettingView.setEnabled(true);
     }
 
     @Override

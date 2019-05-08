@@ -50,6 +50,7 @@ import com.mediatek.camera.common.setting.ICameraSettingView;
 /*prize-add-huangpengfei-2018-10-25-start*/
 import com.mediatek.camera.common.widget.PrizeSettingDialog;
 import com.mediatek.camera.prize.PrizeLifeCycle;
+import com.mediatek.camera.ui.prize.PrizeCameraSettingView;
 /*prize-add-huangpengfei-2018-10-25-end*/
 
 import java.util.ArrayList;
@@ -59,7 +60,7 @@ import java.util.List;
  * This class is for self timer feature setting view.
  */
 
-public class SelfTimerSettingView  implements ICameraSettingView ,PrizeLifeCycle {
+public class SelfTimerSettingView extends PrizeCameraSettingView implements ICameraSettingView ,PrizeLifeCycle {
     private static final LogUtil.Tag TAG =
             new LogUtil.Tag(SelfTimerSettingView.class.getSimpleName());
 
@@ -71,6 +72,10 @@ public class SelfTimerSettingView  implements ICameraSettingView ,PrizeLifeCycle
     private Activity mContext;
     private boolean mEnabled;
     private PrizeSettingDialog mPrizeSettingDialog;//prize-add-huangpengfei-2018-10-25
+
+    public void setContext(Activity context){
+        mContext = context;
+    }
 
     @Override
     public void loadView(PreferenceFragment fragment) {
@@ -231,4 +236,53 @@ public class SelfTimerSettingView  implements ICameraSettingView ,PrizeLifeCycle
         }
     }
     /*prize-add-huangpengfei-2018-10-25-end*/
+
+
+    private static final int ICONS[] = new int[]{
+            R.drawable.prize_selector_selftimer_off,
+            R.drawable.prize_selector_selftimer_2,
+            R.drawable.prize_selector_selftimer_10,
+    };
+
+    public int[] getIcons() {
+        return ICONS;
+    }
+
+    @Override
+    public List<String> getEntryValues() {
+        return mEntryValues;
+    }
+
+    @Override
+    public List<String> getEntrys() {
+        ArrayList<String> entrys = new ArrayList<>();
+        entrys.add(mContext.getResources().getString(R.string.self_timer_entry_off));
+        entrys.add(mContext.getResources().getString(R.string.self_timer_entry_2));
+        entrys.add(mContext.getResources().getString(R.string.self_timer_entry_10));
+        return entrys;
+    }
+
+    public String getValue() {
+        return mSelectedValue;
+    }
+
+    public int getTitle() {
+        return R.string.self_timer_title;
+    }
+
+    public void onValueChanged(String newValue){
+        mSelectedValue = newValue;
+        if (mOnValueChangeListener != null) {
+            mOnValueChangeListener.onValueChanged(newValue);
+        }
+    }
+
+    @Override
+    public int getSettingType() {
+        return SETTING_TYPE_LIST;
+    }
+
+    public int getOrder(){
+        return 60;
+    }
 }

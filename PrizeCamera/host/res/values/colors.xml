@@ -34,4 +34,6 @@
     <!--prize-modify-Camera application should be closed as pressing 2 times back button-xiaoping-20190301-end-->
 
     <color name="blur_button_text">#fecb00</color>
+
+    <color name="prize_setting_background">#BC000000</color>
 </resources>

@@ -99,12 +99,12 @@ public class PreviewMode extends SettingBase implements
             mSettingView = new PreviewModeSettingView(mActivity, getKey());
             mSettingView.setOnValueChangeListener(PreviewMode.this);
         }
-        mAppUi.addSettingView(mSettingView);
+        //mAppUi.addSettingView(mSettingView); // zhangguo del 20190429
     }
 
     @Override
     public void removeViewEntry() {
-        mAppUi.removeSettingView(mSettingView);
+        //mAppUi.removeSettingView(mSettingView); // zhangguo del 20190429
     }
 
     @Override

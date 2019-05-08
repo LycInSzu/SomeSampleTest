@@ -12,9 +12,13 @@ import com.mediatek.camera.R;
 import com.mediatek.camera.common.widget.PrizeSettingDialog;
 import com.mediatek.camera.feature.setting.selftimer.ISelfTimerViewListener;
 import com.mediatek.camera.prize.PrizeLifeCycle;
+import com.mediatek.camera.ui.prize.PrizeCameraSettingView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
-public class VolumekeysSettingView implements ICameraSettingView,PrizeLifeCycle {
+public class VolumekeysSettingView extends PrizeCameraSettingView implements ICameraSettingView,PrizeLifeCycle {
     private static final LogUtil.Tag TAG = new LogUtil.Tag(VolumekeysSettingView.class.getSimpleName());
     private final String mKey;
     private PrizeListPreference mPref;
@@ -125,4 +129,65 @@ public class VolumekeysSettingView implements ICameraSettingView,PrizeLifeCycle 
         }
     }
     /*prize-modify-add function item highlighted in the setting item is highlighted-xiaoping-20190409-end*/
+
+    
+    private List<String> mSettingEntryValues;
+
+    private static final int ICONS[] = new int[]{
+            R.drawable.prize_selector_volume_sound,
+            R.drawable.prize_selector_volume_capture,
+            R.drawable.prize_selector_volume_zoom,
+    };
+
+    public int[] getIcons() {
+        return ICONS;
+    }
+
+    @Override
+    public List<String> getEntryValues() {
+        if(null == mSettingEntryValues){
+            mSettingEntryValues = new ArrayList<>(3);
+            mSettingEntryValues.add("0");
+            mSettingEntryValues.add("1");
+            mSettingEntryValues.add("2");
+        }
+        return mSettingEntryValues;
+    }
+
+    public void setContext(Activity activity){
+        mContext = activity;
+    }
+
+    @Override
+    public List<String> getEntrys() {
+        ArrayList<String> entrys = new ArrayList<>();
+        entrys.add(mContext.getResources().getString(R.string.pref_camera_volumekeys_volume));
+        entrys.add(mContext.getResources().getString(R.string.pref_camera_volumekeys_shoot));
+        entrys.add(mContext.getResources().getString(R.string.pref_camera_volumekeys_zoom));
+        return entrys;
+    }
+
+    public String getValue() {
+        return mValue;
+    }
+
+    public int getTitle() {
+        return R.string.pref_camera_volumekeys_title;
+    }
+
+    public void onValueChanged(String newValue){
+        mValue = newValue;
+        if (mOnDataChangeListener != null){
+            mOnDataChangeListener.onDataChange(newValue);
+        }
+    }
+
+    @Override
+    public int getSettingType() {
+        return SETTING_TYPE_LIST;
+    }
+
+    public int getOrder(){
+        return 75;
+    }
 }

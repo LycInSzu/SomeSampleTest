@@ -45,12 +45,13 @@ import com.mediatek.camera.R;
 import com.mediatek.camera.common.debug.LogUtil;
 import com.mediatek.camera.common.preference.SwitchPreference;
 import com.mediatek.camera.common.setting.ICameraSettingView;
+import com.mediatek.camera.ui.prize.PrizeCameraSettingView;
 
 /**
  * AIS setting view.
  */
 
-public class AISSettingView implements ICameraSettingView {
+public class AISSettingView extends PrizeCameraSettingView implements ICameraSettingView {
     private static final LogUtil.Tag TAG = new LogUtil.Tag(AISSettingView.class.getSimpleName());
     private static final String KEY_AIS = "key_ais";
     private OnAisClickListener mAisClickListener;
@@ -130,5 +131,9 @@ public class AISSettingView implements ICameraSettingView {
     public void setChecked(boolean checked) {
         mChecked = checked;
         refreshView();
+    }
+
+    public int getOrder(){
+        return 20;
     }
 }

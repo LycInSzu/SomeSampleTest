@@ -38,7 +38,10 @@
         android:id="@+id/textview_tip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/pano_layout"/>
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/panorama_layout"/>
 
     <RelativeLayout
         android:id="@+id/pano_container"

@@ -79,16 +79,18 @@ public class ISO extends SettingBase implements ISOSettingView.OnValueChangeList
         if (!mIsSupported) {
             return;
         }
-        if (mSettingView == null) {
+		// zhangguo delete 20190506, for new setting style start
+        /*if (mSettingView == null) {
             mSettingView = new ISOSettingView(getKey(), mActivity);
             mSettingView.setOnValueChangeListener(this);
         }
-        mAppUi.addSettingView(mSettingView);
+        mAppUi.addSettingView(mSettingView);*/
+		 // zhangguo delete 20190506, for new setting style end
     }
 
     @Override
     public void removeViewEntry() {
-        mAppUi.removeSettingView(mSettingView);
+        //mAppUi.removeSettingView(mSettingView); // zhangguo delete 20190506, for new setting style
     }
 
     @Override

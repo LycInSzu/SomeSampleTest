@@ -806,6 +806,14 @@ public class FocusCaptureRequestConfigure implements ICameraSetting.ICaptureRequ
         public void onCaptureCompleted(CameraCaptureSession session, CaptureRequest request,
                                        TotalCaptureResult result) {
             super.onCaptureCompleted(session, request, result);
+
+            // zhangguo add 20190430, for continus shot can not callback start
+            if(mFocus.isContinusShot()){
+                LogHelper.w(TAG, "focus completed is continusshot return");
+                return;
+            }
+            // zhangguo add 20190430, for continus shot can not callback end
+
             if (result != null) {
                 Rect rect = result.get(CaptureResult.SCALER_CROP_REGION);
                 if (rect != null) {

@@ -613,7 +613,7 @@ public class ExposureCaptureRequestConfigure implements ICameraSetting.ICaptureR
         String flashValue = mExposure.getCurrentFlashValue();
         if (FLASH_ON_VALUE.equalsIgnoreCase(flashValue)) {
             if (mNeedChangeFlashModeToTorch ||
-                    mExposure.getCurrentModeType() == ICameraMode.ModeType.VIDEO) {
+                    mExposure.getCurrentModeType() == ICameraMode.ModeType.VIDEO || mExposure.isTorchMode()) { // zhangguo modify 20190507, for smartscan torch mode
                 mAEMode = CameraMetadata.CONTROL_AE_MODE_ON;
                 return;
             }

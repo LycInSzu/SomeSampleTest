@@ -247,6 +247,11 @@ public class PhotoDevice2Controller extends Device2Controller implements
                 /*prize-modify-add professional mode function-xiaoping-20190216-start*/
                 isCloseCamera = false;
                 /*prize-modify-add professional mode function-xiaoping-20190216-end*/
+// zhangguo add 20190507, for continus shot can not callback start
+                if(null != mCaptureSurface){
+                    mCaptureSurface.setContinusShot(false);
+                }
+// zhangguo add 20190507, for continus shot can not callback end
                 doOpenCamera(sync);
                 if (mNeedSubSectionInitSetting) {
                     mSettingManager.createSettingsByStage(1);
@@ -868,7 +873,9 @@ public class PhotoDevice2Controller extends Device2Controller implements
 // zhangguo modify protected 20190422, for picselfiemode set picture size
     protected Size getTargetPreviewSize(double ratio) {
         Size values = null;
-
+        /*prize-modify-Limit the preview size and picturesize of the algorithm mode-xiaoping-20190430-start*/
+        boolean is640Preview = false;
+        /*prize-modify-Limit the preview size and picturesize of the algorithm mode-xiaoping-20190430-end*/
         try {
             CameraCharacteristics cs = mCameraManager.getCameraCharacteristics(mCurrentCameraId);
             StreamConfigurationMap streamConfigurationMap =
@@ -879,13 +886,31 @@ public class PhotoDevice2Controller extends Device2Controller implements
             List<Size> sizes = new ArrayList<>(length);
 
             for (int i = 0; i < length; i++) {
+                /*prize-modify-Limit the preview size and picturesize of the algorithm mode-xiaoping-20190430-start*/
+                if (SystemProperties.getInt("ro.pri.current.project",0) == 5 && previewSizes[i].getWidth() == 640 && previewSizes[i].getHeight() == 480) {
+                    is640Preview = true;
+                }
+                /*prize-modify-Limit the preview size and picturesize of the algorithm mode-xiaoping-20190430-end*/
                 sizes.add(i, new Size(previewSizes[i].getWidth(), previewSizes[i].getHeight()));
             }
 
             LogHelper.i(TAG,"previewsize: "+sizes);
             /*prize-modify-add for Set different preview sizes for different modes-xiaoping-20181205-start*/
 //            values = CameraUtil.getOptimalPreviewSize(mActivity, sizes, ratio, true);
-            values = CameraUtil.getOptimalPreviewSize(mApp, sizes, ratio, true);
+            /*prize-modify-Limit the preview size and picturesize of the algorithm mode-xiaoping-20190430-start*/
+            if (SystemProperties.getInt("ro.pri.current.project",0) == 5) {
+                if (mApp.getAppUi() != null && mApp.getAppUi().getModeItem() != null && (mApp.getAppUi().getModeItem().mModeTitle == IAppUi.ModeTitle.BEAUTY
+                        || mApp.getAppUi().getModeItem().mModeTitle == IAppUi.ModeTitle.FILTER
+                        || mApp.getAppUi().getModeItem().mModeTitle == IAppUi.ModeTitle.FICSEFILE
+                        || "on".equals(mApp.getSettingValue("key_picsefile","off",Integer.valueOf(getCameraId())))) && is640Preview) {
+                    values = new Size(640,480);
+                    /*prize-modify-Limit the preview size and picturesize of the algorithm mode-xiaoping-20190430-end*/
+                } else {
+                    values = CameraUtil.getOptimalPreviewSize(mApp, sizes, ratio, true);
+                }
+            } else {
+                values = CameraUtil.getOptimalPreviewSize(mApp, sizes, ratio, true);
+            }
             /*prize-modify-add for Set different preview sizes for different modes-xiaoping-20181205-end*/
             mPreviewWidth = values.getWidth();
             mPreviewHeight = values.getHeight();

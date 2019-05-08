@@ -194,6 +194,9 @@ public class Focus extends SettingBase implements
     private static final int STOP_FOCUSVIEW_ANIMATION = 5;
     private static final int FALSE_FOCUS_DELAYTIME = 300;
     /*prize-modify-add False focus for front camera-xiaoping-20181214-end*/
+
+    private boolean mIsContinuesShot; // zhangguo add 20190429, for continus shot
+
     @Override
     public void init(IApp app,
                      ICameraContext cameraContext,
@@ -896,6 +899,7 @@ public class Focus extends SettingBase implements
                         /*prize-modify-bugid:68728 Continuous shooting after turning on the flash cannot continue taking pictures-xiaoping-20181205-start*/
 //                        isNeedAfTriggerDone = false;
                         /*prize-modify-bugid:68728 Continuous shooting after turning on the flash cannot continue taking pictures-xiaoping-20181205-end*/
+                        mIsContinuesShot = true; // zhangguo add, for continus shot
                         if (isNeedAfTriggerDone) {
                             if (mNeedResetTouchFocus) {
                                 mModeHandler.removeMessages(RESET_TOUCH_FOCUS);
@@ -913,6 +917,7 @@ public class Focus extends SettingBase implements
                                     .statusChanged(FOCUS_STATE_KEY, "ACTIVE_FOCUSED");
                         }
                     } else if (VALUE_CSHOT_STOP.equals(value)) {
+                        mIsContinuesShot = false; // zhangguo add, for continus shot
                         if (mNeedDoCancelAutoFocus) {
                             mModeHandler.post(new Runnable() {
                                 @Override
@@ -955,6 +960,13 @@ public class Focus extends SettingBase implements
                     LogHelper.w(mTag, "[onFocusStateUpdate] disable update passive focus state ");
                     return;
                 }
+
+                // zhangguo add 20190429, for continus shot start
+                if(mIsContinuesShot){
+                    LogHelper.w(mTag, "[onFocusStateUpdate] disable update passive focus state continus shot");
+                    return;
+                }
+                // zhangguo add 20190429, for continus shot start end
 
                 mAppUi.setFocusPoint(null); // prize add by zhangguo 20190419, for bug#74593, dualcam focus point error
 
@@ -1379,4 +1391,10 @@ public class Focus extends SettingBase implements
         return mDataStore.getValue("key_continuous_shot","off",getStoreScope());
     }
     /*prize-modify-bug:69847 turn off the flash during continuous shooting-xiaoping-20181226-end*/
+
+    // zhangguo add 20190430, for continus shot can not callback start
+    public boolean isContinusShot(){
+        return mIsContinuesShot;
+    }
+    // zhangguo add 20190430, for continus shot can not callback end
 }

@@ -121,9 +121,13 @@ public class SelfTimer extends SettingBase implements IAppUiListener.OnShutterBu
 
     @Override
     public void addViewEntry() {
-        mSelfTimerSettingView = mSelfTimerCtrl.getSelfTimerSettingView();
-        mSelfTimerSettingView.setOnValueChangeListener(mValueChangeListener);
-        mAppUi.addSettingView(mSelfTimerSettingView);
+        // zhangguo add 20190507, panoroma and gif mode not support selftimer
+        if(isSelfTimerSupport()){
+            mSelfTimerSettingView = mSelfTimerCtrl.getSelfTimerSettingView();
+            mSelfTimerSettingView.setContext(mActivity);
+            mSelfTimerSettingView.setOnValueChangeListener(mValueChangeListener);
+            mAppUi.addSettingView(mSelfTimerSettingView);
+        }
         LogHelper.d(TAG, "[addViewEntry] getValue() :" + getValue());
     }
 
@@ -142,6 +146,12 @@ public class SelfTimer extends SettingBase implements IAppUiListener.OnShutterBu
             mSelfTimerSettingView.setEntryValues(getEntryValues());
             mSelfTimerSettingView.setValue(getValue());
             mSelfTimerSettingView.setEnabled(size > 1);
+
+            // zhangguo add 20190507, panoroma and gif mode not support selftimer start
+            if(mSelfTimerSettingView.isEnabled()){
+                mSelfTimerSettingView.setEnabled(isSelfTimerSupport());
+            }
+            // zhangguo add 20190507, panoroma and gif mode not support selftimer end
         }
 
         if (size <= 1) {
@@ -371,7 +381,7 @@ public class SelfTimer extends SettingBase implements IAppUiListener.OnShutterBu
     }
 
     private boolean needSelfTimerStart(String referenceValue) {
-        if (ISelfTimerViewListener.OFF.equals(referenceValue)) {
+        if (ISelfTimerViewListener.OFF.equals(referenceValue) || !isSelfTimerSupport()) { // zhangguo modify 20190507, panoroma and gif mode not support selftimer
             return false;
         } else {
             return true;
@@ -397,4 +407,13 @@ public class SelfTimer extends SettingBase implements IAppUiListener.OnShutterBu
         mValueChangeListener.onValueChanged("0");
     }
     /*prize-add-huangpengfei-2018-11-17-end*/
+
+    // zhangguo add 20190507, panoroma and gif mode not support selftimer start
+    private boolean isSelfTimerSupport(){
+        if(null != mAppUi.getModeItem() && (mAppUi.getModeItem().mModeTitle == IAppUi.ModeTitle.PANO || mAppUi.getModeItem().mModeTitle == IAppUi.ModeTitle.GIF)){
+            return false;
+        }
+        return true;
+    }
+    // zhangguo add 20190507, panoroma and gif mode not support selftimer end
 }

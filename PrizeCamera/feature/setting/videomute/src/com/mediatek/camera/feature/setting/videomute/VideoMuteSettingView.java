@@ -8,8 +8,9 @@ import com.mediatek.camera.common.debug.LogHelper;
 import com.mediatek.camera.common.debug.LogUtil;
 import com.mediatek.camera.common.preference.SwitchPreference;
 import com.mediatek.camera.common.setting.ICameraSettingView;
+import com.mediatek.camera.ui.prize.PrizeCameraSettingView;
 
-public class VideoMuteSettingView implements ICameraSettingView {
+public class VideoMuteSettingView extends PrizeCameraSettingView implements ICameraSettingView {
     private static final LogUtil.Tag TAG = new LogUtil.Tag(VideoMuteSettingView.class.getSimpleName());
 
     private OnVideoMuteClickListener mOnVideoMuteClickListener;
@@ -77,5 +78,33 @@ public class VideoMuteSettingView implements ICameraSettingView {
     }
     public void setChecked(boolean checked) {
         mChecked = checked;
+    }
+
+
+
+    private static final int ICONS[] = new int[]{
+            R.drawable.prize_setting_videomute_on,
+            R.drawable.prize_setting_videomute_off,
+    };
+
+    public int[] getIcons() {
+        return ICONS;
+    }
+
+    public String getValue() {
+        return mChecked ? VALUES_ON : VALUES_OFF;
+    }
+
+    public int getTitle() {
+        return R.string.pref_camera_videomute_title;
+    }
+
+    public void onValueChanged(String newValue){
+        mChecked = VALUES_ON.equals(newValue);
+        mOnVideoMuteClickListener.onVideoMuteClicked(mChecked);
+    }
+
+    public int getOrder(){
+        return 52;
     }
 }

@@ -176,8 +176,8 @@ public class TouchShutter extends SettingBase implements TouchShutterSettingView
         LogHelper.d(TAG, "[onMirrorClicked], value:" + value);
         setValue(value);
         /*prize-modify-feature Camera front and rear settings remain the same-xiaoping-20190420-start*/
-        mDataStore.setValue(getKey(), value, getBackStoreScope(), false);
-        mDataStore.setValue(getKey(), value, getFrontStoreScope(), false);
+//        mDataStore.setValue(getKey(), value, getStoreScope(), false);
+        setAllCameraIdSettingValue(mActivity,value,false);
         /*prize-modify-feature Camera front and rear settings remain the same-xiaoping-20190420-end*/
         mHandler.post(new Runnable() {
                 @Override
@@ -205,6 +205,9 @@ public class TouchShutter extends SettingBase implements TouchShutterSettingView
             setEntryValues(platformSupportedValues);
             String value = mDataStore.getValue(getKey(), defaultValue, getStoreScope());
             setValue(value);
+            /*prize-modify-opt-Write data to Preferences when the setting item is initialized-xiaoping-20190506-start*/
+            setAllCameraIdSettingValue(mActivity,value,false);
+            /*prize-modify-opt-Write data to Preferences when the setting item is initialized-xiaoping-20190506-end*/
         }
     }
 }

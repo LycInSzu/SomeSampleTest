@@ -96,6 +96,7 @@ public class FeatureSwitcher {
      * value 2:k6203q vs
      * value 3:K6309Q_Allview
      * value 4:K6309Q_Condor
+     * value 5:k607t2kb
      * @return
      */
     public static int getCurrentProjectValue() {
@@ -174,8 +175,17 @@ public class FeatureSwitcher {
      * @return
      */
     public static int getVideoFocusMode() {
-        int value = SystemProperties.getInt("ro.pri.current.project",0);
+        int value = SystemProperties.getInt("ro.pri.video.focus.mode",0);
         LogHelper.i(TAG,"getVideoFocusMode: "+value);
         return value;
+    }
+	
+	
+    public static boolean isProfessionalSupport(){
+        return "1".equals(android.os.SystemProperties.get("ro.pri.professional.mode", "0"));
+    }
+
+    public static boolean isNewSettingStyleSupport(){
+        return "1".equals(android.os.SystemProperties.get("ro.pri.settings.newstyle", "0"));
     }
 }

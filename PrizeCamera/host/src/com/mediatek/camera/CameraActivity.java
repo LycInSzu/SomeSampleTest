@@ -350,7 +350,7 @@ public class CameraActivity extends PermissionActivity implements IApp {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         /*prize add for bug[75253]-huangpengfei-2019-04-28-start*/
         for (OnTouchListener l : mOnTouchListeners) {
-            l.onTouch();
+            l.onTouch(null);
         }
         /*prize add for bug[75253]-huangpengfei-2019-04-28-end*/
         Iterator iterator = mKeyEventListeners.entrySet().iterator();
@@ -755,13 +755,13 @@ public class CameraActivity extends PermissionActivity implements IApp {
                         mUiHandler.sendEmptyMessage(MSG_HIDE_EXIT_APP_TIPS);
                     }
                     mTimeCount = 0;
-                    for (OnTouchListener l : mOnTouchListeners) {
-                        l.onTouch();
-                    }
                     LogHelper.d(TAG, "MotionEvent.ACTION_DOWN"+"Click coordinates,getX: "+event.getX()+",getY: "+event.getY()+",getRawX: "+event.getRawX()+",getRawY: "+event.getRawY());
                     break;
                 case MotionEvent.ACTION_UP:
                     mTimeCount = 0;
+                    for (OnTouchListener l : mOnTouchListeners) {
+                        l.onTouch(event);
+                    }
                     LogHelper.d(TAG, "MotionEvent.ACTION_UP");
                     break;
                 default:
@@ -888,7 +888,7 @@ public class CameraActivity extends PermissionActivity implements IApp {
 
     public void reset(){
         /*prize-modify-add professional mode function-xiaoping-20190216-start*/
-        mCameraAppUI.reset();
+        mCameraAppUI.resetSettings();
         /*prize-modify-add professional mode function-xiaoping-20190216-end*/
         /*prize-add camera restore settings-haungpengfei-20181112-start*/
         mModeManager.reset();

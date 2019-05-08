@@ -191,7 +191,7 @@ public class FlashRequestConfigure implements ICameraSetting.ICaptureRequestConf
         LogHelper.i(TAG,"mFlash.getValue: "+mFlash.getValue());
         if (Flash.FLASH_ON_VALUE.equalsIgnoreCase(mFlash.getValue())) {
             if (mNeedChangeFlashModeToTorch /*||
-                    mFlash.getCurrentModeType() == ICameraMode.ModeType.VIDEO*/) {
+                    mFlash.getCurrentModeType() == ICameraMode.ModeType.VIDEO*/ || mFlash.isTorchMode()) { // zhangguo modify 20190507, for smartscan torch mode
                 //prize-modify-bugid:69392 
                 mFlashMode = CameraMetadata.FLASH_MODE_TORCH;
                 return;

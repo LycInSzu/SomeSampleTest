@@ -201,4 +201,11 @@ public class PicselfieParameterViewController {
         }
     }
     /*prize-modify-add tips of picselfiemode -xiaoping-20190417-end*/
+
+    public void restoreSettings(){
+        mPicselfieValue = VALUES_OFF;
+        if(null != mPicselfieIndicatorView){
+            mPicselfieIndicatorView.setImageResource(R.drawable.picselfie_off);
+        }
+    }
 }

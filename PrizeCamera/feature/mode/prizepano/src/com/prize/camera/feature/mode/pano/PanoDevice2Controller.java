@@ -146,8 +146,6 @@ public class PanoDevice2Controller extends Device2Controller implements IPanoDev
             }
 
         }
-
-
     }
 
     @Override
@@ -254,26 +252,17 @@ public class PanoDevice2Controller extends Device2Controller implements IPanoDev
         LogHelper.i(TAG, "[closeCamera] + sync = " + sync + ",current state : " + mCameraState);
         if (CameraState.CAMERA_UNKNOWN != mCameraState) {
             try {
-                LogHelper.i(TAG, "[closeCamera] 1111111");
                 mDeviceLock.tryLock(WAIT_TIME, TimeUnit.SECONDS);
-                LogHelper.i(TAG, "[closeCamera] 22222");
                 super.doCameraClosed(mCamera2Proxy);
-                LogHelper.i(TAG, "[closeCamera] 333");
                 updateCameraState(CameraState.CAMERA_CLOSING);
                 abortOldSession();
-                LogHelper.i(TAG, "[closeCamera] 4444");
                 if (mModeDeviceCallback != null) {
                     mModeDeviceCallback.beforeCloseCamera();
                 }
-                LogHelper.i(TAG, "[closeCamera] 5555");
                 doCloseCamera(sync);
-                LogHelper.i(TAG, "[closeCamera] 666");
                 updateCameraState(CameraState.CAMERA_UNKNOWN);
-                LogHelper.i(TAG, "[closeCamera] 777");
                 recycleVariables();
-                LogHelper.i(TAG, "[closeCamera] 888");
                 mCaptureSurface.releaseCaptureSurface();
-                LogHelper.i(TAG, "[closeCamera] 999");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } finally {
@@ -671,7 +660,7 @@ public class PanoDevice2Controller extends Device2Controller implements IPanoDev
             List<Size> sizes = new ArrayList<>(length);
             int count = 0;
             for (int i = 0; i < length; i++) {
-                if((float)previewSizes[i].getWidth() / previewSizes[i].getHeight() - PANO_RATIO < 0.01){
+                if((float)previewSizes[i].getWidth() / previewSizes[i].getHeight() - PANO_RATIO < 0.01 && previewSizes[i].getWidth() * previewSizes[i].getHeight() <= 1280 * 720){
                     sizes.add(count++, new Size(previewSizes[i].getWidth(), previewSizes[i].getHeight()));
                 }
             }

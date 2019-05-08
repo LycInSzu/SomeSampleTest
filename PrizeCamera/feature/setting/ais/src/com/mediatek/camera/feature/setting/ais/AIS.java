@@ -76,7 +76,8 @@ public class AIS extends SettingBase implements AISSettingView.OnAisClickListene
 
     @Override
     public void addViewEntry() {
-        mActivity.runOnUiThread(new Runnable() {
+        // zhangguo delete 20190506 start
+        /*mActivity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 if (mSettingView == null) {
@@ -85,12 +86,13 @@ public class AIS extends SettingBase implements AISSettingView.OnAisClickListene
                 }
                 mAppUi.addSettingView(mSettingView);
             }
-        });
+        });*/
+        // zhangguo delete 20190506 end
     }
 
     @Override
     public void removeViewEntry() {
-        mAppUi.removeSettingView(mSettingView);
+        //mAppUi.removeSettingView(mSettingView); // zhangguo delete 20190506
     }
 
     @Override

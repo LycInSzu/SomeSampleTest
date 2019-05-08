@@ -94,7 +94,8 @@ public class SceneMode extends SettingBase implements
 
     @Override
     public void addViewEntry() {
-        if (mSettingView == null) {
+	// zhangguo delete 20190506, for new setting style start
+        /*if (mSettingView == null) {
             mSettingView = new SceneModeSettingView(mActivity, getKey());
             mSettingView.setOnValueChangeListener(SceneMode.this);
         }
@@ -104,16 +105,19 @@ public class SceneMode extends SettingBase implements
         LogHelper.d(TAG, "[addViewEntry], mSettingView:" + mSettingView);
         mAppUi.addSettingView(mSettingView);
         mAppUi.addToIndicatorView(mIndicatorView.getView(),
-                mIndicatorView.getViewPriority());
+                mIndicatorView.getViewPriority());*/
+	// zhangguo delete 20190506, for new setting style end
     }
 
     @Override
     public void removeViewEntry() {
         LogHelper.d(TAG, "[removeViewEntry], mSettingView:" + mSettingView);
-        mAppUi.removeSettingView(mSettingView);
+		// zhangguo delete 20190506, for new setting style start
+        /*mAppUi.removeSettingView(mSettingView);
         if (mIndicatorView != null) {
             mAppUi.removeFromIndicatorView(mIndicatorView.getView());
-        }
+        }*/
+		// zhangguo delete 20190506, for new setting style end
     }
 
     @Override

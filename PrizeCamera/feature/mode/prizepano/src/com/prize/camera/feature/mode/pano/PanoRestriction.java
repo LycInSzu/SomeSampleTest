@@ -46,7 +46,7 @@ public class PanoRestriction {
         sRelationGroup.setHeaderKey(PRIZEPANORAMA_MODE_KEY);
         sRelationGroup.setBodyKeys(
                 KEY_CSHOT + "," + KEY_FLASH + "," + KEY_FACE_DETECTION + "," +
-                        KEY_HDR + "," + KEY_ZSD + "," + KEY_DNG + "," + KEY_SELF_TIMER + "," +
+                        KEY_HDR + "," + KEY_ZSD + "," + KEY_DNG + ","  +
                         KEY_SCENE_MODE + "," +
                         KEY_COLOR_EFFECT + "," + KEY_AIS);
         sRelationGroup.addRelation(
@@ -57,7 +57,7 @@ public class PanoRestriction {
                         .addBody(KEY_HDR, "off", "off")
                         .addBody(KEY_ZSD, "off", "off")
                         .addBody(KEY_DNG, "off", "off")
-                        .addBody(KEY_SELF_TIMER, "0", "0")
+                        //.addBody(KEY_SELF_TIMER, "0", "0")
                         .addBody(KEY_SCENE_MODE, "off", "off")
                         .addBody(KEY_COLOR_EFFECT, "none", "none")
                         .addBody(KEY_AIS, "off", "off")

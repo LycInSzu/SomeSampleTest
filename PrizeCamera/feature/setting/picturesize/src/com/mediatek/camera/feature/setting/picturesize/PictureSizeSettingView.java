@@ -40,6 +40,7 @@ package com.mediatek.camera.feature.setting.picturesize;
 import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.preference.PreferenceFragment;
+import android.util.Size;
 
 import com.mediatek.camera.R;
 import com.mediatek.camera.common.debug.LogHelper;
@@ -49,6 +50,7 @@ import com.mediatek.camera.common.setting.ICameraSettingView;
 /*prize-add-huangpengfei-2018-10-25-start*/
 import com.mediatek.camera.common.widget.PrizeSettingDialog;
 import com.mediatek.camera.prize.PrizeLifeCycle;
+import com.mediatek.camera.ui.prize.PrizeCameraSettingView;
 /*prize-add-huangpengfei-2018-10-25-end*/
 
 import java.util.ArrayList;
@@ -57,7 +59,7 @@ import java.util.List;
 /**
  * Picture size setting view.
  */
-public class PictureSizeSettingView implements ICameraSettingView,
+public class PictureSizeSettingView extends PrizeCameraSettingView implements ICameraSettingView,
         PictureSizeSelector.OnItemClickListener,PrizeLifeCycle {
     private static final LogUtil.Tag TAG =
             new LogUtil.Tag(PictureSizeSettingView.class.getSimpleName());
@@ -225,6 +227,8 @@ public class PictureSizeSettingView implements ICameraSettingView,
             mEntryValues.remove(mPictureZoomSize);
         }
         /*prize-modify-set picturesize of picturezoom -xiaoping-20181017-end*/
+
+        mSettingEntryValues = null; // zhangguo add 20190508, for new setting style
     }
 
     @Override
@@ -278,4 +282,92 @@ public class PictureSizeSettingView implements ICameraSettingView,
     }
 
     /*prize-modify-add get maxpicturesize for picturezoom-xiaoping-20181207-end*/
+
+
+
+
+    private List<String> mSettingEntryValues;
+    private List<String> mSettingEntrys;
+    private int[] mIcons;
+
+    private static Size valueToSize(String value) {
+        int index = value.indexOf('x');
+        int width = Integer.parseInt(value.substring(0, index));
+        int height = Integer.parseInt(value.substring(index + 1));
+        Size size = new Size(width, height);
+        return size;
+    }
+
+    public int[] getIcons() {
+        initData();
+        return mIcons;
+    }
+
+    private void initData(){
+        if(null == mSettingEntryValues){
+            mSettingEntryValues = filterValuesOnShown(mEntryValues);
+            mSettingEntrys = new ArrayList<>();
+            String[] entrys = formatDialogData(mSettingEntryValues);
+            for(String s : entrys){
+                mSettingEntrys.add(s);
+            }
+            mIcons = new int[mSettingEntryValues.size()];
+
+            for(int i = 0; i < mSettingEntryValues.size(); i++){
+                String value = mSettingEntryValues.get(i);
+                Size size = valueToSize(value);
+                float ratio = (float)size.getWidth() / size.getHeight();
+                if(ratio - 4f / 3 < 0.01){
+                    mIcons[i] = R.drawable.prize_selector_picsize_4_3;
+                }else if(ratio - 16f / 9 < 0.01){
+                    mIcons[i] = R.drawable.prize_selector_picsize_16_9;
+                }else if(ratio - 18f / 9 < 0.01){
+                    mIcons[i] = R.drawable.prize_selector_picsize_18_9;
+                }else if(ratio - 19f / 9 < 0.01){
+                    mIcons[i] = R.drawable.prize_selector_picsize_19_9;
+                }
+            }
+
+        }
+    }
+
+    @Override
+    public List<String> getEntryValues() {
+        initData();
+        return mSettingEntryValues;
+    }
+
+    public void setContext(Activity activity){
+        mActivity = activity;
+    }
+
+    @Override
+    public List<String> getEntrys() {
+        initData();
+        return mSettingEntrys;
+    }
+
+    public String getValue() {
+        return mSelectedValue;
+    }
+
+    public int getTitle() {
+        return R.string.pref_camera_picturesize_title;
+    }
+
+    public void onValueChanged(String newValue){
+        mSelectedValue = newValue;
+        if (mListener != null) {
+            mListener.onValueChanged(newValue);
+        }
+    }
+
+    @Override
+    public int getSettingType() {
+        return SETTING_TYPE_LIST;
+    }
+
+    public int getOrder(){
+        return 30;
+    }
 }

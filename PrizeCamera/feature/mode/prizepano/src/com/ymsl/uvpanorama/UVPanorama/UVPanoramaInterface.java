@@ -21,7 +21,6 @@ public class UVPanoramaInterface {
     private UVPanoThumbInterface mUVPanoThumbInterface;
 
     public UVPanoramaInterface(Context context, int cameraId) {
-        //mIUVPanoSmallPreview  = new UVPanoSmallPreviewImpl();
 
         UVPanoLoad mUVPanoLoad = new UVPanoLoad(context);
         mIUVPanoSmallPreview = mUVPanoLoad.getSmallPreview();
@@ -55,9 +54,11 @@ public class UVPanoramaInterface {
         }
     }
 
-    public void initThumbPreview(SurfaceView surfaceView, int previewWidth, int previewHeight, int format, int orientation) {
+
+    public void initThumbPreview(SurfaceView surfaceView, int previewWidth, int previewHeight, int maxThumbWidth,
+                                 int smWidth, int smHeight, int format, int orientation, boolean isFrontCamera) {
         if (null != mUVPanoThumbInterface) {
-            mUVPanoThumbInterface.init(surfaceView, previewWidth, previewHeight, format, orientation);
+            mUVPanoThumbInterface.init(surfaceView, previewWidth, previewHeight, maxThumbWidth, smWidth, smHeight, format, orientation, isFrontCamera);
         } else {
             Log.e(TAG, "initThumbPreview null == mUVPanoThumbInterface err");
         }
@@ -97,6 +98,6 @@ public class UVPanoramaInterface {
     }
 
     public interface PanoPictureCallback {
-        void onData(Bitmap bitmap);
+        void onData(byte[] nv21, int width, int height, int targetWidth);
     }
 }

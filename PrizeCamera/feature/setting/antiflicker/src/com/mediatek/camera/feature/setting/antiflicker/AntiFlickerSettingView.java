@@ -50,6 +50,7 @@ import com.mediatek.camera.common.setting.ICameraSettingView;
 /*prize-add-huangpengfei-2018-10-25-start*/
 import com.mediatek.camera.common.widget.PrizeSettingDialog;
 import com.mediatek.camera.prize.PrizeLifeCycle;
+import com.mediatek.camera.ui.prize.PrizeCameraSettingView;
 /*prize-add-huangpengfei-2018-10-25-end*/
 
 import java.util.ArrayList;
@@ -59,7 +60,7 @@ import java.util.List;
  * This class is for anti flicker feature setting view.
  */
 
-public class AntiFlickerSettingView  implements ICameraSettingView,
+public class AntiFlickerSettingView extends PrizeCameraSettingView implements ICameraSettingView,
         AntiFlickerSelector.OnItemClickListener,PrizeLifeCycle {
     private static final LogUtil.Tag TAG =
             new LogUtil.Tag(AntiFlickerSettingView.class.getSimpleName());
@@ -260,4 +261,54 @@ public class AntiFlickerSettingView  implements ICameraSettingView,
     }
     /*prize-add-huangpengfei-2018-10-25-end*/
 
+
+    private static final int ICONS[] = new int[]{
+        R.drawable.prize_selector_setting_anti_auto,
+                R.drawable.prize_selector_setting_anti_off,
+                R.drawable.prize_selector_setting_anti_50,
+                R.drawable.prize_selector_setting_anti_60,
+    };
+
+    public int[] getIcons() {
+        return ICONS;
+    }
+
+    @Override
+    public List<String> getEntryValues() {
+        return mEntryValues;
+    }
+
+    @Override
+    public List<String> getEntrys() {
+        ArrayList<String> entrys = new ArrayList<>();
+        entrys.add(mActivity.getResources().getString(R.string.pref_camera_antibanding_entry_auto));
+        entrys.add(mActivity.getResources().getString(R.string.pref_camera_antibanding_entry_off));
+        entrys.add(mActivity.getResources().getString(R.string.pref_camera_antibanding_entry_50hz));
+        entrys.add(mActivity.getResources().getString(R.string.pref_camera_antibanding_entry_60hz));
+        return entrys;
+    }
+
+    public String getValue() {
+        return mSelectedValue;
+    }
+
+    public int getTitle() {
+        return R.string.pref_camera_antibanding_title;
+    }
+
+    public void onValueChanged(String newValue){
+        mSelectedValue = newValue;
+        if (mOnValueChangeListener != null) {
+            mOnValueChangeListener.onValueChanged(newValue);
+        }
+    }
+
+    @Override
+    public int getSettingType() {
+        return SETTING_TYPE_LIST;
+    }
+
+    public int getOrder(){
+        return 80;
+    }
 }

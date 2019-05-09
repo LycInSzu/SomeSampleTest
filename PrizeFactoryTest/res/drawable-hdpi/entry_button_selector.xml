@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2013-2016, Shenzhen Huiding Technology Co., Ltd.
+  All Rights Reserved.
+-->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_enabled="false"
+        android:drawable="@drawable/button_round_shape_disabled" />
+    <item android:state_pressed="true"
+        android:drawable="@drawable/button_round_shape_pressed" /> <!-- pressed -->
+    <item android:state_focused="true"
+        android:drawable="@drawable/button_round_shape_pressed" /> <!-- focused -->
+    <item android:drawable="@drawable/button_round_shape" /> <!-- default -->
+</selector>

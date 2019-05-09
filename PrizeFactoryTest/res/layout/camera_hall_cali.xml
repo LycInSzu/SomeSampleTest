@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/camera_hall_last_cali_result"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/last_cali_result_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@tring/camera_hall_cali_up_top"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/last_cali_result_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@tring/camera_hall_cali_down_bottom"
+            android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/camera_hall_cali_result"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/cali_result_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/camera_hall_cali_up_top"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/cali_result_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/camera_hall_cali_down_bottom"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <include layout="@layout/bottom_bar" />
+
+</LinearLayout>

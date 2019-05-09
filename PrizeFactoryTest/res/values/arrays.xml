@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="single_test_items">
+        <item>LCD</item>
+        <item>touch screen</item>
+        <item>RAM</item>
+        <item>rear camera</item>
+        <item>front camera</item>
+        <item>rear camera sub</item>
+        <item>rear camera sub2</item>
+        <item>rear camera sub3</item>
+        <item>front camera sub</item>
+        <item>front camera sub2</item>
+        <item>LED</item>
+        <item>YCD</item>
+        <item>battery</item>
+        <item>keys</item>
+        <item>NxpCal</item>
+        <item>speaker</item>
+        <item>microphone(loop)</item>
+        <item>microphone</item>
+        <item>sub microphone</item>
+        <item>receiver</item>
+        <item>headset</item>
+        <item>radio</item>
+        <item>motor</item>
+        <item>rang sensor</item>
+        <item>light sensor</item>
+        <item>pressure sensor</item>
+        <item>phone</item>
+        <item>backlight</item>
+        <item>TF card</item>
+        <item>SIM</item>
+        <item>flash lamp</item>
+        <item>gravity sensor</item>
+        <item>magnetic sensor</item>
+        <item>step counter sensor</item>
+        <item>fingerprint</item>
+        <item>flash lamp front</item>
+        <item>hall sensor</item>
+        <item>infrared</item>
+        <item>WiFi</item>
+        <item>bluetooth</item>
+        <item>GPS</item>
+        <item>Gyroscope Sensor</item>
+        <item>OTG</item>
+        <item>NFC</item>
+        <item>Voltmeter</item>
+        <item>Wireless Charger</item>
+        <item>Camera Hall sensor</item>
+        <item>Camera Hall Cali</item>
+        <item>Double Camera Standar</item>
+        <item>Efuse State</item>
+        <item>Finger Key Check</item>
+    </string-array>
+    <string-array name="aging_test_items">
+        <item>Video and speakers</item>
+        <item>Video and receiver</item>
+        <item>vibrator</item>
+        <item>microphone and receiver</item>
+        <item>front camera</item>
+        <item>rear camera</item>
+    </string-array>
+
+    <string-array name="test_item_values">
+        <item>LCD,0</item>
+        <item>touch_screen,1</item>
+        <item>RAM,2</item>
+        <item>rear_camera,3</item>
+        <item>front_camera,4</item>
+        <item>rear_camera_sub,5</item>
+        <item>rear_camera_sub2,44</item>
+        <item>rear_camera_sub3,45</item>
+        <item>front_camera_sub,6</item>
+        <item>front_camera_sub2,46</item>
+        <item>LED,7</item>
+        <item>YCD,8</item>
+        <item>battery,9</item>
+        <item>keys,10</item>
+        <item>NxpCal,11</item>
+        <item>speaker,12</item>
+        <item>microphone(loop),13</item>
+        <item>microphone,14</item>
+        <item>sub_microphone,42</item>
+        <item>receiver,15</item>
+        <item>headset,16</item>
+        <item>radio,17</item>
+        <item>motor,18</item>
+        <item>rang_sensor,19</item>
+        <item>light_sensor,20</item>
+        <item>pressure_sensor,21</item>
+        <item>phone,22</item>
+        <item>backlight,23</item>
+        <item>TF_card,24</item>
+        <item>SIM,25</item>
+        <item>flash_lamp,26</item>
+        <item>gravity_sensor,27</item>
+        <item>magnetic_sensor,28</item>
+        <item>step_counter_sensor,29</item>
+        <item>fingerprint,30</item>
+        <item>flash_lamp_front,31</item>
+        <item>hall_sensor,32</item>
+        <item>infrared,33</item>
+        <item>WiFi,34</item>
+        <item>bluetooth,35</item>
+        <item>GPS,36</item>
+        <item>Gyroscope_Sensor,37</item>
+        <item>OTG,38</item>
+        <item>NFC,39</item>
+        <item>Voltmeter,40</item>
+        <item>Wireless_Charger,41</item>
+        <item>camera_hall,43</item>
+        <item>camera_hall_cali,47</item>
+        <item>double_camera_standar,49</item>
+        <item>efust_state,50</item>
+        <item>finger_key_check,51</item>
+    </string-array>
+    <!--//prize-added by tangan-add emmc test-begin-->
+    <string-array name="agingtest_item_index">
+        <item>emmc_test_result,100,100</item>
+        <item>emmc_start_scan,101,105</item>
+        <item>emmc_test_count,106,110</item>
+        
+    </string-array>
+    <!--//prize-added by tangan-add emmc test-end-->
+
+</resources>

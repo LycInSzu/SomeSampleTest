@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2013-2017, Shenzhen Huiding Technology Co., Ltd.
+  All Rights Reserved.
+-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/sensor_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/sensor_area_shape">
+
+        <ImageView
+            android:id="@+id/fingerprint_image_hint"
+            android:layout_width="@dimen/fingerprint_animation_size"
+            android:layout_height="@dimen/fingerprint_animation_size"
+            android:layout_centerInParent="true"
+            android:background="@drawable/fp_illustration_enrollment"
+            android:backgroundTint="#FFCDC9A5"
+            android:src="@drawable/fingerprint_sensor_isolated_animation" />
+
+        <ImageView
+            android:id="@+id/bitmap_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+       <!-- <shenzhen.sensor.FindSensorView
+            android:id="@+id/find_sensor_view"
+            android:layout_width="@dimen/fingerprint_animation_size"
+            android:layout_height="@dimen/fingerprint_animation_size"
+            android:visibility="gone"/> -->
+    </RelativeLayout>
+
+</FrameLayout>

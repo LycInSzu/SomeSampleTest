@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- config factory test icon show on the Launcher -->
+    <bool name="is_factorytest_launcher_enabled" translatable="false">false</bool>
+    <!-- config ddr test icon show on the launcher -->
+    <bool name="is_ddrtest_launcher_enabled" translatable="false">false</bool>
+
+    <!-- config activity top padding -->
+    <integer name="activity_top_padding">60</integer>
+</resources>

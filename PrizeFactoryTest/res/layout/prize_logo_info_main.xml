@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/rg_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_anmi_sound_1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/animation_sound_1" />
+
+        <RadioButton
+            android:id="@+id/rb_anmi_sound_2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/animation_sound_2" />
+
+        <RadioButton
+            android:id="@+id/rb_anmi_sound_3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/animation_sound_3" />
+
+        <RadioButton
+            android:id="@+id/rb_anmi_sound_4"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/animation_sound_4" />
+
+        <RadioButton
+            android:id="@+id/rb_anmi_sound_5"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/animation_sound_5" />
+
+        <RadioButton
+            android:id="@+id/rb_anmi_sound_6"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/animation_sound_6" />
+
+        <RadioButton
+            android:id="@+id/rb_anmi_sound_7"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/animation_sound_7" />
+
+        <RadioButton
+            android:id="@+id/rb_anmi_sound_8"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/animation_sound_8" />
+
+        <RadioButton
+            android:id="@+id/rb_anmi_sound_9"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/animation_sound_9" />
+
+        <RadioButton
+            android:id="@+id/rb_anmi_sound_10"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/animation_sound_10" />
+    </RadioGroup>
+</LinearLayout>

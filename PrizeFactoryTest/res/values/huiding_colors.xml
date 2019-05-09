@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="indisplay_primary_color">#FF4F95D0</color>
+
+    <color name="setup_divider_color_dark">#33ffffff</color>
+    <color name="setup_divider_color_light">#33000000</color>
+
+    <color name="preference_highlight_color">@color/indisplay_primary_color</color>
+    <color name="preference_add_color">@color/indisplay_primary_color</color>
+
+    <color name="bg_color">#fefefe</color>
+
+    <color name="primary_text_color">#ff000000</color>
+
+    <color name="warning">#ff5621</color>
+    <drawable name="pressed_color">#12000000</drawable>
+
+    <color name="operation_step_hint_color">#FFFF0000</color>
+    <color name="gray_color">#ffc0c0c0</color>
+    <color name="red_color">#ffff0000</color>
+
+    <!-- for mt test -->
+    <!--象牙色 -->
+    <color name="floralwhite">#FFFFFAF0</color><!--花白色 -->
+
+    <color name="down_up_color">#AF4F95D0</color>
+
+    <color name="bg_secondery_color">#eeeeee</color>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="lightBlue">#33b5e5</color>
+    <color name="darkBlue">#0099ff</color>
+    <color name="test_succeed_color">#0000fe</color>
+    <color name="test_failed_color">#fe0000</color>
+    <color name="grey">#A9A9A9</color>
+    <color name="silver">#C0C0C0</color> <!--银色 -->
+    <color name="lightSalmon">#FFA07A</color> <!--肉色-->
+    <color name="fingerprint_indicator_background_activated">#fe0000</color>
+    <color name="secondary_text_default_dark">#ff000000</color>
+    <color name="lockscreen_text_color_dark">#7f09000d</color>
+
+
+
+    <color name="color_lock_msg_normal">#2c2c2c</color>
+    <color name="color_lock_msg_success">#1afa29</color>
+    <color name="color_lock_msg_fail">#d81e06</color>
+
+    <color name="stroke_color">#0e6183</color>
+    <color name="stroke_color_bg">#790f4e6c</color>
+    <color name="color_enroll_bg">#030f1a</color>
+
+    <color name="fingerprint_title_area_bg">?android:attr/colorAccent</color>
+    <color name="fingerprint_title_color">#ffffffff</color>
+    <color name="fingerprint_message_color">#de000000</color>
+    <color name="fingerprint_progress_ring">?android:attr/colorAccent</color>
+    <color name="fingerprint_progress_ring_bg">#20000000</color>
+    <color name="fingerprint_indicator_background_resting">#790f4e6c</color>
+    <!--<color name="fingerprint_indicator_background_resting">#12FFFFFF</color>-->
+</resources>

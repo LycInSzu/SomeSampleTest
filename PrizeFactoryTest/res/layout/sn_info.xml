@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:id="@+id/sn_show"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/circle_window_maginleft"
+        android:text="@string/sn_name"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+    <View
+        android:id="@+id/tee_flag"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="3dip"
+        android:visibility="gone"
+        android:background="@color/gray" />
+
+    <TextView
+        android:id="@+id/tee_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/circle_window_maginleft"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="3dip"
+        android:background="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.pri.factorytest.PrizeListview
+                android:id="@+id/pcba_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:footerDividersEnabled="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dip"
+                android:layout_marginTop="3dip"
+                android:background="@color/white" />
+
+            <com.pri.factorytest.PrizeListview
+                android:id="@+id/phone_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:footerDividersEnabled="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dip"
+                android:layout_marginTop="3dip"
+                android:background="@color/white" />
+
+            <com.pri.factorytest.PrizeListview
+                android:id="@+id/autotest_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:footerDividersEnabled="false" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

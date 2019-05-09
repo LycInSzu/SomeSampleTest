@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (C) 2013-2016, Shenzhen Huiding Technology Co., Ltd.
+  All Rights Reserved.
+-->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="settings_label">In-Display 指纹</string>
+    <string name="settings_label_farr">FARR</string>
+    <string name="security_settings_fingerprint_preference_title">"In-Display 指纹"</string>
+    <string name="fingerprint_add_title">"添加指纹"</string>
+    <string name="security_settings_fingerprint_enroll_start_message">"将您的手指放在指纹传感器上，感觉到振动后移开手指"</string>
+    <string name="security_settings_fingerprint_enroll_repeat_message">"略微移动您的手指，以便添加您指纹的所有其他部分"</string>
+    <string name="settings_find_sensor">定位传感器</string>
+    <string name="settings_calibration">获取基准</string>
+    <string name="k_b_calibration">BASE校准</string>
+    <string name="rubber_calibration">橡胶头校准</string>
+    <string name="settings">设置</string>
+    <string name="calibration_successful">校准成功</string>
+    <string name="calibration_failed">校准失败</string>
+    <string name="sensor_width">宽</string>
+    <string name="sensor_height">高</string>
+    <string name="sensor_aspect_ratio">锁定宽高比</string>
+    <string name="sensor_aspect_ratio_wh">宽:高</string>
+    <string name="touched_base">按压base</string>
+    <string name="dump_data">Dump数据</string>
+    <string name="debug_mode">调试模式</string>
+    <string name="skip_frame_num">跳过帧数</string>
+    <string name="image_frame_num">采集帧数</string>
+    <string name="base_frame_num">base帧数</string>
+    <string name="suggest_base_frame_num">建议base帧数不低于20</string>
+    <string name="base_frame_num_warning">base帧数低于20，确定结束校准？</string>
+    <string name="config_changed_warning">参数变更，是否重新开始校准？</string>
+    <string name="adjust_screen_brightness">调节屏幕亮度至最亮</string>
+    <string name="preview_scale_ratio">预览图放大比例</string>
+
+    <string name="optimize_image_quality">增强图像质量</string>
+
+    <string name="collecting_data">采集样本</string>
+    <string name="configurate_camera">Sensor参数配置</string>
+    <string name="current_sample_count">"已经采集了 <xliff:g id="COUNT">%d</xliff:g> 张指纹样本"</string>
+    <string name="pressure_params">设置压力参数</string>
+
+    <string name="about">关于</string>
+
+    <string name="write_read_register">读/写 寄存器</string>
+    <string name="pressure_enabled">压力功能</string>
+
+    <string name="start_calibrating">开始校准</string>
+    <string name="stop_calibrating">停止校准</string>
+    <string name="fingerprint_not_recognized">无法匹配，请重试.</string>
+    <string name="calibrate_delay_time">点击开始后延时(s): <xliff:g id="COUNT">%d</xliff:g></string>
+    <string name="calibrate_brightness_levels">屏幕亮度级数: <xliff:g id="COUNT">%d</xliff:g></string>
+    <string name="calibrate_sample_count_per_level">每级亮度采集帧数: <xliff:g id="COUNT">%d</xliff:g></string>
+    <string name="title_calibrate_delay_time">校准延迟时间</string>
+    <string name="title_calibrate_brightness_levels">亮度等级</string>
+    <string name="title_calibrate_sample_count_per_level">每个亮度等级采集样本数</string>
+    <string name="remaining_delay_time">校准会在 <xliff:g id="COUNT">%d</xliff:g> 秒钟后开始</string>
+    <string name="auto_calibrate">自动校准</string>
+    <string name="press_rubber_finger">Step1 : 请按下橡胶头</string>
+    <string name="press_rubber_finger_with_chart">Step2 : 请按下Chart图橡胶头</string>
+    <string name="press_finger">Step3 : 请按下手指</string>
+    <string name="clear_circle_image_base">清除base</string>
+    <string name="mt_test">MT测试</string>
+
+    <string name="settings_light_source">传感器光源颜色</string>
+    <string name="color_red">R</string>
+    <string name="color_green">G</string>
+    <string name="color_blue">B</string>
+    <string name="picture">使用图片</string>
+    <string name="color_of_light_source">光源颜色</string>
+
+    <string name="algo_version">算法版本:</string>
+    <string name="preprocess_version">预处理版本:</string>
+    <string name="phone_test_algo_version">整机测试算法版本:</string>
+    <string name="phone_lens_type">镜头类型:</string>
+    <string name="phone_ad_version">AD版本:</string>
+
+    <string name="fw_version">固件版本:</string>
+    <string name="tee_version">TEE版本:</string>
+    <string name="ta_version">TA版本:</string>
+    <string name="test_app_version">测试工具版本:</string>
+    <string name="vendor_id">模组厂:</string>
+    <string name="chip_id">模组类型:</string>
+    <string name="production_date">生产日期:</string>
+    <string name="unknown">未知</string>
+
+    <string name="untrusted_config_setting">配置设定</string>
+    <string name="untrusted_forcekey_threshold_value">压力阈值设定</string>
+    <string name="untrusted_forcekey_threshold_ok_btn">确定</string>
+    <string name="untrusted_forcekey_threshold_setting_error">设置错误</string>
+    <string name="untrusted_forcekey_threshold_setting_default">目前值: <xliff:g id="COUNT">%d</xliff:g></string>
+
+    <string name="continue_calibrating">继续校准</string>
+    <string name="operation_step_hint_fleshcolor">请放置&lt;font color=&quot;#FFA07A&quot;&gt;肉色&lt;/font&gt;橡胶平测头到模组上\n</string>
+    <string name="operation_step_hint_black">请放置&lt;font color=&quot;#000000&quot;&gt;黑色&lt;/font&gt;橡胶平测头到模组上\n</string>
+    <string name="operation_step_ldc">请放置&lt;font color=&quot;#A9A9A9&quot;&gt;LDC&lt;/font&gt;橡胶平测头到模组上 \n</string>
+
+    <!-- for exposure_time-->
+    <string name="exposure_time">曝光时间</string>
+    <string name="long_exposure_title">长曝光参数</string>
+    <string name="short_exposure_title">曝光参数</string>
+    <string name="frame_avg_number">帧数</string>
+    <!-- for Gain-->
+    <string name="pga_gain">PgaGain值</string>
+
+    <!-- for rpgGain-->
+    <string name="rpg_gain">RpgGain值</string>
+
+    <!-- for rpgGain-->
+    <string name="gain_result">Gain值</string>
+
+    <!-- for createFusionMap-->
+    <string name="createFusionMap_title">融合权重图高低阈值</string>
+    <string name="unLowerthresh">低阈值</string>
+    <string name="unHighthresh">高阈值</string>
+
+    <!-- for Fusion ratio-->
+    <string name="fusion_ratio">融合系数</string>
+
+    <!-- for PreProcess_switch-->
+    <string name="PreProcess_switch">预处理模块algorKey</string>
+
+    <!-- for Rect Area-->
+    <string name="Rect_Area">图像裁剪区域</string>
+    <string name="Rect_Area_x">x值</string>
+    <string name="Rect_Area_y">y值</string>
+    <string name="Rect_Area_width">width值</string>
+    <string name="Rect_Area_height">height值</string>
+    <string name="Rect_Area_bmp_col">Bmp Col值</string>
+    <string name="Rect_Area_bmp_row">Bmp Row值</string>
+
+    <!-- for HDR switch-->
+    <string name="Calibrate_switch">屏幕亮度不变BASE校准</string>
+
+    <!-- for LDC switch-->
+    <string name="LDC_switch">LDC</string>
+    <string name="button_ok">确定</string>
+    <string name="button_cancel">取消</string>
+    <string name="capture_param_setting">采图参数设置</string>
+    <string name="record_log">Log和Dump</string>
+    <string name="start_record">开始记录</string>
+    <string name="stop_record">停止记录</string>
+    <string name="clear_log">清除LOG</string>
+
+    <string name="log_deal_title">LOG采集处理</string>
+    <string name="dump_deal_title">DUMP处理</string>
+    <string name="move_dump">移动dump数据至:</string>
+    <string name="permission_toast">请允许指纹应用在其他应用上层显示</string>
+
+    <string name="start_clahe">启用CLAHE</string>
+    <string name="gauss_band">高斯带通</string>
+    <string name="background_blance">背景均衡</string>
+    <string name="col_stio">列sito</string>
+    <string name="medium_filter">中值滤波</string>
+    <string name="radius_filter">滤波半径</string>
+    <string name="param_error_toast">参数设置错误，请重新设置</string>
+    <string name="enroll_template_param_error_toast">模板数设置错误，请重新设置:范围8~40</string>
+    <string name="no_calibration_warning">无K/B值， 请先校准后再使用</string>
+    <string name="calibrate_finish">"校准完成"</string>
+
+    <string name="long_exposure_image">长曝光图</string>
+    <string name="short_exposure_image">原始图</string>
+    <string name="fusion_image">融合图</string>
+    <string name="preprocess_image">预处理图</string>
+    <string name="action_save">保存</string>
+    <string name="save_config_warning">采图参数已被更改,要保存吗?</string>
+    <string name="invalid_parameter_warning">采图参数不合法!</string>
+    <string name="message_config_saved">采图参数已保存</string>
+
+    <string name="auto_calibration_button">自动校准</string>
+    <string name="auto_calibration">曝光自动校准</string>
+    <string name="get_expo_auto_calibration_result">自动校准结果</string>
+    <string name="expo_result_success">成功</string>
+    <string name="expo_result_failed">失败</string>
+    <string name="expo_result_timeout">超时</string>
+    <string name="dialog_title">提示</string>
+    <string name="dialog_message_show">正在校准中...</string>
+    <string name="progress_text_notice">提示:  正在校准中...</string>
+    <string name="long_expo_radius_name">长曝光半径</string>
+    <string name="preview_bitmap">图像预览</string>
+
+    <string name="msg_exposure">EXPO:%1$dms   Frame:%2$d   Gain:%3$.2f</string>
+    <string name="msg_exposure_fusion">EXPO:%1$dms   Frame:%2$d    Gain:%3$.2f</string>
+    <string name="msg_bitmap_crop">ROI x:%1$d y:%2$d　WIDTH:%3$d HEIGHT:%4$d</string>
+    <string name="msg_ldc">LDC: %1$s</string>
+    <string name="msg_algo_preprocess"></string>
+    <string name="msg_create_fusion_map">THREASHOLD H:%1$d　 L:%2$d</string>
+    <string name="msg_fusion_ratio">:%1$.1f</string>
+    <string name="msg_hdr">HDR: %1$s</string>
+    <string name="on">开</string>
+    <string name="off">关</string>
+
+    <string name="exposure_title">曝光参数</string>
+    <string name="fusion_title">融合参数</string>
+
+    <string name="action_crop">图片裁剪</string>
+
+
+    <string name="time_noise_reduction_param">预处理参数</string>
+    <string name="TNR_reset_flag">TNR</string>
+    <string name="LPF_title">LPF</string>
+    <string name="LSC_title">LSC</string>
+    <string name="enhance_level">增强等级</string>
+    <string name="TNR_thresh_title">TNR阈值</string>
+    <string name="tips_rect_params_changed">无效base.请进行base校准</string>
+
+    <string name="dft_filter_text">DFT滤波</string>
+    <string name="band_filter_text">带通滤波</string>
+    <string name="inver_bmp_text">反色</string>
+    <string name="dir_enhance_text">方向增强</string>
+    <string name="localquan_text">局部量化</string>
+    <string name="denoise_text">去噪滤波</string>
+    <string name="fullquan_text">全屏量化</string>
+    <string name="preguassian_text">预高斯滤波</string>
+    <string name="background_equal_text">背景均衡</string>
+    <string name="update_kb_text">每帧更新K/B</string>
+    <string name="b_calibrate_text">Base 校准</string>
+    <string name="k_calibrate_text">Kr 校准</string>
+    <string name="local_filter_text">本地滤波</string>
+    <string name="ldc_calibrate">LDC校准</string>
+    <string name="tips_to_init">请先在In_display指纹中进行必要的参数设置</string>
+    <string name="loading">正在加载，请稍等</string>
+    <string name="action_settings">设置</string>
+    <string name="title_frr_far_brightness">系统背光亮度(0~255)</string>
+    <string name="tips_adjust_brightness_failure">您没有调节背光强度的权限，请重新进入后赋予权限</string>
+    <string name="light_start_calibrating">亮光开始校准</string>
+    <string name="light_continue_calibrating">亮光继续校准</string>
+    <string name="dark_start_calibrating">暗光开始校准</string>
+    <string name="dark_continue_calibratingg">暗光继续校准</string>
+
+    <!-- for lockscreen -->
+    <string name="slide_unlock">未添加指纹，滑动来解锁</string>
+    <string name="phone_disabled">手机已停用</string>
+    <string name="abbrev_wday_month_day_no_year">M 月 d 日 E</string>
+    <string name="twenty_four_hour_time_format">HH:mm</string>
+    <string name="twelve_hour_time_format">a h:mm</string>
+    <string name="preview_bmp_switch">预览图开关</string>
+    <string name="enroll_param_setting">注册参数设置</string>
+    <string name="enroll_template_count">注册模板张数</string>
+    <string name="preview_bmp_process_enhance_switch">预览图强处理</string>
+
+    <string name="scaleRatio">伸缩参数</string>
+    <string name="RsizeM">ResizeM</string>
+    <string name="RsizeN">ResizeN</string>
+    <string name="nDilateErrod">DilateErrod</string>
+    <string name="retrycount">识别retry次数</string>
+    <string name="retrycount_name">RetryCount</string>
+
+    <string name="factory_test">工厂测试</string>
+    <string name="spmt_test1">工模测试</string>
+    <string name="spmt_test">工模测试(机器自动化)</string>
+
+    <string name="enroll_test">注册</string>
+
+    <string name="authenticate_test">识别</string>
+
+    <string name="spmt_start">开始</string>
+    <string name="spmt_next">下一步</string>
+    <string name="spmt_fresh">请放置肉色砝码，然后点击下一步。</string>
+    <string name="spmt_dark">请放置黑色砝码，然后点击下一步。</string>
+    <string name="spmt_checkbox">校准请放置Chart，然后点击下一步。</string>
+    <string name="spmt_chart">测试请放置Chart，然后点击下一步。</string>
+    <string name="spmt_finish">测试完成请退出</string>
+
+    <string name="spmt_fresh_auto">请放置肉色砝码</string>
+    <string name="spmt_dark_auto">请放置黑色砝码</string>
+    <string name="spmt_checkbox_auto">校准请放置Chart</string>
+    <string name="spmt_chart_auto">测试请放置Chart</string>
+    <string name="spmt_up">请抬起砝码</string>
+    <string name="spmt_finish_up">测试完成,请抬起砝码</string>
+    <string name="spmt_error">测试失败,请抬起砝码</string>
+
+    <string name="spmt_desc_SPI">SPI Test</string>
+    <string name="spmt_desc_MT">MT_CHECK Test</string>
+    <string name="spmt_desc_SPI_RST_INT">SPI_RST_INT Test</string>
+    <string name="spmt_desc_AUTO_EXPOSURE">AUTO_EXPOSURE Test</string>
+    <string name="spmt_desc_L1_FRESH">L1_FRESH Test</string>
+    <string name="spmt_desc_L2_FRESH">L2_FRESH Test</string>
+    <string name="spmt_desc_L1_DARK">L1_DARK Test</string>
+    <string name="spmt_desc_L2_DARK">L2_DARK Test</string>
+    <string name="spmt_desc_DARK_BASE">DARK_BASE Test</string>
+    <string name="spmt_desc_CHECKBOX">CALIBRATE_CHART Test</string>
+    <string name="spmt_desc_CHART">CAPTURE_CHART Test</string>
+
+    <string name="errorcode_0x00">0x00 测试通过</string>
+    <string name="errorcode_0x10">0x10 工作电流异常</string>
+    <string name="errorcode_0x11">0x11 睡眠电流异常</string>
+    <string name="errorcode_0x12">0x12 PIN脚开短路测试失败</string>
+    <string name="errorcode_0x13">0x13 算法初始化其在spmt阶段用到的参数失败</string>
+    <string name="errorcode_0x14">0x14 坏点数超标，或数据一致性差</string>
+    <string name="errorcode_0x15">0x15 ANC处理失败</string>
+    <string name="errorcode_0x16">0x16 spmt 数据校验失败</string>
+    <string name="errorcode_0x17">0x17 获取image mask数据失败</string>
+    <string name="errorcode_0x18">0x18 通信失败</string>
+    <string name="errorcode_0x19">0x19 读取原始值超时</string>
+    <string name="errorcode_0x1A">0x1A 噪声异常</string>
+    <string name="errorcode_0x1B">0x1B Lens Q值卡控异常</string>
+    <string name="errorcode_0x1C">0x1C 裁剪参数不符合阀值</string>
+    <string name="errorcode_0x1D">0x1D Screen struct非法</string>
+    <string name="errorcode_0x1E">0x1E Chart方向非法</string>
+    <string name="errorcode_0x20">0x20 光心偏移异常</string>
+    <string name="errorcode_0x21">0x21 计算KB值失败</string>
+    <string name="errorcode_0x22">0x22 获取时域噪声值失败</string>
+    <string name="errorcode_0x23">0x23 获取空域噪声值失败</string>
+    <string name="errorcode_0x24">0x24 获取预处理参数失败</string>
+    <string name="errorcode_0x25">0x25 二维码测试异常</string>
+    <string name="errorcode_0x26">0x26 读取图像数据失败</string>
+    <string name="errorcode_0x27">0x27 锐度测试异常</string>
+    <string name="errorcode_0x28">0x28 Signal测试失败</string>
+    <string name="errorcode_0x29">0x29 SSNR测试异常</string>
+    <string name="errorcode_0x2C">0x2C Sensor OTP备份失败</string>
+    <string name="errorcode_0x2D">0x2D KB校准失败</string>
+    <string name="errorcode_0x2E">0x2E 读Flash失败</string>
+    <string name="errorcode_0x2F">0x2F 写flash失败</string>
+    <string name="errorcode_0x30">0x30 OTP/Flash校验失败</string>
+    <string name="errorcode_0x31">0x31 测试记录写入失败</string>
+    <string name="errorcode_0x32">0x32 Memory测试失败</string>
+    <string name="errorcode_0x33">0x33 芯片版本号校验失败</string>
+    <string name="errorcode_0x34">0x34 可视范围测试失败</string>
+    <string name="errorcode_0x35">0x35 放大倍数异常</string>
+    <string name="errorcode_0x36">0x36 相对照度异常</string>
+    <string name="errorcode_0x37">0x37 肉色-黑色平头TouchDiff 异常</string>
+    <string name="errorcode_0x38">0x38 对比度(一种性能参数)异常</string>
+    <string name="errorcode_0x39">0x39 畸变测试失败</string>
+    <string name="errorcode_0x3A">0x3A 自动曝光异常</string>
+    <string name="errorcode_0x3B">0x3B 芯片Vendor ID错误</string>
+    <string name="errorcode_0x3C">0x3C 屏幕漏光异常</string>
+    <string name="errorcode_0x3D">0x3D 检测MT信息失败</string>
+    <string name="errorcode_0x5D">0x5D 日志已经被打开</string>
+    <string name="errorcode_0x5E">0x5E 软件不支持该模组的测试</string>
+    <string name="errorcode_0x60">0x60 测试超时</string>
+    <string name="errorcode_0x61">0x61 放置/抬起测试头超时</string>
+    <string name="errorcode_0x70">0x70 坏点参数初始化失败</string>
+    <string name="errorcode_0x71">0x71 坏点验证失败</string>
+    <string name="errorcode_0x72">0x72 ANC参数初始化失败</string>
+    <string name="errorcode_0x73">0x73 获取FOV失败</string>
+    <string name="errorcode_0x74">0x74 screen struct参数初始化失败</string>
+    <string name="errorcode_0x75">0x75 获取screen struct ratio失败</string>
+    <string name="errorcode_0x76">0x76 计算KB参数初始化失败</string>
+    <string name="errorcode_0x77">0x77 获取scale ratio失败</string>
+    <string name="errorcode_0x78">0x78 Quality control参数初始化失败</string>
+    <string name="errorcode_0x79">0x79 Scale ratio参数初始化失败</string>
+    <string name="errorcode_0x7A">0x7A T_Noise参数初始化失败</string>
+    <string name="errorcode_0x7B">0x7B T_Noise参数over proof</string>
+    <string name="errorcode_0x7C">0x7C S_Noise参数初始化失败</string>
+    <string name="errorcode_0x7D">0x7D S_Noise over proof</string>
+    <string name="errorcode_0x7E">0x4E Touch diff参数初始化失败</string>
+    <string name="errorcode_0x7F">0x7F 获取touch diff失败</string>
+    <string name="errorcode_0x80">0x80 Leak light参数初始化失败</string>
+    <string name="errorcode_0x81">0x81 获取leak light失败</string>
+    <string name="errorcode_0x82">0x82 Illuminance参数初始化失败</string>
+    <string name="errorcode_0x83">0x83 获取illuminance失败</string>
+    <string name="errorcode_0x84">0x84 SSNR参数初始化失败</string>
+    <string name="errorcode_0x85">0x85 获取SSNR P2P失败</string>
+    <string name="errorcode_0x86">0x86 Chart direction参数初始化失败</string>
+    <string name="errorcode_0x87">0x87 Sharpness参数初始化失败</string>
+    <string name="errorcode_0x88">0x88 获取sharpness失败</string>
+    <string name="errorcode_0x89">0x89 TC参数初始化失败</string>
+    <string name="errorcode_0x8A">0x8A Get TC failed</string>
+    <string name="errorcode_0xF8">0xF8 Host与Skycode通信失败</string>
+    <string name="errorcode_0xFB">0xFB 改变LED光强失败</string>
+    <string name="errorcode_0xFC">0xFC 芯片初始化失败</string>
+    <string name="errorcode_0xFD">0xFD 测试停止(一拖多)</string>
+    <string name="errorcode_0xFE">0xFE 等待橡胶头下压超时</string>
+    <string name="errorcode_0xFF">0xFF 程序出错</string>
+
+    <string name="errorcode_null">未知错误</string>
+
+    <string name="spmt_desc_failed">失败</string>
+    <string name="spmt_desc_success">成功</string>
+    <string name="spmt_desc_timeout">超时</string>
+    <string name="fingerprint_authenticate_count">Total: <xliff:g example="5" id="total">%d</xliff:g> Success:<xliff:g example="5" id="success">%d</xliff:g> Fail:<xliff:g example="5" id="fail">%d</xliff:g></string>
+    <string name="user_id">用户</string>
+    <string name="env_str">环境</string>
+    <string name="user_add">添加编辑用户</string>
+	
+	<string name="fingerprint_acquired_partial">"仅检测到部分指纹，请重试。"</string>
+    <string name="fingerprint_acquired_insufficient">"无法处理指纹，请重试。"</string>
+    <string name="fingerprint_acquired_imager_dirty">"指纹传感器有脏污。请擦拭干净，然后重试。"</string>
+    <string name="fingerprint_acquired_too_fast">"手指移动太快，请重试。"</string>
+    <string name="fingerprint_acquired_too_slow">"手指移动太慢，请重试。"</string>
+
+    <string-array name="fingerprint_acquired_vendor">
+        <item>goodix base</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>重复区域</item>
+        <item>重复手指</item>
+        <item></item>
+    </string-array>
+
+    <string name="fingerprint_error_hw_not_available">"指纹硬件无法使用。"</string>
+    <string name="fingerprint_error_no_space">"无法存储指纹。请移除一个现有的指纹。"</string>
+    <string name="fingerprint_error_timeout">"指纹录入操作超时，请重试。"</string>
+    <string name="fingerprint_error_canceled">"指纹操作已取消。"</string>
+    <string name="fingerprint_error_lockout">"尝试次数过多，请稍后重试。"</string>
+    <string name="fingerprint_error_unable_to_process">"请重试。"</string>
+    <string name="fingerprint_name_template">"手指 %d"</string>
+
+    <string-array name="fingerprint_error_vendor">
+        <item>goodix error base</item>
+        <item>指纹硬件无法使用，Rawdata下饱和</item>
+        <item>指纹硬件无法使用，Rawdata上饱和</item>
+        <item>指纹硬件无法使用，spi通信失败</item>
+    </string-array>
+</resources>

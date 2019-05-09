@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2013-2017, Shenzhen Huiding Technology Co., Ltd.
+  All Rights Reserved.
+-->
+
+<resources>
+
+    <dimen name="fingerprint_animation_size">88dp</dimen>
+
+</resources>

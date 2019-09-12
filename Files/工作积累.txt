@@ -1,0 +1,168 @@
+1、
+刷机工具存放的位置（上海）
+
+
+邮箱密码改为：
+Wheatek#
+
+
+：
+\\192.168.1.12\SW&SWT_file_exchange\wushanfei
+
+另外
+patch可以保存到该ftp：18.8.3.102 用户名：allbackups 密码：1q2w3e4r5t@ms
+
+
+2、
+git clone ssh://yuchong.li@192.168.80.2:29418/WTK6739_P0_MP1_AP
+
+git clone ssh://yuchong.li@192.168.80.2:29418/WTK6580_O1_AP
+
+
+
+
+\\192.168.1.13\Project_HDC\WTK6739_P0\E966_CQ_9071C_71_P0\E966_CQ_9071C_71_P0_V1.2.1_S190820
+
+
+3、戴智毅MTK账号密码:
+Account(Email): zhiyi.dai@wheatek.com
+Login Password: Dyc3u+ehzQ0uPc
+
+
+zhijian.liu@wheatek.com
+sz2019
+
+
+账号：yin.chang1@wheatek.com
+密码：aA1234a!!
+-----------------------------------------------------------------------------------------------
+
+/***********************************************************
+* History:
+* 1. yuchong.li@wheatek.com BUG_ID:E937_YJSQ-3991 20190522
+* Description: Screen pinning, navigation buttons layout in confirm window is not adapt to the true layout of the system
+***********************************************************/
+
+[E531_DG_M9T_EEA][EWSY-1094] add memory cleanup function
+[E937_DK_DK011_RUSSIA][YJSQ-4692] fix bug: Nullpointer exception of ZenModeController.onConfigChanged about zenMode
+
+//modified for BUG_ID:YJSQ-4688 by yuchong.li@wheatek.com 20190830 begin
+
+//add for BUG_ID:EJLL-290 by yuchong.li@wheatek.com 20190822 begin
+
+
+
+git config --global user.email "yuchong.li@wheatek.com"
+
+git config --global user.name "liyuchong"
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+【问题原因】
+navigation bar 根据不同配置，有不同的布局。但screen pinning功能没有做对应的布局。
+【解决方案】
+添加缺少的布局，并在代码中根据配置进行适配。
+【验证方法与步骤】
+
+【影响的功能与模块】
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+//modified for FEATRUE:switch_screen_between_notch_and_square by yuchong.li@wheatek.com 20190606 begin
+
+
+【1703BC】【MR】【Checklist】更新SDK至26或更高版本，Package [com.cydroid.note]
+[1703_BC_MR][YQLS-104]fix bug: change sdk version of Package [com.cydroid.note] to 26
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Android P + kernel-4.4 or kernel-3.18
+- download preloader with verified boot disabled which location is the same as scatter file //preloader_<PROJECT>_SBOOT_DIS.bin
+- adb root
+- adb disable-verity
+- adb reboot
+- adb root
+- adb remount
+
+* Android P + kernel-4.9 or after 
+- download preloader with verified boot disabled which location is the same as scatter file. //preloader_<PROJECT>_SBOOT_DIS.bin
+- boot to Home Screen
+- go to setting -> system -> Developer options -> OEM unlocking
+- adb reboot bootloader
+- fastboot flashing unlock
+- press volume up key
+- fastboot reboot
+- adb root
+- adb disable-verity
+- adb reboot
+- adb root
+- adb remount
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+请大家注意，后续凡是chenyee老项目，用到chenyee账号登录e-service，pms等的，cc list 务必不要写麦穗邮箱（空白），finder email 也务必不要留麦穗邮箱，统一用你登录的账号邮箱即可（即ddongleo@chenyee.com）
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+公司邮箱90天需要更改一次密码，过期前可以通过https://mail.wheatek.com/owa 修改，过期后联系上海IT 郝军鹏更改。
+
+WIFI 名称：Wheatek-SZ 密码：Szwifi2019!先设置一下邮箱，outlook，公司邮箱惯例是——名.姓@wheatek.com
+公司默认邮箱密码（不要更改）：Wheatek!
+顺丰月结账号：7550116997
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+repo init -u ssh://liyuchong@18.8.3.13:29418/mtk/manifest -b cy_o1.mp1 -m cy_o1.mp1_CSW1703BA_T1295_SMR.xml
+
+ repo init -u ssh://liyuchong@18.8.3.13:29418/151/manifest -b chenyee_rom_apk -m CSW1703_oversea_mp.xml
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+用了快霸的项目：
+dev_a798_cq_8121_gms
+dev_e838_tg_t19
+dev_e937_cq_9013l
+dev_e937_dg_gms
+dev_e937_tg_t18
+develop_mp7
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+com.android.internal.R.bool.config_use_oq_statusBarIcons
+这种资源在alps\frameworks\base\core\res\res\values\config.xml 中
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+"CY_REPO_ALPS=""repo init -u ssh://gerritbuild@18.8.3.13:29418/P/manifest -b cy_p0.mp1 -m cy_p0.mp1.xml""
+CY_REPO_ROM=""repo init -u ssh://gerritbuild@18.8.3.13:29418/P/manifest -b chenyee_rom_apk -m CSW1703_master.xml""
+"
+
+
+repo init -u ssh://liyuchong@18.8.3.13:29418/P/manifest -b cy_p0.mp1 -m cy_p0.mp1.xml
+
+repo init -u ssh://liyuchong@18.8.3.13:29418/P/manifest -b chenyee_rom_apk -m CSW1703_master.xml
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+指令adb shell pm path <package_name>，可以看到手机中package_name对应apk的名称
+find -name "*.mk" |xargs grep -r "<apkname>" 可以快速查出apk所在目录
+adb shell pm dump <package_name> | findstr version 可以查手机中各个package的sdk版本
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+activityManager.getRunningTasks(1).get(0).topActivity.getPackageName()
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+adb logcat -G 20M
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+各个项目分区大小：
+alps\device\maisui\e535_dk_dk008p_39_p0\partition_size.mk
+
+比如：
+BOARD_SYSTEMIMAGE_PARTITION_SIZE:=838860800                               838M？
+BOARD_CACHEIMAGE_PARTITION_SIZE:=134217728                                134M?
+BOARD_USERDATAIMAGE_PARTITION_SIZE:=1240465408                            1.2G?
+
+各个项目分区挂载的名称等配置：
+Z:\code\p\6739\WTK6739_P0_MP1_AP\alps\device\maisui\e838_tg_t19_39_p0\recovery.fstab
+
+而这些文件是在BoardConfig.xml中被引用的。
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+out/target/product/e966_cq_9071_71_p0/obj/PTGEN/partition_size.mk 分区大小？？？？
+-----------------------------------------------------------------------------------------------------------------------------------------------------

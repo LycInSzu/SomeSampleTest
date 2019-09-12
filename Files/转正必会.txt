@@ -1,0 +1,322 @@
+两个提交：
+
+人脸解锁相关：
+
+http://192.168.80.2:8080/#/c/WTK6739_P0_MP1_AP/+/146131/
+
+诚壹 androidP 
+一、 1703的FaceID。SystemUI部分。分析发现，SystemUI部分没有使用FaceLock这个app。
+
+1、关注问题：
+CSW1805A-1325
+
+2、启动方式（见此修改记录：http://18.8.3.13:8080/#/c/52759/）
+在IKeyguardService.aidl 中增加了一个接口：
+    // Chenyee <huangwt> <2018-11-1> add for CSW1805A-1325 begin
+    void setWakeUpReason(int reason);
+    // Chenyee <huangwt> <2018-11-1> add for CSW1805A-1325 end
+	
+然后在PhoneWindowManager中调用mKeyguardDelegate.setWakeUpReason(CY_SCREENON_BY_USER);一直传递到SystemUI中的KeyguardViewMediator.java从而启动人脸检测。
+
+
+
+3、在诚壹的SystemUI中 关于 FaceID重点关注的类：
+src\com\android\systemui\keyguard\KeyguardViewMediator.java
+src\com\android\keyguard\KeyguardUpdateMonitor.java
+src\com\android\systemui\keyguard\facelock\FaceRecogMediator.java
+
+FaceRecogMediator.java中的startFaceRecog()是真正调用后台服务用camera进行人脸检测的地方。
+处理检测结果的反馈的方法也是在FaceRecogMediator.java，其中的onAuthenticationResult()。
+
+
+二、
+1805这种水滴屏的，前置摄像头只有普通的RGB相机。
+普通的相机都是RGB相机，而手机双摄一般是指：普通彩色相机（RGB） + 深度相机（Depth）。
+
+
+1、注意SystemUI内部的那个FaceLockManager.java类没有实际作用，应该是开发者调试功能时使用的。 
+src\com\android\systemui\keyguard\facelock\FaceRecogMediator.java使用的是android.hardware.FaceLockManager
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+广生ota：
+http://192.168.80.2:8080/#/c/WTK6739_P0_MP1_AP/+/147583/
+
+
+
+还有两份文档：桌面上。
+
+
+
+./build/tools/releasetools/ota_from_target_files -v -k ./build/target/product/security/releasekey --block --log_diff ota_log.txt -i ./ota/old.zip ./ota/new.zip update.zip
+
+
+
+
+1、使用Android的打包命令制作oTA升级包
+
+ 整个项目编译完成后再执行make otapackage
+
+生成的完整升级包会存放在out\debug\target\product\[project_name]\  下
+
+具体名字根据make otapackage的install来确定
+
+生成的过程文件包在out/target/product/xxx(project_name)/obj/PACKAGING/target_files_intermediates/目录下,该文件可用于创建差分升级包
+
+2、正常的make编译项目时，不会编译生成target包。
+make otapackage会执行Makefile中的
+.PHONY: otapackage
+otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
+
+这就是升级用的整包，而它又依赖target包和ota_from_target_files这个脚本。
+每个分区的大小，可以在scatter文件中查看。
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+锁屏
+1、锁屏相关的几个重要的类的关系：
+以下分析基于android2.2的google源码。
+
+ 开机启动时，首先执行PhoneWindowManager.systemReady()（这之前的流程不分析）。调用KeyguardViewMediator.onSystemReady()进行待机锁屏及解锁逻辑。
+
+------------------------------------------- 
+下面这些都是网上的信息，可能过时了。现在看来，PhoneWindowManager持有KeyguardServiceDelegate所以不需要直接持有KeyguardViewMediator了。
+
+
+
+
+ KeyguardViewMediator是整个待机解/锁屏业务的调度器，负责调度锁屏界面的相关动作及查询解锁屏状态，包括以下一些内容：
+
+ 查询锁屏状态，及当前处于锁屏状态还是已解锁状态，PhoneWindowManager持有KeyguardViewMediator的引用，当用户触摸屏幕或者按下某个键是，PhoneWindowManager会通过KeyguardViewMediator查询锁屏状态（锁定/解锁），进行不同的响应处理。如果处于锁定状态，系统输入事件会受到限制。
+
+ 响应电源事件（黑/亮屏）。判断锁屏界面应该处于什么状态（显示或者重置）。手机黑屏后，锁屏界面马上就会显示出来，以便下一次亮屏后，马上就能显示锁屏界面，而不会出现闪烁或延时。
+
+ 其他应用程序或者服务也可以请求禁止锁屏（通过调用KeyguardViewMediator的setKeyguardEnabled(boolean)方法）。例如接听来电界面。
+
+KeyguardViewMediator类在WindowManagerPolicy（在手机系统中是PhoneWindowManager实例）初始化时被创建，并运行在它的线程上，锁屏的UI界面也是在这个线程上创建及显示的。KeyguardViewMediator类提供的状态查询api可以被诸如android.view.WindowManager、com.android.server.InputManager等其它线程调用，所以，KeyguardViewMediator类上的这些api方法都是线程同步的（synchronized）。
+
+ KeyguardViewMediator可以进行的调度操作包括： 
+      1) 点亮屏幕pokeWakelock(); 
+     2) 报告锁屏权限验证是否成功keyguardDone(boolean); 
+     3) 响应SIM卡状态变化并对锁屏界面做相应的调整onSimStateChanged（）。 
+      4) 调度待机锁屏UI界面的管理,包括显示handleShow ()、隐藏handleHide ()、重置handleReset ()、点亮屏幕handleWakeWhenReady()等，KeyguardViewMediator实现这部分调度是通过持有一个KeyguardViewManager来实现的。
+
+
+KeyguardViewMediator是一个调解和keyguard相关请求的了类。它包括了查询keyguard的状态，电源管理相关的事件，因为电源管理事件会影响keyguard的设置或重置，回调PhoneWindowManager通知它说keyguard正在显示，或者解锁成功等状态。注:keyguard画面是在屏幕关闭的时候显示的，所以当屏幕亮起来的时候，keyguard画面能够直接准备好了。比如，查询keyguard的例子：某个事件能够唤醒Keyguard吗？keyguard正在显示吗？某个事件会被锁屏的状态约束而不起作用吗？回调PhoneWindowManager的情况：锁屏正在显示。 导致锁屏状态变化的样例：屏幕关闭，重置锁屏，并且显示出来以便于下次屏幕亮起是能够直接显示。键盘打开，如果keyguard是不安全的，就隐藏它。从解锁画面发生的事件：用户成功解锁，隐藏解锁画面，不再约束用户的输入事件。注：除了电源管理能够影响keyguard的状态外，其他的一些app或者service可能会通过方法setKeyguardEnable去关闭keyguard。比如接到电话时。这个类是在WindowManagerPolicy初始化的时候创建的，并且运行在WindowMangerPolicy所在的线程，keyguard的画面从这个线程中创建的当keyguardViewMediator构建时。但是Keyguard相关的api可能会被其他的线程调用，比如InputManagerService和windowManagerService。因此在keyguardViewMediator的方法是同步的，并且任何一个和Keyguard画面相关的事件都投掷到Handler中以确保在UI线程中处理。
+
+
+
+
+
+
+关于具体的Bouncer界面：
+KeyguardPINView/KeyguardPasswordView/KeyguardSimPinView/KeyguardSimPukView
+都是继承自KeyguardAbsKeyInputView，用于密码验证的方法是verifyPasswordAndUnlock()
+其中，KeyguardSimPinView和KeyguardSimPukView重写了该方法，所以有自己独特的验证方式。
+而KeyguardPasswordView和KeyguardPINView都是使用LockPatternUtils的checkPassword进行密码验证.
+LockPatternUtils是用来设置和锁屏交互的类，设置，更新解锁方式和加密等操作都是通过此类来完成的。我们看到它设置锁屏方式就是设置了不同的DevicePolicyManager，这样的话我们就需要看在锁屏中的代码，根据搜关键字DevicePolicyManager我们就可以发现使如何设置当前的锁屏方式的。
+
+
+
+
+
+
+------------------------------------------- 
+
+ KeyguardUpdateMonitor是所有会影响整个待机解/锁屏业务的事件的监控器。(除了作为监控器，它还发挥着类似上下文的作用，也许我们应该把这个类命名为(KeyguardContext)。它监控诸如时间改变、电池状态改变、时区改变、SIM卡状态变化、电话状态变化、电话信号变化等事件。它是一个观察者模式的被观察对象。观察者通过调用KeyguardUpdateMonitor的registerInfoCallback(InfoCallback)和registerSimStateCallback(SimStateCallback)方法进行注册，观察自己感兴趣的变化。KeyguardUpdateMonitor的观察者包括KeyguardViewMediator、LockScreen、PatternUnlockScreen、AccountUnlockScreen、PasswordUnlockScreen、SimUnlockScreen等。观察者通过调用KeyguardUpdateMonitor的removeCallback(Object)取消观察。
+
+
+------------------------------------------- 
+
+ KeyguardViewManager负责管理待机屏UI界面的创建、显示、隐藏、重置以及通过一个回调KeyguardViewCallback通知调度器KeyguardViewMediator进行相关的调度。
+
+ LockPatternKeyguardView（KeyguardViewBase）是所有锁屏和解锁UI界面的宿主。它有2个模式Mode. LockScreen和Mode. UnlockScreen。它负责根据当前上下文环境切换当前应该显示的待机屏。它提供一个回调给当前显示的待机屏并处理其回调，如果回调动作是自己处理不了的，则继续报告给KeyguardViewMediator进行处理。
+ 锁屏界面就是LockScreen；解锁界面包括SIM卡解锁SimUnlockScreen、图案解锁PatternUnlockScreen、密码解锁PasswordUnlockScreen、帐号解锁AccountUnlockScreen
+
+
+    解锁成功后，锁屏流程转到KeyguardViewMediator的keyguardDone(boolean, boolean) 进行后续的流程（如转到Launcher桌面）。
+
+
+KeyguardService  PhoneWindowManager与Keyguard之间的桥梁，管理锁屏的显示与状态变化。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+由浅入深，再到实例。最后是自己的思考。
+1、整体架构
+2、流程
+3、深入分析重点类，重点流程
+4、具体bug分析
+5、对未来发展方向和深入研究方向等等的思考
+
+------------------------------------------------------
+
+比如人脸解锁：
+1、人脸解锁的结构：
+注册app及后天服务、识别验证、setting里面的功能控制、
+
+及与其它锁屏方式的配合。
+跟诚壹人脸解锁结构的对比。。。
+
+由此引出，要真正理解并处理人脸解锁问题，必须了解锁屏模块，甚至是整个SystemUI模块。
+
+2、锁屏的结构：
+只是讲锁屏的整体架构，比如锁屏的分类，notificationpanelview    （StatusBar.start会调用createAndAddWindow()，然后继续调用addStatusBarWindow来创建通知锁屏等StatusBarWindowView并加到window上，锁屏界面就在这个布局里面status_bar_expanded，与解锁后的下拉通知界面是同一个界面只是两种状态对应的view状态不同）      与 bouncer（实际上bouncer界面也会加载到StatusBarWindowView，因为bouncer的container就是StatusBarWindowView自己，只不过是动态加载和移除）及，锁屏的生命周期。
+
+
+
+
+
+3、锁屏的具体细节
+锁屏界面为什么会在其它界面上方。window的种类及层级。
+锁屏的具体布局情况。
+
+包括锁屏的启动、锁定屏幕的流程(Keyguard锁屏的加载可能和我们想象的不一样，它是在灭屏的时候加载，这样可以确保的屏幕亮起来的时候，用户能第一时间看到锁屏界面。灭屏存在多种方式，例如按power键、屏幕超时等，这些灭屏的方式虽然不一样，但是殊途同归，我们主要分析按power键时，Keyguard的加载流程。)、各种方式的解锁流程（这些流程分析过程中要添加一些要重点注意的地方，可能出问题的地方？可以客制化的地方？），具体分析一下人脸解锁与指纹解锁的相似相容。
+几个比较重要的类，比如KeyguardService中的接口。根据amigo文档的KeyguardManager分析。 
+  
+    讲上面这些时，还是要尽量多牵扯一些人脸解锁相关的东西。
+	
+甚至可以研究一下人脸解锁的具体算法，这就能牵扯到camera，所以也能讲一讲跟camera的关系。
+
+
+
+
+
+
+解锁过程的核心实质上是锁屏启动了一个runnable（KeyguardViewMediator中的mKeyguardGoingAwayRunnable），通知AMS和WMS显示锁屏下方的activity组件窗口以及调用该activity组件的生命周期，向AMS和WMS发送命令的时候会传递一些flag，这些flag和解锁的场景有关，一般来说我们只用关注第一个，即WindowManagerPolicy.KEYGUARD_GOING_AWAY_FLAG_NO_WINDOW_ANIMATIONS，例如熄屏的时候使用指纹解锁亮屏，这期间不需要显示解锁动画，于是就需要传递这个消息给WMS
+
+
+指纹解锁主要的两个类是：FingerprintUnlockController  和  KeyguardUpdateMonitor
+
+4、工作中人脸解锁相关通常都做些什么：
+
+内置人脸解锁
+广升
+豆荚
+
+
+人脸解锁相关bug
+具体分析（注意收集放到这里）
+简单的，较复杂的。
+简单的比如message的显示，字体颜色的修改。
+复杂的，比如camera的冲突的修改。
+
+。。。
+
+
+
+5、个人思考
+比如其它解锁方式，eg三星的虹膜解锁。或者，人脸识别除了解锁还能用来干什么？最近自己再多思考一下。
+
+
+
+
+
+
+
+
+
+
+
+还没接触的：
+1、锁屏界面开启camera和phone等应用的流程？
+2、锁屏界面双击 notification 解锁的流程？
+3、具体的Bouncer界面怎么去获取和验证密码的？
+4、mOccluded 的情况，比如来电。
+
+Trust engine
+
+
+
+
+
+广升人脸解锁：
+疑问
+1、alps/build/make/target/product/base.mk 这个是做什么的？
+# FACE_UNLOCK_SUPPORT
+$(call inherit-product, packages/apps/FaceUnlock/device-faceunlock.mk)
+
+2、alps/frameworks/base/Android.bp 这个文件，在framework中增加aidl接口就是在这里注册的才能编译进系统的？？？
+
+        //FACE_UNLOCK_SUPPORT start
+        "core/java/com/android/internal/policy/IFaceUnlockCallback.aidl",
+        "core/java/com/android/internal/policy/IFaceUnlockService.aidl",
+        //FACE_UNLOCK_SUPPORT end
+
+3、 android.view.WindowManager.LayoutParams#FLAG_DISMISS_KEYGUAR                       
+	android.view.WindowManager.LayoutParams#FLAG_SHOW_WHEN_LOCKE    
+	第三方应用一般因为权限问题通过属性来控制消除非安全锁屏或界面显示在锁之上
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+1、具体的Bouncer界面怎么去获取和验证密码的？
+
+2、具体的内置广升人脸解锁。
+
+3、Trust engine
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

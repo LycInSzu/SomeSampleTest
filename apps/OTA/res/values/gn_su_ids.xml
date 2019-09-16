@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="gn_su_id_download_notification" type="id"/>
+    <item name="gn_su_id_auto_upgrade_notification" type="id"/>
+    <item name="DIALOG_ID_UPGRADE_LOCALSELECTIONS" type="id"/>
+    <item name="DIALOG_ID_LOCAL_RESTART_UPGRADE" type="id"/>
+    <item name="DIALOG_ID_LOCAL_FILE_VERIFY" type="id"/>
+    <item name="DIALOG_ID_FILE_MD5_CHECK_ERR" type="id"/>
+    <item name="DIALOG_ID_AUTODOWNLOAD_HINT" type="id"/>
+    <item name="DIALOG_ID_MOBILENET_HINT" type="id"/>
+    <item name="DIALOG_ID_MOBILE_PERMISSION" type="id"/>
+    <item name="DIALOG_ID_REBOOT_TO_UPGRADE" type="id"/>
+    <item name="DIALOG_ID_UPDATE_LOW_POWER_HINT" type="id"/>
+    <item name="DIALOG_ID_UPDATE_TOO_LOW_POWER_HINT" type="id"/>
+    <item name="DIALOG_ID_POWER_LOW" type="id"/>
+    <item name="DIALOG_ID_POWER_TOO_LOW" type="id"/>
+    <item name="gn_su_id_questionnaire_notification" type="id"/>
+    <item name="gn_su_id_system_upgrade_success" type="id"/>
+    <item name="DIALOG_ID_PRERELEASE_CANCEL" type="id"/>
+
+</resources>

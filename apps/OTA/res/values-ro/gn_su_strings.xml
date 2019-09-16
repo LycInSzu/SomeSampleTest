@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="gn_su_app_name">Actualizare sistem</string>
+    <string name="gn_su_sd_card_title">Card SD</string>
+    <string name="gn_su_internal_storage">Memorie internă</string>
+    <string name="gn_su_layout_main_statebutton_recover">Recuperare sistem</string>
+    <string name="gn_su_layout_main_statebutton_checknew">Verificare versiune</string>
+    <string name="gn_su_layout_main_statebutton_readydownload">Actualizează imediat</string>
+    <string name="gn_su_layout_main_statebutton_readydownload_recover">Reparare imediată</string>
+    <string name="gn_su_layout_main_statebutton_pause">Pauză</string>
+    <string name="gn_su_layout_main_statebutton_continue">Continuare</string>
+    <string name="gn_su_layout_main_statebutton_download_complete">Repornire si actualizare</string>
+    <string name="gn_su_layout_main_statebutton_restartrecovery">Repornire recuperare</string>
+    <string name="gn_su_layout_main_statebutton_installing">Se actualizează…</string>
+    <string name="gn_su_layout_main_statebutton_recoverying">Se recuperează...</string>
+    <string name="gn_su_layout_main_expend_text_checking">Verificare versiune nouă...</string>
+    <string name="gn_su_layout_main_expend_text_noversion">Cea mai recentă versiune</string>
+    <string name="gn_su_layout_main_expend_text_network_error">Eroare rețea, vă rugăm verificați rețeaua</string>
+    <string name="gn_su_layout_main_expend_text_network_error_inmobile">Rețeaua nu este bună, verificați WiFi</string>
+    <string name="gn_su_layout_main_expend_text_no_network_error">Vă rugăm conectați rețeaua și verificați actualizările</string>
+    <string name="gn_su_layout_main_expend_text_download_no_network_error">Vă rugăm verificați dacă rețeaua este conectată normal</string>
+    <!--Chenyee  <liumn> 20180111 for modify SW17W16VF-5 beign-->
+    <string name="gn_su_layout_main_expend_text_gotointroduction">Detalii Versiune</string>
+    <!--Chenyee  <liumn> 20180111 for modify SW17W16VF-5 end-->
+    <string name="gn_su_layout_main_middlemsgview_verifysuccess">Descărcare completă, click pentru repornire și actualizare</string>
+    <string name="gn_su_layout_main_middlemsgview_pausing">Se verifică datele, vă rugăm așteptați</string>
+    <string name="gn_su_layout_main_middlemsgview_pause">Întrerupt, descărcat %1$dMB/%2$dMB</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading">Se verifică datele, vă rugăm așteptați</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_second_kb">%1$.2fKB/S (%2$dMB/%3$dMB)\n Timp estimat de finalizare: %4$d sec.</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_minute_kb">%1$.2fKB/S (%2$dMB/%3$dMB)\n Timp estimat de finalizare: %4$d minut(e)</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_hour_kb">%1$.2fKB/S (%2$dMB/%3$dMB)\n Timp estimat de finalizare: &gt; 60minute</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_second">%1$.2fMB/S (%2$dMB/%3$dMB)\n Timp estimat de finalizare: %4$d sec.</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_minute">%1$.2fMB/S (%2$dMB/%3$dMB)\n Timp estimat de finalizare: %4$d minut(e)</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_hour">%1$.2fMB/S (%2$dMB/%3$dMB)\n Timp estimat de finalizare: &gt; 60minute</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_interrupt_by_net">Eroare rețea, vă rugăm verificați rețeaua</string>
+    <string name="gn_su_layout_main_middlemsgview_downloadcomplete">Se verifică...</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_interrupt_by_storage">Eroare de memorie, descărcare suspendată</string>
+    <string name="gn_su_layout_main_middlemdgview_download_error_no_space">Spațiu de memorie insuficient, vă rugăm continuați descărcarea după eliberarea spațiului</string>
+    <string name="gn_su_layout_ready_noteview_prelease">Memento: Felicitări pentru calificarea pentru prioritizarea descărcărilor, numai 1000 de locuri libere. Experimentați prima descărcare cât mai curând !</string>
+    <string name="gn_su_layout_ready_noteview_backup">Memento copie de rezervă: pentru a putea utiliza trafic optim de date, vă recomandăm importul de date după actualizare.</string>
+    <string name="gn_su_layout_ready_noteview_root">Memento securitate: Rădăcina telefon mobil detectată, poate cauza erori de fișier și poate afecta securitatea, reparați curând!</string>
+    <string name="gn_su_layout_no_recovery_root">Memento securitate: Rădăcina telefon mobil detectată, vă rugăm descărcați pachetul de instalare și actualizați pentru reparare.</string>
+    <string name="gn_su_autodownload_dialog_title">Actualizare inteligentă</string>
+    <!--Chenyee  <liumn> 20180111 for modify SW17W16VF-5 beign-->
+    <string name="gn_su_autodownload_dialog_message">Descărcare automată cât timp Wi-Fi este ON. Puteți modifica din Setări.</string>
+    <!--Chenyee  <liumn> 20180111 for modify SW17W16VF-5 end-->
+    <string name="gn_su_autodownload_dialog_positive_button">Știu</string>
+    <string name="gn_su_autodownload_dialog_negative_button">Setări</string>
+    <string name="gn_su_prelease_cancel_title">Solicitare de sistem</string>
+    <string name="gn_su_prelease_cancel_content">Versiune incorectă, verificați actualizările.</string>
+    <string name="gn_su_mobilenet_system_dialog_title">Solicitările de sistem</string>
+    <string name="gn_su_mobilenet_system_dialog_content">Procesul de actualizare poate genera costuri de trafic de date. Continuați?</string>
+    <string name="gn_su_mobilenet_system_dialog_positive_button">Permiteţi</string>
+    <string name="gn_su_mobilenet_system_dialog_negative_button">Nepermis</string>
+    <string name="gn_su_mobilenet_download_dialog_title">Notificare rețea</string>
+    <string name="gn_su_mobilenet_download_dialog_message">WiFi oprit pentru că dimensiunea fișierului de descărcat este prea mare, este recomandată utilizarea WiFi-ului pentru descărcare. Continuați sau generați cost de trafic?</string>
+    <string name="gn_su_mobilenet_download_dialog_positive">Setare WiFi</string>
+    <string name="gn_su_mobilenet_download_dialog_negative">Continuați să descărcați</string>
+    <string name="gn_su_download_notify_content_downloading">Se descarcă...</string>
+    <string name="gn_su_download_notify_content_pausing">Se întrerupe...</string>
+    <string name="gn_su_download_notify_content_pause">În pauză</string>
+    <string name="gn_su_download_notify_content_interrupt">Descărcare întreruptă</string>
+    <string name="gn_su_download_notify_content_downloadcomplete">Se verifică...</string>
+    <string name="gn_su_download_notify_content_downloadverfy">Descărcare completă, reporniți și actualizați</string>
+    <string name="gn_su_string_download_file_error">Descărcare deficientă, vă rugăm descărcați din nou</string>
+    <string name="gn_su_action_bar_settings_title">Setări</string>
+    <string name="gn_su_string_settings_local_upgrade">Actualizări locale</string>
+    <string name="gn_su_string_settings_local_upgrade_auto">Scanare automată de actualizări</string>
+    <string name="gn_su_string_settings_local_upgrade_select">Selectare actualizare manuală</string>
+    <string name="gn_su_string_settings_curVersion_desc">Logare versiune curentă</string>
+    <string name="gn_su_string_setting_newVersion_desc">Logare versiune nouă</string>
+    <string name="gn_su_string_settings_feedback">Chestionar de satisfacție</string>
+    <string name="gn_su_string_settings_menu_setting">Actualizare inteligentă</string>
+    <string name="gn_su_string_settings_menu_setting_summary">Actualizare automată a sistemului cu WiFi</string>
+    <string name="gn_su_string_progress_info">Se încarcă, vă rugăm așteptați…</string>
+    <string name="gn_su_battery_title">Avertizare baterie</string>
+    <string name="gn_su_battery_summery2">Nivelul de baterie este sub 40%, vă rugăm încărcați o perioadă, apoi continuați actualizarea de sistem!</string>
+    <string name="gn_su_battery_summery3">Bateria e prea scăzută, trebuie să fie peste 20%!</string>
+    <string name="gn_su_dialog_positive_button">Știu</string>
+    <string name="gn_su_string_localUpgrade_loading">Scanare pachet actualizări</string>
+    <string name="gn_su_string_localUpgrade_select_files">Selectare pachet local de actualizări</string>
+    <string name="gn_su_string_localUpgrade_no_files">Nicio actualizare locală disponibilă</string>
+    <string name="gn_su_string_localUpgrade_forder_empty">Niciun fişier</string>
+    <string name="gn_su_string_file_size">%sMB</string>
+    <string name="gn_su_string_restart_dialog_title">Repornire si actualizare</string>
+    <string name="gn_su_string_restart_dialog_afterBtn">Reporniți mai târziu</string>
+    <string name="gn_su_string_restart_dialog_nowBtn">Reporniți acum</string>
+    <string name="gn_su_string_restart_dialog_message">Telefonul Dvs. va reporni în %s secunde.</string>
+    <string name="gn_su_string_local_file_verify_failed">Fișier invalid, vă rugăm selectați un fișier valid.</string>
+    <string name="gn_su_string_file_verifing">Se verifică...</string>
+    <string name="gn_su_string_internal_storage">"Memorie internă"</string>
+    <string name="gn_su_string_sdcard">Card SD</string>
+    <string name="gn_su_string_loading_files">Se încarcă lista de fișiere...</string>
+    <string name="gn_su_string_questionnaire_error">Nu a reuşit să se încarce, vă rugăm să încercaţi din nou mai târziu</string>
+    <string name="gn_su_actionbar_share">Distribuire</string>
+    <string name="gn_su_share_fail">Eroare distribuire</string>
+    <string name="gn_su_default_share_title">Firmware nou lansat, vă rugăm actualizați!</string>
+    <string name="gn_su_share_weixin_name">WeChat</string>
+    <string name="gn_su_share_friends_name">Momente</string>
+    <string name="gn_su_share_weibo_name">Weibo</string>
+    <string name="gn_su_share_mms_name">Mesaj</string>
+    <!--Chenyee  <liumn> 20180111 for modify SW17W16VF-5 beign-->
+    <string name="gn_su_string_ready_gotointroduction_text">Detalii Versiune</string>
+    <!--Chenyee  <liumn> 20180111 for modify SW17W16VF-5 end-->
+    <string name="gn_su_string_ready_newversion" format="true">Versiune Nouă Detectată: %s</string>
+    <string name="gn_su_string_curversion">Versiune Actuală: %s</string>
+    <string name="gn_su_notify_auto_update_title">Actualizare sistem</string>
+    <string name="gn_su_notify_auto_check_notify">Versiune nouă de sistem disponibilă, vă rugăm actualizați</string>
+    <string name="gn_su_notify_auto_download_complete_title">Actualizare sistem</string>
+    <string name="gn_su_notify_auto_download_complete_content">Descărcare completă, click pentru continuare</string>
+    <string name="gn_su_push_content">Versiune nouă de sistem disponibilă, vă rugăm actualizați</string>
+    <string name="gn_su_push_title">Actualizare sistem</string>
+    <string name="gn_su_string_upgrade_success">Sistem actualizat cu succes!</string>
+    <string name="gn_su_string_upgrade_success_hint" formatted="false">Număr versiune curentă firmware: %s.</string>
+    <string name="gn_su_string_questionnaire_hint">Ce părere aveți despre noua versiune? Completați chestionarul.</string>
+    <string name="gn_su_layout_ready_introduction_newversion">Detalii versiune nouă:\n%s</string>
+    <string name="picture_details">"Introducere fotografie"</string>
+    <string name="picture_details_hint">Click pentru a vizualiza schimbările</string>
+    <string name="OTG_name">U Disk</string>
+</resources>

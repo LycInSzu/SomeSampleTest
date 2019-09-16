@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gn_su_app_name">系统升级</string>
+    <!-- SD card Description -->
+    <string name="gn_su_sd_card_title">SD卡</string>
+    <string name="gn_su_internal_storage">内部存储器</string>
+    <string name="gn_su_layout_main_statebutton_recover">系统修复</string>
+    <string name="gn_su_layout_main_statebutton_checknew">检查新版本</string>
+    <string name="gn_su_layout_main_statebutton_readydownload">立即升级</string>
+    <string name="gn_su_layout_main_statebutton_readydownload_recover">立即修复</string>
+    <string name="gn_su_layout_main_statebutton_pause">暂停</string>
+    <string name="gn_su_layout_main_statebutton_continue">继续</string>
+    <string name="gn_su_layout_main_statebutton_download_complete">重启升级</string>
+    <string name="gn_su_layout_main_statebutton_restartrecovery">重启修复</string>
+    <string name="gn_su_layout_main_statebutton_installing">升级中...</string>
+    <string name="gn_su_layout_main_statebutton_recoverying">恢复中...</string>
+
+    <string name="gn_su_layout_main_expend_text_checking">正在检查新版本...</string>
+    <string name="gn_su_layout_main_expend_text_noversion">已是最新版本</string>
+    <string name="gn_su_layout_main_expend_text_network_error">网络异常，请检查网络</string>
+    <string name="gn_su_layout_main_expend_text_network_error_inmobile">当前网络不佳，建议使用WLAN网络</string>
+    <string name="gn_su_layout_main_expend_text_no_network_error">请联网后检查更新</string>
+    <string name="gn_su_layout_main_expend_text_download_no_network_error">请检查网络是否正常链接</string>
+    <string name="gn_su_layout_main_expend_text_gotointroduction">进入新版本日志></string>
+
+    <string name="gn_su_layout_main_middlemsgview_verifysuccess">下载完成，点击重启升级</string>
+    <string name="gn_su_layout_main_middlemsgview_pausing">正在进行数据校验，暂停中...</string>
+    <string name="gn_su_layout_main_middlemsgview_pause">已暂停，已下载%1$dMB/%2$dMB</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading">正在进行数据校验，暂停中...</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_second_kb">%1$.2fKB/S (%2$dMB/%3$dMB)\n预计完成时间：%4$d秒</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_minute_kb">%1$.2fKB/S (%2$dMB/%3$dMB)\n预计完成时间：%4$d分钟</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_hour_kb">%1$.2fKB/S (%2$dMB/%3$dMB)\n预计完成时间：> 60分钟</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_second">%1$.2fMB/S (%2$dMB/%3$dMB)\n预计完成时间：%4$d秒</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_minute">%1$.2fMB/S (%2$dMB/%3$dMB)\n预计完成时间：%4$d分钟</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_hour">%1$.2fMB/S (%2$dMB/%3$dMB)\n预计完成时间：> 60分钟</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_interrupt_by_net">网络异常，请检查网络</string>
+    <string name="gn_su_layout_main_middlemsgview_downloadcomplete">正在校验...</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_interrupt_by_storage">检测到存储器异常，已暂停下载</string>
+    <string name="gn_su_layout_main_middlemdgview_download_error_no_space">存储器已无空间，请整理空间后继续下载</string>
+
+    <string name="gn_su_layout_ready_noteview_prelease">预发布提醒:恭喜你获得优先下载资格，仅1000名额，尽快抢先下载体验吧!</string>
+    <string name="gn_su_layout_ready_noteview_backup">备份提醒:为保证升级后手机数据正常，建议升级前先将重要数据备份。</string>
+    <string name="gn_su_layout_ready_noteview_root">安全提醒:检测到手机已被ROOT，可能会导致文件损坏，影响隐私安全，请尽快修复!</string>
+    <string name="gn_su_layout_no_recovery_root">安全提醒:检测到手机已被ROOT,请尽快到amigo社区下载安装包,并在本地升级修复!</string>
+
+    <string name="gn_su_autodownload_dialog_title">智能更新</string>
+    <string name="gn_su_autodownload_dialog_message">已为你开启WLAN网络下自动下载。你也可以在设置中进行修改。</string>
+    <string name="gn_su_autodownload_dialog_positive_button">知道了</string>
+    <string name="gn_su_autodownload_dialog_negative_button">去设置</string>
+
+    <string name="gn_su_prelease_cancel_title">系统提示</string>
+    <string name="gn_su_prelease_cancel_content">预发布版本已失效，需重新检查新版本进行升级。</string>
+
+    <string name="gn_su_mobilenet_system_dialog_title">系统提示</string>
+    <string name="gn_su_mobilenet_system_dialog_content">为保证系统升级正常使用，在使用过程中可能产生数据流量。是否允许？</string>
+    <string name="gn_su_mobilenet_system_dialog_positive_button">允许</string>
+    <string name="gn_su_mobilenet_system_dialog_negative_button">不允许</string>
+    <string name="gn_su_mobilenet_download_dialog_title">网络提示</string>
+    <string name="gn_su_mobilenet_download_dialog_message">检测手机未开启WLAN网络,由于下载文件较大,建议使用WLAN网络下载,否则会产生流量费用,要继续吗?</string>
+    <string name="gn_su_mobilenet_download_dialog_positive">WALN设置</string>
+    <string name="gn_su_mobilenet_download_dialog_negative">继续下载</string>
+
+    <string name="gn_su_download_notify_content_downloading">下载中...</string>
+    <string name="gn_su_download_notify_content_pausing">正在暂停...</string>
+    <string name="gn_su_download_notify_content_pause">已暂停</string>
+    <string name="gn_su_download_notify_content_interrupt">下载中断</string>
+    <string name="gn_su_download_notify_content_downloadcomplete">校验中...</string>
+    <string name="gn_su_download_notify_content_downloadverfy">下载完成，重启升级</string>
+
+    <string name="gn_su_string_download_file_error">文件下载异常,请重新下载</string>
+    <!-- menu text -->
+
+    <string name="gn_su_action_bar_settings_title">设置</string>
+    <string name="gn_su_string_settings_local_upgrade">本地升级</string>
+    <string name="gn_su_string_settings_local_upgrade_auto">自动扫描更新包</string>
+    <string name="gn_su_string_settings_local_upgrade_select">手动选择更新包</string>
+    <string name="gn_su_string_settings_curVersion_desc">当前版本日志</string>
+    <string name="gn_su_string_setting_newVersion_desc">新版本日志</string>
+
+    <string name="gn_su_string_settings_feedback">满意问卷</string>
+    <string name="gn_su_string_settings_menu_setting">智能更新</string>
+    <string name="gn_su_string_settings_menu_setting_summary">WLAN下自动更新系统</string>
+    <!-- detail info -->
+    <string name="gn_su_string_progress_info">正在加载，请等待...</string>
+
+    <string name="gn_su_battery_title">电量提示</string>
+    <string name="gn_su_battery_summery2">升级需要手机电量高于40%，当前手机电量不足，请充电后继续升级。</string>
+    <string name="gn_su_dialog_positive_button">知道了</string>
+
+    <string name="gn_su_string_localUpgrade_loading">正在扫描更新包...</string>
+    <string name="gn_su_string_localUpgrade_select_files">选择本地升级包</string>
+    <string name="gn_su_string_localUpgrade_no_files">本地无可用升级包</string>
+    <string name="gn_su_string_localUpgrade_forder_empty">没有文件</string>
+    <string name="gn_su_string_file_size">%sMB</string>
+    <string name="gn_su_string_restart_dialog_title">重启升级</string>
+    <string name="gn_su_string_restart_dialog_afterBtn">以后重启</string>
+    <string name="gn_su_string_restart_dialog_nowBtn">立即重启</string>
+    <string name="gn_su_string_restart_dialog_message">你的手机即将在%s秒后重启升级。</string>
+    <string name="gn_su_string_local_file_verify_failed">无效文件，请重新选择有效文件再升级。</string>
+    <string name="gn_su_string_file_verifing">正在校验...</string>
+    <string name="gn_su_string_internal_storage">内部存储器</string>
+    <string name="gn_su_string_sdcard">SD卡</string>
+    <string name="gn_su_string_loading_files">加载文件列表...</string>
+    <string name="gn_su_string_questionnaire_error">加载失败，请稍后再试！</string>
+
+    <string name="gn_su_actionbar_share">分享</string>
+    <string name="gn_su_share_fail">分享失败</string>
+    <string name="gn_su_default_share_title">发布新固件版本啦，快来一起围观吧！</string>
+    <string name="gn_su_share_weixin_name">微信</string>
+    <string name="gn_su_share_friends_name">朋友圈</string>
+    <string name="gn_su_share_weibo_name">微博</string>
+    <string name="gn_su_share_mms_name">信息</string>
+
+    <string name="gn_su_string_ready_gotointroduction_text">进入新版本日志></string>
+    <string name="gn_su_string_ready_newversion" format="true">发现新版本:%s</string>
+    <string name="gn_su_string_curversion">当前版本: %s</string>
+
+    <string name="gn_su_notify_auto_update_title">系统升级</string>
+    <string name="gn_su_notify_auto_check_notify">检测到您的系统有新版本，点击进入升级。</string>
+    <string name="gn_su_notify_auto_download_complete_title">系统更新</string>
+    <string name="gn_su_notify_auto_download_complete_content">下载完成，点击安装。</string>
+
+    <!-- Push -->
+    <string name="gn_su_push_content">"服务器发布新的版本啦,快来点击进行更新"</string>
+    <string name="gn_su_push_title">"系统升级(%s)"</string>
+
+    <string name="gn_su_string_upgrade_success">系统升级成功！</string>
+    <string name="gn_su_string_upgrade_success_hint" formatted="false">当前固件版本号：%s。</string>
+    <string name="gn_su_string_questionnaire_hint">新版本用着如何？赶紧参与问卷评分吧。</string>
+</resources>

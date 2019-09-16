@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <cyee.widget.CyeeProgressBar
+        android:id="@+id/gn_su_layout_localUpgrade_progressBar"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"/>
+
+    <cyee.widget.CyeeTextView
+        android:id="@+id/gn_su_layout_localUpgrade_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gn_su_layout_localUpgrade_progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:text="@string/gn_su_string_localUpgrade_loading"
+        android:textColor="@color/gn_su_layout_localUpgrade_tips_textColor"
+        android:textSize="16sp"/>
+
+    <cyee.widget.CyeeTextView
+        android:id="@+id/gn_su_layout_localUpgrade_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gn_su_layout_localUpgrade_tips"
+        android:layout_alignTop="@id/gn_su_layout_localUpgrade_progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:drawableTop="@null"
+        android:gravity="center"
+        android:text="@string/gn_su_string_localUpgrade_no_files"
+        android:textColor="@color/gn_su_layout_localUpgrade_empty_textColor"
+        android:textSize="16sp"/>
+
+    <cyee.widget.CyeeTextView
+        android:id="@+id/gn_su_layout_localUpgrade_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:gravity="center_vertical|left"
+        android:text="@string/gn_su_string_localUpgrade_select_files"
+        android:textColor="@color/gn_su_default_color"
+        android:textSize="16sp"
+        android:visibility="gone"/>
+
+    <cyee.widget.CyeeListView
+        android:id="@+id/gn_su_layout_localUpgrade_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gn_su_layout_localUpgrade_title"
+        android:visibility="gone"/>
+</RelativeLayout>
+

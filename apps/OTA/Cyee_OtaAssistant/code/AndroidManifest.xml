@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.cydroid.systemupdate.sysoper"
+      android:versionCode="80000002"
+      android:versionName="8.0.0.ac"
+      android:sharedUserId="android.uid.system">
+	<!-- Chenyee <CY_CTS_Bug> <xuyongji> <20171121> remove for SW17W16A-695 begin -->  
+    <!-- <uses-permission android:name="android.permission.RECOVERY" /> -->
+	<!-- Chenyee <CY_CTS_Bug> <xuyongji> <20171121> remove for SW17W16A-695 end -->  
+    <!--Add permission for CR ALPS01592022 -->
+    <permission
+        android:name="com.cydroid.systemupdate.sysoper.permission.ACCESS_SERVICE" />
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <service android:name=".RebootRecoveryService"
+                 android:permission="com.cydroid.systemupdate.sysoper.permission.ACCESS_SERVICE">
+            <intent-filter>
+                <action android:name="com.cydroid.intent.systemupdate.RebootRecoveryService" />
+            </intent-filter>
+        </service>
+        <service android:name=".WriteCommandService"
+                 android:permission="com.cydroid.systemupdate.sysoper.permission.ACCESS_SERVICE">
+            <intent-filter>
+                <action android:name="com.cydroid.intent.systemupdate.WriteCommandService" />
+            </intent-filter>
+        </service>
+        <service android:name=".SysOperService"
+                 android:permission="com.cydroid.systemupdate.sysoper.permission.ACCESS_SERVICE">
+            <intent-filter>
+                <action android:name="com.cydroid.intent.systemupdate.SysOperService" />
+            </intent-filter>
+        </service>
+    </application>
+    <uses-sdk android:minSdkVersion="8" />
+
+</manifest> 

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cydroid.ota"
+    android:versionCode="80000041"
+    android:versionName="8.0.0.bu">
+
+    <uses-sdk android:minSdkVersion="21" />
+
+    <application
+        android:name="com.cydroid.ota.SettingUpdateApplication"
+        android:icon="@drawable/icon_app"
+        android:label="@string/gn_su_app_name"
+        android:process="com.cydroid.ota"
+        android:hardwareAccelerated="true"
+        android:supportsRtl="true"
+        android:resizeableActivity="false"
+        android:theme="@com.cyee:style/Theme.Cyee.Light">
+		<!-- Chenyee <CY_Req> <xuyongji> <20180417> modify for CSW1702SE-197 begin -->
+        <meta-data
+            android:name="CY_APP_ID"
+            android:value="1666CBB09EA6735B" />
+		<!-- Chenyee <CY_Req> <xuyongji> <20180417> modify for CSW1702SE-197 end -->	
+
+		<!-- Chenyee <CY_Bug> <xuyongji> <20180314> modify for CSW1703A-904 begin -->
+        <activity
+            android:name="com.cydroid.ota.ui.SystemUpdateAnimActivity"
+            android:screenOrientation="portrait"
+            android:hardwareAccelerated="true"
+            android:label="@string/gn_su_app_name"
+            android:launchMode="singleTask"
+            android:exported="true"
+            android:theme="@com.cyee:style/Theme.Cyee.Light.SplashLight">
+        </activity>
+		<!-- Chenyee <CY_Bug> <xuyongji> <20180314> modify for CSW1703A-904 end -->
+
+        <activity-alias
+            android:name="com.cydroid.ota.ui.AnimOtaActivity"
+            android:targetActivity="com.cydroid.ota.ui.SystemUpdateAnimActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.GN_OTA_SYSTEM_UPDATE_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.cydroid.ota.action.recover.system"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity
+            android:name="com.cydroid.ota.ui.OtaSettingsActivity"
+            android:parentActivityName="com.cydroid.ota.ui.SystemUpdateAnimActivity"
+            android:screenOrientation="portrait"
+            android:hardwareAccelerated="true"
+            android:theme="@style/Theme.Light.Transparent" />
+        <activity
+            android:name="com.cydroid.ota.ui.DetailsInfoActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Light.Transparent" />
+        <activity
+            android:name="com.cydroid.ota.ui.LocalUpgradeActivity"
+            android:parentActivityName="com.cydroid.ota.ui.OtaSettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Light.Transparent" />
+        <activity
+                android:name="com.cydroid.ota.ui.QuestionnaireActivity"
+                android:parentActivityName="com.cydroid.ota.ui.OtaSettingsActivity"
+                android:screenOrientation="portrait"
+                android:hardwareAccelerated="false"
+                android:theme="@style/Theme.Light.Transparent"/>
+                <!-- add by cuijiuyu -->
+        <activity
+            android:name="com.cydroid.ota.ui.ImageReleaseNoteActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:screenOrientation="portrait">
+      </activity>
+
+        <service android:name="com.cydroid.ota.logic.OtaUpgradeService"
+                 android:permission="gn.com.android.permission.UPGRADE">
+            <intent-filter>
+                <action android:name="gn.com.android.ation.OTA"></action>
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.cydroid.ota.receiver.SettingUpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.cydroid.ota.CHECK_NEW_VERSION"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.gionee.update.ACTION_ALARM_START_SERVICE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.cydroid.ota.receiver.AutoUpgradeReceiver">
+            <intent-filter>
+                <action android:name="com.gionee.update.AUTO_CHECK_NEW_VERSION" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.gionee.update.AUTO_DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.cydroid.ota.receiver.QuestionnaireReceiver">
+            <intent-filter>
+                <action android:name="com.gionee.update.QUESTIONNAIRE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.cydroid.systemupdate.sysoper.permission.ACCESS_SERVICE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_MISS_INFO"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.MASTER_CLEAR"/>
+</manifest>

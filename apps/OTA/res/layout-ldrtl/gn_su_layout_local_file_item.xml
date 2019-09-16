@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gn_su_layout_local_fileItem_height"
+                android:minHeight="@dimen/gn_su_layout_local_fileItem_height">
+    <ImageView
+            android:id="@+id/gn_su_id_local_fileIcon"
+            android:layout_width="@dimen/gn_su_layout_local_fileItem_imageHeight"
+            android:layout_height="@dimen/gn_su_layout_local_fileItem_imageHeight"
+            android:layout_alignParentStart="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/gn_su_file_icon_zip_light"
+            android:layout_marginStart="@dimen/gn_su_layout_local_fileItem_marginH"
+            android:layout_centerVertical="true"/>
+
+
+    <TextView
+            android:id="@+id/gn_su_id_local_fileSize"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/gn_su_layout_local_fileItem_marginH"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/gn_su_layout_local_fileSize"
+            android:gravity="right"
+            android:textColor="@color/gn_su_id_local_fileSize_textcolor"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/gn_su_id_local_fileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/gn_su_id_local_fileIcon"
+            android:layout_toStartOf="@id/gn_su_id_local_fileSize"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            android:textSize="@dimen/gn_su_layout_local_fileSize"
+            android:layout_marginStart="@dimen/gn_su_layout_local_fileName_marginH"
+            android:layout_marginEnd="@dimen/gn_su_layout_local_fileName_marginH"
+            android:gravity="right"
+            android:textColor="@color/gn_su_id_local_fileName_textcolor"
+            android:layout_centerVertical="true"/>
+</RelativeLayout>

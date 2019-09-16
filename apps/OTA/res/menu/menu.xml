@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- Chenyee <CY_Bug> <xuyongji> <20180403> modify for CSW1703A-1550 begin -->
+    <item
+            android:id="@+id/menu_setting"
+            android:icon="@drawable/gn_su_settings_icon"
+            android:orderInCategory="100"
+            android:showAsAction="ifRoom|withText"/>
+	<!-- Chenyee <CY_Bug> <xuyongji> <20180403> modify for CSW1703A-1550 end -->
+
+</menu>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="gn_su_main_bganim_durations">
+        <item>0</item>
+        <item>400</item>
+        <item>332</item>
+        <item>430</item>
+        <item>440</item>
+        <item>533</item>
+        <item>586</item>
+        <item>664</item>
+    </integer-array>
+
+	<!-- Chenyee <CY_REQ> <xuyongji> <20171208> modify for SW17W16A-2426 begin -->
+    <bool name="auto_download_only_wlan">true</bool>
+	<!-- Chenyee <CY_REQ> <xuyongji> <20171208> modify for SW17W16A-2426 end -->
+
+    <integer name="gn_su_animator_logoview_duration">400</integer>
+    <integer name="gn_su_animator_logoview_reverse_duration">400</integer>
+
+</resources>

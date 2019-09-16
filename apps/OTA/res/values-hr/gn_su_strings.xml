@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gn_su_app_name">Nadogradnja Sustava</string>
+    <string name="gn_su_sd_card_title">SDkartica</string>
+    <string name="gn_su_layout_main_statebutton_checknew">Provjeri verziju</string>
+    <string name="gn_su_layout_main_statebutton_pause">Pauza</string>
+    <string name="gn_su_layout_main_statebutton_continue">Nastavi</string>
+    <string name="gn_su_layout_main_statebutton_installing">ažuriranje...</string>
+    <string name="gn_su_autodownload_dialog_title">Pametna nadogradnja</string>
+    <string name="gn_su_autodownload_dialog_positive_button">Znam</string>
+    <string name="gn_su_autodownload_dialog_negative_button">Postavke</string>
+    <string name="gn_su_mobilenet_system_dialog_title">Upit sistema</string>
+    <string name="gn_su_mobilenet_system_dialog_positive_button">Dozvoli</string>
+    <string name="gn_su_mobilenet_system_dialog_negative_button">Nije dopušteno</string>
+    <string name="gn_su_download_notify_content_downloading">Preuzimanje...</string>
+    <string name="gn_su_download_notify_content_pause">Pauzirano</string>
+    <string name="gn_su_action_bar_settings_title">Postavke</string>
+    <string name="gn_su_string_settings_local_upgrade">Lokalna nadogradnja</string>
+    <string name="gn_su_string_settings_local_upgrade_auto">Automatski potraži nadogradnju</string>
+    <string name="gn_su_string_settings_local_upgrade_select">Ručno odaberi nadogradnju</string>
+    <string name="gn_su_string_settings_menu_setting">Pametna nadogradnja</string>
+    <string name="gn_su_string_settings_menu_setting_summary">Automatski nadogradi sustav pomoću Wi-Fi mreže</string>
+    <string name="gn_su_dialog_positive_button">Znam</string>
+    <string name="gn_su_string_localUpgrade_forder_empty">Nema datoteke</string>
+    <string name="gn_su_string_internal_storage">Unutarnja pohrana</string>
+    <string name="gn_su_string_sdcard">SD kartica</string>
+    <string name="gn_su_actionbar_share">Dijeli</string>
+    <string name="gn_su_share_mms_name">Poruka</string>
+    <string name="gn_su_string_curversion">Trenutna verzija: %s</string>
+    <string name="gn_su_notify_auto_update_title">Ažuriranje sustava</string>
+    <string name="gn_su_notify_auto_download_complete_title">Ažuriranje sustava</string>
+    <string name="gn_su_push_title">Ažuriranje sustava</string>
+    <string name="OTG_name">U Disk</string>
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="gn_su_layout_main_animtorredyview_height">351dp</dimen>
+	<!-- Chenyee <CY_Bug> <xuyongji> <20180921> modify for CSW1703CU-184 begin -->
+    <dimen name="gn_su_layout_main_animtorlogoview_marginTop">46dp</dimen>
+	<!-- Chenyee <CY_Bug> <xuyongji> <20180921> modify for CSW1703CU-184 end -->
+    <dimen name="gn_su_layout_main_statebutton_textSize">16sp</dimen>
+    <dimen name="gn_su_layout_main_statebutton_width">220dp</dimen>
+    <dimen name="gn_su_layout_main_statebutton_height">36dp</dimen>
+    <dimen name="gn_su_layout_main_statebutton_border_width">2dp</dimen>
+    <dimen name="gn_su_layout_main_versionview_textSize">12sp</dimen>
+    <dimen name="gn_su_layout_main_versionview_marginBottom">14dp</dimen>
+    <dimen name="gn_su_layout_main_expend_text_textSize">14sp</dimen>
+    <dimen name="gn_su_layout_main_expend_text_marginBottom">4dp</dimen>
+    <dimen name="gn_su_layout_main_animtorLogoview_width">220dp</dimen>
+    <dimen name="gn_su_layout_main_animtorLogoview_height">220dp</dimen>
+    <dimen name="gn_su_layout_main_animtorlogoview_textSize">80sp</dimen>
+    <dimen name="gn_su_layout_main_animtorlogoview_borderWidth">3dp</dimen>
+    <dimen name="gn_su_layout_main_animtorlogoview_precentSize">10dp</dimen>
+    <dimen name="gn_su_layout_main_middlemsgview_marginLeft">36dp</dimen>
+    <dimen name="gn_su_layout_main_middlemsgview_marginRight">36dp</dimen>
+    <dimen name="gn_su_layout_main_middlemsgview_textSize">12sp</dimen>
+    <!-- Chenyee <CY_Bug> <xuyongji> <20180921> modify for CSW1703CU-184 begin -->
+    <dimen name="gn_su_layout_main_middlemsgview_marginTop">16dp</dimen>
+    <!-- Chenyee <CY_Bug> <xuyongji> <20180921> modify for CSW1703CU-184  -->
+    <dimen name="gn_su_layout_main_middlemsgview_lineSpacingExtra">9dp</dimen>
+    <dimen name="gn_su_layout_main_msg_bg_height">170dp</dimen>
+    <dimen name="gn_su_layout_main_statelayout_marginBottom">46dp</dimen>
+
+    <dimen name="gn_su_layout_animtorredyalpha_padding">20dp</dimen>
+    <dimen name="gn_su_layout_ready_newversion_textSize">14sp</dimen>
+    <dimen name="gn_su_layout_ready_filesize_textSize">14sp</dimen>
+    <dimen name="gn_su_layout_ready_introduction_textSize">14sp</dimen>
+    <dimen name="gn_su_layout_ready_introduction_text_lineSpace">8dp</dimen>
+    <dimen name="gn_su_layout_ready_introduction_height">100dp</dimen>
+    <dimen name="gn_su_layout_ready_noteview_textSize">12sp</dimen>
+    <dimen name="gn_su_layout_ready_noteview_paddingTop">7dp</dimen>
+    <dimen name="gn_su_layout_ready_line_marginTop">7dp</dimen>
+    <dimen name="gn_su_layout_ready_line_marginBottom">15dp</dimen>
+    <dimen name="gn_su_layout_ready_gotointroduction_textSize">14sp</dimen>
+    <dimen name="gn_su_layout_ready_gotointroduction_marginTop">16dp</dimen>
+
+    <dimen name="gn_su_animator_logoview_translationY">-66dp</dimen>
+
+    <dimen name="gn_su_badgeview_margintop">1dp</dimen>
+    <dimen name="gn_su_badgeview_marginright">1dp</dimen>
+
+</resources>

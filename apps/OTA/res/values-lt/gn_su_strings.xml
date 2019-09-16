@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="gn_su_app_name">Sistemos naujinimas</string>
+    <string name="gn_su_sd_card_title">SD kortelė</string>
+    <string name="gn_su_layout_main_statebutton_pause">Pristabdyti</string>
+    <string name="gn_su_layout_main_statebutton_continue">Tęsti</string>
+    <string name="gn_su_autodownload_dialog_positive_button">Žinau</string>
+    <string name="gn_su_autodownload_dialog_negative_button">Nustatymas</string>
+    <string name="gn_su_mobilenet_system_dialog_positive_button">Leisti</string>
+    <string name="gn_su_mobilenet_system_dialog_negative_button">Neleidžiama</string>
+    <string name="gn_su_download_notify_content_downloading">Parsiunčiama...</string>
+    <string name="gn_su_download_notify_content_pause">Pristabdyta</string>
+    <string name="gn_su_action_bar_settings_title">Nustatymai</string>
+    <string name="gn_su_dialog_positive_button">Žinau</string>
+    <string name="gn_su_string_localUpgrade_forder_empty">Nėra failų</string>
+    <string name="gn_su_string_sdcard">SD kortelė</string>
+    <string name="gn_su_actionbar_share">Bendrinti</string>
+    <string name="gn_su_share_weixin_name">WeChat</string>
+    <string name="gn_su_share_mms_name">Pranešimas</string>
+    <string name="picture_details_hint">Norėdami pamatyti, kas pakeista, paspauskite</string>
+    <string name="OTG_name">U diskas</string>
+    <string name="gn_su_layout_main_statebutton_readydownload">Atnaujinti dabar</string>
+    <string name="gn_su_layout_main_statebutton_installing">naujinama...</string>
+    <string name="gn_su_mobilenet_system_dialog_title">Sistemos raginimas</string>
+    <string name="gn_su_string_progress_info">Įkeliama, luktelėkite...</string>
+    <string name="gn_su_string_internal_storage">Vidinė atmint.</string>
+    <string name="gn_su_share_friends_name">Akimirkos</string>
+    <string name="gn_su_notify_auto_update_title">Sistemos naujinys</string>
+    <string name="gn_su_notify_auto_download_complete_title">Sistemos naujinys</string>
+    <string name="gn_su_push_title">Sistemos naujinys</string>
+    <string name="gn_su_prelease_cancel_title">Sistemos raginimas</string>
+    <string name="gn_su_download_notify_content_interrupt">Parsiuntimas nutrauktas</string>
+    <string name="gn_su_string_file_size">%sMB</string>
+    <string name="gn_su_string_questionnaire_error">Nepavyko įkelti, vėliau bandykite dar kartą</string>
+    <string name="gn_su_share_weibo_name">Allview</string>
+    <string name="picture_details">Atvaizdo pristatymas</string>
+</resources>

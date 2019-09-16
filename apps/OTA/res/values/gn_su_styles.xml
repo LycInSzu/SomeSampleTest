@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Light.ActionBar" parent="@com.cyee:style/Widget.Cyee.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="Widget.Light.ActionBar.Transparent">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="Widget.Dark.ActionBar" parent="@com.cyee:style/Widget.Cyee.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="Widget.Dark.ActionBar.Transparent">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+        <style name="ProgressBar" parent="android:Widget.Material.Light.ProgressBar.Large">
+        <item name="android:indeterminateDrawable">@drawable/progress_large_material</item>
+    </style>
+</resources>

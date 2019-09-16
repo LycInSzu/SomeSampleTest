@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.cydroid.ota.ui.widget.AnimatorMainBgView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:settingupdate="http://schemas.android.com/apk/res/com.cydroid.ota"
+        android:id="@+id/gn_su_layout_main_bgview"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="?android:attr/actionBarSize"
+        android:fitsSystemWindows="true"
+        android:clipToPadding="true">
+    <com.cydroid.ota.ui.widget.AnimatorLogoView
+            android:id="@+id/gn_su_layout_main_animtorlogoview"
+            android:layout_width="@dimen/gn_su_layout_main_animtorLogoview_width"
+            android:layout_height="@dimen/gn_su_layout_main_animtorLogoview_height"
+            android:textColor="@android:color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/gn_su_layout_main_animtorlogoview_marginTop"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/gn_su_layout_main_animtorlogoview_textSize"
+            android:textAllCaps="false"
+            settingupdate:borderWidth="@dimen/gn_su_layout_main_animtorlogoview_borderWidth"
+            settingupdate:precentSize="@dimen/gn_su_layout_main_animtorlogoview_precentSize"
+            settingupdate:circleColor="@color/gn_su_layout_main_animtorlogoview_circleColor"/>
+    <com.cydroid.ota.ui.widget.AnimatorMiddleView
+            android:id="@+id/gn_su_layout_main_middlemsgview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/gn_su_layout_main_middlemsgview_marginLeft"
+            android:layout_marginEnd="@dimen/gn_su_layout_main_middlemsgview_marginRight"
+            android:textSize="@dimen/gn_su_layout_main_middlemsgview_textSize"
+            android:layout_marginTop="@dimen/gn_su_layout_main_middlemsgview_marginTop"
+            android:textColor="@color/gn_su_layout_main_middlemsgview_textColor"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/gn_su_layout_main_middlemsgview_lineSpacingExtra"
+            android:layout_below="@id/gn_su_layout_main_animtorlogoview"/>
+    <View
+            android:id="@+id/gn_su_layout_main_msg_bg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gn_su_layout_main_msg_bg_height"
+            android:translationY="@dimen/gn_su_layout_main_msg_bg_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gn_su_layout_main_msg_bg_background"/>
+    <com.cydroid.ota.ui.widget.AnimatorStateLayout
+            android:id="@+id/gn_su_layout_main_statelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/gn_su_layout_main_statelayout_marginBottom">
+        <com.cydroid.ota.ui.widget.AnimatorStateView
+                android:id="@+id/gn_su_layout_main_statebutton"
+                android:layout_width="@dimen/gn_su_layout_main_statebutton_width"
+                android:layout_height="@dimen/gn_su_layout_main_statebutton_height"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"/>
+        <TextView
+                android:id="@+id/gn_su_layout_main_versionview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/gn_su_layout_main_statebutton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/gn_su_layout_main_versionview_marginBottom"
+                android:textColor="@color/gn_su_layout_main_versionview_textColor"
+                android:visibility="invisible"
+                android:textSize="@dimen/gn_su_layout_main_versionview_textSize"/>
+        <com.cydroid.ota.ui.widget.ExpendTextView
+                android:id="@+id/gn_su_layout_main_expend_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/gn_su_layout_main_expend_text_textSize"
+                android:layout_marginBottom="@dimen/gn_su_layout_main_expend_text_marginBottom"
+                android:layout_above="@id/gn_su_layout_main_versionview"
+                android:textColor="@color/gn_su_layout_main_expend_text_textColor"/>
+
+    </com.cydroid.ota.ui.widget.AnimatorStateLayout>
+    <include layout="@layout/gn_su_layout_ready"/>
+
+
+</com.cydroid.ota.ui.widget.AnimatorMainBgView>

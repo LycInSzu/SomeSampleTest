@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/* //device/apps/common/assets/res/any/colors.xml
+**
+** Copyright 2006, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string name="gn_su_app_name">Pembaruan sistem</string>
+    <string name="gn_su_sd_card_title">Kartu SD</string>
+    <string name="gn_su_internal_storage">Penyimpanan Internal</string>
+    <string name="gn_su_layout_main_statebutton_recover">Pemulihan sistem</string>
+    <string name="gn_su_layout_main_statebutton_checknew">Periksa versi</string>
+    <string name="gn_su_layout_main_statebutton_readydownload">Perbarui segera</string>
+    <string name="gn_su_layout_main_statebutton_readydownload_recover">Segera perbaiki</string>
+    <string name="gn_su_layout_main_statebutton_pause">Tunda</string>
+    <string name="gn_su_layout_main_statebutton_continue">Melanjutkan</string>
+    <string name="gn_su_layout_main_statebutton_download_complete">Restart pembaruan</string>
+    <string name="gn_su_layout_main_statebutton_restartrecovery">Restart pemulihan</string>
+    <string name="gn_su_layout_main_statebutton_installing">Sedang memperbarui...</string>
+    <string name="gn_su_layout_main_statebutton_recoverying">Sedang memulihkan...</string>
+    <string name="gn_su_layout_main_expend_text_checking">Sedang memeriksa versi baru...</string>
+    <string name="gn_su_layout_main_expend_text_noversion">Ini adalah versi terbaru</string>
+    <string name="gn_su_layout_main_expend_text_network_error">Kesalahan jaringan, harap memeriksa jaringan</string>
+    <string name="gn_su_layout_main_expend_text_network_error_inmobile">Jaringan buruk, harap menggunakan WLAN</string>
+    <string name="gn_su_layout_main_expend_text_no_network_error">Harap menyambungkan jaringan dan memeriksa pembaruan</string>
+    <string name="gn_su_layout_main_expend_text_download_no_network_error">Harap memeriksa apakah jaringan tersambung secara normal</string>
+    <string name="gn_su_layout_main_expend_text_gotointroduction">Masukkan log versi terbaru&gt;</string>
+    <string name="gn_su_layout_main_middlemsgview_verifysuccess">Selesai mengunduh, klik untuk restart dan memperbarui</string>
+    <string name="gn_su_layout_main_middlemsgview_pausing">Sedang memverifikasi data, harap menunggu...</string>
+    <string name="gn_su_layout_main_middlemsgview_pause">Jeda, diunduh %1$dMB/%2$dMB</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading">Sedang memverifikasi data, harap menunggu...</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_second_kb">%1$.2fKB/S (%2$dMB/%3$dMB)\n Perkiraan waktu selesai: %4$d detik</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_minute_kb">%1$.2fKB/S (%2$dMB/%3$dMB)\n Perkiraan waktu selesai: %4$d menit</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_hour_kb">%1$.2fKB/S (%2$dMB/%3$dMB)\n Perkiraan waktu selesai: &gt; 60 menit</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_second">%1$.2fMB/S (%2$dMB/%3$dMB)\n Perkiraan waktu selesai: %4$d detik</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_minute">%1$.2fMB/S (%2$dMB/%3$dMB)\n Perkiraan waktu selesai: %4$d menit</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_hour">%1$.2fMB/S (%2$dMB/%3$dMB)\n Perkiraan waktu selesai: &gt; 60 menit</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_interrupt_by_net">Kesalahan jaringan, harap memeriksa jaringan</string>
+    <string name="gn_su_layout_main_middlemsgview_downloadcomplete">Sedang memverifikasi...</string>
+    <string name="gn_su_layout_main_middlemsgview_downloading_interrupt_by_storage">Anomali penyimpanan terdeteksi, unduhan ditangguhkan</string>
+    <string name="gn_su_layout_main_middlemdgview_download_error_no_space">Memori tidak cukup, harap melanjutkan unduhan setelah membebaskan ruang</string>
+    <string name="gn_su_layout_ready_noteview_prelease">Pengingat sebelum pembebasan: selamat atas pemenuhan syarat Anda untuk prioritas unduhan, hanya 1000 tempat, unduh pertama kali sesegera mungkin!</string>
+    <string name="gn_su_layout_ready_noteview_backup">Pengingat backup: untuk memastikan data seluler normal, Anda disarankan untuk mengimpor data terlebih dahulu sebelum memperbarui.</string>
+    <string name="gn_su_layout_ready_noteview_root">Pengingat keamanan: ROOT ponsel ditemukan yang mungkin dapat mengakibatkan kerusakan dan mempengaruhi privasi. Harap segera memperbaiki!</string>
+    <string name="gn_su_layout_no_recovery_root">Pengingat keamanan: ROOT ponsel ditemukan, harap mengunduh paket pemasangan dari komunitas amigo dan perbarui untuk memperbaiki</string>
+    <string name="gn_su_autodownload_dialog_title">Pembaruan pintar</string>
+    <string name="gn_su_autodownload_dialog_message">Mengunduh secara otomatis jika jaringan WLAN menyala. Anda juga akan dapat memodifikasi di setelan</string>
+    <string name="gn_su_autodownload_dialog_positive_button">Saya tahu</string>
+    <string name="gn_su_autodownload_dialog_negative_button">Pengaturan</string>
+    <string name="gn_su_prelease_cancel_title">Prompt sistem</string>
+    <string name="gn_su_prelease_cancel_content">Versi sebelum peluncuran tidak lagi berlaku, Anda perlu memeriksa pembaruan lagi</string>
+    <string name="gn_su_mobilenet_system_dialog_title">Sistem Prompt</string>
+    <string name="gn_su_mobilenet_system_dialog_content">Untuk memastikan pembaruan sistem dalam penggunaan normal, Anda mungkin akan dikenai biaya data. Izinkan?</string>
+    <string name="gn_su_mobilenet_system_dialog_positive_button">Izinkan</string>
+    <string name="gn_su_mobilenet_system_dialog_negative_button">Tidak diizinkan</string>
+    <string name="gn_su_mobilenet_download_dialog_title">Prompt jaringan</string>
+    <string name="gn_su_mobilenet_download_dialog_message">Jaringan WLAN tidak dinyalakan. Karena ukuran berkas yang diunduh besar, Anda disarankan untuk menggunakan jaringan WLAN untuk mengunduh, atau Anda akan dikenai biaya. Lanjutkan?</string>
+    <string name="gn_su_mobilenet_download_dialog_positive">Setelan WLAN</string>
+    <string name="gn_su_mobilenet_download_dialog_negative">Lanjutkan mengunduh</string>
+    <string name="gn_su_download_notify_content_downloading">Mengunduh...</string>
+    <string name="gn_su_download_notify_content_pausing">Berhenti sementara...</string>
+    <string name="gn_su_download_notify_content_pause">Dijeda</string>
+    <string name="gn_su_download_notify_content_interrupt">Gangguan unduhan</string>
+    <string name="gn_su_download_notify_content_downloadcomplete">Sedang memverifikasi...</string>
+    <string name="gn_su_download_notify_content_downloadverfy">Selesai mengunduh, restart dan perbarui</string>
+    <string name="gn_su_string_download_file_error">Berkas diunduh secara tidak normal, harap mengunduh lagi</string>
+    <string name="gn_su_action_bar_settings_title">Pengaturan</string>
+    <string name="gn_su_string_settings_local_upgrade">Pembaruan lokal</string>
+    <string name="gn_su_string_settings_local_upgrade_auto">Paket pembaruan pindai otomatis</string>
+    <string name="gn_su_string_settings_local_upgrade_select">Pilih pembaruan secara manual</string>
+    <string name="gn_su_string_settings_curVersion_desc">Log versi saat ini</string>
+    <string name="gn_su_string_setting_newVersion_desc">Log versi terbaru</string>
+    <string name="gn_su_string_settings_feedback">Angket kepuasan</string>
+    <string name="gn_su_string_settings_menu_setting">Pembaruan pintar</string>
+    <string name="gn_su_string_settings_menu_setting_summary">Perbarui sistem secara otomatis dengan WLAN</string>
+    <string name="gn_su_string_progress_info">Memuat, silahkan menunggu...</string>
+    <string name="gn_su_battery_title">Peringatan daya</string>
+    <string name="gn_su_battery_summery2">Daya Anda kurang dari 40%. Harap mengisi daya sementara waktu, kemudian lanjutkan pembaruan sistem!</string>
+    <string name="gn_su_dialog_positive_button">Saya tahu</string>
+    <string name="gn_su_string_localUpgrade_loading">Sedang memindai paket pembaruan...</string>
+    <string name="gn_su_string_localUpgrade_select_files">Pilih paket pembaruan lokal</string>
+    <string name="gn_su_string_localUpgrade_no_files">Tidak ada pembaruan yang tersedia secara lokal</string>
+    <string name="gn_su_string_localUpgrade_forder_empty">Tidak ada file</string>
+    <string name="gn_su_string_file_size">%sMB</string>
+    <string name="gn_su_string_restart_dialog_title">Restart pembaruan</string>
+    <string name="gn_su_string_restart_dialog_afterBtn">Restart nanti</string>
+    <string name="gn_su_string_restart_dialog_nowBtn">Restart sekarang</string>
+    <string name="gn_su_string_restart_dialog_message">Ponsel Anda akan di-restart dalam %s detik.</string>
+    <string name="gn_su_string_local_file_verify_failed">Berkas tidak valid, harap memilih berkas yang valid.</string>
+    <string name="gn_su_string_file_verifing">Sedang memverifikasi...</string>
+    <string name="gn_su_string_internal_storage">Penyimpana Internal</string>
+    <string name="gn_su_string_sdcard">SD card</string>
+    <string name="gn_su_string_loading_files">Memuat daftar berkas...</string>
+    <string name="gn_su_string_questionnaire_error">Gagal memuat, coba lagi nanti</string>
+    <string name="gn_su_actionbar_share">Bagikan</string>
+    <string name="gn_su_share_fail">Gagal membagikan</string>
+    <string name="gn_su_default_share_title">Firmware baru telah diluncurkan, harap memperbarui!</string>
+    <string name="gn_su_share_weixin_name">WeChat</string>
+    <string name="gn_su_share_friends_name">Momen</string>
+    <string name="gn_su_share_weibo_name">WeiBo</string>
+    <string name="gn_su_share_mms_name">Pesan</string>
+    <string name="gn_su_string_ready_gotointroduction_text">Masuk ke dalam log versi baru&gt;</string>
+    <string name="gn_su_string_ready_newversion" format="true">Versi Baru Terdeteksi: %s</string>
+    <string name="gn_su_string_curversion">Versi Saat Ini: %s</string>
+    <string name="gn_su_notify_auto_update_title">Pembaruan sistem</string>
+    <string name="gn_su_notify_auto_check_notify">Sistem Anda memiliki versi baru, klik untuk memperbarui</string>
+    <string name="gn_su_notify_auto_download_complete_title">Pembaruan sistem</string>
+    <string name="gn_su_notify_auto_download_complete_content">Selesai mengunduh, klik untuk melanjutkan</string>
+    <string name="gn_su_push_content">Sistem Anda memiliki versi baru, klik untuk memperbarui</string>
+    <string name="gn_su_push_title">Pembaruan sistem</string>
+    <string name="gn_su_string_upgrade_success">Sistem berhasil diperbarui!</string>
+    <string name="gn_su_string_upgrade_success_hint" formatted="false">Nomor versi firmware saat ini: %s.</string>
+    <string name="gn_su_string_questionnaire_hint">Bagaimana pendapat Anda mengenai versi terbaru? Berpartisipasilah dalam mengisi angket berikut.</string>
+    <string name="gn_su_layout_ready_introduction_newversion">Rincian versi baruL\n%s</string>
+    <string name="picture_details">Pengenalan gambar</string>
+    <string name="picture_details_hint">Klik untuk melihat perubahan</string>
+    <string name="OTG_name">U Disk</string>
+    <string name="no_permission">"Anda perlu memberi izin untuk melakukan peningkatan."</string>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cyee.preference.CyeePreferenceScreen
+        xmlns:com.cyee="http://schemas.android.com/apk/res/com.cyee"
+        com.cyee:cyeekey="setting_screen">
+
+    <cyee.preference.CyeeSwitchPreference
+            com.cyee:cyeedefaultValue="@bool/auto_download_only_wlan"
+            com.cyee:cyeekey="auto_check_settings"
+            com.cyee:cyeesummary="@string/gn_su_string_settings_menu_setting_summary"
+            com.cyee:cyeetitle="@string/gn_su_string_settings_menu_setting"/>
+
+    <cyee.preference.CyeePreference
+            com.cyee:cyeekey="version_improving_information"
+            com.cyee:cyeetitle="@string/gn_su_string_settings_curVersion_desc"/>
+
+    <com.cydroid.ota.ui.QuestionnairePreference
+            com.cyee:cyeekey="feedback_information"
+            com.cyee:cyeetitle="@string/gn_su_string_settings_feedback"/>
+
+    <cyee.preference.CyeePreference
+            com.cyee:cyeekey="upgrade_from_local"
+            com.cyee:cyeetitle="@string/gn_su_string_settings_local_upgrade"/>
+
+</cyee.preference.CyeePreferenceScreen>

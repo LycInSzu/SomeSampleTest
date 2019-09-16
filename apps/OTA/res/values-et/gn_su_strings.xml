@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="gn_su_app_name">Süsteemi värskendus</string>
+    <string name="gn_su_sd_card_title">SD-kaart</string>
+    <string name="gn_su_layout_main_statebutton_pause">Paus</string>
+    <string name="gn_su_layout_main_statebutton_continue">Jätka</string>
+    <string name="gn_su_autodownload_dialog_positive_button">Ma tean</string>
+    <string name="gn_su_autodownload_dialog_negative_button">Seadistus</string>
+    <string name="gn_su_mobilenet_system_dialog_positive_button">Luba</string>
+    <string name="gn_su_mobilenet_system_dialog_negative_button">Ei ole lubatud</string>
+    <string name="gn_su_download_notify_content_downloading">Allalaadimine...</string>
+    <string name="gn_su_download_notify_content_pause">Paus</string>
+    <string name="gn_su_action_bar_settings_title">Seaded</string>
+    <string name="gn_su_dialog_positive_button">Ma tean</string>
+    <string name="gn_su_string_sdcard">SD kaart</string>
+    <string name="gn_su_actionbar_share">Jaga</string>
+    <string name="gn_su_share_weixin_name">WeChat</string>
+    <string name="gn_su_share_mms_name">Sõnum</string>
+    <string name="picture_details_hint">Vajutage muudatuste vaatamiseks</string>
+    <string name="OTG_name">U ketas</string>
+    <string name="gn_su_layout_main_statebutton_readydownload">Värskenda kohe</string>
+    <string name="gn_su_mobilenet_system_dialog_title">Süsteemi päring</string>
+    <string name="gn_su_string_progress_info">Laen, palun oodake …</string>
+    <string name="gn_su_string_localUpgrade_forder_empty">Fail puudub</string>
+    <string name="gn_su_string_internal_storage">Sisemälu</string>
+    <string name="gn_su_share_friends_name">Momendid</string>
+    <string name="gn_su_notify_auto_update_title">Süsteemivärskendus</string>
+    <string name="gn_su_notify_auto_download_complete_title">Süsteemivärskendus</string>
+    <string name="gn_su_push_title">Süsteemivärskendus</string>
+    <string name="gn_su_layout_main_statebutton_installing">Uuendamine…</string>
+    <string name="gn_su_prelease_cancel_title">Süsteemi päring</string>
+    <string name="gn_su_download_notify_content_interrupt">Allalaadimine katkes</string>
+    <string name="gn_su_string_file_size">%sMB</string>
+    <string name="gn_su_string_questionnaire_error">Laadimine ebaõnnestus. Palun proovige hiljem uuesti</string>
+    <string name="gn_su_share_weibo_name">Allview</string>
+    <string name="picture_details">Pildi tutvustus</string>
+</resources>

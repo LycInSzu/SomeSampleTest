@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- start main light theme -->
+    <style name="Theme.Light.TranslucentActionBar" parent="@com.cyee:style/Theme.Cyee.Light">
+        <item name="android:actionBarStyle">@style/Widget.Light.ActionBar</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.Light.TranslucentActionBar.ActionBar"/>
+
+    <style name="Theme.Light.TranslucentActionBar.ActionBar.Overlay">
+        <item name="android:actionBarStyle">@style/Widget.Light.ActionBar.Transparent</item>
+    </style>
+
+    <style name="Theme.Light.Transparent" parent="@com.cyee:style/Theme.Cyee.Light">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+    <!-- end main light theme -->
+
+    <!-- start normal light theme -->
+	<!-- Chenyee <CY_Bug> <xuyongji> <20171216> modify for SW17W16A-2702 chenge the actionbar color begin -->
+    <style name="Theme.Light.NormalTheme" parent="@com.cyee:style/Theme.Cyee.Light">
+        <item name="com.cyee:cyeeactionBarStyle">@style/Theme.Light.SettingActionBar</item>
+        <item name="android:actionBarTabBarStyle">@style/Theme.Light.SettingActionBarStyle</item>
+        <item name="android:homeAsUpIndicator">@drawable/cyee_ic_ab_back_light</item>
+    </style>
+ 
+    <style name="Theme.Light.BlueTheme" parent="@com.cyee:style/Theme.Cyee.Light">
+        <item name="com.cyee:cyeeactionBarStyle">@style/Theme.Light.SettingActionBarBlue</item>
+        <item name="android:actionBarTabBarStyle">@style/Theme.Light.SettingActionBarBlueStyle</item>
+		<item name="android:homeAsUpIndicator">@drawable/cyee_ic_ab_back_light</item>
+    </style>    
+
+    <style name="Theme.Light.SettingActionBar" parent="@com.cyee:style/Widget.Cyee.Light.ActionBar">
+        <item name="com.cyee:cyeebackground">@color/gn_su_default_color</item>
+        <item name="com.cyee:cyeebackgroundStacked">@color/gn_su_default_color</item>
+        <item name="com.cyee:cyeetitleTextStyle">@style/LightActionBarStyleTextStyle</item>
+    </style>
+    
+     <style name="Theme.Light.SettingActionBarBlue" parent="@com.cyee:style/Widget.Cyee.Light.ActionBar">
+        <item name="com.cyee:cyeebackground">@color/gn_su_anim_main_backcolor_blue</item>
+        <item name="com.cyee:cyeebackgroundStacked">@color/gn_su_anim_main_backcolor_blue</item>
+		<item name="com.cyee:cyeetitleTextStyle">@style/LightActionBarStyleTextStyle</item>
+    </style>   
+	<!-- Chenyee <CY_Bug> <xuyongji> <20171216> modify for SW17W16A-2702 chenge the actionbar color end -->
+
+    <style name="Theme.Light.SettingActionBarStyle" parent="@com.cyee:style/Widget.Cyee.ActionBar.TabBar">
+        <item name="android:background">@color/gn_su_default_color</item>
+    </style>
+        <style name="Theme.Light.SettingActionBarBlueStyle" parent="@com.cyee:style/Widget.Cyee.ActionBar.TabBar">
+        <item name="android:background">@color/gn_su_anim_main_backcolor_blue</item>
+    </style>
+    <!-- end normal light theme -->
+	<!-- Chenyee <CY_Bug> <xuyongji> <20171216> modify for SW17W16A-2702 chenge the actionbar color begin -->
+    <style name="LightActionBarStyleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">  
+		<item name="android:textColor">@android:color/white</item>  
+	</style>
+	<!-- Chenyee <CY_Bug> <xuyongji> <20171216> modify for SW17W16A-2702 chenge the actionbar color end -->
+
+</resources>

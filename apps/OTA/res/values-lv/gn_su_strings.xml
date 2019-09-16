@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gn_su_sd_card_title">SDkarte</string>
+    <string name="gn_su_layout_main_statebutton_pause">Apturēt</string>
+    <string name="gn_su_layout_main_statebutton_continue">Turpināt</string>
+    <string name="gn_su_layout_main_statebutton_installing">atjaunina...</string>
+    <string name="gn_su_autodownload_dialog_negative_button">Iestatījums</string>
+    <string name="gn_su_mobilenet_system_dialog_positive_button">Atļaut</string>
+    <string name="gn_su_mobilenet_system_dialog_negative_button">Nav atļauts</string>
+    <string name="gn_su_download_notify_content_downloading">Lejupielādē...</string>
+    <string name="gn_su_download_notify_content_pause">Pauzēts</string>
+    <string name="gn_su_action_bar_settings_title">Iestatījumi</string>
+    <string name="gn_su_string_localUpgrade_forder_empty">Nav faila</string>
+    <string name="gn_su_string_internal_storage">Iekšējā krātuve</string>
+    <string name="gn_su_string_sdcard">SD karte</string>
+    <string name="gn_su_actionbar_share">Kopīgot</string>
+    <string name="gn_su_share_mms_name">Ziņojums</string>
+    <string name="gn_su_notify_auto_update_title">Sistēmas atjauninājums</string>
+    <string name="gn_su_notify_auto_download_complete_title">Sistēmas atjauninājums</string>
+    <string name="gn_su_push_title">Sistēmas atjauninājums</string>
+    <string name="gn_su_app_name">Sistēmas atjaunināšana</string>
+    <string name="gn_su_string_questionnaire_error">Neizdevās ielādēt, lūdzam mēģināt vēlreiz vēlāk</string>
+    <string name="gn_su_share_weixin_name">WeChat</string>
+    <string name="gn_su_share_friends_name">Moments</string>
+    <string name="gn_su_share_weibo_name">Allview</string>
+    <string name="OTG_name">U Disk</string>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gn_su_main_backcolor">#33ff9000</color>
+    <color name="gn_su_default_color">#00a6ce</color>
+    <color name="gn_su_new_version_page_background">#f1f1f1</color>
+
+    <color name="gn_su_anim_main_backcolor">#00a6ce</color>
+    <color name="gn_su_anim_bg_defalut">#fbfbfb</color>
+    <color name="gn_su_anim_main_backcolor_blue">#2e58a7</color>
+    <color name="gn_su_anim_bg_defalut_blue">#2e58a7</color>
+    <color name="gn_su_statebutton_textcolor_def">@android:color/white</color>
+
+    <color name="gn_su_layout_ready_newversion_textColor">#CC000000</color>
+    <color name="gn_su_layout_ready_filesize_textColor">#CC000000</color>
+    <color name="gn_su_layout_ready_introduction_textColor">#CC000000</color>
+    <color name="gn_su_layout_ready_noteview_textColor">#66000000</color>
+    <color name="gn_su_layout_ready_line_color">#20000000</color>
+    <color name="gn_su_layout_main_middlemsgview_textColor">#FDFDFD</color>
+    <color name="gn_su_layout_main_msg_bg_background">#FDFDFD</color>
+    <color name="gn_su_layout_main_versionview_textColor">#FDFDFD</color>
+    <color name="gn_su_layout_main_versionview_back_textColor">#50000000</color>
+    <color name="gn_su_layout_main_expend_text_textColor">#FDFDFD</color>
+    <color name="gn_su_layout_main_expend_text_back_textColor">#CC000000</color>
+    <color name="gn_su_layout_main_statebutton_textColor">#FDFDFD</color>
+    <color name="gn_su_layout_main_animtorlogoview_circleColor">#33FDFDFD</color>
+    <color name="gn_su_layout_localUpgrade_empty_textColor">#33000000</color>
+    <color name="gn_su_layout_localUpgrade_tips_textColor">@color/gn_su_layout_localUpgrade_empty_textColor</color>
+    <color name="gn_su_id_local_fileSize_textcolor">#CC000000</color>
+    <color name="gn_su_id_local_fileName_textcolor">@color/gn_su_id_local_fileSize_textcolor</color>
+    <color name="gn_su_preference_positive_color">#222222</color>
+    <color name="gn_su_notification_back_color">#1fc889</color>
+</resources>

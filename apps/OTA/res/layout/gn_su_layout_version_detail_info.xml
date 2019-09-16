@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/info_more"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/download_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="160dp" >
+
+        <ProgressBar
+            android:id="@+id/progress_webview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/progress_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progress_webview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dip"
+            android:text="@string/gn_su_string_progress_info"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/ready_webview"
+        android:layout_width="fill_parent"
+        android:layout_height="450dp"
+        android:visibility="gone" />
+
+    <cyee.widget.CyeeTextView
+        android:id="@+id/gn_su_id_network_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="160dp"
+        android:drawableTop="@null"
+        android:text="@string/gn_su_string_questionnaire_error"
+        android:textColor="@color/gn_su_layout_ready_line_color"
+        android:visibility="gone" />
+    <!--
+    <cyee.widget.CyeeTextView
+        android:id="@+id/image_releasenote_textview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="480dp"
+        android:gravity="center_vertical"
+        android:text="@string/picture_details"
+        android:textColor="#ff9000"
+        android:textSize="18sp"
+         android:visibility="gone"/>
+    -->
+
+    <LinearLayout
+        android:id="@+id/picture_more"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+       android:layout_marginTop="480dp"
+        android:background="@drawable/releasenote_line"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/picture_details"
+                android:textColor="#ff9000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/picture_details_hint"
+                android:textColor="#9e9e9e" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+             android:layout_marginEnd="20dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/releasenote_arrow" />
+    </LinearLayout>
+
+</FrameLayout>

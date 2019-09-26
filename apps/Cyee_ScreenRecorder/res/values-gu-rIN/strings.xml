@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">સ્ક્રીન રિકૉર્ડર</string>
+  <string name="record_exit">બહાર નીકળો</string>
+  <string name="record_time">સમય</string>
+  <string name="record_state">રિકૉર્ડ સ્ક્રીન</string>
+  <string name="record_sound">ધ્વનિ</string>
+  <string name="record_gesture">જેસ્ચર</string>
+  <string name="record_used_time">00:00:00</string>
+  <string name="record_saved_success">વિડિઓ સેવ કરવામાં સફળતા</string>
+  <string name="record_click_to_play">વિડિઓ પ્લે કરો</string>
+  <string name="record_saved_fail">વિડિઓ સેવ કરવામાં નિષ્ફળતા</string>
+  <string name="record_explain">વિડિઓ રિકૉર્ડ કરવામાં ભૂલ થઇ છે</string>
+  <string name="record_space_not_enough">પૂરતી જગ્યા નથી! કૃપા કરીને સાફ કરો.</string>
+  <string name="tip_internal_memory_exception">આંતરિક મેમરીમાં અપવાદ</string>
+</resources>

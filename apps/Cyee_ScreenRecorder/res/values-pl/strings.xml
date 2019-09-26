@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NagrywanieEkranu</string>
+    <string name="record_exit">Wyjdź</string>
+    <string name="record_time">Czas</string>
+    <string name="record_state">Nagraj ekran</string>
+    <string name="record_sound">Dźwięk</string>
+    <string name="record_gesture">Gest</string>
+    <string name="record_saved_success">Pomyślnie zapisano film</string>
+    <string name="record_click_to_play">Odtwarzaj film</string>
+    <string name="record_saved_fail">Błąd zapisu filmu</string>
+    <string name="record_explain">Błąd nagrywania filmu</string>
+    <string name="record_space_not_enough">Zbyt mało miejsca! Zwolnij miejsce.</string>
+    <string name="tip_internal_memory_exception">Błąd pamięci wewnętrznej</string>
+    <string name="audio_input_not_available">Konflikt audio</string>
+    <string name="screenrecorder_run_foreground">Nagrywanie Ekran jest uruchomione…</string>
+    <string name="unsupport_during_call">Podczas połączenia, funkcja nagrywania nie jest obsługiwana</string>
+    <string name="initial_failed">Błąd inicjalizacji, spróbuj ponownie</string>
+    <string name="initial_timeout">Upłynął limit czasu inicjalizacji</string>
+    <string name="tip_remote_exception">Wyjątek zdalny</string>
+    <string name="tip_illegalstate_exception">Wyjątek nielegalnego stanu</string>
+    <string name="tip_security_exception">Wyjątek bezpieczeństwa</string>
+</resources>

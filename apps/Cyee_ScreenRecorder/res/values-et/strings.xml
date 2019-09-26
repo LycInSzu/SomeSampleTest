@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="record_exit">Väljumine</string>
+    <string name="record_time">Kellaaeg</string>
+    <string name="record_sound">Heli</string>
+    <string name="record_gesture">liigutus</string>
+    <string name="record_click_to_play">Video esitamine</string>
+</resources>

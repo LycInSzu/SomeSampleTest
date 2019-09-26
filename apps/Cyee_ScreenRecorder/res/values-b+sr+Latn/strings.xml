@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Snimanje ekrana</string>
+    <string name="record_exit">Izađite</string>
+    <string name="record_time">Vreme</string>
+    <string name="record_state">snimanje ekrana</string>
+    <string name="record_sound">Zvuk</string>
+    <string name="record_gesture">Pokret</string>
+    <string name="record_saved_success">Video je uspešno sačuvan</string>
+    <string name="record_click_to_play">Reprodukuj video</string>
+    <string name="record_saved_fail">Nije moguće sačuvati video</string>
+    <string name="record_explain">Greška pri snimanju videa</string>
+    <string name="record_space_not_enough">Prostor nije dovoljan. Očistite telefon.</string>
+    <string name="tip_internal_memory_exception">Izuzetak iz unutrašnje memorije</string>
+    <string name="audio_input_not_available">Audio konflikt</string>
+    <string name="screenrecorder_run_foreground">Snimanje ekrana je pokrenuto.</string>
+    <string name="unsupport_during_call">Tokom poziva ne podržavaj funkciju snimanja</string>
+    <string name="initial_failed">Početni nije uspeo, molim ponovite</string>
+    <string name="initial_timeout">Vreme početka</string>
+    <string name="tip_remote_exception">Daljinski izuzetak</string>
+    <string name="tip_illegalstate_exception">Izuzetak nelegalnog stanja  </string>
+    <string name="tip_security_exception">Bezbednosni izuzetak</string>
+</resources>

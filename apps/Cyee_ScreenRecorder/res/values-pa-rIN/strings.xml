@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">ਸਕ੍ਰੀਨ ਰਿਕਾਰਡਰ</string>
+  <string name="record_exit">ਬਾਹਰ ਜਾਓ</string>
+  <string name="record_time">ਟਾਈਮ</string>
+  <string name="record_state">ਰਿਕਾਰਡ ਸਕ੍ਰੀਨ</string>
+  <string name="record_sound">ਸਾਊਂਡ</string>
+  <string name="record_gesture">ਜੇਸਚਰ</string>
+  <string name="record_used_time">00:00:00</string>
+  <string name="record_saved_success">ਵੀਡੀਓ ਸੇਵ ਕਰਨਾ ਸਫਲ</string>
+  <string name="record_click_to_play">ਵੀਡੀਓ ਪਲੇਅ ਕਰੋ</string>
+  <string name="record_saved_fail">ਵੀਡੀਓ ਸੇਵ ਕਰਨਾ ਅਸਫਲ</string>
+  <string name="record_explain">ਵੀਡੀਓ ਰਿਕਾਰਡ ਵਿੱਚ ਖਰਾਬੀ</string>
+  <string name="record_space_not_enough">ਸਪੇਸ ਘੱਟ ਹੈ! ਕਿਰਪਾ ਕਰਕੇ ਸਾਫ ਕਰੋ.</string>
+  <string name="tip_internal_memory_exception">ਅੰਦਰੂਨੀ ਮੈਮੋਰੀ ਦਾ ਅਪਵਾਦ</string>
+</resources>

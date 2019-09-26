@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">اسکرین ریکارڈر</string>
+  <string name="record_exit">باہر نکلیں</string>
+  <string name="record_time">وقت</string>
+  <string name="record_state">رِکَارڈ اسکرین</string>
+  <string name="record_sound">آواز</string>
+  <string name="record_gesture">جیسچر</string>
+  <string name="record_used_time">00:00:00</string>
+  <string name="record_saved_success">ویڈیو محفوظ ہو گیا ہے</string>
+  <string name="record_click_to_play">ویڈیو دکھائیں</string>
+  <string name="record_saved_fail">ویڈیو محفوظ نہیں ہو پایا</string>
+  <string name="record_explain">رِکَارڈ ویڈیو میں خامی</string>
+  <string name="record_space_not_enough">کافی اسپیس نہیں ہے!براہ کرم کلین کریں.</string>
+  <string name="tip_internal_memory_exception">انٹرنل میموری میں دقت ہے</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Registratore schermo</string>
+    <string name="record_exit">esci</string>
+    <string name="record_time">volta</string>
+    <string name="record_state">Registra schermo</string>
+    <string name="record_sound">audio</string>
+    <string name="record_gesture">Gesti</string>
+    <string name="record_saved_success">Salvataggio video completato</string>
+    <string name="record_click_to_play">Riproduci video</string>
+    <string name="record_saved_fail">Impossibile salvare video</string>
+    <string name="record_explain">Errore di registrazione video</string>
+    <string name="record_space_not_enough">Memoria insufficiente, Liberare il telefono.</string>
+    <string name="tip_internal_memory_exception">Eccezione memoria interna</string>
+    <string name="audio_input_not_available">Conflitto audio</string>
+    <string name="screenrecorder_run_foreground">Registratore schermo in esecuzione.</string>
+    <string name="unsupport_during_call">Durante la chiamata, non supportare la funzione di registrazione</string>
+    <string name="initial_failed">Avvio non riuscito, riprovare</string>
+    <string name="initial_timeout">Avvio timeout</string>
+    <string name="tip_remote_exception">Eccezione remota</string>
+    <string name="tip_illegalstate_exception">Eccezione di stato non valida</string>
+    <string name="tip_security_exception">Eccezione di sicurezza</string>
+</resources>

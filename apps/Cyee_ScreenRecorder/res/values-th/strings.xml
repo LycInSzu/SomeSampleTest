@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="record_exit">ออก</string>
+    <string name="record_time">เวลา</string>
+    <string name="record_sound">เสียง</string>
+    <string name="record_click_to_play">เล่นวิดีโอ</string>
+    <string name="record_space_not_enough">พื้นที่ไม่เพียงพอ โปรดล้างข้อมูลในโทรศัพท์</string>
+    <string name="screenrecorder_run_foreground">ตัวบันทึกหน้าจอกำลังทำงาน</string>
+    <string name="app_name">ตัวบันทึกหน้าจอ</string>
+    <string name="record_saved_success">บันทึกวิดีโอเรียบร้อยแล้ว</string>
+    <string name="record_explain">การบันทึกวิดีโอมีข้อผิดพลาด</string>
+    <string name="record_state">บันทึกหน้าจอ</string>
+    <string name="tip_internal_memory_exception">ข้อยกเว้นหน่วยความจำภายใน</string>
+    <string name="initial_failed">การเริ่มต้นล้มเหลว โปรดลองอีกครั้ง</string>
+    <string name="record_gesture">ท่าทาง</string>
+    <string name="record_saved_fail">ไม่สามารถบันทึกวิดีโอได้</string>
+    <string name="unsupport_during_call">ในระหว่างการโทร จะไม่รองรับฟังก์ชั่นการบันทึก</string>
+    <string name="audio_input_not_available">ปัญหาทางเสียง</string>
+    <string name="record_used_time">0:00:00 น.</string>
+</resources>

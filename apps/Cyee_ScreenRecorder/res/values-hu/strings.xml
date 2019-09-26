@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KépernyőFelvétel</string>
+    <string name="record_exit">Kilépés</string>
+    <string name="record_time">Idő</string>
+    <string name="record_state">Képernyő felvétel</string>
+    <string name="record_sound">Hang</string>
+    <string name="record_gesture">Mozdulat</string>
+    <string name="record_saved_success">Videó sikeresen mentve</string>
+    <string name="record_click_to_play">Videó lejátszása</string>
+    <string name="record_saved_fail">Sikertelen mentés</string>
+    <string name="record_explain">Felvételi hiba</string>
+    <string name="record_space_not_enough">Nincs elegendő tárhely!Kérem szabadítson fel.</string>
+    <string name="tip_internal_memory_exception">Belső memória kivételével</string>
+    <string name="audio_input_not_available">Audió hiba</string>
+    <string name="screenrecorder_run_foreground">KijelzőFelvétel fut.</string>
+    <string name="unsupport_during_call">Hívás közben nem támogatja a felvétel funkciót</string>
+    <string name="initial_failed">Előkészítés hiba, kérem, próbálja újra</string>
+    <string name="initial_timeout">Előkészítés időtúllépés</string>
+    <string name="tip_remote_exception">Távoli kivétel</string>
+    <string name="tip_illegalstate_exception">Érvénytelen állapot kivétel</string>
+    <string name="tip_security_exception">Biztonsági kivétel</string>
+</resources>

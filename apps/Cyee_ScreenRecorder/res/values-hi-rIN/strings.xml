@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">स्क्रीन रिकॉर्डर</string>
+  <string name="record_exit">बाहर निकलें</string>
+  <string name="record_time">समय</string>
+  <string name="record_state">रिकॉर्ड स्क्रीन</string>
+  <string name="record_sound">साउंड</string>
+  <string name="record_gesture">जेस्चर</string>
+  <string name="record_used_time">00:00:00</string>
+  <string name="record_saved_success">वीडियो सेव हो गया है</string>
+  <string name="record_click_to_play">वीडियो दिखाएं</string>
+  <string name="record_saved_fail">वीडियो सेव नहीं हो पाया</string>
+  <string name="record_explain">रिकॉर्ड वीडियो त्रुटि</string>
+  <string name="record_space_not_enough">पर्याप्त स्पेस नहीं है!कृपया क्लीन करें.</string>
+  <string name="tip_internal_memory_exception">इंटरनल मेमोरी में समस्या है</string>
+</resources>

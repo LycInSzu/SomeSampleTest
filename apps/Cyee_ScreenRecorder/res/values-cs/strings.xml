@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>  
+    <string name="app_name">Nahrávání obrazovky</string>  
+    <string name="record_exit">exit</string>  
+    <string name="record_time">Čas</string>  
+    <string name="record_state">Nahrávání obrazovky</string>  
+    <string name="record_sound">Zvuk</string>  
+    <string name="record_gesture">Gesto</string>  
+    <string name="record_saved_success">Video uloženo</string>  
+    <string name="record_click_to_play">Přehrát</string>  
+    <string name="record_saved_fail">Chyba ukládání</string>  
+    <string name="record_explain">Chyba nahrávání</string>  
+    <string name="record_space_not_enough">Nedostatek místa!</string>  
+    <string name="tip_internal_memory_exception">Výjimka vnitřní paměti</string>
+</resources>

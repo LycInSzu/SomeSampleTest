@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Grabador de pantalla</string>
+    <string name="record_exit">Salida</string>
+    <string name="record_time">Hora</string>
+    <string name="record_state">Pantalla grabada</string>
+    <string name="record_sound">Sonido</string>
+    <string name="record_gesture">Gesto</string>
+    <string name="record_saved_success">Guardar video exitosamente</string>
+    <string name="record_click_to_play">Reproducir video</string>
+    <string name="record_saved_fail">Fallo al guardar video</string>
+    <string name="record_explain">Error al grabar video</string>
+    <string name="record_space_not_enough">No hay espacio suficiente ! Favor de limpar.</string>
+    <string name="tip_internal_memory_exception">Excepción de memoria interna</string>
+    <string name="audio_input_not_available">Conflicto de audio</string>
+    <string name="screenrecorder_run_foreground">La Grabadora de pantalla se está ejecutando.</string>
+    <string name="unsupport_during_call">Durante la llamada, la función de grabación no es compatible</string>
+    <string name="initial_failed">Error de inicio, por favor, vuelva a intentarlo</string>
+    <string name="initial_timeout">Tiempo de espera inicial superado</string>
+    <string name="tip_remote_exception">Excepción remota</string>
+    <string name="tip_illegalstate_exception">Excepción de estado ilegal</string>
+    <string name="tip_security_exception">Excepción de seguridad</string>
+</resources>

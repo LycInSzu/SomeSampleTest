@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Înregistrator Ecran</string>
+    <string name="record_exit">Ieșire</string>
+    <string name="record_time">Timp</string>
+    <string name="record_state">Înregistrare ecran</string>
+    <string name="record_sound">Sunet</string>
+    <string name="record_gesture">Gest</string>
+    <string name="record_saved_success">Videoclip salvat cu succes</string>
+    <string name="record_click_to_play">Redare videoclip</string>
+    <string name="record_saved_fail">Eroare salvare videoclip</string>
+    <string name="record_explain">Eroare înregistrare videoclip</string>
+    <string name="record_space_not_enough">Spațiu insuficient! Vă rugăm eliberați din spațiu.</string>
+    <string name="tip_internal_memory_exception">Excepție memorie internă</string>
+    <string name="screenrecorder_run_foreground">Înregistrare ecran rulează.</string>
+</resources>

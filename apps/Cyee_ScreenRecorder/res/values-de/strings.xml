@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>  
+    <string name="app_name">Bildschirmrekorder</string>  
+    <string name="record_exit">Ausgang</string>  
+    <string name="record_time">Zeit</string>  
+    <string name="record_state">Bildschirm aufzeichnen</string>  
+    <string name="record_sound">Sound</string>  
+    <string name="record_gesture">Geste</string>  
+    <string name="record_saved_success">Speichern des Videos erfolgreich</string>  
+    <string name="record_click_to_play">Video abspielen</string>  
+    <string name="record_saved_fail">Fehler beim Abspeichern des Videos</string>  
+    <string name="record_explain">Videoaufnahmefehler</string>  
+    <string name="record_space_not_enough">Nicht genug Speicherplatz!Bitte bereinigen.</string>  
+    <string name="tip_internal_memory_exception">Ausnahme für internen Speicher</string>
+    <string name="audio_input_not_available">Audiokonflikt</string>
+    <string name="screenrecorder_run_foreground">ScreenRecorder läuft.</string>
+    <string name="unsupport_during_call">Unterstützen Sie während des Anrufs die Aufnahmefunktion nicht</string>
+    <string name="initial_failed">Anfänglich fehlgeschlagen, bitte erneut versuchen</string>
+    <string name="initial_timeout">Erstes Timeout</string>
+    <string name="tip_remote_exception">Remote-Ausnahme</string>
+    <string name="tip_illegalstate_exception">Illegale staatliche Ausnahme</string>
+    <string name="tip_security_exception">Sicherheitsaußnahme</string>
+</resources>

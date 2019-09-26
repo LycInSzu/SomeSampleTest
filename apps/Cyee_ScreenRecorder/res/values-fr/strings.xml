@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Enregistreur d\'écran</string>
+    <string name="record_exit">quitter</string>
+    <string name="record_time">durée</string>
+    <string name="record_sound">son</string>
+    <string name="record_state">enregistrer écran</string>
+    <string name="record_click_to_play">Lire vidéo</string>
+    <string name="record_gesture">Geste</string>
+    <string name="record_saved_success">Vidéo enregistrée avec succès</string>
+    <string name="record_saved_fail">Échec de l\'enregistrement de la vidéo</string>
+    <string name="record_explain">Erreur d\'enregistrement de la vidéo</string>
+    <string name="record_space_not_enough">Espace est insuffisant. Libérez de l\'espace sur le téléphone.</string>
+    <string name="tip_internal_memory_exception">Exception de mémoire interne</string>
+    <string name="audio_input_not_available">Conflit audio</string>
+    <string name="screenrecorder_run_foreground">L\'enregistreur d\'écran est en cours d\'exécution.</string>
+    <string name="unsupport_during_call">Impossible d\'effectuer un enregistrement pendant un appel.</string>
+    <string name="initial_failed">Échec initial. Réessayez.</string>
+    <string name="initial_timeout">Expiration initiale</string>
+    <string name="tip_remote_exception">Exception distante</string>
+    <string name="tip_illegalstate_exception">Exception d\'état non autorisé</string>
+    <string name="tip_security_exception">Exception de sécurité</string>
+</resources>

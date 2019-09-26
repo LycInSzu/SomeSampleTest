@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">ಸ್ಕ್ರೀನ್ ರೆಕಾರ್ಡರ್</string>
+  <string name="record_exit">ನಿರ್ಗಮಿಸಿ</string>
+  <string name="record_time">ಸಮಯ</string>
+  <string name="record_state">ರೆಕಾರ್ಡ್ ಸ್ಕ್ರೀನ್</string>
+  <string name="record_sound">ಶಬ್ಧ</string>
+  <string name="record_gesture">ಜೆಶ್ಚರ್</string>
+  <string name="record_used_time">00:00:00</string>
+  <string name="record_saved_success">ವಿಡಿಯೋವನ್ನು ಸೇವ್ ಮಾಡುವುದು ಸಫಲವಾಗಿದೆ</string>
+  <string name="record_click_to_play">ವಿಡಿಯೋ ಪ್ರಸಾರ</string>
+  <string name="record_saved_fail">ವಿಡಿಯೋವನ್ನು ಸೇವ್ ಮಾಡುವುದು ವಿಫಲವಾಗಿದೆ</string>
+  <string name="record_explain">ವಿಡಿಯೋ ರೆಕಾರ್ಡ್ ದೋಷ</string>
+  <string name="record_space_not_enough">ಸಾಕಷ್ಟು ಸ್ಥಳಾವಕಾಶವಿಲ್ಲ! ದಯವಿಟ್ಟು ಸ್ವಚ್ಛಗೊಳಿಸಿ.</string>
+  <string name="tip_internal_memory_exception">ಆಂತರಿಕ ಮೆಮೊರಿ ಅಪವಾದ</string>
+</resources>

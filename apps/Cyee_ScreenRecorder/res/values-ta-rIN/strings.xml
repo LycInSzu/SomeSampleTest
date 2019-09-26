@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">ஸ்கிரீன் ரீடர்</string>
+  <string name="record_exit">வெளியேறு</string>
+  <string name="record_time">நேரம்</string>
+  <string name="record_state">ரெக்கார்டு ஸ்கிரீன்</string>
+  <string name="record_sound">சவுண்ட்</string>
+  <string name="record_gesture">சைகை</string>
+  <string name="record_used_time">00:00:00</string>
+  <string name="record_saved_success">வீடியோவை சேமிப்பது வெற்றி</string>
+  <string name="record_click_to_play">வீடியோவை பிளே செய்யவும்</string>
+  <string name="record_saved_fail">வீடியோவை சேமிப்பது தோல்வி</string>
+  <string name="record_explain">ரெக்கார்டு வீடியோ பிழை</string>
+  <string name="record_space_not_enough">இடம் போதுமானதாக இல்லை! தயவுசெய்து சுத்தம் செய்யவும்.</string>
+  <string name="tip_internal_memory_exception">உட்புற நினைவகம் விதிவிலக்காக</string>
+</resources>

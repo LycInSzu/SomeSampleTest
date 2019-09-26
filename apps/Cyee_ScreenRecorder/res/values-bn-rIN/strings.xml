@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">স্ক্রীন রেকর্ডার</string>
+  <string name="record_exit">বেরিয়ে যান</string>
+  <string name="record_time">সময়</string>
+  <string name="record_state">স্ক্রীন রেকর্ড করুন</string>
+  <string name="record_sound">সাউণ্ড</string>
+  <string name="record_gesture">জেসচার</string>
+  <string name="record_used_time">00:00:00</string>
+  <string name="record_saved_success">ভিডিও সেভ করতে সফল</string>
+  <string name="record_click_to_play">ভিডিও প্লে করুন</string>
+  <string name="record_saved_fail">ভিডিও সেভ করতে ব্যর্থ</string>
+  <string name="record_explain">ভিডিও রেকর্ডে ত্রুটি</string>
+  <string name="record_space_not_enough">স্পেস যথেষ্ট নয়! অনুগ্রহ করে ক্লিন করুন.</string>
+  <string name="tip_internal_memory_exception">ইণ্টারনাল মেমরি ব্যতিক্রম</string>
+</resources>

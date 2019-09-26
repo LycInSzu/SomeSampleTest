@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ghi hình màn hình</string>
+    <string name="record_exit">Thoát</string>
+    <string name="record_time">Thời gian</string>
+    <string name="record_state">Ghi màn hình</string>
+    <string name="record_sound">Âm thanh</string>
+    <string name="record_gesture">Cử chỉ</string>
+   
+    <string name="record_saved_success">Đã lưu thành công</string>
+    <string name="record_click_to_play">Chạy video</string>
+    <string name="record_saved_fail">Đã lỗi khi lưu video</string>
+    <string name="record_explain">Ghi video lỗi</string>
+    <string name="record_space_not_enough">Dung lượng không đủ, hãy làm trống bộ nhớ.</string>
+    <string name="tip_internal_memory_exception">Bộ nhớ ngoài</string>
+    <string name="audio_input_not_available">Âm thanh bị xung đột</string>
+    <string name="screenrecorder_run_foreground">Ghi màn hình đang chạy.</string>
+    <string name="unsupport_during_call">Khi đang có cuộc gọi, không thể ghi màn hình</string>
+    <string name="initial_failed">Kiểm tra ban đầu lỗi, vui lòng thử lại</string>
+    <string name="initial_timeout">Kiểm tra ban đầu hết hạn</string>
+</resources>

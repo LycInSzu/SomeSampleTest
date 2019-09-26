@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Екранни записващи устройства</string>
+    <string name="record_exit">изход</string>
+    <string name="record_time">време</string>
+    <string name="record_state">запис на екрана</string>
+    <string name="record_sound">звук</string>
+    <string name="record_gesture">Жест</string>
+    <string name="record_saved_success">Запазете видео успех</string>
+    <string name="record_click_to_play">Пускане на видео</string>
+    <string name="record_saved_fail">Запазването на видеото не бе успешно</string>
+    <string name="record_explain">Запишете видео грешка</string>
+    <string name="record_space_not_enough">Пространството не е достатъчно.Моля, почистете телефона.</string>
+    <string name="tip_internal_memory_exception">Изключение от вътрешната памет</string>
+    <string name="audio_input_not_available">Аудио конфликт</string>
+    <string name="screenrecorder_run_foreground">ScreenRecorder работи.</string>
+    <string name="unsupport_during_call">По време на разговора не поддържайте функцията за запис</string>
+    <string name="initial_failed">Първоначално се провали, моля, опитайте отново</string>
+    <string name="initial_timeout">Първоначална пауза</string>
+    <string name="tip_remote_exception">Отдалечено изключение</string>
+    <string name="tip_illegalstate_exception">Незаконно държавно изключение</string>
+    <string name="tip_security_exception">Изключение от сигурността</string>
+</resources>

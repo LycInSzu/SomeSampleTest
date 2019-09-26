@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">錄屏</string>
+    <string name="record_exit">退出</string>
+    <string name="record_time">時間</string>
+    <string name="record_state">錄屏</string>
+    <string name="record_sound">拍照音</string>
+    <string name="record_geusture">手勢</string>
+    <string name="record_used_time">00:00:00</string>
+    <string name="record_saved_success">已保存錄屏</string>
+    <string name="record_click_to_play">點擊播放您的錄屏內容</string>
+    <string name="record_saved_fail">錄屏保存失敗</string>
+    <string name="record_explain">錄屏過程出錯</string>
+    <string name="record_space_not_enough">剩餘空間不多，清理後再試</string>
+    <string name="tip_internal_memory_exception">內部存儲器異常</string>
+    <string name="audio_input_not_available">音頻衝突，無法錄音</string>
+    <string name="screenrecorder_run_foreground">錄屏正在運行</string>
+    <string name="unsupport_during_call">通話過程中，不支持錄屏功能</string>
+    <string name="initial_failed">初始化失敗，請重試</string>
+    <string name="initial_timeout">錄屏初始化超時</string>
+</resources>

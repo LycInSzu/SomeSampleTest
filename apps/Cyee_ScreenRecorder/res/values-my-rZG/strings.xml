@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="record_exit">ထြက္</string>
+    <string name="record_sound">အသံ</string>
+    <string name="record_time">အခ်ိန္</string>
+    <string name="record_click_to_play">ဗြီဒီယိုဖြင့္ပါ</string>
+</resources>

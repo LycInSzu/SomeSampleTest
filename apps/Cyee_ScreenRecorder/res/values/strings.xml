@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="app_name">Screen Recorder</string>
+    <string name="record_exit">exit</string>
+    <string name="record_time">time</string>
+    <string name="record_state">record screen</string>
+    <string name="record_sound">sound</string>
+    <!--Gionee <GN_Oversea_Req> <huangxiaohong> <20170302> <modify> for 73856 begin -->
+    <string name="record_gesture">Gesture</string>
+    <!--Gionee <GN_Oversea_Req> <huangxiaohong> <20170302> <modify> for 73856 end -->
+    <string name="record_used_time">00:00:00</string>
+    <string name="record_saved_success">Save video success</string>
+    <string name="record_click_to_play">Play video</string>
+    <!--Gionee <GN_Oversea_Req> <huangxiaohong> <20170302> <modify> for 73856 begin -->
+    <string name="record_saved_fail">Failed to save video</string>
+    <!--Gionee <GN_Oversea_Req> <huangxiaohong> <20170302> <modify> for 73856 end -->
+    <string name="record_explain">Record video error</string>
+    <!--Gionee <GN_Oversea_Req> <huangxiaohong> <20170302> <modify> for 73856 begin -->
+    <string name="record_space_not_enough">Space is not enough.Please clean the phone.</string>
+    <!--Gionee <GN_Oversea_Req> <huangxiaohong> <20170302> <modify> for 73856 end -->
+    <string name="tip_internal_memory_exception">Internal memory exception</string>
+    <string name="audio_input_not_available">Audio conflict</string>
+    <string name="screenrecorder_run_foreground">ScreenRecorder is running.</string>
+    <string name="unsupport_during_call">During the call, do not support the recording function</string>
+    <string name="initial_failed">Initial failed, please retry</string>
+    <string name="initial_timeout">Initial timeout</string>
+    <!-- CHENYEE 20171128 LIXIAOHONG ADD FOR TIP BEGIN -->
+    <string name="tip_remote_exception">Remote exception</string>
+    <string name="tip_illegalstate_exception">Illegal state exception</string>
+    <string name="tip_security_exception">Security exception</string>
+    <!-- CHENYEE 20171128 LIXIAOHONG ADD FOR TIP END -->
+</resources>

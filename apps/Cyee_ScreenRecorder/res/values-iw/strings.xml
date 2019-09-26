@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string name="app_name">מקליט מסך</string>
+    <string name="record_exit">מקליט מסך</string>
+    <string name="record_time">זמן</string>
+    <string name="record_state">מקליט מסך</string>
+    <string name="record_sound">מחווה</string>
+    <string name="record_gesture">מחווה</string>
+    <string name="record_used_time">00:00:00</string>
+    <string name="record_saved_success">שמור את הצלחת הסרטון</string>
+    <string name="record_click_to_play">נגן סרטון</string>
+    <string name="record_saved_fail">שמירת הסרטון נכשלה</string>
+    <string name="record_explain">תקלה הקלטת סרטון</string>
+    <string name="record_space_not_enough">אין מספיק מקום! נא למחוק</string>
+    <string name="tip_internal_memory_exception">חריגה בזיכרון פנימי</string>
+</resources>

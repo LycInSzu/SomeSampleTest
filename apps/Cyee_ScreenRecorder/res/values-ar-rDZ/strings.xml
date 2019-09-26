@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">مسجل الشاشة</string>
+    <string name="record_exit">خروج</string>
+    <string name="record_time">مرة</string>
+    <string name="record_state">تسجيل الشاشة</string>
+    <string name="record_sound">صوت</string>
+    <string name="record_gesture">إيماءة</string>
+    <string name="record_saved_success">حفظ الفيديو بنجاح</string>
+    <string name="record_click_to_play">تشغيل الفيديو</string>
+    <string name="record_saved_fail">تعذر حفظ الفيديو</string>
+    <string name="record_explain">خطأ في تسجيل الفيديو</string>
+    <string name="record_space_not_enough">الفراغ لا يكفي. يرجى تنظيف الهاتف.</string>
+    <string name="tip_internal_memory_exception">استثناء الذاكرة الداخلية</string>
+    <string name="audio_input_not_available">تعارض الصوت</string>
+    <string name="screenrecorder_run_foreground">مسجل الشاشة قيد التشغيل</string>
+    <string name="unsupport_during_call">أثناء المكالمة، لا تدعم وظيفة التسجيل</string>
+    <string name="initial_failed">فشل في البداية، يٌرجى إعادة المحاولة</string>
+    <string name="initial_timeout">المهلة الأولية</string>
+    <string name="tip_remote_exception">الاستثناء عن بٌعد</string>
+    <string name="tip_illegalstate_exception">استثناء الحالة غير القانوني</string>
+    <string name="tip_security_exception">الاستثناء الأمني</string>
+</resources>

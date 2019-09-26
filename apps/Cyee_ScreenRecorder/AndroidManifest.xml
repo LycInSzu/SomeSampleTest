@@ -1,0 +1,40 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cydroid.screenrecorder"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="90000005"
+    android:versionName="9.0.0.ag" >
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.MANAGE_MEDIA_PROJECTION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAPTURE_VIDEO_OUTPUT" />
+    <uses-permission android:name="android.permission.CAPTURE_SECURE_VIDEO_OUTPUT" />
+    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+     
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:supportsRtl="true">        
+        <service
+            android:name="com.cydroid.screenrecorder.ScreenRecorderService"
+            android:exported="true" />
+        <!-- GIONEE 20161221 lixiaohong add for #51629 begin -->
+        <provider
+			android:name="android.support.v4.content.FileProvider"
+			android:authorities="com.cydroid.screenrecorder.fileprovider"
+			android:exported="false"
+			android:grantUriPermissions="true">
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
+				android:resource="@xml/provider_paths"/>
+       </provider>
+       <!-- GIONEE 20161221 lixiaohong add for #51629 begin -->
+    </application>
+
+</manifest>

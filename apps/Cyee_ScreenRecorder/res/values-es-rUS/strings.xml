@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="record_exit">Salir</string>
+    <string name="record_sound">Sonido</string>
+    <!--Chenyee <CY_REQ> <qinshuiyan> <20180528> for CSW1703MX-226 beign-->
+    <string name="app_name">Grabadora de pantalla</string>
+    <string name="record_time">Tiempo</string>
+    <string name="record_state">Grabar pantalla</string>
+    <string name="record_gesture">Gesto</string>
+    <string name="record_saved_success">Se guardó exitósamente</string>
+    <string name="record_click_to_play">Reproducir</string>
+    <string name="record_saved_fail">No se guardó grabación</string>
+    <string name="record_explain">Error en grabación</string>
+    <string name="record_space_not_enough">No hay suficiente espacio, libere espacio de su teléfono.</string>
+    <string name="tip_internal_memory_exception">Excepción de memoria interna</string>
+    <string name="audio_input_not_available">Conflicto de audio</string>
+    <string name="screenrecorder_run_foreground">Se está grabando pantalla</string>
+    <string name="unsupport_during_call">Durante una llamada, la función de grabar no está soportada</string>
+    <string name="initial_failed">No se grabó, intente nuevamente</string>
+    <string name="initial_timeout">Tiempo agotado</string>
+    <string name="tip_remote_exception">Excepción remota</string>
+    <string name="tip_illegalstate_exception">Excepción estado ilegal</string>
+    <string name="tip_security_exception">Excepción de seguridad</string>
+    <!--Chenyee <CY_REQ> <qinshuiyan> <20180528> for CSW1703MX-226 end-->
+</resources>

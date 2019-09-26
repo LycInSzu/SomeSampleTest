@@ -1,19 +1,19 @@
-1¡¢
-Ë¢»ú¹¤¾ß´æ·ÅµÄÎ»ÖÃ£¨ÉÏº££©
+1ã€
+åˆ·æœºå·¥å…·å­˜æ”¾çš„ä½ç½®ï¼ˆä¸Šæµ·ï¼‰
 
 
-ÓÊÏäÃÜÂë¸ÄÎª£º
+é‚®ç®±å¯†ç æ”¹ä¸ºï¼š
 Wheatek#
 
 
-£º
+ï¼š
 \\192.168.1.12\SW&SWT_file_exchange\wushanfei
 
-ÁíÍâ
-patch¿ÉÒÔ±£´æµ½¸Ãftp£º18.8.3.102 ÓÃ»§Ãû£ºallbackups ÃÜÂë£º1q2w3e4r5t@ms
+å¦å¤–
+patchå¯ä»¥ä¿å­˜åˆ°è¯¥ftpï¼š18.8.3.102 ç”¨æˆ·åï¼šallbackups å¯†ç ï¼š1q2w3e4r5t@ms
 
 
-2¡¢
+2ã€
 git clone ssh://yuchong.li@192.168.80.2:29418/WTK6739_P0_MP1_AP
 
 git clone ssh://yuchong.li@192.168.80.2:29418/WTK6580_O1_AP
@@ -24,7 +24,7 @@ git clone ssh://yuchong.li@192.168.80.2:29418/WTK6580_O1_AP
 \\192.168.1.13\Project_HDC\WTK6739_P0\E966_CQ_9071C_71_P0\E966_CQ_9071C_71_P0_V1.2.1_S190820
 
 
-3¡¢´÷ÖÇÒãMTKÕËºÅÃÜÂë:
+3ã€æˆ´æ™ºæ¯…MTKè´¦å·å¯†ç :
 Account(Email): zhiyi.dai@wheatek.com
 Login Password: Dyc3u+ehzQ0uPc
 
@@ -33,8 +33,8 @@ zhijian.liu@wheatek.com
 sz2019
 
 
-ÕËºÅ£ºyin.chang1@wheatek.com
-ÃÜÂë£ºaA1234a!!
+è´¦å·ï¼šyin.chang1@wheatek.com
+å¯†ç ï¼šaA1234a!!
 -----------------------------------------------------------------------------------------------
 
 /***********************************************************
@@ -43,12 +43,16 @@ sz2019
 * Description: Screen pinning, navigation buttons layout in confirm window is not adapt to the true layout of the system
 ***********************************************************/
 
-[E531_DG_M9T_EEA][EWSY-1094] add memory cleanup function
-[E937_DK_DK011_RUSSIA][YJSQ-4692] fix bug: Nullpointer exception of ZenModeController.onConfigChanged about zenMode
+[E965_CQ_9071C-1_63_P0][EJLW-48][EJLW-50][EJLW-69][EJLW-82][EJLW-83][EJLW-86] add adups fota and faceunlock
+[E531_DG_M9T_EEA][EWSY-1186] fix bug: LimitLauncher show before Bootanimation after reboot in Extreme Power Mode
+[E9361_ALLVIEW_39_P0][EJSLY-549]fix bug: lockpatternview size change after touch with adups faceunlock on
+
+
+
 
 //modified for BUG_ID:YJSQ-4688 by yuchong.li@wheatek.com 20190830 begin
 
-//add for BUG_ID:EJLL-290 by yuchong.li@wheatek.com 20190822 begin
+//add for BUG_ID:EJSLY-471 by yuchong.li@wheatek.com 20190916 begin
 
 
 
@@ -57,18 +61,18 @@ git config --global user.email "yuchong.li@wheatek.com"
 git config --global user.name "liyuchong"
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-¡¾ÎÊÌâÔ­Òò¡¿
-navigation bar ¸ù¾İ²»Í¬ÅäÖÃ£¬ÓĞ²»Í¬µÄ²¼¾Ö¡£µ«screen pinning¹¦ÄÜÃ»ÓĞ×ö¶ÔÓ¦µÄ²¼¾Ö¡£
-¡¾½â¾ö·½°¸¡¿
-Ìí¼ÓÈ±ÉÙµÄ²¼¾Ö£¬²¢ÔÚ´úÂëÖĞ¸ù¾İÅäÖÃ½øĞĞÊÊÅä¡£
-¡¾ÑéÖ¤·½·¨Óë²½Öè¡¿
+ã€é—®é¢˜åŸå› ã€‘
+navigation bar æ ¹æ®ä¸åŒé…ç½®ï¼Œæœ‰ä¸åŒçš„å¸ƒå±€ã€‚ä½†screen pinningåŠŸèƒ½æ²¡æœ‰åšå¯¹åº”çš„å¸ƒå±€ã€‚
+ã€è§£å†³æ–¹æ¡ˆã€‘
+æ·»åŠ ç¼ºå°‘çš„å¸ƒå±€ï¼Œå¹¶åœ¨ä»£ç ä¸­æ ¹æ®é…ç½®è¿›è¡Œé€‚é…ã€‚
+ã€éªŒè¯æ–¹æ³•ä¸æ­¥éª¤ã€‘
 
-¡¾Ó°ÏìµÄ¹¦ÄÜÓëÄ£¿é¡¿
+ã€å½±å“çš„åŠŸèƒ½ä¸æ¨¡å—ã€‘
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 //modified for FEATRUE:switch_screen_between_notch_and_square by yuchong.li@wheatek.com 20190606 begin
 
 
-¡¾1703BC¡¿¡¾MR¡¿¡¾Checklist¡¿¸üĞÂSDKÖÁ26»ò¸ü¸ß°æ±¾£¬Package [com.cydroid.note]
+ã€1703BCã€‘ã€MRã€‘ã€Checklistã€‘æ›´æ–°SDKè‡³26æˆ–æ›´é«˜ç‰ˆæœ¬ï¼ŒPackage [com.cydroid.note]
 [1703_BC_MR][YQLS-104]fix bug: change sdk version of Package [com.cydroid.note] to 26
 
 
@@ -97,14 +101,14 @@ navigation bar ¸ù¾İ²»Í¬ÅäÖÃ£¬ÓĞ²»Í¬µÄ²¼¾Ö¡£µ«screen pinning¹¦ÄÜÃ»ÓĞ×ö¶ÔÓ¦µÄ²¼¾Ö¡
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-Çë´ó¼Ò×¢Òâ£¬ºóĞø·²ÊÇchenyeeÀÏÏîÄ¿£¬ÓÃµ½chenyeeÕËºÅµÇÂ¼e-service£¬pmsµÈµÄ£¬cc list Îñ±Ø²»ÒªĞ´ÂóËëÓÊÏä£¨¿Õ°×£©£¬finder email Ò²Îñ±Ø²»ÒªÁôÂóËëÓÊÏä£¬Í³Ò»ÓÃÄãµÇÂ¼µÄÕËºÅÓÊÏä¼´¿É£¨¼´ddongleo@chenyee.com£©
+è¯·å¤§å®¶æ³¨æ„ï¼Œåç»­å‡¡æ˜¯chenyeeè€é¡¹ç›®ï¼Œç”¨åˆ°chenyeeè´¦å·ç™»å½•e-serviceï¼Œpmsç­‰çš„ï¼Œcc list åŠ¡å¿…ä¸è¦å†™éº¦ç©—é‚®ç®±ï¼ˆç©ºç™½ï¼‰ï¼Œfinder email ä¹ŸåŠ¡å¿…ä¸è¦ç•™éº¦ç©—é‚®ç®±ï¼Œç»Ÿä¸€ç”¨ä½ ç™»å½•çš„è´¦å·é‚®ç®±å³å¯ï¼ˆå³ddongleo@chenyee.comï¼‰
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-¹«Ë¾ÓÊÏä90ÌìĞèÒª¸ü¸ÄÒ»´ÎÃÜÂë£¬¹ıÆÚÇ°¿ÉÒÔÍ¨¹ıhttps://mail.wheatek.com/owa ĞŞ¸Ä£¬¹ıÆÚºóÁªÏµÉÏº£IT ºÂ¾üÅô¸ü¸Ä¡£
+å…¬å¸é‚®ç®±90å¤©éœ€è¦æ›´æ”¹ä¸€æ¬¡å¯†ç ï¼Œè¿‡æœŸå‰å¯ä»¥é€šè¿‡https://mail.wheatek.com/owa ä¿®æ”¹ï¼Œè¿‡æœŸåè”ç³»ä¸Šæµ·IT éƒå†›é¹æ›´æ”¹ã€‚
 
-WIFI Ãû³Æ£ºWheatek-SZ ÃÜÂë£ºSzwifi2019!ÏÈÉèÖÃÒ»ÏÂÓÊÏä£¬outlook£¬¹«Ë¾ÓÊÏä¹ßÀıÊÇ¡ª¡ªÃû.ĞÕ@wheatek.com
-¹«Ë¾Ä¬ÈÏÓÊÏäÃÜÂë£¨²»Òª¸ü¸Ä£©£ºWheatek!
-Ë³·áÔÂ½áÕËºÅ£º7550116997
+WIFI åç§°ï¼šWheatek-SZ å¯†ç ï¼šSzwifi2019!å…ˆè®¾ç½®ä¸€ä¸‹é‚®ç®±ï¼Œoutlookï¼Œå…¬å¸é‚®ç®±æƒ¯ä¾‹æ˜¯â€”â€”å.å§“@wheatek.com
+å…¬å¸é»˜è®¤é‚®ç®±å¯†ç ï¼ˆä¸è¦æ›´æ”¹ï¼‰ï¼šWheatek!
+é¡ºä¸°æœˆç»“è´¦å·ï¼š7550116997
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 repo init -u ssh://liyuchong@18.8.3.13:29418/mtk/manifest -b cy_o1.mp1 -m cy_o1.mp1_CSW1703BA_T1295_SMR.xml
@@ -112,7 +116,7 @@ repo init -u ssh://liyuchong@18.8.3.13:29418/mtk/manifest -b cy_o1.mp1 -m cy_o1.
  repo init -u ssh://liyuchong@18.8.3.13:29418/151/manifest -b chenyee_rom_apk -m CSW1703_oversea_mp.xml
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-ÓÃÁË¿ì°ÔµÄÏîÄ¿£º
+ç”¨äº†å¿«éœ¸çš„é¡¹ç›®ï¼š
 dev_a798_cq_8121_gms
 dev_e838_tg_t19
 dev_e937_cq_9013l
@@ -122,7 +126,7 @@ develop_mp7
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 com.android.internal.R.bool.config_use_oq_statusBarIcons
-ÕâÖÖ×ÊÔ´ÔÚalps\frameworks\base\core\res\res\values\config.xml ÖĞ
+è¿™ç§èµ„æºåœ¨alps\frameworks\base\core\res\res\values\config.xml ä¸­
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 "CY_REPO_ALPS=""repo init -u ssh://gerritbuild@18.8.3.13:29418/P/manifest -b cy_p0.mp1 -m cy_p0.mp1.xml""
@@ -135,9 +139,9 @@ repo init -u ssh://liyuchong@18.8.3.13:29418/P/manifest -b cy_p0.mp1 -m cy_p0.mp
 repo init -u ssh://liyuchong@18.8.3.13:29418/P/manifest -b chenyee_rom_apk -m CSW1703_master.xml
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-Ö¸Áîadb shell pm path <package_name>£¬¿ÉÒÔ¿´µ½ÊÖ»úÖĞpackage_name¶ÔÓ¦apkµÄÃû³Æ
-find -name "*.mk" |xargs grep -r "<apkname>" ¿ÉÒÔ¿ìËÙ²é³öapkËùÔÚÄ¿Â¼
-adb shell pm dump <package_name> | findstr version ¿ÉÒÔ²éÊÖ»úÖĞ¸÷¸öpackageµÄsdk°æ±¾
+æŒ‡ä»¤adb shell pm path <package_name>ï¼Œå¯ä»¥çœ‹åˆ°æ‰‹æœºä¸­package_nameå¯¹åº”apkçš„åç§°
+find -name "*.mk" |xargs grep -r "<apkname>" å¯ä»¥å¿«é€ŸæŸ¥å‡ºapkæ‰€åœ¨ç›®å½•
+adb shell pm dump <package_name> | findstr version å¯ä»¥æŸ¥æ‰‹æœºä¸­å„ä¸ªpackageçš„sdkç‰ˆæœ¬
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -149,20 +153,67 @@ adb logcat -G 20M
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-¸÷¸öÏîÄ¿·ÖÇø´óĞ¡£º
+å„ä¸ªé¡¹ç›®åˆ†åŒºå¤§å°ï¼š
 alps\device\maisui\e535_dk_dk008p_39_p0\partition_size.mk
 
-±ÈÈç£º
-BOARD_SYSTEMIMAGE_PARTITION_SIZE:=838860800                               838M£¿
+æ¯”å¦‚ï¼š
+BOARD_SYSTEMIMAGE_PARTITION_SIZE:=838860800                               838Mï¼Ÿ
 BOARD_CACHEIMAGE_PARTITION_SIZE:=134217728                                134M?
 BOARD_USERDATAIMAGE_PARTITION_SIZE:=1240465408                            1.2G?
 
-¸÷¸öÏîÄ¿·ÖÇø¹ÒÔØµÄÃû³ÆµÈÅäÖÃ£º
+å„ä¸ªé¡¹ç›®åˆ†åŒºæŒ‚è½½çš„åç§°ç­‰é…ç½®ï¼š
 Z:\code\p\6739\WTK6739_P0_MP1_AP\alps\device\maisui\e838_tg_t19_39_p0\recovery.fstab
 
-¶øÕâĞ©ÎÄ¼şÊÇÔÚBoardConfig.xmlÖĞ±»ÒıÓÃµÄ¡£
+è€Œè¿™äº›æ–‡ä»¶æ˜¯åœ¨BoardConfig.xmlä¸­è¢«å¼•ç”¨çš„ã€‚
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-out/target/product/e966_cq_9071_71_p0/obj/PTGEN/partition_size.mk ·ÖÇø´óĞ¡£¿£¿£¿£¿
+out/target/product/e966_cq_9071_71_p0/obj/PTGEN/partition_size.mk åˆ†åŒºå¤§å°ï¼Ÿï¼Ÿï¼Ÿï¼Ÿ
 -----------------------------------------------------------------------------------------------------------------------------------------------------
+æœ¬åœ°è°ƒè¯•SystemUIï¼Œ
+è¦ç”¨engç‰ˆæœ¬ï¼Œæœ¬åœ°ç¼–è¯‘SystemUIçš„apkåpushåˆ°æ‰‹æœºé‡Œ
+å¹¶ä¸”è¦é‡å¯æ‰‹æœºæˆ–è€…é‡æ–°å¯åŠ¨SystemUIè¿›ç¨‹ã€‚
+é‡å¯SystemUIè¿›ç¨‹çš„å‘½ä»¤ï¼š
+adb shell ps | grep systemui | awk '{print $2}' | xargs adb shell kill -9
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+è·å–å±å¹•ä¿¡æ¯ï¼š
+        DisplayMetrics dm = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+
+       float density  = dm.density;      // å±å¹•å¯†åº¦ï¼ˆåƒç´ æ¯”ä¾‹ï¼š0.75/1.0/1.5/2.0ï¼‰
+        float densityDPI = dm.densityDpi;     // å±å¹•å¯†åº¦ï¼ˆæ¯å¯¸åƒç´ ï¼š120/160/240/320ï¼‰
+        float xdpi = dm.xdpi;
+        float ydpi = dm.ydpi;
+
+        Log.e(TAG + "  DisplayMetrics", "xdpi=" + xdpi + "; ydpi=" + ydpi);
+        Log.e(TAG + "  DisplayMetrics", "density=" + density + "; densityDPI=" + densityDPI);
+
+        int screenWidthDip = dm.widthPixels;        // å±å¹•å®½ï¼ˆdipï¼Œå¦‚ï¼š320dipï¼‰
+        int screenHeightDip = dm.heightPixels;      // å±å¹•å®½ï¼ˆdipï¼Œå¦‚ï¼š533dipï¼‰
+
+        Log.e(TAG + "  DisplayMetrics(222)", "screenWidthDip=" + screenWidthDip + "; screenHeightDip=" + screenHeightDip);
+
+        int screenWidth  = (int)(dm.widthPixels * density + 0.5f);      // å±å¹•å®½ï¼ˆpxï¼Œå¦‚ï¼š480pxï¼‰
+       int screenHeight = (int)(dm.heightPixels * density + 0.5f);     // å±å¹•é«˜ï¼ˆpxï¼Œå¦‚ï¼š800pxï¼‰
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+linux ç”ŸæˆæŸæ–‡ä»¶çš„md5å€¼ï¼š
+md5sum <file>
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+ota:
+
+
+    protected static boolean isEmmcSupport() {
+        boolean ret = false;
+
+        ret = SystemProperties.get("ro.vendor.mtk_emmc_support").equals("1");
+
+        Log.d(TAG, "isEmmcSupport: " + ret);
+
+        return ret;
+    }
+	
+------------------------------------------------------------------------------------------------------------------------------------------------------
+

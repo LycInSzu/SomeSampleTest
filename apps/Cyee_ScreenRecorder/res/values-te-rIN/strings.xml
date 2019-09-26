@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">స్క్రీన్ రికార్డర్</string>
+  <string name="record_exit">నిష్క్రమించండి</string>
+  <string name="record_time">సమయం</string>
+  <string name="record_state">స్క్రీన్ను రికార్డ్ చేయండి</string>
+  <string name="record_sound">సౌండ్</string>
+  <string name="record_gesture">జెస్చర్స్</string>
+  <string name="record_used_time">00:00:00</string>
+  <string name="record_saved_success">వీడియోను సేవ్ చేయడం విజయవంతమైంది</string>
+  <string name="record_click_to_play">వీడియో ప్లే చేయండి</string>
+  <string name="record_saved_fail">వీడియోను సేవ్ చేయడం విఫలమైంది</string>
+  <string name="record_explain">వీడియో రికార్డ్ లోపం</string>
+  <string name="record_space_not_enough">స్పేస్ సరిపోదు! దయచేసి తొలగించండి.</string>
+  <string name="tip_internal_memory_exception">ఇంటర్నల్ మెమరీ లోపం</string>
+</resources>

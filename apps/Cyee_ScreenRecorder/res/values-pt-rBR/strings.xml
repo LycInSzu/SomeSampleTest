@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="record_exit">Exit</string>
+    <string name="record_time">Time</string>
+    <string name="record_sound">Som</string>
+</resources>

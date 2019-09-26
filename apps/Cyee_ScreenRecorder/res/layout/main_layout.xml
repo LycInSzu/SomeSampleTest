@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cydroid.screenrecorder.views.MyLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_linearlayout"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/hide_main_layout_img_color"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/single_icon_height"
+        android:background="@drawable/hide_color" />
+
+    <FrameLayout
+        android:id="@+id/hide_main_layout_frame"
+        android:layout_width="@dimen/single_menu_width"
+        android:layout_height="@dimen/single_menu_height" >
+
+        <LinearLayout
+            android:id="@+id/hide_main_layout"
+            android:layout_width="@dimen/single_menu_width"
+            android:layout_height="@dimen/single_menu_height"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/gn_button_background"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/hide_main_layout_img"
+                android:layout_width="@dimen/single_icon_width"
+                android:layout_height="@dimen/single_icon_height"
+                android:background="@drawable/hide_normal" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/record_gesture"
+        android:layout_width="@dimen/single_menu_width"
+        android:layout_height="@dimen/single_menu_height"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/gn_button_background"
+        android:descendantFocusability="blocksDescendants"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/record_gesture_img"
+            android:layout_width="@dimen/single_icon_width"
+            android:layout_height="@dimen/single_icon_height"
+            android:background="@drawable/gesture_disabled" />
+
+        <TextView
+            android:id="@+id/record_gesture_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/record_gesture"
+            android:textSize="@dimen/menu_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/record_sound"
+        android:layout_width="@dimen/single_menu_width"
+        android:layout_height="@dimen/single_menu_height"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/gn_button_background"
+        android:descendantFocusability="blocksDescendants"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/record_sound_img"
+            android:layout_width="@dimen/single_icon_width"
+            android:layout_height="@dimen/single_icon_height"
+            android:background="@drawable/sound_normal" />
+
+        <TextView
+            android:id="@+id/record_sound_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/record_sound"
+            android:textSize="@dimen/menu_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/record_time"
+        android:layout_width="@dimen/single_menu_width"
+        android:layout_height="@dimen/single_menu_height"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/gn_button_background"
+        android:descendantFocusability="blocksDescendants"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <com.cydroid.screenrecorder.views.AutofitTextView
+            android:id="@+id/record_time_content"
+            android:layout_width="@dimen/single_icon_width"
+            android:layout_height="@dimen/single_icon_height"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/record_used_time"
+            android:textColor="#00A6CE"
+            android:textSize="@dimen/record_used_time_size" />
+
+        <TextView
+            android:id="@+id/record_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/record_time"
+            android:textColor="#00A6CE"
+            android:textSize="@dimen/menu_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/record_state"
+        android:layout_width="@dimen/single_menu_width"
+        android:layout_height="@dimen/single_menu_height"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/gn_button_background"
+        android:descendantFocusability="blocksDescendants"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/record_state_img"
+            android:layout_width="@dimen/single_icon_width"
+            android:layout_height="@dimen/single_icon_height"
+            android:background="@drawable/start_record_normal" />
+
+        <TextView
+            android:id="@+id/record_state_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/record_state"
+            android:textSize="@dimen/menu_text_size" />
+    </LinearLayout>
+
+</com.cydroid.screenrecorder.views.MyLinearLayout>

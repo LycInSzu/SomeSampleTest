@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="record_exit">выход</string>
+    <string name="record_sound">звук</string>
+    <string name="app_name">Запись экрана</string>
+    <string name="record_time">время</string>
+    <!--Gionee <GN_Oversea_Req> <zhang_han> <20170927> for 219887 beign-->
+    <string name="record_state">экран записи</string>
+    <string name="record_gesture">Жест</string>
+    <!--Gionee <GN_Oversea_Req> <zhang_han> <20170927> for 219887 end-->
+    <string name="record_saved_success">Видео сохранено успешно</string>
+    <string name="record_click_to_play">Воспроизвести видео</string>
+    <string name="record_saved_fail">Видео не удалось сохранить</string>
+    <string name="record_explain">Записать ошибку видео</string>
+    <string name="record_space_not_enough">Недостаточно места! Пожалуйста, освободите место.</string>
+    <string name="tip_internal_memory_exception">Исключение внутренней памяти</string>
+    <string name="audio_input_not_available">Аудио конфликт</string>
+    <string name="screenrecorder_run_foreground">Запись экрана включена.</string>
+    <string name="unsupport_during_call">Функция записи не работает во время звонка</string>
+    <string name="initial_failed">повторить</string>
+    <string name="initial_timeout">ожидание</string>
+    <string name="tip_remote_exception">Исключить</string>
+    <string name="tip_illegalstate_exception">Исключение  </string>
+    <string name="tip_security_exception">Исключение</string>
+</resources>

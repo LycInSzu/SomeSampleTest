@@ -1,0 +1,26 @@
+<resources>
+
+    <string name="app_name">录屏</string>
+    <string name="record_exit">退出</string>
+    <string name="record_time">时间</string>
+    <string name="record_state">录屏</string>
+    <string name="record_sound">声音</string>
+    <string name="record_geusture">手势</string>
+    <string name="record_used_time">00:00:00</string>
+    <string name="record_saved_success">已保存录屏</string>
+    <string name="record_click_to_play">点击播放您的录屏内容</string>
+    <string name="record_saved_fail">录屏保存失败</string>
+    <string name="record_explain">录屏过程出错</string>
+    <string name="record_space_not_enough">剩余空间不多，清理后再试</string>
+    <string name="tip_internal_memory_exception">内部存储器异常</string>
+    <string name="audio_input_not_available">音频冲突，无法录音</string>
+    <string name="screenrecorder_run_foreground">录屏正在运行</string>
+    <string name="unsupport_during_call">通话过程中，不支持录屏功能</string>
+    <string name="initial_failed">初始化失败，请重试</string>
+    <string name="initial_timeout">录屏初始化超时</string>
+    <!-- CHENYEE 20171128 LIXIAOHONG ADD FOR TIP BEGIN -->
+    <string name="tip_remote_exception">远程异常</string>
+    <string name="tip_illegalstate_exception">非法状态异常</string>
+    <string name="tip_security_exception">安全异常</string>
+    <!-- CHENYEE 20171128 LIXIAOHONG ADD FOR TIP END -->
+</resources>

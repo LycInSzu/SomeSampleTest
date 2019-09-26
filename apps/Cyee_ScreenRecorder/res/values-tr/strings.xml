@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">Ekran Kaydedici</string>
+    <string name="record_exit">çıkış</string>
+    <string name="record_time">süre</string>
+    <string name="record_state">ekranı kaydet</string>
+    <string name="record_sound">ses</string>
+    <string name="record_gesture">hareketler</string>
+    <string name="record_used_time">00:00:00</string>
+    <string name="record_saved_success">Ekran kaydı başarılı</string>
+    <string name="record_click_to_play">Video oynat</string>
+    <string name="record_saved_fail">Video kaydı başarısız</string>
+    <string name="record_explain">Video kayıt hatası</string>
+    <string name="record_space_not_enough">Yeterli alan yok!</string>
+    <string name="tip_internal_memory_exception">Dahili hafıza istisnası</string>
+    <string name="screenrecorder_run_foreground">Ekran Kaydedici çalışıyor</string>
+    <string name="unsupport_during_call">Arama esnasında Ekran kaydedicisi çalışmaz</string>
+    <string name="initial_failed">İlk başarısız oldu, lütfen tekrar deneyin</string>
+    <string name="initial_timeout">İlk zaman aşımı</string>
+    <string name="tip_remote_exception">Uzaktan istisna</string>
+    <string name="tip_illegalstate_exception">Yasa dışı durum istisnası</string>
+    <string name="tip_security_exception">Güvenlik istisnası</string>
+</resources>

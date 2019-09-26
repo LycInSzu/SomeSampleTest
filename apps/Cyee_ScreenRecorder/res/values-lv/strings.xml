@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="record_exit">Iziet</string>
+    <string name="record_time">Laiks</string>
+    <string name="record_sound">Skaņa</string>
+    <string name="record_gesture">žests</string>
+    <string name="record_click_to_play">Atskaņot videoklipu</string>
+</resources>

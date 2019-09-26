@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">സ്ക്രീൻ റിക്കാർഡർ</string>
+  <string name="record_exit">എക്സിറ്റ്</string>
+  <string name="record_time">സമയം</string>
+  <string name="record_state">റിക്കാർഡ് സ്ക്രീൻ</string>
+  <string name="record_sound">ശബ്ദം</string>
+  <string name="record_gesture">ജെസ്ച്ചര്‍</string>
+  <string name="record_used_time">00:00:00</string>
+  <string name="record_saved_success">വീഡിയോ സേവ് ചെയ്യുന്നത് വിജയകരം</string>
+  <string name="record_click_to_play">പ്ലേ വീഡിയോ</string>
+  <string name="record_saved_fail">വീഡിയോ സേവ് ചെയ്യുന്നത് പരാജയപ്പെട്ടു</string>
+  <string name="record_explain">റിക്കാർഡ് വീഡിയോ പിശക്</string>
+  <string name="record_space_not_enough">സ്പേസ് പര്യാപ്തമല്ല! ദയവായി ക്ലീൻ ചെയ്യുക.</string>
+  <string name="tip_internal_memory_exception">ഇന്‍റേണൽ മെമ്മറി വ്യത്യസ്തത</string>
+</resources>

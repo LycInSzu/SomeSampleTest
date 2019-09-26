@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="record_exit">탈퇴</string>
+    <string name="record_time">시간</string>
+    <string name="record_sound">촬영음</string>
+</resources>

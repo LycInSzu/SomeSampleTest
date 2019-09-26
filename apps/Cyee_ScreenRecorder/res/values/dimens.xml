@@ -1,0 +1,15 @@
+<resources>
+
+    <dimen name="single_menu_height">54dp</dimen>
+    <dimen name="single_menu_width">54dp</dimen>
+	<dimen name="single_icon_height">54dp</dimen>
+	<dimen name="single_icon_width">54dp</dimen>
+	<dimen name="hide_color_width">6dp</dimen>
+	<dimen name="menu_text_size">10sp</dimen>
+	<!--chenyee zhaocaili 20180425 modify for CSW1703A-1984 begin-->
+	<dimen name="indication_width">21dp</dimen>
+	<!--chenyee zhaocaili 20180425 modify for CSW1703A-1984 end-->
+	<dimen name="indication_height">54dp</dimen>
+	
+	<dimen name="record_used_time_size">12sp</dimen>
+</resources>

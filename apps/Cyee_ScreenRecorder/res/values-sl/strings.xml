@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Snemalnik zaslona</string>
+    <string name="record_exit">Izhod</string>
+    <string name="record_time">Čas</string>
+    <string name="record_sound">Zvok</string>
+    <string name="record_gesture">Gesta</string>
+    <string name="record_click_to_play">Predvajaj video</string>
+    <string name="record_state">snemanje zaslona</string>
+    <string name="record_saved_success">Shranjevanje videa je bilo uspešno</string>
+    <string name="record_saved_fail">Shranjevanje videa ni bilo uspešno</string>
+    <string name="record_explain">Napaka ob snemanju videa</string>
+    <string name="record_space_not_enough">Ni dovolj prostora. Počistite telefon.</string>
+    <string name="tip_internal_memory_exception">Izjema notranjega pomnilnika</string>
+    <string name="audio_input_not_available">Avdio spor</string>
+    <string name="screenrecorder_run_foreground">Snemalec zaslona deluje.</string>
+    <string name="unsupport_during_call">Ne podpiraj funkcije snemanja med klicem</string>
+    <string name="initial_failed">Začenjanje ni uspelo, prosimo poskusite znova</string>
+    <string name="initial_timeout">Začetna časovna omejitev</string>
+    <string name="tip_remote_exception">Oddaljena izjema</string>
+    <string name="tip_illegalstate_exception">Nezakonite stanje izjeme</string>
+    <string name="tip_security_exception">Varnostna izjema</string>
+</resources>

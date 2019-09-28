@@ -46,8 +46,9 @@ sz2019
 [E965_CQ_9071C-1_63_P0][EJLW-48][EJLW-50][EJLW-69][EJLW-82][EJLW-83][EJLW-86] add adups fota and faceunlock
 [E531_DG_M9T_EEA][EWSY-1186] fix bug: LimitLauncher show before Bootanimation after reboot in Extreme Power Mode
 [E9361_ALLVIEW_39_P0][EJSLY-549]fix bug: lockpatternview size change after touch with adups faceunlock on
+[E838_TG_T19_RUSSIA][YIOY-645][YIOY-649][YIOY-651][YIOY-652][YIOY-658][YIOY-674]fix bug: change translations of Russian and modify GlobaleActionDialog layout in ru
 
-
+[TE536_BLU_39_P0][TEWSL-191][TEWSL-177]fix bug: add chenyee screenrecorder app and tile in qs
 
 
 //modified for BUG_ID:YJSQ-4688 by yuchong.li@wheatek.com 20190830 begin
@@ -217,3 +218,204 @@ ota:
 	
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
+如何抓第一次开机mtklog
+
+适用平台：MTK所有平台
+user版本mtklog默认关闭，在某些场景下，比如第一次开机某些应用报错，需要抓取第一次开机的mtklog
+
+如何修改
+1.连接USB，在Settings->Developer Options中勾选USB debug
+2.在工程模式中root手机（如果无法root请找开发编译eng boot）
+3.将手机/system/etc下的mtklog配置文件mtklog-config.prop从手机中导出来
+命令如下：
+adb pull /system/etc/mtklog-config.prop
+
+
+将com.mediatek.log.mobile.enabled等值修改为true
+
+注意：Android N的路径是/system/vendor/etc/mtklog-config.prop
+
+
+修改前：
+mtklog_path = internal_sd
+com.mediatek.log.mobile.enabled = false
+com.mediatek.log.mobile.maxsize = 300
+com.mediatek.log.modem.enabled = false
+com.mediatek.log.modem.maxsize = 600
+com.mediatek.log.net.enabled = false
+com.mediatek.log.net.maxsize = 200
+
+
+修改后：
+mtklog_path = internal_sd
+com.mediatek.log.mobile.enabled = true
+com.mediatek.log.mobile.maxsize = 300
+com.mediatek.log.modem.enabled = true
+com.mediatek.log.modem.maxsize = 600
+com.mediatek.log.net.enabled = true
+com.mediatek.log.net.maxsize = 200
+
+4.将修改后的mtklog-config.prop导入手机，命令如下：
+
+adb remount
+
+adb push  mtklog-config.prop /system/etc/
+
+
+5.恢复出厂设置，mtklog就默认打开了
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Log.isLoggabled正确的使用姿势
+
+相信很多同事在阅读源码的时候会经常看到Log的debug开关是用Log.isLoggable(TAG,xxxx)来控制的，通常我的做法是 DEBUG = true，然后编译模块重新验证。虽然这样做可以解决大部分模块的Log打印问题，但是一些framework层就得需要eng版本了，这样严重影响了工作效率，那有没有什么方便的方法呢？经过查资料终于搞懂了Log.isLoggable的正确用法，大大提高了工作效率。下面就来简单介绍一下。
+
+请看下面例子
+
+public class MainActivity extends Activity implements OnClickListener {
+
+    //各个Log级别定义的值，级别越高值越大
+    /* public static final int VERBOSE = 2; 
+ public static final int DEBUG = 3; 
+ public static final int INFO = 4; 
+ public static final int WARN = 5; 
+ public static final int ERROR = 6; 
+ public static final int ASSERT = 7; */
+
+    private static final String TAG = "Hello";
+    //定义全局的Log开关
+    private boolean VERBOSE = Log.isLoggable(TAG, Log.VERBOSE);
+    private boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    private boolean INFO = Log.isLoggable(TAG, Log.INFO);
+    private boolean WARN = Log.isLoggable(TAG, Log.WARN);
+    private boolean ERROR = Log.isLoggable(TAG, Log.ERROR);
+    private boolean ASSERT = Log.isLoggable(TAG, Log.ASSERT);
+    private boolean SUPPRESS = Log.isLoggable(TAG, -1);
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        findViewById(R.id.id_verbose).setOnClickListener(this);
+    }
+
+    /** * 更新loggable值 */
+    private void update() {
+        //局部的Log开关
+        VERBOSE = Log.isLoggable(TAG, Log.VERBOSE);
+        DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+        INFO = Log.isLoggable(TAG, Log.INFO);
+        WARN = Log.isLoggable(TAG, Log.WARN);
+        ERROR = Log.isLoggable(TAG, Log.ERROR);
+        ASSERT = Log.isLoggable(TAG, Log.ASSERT);
+        SUPPRESS = Log.isLoggable(TAG, -1);
+    }
+
+    @Override
+    public void onClick(View v) {
+        update();
+
+        switch (v.getId()) {
+        case R.id.id_verbose:
+            Log.d(TAG, "------------------start------------------------");
+            if (VERBOSE) {
+                Log.d(TAG, "verbose log");
+            }
+            if (DEBUG) {
+                Log.d(TAG, "debug log");
+            }
+            if (INFO) {
+                Log.d(TAG, "info log");
+            }
+            if (WARN) {
+                Log.d(TAG, "warn log");
+            }
+            if (ERROR) {
+                Log.d(TAG, "error log");
+            }
+            if (ASSERT) {
+                Log.d(TAG, "assert log");
+            }
+            if (SUPPRESS) {
+                Log.d(TAG, "suppress log");
+            }
+            Log.d(TAG, "------------------end------------------------");
+            break;
+
+        default:
+            break;
+        }
+    }
+}
+上面的代码我们已经将所有的Log开关都定义了，并设置了相应的打印信息。下面我们来看下其相关的打印日志。 
+1.没有做任何操作时的Log，默认级别是INFO
+
+06-05 13:37:06.436: D/Hello(2651): ------------------start------------------------
+06-05 13:37:06.436: D/Hello(2651): info log
+06-05 13:37:06.436: D/Hello(2651): warn log
+06-05 13:37:06.436: D/Hello(2651): error log
+06-05 13:37:06.436: D/Hello(2651): assert log
+06-05 13:37:06.436: D/Hello(2651): ------------------end------------------------
+2.设置adb shell setprop log.tag.Hello V
+
+06-05 13:38:49.102: D/Hello(2651): ------------------start------------------------
+
+06-05 13:38:49.102: D/Hello(2651): verbose log
+06-05 13:38:49.102: D/Hello(2651): debug log
+06-05 13:38:49.102: D/Hello(2651): info log
+06-05 13:38:49.102: D/Hello(2651): warn log
+06-05 13:38:49.102: D/Hello(2651): error log
+06-05 13:38:49.102: D/Hello(2651): assert log
+06-05 13:38:49.103: D/Hello(2651): ------------------end------------------------
+3.设置adb shell setprop log.tag.Hello D
+
+06-05 13:39:42.593: D/Hello(2651): ------------------start------------------------
+06-05 13:39:42.593: D/Hello(2651): debug log
+06-05 13:39:42.593: D/Hello(2651): info log
+06-05 13:39:42.593: D/Hello(2651): warn log
+06-05 13:39:42.593: D/Hello(2651): error log
+06-05 13:39:42.593: D/Hello(2651): assert log
+06-05 13:39:42.593: D/Hello(2651): ------------------end------------------------
+4.设置adb shell setprop log.tag.Hello I
+
+06-05 13:40:21.949: D/Hello(2651): ------------------start------------------------
+06-05 13:40:21.949: D/Hello(2651): info log
+06-05 13:40:21.949: D/Hello(2651): warn log
+06-05 13:40:21.949: D/Hello(2651): error log
+06-05 13:40:21.949: D/Hello(2651): assert log
+06-05 13:40:21.949: D/Hello(2651): ------------------end------------------------
+5.设置adb shell setprop log.tag.Hello W
+
+06-05 13:41:26.370: D/Hello(2651): ------------------start------------------------
+06-05 13:41:26.370: D/Hello(2651): warn log
+06-05 13:41:26.370: D/Hello(2651): error log
+06-05 13:41:26.370: D/Hello(2651): assert log
+06-05 13:41:26.370: D/Hello(2651): ------------------end------------------------
+6.设置adb shell setprop log.tag.Hello E
+
+06-05 13:41:58.954: D/Hello(2651): ------------------start------------------------
+06-05 13:41:58.954: D/Hello(2651): error log
+06-05 13:41:58.954: D/Hello(2651): assert log
+06-05 13:41:58.954: D/Hello(2651): ------------------end------------------------
+7.设置adb shell setprop log.tag.Hello A
+
+06-05 13:42:56.747: D/Hello(2651): ------------------start------------------------
+06-05 13:42:56.748: D/Hello(2651): assert log
+06-05 13:42:56.748: D/Hello(2651): ------------------end------------------------
+8.设置adb shell setprop log.tag.Hello S
+
+06-05 13:43:46.563: D/Hello(2651): ------------------start------------------------
+06-05 13:43:46.563: D/Hello(2651): ------------------end------------------------
+通过上面的Log信息可以分析到，我们通过adb shell setprop设置相应的级别和代码中Log.isLoggable设置的级别比较，当Log.isLoggable设置的级别大于或等于setprop设置的级别时，Log开关即打开，就可以打印Log了。同时，我们设置的S级别的Log，怎么样都不会打印Log。我们没有setprop任何Log级别时，默认打印的是设置Info级别的Log，从这里我们也可以知道，在实际代码Log开关定义中，最好设置成DEBUG级别，这样就可以通过setprop来设置是否需要打印Log。
+
+ 
+
+frameworks中的模块使用Log.isLoggable
+当APP使用Log.isLoggable并定义为全局变量时，我们可以setprop后重启app打印相关的Log。那frameworks中如果有Log.isLoggable要怎么打印呢？只需要执行下面3步即可：
+
+adb shell setprop log.tag.<TAG> D
+adb shell stop
+adb shell start
+adb shell stop会杀掉zygote进程以及所有由zygote孵化而来的子进程。adb shell start则会重启zygote进程，再由zygote进程启动其它android核心进程。当zygote重新启动时，会重新加载framework相关资源，而此时属性已经设置。
+
+通过上面的实战分析，我们在做Log开关的时候，采用Log.isLoggable的方式，最好使用DEBUG级别这样我们就可以控制Log的打印了。同时,需要注意的是setprop设置Log级别的方法是一次性的，即如果机器重启后，就不会生效了。如果要想永久生效，就可以把属性值写入 /data/local.prop文件中，本文就不细讲了。
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

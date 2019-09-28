@@ -81,6 +81,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * a service in background to capture screen and save
  * as a video.
  *
+ *use MediaProjection  and  MediaRecorder
+ *
  * @author fuwenzhi
  */
 public class ScreenRecorderService extends Service {
@@ -743,6 +745,8 @@ public class ScreenRecorderService extends Service {
         if (mMediaProjection == null) {
             Log.d(TAG, "createVirtualDisplay() mMediaProjection == null");
         }
+		//This is the key code. MediaProjection capture the screen and show it on the sixth param(a surface, here is MediaRecorder's surface)
+        //After this ,we start record the screen.
         return mMediaProjection.createVirtualDisplay(packageName, mVideoWidth, mVideoHeight, mScreenDensity,
                 DisplayManager.VIRTUAL_DISPLAY_FLAG_AUTO_MIRROR, mMediaRecorder.getSurface(), null, null);
     }

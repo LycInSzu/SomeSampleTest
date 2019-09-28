@@ -952,6 +952,161 @@ tmux list-command　　列出所有命令
 
 以上为tmux的常见操作，基本可以满足大部分的工作需求，至于更高端的操作待日后再整理。
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+adb 命令：
+
+一、读取系统相关值
+
+1.数据库的值.
+
+      以读写屏幕亮度为例，亮度值保存在settings数据库中的system表中：
+
+      读：adb shell settings get system screen_brightness ；
+
+      写：adb shell settings put system screen_brightness 150；
+
+     此命令需要知道值存在哪个数据库，哪张表里面。
+
+2. 系统SystemProperties值.
+
+   例如系统语言persist.sys.locale：
+
+   读取 ：adb shell getprop persist.sys.locale ；
+
+    写入：adb shell setprop persist.sys.locale en-US ； (ro开头的值属于 read only，无法写入)
+
+二、模拟系统按键、点击、滑动事件
+
+   按键事件：adb shell input keyevent 26 ;（常用键值：26=power，3=home，4=back，其他按键值可参考KeyEvent.java中的定义）
+
+   点击事件：adb shell input tap 1070 1824 ;（1070 1824分别为屏幕的x、y坐标）
+
+   滑动事件：adb shell input swipe 1070 1824 250 250 ;（红色1070 1824为起始坐标，250 250为终点坐标）
+
+   输入事件：adb shell input text "wifi" ;（可向文本框中输入字符串，文本框需获取焦点才有作用）
+
+三、重启android
+
+adb shell stop;
+
+adb shell start;
+
+只重启Android，不会重启kernel
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------驱动打印调用栈：
+1.在内核中代码调用过程难以跟踪，上下文关系复杂，确实让人头痛
+
+调用dump_stack()就会打印当前cpu的堆栈的调用函数了。
+
+如此，一目了然的就能看到当前上下文环境，调用关系了
+
+2.在hal层C++代码中的话，可以复制如下代码
+
+#include <utils/CallStack.h>
+#define CALLSTACK() \
+{ \
+ALOGD("CALL STACK : - %s", __FUNCTION__); \
+android::CallStack stack; \
+stack.update(); \
+ALOGD("\t%s", stack.toString("").string()); \
+}
+
+然后调用 CALLSTACK()即可
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[AP000008]系统属性(System Property)详解
+转至元数据结尾
+由 未知用户 (jie.sun)创建于七月 11, 2017转至元数据起始
+一、System Property使用限制
+System Property的buffer分成三块：
+Head块固定32个字节;
+Info块存放property name的简单hash值，每个4个字节;
+Data区存放property的key<->value真实数据，每个128个字节;
+android 4.4以后，Google已经使用Hybird trie/binary tree结构代替了原来的线性结构，性能大为提升，对应的system property数量也大为提升，但是还是有一定限制的。
+1、在alps/bionic/libc/include/sys/_system_properties.h中定义了
+#define PA_SIZE (128 * 1024)
+限制了整个System Property buffer大小，默认不能超出此限制。
+2、在alps/bionic/libc/include/sys/system_properties.h中定义了
+#define PROP_NAME_MAX 32
+#define PROP_VALUE_MAX 92
+限制了每个System Property name/value的字符最大长度
+3、权限限制
+见System Property的使用
+二、常见System Property
+1、编译生成的prop，此类prop数据是disk存储，重启或者恢复出厂设置数据重新加载，所以不会丢失
+最常见的prop：default.prop、system/build.prop。它们在build的时候即填写好，然后保存在手机系统中。
+default.prop中的属性属于系统安全属性，通常请下严禁在运行时修改，由build时的变量ADDITION_DEFAULT_PROPERTIES产生，如ro.secure，ro.debuggable等。
+具体可以参考alps/build/core/main.mk中这个ADDITION_DEFAULT_PROPERTIES变量的设置。
+system/build.porp中的属性称为常规属性，由build时的变量ADDITION_BUILD_PROPERTIES产生，通常可以在如build/tools/buildinfo.sh、alps/maisui/[project]/system.prop中添加，或者直接修改ADDITION_BUILD_PROPERTIES变量。建议在system.prop中添加。
+2、persist开头prop
+这类prop存储在/data/property当中，重启后数据依然可以重新加载，但是由于在data分区，恢复出厂后数据会丢失，需要重新生成
+3、ro开头的prop
+这类prop只可以设置一次值，一旦值设置成功后不能再更新
+4、还有一类prop值不是disk存储，仅仅存储在init进程的内存中，一旦重启数据就丢失。
+其实运行时，所有的prop值都是存储init进程中，下面会讲到。
+三、System Property的加载
+在alps/bionic/libc/include/sys/_system_properties.h中定义了各种System Property的存储路径
+#define PROP_PATH_RAMDISK_DEFAULT "/default.prop"
+#define PROP_PATH_SYSTEM_BUILD "/system/build.prop"
+#define PROP_PATH_VENDOR_BUILD "/vendor/build.prop"
+#define PROP_PATH_LOCAL_OVERRIDE "/data/local.prop"
+#define PROP_PATH_FACTORY "/factory/factory.prop"
+开机后由init进程开启property_service服务，在alps/system/core/init/init.cpp调用alps/system/core/init/property_service.cpp中start_property_service()
+property_service起来后由load_persistent_properties()载入所有prop文件，所有System Property的set/get由property_service统一管理。如需调试编译bootimage即可
+对于一般的system property只是保存在init的内存中, 不会更新disk中的数据，一旦掉电即丢失；对于以persist开头的持久化的系统属性，因为结果是保存在data分区，通常在恢复出厂设置时因为data 分区被清掉，就也会丢失。
+四、System Property的使用
+1、常见使用场景
+CPP:
+#include <cutils/properties.h>
+property_set("cus.recoveryadb.prop", "1");
+char test[PROPERTY_VALUE_MAX];
+property_get("cus.recoveryadb.prop", test, "0");
+LOG1("prop test =%d %s \n", atoi(test), test);
+JAVA:
+import android.os.SystemProperties;
+SystemProperties.getInt("cus.recoveryadb.prop", 0);
+SystemProperties.set("cus.recoveryadb.prop", "1");
+init.rc:
+on property:vold.decrypt=trigger_shutdown_framework
+write /proc/bootprof "INIT:vold.decrypt=trigger_shutdown_framework"
+start stop_modem
+start swapoff_action
+stop stp_dump
+setprop sys.boot_completed 0
+setprop dev.bootcomplete 0
+2、使用举例
+SystemProperties.set("sys.test.aaa", “111”);//get值为111，重启后get值为空
+SystemProperties.set("persist.radio.test", “111”);//get值为111，重启后get值为111
+SystemProperties.set("persist.sys.test", “111”);//get值为111，重启后get值为111
+SystemProperties.set("persist.temp.test", “111”);//get值为空，重启后get值为空
+SystemProperties.set("test.lcm.clk", “111”);//get值为空，重启后get值为空
+SystemProperties.set("ro.lcm.clk", “111”);//get值为空，重启后get值为空
+以上为6组实验数据，对此结果是否有疑惑呢？
+为什么有些prop设置后还是空？为什么有些prop原来有值，重启后为空？
+先来分析第一个问题，为什么有些prop设置后还是空？
+这涉及到selinux权限问题，抓取上面代码的执行的mtklog，查看kernel_log有如下异常：
+init: avc: denied { set } for property=persist.temp.test pid=3338 uid=1001 gid=1001 scontext=u:r:radio:s0 tcontext=u:object_r:default_prop:s0 tclass=property_service permissive=0
+init: sys_prop: permission denied uid:1001 name:persist.temp.test
+看到此log，第一反应是在radio.te添加：
+allow radio default_prop:property_service { set };
+如此添加后，直接编译报错，因为property.te文件有如下限制：
+neverallow { domain -init } default_prop:property_service set;
+即除了init进程，不允许添加default_prop的set权限。
+到此，是否会有更多的疑问？如果是权限问题，为什么“sys.test.aaa”/“persist.radio.test”/"persist.sys.test"是可以的，而“persist.temp.test”/"test.lcm.clk"/"ro.lcm.clk"是不行的？
+要是修改neverallow规则，估计也是可以强制写入成功的，但是不管这样做是否会引入问题，已经违背了google的原生设计了，实在不是明智的选择。
+google引入neverallow规则，是跟selinux权限机制对应的，一方面给予进程相应的权限，另一方面防止进程的权限放大问题，因为selinux权限不是本文重点，故不做深入分析。
+回到刚才的问题？为什么“sys.test.aaa”/“persist.radio.test”/"persist.sys.test"是可以的，而“persist.temp.test”/"test.lcm.clk"/"ro.lcm.clk"是不行的？
+搜索代码后发现，alps/system/sepolicy/property_contexts文件中定义了各种“合法”的prop形式，
+显然“sys.test.aaa”/“persist.radio.test”/"persist.sys.test"是“合法”的，而“persist.temp.test”/"test.lcm.clk"/"ro.lcm.clk"是“不合法”的
+如此的话，解决方法有两个：一个是修改prop的名称使其合法，这个简单不用说了；二是是自己的prop合法，参考第三点
+再来分析第二个问题，为什么有些prop原来有值，重启后为空？
+这个问题其实前面的内容已经有说到了，以persist开头的prop值是存储在/data/property/中，每次重启后property_service会重新从文件加载prop属性值，故重启后值还在；而普通的"sys.test.aaa"，它的值只是临时存储在init进程中，重启后值不在了
+3、如何自定义添加prop值
+property_contexts添加
+cus.recoveryadb.prop u:object_r:cus_recoveryadb_prop:s0
+property.te添加
+type cus_recoveryadb_prop, property_type;
+修改对应的te文件，比如recovery中使用，则修改recovery.te，添加
+allow recovery cus_recoveryadb_prop:property_service set;
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

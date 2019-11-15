@@ -1108,5 +1108,141 @@ type cus_recoveryadb_prop, property_type;
 修改对应的te文件，比如recovery中使用，则修改recovery.te，添加
 allow recovery cus_recoveryadb_prop:property_service set;
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+OTA:
+一、ota应用层：
+1、上层根据更新包进行更新关键的几个类：
+\frameworks\base\core\java\android\os\RecoverySystem.java
+:
+processPackage();  
+installPackage();
 
 
+
+/frameworks/base/services/core/java/com/android/server/RecoverySystemService.java
+:
+uncrypt();
+setupBcb(String command);//通过socket写入command信息
+
+
+
+/frameworks/base/services/core/java/com/android/server/power/ShutdownThread.java
+:
+reboot();————>ShutdownThread.run();
+
+
+
+二、Recovery
+1、recovery 与android主系统的通讯接口：
+Recovery通过/cache/recovery/文件夹下的三个文件与main system通信。
+（1） /cache/recovery/command：这个文件保存着Main system传给Recovery的命令行，每一行就是一条命令，支持一下几种的组合。
+（2） /cache/recovery/log：Recovery模式在工作中的log打印。
+（3） /cache/recovery/intent：Recovery传递给Main system的信息。作用不详。
+
+
+2、recovery 与 bootloader的通讯接口：
+（下面这一部分很重要，要理解）（下面这一部分很重要，要理解）（下面这一部分很重要，要理解）
+ BCB是Bootloader与Recovery的通信接口，也是Bootloader与Main system之间的通信接口。存储在flash中的MISC分区。占用三个page，其本身就是一个结构体，详细成员以及各成员含义例如以下，位于/bootloader/revocery/bootloader.h文件里：
+
+struct bootloader_message{
+
+char command[32];
+
+    char status[32];
+
+    char recovery[1024];
+
+};
+ command字段：当要重新启动进入Recovery模式或更新radio、bootloader固件时。linux会更新这个值。当固件更新完毕后Bootloader也会更新这个值。另外在成功更新后结束Recovery时。会清除这个成员的值，防止重新启动时再次进入Recovery模式。
+
+ status字段：在完毕对应的更新后。Bootloader会将运行结果写入到这个字段。
+
+ recovery字段：可被Main System写入，也可被Recovery服务程序写入。该文件的内容格式为：
+
+    “recovery\n
+
+    <recovery command>\n
+
+    <recovery command>”
+
+该文件存储的就是一个字符串，必须以recovery\n开头，否则这个字段的全部内容域会被忽略。“recovery\n”之后的部分，是/cache/recovery/command支持的命令。
+
+能够将其理解为Recovery操作过程中对命令操作的备份。Recovery对其操作的过程为：先读取BCB然后读取/cache/recovery/command，然后将二者又一次写回BCB。这样在进入Main system之前。确保操作被运行。在操作之后进入Main system之前。Recovery又会清空BCB的command域和recovery域，这样确保重新启动后不再进入Recovery模式。
+
+
+3、涉及的类
+Z:\code\p\6739\forCompare\WTK6739_P0_MP1_AP\alps\bootable\recovery\recovery.cpp
+Z:\code\p\6739\forCompare\WTK6739_P0_MP1_AP\alps\bootable\recovery\install.cpp
+Z:\code\p\6739\forCompare\WTK6739_P0_MP1_AP\alps\bootable\recovery\roots.cpp
+Z:\code\p\6739\forCompare\WTK6739_P0_MP1_AP\alps\bootable\recovery\updater\updater.cpp
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SystemUI
+
+1、Notification的添加
+在NotificationEntryManager中addNotificationInternal()调用createNotificationViews()之后就会去inflate这个notification的row。在inflate完成之后会调用onAsyncInflationFinished()，这里面又会调用addEntry(entry)，就是在这里将这个notification添加完成的。即都保存在mNotificationData中。
+
+至于mPendingNotifications，这里面保存的是还没有完成inflate的notification。
+
+当前分析结果为：mSortedAndFiltered里面保存的应该就是要展开显示给用户看的notifications，其余的应该就显示在shelf中吧？（感觉其余的只是显示了个图标，所以他们的显示是通过iconcontainer实现的）
+
+
+NotificationViewHierarchyManager这个类是管理notification显示的。
+
+关于notification的分组，notification自身有groupkey这个属性，应该是在NotificationViewHierarchyManager的updateNotificationViews 中进行分组的，分组信息存放在mTmpChildOrderMap中，最后在addNotificationChildrenAndSort()中进行排序。
+
+headsup表示的就是从屏幕顶端弹出显示的notification，比如截图后弹出的。
+EmptyShadeView是用来显示 No notification的。
+FooterView就是底部的manage notification 和 clear notification。
+
+需要更新notification部分时，一般都是调用EntryManager.updateNotifications()。
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Linux 的命令：
+AWK是一种处理文本文件的语言，是一个强大的文本分析工具。
+1、awk -F "=" '{print $NF}'  <filename>
+意思是：将file或者字符串用等号拆分，并进行输出，print $NF 代码输出最后拆分后的一部分。
+
+
+SED
+sed 命令是利用脚本来处理文本文件。
+语法
+sed [-hnV][-e<script>][-f<script文件>][文本文件] 而且可以用单引号添加动作
+参数说明：
+
+-e<script>或--expression=<script> 以选项中指定的script来处理输入的文本文件。
+-f<script文件>或--file=<script文件> 以选项中指定的script文件来处理输入的文本文件。
+-h或--help 显示帮助。
+-n或--quiet或--silent 仅显示script处理后的结果。
+-V或--version 显示版本信息。
+
+动作说明：
+
+a ：新增， a 的后面可以接字串，而这些字串会在新的一行出现(目前的下一行)～
+c ：取代， c 的后面可以接字串，这些字串可以取代 n1,n2 之间的行！
+d ：删除，因为是删除啊，所以 d 后面通常不接任何咚咚；
+i ：插入， i 的后面可以接字串，而这些字串会在新的一行出现(目前的上一行)；
+p ：打印，亦即将某个选择的数据印出。通常 p 会与参数 sed -n 一起运行～
+s ：取代，可以直接进行取代的工作哩！通常这个 s 的动作可以搭配正规表示法！例如 1,20s/old/new/g 就是啦！
+
+还有比较细节的用法，比如：
+sed 可以用行为单位进行部分数据的搜寻并取代。基本上 sed 的搜寻与替代的与 vi 相当的类似！他有点像这样：
+
+sed 's/要被取代的字串或正则表达式/新的字串/g'
+eg:sed  's/[^0-9a-zA-Z= ._-]//g'
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

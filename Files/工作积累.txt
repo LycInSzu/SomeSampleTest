@@ -42,13 +42,21 @@ sz2019
 * 1. yuchong.li@wheatek.com BUG_ID:E937_YJSQ-3991 20190522
 * Description: Screen pinning, navigation buttons layout in confirm window is not adapt to the true layout of the system
 ***********************************************************/
-
+[E9592_BQ_63_P0][EJWJE-331]change translation of qs tile
+[E557_OQ_S65_UZ_61_P0][EWWQ-2017][EWWQ-2039][EWWQ-2041]modify qs tiles order and remove screenrecorder qs tile
+[E959_OQ_S70_UZ_63_P0][EJWJ-1056]add icon as switch of auto brightness
 [E965_CQ_9071C-1_63_P0][EJLW-48][EJLW-50][EJLW-69][EJLW-82][EJLW-83][EJLW-86] add adups fota and faceunlock
-[E531_DG_M9T_EEA][EWSY-1186] fix bug: LimitLauncher show before Bootanimation after reboot in Extreme Power Mode
-[E9361_ALLVIEW_39_P0][EJSLY-549]fix bug: lockpatternview size change after touch with adups faceunlock on
+[E531_DG_M9T_EEA][EWSY-1430] update faceunlock apk
+[E9361_ALLVIEW_39_P0][EJSLY-660]change ota app from chenyee to allview
 [E838_TG_T19_RUSSIA][YIOY-645][YIOY-649][YIOY-651][YIOY-652][YIOY-658][YIOY-674]fix bug: change translations of Russian and modify GlobaleActionDialog layout in ru
 
-[TE536_BLU_39_P0][TEWSL-191][TEWSL-177]fix bug: add chenyee screenrecorder app and tile in qs
+[TE536_BLU_39_P0][TEWSL-296]add translation of super screenshot in spanish
+[E9592_BLU_63_P0][none]add translation of super screenshot in spanish
+
+[C719_8045_39_O1][CQYJ-1809] update adups ota version to 5.26
+
+
+[E977_PUBLIC_71_Q0][EJQQ-994][EJQQ-996] add am/pm in 12hr format shown in statusbar and keyguardview
 
 
 //modified for BUG_ID:YJSQ-4688 by yuchong.li@wheatek.com 20190830 begin
@@ -418,4 +426,10 @@ adb shell start
 adb shell stop会杀掉zygote进程以及所有由zygote孵化而来的子进程。adb shell start则会重启zygote进程，再由zygote进程启动其它android核心进程。当zygote重新启动时，会重新加载framework相关资源，而此时属性已经设置。
 
 通过上面的实战分析，我们在做Log开关的时候，采用Log.isLoggable的方式，最好使用DEBUG级别这样我们就可以控制Log的打印了。同时,需要注意的是setprop设置Log级别的方法是一次性的，即如果机器重启后，就不会生效了。如果要想永久生效，就可以把属性值写入 /data/local.prop文件中，本文就不细讲了。
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+服务器上找到对应的版本，解压缩出里面的system.img。然后把这个img挂载成一个目录（比如：mnt_dir）就可以看到里面的内容了。
+挂载用到下面三个命令：
+simg2img system.img system.img.ext4 //将system.img转换成system.img.ext4
+mkdir mnt_dir
+sudo mount -t ext4 -o loop system.img.ext4 mnt_dir //挂载
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

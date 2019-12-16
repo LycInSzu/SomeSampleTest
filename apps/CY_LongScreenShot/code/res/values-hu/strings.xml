@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hosszú képernyőmentés</string>
+    <string name="action_settings">Beállítások</string>
+    <string name="longscreenshot">Hosszú képernyőmentés</string>
+    <string name="long_screen_shot_video">Felvétel</string>
+    <string name="Interestscreenshot">Érdekes képernyőmentés</string>
+    <string name="long_screen_shot_next_screen">Következő képernyő</string>
+    <string name="long_screen_shot_save">Mentés</string>
+    <string name="long_screen_shot_exit">Kilépés</string>
+    <string name="long_screen_shot_can_not_drag_down_any_more">Többet nem lehet</string>
+    <string name="long_screen_shot_can_not_scroll_any_more">Csak 10 oldalt támogat, kérem, mentse</string>
+    <string name="long_screen_shot_this_page_is_not_good_enough">leállítás</string>
+    <string name="long_screen_shot_scrolled_to_bottom">Legörgetve az aljára,kérem, mentse</string>
+    <string name="long_screen_shot_save_pic">Kép mentése…</string>
+    <string name="long_screen_shot_save_success">Sikeres mentés</string>
+    <string name="long_screen_shot_show_pic">Kép megjelenítése</string>
+    <string name="long_screen_shot_please_wait">Kérjük, várjon...</string>
+    <string name="long_screen_shot_not_surport_landscape">Vízszintes képernyő nem támogatott</string>
+    <string name="long_screen_shot_not_surport_full_screen">Teljes képernyő nem támogatott</string>
+    <string name="long_screen_shot_fail_to_generate_pic">Nem sikerült létrehozni a képet. Próbálja újra.</string>
+    <string name="long_screen_shot_single_hand_not_surport">Egy kezes üzemmód nincs támogatva</string>
+    <string name="long_screen_shot_run_foreground">Hosszú képernyőmentés fut</string>
+    <string name="long_screen_shot_multi_window_not_support">MultiAblak üzemmód nem támogatott</string>
+    <string name="save_to_phone_storage">Mentve a telefonra</string>
+    <string name="switch_to_external_storage">Váltás a külső tárhelyre</string>
+    <string name="storage_has_no_space">Tárhely nem elérhető</string>
+    <string name="storage_is_full">A tárhely megtelt</string>
+    <string name="long_screen_shot_forbided">Ez az oldal tiltja a képernyőmentést!</string>
+    <string name="current_ui_not_support">Jelenlegi kezelőfelület nem támogatja</string>
+    <string name="screen_scroll_tip">Érintse meg a képernyőt a görgetés és a kibontás megállításához \n a képernyőkép rögzül.</string>
+    <string name="share">megosztás</string>
+    <string name="edit">vágás </string>
+    <string name="delete">törlés</string>
+    <string name="share_with">Megosztás valakivel</string>
+</resources>

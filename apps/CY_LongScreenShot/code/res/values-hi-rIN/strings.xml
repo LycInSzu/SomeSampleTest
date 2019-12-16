@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">लंबा स्क्रीनशॉट</string>
+  <string name="action_settings">सेटिंग</string>
+  <string name="longscreenshot">लंबा स्क्रीनशॉट</string>
+  <string name="long_screen_shot_video">रिकॉर्ड करें</string>
+  <string name="Interestscreenshot">इंटरेस्ट स्क्रीन शॉट</string>
+  <string name="long_screen_shot_next_screen">अगला स्क्रीन</string>
+  <string name="long_screen_shot_save">सेव करें</string>
+  <string name="long_screen_shot_exit">बाहर निकलें</string>
+  <string name="long_screen_shot_can_not_drag_down_any_more">और अधिक खींच नहीं सकते हैं</string>
+  <string name="long_screen_shot_can_not_scroll_any_more">केवल 10 पृष्ठों का समर्थन करता है, कृपया सेव करें</string>
+  <string name="long_screen_shot_this_page_is_not_good_enough">शट डाउन करें</string>
+  <string name="long_screen_shot_scrolled_to_bottom">नीचे स्क्रॉल करें, कृपया सेव करें</string>
+  <!--Gionee linzhicong 20160616 modify for CR01718910 begin-->
+  <string name="long_screen_shot_save_pic">फोटो सेव हो रही है...</string>
+  <!-- Gionee: chenbo 20150728 modify for CR01522658 begin -->
+  <string name="long_screen_shot_save_success">सफलतापूर्वक सेव किया गया</string>
+  <!-- Gionee: chenbo 20150728 modify for CR01522658 end -->
+  <!--Gionee linzhicong 20160616 modify for CR01718910 end-->
+  <string name="long_screen_shot_show_pic">फोटो दिखाएं</string>
+  <string name="long_screen_shot_please_wait">कृपया प्रतीक्षा करें...</string>
+  <!--Gionee linzhicong 20160616 modify for CR01718910 begin-->
+  <string name="long_screen_shot_not_surport_landscape">लैंडस्केप की सुविधा नहीं है</string>
+  <string name="long_screen_shot_not_surport_full_screen">पूर्ण स्क्रीन पर यह सुविधा नहीं है</string>
+  <string name="long_screen_shot_fail_to_generate_pic">फोटो जनरेट नहीं हो पाई। दोबारा कोशिश करें</string>
+  <!--Gionee linzhicong 20160616 modify for CR01718910 end-->
+  <string name="long_screen_shot_single_hand_not_surport">सिंगल हैंड मोड समर्थित नहीं है</string>
+  <string name="long_screen_shot_run_foreground">लंबा स्क्रीनशॉट चल रहा है</string>
+  <!-- Gionee: chenbo 20150519 add for CR01478796 begin -->
+  <string name="save_to_phone_storage">फोन स्टोरेज में सेव करें</string>
+  <string name="switch_to_external_storage">बाह्य स्टोरेज पर स्विच करें</string>
+  <string name="storage_has_no_space">स्टोरेज अनुपलब्ध है</string>
+  <!-- Gionee: chenbo 20150519 add for CR01478796 end -->
+  <!--Gionee yuchao 20160315 add for CR01652575 begin -->
+  <string name="storage_is_full">स्टोरेज फुल है</string>
+  <!--Gionee yuchao 20160315 add for CR01652575 end -->
+  <!--Gionee linzhicong 20160616 modify for CR01718910 begin-->
+  <string name="long_screen_shot_forbided">इस पेज का स्क्रीन शॉट वर्जित है!</string>
+  <!--Gionee linzhicong 20160616 modify for CR01718910 end-->
+</resources>

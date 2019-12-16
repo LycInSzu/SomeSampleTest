@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Продужени снимак екрана</string>
+    <string name="action_settings">Подешавања</string>
+    <string name="longscreenshot">Продужени снимак екрана</string>
+    <string name="long_screen_shot_video">Подешавања</string>
+    <string name="Interestscreenshot">Интересантни снимак екрана</string>
+    <string name="long_screen_shot_next_screen">Следећи екран</string>
+    <string name="long_screen_shot_save">Сачувај</string>
+    <string name="long_screen_shot_exit">Изађите</string>
+    <string name="long_screen_shot_can_not_drag_down_any_more">Није могуће превлачити даље</string>
+    <string name="long_screen_shot_can_not_scroll_any_more">Подржава само 10 страница , молим вас, сачувајте</string>
+    <string name="long_screen_shot_this_page_is_not_good_enough">искључи</string>
+    <string name="long_screen_shot_scrolled_to_bottom">Скроловано до краја, молим вас сачувајте</string>
+    <string name="long_screen_shot_save_pic">Чување слике\u2026</string>
+    <string name="long_screen_shot_save_success">Успешно сачувано </string>
+    <string name="long_screen_shot_show_pic">Прикажи слике</string>
+    <string name="long_screen_shot_please_wait">Сачекате\u2026</string>
+    <string name="long_screen_shot_not_surport_landscape">Landscape није подржан</string>
+    <string name="long_screen_shot_not_surport_full_screen">Не подржава режим целог екрана</string>
+    <string name="long_screen_shot_fail_to_generate_pic">Неуспешно генерисање слике, молим вас покушајте поново</string>
+    <string name="long_screen_shot_single_hand_not_surport">Режим кор. једном руком није подржан</string>
+    <string name="long_screen_shot_run_foreground">Прављење продуженог снимка екрана у току</string>
+    <string name="long_screen_shot_multi_window_not_support">Режим са више прозора није подржан</string>
+    <string name="save_to_phone_storage">Сачувај на меморији телефона</string>
+    <string name="switch_to_external_storage">Пребаци на спољашњу меморију</string>
+    <string name="storage_has_no_space">Складиште је недоступно</string>
+    <string name="storage_is_full">Складиште је пуно</string>
+    <string name="long_screen_shot_forbided">Ова страница забрањује снимак екрана !</string>
+    <string name="current_ui_not_support">Тренутни кориснички интерфејс није подржан</string>
+    <string name="screen_scroll_tip">Додирните екран да бисте зауставили скроловање и проширили \n снимак екрана ће бити снимљен.</string>
+    <string name="share">поделите</string>
+    <string name="edit">исеците</string>
+    <string name="delete">Обриши</string>
+    <string name="share_with">Делите са</string>
+</resources>

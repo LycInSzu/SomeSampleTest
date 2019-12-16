@@ -1,0 +1,14 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="size90">90dp</dimen>
+    <dimen name="button_circle_size">19dp</dimen>
+    <dimen name="menu_text_size">14sp</dimen>
+    <dimen name="menu_textview_width">40dp</dimen>
+    <dimen name="menu_textview_height">40dp</dimen>
+    <dimen name="screenshot_bg_padding">20dp</dimen>
+    <dimen name="notification_view_height">60dp</dimen>
+
+</resources>

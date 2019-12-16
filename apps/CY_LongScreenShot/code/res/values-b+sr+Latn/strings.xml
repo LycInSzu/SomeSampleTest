@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Produženi snimak ekrana</string>
+    <string name="action_settings">Podešavanja</string>
+    <string name="longscreenshot">Produženi snimak ekrana</string>
+    <string name="long_screen_shot_video">Podešavanja</string>
+    <string name="Interestscreenshot">Interesantni snimak ekrana</string>
+    <string name="long_screen_shot_next_screen">Sledeći ekran</string>
+    <string name="long_screen_shot_save">Sačuvaj</string>
+    <string name="long_screen_shot_exit">Izađite</string>
+    <string name="long_screen_shot_can_not_drag_down_any_more">Nije moguće prevlačiti dalje</string>
+    <string name="long_screen_shot_can_not_scroll_any_more">Podržava samo 10 stranica , molim vas, sačuvajte</string>
+    <string name="long_screen_shot_this_page_is_not_good_enough">isključi</string>
+    <string name="long_screen_shot_scrolled_to_bottom">Skrolovano do kraja, molim vas sačuvajte</string>
+    <string name="long_screen_shot_save_pic">Čuvanje slike\u2026</string>
+    <string name="long_screen_shot_save_success">Uspešno sačuvano </string>
+    <string name="long_screen_shot_show_pic">Prikaži slike</string>
+    <string name="long_screen_shot_please_wait">Sačekate\u2026</string>
+    <string name="long_screen_shot_not_surport_landscape">Landscape nije podržan</string>
+    <string name="long_screen_shot_not_surport_full_screen">Ne podržava režim celog ekrana</string>
+    <string name="long_screen_shot_fail_to_generate_pic">Neuspešno generisanje slike, molim vas pokušajte ponovo</string>
+    <string name="long_screen_shot_single_hand_not_surport">Režim kor. jednom rukom nije podržan</string>
+    <string name="long_screen_shot_run_foreground">Pravljenje produženog snimka ekrana u toku</string>
+    <string name="long_screen_shot_multi_window_not_support">Režim sa više prozora nije podržan</string>
+    <string name="save_to_phone_storage">Sačuvaj na memoriji telefona</string>
+    <string name="switch_to_external_storage">Prebaci na spoljašnju memoriju</string>
+    <string name="storage_has_no_space">Skladište je nedostupno</string>
+    <string name="storage_is_full">Skladište je puno</string>
+    <string name="long_screen_shot_forbided">Ova stranica zabranjuje snimak ekrana !</string>
+    <string name="current_ui_not_support">Trenutni korisnički interfejs nije podržan</string>
+    <string name="screen_scroll_tip">Dodirnite ekran da biste zaustavili skrolovanje i proširili \n snimak ekrana će biti snimljen.</string>
+    <string name="share">podelite</string>
+    <string name="edit">isecite</string>
+    <string name="delete">Obriši</string>
+    <string name="share_with">Delite sa</string>
+</resources>

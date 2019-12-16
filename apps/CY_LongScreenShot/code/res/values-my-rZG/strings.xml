@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="long_screen_shot_video">မွတ္တမ္း</string>
+    <string name="action_settings">ျပင္ဆင္မႈမ်ား</string>
+    <string name="long_screen_shot_save">ok</string>
+    <string name="long_screen_shot_exit">ထြက္သည္။</string>
+    <string name="long_screen_shot_save_success">သိမ္းဆည္းျခင္းေအာင္ျမင္သည္</string>
+    <string name="long_screen_shot_please_wait">ခဏေစာင့္သည္</string>
+    <string name="save_to_phone_storage">Save to phone storage</string>
+    <string name="storage_has_no_space">သိမ္းဆည္းမႈမရႏုိင္</string>
+    <string name="storage_is_full">သိမ္းဆည္းမႈျပည့္</string>
+</resources>

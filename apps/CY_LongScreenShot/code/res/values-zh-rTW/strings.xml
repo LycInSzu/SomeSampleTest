@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">長截屏</string>
+    <string name="action_settings">Settings</string>
+    <string name="longscreenshot">長截屏</string>
+    <string name="long_screen_shot_video">錄影</string>
+    <string name="Interestscreenshot">趣味截屏</string>
+    <string name="long_screen_shot_next_screen">下一屏</string>
+    <string name="long_screen_shot_save">保存</string>
+    <string name="long_screen_shot_exit">退出</string>
+    <string name="long_screen_shot_can_not_drag_down_any_more">不能再拖動了喲</string>
+    <string name="long_screen_shot_can_not_scroll_any_more">最多支援截10頁，請保存</string>
+    <string name="long_screen_shot_this_page_is_not_good_enough">系統努力保存後，發現，本頁面不宜長截屏</string>
+    <string name="long_screen_shot_scrolled_to_bottom">滑到底了,請保存</string>
+    
+    <string name="long_screen_shot_save_pic">正在保存截屏</string>
+    <string name="long_screen_shot_save_success">長截屏已經保存</string>
+    <string name="long_screen_shot_show_pic">點擊查看截屏</string>
+    <string name="long_screen_shot_please_wait">"請等待..."</string>
+    <string name="long_screen_shot_not_surport_landscape">不支持橫屏</string>
+    <string name="long_screen_shot_not_surport_full_screen">不支援此介面</string>
+    <string name="long_screen_shot_fail_to_generate_pic">保存圖片失敗，請重試</string>
+    <string name="long_screen_shot_single_hand_not_surport">不支援單手模式</string>
+    <string name="long_screen_shot_run_foreground">長截屏正在運行</string>
+    
+    <!-- Gionee: chenbo 20150519 add for CR01478796 begin -->
+    <string name="save_to_phone_storage">保存到內部記憶體</string>
+    <string name="switch_to_external_storage">保存到外部記憶體</string>
+    <string name="storage_has_no_space">無法使用記憶體</string>
+    <!-- Gionee: chenbo 20150519 add for CR01478796 end -->
+    
+    <string name="long_screen_shot_forbided">此介面被禁止截屏,長截屏無法截屏</string>
+    
+</resources>

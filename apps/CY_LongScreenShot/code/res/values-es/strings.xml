@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Larga pantalla</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="longscreenshot">Larga pantalla</string>
+    <string name="long_screen_shot_video">Grabar</string>
+    <string name="Interestscreenshot">El interés de pantalla</string>
+    <string name="long_screen_shot_next_screen">Siguiente</string>
+    <string name="long_screen_shot_save">Guardar</string>
+    <string name="long_screen_shot_exit">Salir</string>
+    <string name="long_screen_shot_can_not_drag_down_any_more">No se puede arrastrar más</string>
+    <string name="long_screen_shot_can_not_scroll_any_more">Soportar sólo 10 páginas, por favor, guarde</string>
+    <string name="long_screen_shot_this_page_is_not_good_enough">Apagar</string>
+    <string name="long_screen_shot_scrolled_to_bottom">Desplazado hacia abajo, por favor, guarde</string>
+    <!--Gionee linzhicong 20160616 modify for CR01718910 begin-->
+    <string name="long_screen_shot_save_pic">Guardando imagen ...</string>
+    <!-- Gionee: chenbo 20150728 modify for CR01522658 begin -->
+    <string name="long_screen_shot_save_success">Guardado exitosamente</string>
+    <!-- Gionee: chenbo 20150728 modify for CR01522658 end -->
+    <!--Gionee linzhicong 20160616 modify for CR01718910 end-->
+    <string name="long_screen_shot_show_pic">Mostrar imagen</string>
+    <string name="long_screen_shot_please_wait">Esperar por favor...</string>
+    <!--Gionee linzhicong 20160616 modify for CR01718910 begin-->
+    <string name="long_screen_shot_not_surport_landscape">El paisaje no soportado</string>
+    <string name="long_screen_shot_not_surport_full_screen">Pantalla completa no es compatible</string>
+    <string name="long_screen_shot_fail_to_generate_pic">No se pudo generar la imagen. Inténtalo de nuevo</string>
+    <!--Gionee linzhicong 20160616 modify for CR01718910 end-->
+    <string name="long_screen_shot_single_hand_not_surport">El modo de una sola mano no es compatible</string>
+    <string name="long_screen_shot_run_foreground">Largo de pantalla se está ejecutando</string>
+    <!-- Gionee: chenbo 20150519 add for CR01478796 begin -->
+    <string name="save_to_phone_storage">Guardar en almacenamiento teléfono</string>
+    <string name="switch_to_external_storage">Pasar al almacenamiento externo</string>
+    <string name="storage_has_no_space">Almacenamiento no disponible</string>
+    <!-- Gionee: chenbo 20150519 add for CR01478796 end -->
+    <!--Gionee yuchao 20160315 add for CR01652575 begin -->
+    <string name="storage_is_full">Almacenamiento está lleno</string>
+    <!--Gionee yuchao 20160315 add for CR01652575 end -->
+    <!--Gionee linzhicong 20160616 modify for CR01718910 begin-->
+    <string name="long_screen_shot_forbided">Esta página prohíbe pantalla.</string>
+    <!--Gionee linzhicong 20160616 modify for CR01718910 end-->
+    <string name="long_screen_shot_multi_window_not_support">El modo Multiventana no soporta</string>
+    <string name="current_ui_not_support">La interfaz de usuario actual no es compatible</string>
+
+    <string name="screen_scroll_tip">Toca la pantalla para detener el desplazamiento y expandir \n se capturará la captura de pantalla.</string>
+    <string name="share">compartir</string>
+    <string name="edit">cultivo</string>
+    <string name="delete">borrar</string>
+    <string name="share_with">Compartir con</string>
+    <string name="delete_message">¿Estás seguro de borrar esta imagen?</string>
+</resources>

@@ -1234,15 +1234,228 @@ eg:sed  's/[^0-9a-zA-Z= ._-]//g'
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Dart
+0、As you learn about the Dart language, keep these facts and concepts in mind:
+
+Everything you can place in a variable is an object, and every object is an instance of a class. Even numbers, functions, and null are objects. All objects inherit from the Object class.
+
+Although Dart is strongly typed, type annotations are optional because Dart can infer types. In the code above, number is inferred to be of type int. When you want to explicitly say that no type is expected, use the special type dynamic.
+
+Dart supports generic types, like List<int> (a list of integers) or List<dynamic> (a list of objects of any type).
+
+Dart supports top-level functions (such as main()), as well as functions tied to a class or object (static and instance methods, respectively). You can also create functions within functions (nested or local functions).
+
+Similarly, Dart supports top-level variables, as well as variables tied to a class or object (static and instance variables). Instance variables are sometimes known as fields or properties.
+
+Unlike Java, Dart doesn’t have the keywords public, protected, and private. If an identifier starts with an underscore (_), it’s private to its library. For details, see Libraries and visibility.
+
+Identifiers can start with a letter or underscore (_), followed by any combination of those characters plus digits.
+
+Dart has both expressions (which have runtime values) and statements (which don’t). For example, the conditional expression condition ? expr1 : expr2 has a value of expr1 or expr2. Compare that to an if-else statement, which has no value. A statement often contains one or more expressions, but an expression can’t directly contain a statement.
+
+Dart tools can report two kinds of problems: warnings and errors. Warnings are just indications that your code might not work, but they don’t prevent your program from executing. Errors can be either compile-time or run-time. A compile-time error prevents the code from executing at all; a run-time error results in an exception being raised while the code executes.
+
+
+1、关于null
+void main() {
+  // "if null" operator
+  print(null ?? 'New in Dart 1.12');
+  
+  // null-aware assignment
+  var x = null;
+  x ??= 'are the null-aware operators, friendly to';
+  print(x);
+  
+  // null-aware method invocation
+  var isNull = null;
+  print(isNull?.foo()); // null (does not throw exception)
+}
+有几个处理：
+(1)、??             如果前面的变量是null，就用后面的值
+(2)、??=            如果前面的变量是null，就用将其赋值为后面的值
+(3)、x?.p           如果x不为空，就取得其属性p的值
+(4)、x?.m()         如果x不为空，就调用其方法m()
+
+
+
+
+2、async/await , 你能运用它们来按照同步的方式书写异步的代码
+
+
+3、String
+
+You can put the value of an expression inside a string by using ${expression}. If the expression is an identifier, you can skip the {}. To get the string corresponding to an object, Dart calls the object’s toString() method.
+
+var s = 'string interpolation';
+
+assert('Dart has $s, which is very handy.' ==
+    'Dart has string interpolation, ' +
+        'which is very handy.');
+assert('That deserves all caps. ' +
+        '${s.toUpperCase()} is very handy!' ==
+    'That deserves all caps. ' +
+        'STRING INTERPOLATION is very handy!');
+		
+		
+4、
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Flutter
+一、界面
+一个Flutter应用本身就是一个widget？？？？？？？
+
+1、A Flutter app is itself a widget, and most widgets have a build() method. Instantiating and returning a widget in the app’s build() method displays the widget.
+For a Material app, you can use a Scaffold widget; it provides a default banner, background color, and has API for adding drawers, snack bars, and bottom sheets. 
+
+2、You control how a row or column aligns its children using the mainAxisAlignment and crossAxisAlignment properties. For a row, the main axis runs horizontally and the cross axis runs vertically. For a column, the main axis runs vertically and the cross axis runs horizontally.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Jetpack:
+
+一、ViewModel
+1、ViewModel的重心是对 数据状态的维护
+2、Google官方建议ViewModel尽量保证 纯的业务代码，不要持有任何View层(Activity或者Fragment)或Lifecycle的引用，这样保证了ViewModel内部代码的可测试性，避免因为Context等相关的引用导致测试代码的难以编写（比如，MVP中Presenter层代码的测试就需要额外成本，比如依赖注入或者Mock，以保证单元测试的进行）
+3、
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+RxJava
+一、变换
+1、flatMap() 的原理是这样的：1. 使用传入的事件对象创建一个 Observable 对象；2. 并不发送这个 Observable, 而是将它激活，于是它开始发送事件；3. 每一个创建出来的 Observable 发送的事件，都被汇入同一个 Observable ，而这个 Observable 负责将这些事件统一交给 Subscriber 的回调方法。这三个步骤，把事件拆成了两级，通过一组新创建的 Observable 将初始的对象『铺平』之后通过统一路径分发了下去。而这个『铺平』就是 flatMap() 所谓的 flat。
+
+根本原理在lift()函数，而我的理解是，这个变换过程的真正实现就在operator中完成。正是因为需要变换，才会有operator中的操作，然后生成新的subscriber给真正的订阅者或者往下传递给其它变换。
+
+讲述 lift() 的原理只是为了让你更好地了解 RxJava ，从而可以更好地使用它。然而不管你是否理解了 lift() 的原理，RxJava 都不建议开发者自定义 Operator 来直接使用 lift()，而是建议尽量使用已有的 lift() 包装方法（如 map() flatMap() 等）进行组合来实现需求，因为直接使用 lift() 非常容易发生一些难以发现的错误。
+
+
+
+subscribeOn(): 指定 subscribe() 所发生的线程，即 Observable.OnSubscribe 被激活时所处的线程。或者叫做事件产生的线程。 
+observeOn(): 指定 Subscriber 所运行在的线程。或者叫做事件消费的线程。
+
+
+
+几个重要方法代码块：
+1、
+// 注意：这不是 subscribe() 的源码，而是将源码中与性能、兼容性、扩展性有关的代码剔除后的核心代码。
+// 如果需要看源码，可以去 RxJava 的 GitHub 仓库下载。
+public Subscription subscribe(Subscriber subscriber) {
+    subscriber.onStart();
+    onSubscribe.call(subscriber);
+    return subscriber;
+}
+
+2、一个比较完整的RxJava调用过程：（create其实可以换成from 等其它方法）
+int drawableRes = ...;
+ImageView imageView = ...;
+Observable.create(new OnSubscribe<Drawable>() {
+    @Override
+    public void call(Subscriber<? super Drawable> subscriber) {
+        Drawable drawable = getTheme().getDrawable(drawableRes));
+        subscriber.onNext(drawable);//这里就是调用的观察者的onNext()方法
+        subscriber.onCompleted();
+    }
+}).subscribe(new Observer<Drawable>() {
+    @Override
+    public void onNext(Drawable drawable) {
+        imageView.setImageDrawable(drawable);
+    }
+
+    @Override
+    public void onCompleted() {
+    }
+
+    @Override
+    public void onError(Throwable e) {
+        Toast.makeText(activity, "Error!", Toast.LENGTH_SHORT).show();
+    }
+});
+
+
+3、lift()的核心代码：
+// 注意：这不是 lift() 的源码，而是将源码中与性能、兼容性、扩展性有关的代码剔除后的核心代码。
+// 如果需要看源码，可以去 RxJava 的 GitHub 仓库下载。
+public <R> Observable<R> lift(Operator<? extends R, ? super T> operator) {
+    return Observable.create(new OnSubscribe<R>() {
+        @Override
+        public void call(Subscriber subscriber) {
+            Subscriber newSubscriber = operator.call(subscriber);
+            newSubscriber.onStart();
+            onSubscribe.call(newSubscriber);
+        }
+    });
+}
+
+lift是变换了Subscriber，
+
+
+4、在 RxJava 中， Observable 并不是在创建的时候就立即开始发送事件，而是在它被订阅的时候，即当 subscribe() 方法执行的时候。存在变换时，订阅这个动作是逆向一步一步传上去的。
+
+
+二、线程控制：
+
+
+
+
+
+
+
 
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Java 初始化顺序：
+普通类：
+静态变量
+静态代码块
+普通变量
+普通代码块
+构造函数
 
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+继承的子类：
+父类静态变量
+父类静态代码块
+子类静态变量
+子类静态代码块
+父类普通变量
+父类普通代码块
+父类构造函数
+子类普通变量
+子类普通代码块
+子类构造函数
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+抽象的实现子类: 接口 - 抽线类 - 实现类
+接口静态变量
+抽象类静态变量
+抽象类静态代码块
+实现类静态变量
+实习类静态代码块
+抽象类普通变量
+抽象类普通代码块
+抽象类构造函数
+实现类普通变量
+实现类普通代码块
+实现类构造函数
+
+
+
+
+接口注意：
+声明的变量都是静态变量并且是final的，所以子类无法修改，并且是固定值不会因为实例而变化
+接口中能有静态方法，不能有普通方法，普通方法需要用defalut添加默认实现
+接口中的变量必须实例化
+接口中没有静态代码块、普通变量、普通代码块、构造函数
+
+
+
+
+
+
+java的多态：
+1、普通方法是支持多态的
+2、类内部定义的域是不支持多态的
+3、静态方法也是不支持多态的

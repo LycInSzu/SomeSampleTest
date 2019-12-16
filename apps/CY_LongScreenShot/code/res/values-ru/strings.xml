@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string name="app_name">Длинный скриншот</string>
+    <string name="action_settings">Настройка</string>
+    <string name="longscreenshot">Длинный скриншот</string>
+    <string name="long_screen_shot_video">Запись</string>
+    <string name="Interestscreenshot">Избранный скриншот</string>
+    <string name="long_screen_shot_next_screen">Следующий экран</string>
+    <string name="long_screen_shot_save">Сохранить</string>
+    <string name="long_screen_shot_exit">Выход</string>
+    <string name="long_screen_shot_can_not_drag_down_any_more">Не удается перетащить больше</string>
+    <string name="long_screen_shot_can_not_scroll_any_more">Поддерживается только 10 страниц, пожалуйста, сохраните</string>
+    <string name="long_screen_shot_this_page_is_not_good_enough">Неисправность</string>
+    <string name="long_screen_shot_scrolled_to_bottom">Прокручивается вниз, пожалуйста, сохраните</string>
+    <string name="long_screen_shot_save_pic">Сохранение фото</string>
+    <string name="long_screen_shot_save_success">Успешно сохранено</string>
+    <string name="long_screen_shot_show_pic">Показать картинку</string>
+    <string name="long_screen_shot_please_wait">Ожидайте...</string>
+    <string name="long_screen_shot_not_surport_landscape">Не поддерживает ландшафт</string>
+    <string name="long_screen_shot_not_surport_full_screen">Не поддерживает полный экран</string>
+    <string name="long_screen_shot_fail_to_generate_pic">Сбой создания изображения, попробуйте еще раз</string>
+    <string name="long_screen_shot_single_hand_not_surport">Режим одиной рукой не поддерживается</string>
+    <string name="long_screen_shot_run_foreground">Создание широкоформатного скриншота запущено</string>
+    <string name="save_to_phone_storage">Сохранить в память телефона</string>
+    <string name="switch_to_external_storage">Переключение на внешние накопители</string>
+    <string name="storage_has_no_space">Установите карту памяти</string>
+    <string name="storage_is_full">Память заполнена.</string>
+    <string name="long_screen_shot_forbided">this page forbid screen shot!</string>
+    <string name="long_screen_shot_multi_window_not_support">Режим MultiWindow не поддерживается</string>
+    <string name="current_ui_not_support">Текущий пользовательский интерфейс не поддерживается</string>
+    <string name="screen_scroll_tip">Коснитесь экрана, чтобы остановить прокрутку \n снимок экрана будет сделан.</string>
+    <string name="share">поделиться</string>
+    <string name="delete">удалить</string>
+    <string name="share_with">Поделиться с</string>
+</resources>

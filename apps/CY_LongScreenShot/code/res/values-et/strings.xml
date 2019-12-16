@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string name="app_name">Panoraamfoto</string>
+    <string name="action_settings">Seaded</string>
+    <string name="longscreenshot">Panoraamfoto</string>
+    <string name="long_screen_shot_video">Salvesta</string>
+    <string name="Interestscreenshot">Mitme ekraani foto</string>
+    <string name="long_screen_shot_next_screen">Järgmine</string>
+    <string name="long_screen_shot_save">Salvesta</string>
+    <string name="long_screen_shot_exit">Välju</string>
+    <string name="long_screen_shot_can_not_drag_down_any_more">Rohkem ei saa lohistada</string>
+    <string name="long_screen_shot_can_not_scroll_any_more">Toetatud on kuni 10 lehte, palun salvestage</string>
+    <string name="long_screen_shot_this_page_is_not_good_enough">Sulge</string>
+    <string name="long_screen_shot_scrolled_to_bottom">Keritud lõpuni, palun salvestage</string>
+    <string name="long_screen_shot_save_pic">Pildi salvestamine</string>
+    <string name="long_screen_shot_save_success">Salvestamine õnnestus</string>
+    <string name="long_screen_shot_show_pic">Näita pilti</string>
+    <string name="long_screen_shot_please_wait">Palun oodake...</string>
+    <string name="long_screen_shot_not_surport_landscape">Horisontaalasend ei ole toetatud</string>
+    <string name="long_screen_shot_not_surport_full_screen">Täisekraan ei ole toetatud</string>
+    <string name="long_screen_shot_fail_to_generate_pic">Pildi loomine ebaõnnestus. Proovige uuesti</string>
+    <string name="long_screen_shot_single_hand_not_surport">Ühe käe režiim ei ole toetatud</string>
+    <string name="long_screen_shot_run_foreground">Panoraamfoto tegemine on aktiivne</string>
+    <string name="save_to_phone_storage">Salvesta telefoni mällu</string>
+    <string name="switch_to_external_storage">Kasuta välist mäluseadet</string>
+    <string name="storage_has_no_space">Mälu ei ole kättesaadav</string>
+    <string name="storage_is_full">Mäluruum on täis</string>
+    <string name="long_screen_shot_forbided">sellest leheküljest ei saa ekraanitõmmist teha!</string>
+</resources>

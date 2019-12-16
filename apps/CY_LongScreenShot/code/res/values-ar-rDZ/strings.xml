@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">لقطة شاشة طويلة</string>
+    <string name="action_settings">إعدادات</string>
+    <string name="longscreenshot">لقطة شاشة طويلة</string>
+    <string name="long_screen_shot_video">تسجيل</string>
+    <string name="Interestscreenshot">لقطات شاشة مثيرة للاهتمام</string>
+    <string name="long_screen_shot_next_screen">التالي</string>
+    <string name="long_screen_shot_save">حفظ</string>
+    <string name="long_screen_shot_exit">خروج</string>
+    <string name="long_screen_shot_can_not_drag_down_any_more">لا يمكن السحب أكثر</string>
+    <string name="long_screen_shot_can_not_scroll_any_more">دعم 10 صفحات فقط، الرجاء الحفظ</string>
+    <string name="long_screen_shot_this_page_is_not_good_enough">إغلاق</string>
+    <string name="long_screen_shot_scrolled_to_bottom">تم التمرير الى الأسفل, يُرجى الحفظ</string>
+    <string name="long_screen_shot_save_pic">جارٍ حفظ الصورة...</string>
+    <string name="long_screen_shot_save_success">تم الحفظ بنجاح</string>
+    <string name="long_screen_shot_show_pic">عرض الصورة</string>
+    <string name="long_screen_shot_please_wait">يُرجى الانتظار...</string>
+    <string name="long_screen_shot_not_surport_landscape">المشهد غير مدعوم</string>
+    <string name="long_screen_shot_not_surport_full_screen">لا يدعم الشاشة الكاملة</string>
+    <string name="long_screen_shot_fail_to_generate_pic">تعذر إنشاء صورة، يُرجى المحاولة مرة أخرى</string>
+    <string name="long_screen_shot_single_hand_not_surport">وضع اليد الواحدة غير مدعوم</string>
+    <string name="long_screen_shot_run_foreground">لقطة شاشة طويلة قيد التشغيل</string>
+    <string name="long_screen_shot_multi_window_not_support">وضع النوافذ المتعددة غير مدعوم</string>
+    <string name="save_to_phone_storage">الحفظ في وحدة تخزين الهاتف</string>
+    <string name="switch_to_external_storage">التبديل إلى وحدة التخزين الخارجية</string>
+    <string name="storage_has_no_space">وحدة التخزين غير متاحة</string>
+    <string name="storage_is_full">السعة التخزينية ممتلئة</string>
+    <string name="long_screen_shot_forbided">لقطة الشاشة ممنوعة!</string>
+    <string name="current_ui_not_support">واجهة المستخدم الحالية لا تدعم</string>
+
+    <string name="screen_scroll_tip">إضغط على الشاشة لإيقاف التمرير وسيتم التقاط لقطة شاشة موسعة.</string>
+    <string name="share">مشاركة</string>
+    <string name="edit">تغيير حجم</string>
+    <string name="delete">حذف</string>
+    <string name="share_with">المشاركة مع</string>
+    <string name="delete_message">هل أنت متأكد أنك تريد حذف هذه الصورة؟</string>
+</resources>

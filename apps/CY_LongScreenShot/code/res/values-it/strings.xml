@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Screenshot lungo</string>
+    <string name="action_settings">Impostazioni</string>
+    <string name="longscreenshot">Screenshot lungo</string>
+    <string name="long_screen_shot_video">Registra</string>
+    <string name="Interestscreenshot">Screenshot di interesse</string>
+    <string name="long_screen_shot_next_screen">Schermata successiva</string>
+    <string name="long_screen_shot_save">Salva</string>
+    <string name="long_screen_shot_exit">Esci</string>
+    <string name="long_screen_shot_can_not_drag_down_any_more">Impossibile trascinare ancora</string>
+    <string name="long_screen_shot_can_not_scroll_any_more">Supporta solo 10 pagine, salva</string>
+    <string name="long_screen_shot_this_page_is_not_good_enough">Arresta</string>
+    <string name="long_screen_shot_scrolled_to_bottom">Scorri in basso, salva</string>
+    <string name="long_screen_shot_save_pic">Salvataggio foto in corso...</string>
+    <string name="long_screen_shot_save_success">Salvataggio completato</string>
+    <string name="long_screen_shot_show_pic">Mostra immagine</string>
+    <string name="long_screen_shot_please_wait">Attendi</string>
+    <string name="long_screen_shot_not_surport_landscape">Orientamento orizzontale non supportato</string>
+    <string name="long_screen_shot_not_surport_full_screen">Screenshot a schermo intero non supportato</string>
+    <string name="long_screen_shot_fail_to_generate_pic">Impossibile creare immagine. Riprovare.</string>
+    <string name="long_screen_shot_single_hand_not_surport">Modalità con una sola mano non supportata</string>
+    <string name="long_screen_shot_run_foreground">Screenshot lungo in esecuzione</string>
+    <string name="long_screen_shot_multi_window_not_support">Modalità Finestra multipla non supportata</string>
+    <string name="save_to_phone_storage">Salva nella memoria del telefono</string>
+    <string name="switch_to_external_storage">Passa a memoria esterna</string>
+    <string name="storage_has_no_space">Memoria non disponibile</string>
+    <string name="storage_is_full">Memoria piena</string>
+    <string name="long_screen_shot_forbided">Screenshot non permesso</string>
+    <string name="current_ui_not_support">UI attuale non supporta</string>
+
+    <string name="screen_scroll_tip">Tocca lo schermo per interrompere lo scorrimento e l\'espansione \n lo screenshot verrà catturato.</string>
+    <string name="share">condividere</string>
+    <string name="edit">raccolto</string>
+    <string name="delete">elimina</string>
+    <string name="share_with">Condividi con</string>
+    <string name="delete_message">Sei sicuro di cancellare questa immagine?</string>
+</resources>

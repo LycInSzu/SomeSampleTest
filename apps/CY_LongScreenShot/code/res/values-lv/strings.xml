@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Iestatījumi</string>
+    <string name="long_screen_shot_video">Ierakstīt</string>
+    <string name="long_screen_shot_save">Saglabāt</string>
+    <string name="long_screen_shot_exit">Iziet</string>
+    <string name="long_screen_shot_save_success">Saglabāts sekmīgi</string>
+    <string name="long_screen_shot_please_wait">Lūdzu, uzgaidiet...</string>
+    <string name="storage_is_full">Krātuve ir pilna</string>
+    <string name="long_screen_shot_next_screen">Nākošais ekrāns</string>
+    <string name="long_screen_shot_this_page_is_not_good_enough">Izslēgt</string>
+    <string name="storage_has_no_space">Krātuve nav pieejama</string>
+</resources>

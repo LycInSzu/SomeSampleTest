@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">설정</string>
+    <string name="long_screen_shot_video">록음</string>
+    <string name="long_screen_shot_save">저장</string>
+    <string name="long_screen_shot_exit">완료</string>
+    <string name="long_screen_shot_save_success">저장 완료</string>
+    <string name="long_screen_shot_please_wait">기다려주십시오.</string>
+    <string name="storage_has_no_space">기억기를 사용할수 없습니다.</string>
+    <string name="storage_is_full">기억용량부족</string>
+</resources>

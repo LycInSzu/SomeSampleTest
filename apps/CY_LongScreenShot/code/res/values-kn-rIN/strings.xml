@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">ದೀರ್ಘ ಸ್ಕ್ರೀನ್‌ಶಾಟ್</string>
+  <string name="action_settings">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
+  <string name="longscreenshot">ದೀರ್ಘ ಸ್ಕ್ರೀನ್‌ಶಾಟ್</string>
+  <string name="long_screen_shot_video">ರೆಕಾರ್ಡ್</string>
+  <string name="Interestscreenshot">ಇಂಟ್ರೆಸ್ಟ್ ಸ್ಕ್ರೀನ್ ಶಾಟ್</string>
+  <string name="long_screen_shot_next_screen">ನಂತರದ ಸ್ಕ್ರೀನ್</string>
+  <string name="long_screen_shot_save">ಸೇವ್ ಮಾಡಿ</string>
+  <string name="long_screen_shot_exit">ನಿರ್ಗಮಿಸಿ</string>
+  <string name="long_screen_shot_can_not_drag_down_any_more">ಇನ್ನು ಡ್ರ್ಯಾಗ್ ಮಾಡಲಾಗುವುದಿಲ್ಲ</string>
+  <string name="long_screen_shot_can_not_scroll_any_more">ಕೇವಲ 10 ಪೇಜುಗಳನ್ನು ಬೆಂಬಲಿಸುತ್ತದೆ, ದಯವಿಟ್ಟು ಸೇವ್ ಮಾಡಿ</string>
+  <string name="long_screen_shot_this_page_is_not_good_enough">ಶಟ್ ಡೌನ್</string>
+  <string name="long_screen_shot_scrolled_to_bottom">ಕೆಳಗೆ ಸ್ಕ್ರಾಲ್ ಮಾಡಲಾಗಿದೆ, ದಯವಿಟ್ಟು ಸೇವ್ ಮಾಡಿ</string>
+  <!--Gionee linzhicong 20160616 modify for CR01718910 begin-->
+  <string name="long_screen_shot_save_pic">ಫೋಟೋವನ್ನು ಸೇವ್ ಮಾಡಲಾಗುತ್ತಿದೆ...</string>
+  <!-- Gionee: chenbo 20150728 modify for CR01522658 begin -->
+  <string name="long_screen_shot_save_success">ಯಶಸ್ವಿಯಾಗಿ ಸೇವ್ ಮಾಡಲಾಗಿದೆ</string>
+  <!-- Gionee: chenbo 20150728 modify for CR01522658 end -->
+  <!--Gionee linzhicong 20160616 modify for CR01718910 end-->
+  <string name="long_screen_shot_show_pic">ಫೋಟೋ ತೋರಿಸಿ</string>
+  <string name="long_screen_shot_please_wait">ದಯವಿಟ್ಟು ನಿರೀಕ್ಷಿಸಿ...</string>
+  <!--Gionee linzhicong 20160616 modify for CR01718910 begin-->
+  <string name="long_screen_shot_not_surport_landscape">ಲ್ಯಾಂಡ್‌ಸ್ಕೇಪ್ ಬೆಂಬಲಿತವಾಗಿಲ್ಲ</string>
+  <string name="long_screen_shot_not_surport_full_screen">ಫುಲ್ ಸ್ಕ್ರೀನ್ ಬೆಂಬಲಿತವಾಗಿಲ್ಲ</string>
+  <string name="long_screen_shot_fail_to_generate_pic">ಫೋಟೋ ಜನರೇಟ್ ಮಾಡುವುದು ವಿಫಲವಾಗಿದೆ. ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ</string>
+  <!--Gionee linzhicong 20160616 modify for CR01718910 end-->
+  <string name="long_screen_shot_single_hand_not_surport">ಸಿಂಗಲ್ ಹ್ಯಾಂಡ್ ಮೋಡನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ</string>
+  <string name="long_screen_shot_run_foreground">ದೀರ್ಘ ಸ್ಕ್ರೀನ್‌ಶಾಟ್ ಚಾಲನೆಯಲ್ಲಿದೆ</string>
+  <!-- Gionee: chenbo 20150519 add for CR01478796 begin -->
+  <string name="save_to_phone_storage">ಫೋನ್ ಸ್ಟೋರೇಜಿನಲ್ಲಿ ಸೇವ್ ಮಾಡಿ</string>
+  <string name="switch_to_external_storage">ಬಾಹ್ಯ ಸ್ಟೋರೇಜಿಗೆ ಸ್ವಿಚ್ ಆಗಿ</string>
+  <string name="storage_has_no_space">ಸ್ಟೋರೇಜ್ ಲಭ್ಯವಿಲ್ಲ</string>
+  <!-- Gionee: chenbo 20150519 add for CR01478796 end -->
+  <!--Gionee yuchao 20160315 add for CR01652575 begin -->
+  <string name="storage_is_full">ಸ್ಟೋರೇಜ್‌ ತುಂಬಿದೆ</string>
+  <!--Gionee yuchao 20160315 add for CR01652575 end -->
+  <!--Gionee linzhicong 20160616 modify for CR01718910 begin-->
+  <string name="long_screen_shot_forbided">ಈ ಪೇಜ್ ಸ್ಕ್ರೀನ್ ಶಾಟನ್ನು ನಿಷೇಧಿಸಿದೆ!</string>
+  <!--Gionee linzhicong 20160616 modify for CR01718910 end-->
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string name="app_name">Long screen shot</string>
+    <string name="action_settings">"Nastavení"</string>
+    <string name="longscreenshot">Long screen shot</string>
+    <string name="long_screen_shot_video">Záznam</string>
+    <string name="Interestscreenshot">Zájem o screen shot</string>
+    <string name="long_screen_shot_next_screen">Další obrazovka</string>
+    <string name="long_screen_shot_save">Uložit</string>
+    <string name="long_screen_shot_exit">Výstup</string>
+    <string name="long_screen_shot_can_not_drag_down_any_more">Nelze přetáhnout některého</string>
+    <string name="long_screen_shot_can_not_scroll_any_more">podporuje pouze 10 stran, uložte</string>
+    <string name="long_screen_shot_this_page_is_not_good_enough">Vypnout</string>
+    <string name="long_screen_shot_scrolled_to_bottom">Posune dolů, uložte</string>
+    <string name="long_screen_shot_save_pic">Úsporné obrázek ...</string>
+    <string name="long_screen_shot_save_success">Úspěšně uloženo</string>
+    <string name="long_screen_shot_show_pic">Zobrazit fotografii</string>
+    <string name="long_screen_shot_please_wait">Prosím, čekejte...</string>
+    <string name="long_screen_shot_not_surport_landscape">Krajina není podporován</string>
+    <string name="long_screen_shot_not_surport_full_screen">Full screen obrazovky není podporován</string>
+    <string name="long_screen_shot_fail_to_generate_pic">Nepodařilo vygenerovat obrázek. Prosím zkuste to znovu</string>
+    <string name="long_screen_shot_single_hand_not_surport">Režim jednou rukou není podporován</string>
+    <string name="long_screen_shot_run_foreground">Long screenshot běží</string>
+    <string name="long_screen_shot_multi_window_not_support">Režim multiwindow nepodpoří</string>
+    <string name="save_to_phone_storage">Uložit do paměti telefonu</string>
+    <string name="switch_to_external_storage">Přepnutí na externí úložiště</string>
+    <string name="storage_has_no_space">Storage je k dispozici</string>
+    <string name="storage_is_full">Úložiště je plné</string>
+    <string name="long_screen_shot_forbided">Screenshot je zakázáno!</string>
+    <string name="current_ui_not_support">t podpora proudu UI don \'</string>
+    <string name="screen_scroll_tip">Klepnout na displej pro zastavení rolování a rozšířené \n screenshot bude zachycen.</string>
+    <string name="share">podíl</string>
+    <string name="edit">oříznutí</string>
+    <string name="delete">vymazat</string>
+    <string name="share_with">Sdílet s</string>
+</resources>

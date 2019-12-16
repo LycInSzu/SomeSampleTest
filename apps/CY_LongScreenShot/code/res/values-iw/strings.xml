@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">צילום מסך מיוחד</string>
+    <string name="action_settings">הגדרות</string>
+    <string name="longscreenshot">צילום מסך מיוחד</string>
+    <string name="long_screen_shot_video">מקליט</string>
+    <string name="Interestscreenshot">צילום מסך ארוך</string>
+    <string name="long_screen_shot_next_screen">גלול לתחתית הדף</string>
+    <string name="long_screen_shot_save">שמור</string>
+    <string name="long_screen_shot_exit">יציאה</string>
+    <string name="long_screen_shot_can_not_drag_down_any_more">הגעת לתחתית העמוד, אנא שמור</string>
+    <string name="long_screen_shot_can_not_scroll_any_more">ניתן לצלם עד 10 עמודים, אנא שמור</string>
+    <string name="long_screen_shot_this_page_is_not_good_enough">כיבוי</string>
+    <string name="long_screen_shot_scrolled_to_bottom">הגעת לתחתית העמוד, אנא שמור</string>
+    
+    <string name="long_screen_shot_save_pic">שומר תמונה</string>
+    <!-- Gionee: chenbo 20150728 modify for CR01522658 begin -->
+    <string name="long_screen_shot_save_success">נשמר בהצלחה</string>
+    <!-- Gionee: chenbo 20150728 modify for CR01522658 end -->
+    <string name="long_screen_shot_show_pic">הצג תמונה</string>
+    <string name="long_screen_shot_please_wait">אנא המתן...</string>
+    <string name="long_screen_shot_not_surport_landscape">לא נתמך בתמונת נוף</string>
+    <string name="long_screen_shot_not_surport_full_screen">לא נתמך במסך מלא</string>
+    <string name="long_screen_shot_fail_to_generate_pic">שגיאה ביצירת תמונה, נסה שוב</string>
+    <string name="long_screen_shot_single_hand_not_surport">מצב יד אחת לא נתמך</string>
+    <string name="long_screen_shot_run_foreground">מצב מסך ארוך פועל</string>
+    <!-- Gionee: chenbo 20150519 add for CR01478796 begin -->
+    <string name="save_to_phone_storage">שמור לאחסון הטלפון</string>
+    <string name="switch_to_external_storage">החלף לאחסון חיצוני</string>
+    <string name="storage_has_no_space">אחסון אינו זמין</string>
+    <!-- Gionee: chenbo 20150519 add for CR01478796 end -->
+    <!--Gionee yuchao 20160315 add for CR01652575 begin -->
+    <string name="storage_is_full">שטח האחסון מלא</string>
+    <!--Gionee yuchao 20160315 add for CR01652575 end -->
+    <string name="long_screen_shot_forbided">לא ניתן לצלם מסך זה!</string>
+
+</resources>

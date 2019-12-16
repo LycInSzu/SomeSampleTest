@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Параметрлер</string>
+    <string name="long_screen_shot_video">Жазба</string>
+    <string name="long_screen_shot_save">Сақтау</string>
+    <string name="long_screen_shot_exit">Шығу</string>
+    <string name="long_screen_shot_save_success">Сәтті сақталды</string>
+    <string name="long_screen_shot_please_wait">Күтіңіз..</string>
+    <string name="storage_has_no_space">Сақтау орны қолжетімсіз</string>
+    <string name="storage_is_full">Жад толған</string>
+</resources>

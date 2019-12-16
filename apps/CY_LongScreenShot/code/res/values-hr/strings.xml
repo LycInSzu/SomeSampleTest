@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string name="app_name">Dugo zaslon metak</string>
+    <string name="action_settings">Postavke</string>
+    <string name="longscreenshot">Dugo zaslon metak</string>
+    <string name="long_screen_shot_video">Snimanje</string>
+    <string name="Interestscreenshot">Zaslon metak kamata</string>
+    <string name="long_screen_shot_next_screen">Sljedeći ekran</string>
+    <string name="long_screen_shot_save">Spremi</string>
+    <string name="long_screen_shot_exit">Izlaz</string>
+    <string name="long_screen_shot_can_not_drag_down_any_more">Ne možete povući više</string>
+    <string name="long_screen_shot_can_not_scroll_any_more">Podržava samo 10 stranica , molimo spremite</string>
+    <string name="long_screen_shot_this_page_is_not_good_enough">Isključi</string>
+    <string name="long_screen_shot_scrolled_to_bottom">Prebacite na dnu , molimo spremite</string>
+    <string name="long_screen_shot_save_pic">Spašavanje slike</string>
+    <string name="long_screen_shot_save_success">Uspješno spremljen</string>
+    <string name="long_screen_shot_show_pic">Prikaži slike</string>
+    <string name="long_screen_shot_please_wait">Molimo čekajte...</string>
+    <string name="long_screen_shot_not_surport_landscape">Ne podržava puni zaslon</string>
+    <string name="long_screen_shot_not_surport_full_screen">Ne podržava puni zaslon</string>
+    <string name="long_screen_shot_fail_to_generate_pic">nisu mogle generirati slika, pokušaj ponovo</string>
+    <string name="long_screen_shot_single_hand_not_surport">singl ruka mod, nije podržano</string>
+    <string name="long_screen_shot_run_foreground">Dugo zaslon metak trči</string>
+    <string name="save_to_phone_storage">Spremi u telefon za pohranu</string>
+    <string name="switch_to_external_storage">Prebaci se na vanjsku pohranu</string>
+    <string name="storage_has_no_space">Pohrana nije dostupna</string>
+    <string name="long_screen_shot_forbided">ovu stranicu zabranjuje zaslon metak !</string>
+    <string name="storage_is_full">Prostor za pohranu je pun</string>
+</resources>

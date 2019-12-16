@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string name="app_name">Didelė ekrano kopija</string>
+    <string name="action_settings">Nustatymai</string>
+    <string name="longscreenshot">Didelė ekrano kopija</string>
+    <string name="long_screen_shot_video">Įrašyti</string>
+    <string name="Interestscreenshot">Idomi ekrano kopija</string>
+    <string name="long_screen_shot_next_screen">Kitas ekranas</string>
+    <string name="long_screen_shot_save">Išsaugoti</string>
+    <string name="long_screen_shot_exit">Baigti</string>
+    <string name="long_screen_shot_can_not_drag_down_any_more">Daugiau nebegalima nutempti</string>
+    <string name="long_screen_shot_can_not_scroll_any_more">Palaikoma tik 10 psl., išsaugokite</string>
+    <string name="long_screen_shot_this_page_is_not_good_enough">Išjungti</string>
+    <string name="long_screen_shot_scrolled_to_bottom">Paslinkta iki pat apačios, išsaugokite</string>
+    <string name="long_screen_shot_save_pic">Atvaizdo išsaugojimas</string>
+    <string name="long_screen_shot_save_success">Sėkmingai išsaugota</string>
+    <string name="long_screen_shot_show_pic">Rodyti atvaizdą</string>
+    <string name="long_screen_shot_please_wait">Luktelėkite...</string>
+    <string name="long_screen_shot_not_surport_landscape">Horizontalus nepalaikomas</string>
+    <string name="long_screen_shot_not_surport_full_screen">Visas ekranas nepalaikomas</string>
+    <string name="long_screen_shot_fail_to_generate_pic">Nepavyko sukurti atvaizdo, bandykite dar kartą</string>
+    <string name="long_screen_shot_single_hand_not_surport">Vienos rankos režimas nepalaikomas</string>
+    <string name="long_screen_shot_run_foreground">Daroma didelės ekrano kopija</string>
+    <string name="save_to_phone_storage">Išsaugoti telefono atmintyje</string>
+    <string name="switch_to_external_storage">Perjungti išorinę laikmeną</string>
+    <string name="storage_has_no_space">Atmintis negalima</string>
+    <string name="storage_is_full">Atmintis pilna</string>
+    <string name="long_screen_shot_forbided">draudžiama daryti šio puslapio momentinę kopiją.</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Capture d\'écran longue</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="longscreenshot">Capture d\'écran longue</string>
+    <string name="long_screen_shot_video">Enregistrer</string>
+    <string name="Interestscreenshot">Capture d\'écran ciblée</string>
+    <string name="long_screen_shot_next_screen">Écran suivant</string>
+    <string name="long_screen_shot_save">Enregistrer</string>
+    <string name="long_screen_shot_exit">Quitter</string>
+    <string name="long_screen_shot_can_not_drag_down_any_more">Impossible de d\'inclure davantage</string>
+    <string name="long_screen_shot_can_not_scroll_any_more">Ne prend en charge que 10 pages. Veuillez sauvegarder</string>
+    <string name="long_screen_shot_this_page_is_not_good_enough">Éteindre</string>
+    <string name="long_screen_shot_scrolled_to_bottom">Bas de la page atteint. Veuillez sauvegarder</string>
+    <string name="long_screen_shot_save_pic">Enregistrement de l\'image en cours…</string>
+    <!-- Gionee: chenbo 20150728 modify for CR01522658 begin -->
+    <string name="long_screen_shot_save_success">Enregistrement réussi</string>
+    <!-- Gionee: chenbo 20150728 modify for CR01522658 end -->
+    <string name="long_screen_shot_show_pic">Afficher image</string>
+    <string name="long_screen_shot_please_wait">Veuillez patienter…</string>
+    <string name="long_screen_shot_not_surport_landscape">Format paysage non pris en charge</string>
+    <string name="long_screen_shot_not_surport_full_screen">Les captures plein écran ne sont pas prises en charge</string>
+    <string name="long_screen_shot_fail_to_generate_pic">Impossible de générer l\'image. Veuillez réessayer</string>
+    <string name="long_screen_shot_single_hand_not_surport">Le mode une seule main n\'est pas pris en charge</string>
+    <string name="long_screen_shot_run_foreground">la capture d\'écran longue est en cours d\'exécution</string>
+    <!-- Gionee: chenbo 20150519 add for CR01478796 begin -->
+    <string name="save_to_phone_storage">Enregistrer dans le stockage du téléphone</string>
+    <string name="switch_to_external_storage">Passer au stockage externe</string>
+    <string name="storage_has_no_space">Le stockage n\'est pas disponible</string>
+    <!-- Gionee: chenbo 20150519 add for CR01478796 end -->
+    <string name="storage_is_full">Le stockage est plein</string>
+    <string name="long_screen_shot_forbided">La capture d\'écran n\'est pas autorisée.</string>
+    <string name="current_ui_not_support">L\'IU actuelle ne le permet pas</string>
+    <string name="long_screen_shot_multi_window_not_support">Le mode multifenêtre n\'est pas pris en charge</string>
+
+    <string name="screen_scroll_tip">Touchez l\'écran pour arrêter le défilement et capture d\'écran étendue sera capturé.</string>
+    <string name="share">Partager</string>
+    <string name="edit">Redimensionner</string>
+    <string name="delete">Supprimer</string>
+    <string name="share_with">Partager avec</string>
+    <string name="delete_message">Êtes-vous sûr de vouloir supprimer cette photo ?</string>
+</resources>

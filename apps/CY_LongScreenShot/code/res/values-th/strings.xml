@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">การตั้งค่า</string>
+    <string name="long_screen_shot_video">บันทึก</string>
+    <string name="long_screen_shot_save">บันทึก</string>
+    <string name="long_screen_shot_exit">ออก</string>
+    <string name="long_screen_shot_save_success">บันทึกสำเร็จแล้ว</string>
+    <string name="long_screen_shot_please_wait">โปรดรอ…</string>
+    <string name="storage_is_full">ที่เก็บข้อมูลเต็ม</string>
+    <string name="switch_to_external_storage">เปลี่ยนไปยังหน่วยความจำภายนอก</string>
+    <string name="storage_has_no_space">พื้นที่เก็บข้อมูลไม่พร้อมใช้งาน</string>
+    <string name="long_screen_shot_single_hand_not_surport">ไม่รองรับโหมดการทำงานด้วยมือเดียว</string>
+    <string name="long_screen_shot_this_page_is_not_good_enough">ปิดใช้งาน</string>
+    <string name="long_screen_shot_show_pic">แสดงรูปภาพ</string>
+    <string name="long_screen_shot_scrolled_to_bottom">เลื่อนหน้าจอลงล่าง โปรดบันทึก</string>
+    <string name="long_screen_shot_forbided">ภาพถ่ายหน้าจอถูกปิดใช้งาน!</string>
+    <string name="long_screen_shot_save_pic">กำลังบันทึกภาพ...</string>
+    <string name="save_to_phone_storage">บันทึกไปยังที่จัดเก็บข้อมูลโทรศัพท์</string>
+    <string name="long_screen_shot_can_not_scroll_any_more">รองรับได้เพียง 10 หน้า โปรดบันทึก</string>
+    <string name="long_screen_shot_next_screen">หน้าจอต่อไป</string>
+    <string name="long_screen_shot_run_foreground">ภาพหน้าจอแบบยาวกำลังทำงาน</string>
+    <string name="app_name">ภาพหน้าจอแบบยาว</string>
+    <string name="longscreenshot">ภาพหน้าจอแบบยาว</string>
+    <string name="long_screen_shot_not_surport_landscape">ไม่รองรับแนวนอน</string>
+    <string name="Interestscreenshot">ภาพหน้าจอที่น่าสนใจ</string>
+    <string name="long_screen_shot_not_surport_full_screen">ไม่รองรับภาพหน้าจอแบบเต็มจอ</string>
+    <string name="long_screen_shot_fail_to_generate_pic">ไม่สามารถสร้างรูปภาพได้ โปรดลองอีกครั้ง</string>
+    <string name="long_screen_shot_can_not_drag_down_any_more">ไม่สามารถลากเพิ่มได้</string>
+</resources>

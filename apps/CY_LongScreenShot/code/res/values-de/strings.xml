@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Langer Screenshot</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="longscreenshot">Langer Screenshot</string>
+    <string name="long_screen_shot_video">Aufnahme</string>
+    <string name="Interestscreenshot">Screenshot des Interesses</string>
+    <string name="long_screen_shot_next_screen">Nächster Bildschirm</string>
+    <string name="long_screen_shot_save">Speichern</string>
+    <string name="long_screen_shot_exit">Austreten</string>
+    <string name="long_screen_shot_can_not_drag_down_any_more">Kann nicht mehr ziehen</string>
+    <string name="long_screen_shot_can_not_scroll_any_more">Unterstützen Sie nur 10 Seiten, bitte speichern</string>
+    <string name="long_screen_shot_this_page_is_not_good_enough">Herunterfahren</string>
+    <string name="long_screen_shot_scrolled_to_bottom">Nach unten scrollen, bitte speichern</string>
+    <string name="long_screen_shot_save_pic">Bild speichern ...</string>
+    <string name="long_screen_shot_save_success">Erfolgreich gespeichert</string>
+    <string name="long_screen_shot_show_pic">Bild anzeigen</string>
+    <string name="long_screen_shot_please_wait">Bitte warten...</string>
+    <string name="long_screen_shot_not_surport_landscape">Landschaft wird nicht unterstützt</string>
+    <string name="long_screen_shot_not_surport_full_screen">Vollbild-Screenshot wird nicht unterstützt</string>
+    <string name="long_screen_shot_fail_to_generate_pic">Fehler beim Generieren des Bildes Bitte versuche es erneut</string>
+    <string name="long_screen_shot_single_hand_not_surport">Einhandmodus wird nicht unterstützt</string>
+    <string name="long_screen_shot_run_foreground">Ein langer Screenshot läuft</string>
+    <string name="long_screen_shot_multi_window_not_support">Der MultiWindow-Modus wird nicht unterstützt</string>
+    <string name="save_to_phone_storage">Auf Telefonspeicher speichern</string>
+    <string name="switch_to_external_storage">Zu äußerem Speicher wechseln</string>
+    <string name="storage_has_no_space">Speichern ist nicht mögl.</string>
+    <string name="storage_is_full">Speicher voll</string>
+    <string name="long_screen_shot_forbided">Screenshot verboten!</string>
+    <string name="current_ui_not_support">West Korea Seoul / Seoul Turm</string>
+    <string name="screen_scroll_tip">Tippen Sie auf den Bildschirm, um das Scrollen zu stoppen, und der erweiterte Screenshot  \n wird aufgenommen.</string>
+    <string name="share">Teilen</string>
+    <string name="edit">Schneiden</string>
+    <string name="delete">Löschen</string>
+    <string name="share_with">Teilen mit</string>
+</resources>

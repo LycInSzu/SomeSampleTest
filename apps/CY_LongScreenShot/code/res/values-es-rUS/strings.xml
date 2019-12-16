@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources> 
+    <string name="action_settings">Ajustes</string>
+    <string name="long_screen_shot_video">Grabar</string>
+    <string name="long_screen_shot_save">Guardar</string>
+    <string name="long_screen_shot_exit">Salir</string>
+    <string name="long_screen_shot_please_wait">Esperar por favor...</string>
+    <string name="save_to_phone_storage">Guardar en almacenamiento teléfono</string>
+    <string name="switch_to_external_storage">Pasar al almacenamiento externo</string>
+    <string name="storage_has_no_space">Almacenamiento no disponible</string>
+    <string name="long_screen_shot_next_screen">Próxima pantalla</string>
+    <string name="long_screen_shot_save_pic">Guardando captura</string>
+    <string name="long_screen_shot_save_success">Guardado exitosamente</string>
+    <string name="app_name">Captura de pantalla larga</string>
+    <string name="longscreenshot">Captura de pantalla larga</string>
+    <string name="Interestscreenshot">Captura de pantalla personalizada</string>
+    <string name="long_screen_shot_can_not_drag_down_any_more">No se puede arrastrar más</string>
+    <string name="long_screen_shot_can_not_scroll_any_more">Solo se soportan hasta 10 paginas, por favor guarde</string>
+    <string name="long_screen_shot_this_page_is_not_good_enough">Apagar</string>
+    <string name="long_screen_shot_scrolled_to_bottom">Desplazado hacia abajo, por favor, guarde</string>
+    <string name="long_screen_shot_show_pic">Mostrar imagen</string>
+    <string name="long_screen_shot_not_surport_landscape">No puede ser apaisada</string>
+    <string name="long_screen_shot_not_surport_full_screen">No se soporta pantalla completa</string>
+    <string name="long_screen_shot_fail_to_generate_pic">Fallo al generar imagen, inténtelo otra vez</string>
+    <string name="long_screen_shot_single_hand_not_surport">No se soporta modo de mano unica</string>
+    <string name="long_screen_shot_run_foreground">Captura de pantalla larga no se está ejecutando</string>
+    <string name="storage_is_full">El almacenamiento esta lleno</string>
+    <string name="long_screen_shot_forbided">Esta pagina no permite crear captura de pantalla</string>
+    <!--Chenyee <Cy_MX_Req> <huanghaijian> <20170728> <add> for CSW1703MX-290 begin -->
+    <string name="current_ui_not_support">La interfaz de usuario actual no es compatible</string>
+    <string name="screen_scroll_tip">Toca la pantalla para detener el desplazamiento y expandir \n captura de pantalla será capturada.</string>
+    <string name="share">Compartir</string>
+    <string name="edit">Cultivo</string>
+    <string name="delete">Borrar</string>
+    <string name="share_with">Compartir con</string>
+    <string name="delete_message">¿Estás seguro de borrar esta imagen?</string>
+    <!--Chenyee <Cy_MX_Req> <huanghaijian> <20170728> <add> for CSW1703MX-290 end -->
+</resources>

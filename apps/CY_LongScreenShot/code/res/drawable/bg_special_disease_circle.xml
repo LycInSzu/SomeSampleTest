@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item>
+        <shape 
+            android:shape="ring"
+            android:innerRadius="90dp"
+            android:thickness="2dp"
+            android:useLevel="false"
+             >
+            <stroke android:width="90dp"  android:color="@android:color/darker_gray" />
+            <size android:width="180dp" android:height="180dp"/>
+        </shape>
+    </item>
+    
+	<!-- <item android:bottom="8dp" android:right="8dp" android:top="8dp" android:left="28dp" >
+	    <selector xmlns:android="http://schemas.android.com/apk/res/android">
+	        <item android:state_pressed="true">
+				<shape android:shape="oval" >
+		            <corners android:radius="@dimen/size90"/>
+		            <solid android:color="#e66b4f" />
+		            <size android:width="162dp" android:height="162dp"/>
+        		</shape>
+			</item>
+	        
+	        <item>
+		        <shape android:shape="oval" >
+		            <corners android:radius="@dimen/size90"/>
+		            <solid android:color="#f3876f" />
+		            <size android:width="162dp" android:height="162dp"/>
+		        </shape>
+	        </item>
+        
+		</selector>
+	</item> -->
+	
+</layer-list>

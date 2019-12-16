@@ -43,28 +43,30 @@ sz2019
 * Description: Screen pinning, navigation buttons layout in confirm window is not adapt to the true layout of the system
 ***********************************************************/
 [E9592_BQ_63_P0][EJWJE-331]change translation of qs tile
-[E557_OQ_S65_UZ_61_P0][EWWQ-2017][EWWQ-2039][EWWQ-2041]modify qs tiles order and remove screenrecorder qs tile
-[E959_OQ_S70_UZ_63_P0][EJWJ-1056]add icon as switch of auto brightness
+[E557_OQ_S65_UZ_61_P0][EWWQ-2250]change translation
+[E959_OQ_S70_UZ_63_P0][EJWJ-1360]fix bug: dialog showing so short time after change user to guest
 [E965_CQ_9071C-1_63_P0][EJLW-48][EJLW-50][EJLW-69][EJLW-82][EJLW-83][EJLW-86] add adups fota and faceunlock
-[E531_DG_M9T_EEA][EWSY-1430] update faceunlock apk
+[E531_DG_M9T_EEA][EWSY-1544] fixbug: NoSuchElementException crash in systemui
 [E9361_ALLVIEW_39_P0][EJSLY-660]change ota app from chenyee to allview
 [E838_TG_T19_RUSSIA][YIOY-645][YIOY-649][YIOY-651][YIOY-652][YIOY-658][YIOY-674]fix bug: change translations of Russian and modify GlobaleActionDialog layout in ru
 
-[TE536_BLU_39_P0][TEWSL-296]add translation of super screenshot in spanish
-[E9592_BLU_63_P0][none]add translation of super screenshot in spanish
+[TE536_BLU_39_P0][none]add some chinese translation
+[E9592_BLU_63_P0][EJWJE-717]remove mobile anti-theft function
 
 [C719_8045_39_O1][CQYJ-1809] update adups ota version to 5.26
 
+[E977_DG_M11_71_P0_EEA][EJQQ-1493]fix bug: dialog showing so short time after change user to guest
+[E977_PUBLIC_71_Q0][EJQQ-1552]add am pm mark in keyguard slice view of alarm
 
-[E977_PUBLIC_71_Q0][EJQQ-994][EJQQ-996] add am/pm in 12hr format shown in statusbar and keyguardview
+[E557_OQ_S65_PL_61_P0][EWWQ-2193] change adups fota pl translation 
 
-
+[E977_PUBLIC_71_Q0][none]modify fota platform info
 //modified for BUG_ID:YJSQ-4688 by yuchong.li@wheatek.com 20190830 begin
 
 //add for BUG_ID:EJSLY-471 by yuchong.li@wheatek.com 20190916 begin
 
 
-
+[E531_JK_DK008_80_O1][EWSY-1546]fix bug: dialog showing so short time after change user to guest
 git config --global user.email "yuchong.li@wheatek.com"
 
 git config --global user.name "liyuchong"
@@ -433,3 +435,16 @@ simg2img system.img system.img.ext4 //将system.img转换成system.img.ext4
 mkdir mnt_dir
 sudo mount -t ext4 -o loop system.img.ext4 mnt_dir //挂载
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ro.sf.lcd_density
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+

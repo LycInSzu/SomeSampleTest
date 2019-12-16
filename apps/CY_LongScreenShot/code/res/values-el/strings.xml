@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Ρυθμίσεις</string>
+    <string name="long_screen_shot_video">Καταγραφή</string>
+    <string name="long_screen_shot_save">Αποθήκευση</string>
+    <string name="long_screen_shot_exit">Έξοδος</string>
+    <string name="long_screen_shot_save_success">Αποθηκεύθηκε με επιτυχία</string>
+    <string name="long_screen_shot_please_wait">Περιμένετε...</string>
+    <string name="storage_is_full">Ο αποθηκευτικός χώρος είναι πλήρης</string>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ch.ảnh màn hình</string>
+    <string name="action_settings">Cài đặt</string>
+    <string name="longscreenshot">Ch.ảnh màn hình</string>
+    <string name="long_screen_shot_video">Ghi</string>   
+    <string name="Interestscreenshot">Ghi chú ảnh chụp</string>
+    <string name="long_screen_shot_next_screen">Trang kế tiếp</string>
+    <string name="long_screen_shot_save">Lưu</string>
+    <string name="long_screen_shot_exit">Thoát</string>
+    <string name="long_screen_shot_can_not_drag_down_any_more">Không thể kéo được nữa</string>
+    <string name="long_screen_shot_can_not_scroll_any_more">Chỉ hỗ trợ 10 trang, hãy lưu lại</string>
+    <string name="long_screen_shot_this_page_is_not_good_enough">Tắt</string>
+    <string name="long_screen_shot_scrolled_to_bottom">Trược xuống dưới, hãy lưu lại</string>
+    
+    <string name="long_screen_shot_save_pic">Đang lưu...</string>
+ 
+    <string name="long_screen_shot_save_success">Đã lưu thành công</string>
+
+
+    <string name="long_screen_shot_show_pic">Hiển thị ảnh</string>
+    <string name="long_screen_shot_please_wait">Vui lòng đợi...</string>
+  
+    <string name="long_screen_shot_not_surport_landscape">Chế độ ảnh đứng không hỗ trợ</string>
+ 
+    <string name="long_screen_shot_not_surport_full_screen">Ảnh chụp toàn màn hình không hỗ trợ</string>
+    <string name="long_screen_shot_fail_to_generate_pic">Đã xảy ra lỗi khi tạo hình ảnh, hãy thử lại</string>
+
+    <string name="long_screen_shot_single_hand_not_surport">Chế độ một tay không hỗ trợ</string>
+   
+    <string name="long_screen_shot_run_foreground">Ch.ảnh màn hình đang chạy</string>
+
+    <string name="long_screen_shot_multi_window_not_support">Chế độ đa màn hình không hỗ trợ</string>
+    <string name="save_to_phone_storage">Lưu vào bộ nhớ trong</string>
+    <string name="switch_to_external_storage">Chuyển vào bộ nhớ ngoài</string>
+    <string name="storage_has_no_space">Bộ nhớ không khả dụng</string>
+
+    <string name="storage_is_full">Bộ nhớ đầy</string>
+
+    <string name="long_screen_shot_forbided">Ảnh chụp màn hình đã ẩn!</string>
+
+
+</resources>

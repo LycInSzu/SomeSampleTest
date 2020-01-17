@@ -35,6 +35,11 @@ sz2019
 
 账号：yin.chang1@wheatek.com
 密码：aA1234a!!
+
+
+
+
+4130694002
 -----------------------------------------------------------------------------------------------
 
 /***********************************************************
@@ -47,11 +52,11 @@ sz2019
 [E959_OQ_S70_UZ_63_P0][EJWJ-1360]fix bug: dialog showing so short time after change user to guest
 [E965_CQ_9071C-1_63_P0][EJLW-48][EJLW-50][EJLW-69][EJLW-82][EJLW-83][EJLW-86] add adups fota and faceunlock
 [E531_DG_M9T_EEA][EWSY-1544] fixbug: NoSuchElementException crash in systemui
-[E9361_ALLVIEW_39_P0][EJSLY-660]change ota app from chenyee to allview
+[E9361_ALLVIEW_39_P0][EJSLY-705][EJSLY-712][EJSLY-713]modify some string translation as custom required
 [E838_TG_T19_RUSSIA][YIOY-645][YIOY-649][YIOY-651][YIOY-652][YIOY-658][YIOY-674]fix bug: change translations of Russian and modify GlobaleActionDialog layout in ru
 
-[TE536_BLU_39_P0][none]add some chinese translation
-[E9592_BLU_63_P0][EJWJE-717]remove mobile anti-theft function
+[TE536_BLU_39_P0][TEWSL-399]fixbug：longscreenshot result is not good in some pages
+[E9592_BLU_63_P0][EJWJE-923]modify chooselockpassword  design, must contain at least 1 letter
 
 [C719_8045_39_O1][CQYJ-1809] update adups ota version to 5.26
 
@@ -60,22 +65,40 @@ sz2019
 
 [E557_OQ_S65_PL_61_P0][EWWQ-2193] change adups fota pl translation 
 
-[E977_PUBLIC_71_Q0][none]modify fota platform info
+[E977_PUBLIC_71_Q0][EJQQ-1855]fix bug : in guestural mode, navigation bar back button is not work
+
+[E9592_BQ_63_P0][EJWJE-901]fix bug: device runs not fluent while screenrecorder running in gesture navigation mode
+
+[E9361_COPPEL_39_Q0_GO][EJSLYQ-65]modify emergency button visibility in bouncer
+
+
+[E977_DG_M13_71_Q0][EJQQQ-524]fix bug : the system language turn to default after switch users between owner and guest twice with simcard plugged before change any language in setting
+
+[E535_DG_M9T_39_P0_RUSSIA][YWSW-1837]fix bug: modify status bar icon color of clear memory page to dark
+
+
+[TE585_DG_1910S_37_Q0_GO][TEWBW-824]fix bug:brightness dialog surrounded by grey translucent circles in dark theme mode
+
+
+[E9361_COPPEL_39_Q0_GO][EJSLYQ-124]fix bug: volume icons' size and color different from others in statusbar
+
 //modified for BUG_ID:YJSQ-4688 by yuchong.li@wheatek.com 20190830 begin
 
 //add for BUG_ID:EJSLY-471 by yuchong.li@wheatek.com 20190916 begin
-
+[E535_DK_DK008Q_39_Q0][EWSWQ-50]add feature : modify notification sort required by client
 
 [E531_JK_DK008_80_O1][EWSY-1546]fix bug: dialog showing so short time after change user to guest
 git config --global user.email "yuchong.li@wheatek.com"
 
 git config --global user.name "liyuchong"
+
+[X511Q_CQ_7081C1_80_GO_Q0][XWYYQ-342]fix bug: music name shown a short time in keyguardsliceview if close and open screen so quick while playing music
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 【问题原因】
-navigation bar 根据不同配置，有不同的布局。但screen pinning功能没有做对应的布局。
+ 
 【解决方案】
-添加缺少的布局，并在代码中根据配置进行适配。
+ 
 【验证方法与步骤】
 
 【影响的功能与模块】
@@ -440,7 +463,7 @@ ro.sf.lcd_density
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-
+adb pull /sdcard/debuglogger
 
 
 

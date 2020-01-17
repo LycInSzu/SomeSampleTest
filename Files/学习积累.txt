@@ -1406,7 +1406,7 @@ lift是变换了Subscriber，
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Java 初始化顺序：
+一、Java 初始化顺序：
 普通类：
 静态变量
 静态代码块
@@ -1455,7 +1455,160 @@ Java 初始化顺序：
 
 
 
-java的多态：
+二、java的多态：
 1、普通方法是支持多态的
 2、类内部定义的域是不支持多态的
 3、静态方法也是不支持多态的
+
+
+
+三、内部类：
+0、分类：成员内部类、局部内部类、匿名内部类和静态内部类。
+1、成员内部类可以无条件访问外部类的所有成员属性和成员方法（包括private成员和静态成员）。虽然成员内部类可以无条件地访问外部类的成员，而外部类想访问成员内部类的成员却不是这么随心所欲了。在外部类中如果要访问成员内部类的成员，必须先创建一个成员内部类的对象，再通过指向这个对象的引用来访问。
+成员内部类是依附外部类而存在的，也就是说，如果要创建成员内部类的对象，前提是必须存在一个外部类的对象。创建成员内部类对象的一般方式如下（即使在当前外部类使用自己的内部类也要这样）：
+public class Test {
+    public static void main(String[] args)  {
+        //第一种方式：
+        Outter outter = new Outter();
+        Outter.Inner inner = outter.new Inner();  //必须通过Outter对象来创建
+         
+        //第二种方式：
+        Outter.Inner inner1 = outter.getInnerInstance();
+    }
+}
+
+成员内部类可以拥有private访问权限、protected访问权限、public访问权限及包访问权限。比如上面的例子，如果成员内部类Inner用private修饰，则只能在外部类的内部访问，如果用public修饰，则任何地方都能访问；如果用protected修饰，则只能在同一个包下或者继承外部类的情况下访问；如果是默认访问权限，则只能在同一个包下访问。这一点和外部类有一点不一样，外部类只能被public和包访问两种权限修饰。我个人是这么理解的，由于成员内部类看起来像是外部类的一个成员，所以可以像类的成员一样拥有多种权限修饰。
+
+2、局部内部类是定义在一个方法或者一个作用域里面的类，它和成员内部类的区别在于局部内部类的访问仅限于方法内或者该作用域内。不能有public、protected、private以及static修饰符的。
+
+3、静态内部类：它不能使用外部类的非static成员变量或者方法。
+Outter.Inner inner = new Outter.Inner();
+
+局部内部类和匿名内部类只能访问局部final变量。
+
+
+4、访问外部类的成员：
+class Outter
+{
+    private int a = 1;
+    class Inner {
+        private int a = 2;
+        public void print() {
+            int a = 3;
+            System.out.println("局部变量：" + a);
+            System.out.println("内部类变量：" + this.a);
+            System.out.println("外部类变量：" + Outter.this.a);
+        }
+    }
+}
+
+5、为什么在Java中需要内部类？总结一下主要有以下四点：
+
+　　1.每个内部类都能独立的继承一个接口的实现，所以无论外部类是否已经继承了某个(接口的)实现，对于内部类都没有影响。内部类使得多继承的解决方案变得完整，
+
+　　2.方便将存在一定逻辑关系的类组织在一起，又可以对外界隐藏。
+
+　　3.方便编写事件驱动程序
+
+　　4.方便编写线程代码
+
+
+四、泛型
+1、java的泛型只在编译阶段有效。
+在编译过程中，正确检验泛型结果后，会将泛型的相关信息擦出，并且在对象进入和离开方法的边界处添加类型检查和类型转换的方法。也就是说，泛型信息不会进入到运行时阶段。
+
+
+2、泛型有三种使用方式，分别为：泛型类、泛型接口、泛型方法
+
+
+
+五、并发
+1、线程
+1）、线程上下文切换过程中会记录程序计数器、CPU寄存器状态等数据。
+　　说简单点的：对于线程的上下文切换实际上就是 存储和恢复CPU状态的过程，它使得线程执行能够从中断点恢复执行。
+
+2）、yield()方法也不会释放锁!!!!!!!!!!!
+
+3)、join方法
+实际上调用join方法是调用了Object的wait方法。
+
+有三个重载版本：
+join()
+join(long millis)     //参数为毫秒
+join(long millis,int nanoseconds)    //第一参数为毫秒，第二个参数为纳秒
+
+4）、
+单独调用interrupt方法可以使得处于阻塞状态的线程抛出一个异常，也就说，它可以用来中断一个正处于阻塞状态的线程，但，直接调用interrupt方法不能中断正在运行中的线程。
+
+2、线程协作
+1）、如果调用某个对象的wait()方法，当前线程必须拥有这个对象的monitor（即锁），因此调用wait()方法必须在同步块或者同步方法中进行（synchronized块或者synchronized方法）。
+调用某个对象的notify()/notifyAll()方法，当前线程也必须拥有这个对象的monitor，因此调用notify()/notifyAll()方法必须在同步块或者同步方法中进行（synchronized块或者synchronized方法）。
+
+要注意一点，一个线程被唤醒不代表立即获取了对象的monitor，只有等调用完notify()或者notifyAll()并退出synchronized块，释放对象锁后，其余线程才可获得锁执行。
+
+2）、　　Condition是在java 1.5中才出现的，它用来替代传统的Object的wait()、notify()实现线程间的协作。
+
+相比使用Object的wait()、notify()，使用Condition1的await()、signal()这种方式实现线程间协作更加安全和高效。因此通常来说比较推荐使用Condition。
+
+Condition是个接口，基本的方法就是await()和signal()方法；
+Condition依赖于Lock接口，生成一个Condition的基本代码是lock.newCondition() 
+ 调用Condition的await()和signal()方法，都必须在lock保护之内，就是说必须在lock.lock()和lock.unlock之间才可以使用
+　　Conditon中的await()对应Object的wait()；
+
+　　Condition中的signal()对应Object的notify()；
+
+　　Condition中的signalAll()对应Object的notifyAll()。
+
+Lock 接口：
+public interface Lock {
+    void lock();
+    void lockInterruptibly() throws InterruptedException;
+    boolean tryLock();
+    boolean tryLock(long time, TimeUnit unit) throws InterruptedException;
+    void unlock();
+    Condition newCondition();
+}
+
+
+几种锁：
+ReentrantLock
+
+　　ReentrantLock，意思是“可重入锁”。
+
+
+
+
+
+Condition 接口：
+public interface Condition {
+    void await() throws InterruptedException;
+    void awaitUninterruptibly();
+    long awaitNanos(long nanosTimeout) throws InterruptedException;
+    boolean await(long time, TimeUnit unit) throws InterruptedException;
+    boolean awaitUntil(Date deadline) throws InterruptedException;
+    void signal();
+    void signalAll();
+}
+
+
+
+3）、Lock和synchronized的选择
+
+　　总结来说，Lock和synchronized有以下几点不同：
+
+　　1）Lock是一个接口，而synchronized是Java中的关键字，synchronized是内置的语言实现；
+
+　　2）synchronized在发生异常时，会自动释放线程占有的锁，因此不会导致死锁现象发生；而Lock在发生异常时，如果没有主动通过unLock()去释放锁，则很可能造成死锁现象，因此使用Lock时需要在finally块中释放锁；
+
+　　3）Lock可以让等待锁的线程响应中断，而synchronized却不行，使用synchronized时，等待的线程会一直等待下去，不能够响应中断；
+
+　　4）通过Lock可以知道有没有成功获取锁，而synchronized却无法办到。
+
+　　5）Lock可以提高多个线程进行读操作的效率。
+
+　　在性能上来说，如果竞争资源不激烈，两者的性能是差不多的，而当竞争资源非常激烈时（即有大量线程同时竞争），此时Lock的性能要远远优于synchronized。所以说，在具体使用时要根据适当情况选择。
+
+
+
+
+

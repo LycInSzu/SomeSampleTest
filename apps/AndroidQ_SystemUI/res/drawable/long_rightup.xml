@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+************************************************************************
+*History:
+*
+*1.Bug_id:XWLYS-55 WTK_FUNNY_SCREEN_SHOT chenkai
+*  Description: Create for funny screen shot (20160413)
+*
+************************************************************************
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/long_rightup_press" android:state_pressed="true"/>
+    <item android:drawable="@drawable/long_rightup_normal"/>
+
+</selector>

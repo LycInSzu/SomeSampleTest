@@ -9,6 +9,9 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
             android:allowBackup="true"
@@ -17,16 +20,27 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity
-                android:name=".FullscreenActivity"
-                android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|mcc|mnc"
-                android:label="@string/app_name"
-                android:theme="@style/FullscreenTheme">
+        <activity android:name=".BluetoothConnectionTest.BlueToothServerActivity">
+        </activity>
+        <activity android:name=".BluetoothConnectionTest.BlueToothClientActivity">
+        </activity>
+        <activity android:name=".BluetoothConnectionTest.BlueToothMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity
+                android:name=".FullscreenActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|mcc|mnc"
+                android:label="@string/app_name"
+                android:theme="@style/FullscreenTheme">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
         </activity>
         <activity android:name=".AboutSurfaceView.SurfaceViewTestActivity"/>
         <activity
@@ -57,17 +71,12 @@
         <activity android:name=".LifeBalance.UI.Countdown.AddNewCountdownActivity">
         </activity>
         <activity android:name=".LifeBalance.UI.TextToSpeech.TextToSpeechActivity">
-        </activity>
-
-        <!-- <receiver android:name=".LifeBalance.UI.TextToSpeech.TextToSpeechActivity$ThemeChangeReceiver"> -->
+        </activity> <!-- <receiver android:name=".LifeBalance.UI.TextToSpeech.TextToSpeechActivity$ThemeChangeReceiver"> -->
         <!-- <intent-filter> -->
         <!-- <action android:name="com.cyee.intent.action.theme.change"/> -->
-
-
         <!-- <category android:name="com.cyee.intent.category.theme.V2"/> -->
         <!-- </intent-filter> -->
         <!-- </receiver> -->
-
         <activity android:name=".Camera2Test.MyCameraActivity">
         </activity>
     </application>

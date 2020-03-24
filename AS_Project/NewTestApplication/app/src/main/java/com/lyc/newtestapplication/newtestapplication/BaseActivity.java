@@ -14,7 +14,6 @@ import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.mediarouter.media;
 
 public abstract class BaseActivity extends AppCompatActivity {
 

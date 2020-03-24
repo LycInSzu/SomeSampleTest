@@ -48,7 +48,7 @@ sz2019
 * Description: Screen pinning, navigation buttons layout in confirm window is not adapt to the true layout of the system
 ***********************************************************/
 [E9592_BQ_63_P0][EJWJE-331]change translation of qs tile
-[E557_OQ_S65_UZ_61_P0][EWWQ-2250]change translation
+[E959_OQ_S70_NOEEA_63_P0][EJWJ-1601]change translation
 [E959_OQ_S70_UZ_63_P0][EJWJ-1360]fix bug: dialog showing so short time after change user to guest
 [E965_CQ_9071C-1_63_P0][EJLW-48][EJLW-50][EJLW-69][EJLW-82][EJLW-83][EJLW-86] add adups fota and faceunlock
 [E531_DG_M9T_EEA][EWSY-1544] fixbug: NoSuchElementException crash in systemui
@@ -72,12 +72,12 @@ sz2019
 [E9361_COPPEL_39_Q0_GO][EJSLYQ-65]modify emergency button visibility in bouncer
 
 
-[E977_DG_M13_71_Q0][EJQQQ-524]fix bug : the system language turn to default after switch users between owner and guest twice with simcard plugged before change any language in setting
+[E977_DG_M13_71_Q0][EJQQQ-771] add translation
 
 [E535_DG_M9T_39_P0_RUSSIA][YWSW-1837]fix bug: modify status bar icon color of clear memory page to dark
 
 
-[TE585_DG_1910S_37_Q0_GO][TEWBW-824]fix bug:brightness dialog surrounded by grey translucent circles in dark theme mode
+[TE585_DG_1910S_37_Q0_GO][TEWBW-989]add notification for longscreenshot
 
 
 [E9361_COPPEL_39_Q0_GO][EJSLYQ-124]fix bug: volume icons' size and color different from others in statusbar
@@ -85,7 +85,7 @@ sz2019
 //modified for BUG_ID:YJSQ-4688 by yuchong.li@wheatek.com 20190830 begin
 
 //add for BUG_ID:EJSLY-471 by yuchong.li@wheatek.com 20190916 begin
-[E535_DK_DK008Q_39_Q0][EWSWQ-50]add feature : modify notification sort required by client
+[E535_DK_DK008Q_39_Q0][none]add deskclock in normal notification list
 
 [E531_JK_DK008_80_O1][EWSY-1546]fix bug: dialog showing so short time after change user to guest
 git config --global user.email "yuchong.li@wheatek.com"
@@ -93,6 +93,8 @@ git config --global user.email "yuchong.li@wheatek.com"
 git config --global user.name "liyuchong"
 
 [X511Q_CQ_7081C1_80_GO_Q0][XWYYQ-342]fix bug: music name shown a short time in keyguardsliceview if close and open screen so quick while playing music
+[TE988_DK_DK018_71_Q0][TEJBB-60]add darktheme qstile icons for dk
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 【问题原因】
@@ -466,8 +468,21 @@ ro.sf.lcd_density
 adb pull /sdcard/debuglogger
 
 
+adb shell dumpsys activity service com.android.systemui
 
 
 
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+android Q 中关于androidX的代码好像都在这里：
+alps\prebuilts\sdk\current\androidx\m2repository\androidx\slice\slice-core\1.1.0-alpha02
 
+应该是通过alps\prebuilts\sdk\current\androidx\Android.bp导入到项目中的。
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+广升的apk规则：
+1.开机向导,对芯片平台,对品牌商,都无要求
+2.fota_apk公版,对芯片平台,对品牌商,都无要求.客户定制化apk,只对品牌商有要求
+3.人脸解锁,是带有渠道号对品牌商有要求,对芯片平台无要求
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

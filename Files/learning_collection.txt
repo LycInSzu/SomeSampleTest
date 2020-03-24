@@ -437,6 +437,18 @@ Java层面的Server端都会有个Service继承自某个Stub，而这个Stub又�
 Client端传递数据给Server端时，是写入数据到Server端对应的内核空间；而Server端返回处理结果时，是写入数据到Client端对应的内核空间的。
 
 
+8）、对于通过bindService启动的Service，如果要深究Activity的bindService流程，可以按以下几步来分析
+
+1、Activity调用bindService：通过Binder通知ActivityManagerService，要启动哪个Service
+2、ActivityManagerService创建ServiceRecord，并利用ApplicationThreadProxy回调，通知APP新建并启动Service启动起来
+3、ActivityManagerService把Service启动起来后，继续通过ApplicationThreadProxy，通知APP，bindService，其实就是让Service返回一个Binder对象给ActivityManagerService，以便AMS传递给Client
+4、ActivityManagerService把从Service处得到这个Binder对象传给Activity，这里是通过IServiceConnection binder实现。
+5、Activity被唤醒后通过Binder Stub的asInterface函数将Binder转换为代理Proxy，完成业务代理的转换，之后就能利用Proxy进行通信了。
+
+作者：看书的小蜗牛
+链接：https://juejin.im/post/58c920ba61ff4b0060120855
+来源：掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 
 
@@ -1570,7 +1582,7 @@ public class Test {
 3、静态内部类：它不能使用外部类的非static成员变量或者方法。
 Outter.Inner inner = new Outter.Inner();
 
-局部内部类和匿名内部类只能访问局部final变量。
+局部内部类和匿名内部类只能访问局部final变量。java8取消此限制。
 
 
 4、访问外部类的成员：
@@ -1693,6 +1705,34 @@ public interface Condition {
 　　5）Lock可以提高多个线程进行读操作的效率。
 
 　　在性能上来说，如果竞争资源不激烈，两者的性能是差不多的，而当竞争资源非常激烈时（即有大量线程同时竞争），此时Lock的性能要远远优于synchronized。所以说，在具体使用时要根据适当情况选择。
+
+3、
+每个ThreadLocal变量保存一个实际变量，比如Looper。而每个Thread中有一个ThreadLocalMap类型的变量threadlocals可以用来保存这个thread中所有的ThreadLocal变量。
+
+在每个线程Thread内部有一个ThreadLocal.ThreadLocalMap类型的成员变量threadLocals，这个threadLocals就是用来存储实际的变量副本的，键值为当前ThreadLocal变量，value为变量副本（即T类型的变量）。
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------传感器：
+
+1、在Android系统中，传感器系统的Frameworks层的代码路径是：framework/base/core/java/android/hardware
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+蓝牙：
+1、
+Android平台中蓝牙系统从上到下主要包括Java框架中的BlueTooth类、Android适配库、BlueZ库、驱动程序和协议这几部分。
+
+2、
+为了让支持蓝牙的设备能够在彼此之间传输数据，它们必须先通过配对过程形成通信通道。其中一台设备（可检测到的设备）需将自身设置为可接收传入的连接请求。另一台设备会使用服务发现过程找到此可检测到的设备。在可检测到的设备接受配对请求后，这两台设备会完成绑定过程，并在此期间交换安全密钥。二者会缓存这些密钥，以供日后使用。完成配对和绑定过程后，两台设备会交换信息。当会话完成时，发起配对请求的设备会发布已将其链接到可检测设备的通道。但是，这两台设备仍保持绑定状态，因此在未来的会话期间，只要二者在彼此的范围内且均未移除绑定，便可自动重新连接。
+
+
+
+3、Android 设备默认处于不可检测到状态。用户可通过系统设置将设备设为在有限的时间内处于可检测到状态，或者，应用可请求用户在不离开应用的同时启用可检测性。
+
+被配对与被连接之间存在区别：
+被配对是指两台设备知晓彼此的存在，具有可用于身份验证的共享链路密钥，并且能够与彼此建立加密连接。
+被连接是指设备当前共享一个 RFCOMM 通道，并且能够向彼此传输数据。当前的 Android Bluetooth API 要求规定，只有先对设备进行配对，然后才能建立 RFCOMM 连接。在使用 Bluetooth API 发起加密连接时，系统会自动执行配对。
+
+
 
 
 

@@ -16,7 +16,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.R;
 import com.cydroid.note.app.utils.InputTextNumLimitHelp;
 import com.cydroid.note.common.NoteUtils;
@@ -94,7 +94,7 @@ public class NoteLabelAddView extends LinearLayout implements View.OnClickListen
     protected void onFinishInflate() {
         super.onFinishInflate();
         if (DEBUG) {
-            Logger.printLog(TAG, "onFinishInflate");
+            Log.d(TAG, "onFinishInflate");
         }
         mInputMsgView = (EditText) findViewById(R.id.label_custom_edit_text);
         initWatcher(mInputMsgView);
@@ -110,7 +110,7 @@ public class NoteLabelAddView extends LinearLayout implements View.OnClickListen
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
         if (DEBUG) {
-            Logger.printLog(TAG, "onAttachedToWindow");
+            Log.d(TAG, "onAttachedToWindow");
         }
     }
 
@@ -118,7 +118,7 @@ public class NoteLabelAddView extends LinearLayout implements View.OnClickListen
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
         if (DEBUG) {
-            Logger.printLog(TAG, "onDetachedFromWindow");
+            Log.d(TAG, "onDetachedFromWindow");
         }
         mInputMsgView.setOnEditorActionListener(null);
         if (mInputTextNumLimitHelp != null) {

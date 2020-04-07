@@ -1,6 +1,6 @@
 package com.cydroid.note.common;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -15,7 +15,7 @@ public class ReflectionUtils {
             field.setAccessible(true);
             return field.get(owner);
         } catch (Exception e) {
-            Logger.printLog(TAG, "getFeild failed fieldName=" + fieldName + " ,,,e ==" + e);
+            Log.d(TAG, "getFeild failed fieldName=" + fieldName + " ,,,e ==" + e);
         }
         return null;
     }
@@ -25,7 +25,7 @@ public class ReflectionUtils {
             Field field = owner.getDeclaredField(fieldName);
             return field.getInt(null);
         } catch (Exception e) {
-            Logger.printLog(TAG, "getIntFeild failed fieldName=" + fieldName + ",,,e = " + e);
+            Log.d(TAG, "getIntFeild failed fieldName=" + fieldName + ",,,e = " + e);
         }
         return -1;
     }
@@ -68,7 +68,7 @@ public class ReflectionUtils {
         try {
             field.set(target, value);
         } catch (IllegalAccessException ex) {
-            Logger.printLog(TAG, "setField failed value= " + value + ",,,ex,,," + ex);
+            Log.d(TAG, "setField failed value= " + value + ",,,ex,,," + ex);
         }
     }
 
@@ -86,7 +86,7 @@ public class ReflectionUtils {
         try {
             return field.get(target);
         } catch (IllegalAccessException ex) {
-            Logger.printLog(TAG, "getField failed :" + ex);
+            Log.d(TAG, "getField failed :" + ex);
         }
         return null;
     }
@@ -157,7 +157,7 @@ public class ReflectionUtils {
         try {
             return method.invoke(target, args);
         } catch (Exception ex) {
-            Logger.printLog(TAG, "invokeMethod method= " + method + ",,,ex,,," + ex);
+            Log.d(TAG, "invokeMethod method= " + method + ",,,ex,,," + ex);
         }
         return null;
     }

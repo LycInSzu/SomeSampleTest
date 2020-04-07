@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.text.Editable;
 import android.text.SpannableStringBuilder;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.app.span.BillItem;
 import com.cydroid.note.app.span.JsonableSpan;
 import com.cydroid.note.app.span.PhotoImageSpan;
@@ -69,7 +69,7 @@ public class DataConvert {
                 }
             }
         } catch (JSONException e) {
-            Logger.printLog(TAG, "applySpanToEditableFromJson fail : " + e + " ,,, editText ,,," + editText);
+            Log.d(TAG, "applySpanToEditableFromJson fail : " + e + " ,,, editText ,,," + editText);
         }
     }
 
@@ -90,7 +90,7 @@ public class DataConvert {
 
             return jsonStringer.toString();
         } catch (Exception e) {
-            Logger.printLog(TAG, "editableConvertToJson fail : " + e + " ,,,editable,,," + editable.toString());
+            Log.d(TAG, "editableConvertToJson fail : " + e + " ,,,editable,,," + editable.toString());
         }
         return null;
     }
@@ -102,12 +102,12 @@ public class DataConvert {
             Field f = c.getField("APPLYER");
             applyer = (JsonableSpan.Applyer) f.get(null);
         } catch (IllegalAccessException e) {
-            Logger.printLog(TAG, "Illegal access when unmarshalling: "
+            Log.d(TAG, "Illegal access when unmarshalling: "
                     + clzName + " :" + e);
             throw new BadJsonableException(
                     "IllegalAccessException when unmarshalling: " + clzName);
         } catch (ClassNotFoundException e) {
-            Logger.printLog(TAG, "Class not found when unmarshalling: "
+            Log.d(TAG, "Class not found when unmarshalling: "
                     + clzName + e);
             throw new BadJsonableException(
                     "ClassNotFoundException when unmarshalling: " + clzName);
@@ -141,7 +141,7 @@ public class DataConvert {
                 //make sure jsonObject has SPAN_ITEM_TYPE
                 NoteUtils.assertTrue(jsonObject.getString(SPAN_ITEM_TYPE) != null, "jsonable should be put in SPAN_ITEM_TYPE field. ");
             } catch (JSONException e) {
-                Logger.printLog(TAG, "convert to json error:" + e + " ,,,,editable = " + editable.toString());
+                Log.d(TAG, "convert to json error:" + e + " ,,,,editable = " + editable.toString());
             }
 
             jsonArray.put(jsonObject);

@@ -3,14 +3,14 @@ package com.gionee.framework.storage;
 import android.os.Environment;
 import android.os.StatFs;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 
 class NormalSdkStorageManager extends AbstractStorageManager {
 
     private static final long THRESHOLD = 100L;//byte
 
     private static long getSdcardAvailableSpace(boolean isTotal) {
-        Logger.printLog(TAG, "getSdcardAvailableSpace");
+        Log.d(TAG, "getSdcardAvailableSpace");
         if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
             try {
                 StatFs sf = new StatFs(Environment.getExternalStorageDirectory().getAbsolutePath());
@@ -23,7 +23,7 @@ class NormalSdkStorageManager extends AbstractStorageManager {
                 }
 
                 long length = sf.getBlockSize() * blocks;
-                Logger.printLog(TAG, "getSdcardAvailableSpace length = "
+                Log.d(TAG, "getSdcardAvailableSpace length = "
                         + length);
                 return length;
             } catch (Exception e) {

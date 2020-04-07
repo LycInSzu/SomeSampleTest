@@ -43,16 +43,15 @@
     <dimen name="home_note_item_reminder_margin_left">5dp</dimen>
     <dimen name="home_note_item_content_margin_top">2dp</dimen>
     <dimen name="home_note_item_content_margin_bottom">3dp</dimen>
-    <!--Chenyee wanghaiyan 2018-9-13 modify for CSW1707BN-343 begin-->
-    <dimen name="home_note_item_title_size">16dp</dimen>
-    <dimen name="home_note_item_time_size">8dp</dimen>
+    <dimen name="home_note_item_title_size">16sp</dimen>
+    <dimen name="home_note_item_time_size">8sp</dimen>
+    <!--Chenyee wanghaiyan 2018-10-25 modify for CSW1809A-160 begin-->
     <dimen name="home_note_item_content_size">12dp</dimen>
-    <!--Chenyee wanghaiyan 2018-9-13 modify for CSW1707BN-343 end-->
-
+    <!--Chenyee wanghaiyan 2018-10-25 modify for CSW1809A-160 begin-->
     <dimen name="home_note_list_item_padding_top">14dp</dimen>
     <dimen name="home_note_list_item_padding_left">16dp</dimen>
 
-    <!-- home activity, search-->
+    <!--home activity, search-->
     <dimen name="search_view_left_margin">2dp</dimen>
     <dimen name="search_view_right_margin">20dp</dimen>
     <dimen name="search_view_height">32dp</dimen>

@@ -20,7 +20,7 @@ import android.support.v4.content.FileProvider;
 import android.media.MediaScannerConnection;
 //Chenyee wanghaiyan 2018-1-23 modify for CSW1702A-2611 end
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.R;
 import com.cydroid.note.app.NoteAppImpl;
 import com.cydroid.note.app.utils.ToastManager;
@@ -72,11 +72,11 @@ public class PreviewActivity extends StandardActivity implements View.OnClickLis
 
 
     public static void setSharePreBitmap(Bitmap sharePreBitmap) {
-	try{
-        	NoteUtils.assertTrue(sSharePreBitmap == null);
-	}catch (AssertionError error){
-		Logger.printLog(TAG,"setSharePreBitmap : "+error.toString());
-	}
+        try{
+            NoteUtils.assertTrue(sSharePreBitmap == null);
+        }catch (AssertionError error){
+            Log.d(TAG,"setSharePreBitmap : "+error.toString());
+        }
         sSharePreBitmap = sharePreBitmap;
     }
 
@@ -98,18 +98,18 @@ public class PreviewActivity extends StandardActivity implements View.OnClickLis
         initListener();
         Intent intent = getIntent();
         mImgPath = intent.getStringExtra("img_path");
-	    //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) begin
+        //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) begin
         mIsNoteChange = (boolean)intent.getExtra("isNoteChange");
         mNoteId = (int)intent.getExtra("noteId");
         Log.i(TAG, "PreviewActivity onCreate mIsNoteChange " + mIsNoteChange + " mNoteId " + mNoteId);
         //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) end
         if (DEBUG) {
-            Logger.printLog(TAG, "preview imgPath = " + mImgPath);
+            Log.d(TAG, "preview imgPath = " + mImgPath);
         }
-		//Chenyee wanghaiyan 2018-1-23 modify for CSW1702A-2611 begin
-	    //Cyee wanghaiyan 2017-9-22 modify for 217993 begin
+        //Chenyee wanghaiyan 2018-1-23 modify for CSW1702A-2611 begin
+        //Cyee wanghaiyan 2017-9-22 modify for 217993 begin
         //mUri = Uri.parse(Uri.decode(FileProvider.getUriForFile(NoteAppImpl.getContext(),"com.cydroid.note.fileprovider",new File   (mImgPath)).toString()));
-	    //Cyee wanghaiyan 2017-9-22 modify for 217993 end
+        //Cyee wanghaiyan 2017-9-22 modify for 217993 end
         String[] paths = new String[]{mImgPath};
         MediaScannerConnection.scanFile(NoteAppImpl.getContext(), paths, null, new MediaScannerConnection.OnScanCompletedListener() {
             @Override
@@ -231,21 +231,21 @@ public class PreviewActivity extends StandardActivity implements View.OnClickLis
         Drawable tintIcon = DrawableCompat.wrap(icon);
         DrawableCompat.setTintList(tintIcon, ContextCompat.getColorStateList(this, colorsId));
         ((ImageView) findViewById(imageViewId)).setImageDrawable(tintIcon);
-     }
+    }
 
     private boolean checkNoteIsSavedAsImage(){
         final String selection = "_id=?";
         String noteSavedImagePath=NoteUtils.getNoteSavedImagePathColumn(this, NoteContract.NoteContent.CONTENT_URI, selection,
                 new String[]{mNoteId+""});
-	Log.d(TAG,"noteSavedImagePath" + noteSavedImagePath);
+        Log.d(TAG,"noteSavedImagePath" + noteSavedImagePath);
         if(noteSavedImagePath==null||noteSavedImagePath.equals("")){
             return false;
         }else{
             File imageFile=new File(noteSavedImagePath);
-	     Log.d(TAG,"imageFile" + imageFile);
+            Log.d(TAG,"imageFile" + imageFile);
             if(!imageFile.exists()){
                 return false;
-            };	
+            };
         }
         return true;
     }
@@ -273,9 +273,12 @@ public class PreviewActivity extends StandardActivity implements View.OnClickLis
         }
         //GIONEE wanghaiyan 2016-12-06 modify for 39890 and 40287 begin
         //File defaultFile = new File(Environment.getExternalStorageDirectory(), "/cyee/AmiNote");
-        String saveImagePath = FileUtils.getSaveImagePath(this);
-        File defaultFile = new File(saveImagePath, "/Notes");
-	    //GIONEE wanghaiyan 2016-12-06 modify for 39890 and 40287 end
+        //Chenyee wanghaiyan 2019-10-26 modify for CSW1805A-765 begin
+        //String saveImagePath = FileUtils.getSaveImagePath(this);
+        //File defaultFile = new File(saveImagePath, "/Notes");
+        File defaultFile = new File(Environment.getExternalStorageDirectory(), "/Notes");
+        //Chenyee wanghaiyan 2019-10-26 modify for CSW1805A-765 end
+        //GIONEE wanghaiyan 2016-12-06 modify for 39890 and 40287 end
         long size = originFile.length();
         File targetFile = StorageUtils.getAvailableFileDirectory(this, size, defaultFile);
         if (targetFile != null) {
@@ -283,7 +286,7 @@ public class PreviewActivity extends StandardActivity implements View.OnClickLis
             if (!targetFile.exists()) {
                 allowSave = targetFile.mkdirs();
                 if (!allowSave) {
-                    Logger.printLog(TAG, "create AmiNote dir fail");
+                    Log.d(TAG, "create AmiNote dir fail");
                 }
             } else {
                 allowSave = true;
@@ -292,21 +295,21 @@ public class PreviewActivity extends StandardActivity implements View.OnClickLis
                 String finallyPath = NoteUtils.getSaveImageFile(targetFile).getPath() + ".png";
                 boolean success = FileUtils.copyFile(mImgPath, finallyPath);
                 if (success) {
-		            //Gionee wanghaiyan 20170307 add for 77568 begin
-		        	if (NoteUtils.gnKRFlag) {
-			      		Log.d("kptc", "com.cydroid.note.photoview.PreviewActivity->saveImage(): saveSelfSignFile()");
-                      	int retCode = pwinSign.saveSelfSignFile(finallyPath);
-                      	Log.d("kptc", "retCode=" + retCode);
-						//Chenyee 2018-5-10 modify for CSW1703KR-68 begin
-						pwinSign.sendBroadcastToRedService(NoteAppImpl.getContext(), finallyPath);
-						//Chenyee 2018-5-10 modify for CSW1703KR-68 end
-	        		}
-		            //Gionee wanghaiyan 20170307 add for 77568 end
+                    //Gionee wanghaiyan 20170307 add for 77568 begin
+                    if (NoteUtils.gnKRFlag) {
+                        Log.d("kptc", "com.cydroid.note.photoview.PreviewActivity->saveImage(): saveSelfSignFile()");
+                        int retCode = pwinSign.saveSelfSignFile(finallyPath);
+                        Log.d("kptc", "retCode=" + retCode);
+                        //Chenyee 2018-5-10 modify for CSW1703KR-68 begin
+                        pwinSign.sendBroadcastToRedService(NoteAppImpl.getContext(), finallyPath);
+                        //Chenyee 2018-5-10 modify for CSW1703KR-68 end
+                    }
+                    //Gionee wanghaiyan 20170307 add for 77568 end
                     notifyMediaScanFile(new File(finallyPath));
                     showCopyState(finallyPath);
-		            //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) begin
+                    //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) begin
                     //更新数据库
-                    NoteUtils.updateNoteData(getContentResolver(),mNoteId,finallyPath);                   
+                    NoteUtils.updateNoteData(getContentResolver(),mNoteId,finallyPath);
                     Log.i(TAG, "finallyPath "+finallyPath);
                     //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) end
                     return;
@@ -324,37 +327,37 @@ public class PreviewActivity extends StandardActivity implements View.OnClickLis
     }
 
     private void showCopyState(String fPath) {
-	 fPath = NoteUtils.customName(this, fPath);
-	 //GIONEE wanghaiyan 2016-12-6 modify for 39890 begin
+        fPath = NoteUtils.customName(this, fPath);
+        //GIONEE wanghaiyan 2016-12-6 modify for 39890 begin
         fPath = customName(fPath);
-	 //GIONEE wanghaiyan 2016-12-6 modify for 39890 end
+        //GIONEE wanghaiyan 2016-12-6 modify for 39890 end
         String msg = getResources().getString(R.string.file_save_toast_text) + fPath;
         new ToastManager(this).showToast(msg);
     }
     //GIONEE wanghaiyan 2016-12-6 modify for 39890 begin
     private String customName(String fPath){
-    	if(!fPath.toLowerCase().contains("internal shared storage")){
-		return fPath;
-    	}
-	String[] fPathRegs=fPath.split("/");
-	fPathRegs[0]=getResources().getString(R.string.note_storage_inner);
-	StringBuilder strBuilder=new StringBuilder();
-	for(int i=0;i<fPathRegs.length;i++){
-	    strBuilder.append(fPathRegs[i]+"/");
-	}
-	 fPath=strBuilder.substring(0,strBuilder.length()-1);
+        if(!fPath.toLowerCase().contains("internal shared storage")){
+            return fPath;
+        }
+        String[] fPathRegs=fPath.split("/");
+        fPathRegs[0]=getResources().getString(R.string.note_storage_inner);
+        StringBuilder strBuilder=new StringBuilder();
+        for(int i=0;i<fPathRegs.length;i++){
+            strBuilder.append(fPathRegs[i]+"/");
+        }
+        fPath=strBuilder.substring(0,strBuilder.length()-1);
         return fPath;
     }
-   //GIONEE wanghaiyan 2016-12-6 modify for 39890 end
+    //GIONEE wanghaiyan 2016-12-6 modify for 39890 end
 
     private void initContentView() {
-        //Gionee bianrong 201606025 modify for CR01723129 begin 
-		if (NoteUtils.gnKRFlag){
-			setNoteTitleView(R.layout.shared_image_preview_title_kr);
-		}else{
-        setNoteTitleView(R.layout.shared_image_preview_title);
-		}
-		//Gionee bianrong 201606025 modify for CR01723129 end
+        //Gionee bianrong 201606025 modify for CR01723129 begin
+        if (NoteUtils.gnKRFlag){
+            setNoteTitleView(R.layout.shared_image_preview_title_kr);
+        }else{
+            setNoteTitleView(R.layout.shared_image_preview_title);
+        }
+        //Gionee bianrong 201606025 modify for CR01723129 end
         setTitleIconColor();
         setNoteContentView(R.layout.preview_layout);
         setNoteRootViewBackgroundColor();

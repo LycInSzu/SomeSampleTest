@@ -1,4 +1,4 @@
-package com.gionee.framework.log;
+package com.cydroid.framework.log;
 
 public final class LogIOException extends RuntimeException {
 

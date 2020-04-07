@@ -12,7 +12,7 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import com.cydroid.note.common.Log;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.R;
 import com.cydroid.note.common.NoteUtils;
 import com.cydroid.note.common.PlatformUtil;
@@ -206,7 +206,7 @@ public class DrawableManager {
             size[1] = originalH;
             return size;
         } catch (Throwable e) {
-            Logger.printLog(TAG, "decodeRawBitmap rawFileName fail" + e);
+            Log.d(TAG, "decodeRawBitmap rawFileName fail" + e);
         } finally {
             NoteUtils.closeSilently(is);
         }
@@ -233,7 +233,7 @@ public class DrawableManager {
             }
             return bitmap;
         } catch (Throwable e) {
-            Logger.printLog(TAG, "decodeRawBitmap rawFileName fail" + e);
+            Log.d(TAG, "decodeRawBitmap rawFileName fail" + e);
         } finally {
             NoteUtils.closeSilently(is);
         }

@@ -1,6 +1,6 @@
 package com.cydroid.note.app;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.data.NoteItem;
 import com.cydroid.note.data.NoteSet;
 import com.cydroid.note.data.Path;
@@ -104,7 +104,7 @@ public class NoteSelectionManager {
     public int getSelectedCount() {
         int count = mClickedSet.size();
         if (DEBUG) {
-            Logger.printLog(TAG, "count = " + count + ",mInverseSelection = "
+            Log.d(TAG, "count = " + count + ",mInverseSelection = "
                     + mInverseSelection + ",getTotalCount() = " + getTotalCount());
         }
         if (mInverseSelection) {

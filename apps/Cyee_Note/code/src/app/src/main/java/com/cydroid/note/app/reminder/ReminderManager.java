@@ -3,6 +3,7 @@ package com.cydroid.note.app.reminder;
 import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.NotificationManager;
+import android.app.NotificationChannel;
 import android.app.PendingIntent;
 import android.content.ContentResolver;
 import android.content.ContentValues;
@@ -20,6 +21,7 @@ import com.cydroid.note.app.NewNoteActivity;
 import com.cydroid.note.app.NoteAppImpl;
 import com.cydroid.note.common.Constants;
 import com.cydroid.note.common.NoteUtils;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.common.ThreadPool;
 import com.cydroid.note.data.LocalNoteItem;
 import com.cydroid.note.data.NoteItem;
@@ -34,6 +36,7 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 
 public class ReminderManager {
+	private static final String TAG = "ReminderManager";
     private static final String[] ALARM_PROJECT = new String[]{
             NoteContract.NoteContent._ID,
             NoteContract.NoteContent.COLUMN_REMINDER};
@@ -51,6 +54,10 @@ public class ReminderManager {
     private static final int INDEX_REMINDER = 1;
     public static final String IS_SECRET_TAG = "is_secret";
     public static final int SECRET_ID_OFFSET = 1000000;
+	//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 begin
+	private static final String channelId = "channel_1";
+    private static final String channelName = "channel_name_1";
+	//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 end
 
     public static void scheduleReminder(final Context context) {
         Handler handler = new Handler(NoteAppImpl.getContext().getNoteBackgroundLooper());
@@ -93,7 +100,11 @@ public class ReminderManager {
     }
 
     public static void setWidgetBackgroundReminder(Context context) {
-        Intent intent = new Intent(ReminderReceiver.ACTION_WIDGET_REMINDER);
+		//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 begin
+        //Intent intent = new Intent(ReminderReceiver.ACTION_WIDGET_REMINDER);
+		Intent intent =new Intent(context, ReminderReceiver.class);
+		intent.setAction(ReminderReceiver.ACTION_WIDGET_REMINDER);
+		//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 end
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, WIDGET_BG_REQUEST_CODE, intent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager alarmManager = ((AlarmManager) context.getSystemService(Context.ALARM_SERVICE));
@@ -139,7 +150,11 @@ public class ReminderManager {
     }
 
     public static void setTrashCleanReminder(Context context, long id, long cleanTime) {
-        Intent intent = new Intent(ReminderReceiver.ACTION_TRASH_CLEAN_REMINDER);
+		//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 begin
+        //Intent intent = new Intent(ReminderReceiver.ACTION_TRASH_CLEAN_REMINDER);
+		Intent intent = new Intent(context,ReminderReceiver.class);
+        intent.setAction(ReminderReceiver.ACTION_TRASH_CLEAN_REMINDER);
+		//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 end
         intent.putExtra(NoteContract.TrashContent._ID, id);
         int notifyId = (int) id;
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, notifyId, intent, PendingIntent.FLAG_UPDATE_CURRENT);
@@ -154,7 +169,11 @@ public class ReminderManager {
     }
 
     public static void cancelTrashCleanReminder(Context context, long id) {
-        Intent intent = new Intent(ReminderReceiver.ACTION_TRASH_CLEAN_REMINDER);
+		//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 begin
+        //Intent intent = new Intent(ReminderReceiver.ACTION_TRASH_CLEAN_REMINDER);
+		Intent intent = new Intent(context,ReminderReceiver.class);
+        intent.setAction(ReminderReceiver.ACTION_TRASH_CLEAN_REMINDER);
+		//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 end
         intent.putExtra(NoteContract.TrashContent._ID, id);
         int notifyId = (int) id;
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, notifyId, intent, PendingIntent.FLAG_UPDATE_CURRENT);
@@ -167,7 +186,11 @@ public class ReminderManager {
         if (reminder < current) {
             return;
         }*/
-        Intent intent = new Intent(ReminderReceiver.ACTION_POP_REMINDER);
+  		//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 begin
+        //Intent intent = new Intent(ReminderReceiver.ACTION_POP_REMINDER);
+        Intent intent = new Intent(context, ReminderReceiver.class);
+        intent.setAction(ReminderReceiver.ACTION_POP_REMINDER);
+		//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 end
         intent.putExtra(NoteContract.NoteContent._ID, id);
         intent.putExtra(IS_SECRET_TAG, isSecret);
         int notifyId = INDEX_ID;
@@ -188,7 +211,11 @@ public class ReminderManager {
     }
 
     public static void cancelAlarmAndNotification(Context context, long id, boolean isSecret) {
-        Intent intent = new Intent(ReminderReceiver.ACTION_POP_REMINDER);
+        //Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 begin
+        //Intent intent = new Intent(ReminderReceiver.ACTION_POP_REMINDER);
+        Intent intent = new Intent(context, ReminderReceiver.class);
+        intent.setAction(ReminderReceiver.ACTION_POP_REMINDER);
+		//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 end
         intent.putExtra(NoteContract.NoteContent._ID, id);
         int notifyId = INDEX_ID;
         if (isSecret) {
@@ -240,6 +267,11 @@ public class ReminderManager {
                 notification.defaults |= Notification.DEFAULT_VIBRATE;
                 notification.defaults |= Notification.DEFAULT_LIGHTS;
                 NotificationManager nm = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+				//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 begin
+				NotificationChannel channel = new NotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_HIGH);
+				channel.enableVibration(true);
+                nm.createNotificationChannel(channel);
+				//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 end
                 nm.notify(notifyId, notification);
                 return null;
             }
@@ -258,7 +290,11 @@ public class ReminderManager {
             title = context.getString(R.string.app_name);
         }
         String content = getReminderContent(item.getContent());
-        Intent innerIntent = new Intent(ReminderReceiver.ACTION_GO_NOTE_DETAIL);
+		//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 begin
+        //Intent innerIntent = new Intent(ReminderReceiver.ACTION_GO_NOTE_DETAIL);
+		Intent innerIntent = new Intent(context, ReminderReceiver.class);
+		innerIntent.setAction(ReminderReceiver.ACTION_GO_NOTE_DETAIL);
+		//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 end
         innerIntent.putExtra(NewNoteActivity.NOTE_ITEM_PATH, path.toString());
         PendingIntent wrapIntent = PendingIntent.getBroadcast(context, (int) id, innerIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
@@ -274,6 +310,9 @@ public class ReminderManager {
 	    //GIONEE wanghaiyan 2016-12-21 modify for 48095 end
         builder.setPriority(Notification.PRIORITY_HIGH);
         builder.setWhen(System.currentTimeMillis());
+		//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 begin
+		builder.setChannelId(channelId);
+		//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 end
         return builder.build();
     }
 
@@ -327,7 +366,11 @@ public class ReminderManager {
 //        if (!isValidReminder(item.getDateTimeReminder())) {
 //            return null;
 //        }
-        Intent innerIntent = new Intent(ReminderReceiver.ACTION_SECURITY_OS);
+		//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 begin
+        //Intent innerIntent = new Intent(ReminderReceiver.ACTION_SECURITY_OS);
+        Intent innerIntent = new Intent(context, ReminderReceiver.class);
+		innerIntent.setAction(ReminderReceiver.ACTION_SECURITY_OS);
+		//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 end
         innerIntent.putExtra(NoteContract.NoteContent._ID, (int) id);
         PendingIntent wrapIntent = PendingIntent.getBroadcast(context, (int) id + SECRET_ID_OFFSET, innerIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
@@ -341,6 +384,9 @@ public class ReminderManager {
 	    //GIONEE wanghaiyan 2016-12-21 modify for 48095 end
         builder.setPriority(Notification.PRIORITY_HIGH);
         builder.setWhen(System.currentTimeMillis());
+		//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 begin
+		builder.setChannelId(channelId);
+		//Chenyee wanghaiyan 2018-6-8 modify for CSW1707A-1293 end
         return builder.build();
     }
 

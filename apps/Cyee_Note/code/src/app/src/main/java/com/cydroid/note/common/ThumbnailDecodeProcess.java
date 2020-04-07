@@ -9,7 +9,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.net.Uri;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.R;
 import com.cydroid.note.encrypt.EncryptUtil;
 import com.cydroid.note.encrypt.FileConfuseSession;
@@ -61,9 +61,9 @@ public class ThumbnailDecodeProcess {
             }
             return decodeScaleThumbnail(is, size[0], size[1], mWidth, mHeight);
         } catch (FileNotFoundException e) {
-            Logger.printLog(TAG, "decodeProcess FileNotFoundException:" + e);
+            Log.d(TAG, "decodeProcess FileNotFoundException:" + e);
         } catch (Throwable e) {
-            Logger.printLog(TAG, "decodeProcess rawFileName fail" + e);
+            Log.d(TAG, "decodeProcess rawFileName fail" + e);
         } finally {
             NoteUtils.closeSilently(is);
         }

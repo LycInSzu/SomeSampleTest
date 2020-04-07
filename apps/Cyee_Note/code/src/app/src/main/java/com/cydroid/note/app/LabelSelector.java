@@ -19,7 +19,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import cyee.app.CyeeAlertDialog;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.R;
 import com.cydroid.note.common.Constants;
 import com.cydroid.note.encrypt.EncryptDetailActivity;
@@ -199,7 +199,7 @@ public class LabelSelector implements View.OnClickListener {
             }
             mActivity.startActivityForResult(intent, NewNoteActivity.REQUEST_CUSTOM_LABEL);
         } catch (Exception e) {
-            Logger.printLog(TAG, "enterCustomLabel fail : " + e.toString());
+            Log.d(TAG, "enterCustomLabel fail : " + e.toString());
         }
     }
 

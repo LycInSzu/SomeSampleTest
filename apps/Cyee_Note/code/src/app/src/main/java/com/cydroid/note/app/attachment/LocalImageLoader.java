@@ -12,7 +12,7 @@ import android.text.TextUtils;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.app.ImageCache;
 import com.cydroid.note.app.NoteAppImpl;
 import com.cydroid.note.app.SlidingWindow;
@@ -158,7 +158,7 @@ public class LocalImageLoader {
             if (bitmap != null) {
                 ImageCache.getInstance().addBitmapToCache(picUri, bitmap);
             }else {
-                Logger.printLog(TAG, "cache bitmap null");
+                Log.d(TAG, "cache bitmap null");
             }
             return bitmap;
         }

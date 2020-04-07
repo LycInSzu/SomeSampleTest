@@ -4,7 +4,7 @@ import android.content.ContentResolver;
 import android.database.Cursor;
 import android.net.Uri;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.app.NoteAppImpl;
 import com.cydroid.note.common.NoteUtils;
 import com.cydroid.note.provider.NoteContract;
@@ -73,7 +73,7 @@ public class LocalNoteSet extends NoteSet {
         ArrayList<NoteItem> list = new ArrayList<>();
         Cursor cursor = mResolver.query(uri, NOTE_PROJECTION, null, null, mOrderClause);
         if (cursor == null) {
-            Logger.printLog(TAG, "query fail: " + uri);
+            Log.d(TAG, "query fail: " + uri);
             return list;
         }
 
@@ -102,13 +102,13 @@ public class LocalNoteSet extends NoteSet {
         if (mCachedCount == INVALID_COUNT) {
             Cursor cursor = mResolver.query(mBaseUri, COUNT_PROJECTION, null, null, null);
             if (cursor == null) {
-                Logger.printLog(TAG, "query fail");
+                Log.d(TAG, "query fail");
                 return 0;
             }
             try {
                 mCachedCount = cursor.getCount();
             } catch (Exception e) {
-                Logger.printLog(TAG, "LocalNoteSet getNoteItemCount E = " + e);
+                Log.d(TAG, "LocalNoteSet getNoteItemCount E = " + e);
             } finally {
                 NoteUtils.closeSilently(cursor);
             }

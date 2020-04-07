@@ -6,7 +6,7 @@ import android.os.StatFs;
 import android.os.storage.StorageManager;
 import android.text.TextUtils;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 
 import java.io.File;
 import java.lang.reflect.Method;
@@ -29,7 +29,7 @@ public class StorageUtils {
             }
             return storagePaths;
         } catch (Exception ex) {
-            Logger.printLog(TAG, "error:" + ex);
+            Log.d(TAG, "error:" + ex);
         }
 
         return null;
@@ -90,7 +90,7 @@ public class StorageUtils {
             }
             return availableBlocks * blockSize;
         } catch (Exception e) {
-            Logger.printLog(TAG, "Fail to access external storage:" + e);
+            Log.d(TAG, "Fail to access external storage:" + e);
         }
         return NO_SPACE_ERROR;
     }

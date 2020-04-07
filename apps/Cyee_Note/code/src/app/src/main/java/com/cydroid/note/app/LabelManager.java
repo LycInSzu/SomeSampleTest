@@ -9,7 +9,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.text.TextUtils;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.R;
 import com.cydroid.note.common.NoteUtils;
 import com.cydroid.note.common.ThreadPool;
@@ -103,14 +103,14 @@ public class LabelManager {
         try {
             mResolver.applyBatch(LabelContract.AUTHORITY, insertOps);
         } catch (Exception e) {
-            Logger.printLog(TAG, "initDefaultLabel fail : " + e.toString());
+            Log.d(TAG, "initDefaultLabel fail : " + e.toString());
         }
     }
 
     private void initCache() {
         Cursor cursor = mResolver.query(mLabelUri, LABEL_PROJECTION, null, null, mOrderBy);
         if (cursor == null) {
-            Logger.printLog(TAG, "query label fail");
+            Log.d(TAG, "query label fail");
             return;
         }
         ArrayList<LabelHolder> labels = new ArrayList<>();

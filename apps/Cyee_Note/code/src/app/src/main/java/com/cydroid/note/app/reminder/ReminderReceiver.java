@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.text.TextUtils;
 import com.cydroid.note.common.Log;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.app.NewNoteActivity;
 import com.cydroid.note.data.NoteItem;
 import com.cydroid.note.encrypt.EncryptUtil;
@@ -30,7 +30,7 @@ public class ReminderReceiver extends BroadcastReceiver {
         String action = intent.getAction();
 
         if (TextUtils.equals(Intent.ACTION_BOOT_COMPLETED, action)) {
-            Logger.printLog(TAG, "ACTION_BOOT_COMPLETED");
+            Log.d(TAG, "ACTION_BOOT_COMPLETED");
             ReminderManager.scheduleReminder(context);
             ReminderManager.scheduleSecretItemReminder(context);
             ReminderManager.setWidgetBackgroundReminder(context);
@@ -73,7 +73,7 @@ public class ReminderReceiver extends BroadcastReceiver {
                 jumpIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(jumpIntent);
             } catch (ActivityNotFoundException e) {
-                Logger.printLog(TAG, "e = " + e);
+                Log.d(TAG, "e = " + e);
             }
             return;
         }

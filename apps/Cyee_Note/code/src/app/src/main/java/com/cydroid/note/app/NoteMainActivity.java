@@ -35,7 +35,7 @@ import com.cydroid.note.common.Log;
 //GIONEE wanghaiyan 2016 -12-13 modify for 45337 begin
 import com.cydroid.note.common.FileUtils;
 //GIONEE wanghaiyan 2016 -12-13 modify for 45337 end
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.R;
 import com.cydroid.note.app.dataupgrade.DataUpgrade;
 import com.cydroid.note.app.inputbackup.ImportBackupManager;

@@ -44,6 +44,9 @@ import java.util.TimerTask;
 //Gionee wanghaiyan 20170307 add for 77568 begin
 import com.Legal.Java.*;;
 //Gionee wanghaiyan 20170307 add for 77568 end
+//Chenyee wanghaiyan 2018-10-17 modify for CSW1805A-240 begin
+import com.cydroid.note.common.ExternalStorageFileManager;
+//Chenyee wanghaiyan 2018-10-17 modify for CSW1805A-240 end
 
 public class SoundRecorder {
     private static final SimpleDateFormat DATE_FORMATTER = new SimpleDateFormat("yyyyMMddHHmmss");
@@ -65,10 +68,10 @@ public class SoundRecorder {
     private String mSavePath;
     //GIONEE wanghaiyan 2017-2-10 modify for 66156 begin
     public static final int KR_RECORD_TIME_MAX_SECOND = 5*60;//5min
-	//Gionee wanghaiyan 2017-3-28 modify for begin 40950
-	private AudioManager mAudioManager;
+    //Gionee wanghaiyan 2017-3-28 modify for begin 40950
+    private AudioManager mAudioManager;
     private AudioManager.OnAudioFocusChangeListener mAudioFocusChangeListener;
-	//Gionee wanghaiyan 2017-3-28 modify for end 40950
+    //Gionee wanghaiyan 2017-3-28 modify for end 40950
     //GIONEE wanghaiyan 2017-2-10 modify for 66156 end
 
     public interface TakeSoundRecorderListener {
@@ -83,12 +86,12 @@ public class SoundRecorder {
     }
 
     public void launchRecording(Activity activity, boolean isEncrypt) {
-	    //GIONEE :wanghaiyan 2015-11-5 modfiy begin for 40950
+        //GIONEE :wanghaiyan 2015-11-5 modfiy begin for 40950
         if (!hasRequestedAudioFocus()) {
             Toast.makeText(mContext, R.string.attachment_record_focus_fail, Toast.LENGTH_SHORT).show();
             return;
         }
-		//GIONEE :wanghaiyan 2015-11-5 modfiy end for 40950
+        //GIONEE :wanghaiyan 2015-11-5 modfiy end for 40950
         initDialog(activity);
         showDialog();
         startRecorder(isEncrypt);
@@ -97,7 +100,7 @@ public class SoundRecorder {
             mListener.onRecorderStart();
         }
     }
-	//GIONEE :wanghaiyan 2015-11-5 modfiy begin for 40950
+    //GIONEE :wanghaiyan 2015-11-5 modfiy begin for 40950
     public boolean hasRequestedAudioFocus() {
         if (mAudioManager == null) {
             mAudioManager = (AudioManager) NoteAppImpl.getContext().getSystemService(Context.AUDIO_SERVICE);
@@ -112,7 +115,7 @@ public class SoundRecorder {
         int result = mAudioManager.requestAudioFocus(mAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
         return result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED;
     }
-	//GIONEE :wanghaiyan 2015-11-5 modfiy end for 40950
+    //GIONEE :wanghaiyan 2015-11-5 modfiy end for 40950
 
     private void initDialog(Activity activity) {
         if (mDialog == null) {
@@ -151,14 +154,14 @@ public class SoundRecorder {
                         mDurationInSec = elapse;
                         String time = NoteUtils.formatTime(elapse, " : ");
                         mTime.setText(time);
-						//GIONEE wanghaiyan 2017-2-10 modify for 66156 begin
-						if(NoteUtils.gnKRFlag){
-						if (elapse == KR_RECORD_TIME_MAX_SECOND){
-							completeRecorder();
-							Toast.makeText(mContext,mContext.getResources().getString(R.string.message_media_record_time_max),               Toast.LENGTH_LONG).show();
-						}	
-						}
-						//GIONEE wanghaiyan 2017-2-10 modify for 66156 end
+                        //GIONEE wanghaiyan 2017-2-10 modify for 66156 begin
+                        if(NoteUtils.gnKRFlag){
+                            if (elapse == KR_RECORD_TIME_MAX_SECOND){
+                                completeRecorder();
+                                Toast.makeText(mContext,mContext.getResources().getString(R.string.message_media_record_time_max),               Toast.LENGTH_LONG).show();
+                            }
+                        }
+                        //GIONEE wanghaiyan 2017-2-10 modify for 66156 end
                         break;
                     }
                     case MESSAGE_ERROR_TOAST:
@@ -175,49 +178,65 @@ public class SoundRecorder {
     private void startRecorder(boolean isEncrypt) {
         mIsEncrypt = isEncrypt;
         String soundName = getSoundName();
-		//GIONEE wanghaiyan 2016-12-01 modify for 37025 begin
-		//if(!Constants.NOTE_MEDIA_SOUND_PATH.exists()) {
-		File noteMediaDir = new File(""); 
-		noteMediaDir=FileUtils.CheckNoteMediaDir(mContext);
-	   
-		if (!noteMediaDir.exists()) {
-		//boolean success = Constants.NOTE_MEDIA_SOUND_PATH.mkdirs();
-			boolean success = noteMediaDir.mkdirs();
-			if (!success) {
-			    return;
-			}
-		}
-		// String path = Constants.NOTE_MEDIA_SOUND_PATH + "/" + soundName;
-		String path =noteMediaDir + "/" + soundName;
-	    //GIONEE wanghaiyan 2016-12-01 modify for 37025 end
+        //GIONEE wanghaiyan 2016-12-01 modify for 37025 begin
+        //if(!Constants.NOTE_MEDIA_SOUND_PATH.exists()) {
+        File noteMediaDir = new File("");
+        noteMediaDir=FileUtils.CheckNoteMediaDir(mContext);
+
+        if (!noteMediaDir.exists()) {
+            //boolean success = Constants.NOTE_MEDIA_SOUND_PATH.mkdirs();
+            //Chenyee wanghaiyan 2018-10-17 modify for CSW1805A-240 begin
+            boolean success = false;
+            if(ExternalStorageFileManager.isInExternalStorage(noteMediaDir)){
+                success = ExternalStorageFileManager.mkdirs(noteMediaDir);
+            } else{
+                success = noteMediaDir.mkdirs();
+            }
+            Log.d("SoundRecorder","success" + success);
+            //Chenyee wanghaiyan 2018-10-17 modify for CSW1805A-240 begin
+            if (!success) {
+                return;
+            }
+        }
+        // String path = Constants.NOTE_MEDIA_SOUND_PATH + "/" + soundName;
+        String path =noteMediaDir + "/" + soundName;
+        //GIONEE wanghaiyan 2016-12-01 modify for 37025 end
         //Gionee wanghaiyan 20170307 add for 77568 begin
-	    if(NoteUtils.gnKRFlag){		
-			//Chenyee 2018-5-10 modify for CSW1703KR-68 begin
-			// path = noteMediaDir + "/" + soundName + ".mp3";
-			path = noteMediaDir + "/" + soundName + ".3gpp";
-			//Chenyee 2018-5-10 modify for CSW1703KR-68 end
-	    }	
-	    //Gionee wanghaiyan 20170307 add for 77568 end
+        if(NoteUtils.gnKRFlag){
+            //Chenyee 2018-5-10 modify for CSW1703KR-68 begin
+            // path = noteMediaDir + "/" + soundName + ".mp3";
+            path = noteMediaDir + "/" + soundName + ".3gpp";
+            //Chenyee 2018-5-10 modify for CSW1703KR-68 end
+        }
+        //Gionee wanghaiyan 20170307 add for 77568 end
         mSavePath = path;
         if (!PlatformUtil.isSecurityOS() && isEncrypt) {
             path = Constants.SOUND_ENCRYPT_PATH + File.separator + soundName;
         }
         mSoundPath = path;
+        //Chenyee wanghaiyan 2018-10-17 modify for CSW1805A-240 begin
+        File file = new File(path);
+        //Chenyee wanghaiyan 2018-10-17 modify for CSW1805A-240 end
         try {//NOSONAR
             mSoundRecorder = new MediaRecorder();
             mSoundRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);//NOSONAR
-			
-			//Chenyee 2018-5-10 modify for CSW1703KR-68 begin
-			if(NoteUtils.gnKRFlag){
-				mSoundRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-	            mSoundRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
-			} else {
-	            mSoundRecorder.setOutputFormat(MediaRecorder.OutputFormat.AMR_NB);//NOSONAR
-	            mSoundRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);//NOSONAR
-			}
-			//Chenyee 2018-5-10 modify for CSW1703KR-68 end
-			
+
+            //Chenyee 2018-5-10 modify for CSW1703KR-68 begin
+            if(NoteUtils.gnKRFlag){
+                mSoundRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+                mSoundRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
+            } else {
+                mSoundRecorder.setOutputFormat(MediaRecorder.OutputFormat.AMR_NB);//NOSONAR
+                mSoundRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);//NOSONAR
+            }
+            //Chenyee 2018-5-10 modify for CSW1703KR-68 end
+
             mSoundRecorder.setOutputFile(path);//NOSONAR
+            //Chenyee wanghaiyan 2018-10-17 modify for CSW1805A-240 begin
+            if(ExternalStorageFileManager.isInExternalStorage(noteMediaDir)) {
+                mSoundRecorder.setOutputFile(ExternalStorageFileManager.getFileDescriptor(file));
+            }
+            //Chenyee wanghaiyan 2018-10-17 modify for CSW1805A-240 end
             mSoundRecorder.setOnErrorListener(new MediaRecorder.OnErrorListener() {//NOSONAR
                 @Override//NOSONAR
                 public void onError(MediaRecorder mr, int what, int extra) {
@@ -232,9 +251,9 @@ public class SoundRecorder {
             //Chenyee wanghaiyan 2017-9-1 modify for SW17W16A-235 begin
             Toast.makeText(mContext, R.string.attachment_record_focus_fail, Toast.LENGTH_SHORT).show();//NOSONAR
             //Chenyee wanghaiyan 2017-9-1 modify for SW17W16A-235 end
-			//GIONEE :wanghaiyan 2015-11-5 modfiy begin for 40950
+            //GIONEE :wanghaiyan 2015-11-5 modfiy begin for 40950
             releaseRecorder();
-			//GIONEE :wanghaiyan 2015-11-5 modfiy end for 40950
+            //GIONEE :wanghaiyan 2015-11-5 modfiy end for 40950
             dismissDialog();//NOSONAR
             return;//NOSONAR
         }
@@ -308,12 +327,12 @@ public class SoundRecorder {
     private void completeRecorder() {
         stopRecorder();
         cancelTimer();
-		//GIONEE :wanghaiyan 2015-11-5 modfiy begin for 40950
+        //GIONEE :wanghaiyan 2015-11-5 modfiy begin for 40950
         releaseRecorder();
-		//GIONEE :wanghaiyan 2015-11-5 modfiy end for 40950
+        //GIONEE :wanghaiyan 2015-11-5 modfiy end for 40950
         dismissDialog();
     }
-	//GIONEE :wanghaiyan 2015-11-5 modfiy begin for 40950
+    //GIONEE :wanghaiyan 2015-11-5 modfiy begin for 40950
     private void releaseRecorder() {
         if (mAudioManager != null) {
             mAudioManager.abandonAudioFocus(mAudioFocusChangeListener);
@@ -321,7 +340,7 @@ public class SoundRecorder {
             mAudioManager = null;
         }
     }
-	//GIONEE :wanghaiyan 2015-11-5 modfiy end for 40950
+    //GIONEE :wanghaiyan 2015-11-5 modfiy end for 40950
 
     private void checkSoundRecordSuccess() {
         if (TextUtils.isEmpty(mSoundPath)) {
@@ -342,16 +361,16 @@ public class SoundRecorder {
 
     private void notifyListener() {
         if (mListener != null) {
-        //Gionee wanghaiyan 20170307 add for 77568 begin
-	    if(NoteUtils.gnKRFlag){
-    		Log.d("kptc", "com.cydroid.note.app.attachment.SoundRecorder->notifyListener(): saveSelfSignFile()");
-    		int errCode = pwinSign.saveSelfSignFile(mSoundPath);
-    		Log.d("kptc", "errCode=" + errCode);
-			//Chenyee 2018-5-10 modify for CSW1703KR-68 begin
-			pwinSign.sendBroadcastToRedService(mContext, mSoundPath);
-			//Chenyee 2018-5-10 modify for CSW1703KR-68 end
-	    }
-        //Gionee wanghaiyan 20170307 add for 77568 end
+            //Gionee wanghaiyan 20170307 add for 77568 begin
+            if(NoteUtils.gnKRFlag){
+                Log.d("kptc", "com.cydroid.note.app.attachment.SoundRecorder->notifyListener(): saveSelfSignFile()");
+                int errCode = pwinSign.saveSelfSignFile(mSoundPath);
+                Log.d("kptc", "errCode=" + errCode);
+                //Chenyee 2018-5-10 modify for CSW1703KR-68 begin
+                pwinSign.sendBroadcastToRedService(mContext, mSoundPath);
+                //Chenyee 2018-5-10 modify for CSW1703KR-68 end
+            }
+            //Gionee wanghaiyan 20170307 add for 77568 end
             mListener.onRecorderComplete(mSavePath, mDurationInSec);
         }
         mSoundPath = null;

@@ -21,7 +21,7 @@ public class PlatformUtil {
             Enum o = (Enum) type.getDeclaredMethod("getVersionType").invoke(null);
             return "BUSINESS_VER".equalsIgnoreCase(o.name());
         } catch (Exception e) {
-            Log.w(TAG, e);
+            Log.w(TAG, "Exception error", e);
         }
         return false;
     }
@@ -33,9 +33,9 @@ public class PlatformUtil {
             Method getMethod = ReflectionUtils.findMethod(spclass, "get", String.class);
             strEnabled = (String) ReflectionUtils.invokeMethod(getMethod, null, "ro.encryptionspace.enabled");
         } catch (ClassNotFoundException e) {
-            Log.w(TAG, e);
+            Log.w(TAG, "ClassNotFoundException error", e);
         } catch (Exception e) {
-            Log.w(TAG, e);
+            Log.w(TAG, "Exception error", e);
         }
         return "true".equals(strEnabled);
     }

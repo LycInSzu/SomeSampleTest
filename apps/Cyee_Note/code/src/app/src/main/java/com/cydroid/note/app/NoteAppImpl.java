@@ -36,7 +36,9 @@ public class NoteAppImpl extends BaseApplication {
         super.onCreate();
         initContext();
         NoteUtils.initScreenSize(this);
-        new GnChameleonObserver(this);
+        //Chenyee wanghaiyan 2018-10-12 modify for CSW1805A-493 begin
+        //new GnChameleonObserver(this);
+        //Chenyee wanghaiyan 2018-10-12 modify for CSW1805A-493 end
         initThreadPool();
         initLabelManager();
         ImageLoaderConfiguration configuration = new ImageLoaderConfiguration.Builder(this)
@@ -53,7 +55,7 @@ public class NoteAppImpl extends BaseApplication {
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
-        enableLog(BaseApplication.FLAG_OPEN_LOG_TO_FILE);
+        //enableLog(BaseApplication.FLAG_OPEN_LOG_TO_FILE);
     }
 
     private void initFileCryptSDK() {

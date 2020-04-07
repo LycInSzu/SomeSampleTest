@@ -1,4 +1,4 @@
-package com.gionee.framework.log;
+package com.cydroid.framework.log;
 
 import android.os.Bundle;
 import android.os.Message;

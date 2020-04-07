@@ -8,7 +8,7 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.text.TextUtils;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -49,7 +49,7 @@ public class APKUtils {
             byte[] data = baos.toByteArray();
             result = new String(data); //NOSONAR
         } catch (Exception e) {
-            Logger.printStackTrace(TAG, "install error", e);
+            e.printStackTrace();;
         } finally {
             try {
                 baos.close();
@@ -57,7 +57,7 @@ public class APKUtils {
                     inIs.close();
                 }
             } catch (IOException e) {
-                Logger.printStackTrace(TAG, "io error", e);
+                e.printStackTrace();;
             }
             if (process != null) {
                 process.destroy();

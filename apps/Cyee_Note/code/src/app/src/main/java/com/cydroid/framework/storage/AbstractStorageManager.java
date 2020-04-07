@@ -9,7 +9,7 @@ import android.os.Environment;
 import android.os.StatFs;
 
 import com.gionee.framework.component.ApplicationContextHolder;
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 
 import java.io.File;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -36,10 +36,10 @@ abstract class AbstractStorageManager implements Storage, ApplicationContextHold
         public void onReceive(Context ctx, Intent intent) {
             String action = intent.getAction();
             if (DEBUG) {
-                Logger.printLog(TAG, "action = " + action);
+                Log.d(TAG, "action = " + action);
                 Uri uri = intent.getData();
                 String path = uri.getPath();
-                Logger.printLog(TAG, "path = " + path);
+                Log.d(TAG, "path = " + path);
             }
 
             onSdcardStatusChange();
@@ -91,7 +91,7 @@ abstract class AbstractStorageManager implements Storage, ApplicationContextHold
         final StatFs stat = new StatFs(path.getPath());
         final long blockSize = stat.getBlockSize();
         if (DEBUG) {
-            Logger.printLog(TAG, "Internal storage directory is " + path + ",isTotal is " + isTotal);
+            Log.d(TAG, "Internal storage directory is " + path + ",isTotal is " + isTotal);
         }
 
         long blocks;
@@ -103,7 +103,7 @@ abstract class AbstractStorageManager implements Storage, ApplicationContextHold
         final long totalSize = blockSize * blocks;
 
         if (DEBUG) {
-            Logger.printLog(TAG, "blockSize is " + blockSize + ",blocks is " + blocks + ",totalSize is  " + totalSize);
+            Log.d(TAG, "blockSize is " + blockSize + ",blocks is " + blocks + ",totalSize is  " + totalSize);
         }
         return totalSize;
     }
@@ -118,7 +118,7 @@ abstract class AbstractStorageManager implements Storage, ApplicationContextHold
         long availableSize = getInternalMemorySizeHelper(false);
 
         if (DEBUG) {
-            Logger.printLog(TAG, "Internal total available size is  " + (int) availableSize + " KB");
+            Log.d(TAG, "Internal total available size is  " + (int) availableSize + " KB");
         }
 
         return availableSize;
@@ -129,7 +129,7 @@ abstract class AbstractStorageManager implements Storage, ApplicationContextHold
         long totalSize = getInternalMemorySizeHelper(true);
 
         if (DEBUG) {
-            Logger.printLog(TAG, "Internal total size is  " + (int) totalSize + " KB");
+            Log.d(TAG, "Internal total size is  " + (int) totalSize + " KB");
         }
 
         return totalSize;

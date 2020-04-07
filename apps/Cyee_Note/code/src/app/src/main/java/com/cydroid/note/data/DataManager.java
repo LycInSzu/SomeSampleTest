@@ -5,7 +5,7 @@ import android.net.Uri;
 import android.os.Handler;
 import com.cydroid.note.common.Log;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.app.NoteAppImpl;
 import com.cydroid.note.trash.data.TrashSource;
 
@@ -62,7 +62,7 @@ public class DataManager {
 
             NoteSource source = mSourceMap.get(path.getPrefix());
             if (source == null) {
-                Logger.printLog(TAG, "cannot find note source for path: " + path);
+                Log.d(TAG, "cannot find note source for path: " + path);
                 return null;
             }
 
@@ -73,7 +73,7 @@ public class DataManager {
                 }
                 return object;
             } catch (Throwable t) {
-                Logger.printLog(TAG, "exception in creating note object: " + path + ",,,t,,," + t);
+                Log.d(TAG, "exception in creating note object: " + path + ",,,t,,," + t);
                 return null;
             }
         }

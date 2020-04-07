@@ -164,7 +164,9 @@ public class PicSelectorAdapter extends RecyclerView.Adapter<PicSelectorAdapter.
     }
 
     private void gotoPickPics() {
-        Intent intent = new Intent("com.gionee.gallery.intent.action.GET_CONTENT");
+        //Chenyee wanghaiyan 2018-8-1 modify for CSW1705P-68 begin
+        Intent intent = new Intent("com.cydroid.gallery.intent.action.GET_CONTENT");
+        //Chenyee wanghaiyan 2018-8-1 modify for CSW1705P-68 end
         intent.setType("image/*");
         if (!isInstalledAPK(intent)) {
             Intent newIntent = new Intent(Intent.ACTION_GET_CONTENT);

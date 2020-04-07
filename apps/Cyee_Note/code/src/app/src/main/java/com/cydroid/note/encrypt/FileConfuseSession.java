@@ -128,7 +128,7 @@ public class FileConfuseSession {
             try {
                 outF.close();
             } catch (Exception e) {
-                Log.w(TAG, e);
+                Log.w(TAG, "outF.close() failed", e);
             }
         }
     }

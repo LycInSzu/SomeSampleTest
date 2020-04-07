@@ -15,7 +15,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.R;
 import com.cydroid.note.app.dialog.CyeeConfirmDialog;
 import com.cydroid.note.app.view.NoteLabelAddView;
@@ -83,7 +83,7 @@ public class LabelCustomActivity extends StandardActivity implements StandardAct
             @Override
             public void onDataChange() {
                 if (DEBUG) {
-                    Logger.printLog(TAG, "onDataChange");
+                    Log.d(TAG, "onDataChange");
                 }
                 if (mMainHandler != null) {
                     mMainHandler.sendEmptyMessage(MESSAGE_UPDATE_LABEL);

@@ -5,7 +5,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.Process;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.common.NoteUtils;
 import com.cydroid.note.data.ContentListener;
 import com.cydroid.note.data.NoteItem;
@@ -260,7 +260,7 @@ public class DataLoader {
             if ((items == null) || items.isEmpty()) {
                 if (info.reloadCount > 0) {
                     mFailedVersion = info.version;
-                    Logger.printLog(TAG, "loading failed: " + mFailedVersion);
+                    Log.d(TAG, "loading failed: " + mFailedVersion);
                 }
                 return null;
             }
@@ -322,7 +322,7 @@ public class DataLoader {
                         try {
                             this.wait();
                         } catch (InterruptedException e) {
-                            Logger.printLog(TAG, "unexpected interrupt: " + this);
+                            Log.d(TAG, "unexpected interrupt: " + this);
                         }
                         continue;
                     }

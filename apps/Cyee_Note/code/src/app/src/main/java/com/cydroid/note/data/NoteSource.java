@@ -1,6 +1,6 @@
 package com.cydroid.note.data;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 
 import java.util.ArrayList;
 
@@ -36,7 +36,7 @@ public abstract class NoteSource {
                     try {
                         obj = createMediaObject(pid.path);
                     } catch (Throwable th) {
-                        Logger.printLog(TAG, "cannot create media object: " + pid.path + ",,th,," + th);
+                        Log.d(TAG, "cannot create media object: " + pid.path + ",,th,," + th);
                     }
                 }
             }

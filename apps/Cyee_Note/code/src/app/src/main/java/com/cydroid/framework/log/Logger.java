@@ -1,4 +1,4 @@
-package com.gionee.framework.log;
+package com.cydroid.framework.log;
 
 //import com.gionee.amiweather.framework.ApplicationProperty;
 

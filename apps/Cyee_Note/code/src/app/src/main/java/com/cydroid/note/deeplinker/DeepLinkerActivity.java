@@ -8,7 +8,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.app.NoteAppImpl;
 import java.util.List;
 
@@ -35,9 +35,9 @@ public class DeepLinkerActivity extends Activity {
             try {
                 ApplicationInfo info = packageManager.getApplicationInfo(goAppPackageName, PackageManager.GET_META_DATA);
                 String appName = info.loadLabel(packageManager).toString();
-                Logger.printLog(TAG, "appName = " + appName);
+                Log.d(TAG, "appName = " + appName);
             } catch (PackageManager.NameNotFoundException e) {
-                Logger.printLog(TAG, "get package error" + e);
+                Log.d(TAG, "get package error" + e);
             }
         }
 
@@ -45,26 +45,26 @@ public class DeepLinkerActivity extends Activity {
 
     private static void processIntent(Intent intent, Context context) {
         if (intent == null) {
-            Logger.printLog(TAG, "intent is null");
+            Log.d(TAG, "intent is null");
             return;
         }
 
         final Uri uri = intent.getData();
         if (uri == null) {
-            Logger.printLog(TAG, "uri is null");
+            Log.d(TAG, "uri is null");
             return;
         }
 
         List<String> path = uri.getPathSegments();
 
         if (path == null || path.size() == 0) {
-            Logger.printLog(TAG, "path size is 0");
+            Log.d(TAG, "path size is 0");
             return;
         }
 
         if (path.size() >= 1) {
             final String intentStr = path.get(0);
-            Logger.printLog(TAG, "intentStr " + intentStr);
+            Log.d(TAG, "intentStr " + intentStr);
             launchActivity(intentStr, context);
         }
     }
@@ -73,17 +73,17 @@ public class DeepLinkerActivity extends Activity {
 
         intentStr = DeepLinkerHelper.decodeIntentString(intentStr);
         final String packageName = DeepLinkerHelper.getPackageNameFromIntentString(intentStr);
-        Logger.printLog(TAG, "packageName " + packageName);
-        Logger.printLog(TAG, "restore after: " + intentStr);
+        Log.d(TAG, "packageName " + packageName);
+        Log.d(TAG, "restore after: " + intentStr);
         try {
             Intent intent = Intent.parseUri(intentStr, Intent.URI_INTENT_SCHEME);
-            Logger.printLog(TAG, "intent " + intent);
+            Log.d(TAG, "intent " + intent);
             if (intent != null) {
                 context.startActivity(intent);
             }
             sendStatistic(packageName, context);
         } catch (Exception e) {
-            Logger.printLog(TAG, "launchActivity error " + e);
+            Log.d(TAG, "launchActivity error " + e);
             if (packageName != null) {
                 launchAppEnterActivity(packageName, context);
             }
@@ -94,14 +94,14 @@ public class DeepLinkerActivity extends Activity {
         Intent goIntent = getAppEnterActivityIntent(packageName, context);
         if (goIntent != null) {
             try {
-                Logger.printLog(TAG, "goIntent " + goIntent.toUri(Intent.URI_INTENT_SCHEME));
+                Log.d(TAG, "goIntent " + goIntent.toUri(Intent.URI_INTENT_SCHEME));
                 context.startActivity(goIntent);
                 sendStatistic(packageName, context);
             } catch (Exception e) {
-                Logger.printLog(TAG, "start error " + e);
+                Log.d(TAG, "start error " + e);
             }
         } else {
-            Logger.printLog(TAG, "package name " + packageName + " not installed!");
+            Log.d(TAG, "package name " + packageName + " not installed!");
         }
     }
 
@@ -110,7 +110,7 @@ public class DeepLinkerActivity extends Activity {
             PackageManager pm = context.getPackageManager();
             return pm.getLaunchIntentForPackage(packageName);
         } catch (Exception e) {
-            Logger.printLog(TAG, "error: " + e);
+            Log.d(TAG, "error: " + e);
             return null;
         }
     }

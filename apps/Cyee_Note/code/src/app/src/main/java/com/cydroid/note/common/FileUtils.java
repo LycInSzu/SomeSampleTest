@@ -2,7 +2,7 @@ package com.cydroid.note.common;
 
 import com.cydroid.note.common.Log;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -11,21 +11,20 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.channels.FileChannel;
-//Chenyee wanghaiyan 2016-12-01 modify for 37025 begin
+//GIONEE wanghaiyan 2016-12-01 modify for 37025 begin
 import android.content.Context;
 import android.os.storage.StorageVolume;
 import android.content.Context;
 import android.os.Environment;
 import android.os.storage.StorageManager;
 import java.util.ArrayList;
+import java.util.List;
+
 import com.cydroid.note.common.Log;
 import android.os.StatFs;
-//Chenyee wanghaiyan 2016-12-01 modify for 37025 end
+//GIONEE wanghaiyan 2016-12-01 modify for 37025 end
 import android.os.SystemProperties;
-//Chenyee wanghaiyan 2018-8-31 modify for CSW1802A-1510 begin
 import android.os.storage.VolumeInfo;
-import java.util.List;
-//Chenyee wanghaiyan 2018-8-31 modify for CSW1802A-1510 end
 
 public class FileUtils {
     private static String TAG = "FileUtils";
@@ -36,7 +35,7 @@ public class FileUtils {
     public static final boolean mODMProject = SystemProperties.get("ro.gn.oversea.odm", "no").equals("yes");
     //Gionee wanghaiyan 2017-3-31 modify for 96979 end
     public static boolean copyFile(String srcPath, String toPath) {
-        Logger.printLog(TAG, "begin to copy file");
+        Log.d(TAG, "begin to copy file");
         FileInputStream fIs = null;
         FileOutputStream fOs = null;
         FileChannel fCi = null;
@@ -49,13 +48,13 @@ public class FileUtils {
             fCi.transferTo(0, fCi.size(), fCo);
             return true;
         } catch (FileNotFoundException e) {
-            Logger.printLog(TAG, "image file not found:" + e);
+            Log.d(TAG, "image file not found:" + e);
             return false;
         } catch (IOException e) {
-            Logger.printLog(TAG, "copy image throw IOException:" + e);
+            Log.d(TAG, "copy image throw IOException:" + e);
             return false;
         } catch (Exception e) {
-            Logger.printLog(TAG, "copy image throw other Exception:" + e);
+            Log.d(TAG, "copy image throw other Exception:" + e);
             return false;
         } finally {
             NoteUtils.closeSilently(fIs);
@@ -75,7 +74,7 @@ public class FileUtils {
                     success &= deleteContents(file);
                 }
                 if (!file.delete()) {
-                    Logger.printLog(TAG, "Failed to delete " + file);
+                    Log.d(TAG, "Failed to delete " + file);
                     success = false;
                 }
             }
@@ -173,7 +172,6 @@ public class FileUtils {
     public static String PATH_PHONE = null;
     public static String PATH_SDCARD = null;
     public static int checkSDCardState(Context context ) {
-        Log.i(TAG, "isSDCardInserted(context)" + isSDCardInserted(context));
         if (!isSDCardInserted(context)) {
             // sdcard not exists or unavailable
             Log.i(TAG, "sdcard not exists or unavailable!");
@@ -191,15 +189,14 @@ public class FileUtils {
     public static boolean isSDCardInserted(final Context context) {
         StorageManager storageManager = (StorageManager)context.getSystemService(Context.STORAGE_SERVICE);
         StorageVolume[] storageVolume = storageManager.getVolumeList();
-        //Chenyee wanghaiyan 2018-8-31 modify for CSW1802A-1510 begin
+        //Chenyee wanghaiyan 2018-9-19 modify for CSW1705P-222 begin
         List<VolumeInfo> vols = storageManager.getVolumes();
-        //Chenyee wanghaiyan 2018-8-31 modify for CSW1802A-1510 end
+        //Chenyee wanghaiyan 2018-9-19 modify for CSW1705P-222 end
         for (int i = 0; i < storageVolume.length; i++) {
             if (Environment.MEDIA_MOUNTED.equals(storageManager.getVolumeState(storageVolume[i].getPath()))){
-                //Chenyee wanghaiyan 2018-8-31 modify for CSW1802A-1510 begin
-                //if(isExternalStorage(storageVolume[i])){
+                //Chenyee wanghaiyan 2018-9-19 modify for CSW1705P-222 begin
                 if(isExternalStorage(vols.get(i),storageVolume[i])){
-                    //Chenyee wanghaiyan 2018-8-31 modify for CSW1802A-1510 end
+                    //Chenyee wanghaiyan 2018-9-19 modify for CSW1705P-222 end
                     Log.v(TAG, "SD card is inserted");
                     if (PATH_SDCARD == null){
                         PATH_SDCARD = storageVolume[i].getPath();
@@ -216,10 +213,11 @@ public class FileUtils {
         ArrayList<StorageVolume> storageVolumes = new ArrayList<StorageVolume>();
         StorageManager storageManager = (StorageManager) context
                 .getSystemService(Context.STORAGE_SERVICE);
-        //Chenyee wanghaiyan 2018-8-31 modify for CSW1802A-1510 begin
-        List<VolumeInfo> vols = storageManager.getVolumes();
-        //Chenyee wanghaiyan 2018-8-31 modify for CSW1802A-1510 end
+
         StorageVolume[] volumes = storageManager.getVolumeList();
+        //Chenyee wanghaiyan 2018-9-19 modify for CSW1705P-222 begin
+        List<VolumeInfo> vols = storageManager.getVolumes();
+        //Chenyee wanghaiyan 2018-9-19 modify for CSW1705P-222 end
         for (int i = 0; i < volumes.length; i++) {
             if (!storageManager.getVolumeState(volumes[i].getPath()).equals(
                     "not_present")) {
@@ -228,13 +226,13 @@ public class FileUtils {
         }
         Log.d(TAG, " storageVolumes.size() = " + storageVolumes.size());
         for (int i = 0; i < storageVolumes.size(); i++){
-            if (isInternalStorage(volumes[i])){
+            if (isInternalStorage(storageVolumes.get(i))){
                 PATH_PHONE = storageVolumes.get(i).getPath();
             }
-            //Chenyee wanghaiyan 2018-8-31 modify for CSW1802A-1510 begin
+            //Chenyee wanghaiyan 2018-9-19 modify for CSW1705P-222 begin
             //if (isExternalStorage(storageVolumes.get(i))){
-            if (isExternalStorage(vols.get(i),volumes[i])){
-                //Chenyee wanghaiyan 2018-8-31 modify for CSW1802A-1510 end
+            if (isExternalStorage(vols.get(i),storageVolumes.get(i))){
+                //Chenyee wanghaiyan 2018-9-19 modify for CSW1705P-222 end
                 PATH_SDCARD= storageVolumes.get(i).getPath();
             }
         }
@@ -248,27 +246,7 @@ public class FileUtils {
         return false;
     }
 
-    //Chenyee wanghaiyan 2018-8-31 modify for CSW1802A-1510 begin
-    private static boolean isExternalStorage(StorageVolume volume) {
-        /*
-		if(volume.isRemovable()){
-            Log.d(TAG,"volume.isEmulated()" + volume.isEmulated() + "volume.allowMassStorage()" + volume.allowMassStorage());
-			if(!volume.isEmulated() && !volume.allowMassStorage()){
-				return false;
-			}
-			return true;
-		}
-		return false;
-		*/
-        if(volume.isRemovable()){
-            Log.d(TAG,"volume.isEmulated()" + volume.isEmulated() + "volume.allowMassStorage()" + volume.allowMassStorage());
-            if(!volume.isEmulated() && !volume.allowMassStorage()){
-                return true;
-            }
-        }
-        return false;
-    }
-
+    //Chenyee wanghaiyan 2018-9-19 modify for CSW1705P-222 begin
     private static boolean isExternalStorage(VolumeInfo vol,StorageVolume storageVolume) {
         boolean isExternalStorage = false;
         String diskId = vol.getDiskId();
@@ -288,7 +266,17 @@ public class FileUtils {
         }
         return isExternalStorage;
     }
-    //Chenyee wanghaiyan 2018-8-31 modify for CSW1802A-1510 end
+    //Chenyee wanghaiyan 2018-9-19 modify for CSW1705P-222 end
+
+    private static boolean isExternalStorage(StorageVolume volume) {
+        if(volume.isRemovable()){
+            if(!volume.isEmulated() && !volume.allowMassStorage()){
+                return false;
+            }
+            return true;
+        }
+        return false;
+    }
 
     public static String getSdcardRealPath(Context context) {
         if (PATH_SDCARD == null){

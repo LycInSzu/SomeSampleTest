@@ -453,9 +453,9 @@ public class EncryptUtil {
             Method getInt = ReflectionUtils.findMethod(encryptions, "getInt", ContentResolver.class, String.class);
             exist = (int) ReflectionUtils.invokeMethod(getInt, null, contentResolver, ENCRYPT_DIALCODE_FLAG);
         } catch (ClassNotFoundException e) {
-            Log.w(TAG, e);
+            Log.w(TAG, "ClassNotFoundException error", e);
         } catch (Exception e) {
-            Log.w(TAG, e);
+            Log.w(TAG, "Exception error", e);
         }
         return exist == 1;
     }
@@ -469,9 +469,9 @@ public class EncryptUtil {
             Method getInt = ReflectionUtils.findMethod(encryptions, "getInt", ContentResolver.class, String.class);
             exist = (int) ReflectionUtils.invokeMethod(getInt, null, contentResolver, ENCRYPT_GESTURE_FLAG);
         } catch (ClassNotFoundException e) {
-            Log.w(TAG, e);
+            Log.w(TAG, "ClassNotFoundException error", e);
         } catch (Exception e) {
-            Log.w(TAG, e);
+            Log.w(TAG, "Exception error", e);
         }
         if (exist == 1) {
             Log.d(TAG, "gesture is open");

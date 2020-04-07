@@ -32,8 +32,8 @@
                     android:layout_height="1px"
                     android:background="@color/note_edit_text_line_color" />
             </LinearLayout>
-            
-           <!--gionee wanghaiyan added on 2016-10-11 for CR01766578 begin-->
+
+            <!--gionee wanghaiyan added on 2016-10-11 for CR01766578 begin-->
             <com.cydroid.note.app.view.NoteTitleEditText
                 android:id="@+id/new_note_title"
                 android:layout_width="match_parent"
@@ -50,8 +50,9 @@
                 android:textCursorDrawable="@drawable/edit_cursor_dw"
                 android:textSize="@dimen/edit_note_title_text_size"
                 android:textStyle="bold" />
-             <!--gionee wanghaiyan added on 2016-10-11 for CR01766578 end-->
-             <!--gionee wanghaiyan added on 2016-09-06 for CR01754645 begin-->
+            <!--gionee wanghaiyan added on 2016-10-11 for CR01766578 end-->
+            <!--gionee wanghaiyan added on 2016-09-06 for CR01754645 begin-->
+            <!--Chenyee wanghaiyan 2018-9-30 modify for CSW1805A-241 begin-->
             <com.cydroid.note.app.view.NoteContentEditText
                 android:id="@+id/new_note_content"
                 android:layout_width="match_parent"
@@ -64,12 +65,13 @@
                 android:paddingEnd="@dimen/edit_note_content_padding_right"
                 android:paddingTop="10dp"
                 android:textColor="@color/note_content_color"
-                android:textCursorDrawable="@drawable/cursor_dw"
-                android:textSize="@dimen/edit_note_content_text_size" 
+                android:textCursorDrawable="@drawable/edit_cursor_dw"
+                android:textSize="@dimen/edit_note_content_text_size"
                 android:maxLength="10000"
                 android:inputType="textAutoCorrect|textCapSentences|textMultiLine"/>
         </LinearLayout>
-           <!--gionee wanghaiyan added on 2016-09-06 for CR01754645 end-->
+        <!--Chenyee wanghaiyan 2018-9-30 modify for CSW1805A-241 end-->
+        <!--gionee wanghaiyan added on 2016-09-06 for CR01754645 end-->
 
     </com.cydroid.note.app.view.EditScrollView>
 

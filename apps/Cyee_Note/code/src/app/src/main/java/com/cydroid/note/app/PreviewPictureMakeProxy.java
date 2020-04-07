@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import com.cydroid.note.common.Log;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.R;
 import com.cydroid.note.app.dialog.CyeeIndeterminateProgressDialog;
 import com.cydroid.note.app.effect.DrawableManager;
@@ -63,21 +63,21 @@ public class PreviewPictureMakeProxy {
                 }
                 switch (msg.what) {
                     case MSG_FAIL:
-                        Logger.printLog(TAG, "MSG_FAIL");
+                        Log.d(TAG, "MSG_FAIL");
                         showCursor(mTitleView, mContentView);
                         mDialog.dismiss();
                         Toast.makeText(mActivity, R.string.create_picture_fail,
                                 Toast.LENGTH_SHORT).show();
                         break;
                     case MSG_CREATE_BMP_FAIL:
-                        Logger.printLog(TAG, "MSG_CREATE_BMP_FAIL");
+                        Log.d(TAG, "MSG_CREATE_BMP_FAIL");
                         showCursor(mTitleView, mContentView);
                         mDialog.dismiss();
                         Toast.makeText(mActivity, R.string.create_picture_create_bmp_fail,
                                 Toast.LENGTH_SHORT).show();
                         break;
                     case MSG_NO_SPACE:
-                        Logger.printLog(TAG, "MSG_NO_SPACE");
+                        Log.d(TAG, "MSG_NO_SPACE");
                         showCursor(mTitleView, mContentView);
                         mDialog.dismiss();
                         Toast.makeText(mActivity, R.string.create_picture_fail_no_space,
@@ -90,7 +90,7 @@ public class PreviewPictureMakeProxy {
                                 drawContentProxy.getDstBitmap());
                         break;
                     case MSG_SUCCESS:
-                        Logger.printLog(TAG, "MSG_SUCCESS");
+                        Log.d(TAG, "MSG_SUCCESS");
                         showCursor(mTitleView, mContentView);
                         mDialog.dismiss();
                         PreViewData preViewData = (PreViewData) msg.obj;
@@ -368,18 +368,18 @@ public class PreviewPictureMakeProxy {
                 File saveFile = NoteUtils.getSaveImageFile(tempShareFileDirectory);
                 saveFile = new File(saveFile.getPath() + ".png");
                 if (DEBUG) {
-                    Logger.printLog(TAG, "saveFile = " + saveFile);
+                    Log.d(TAG, "saveFile = " + saveFile);
                 }
                 if (!NoteUtils.saveBitmap(dstBmp, saveFile, Bitmap.CompressFormat.PNG, 100)) {
                     if (DEBUG) {
-                        Logger.printLog(TAG, "saveFile fail");
+                        Log.d(TAG, "saveFile fail");
                     }
                     dstBmp.recycle();
                     mMainHandler.sendEmptyMessage(MSG_FAIL);
                     return null;
                 }
                 if (DEBUG) {
-                    Logger.printLog(TAG, "saveFile success");
+                    Log.d(TAG, "saveFile success");
                 }
                 PreViewData preViewData = new PreViewData(dstBmp, saveFile.getPath());
                 mMainHandler.obtainMessage(MSG_SUCCESS, preViewData).sendToTarget();
@@ -403,7 +403,7 @@ public class PreviewPictureMakeProxy {
             if ((curTime - lastTime) > limit) {
                 boolean success = file.delete();
                 if (!success) {
-                    Logger.printLog(TAG, "clearOldTempFile del fail file = " + file);
+                    Log.d(TAG, "clearOldTempFile del fail file = " + file);
                 }
             }
         }

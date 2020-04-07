@@ -1,6 +1,6 @@
 package com.cydroid.note.common;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -91,7 +91,7 @@ public class ErnestWorker {
                             try {
                                 mWorkLock.wait();
                             } catch (InterruptedException e) {
-                                Logger.printLog(TAG, "unexpected interrupt: " + mWorkLock);
+                                Log.d(TAG, "unexpected interrupt: " + mWorkLock);
                             }
                         }
                     }

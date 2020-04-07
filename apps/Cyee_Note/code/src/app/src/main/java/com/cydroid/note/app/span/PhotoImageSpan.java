@@ -21,7 +21,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.app.Config;
 import com.cydroid.note.app.DataConvert;
 import com.cydroid.note.app.NoteAppImpl;
@@ -207,13 +207,13 @@ public class PhotoImageSpan extends ReplacementSpan implements AbstractClickSpan
             File file = new File(filePath);
             if (!file.exists()) {
                 if (DEBUG) {
-                    Logger.printLog(TAG, "decodeThumbBitmapFromCache no exists");
+                    Log.d(TAG, "decodeThumbBitmapFromCache no exists");
                 }
                 return null;
             }
             Bitmap bitmap = DecodeUtils.decodeBitmap(filePath, mIsEncrypt);
             if (DEBUG) {
-                Logger.printLog(TAG, "decodeThumbBitmapFromCache 1 bitmap = " + bitmap);
+                Log.d(TAG, "decodeThumbBitmapFromCache 1 bitmap = " + bitmap);
             }
 
             return bitmap;
@@ -221,7 +221,7 @@ public class PhotoImageSpan extends ReplacementSpan implements AbstractClickSpan
 
         Bitmap bitmap = DecodeUtils.decodeBitmap(context, uri);
         if (DEBUG) {
-            Logger.printLog(TAG, "decodeThumbBitmapFromCache 2 bitmap = " + bitmap);
+            Log.d(TAG, "decodeThumbBitmapFromCache 2 bitmap = " + bitmap);
         }
         return bitmap;
     }
@@ -235,7 +235,7 @@ public class PhotoImageSpan extends ReplacementSpan implements AbstractClickSpan
             File file = new File(filePath);
             if (!file.exists()) {
                 if (DEBUG) {
-                    Logger.printLog(TAG, "decodeThumbBitmapFromOriginFile no exists");
+                    Log.d(TAG, "decodeThumbBitmapFromOriginFile no exists");
                 }
                 return null;
             }
@@ -244,7 +244,7 @@ public class PhotoImageSpan extends ReplacementSpan implements AbstractClickSpan
         Bitmap bitmap = DecodeUtils.decodeThumbnail(context, originUri, tw, th, rotate, true,
                 mIsEncrypt);
         if (DEBUG) {
-            Logger.printLog(TAG, "decodeThumbBitmapFromOriginFile bitmap = " + bitmap);
+            Log.d(TAG, "decodeThumbBitmapFromOriginFile bitmap = " + bitmap);
         }
         return bitmap;
     }
@@ -331,7 +331,7 @@ public class PhotoImageSpan extends ReplacementSpan implements AbstractClickSpan
             }
         }
         if (DEBUG) {
-            Logger.printLog(TAG, "currentUri = " + currentUri + ", image length = " + uriStr.length);
+            Log.d(TAG, "currentUri = " + currentUri + ", image length = " + uriStr.length);
         }
 
         intent.putExtra("currentImage", currentUri);

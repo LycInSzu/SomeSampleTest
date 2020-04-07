@@ -80,6 +80,11 @@ import com.cydroid.note.widget.WidgetUtil;
 //GIONEE wanghaiyan 2016 -12-13 modify for 45337 begin
 import com.cydroid.note.common.FileUtils;
 //GIONEE wanghaiyan 2016 -12-13 modify for 45337 end
+//Chenyee wanghaiyan 2018-10-17 modify for CSW1805A-240 begin
+import com.cydroid.note.common.ExternalPermissionsManager;
+import com.cydroid.note.common.StorageManagerHelper;
+import android.os.storage.StorageVolume;
+//Chenyee wanghaiyan 2018-10-17 modify for CSW1805A-240 end
 
 import java.io.File;
 import java.util.ArrayList;
@@ -102,6 +107,9 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
     public static final int REQUEST_PICK_IMAGE = 1;
     public static final int REQUEST_TAKE_PHOTO = 2;
     public static final int REQUEST_CUSTOM_LABEL = 3;
+    //Chenyee wanghaiyan 2018-10-17 modify for CSW1805A-240 begin
+    public static final int REQUEST_RECORDER = 4;
+    //Chenyee wanghaiyan 2018-10-17 modify for CSW1805A-240 end
     public static final String ENABLE_EDIT_MODE = "enable_edit_mode";
     private static final String KEY_TITLE = "note_title";
     private static final String KEY_CONTENT = "note_content";
@@ -128,9 +136,9 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
     private View mSelectRecord;
     private View mSelectGallery;
     private View mSelectCamera;
-	//GIONEE:wanghaiyan 2016-11-16 modify for CR01773334 begin
+    //GIONEE:wanghaiyan 2016-11-16 modify for CR01773334 begin
     //private View mSelectOnlineImage;
-	//GIONEE:wanghaiyan 2016-11-16 modify for CR01773334 end
+    //GIONEE:wanghaiyan 2016-11-16 modify for CR01773334 end
     private ImageView mShare;
     private ImageView mEncryptAndDelete;
     private Uri mTakePhotoOutputUri;
@@ -162,11 +170,11 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
     protected HandlerThread mHandlerThread;
     private boolean mRecording;
     private PowerManager.WakeLock mWakeLock;
-	//GIONEE wanghaiyan 2016-11-25 modify for 32782 begin
+    //GIONEE wanghaiyan 2016-11-25 modify for 32782 begin
     private static final int REQUEST_PERMISSION_TAKE_PHOTOS= 1;
     private static final int REQUEST_PERMISSION_RECORD_AUDIO= 2;
     private static final int REQUEST_PERMISSION_SELECT_IMAGE= 3;
-	//GIONEE wanghaiyan 2016-11-25 modify for 32782 end
+    //GIONEE wanghaiyan 2016-11-25 modify for 32782 end
 
     //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) begin
     private boolean previewBtnClicked=false;
@@ -176,14 +184,20 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
     //wanghaiyan 2017-9-18 modify for 202128 begin
     private Bitmap bgBitmap;
     //wanghaiyan 2017-9-28 modify for 226343 begin
-	private boolean mShouldSaveRecord;
-	//wanghaiyan 2017-9-28 modify for 226343 end
+    private boolean mShouldSaveRecord;
+    //wanghaiyan 2017-9-28 modify for 226343 end
+    //Chenyee wanghaiyan 2018-10-17 modify for CSW1805A-240 begin
+    private StorageVolume mExternalStorageVolume;
+	//Chenyee wanghaiyan 2018-10-25 modify for CSW1805A-1159 begin
+    private String rootPath;
+	//Chenyee wanghaiyan 2018-10-25 modify for CSW1805A-1159 end
+    //Chenyee wanghaiyan 2018-10-17 modify for CSW1805A-240 end
     private Runnable mSaveRunnable = new Runnable() {
         @Override
         public void run() {
-        	//Gionee wanghaiyan 2017-9-14 modify for 205814 begin
+            //Gionee wanghaiyan 2017-9-14 modify for 205814 begin
             saveNote();
-        	//Gionee wanghaiyan 2017-9-14 modify for 205814 end
+            //Gionee wanghaiyan 2017-9-14 modify for 205814 end
             if (mActive) {
                 mMainHandler.postDelayed(mSaveRunnable, NOTE_SAVE_DURATION);
             }
@@ -199,6 +213,12 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
         initData(savedInstanceState);
         initListener();
         ckeckShowDataFlowHint();
+        //Chenyee wanghaiyan 2018-10-26 modify for CSW1805A-780 begin
+        if (!NoteUtils.checkNeededPermissionForRecord(this)) {
+            return;
+        }
+        //Chenyee wanghaiyan 2018-10-26 modify for CSW1805A-780 end
+
     }
 
     @Override
@@ -206,9 +226,9 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
         if (!mIsOnResumed) {
             return;
         }
-		//wanghaiyan 2017-9-28 modify for 226343 begin
+        //wanghaiyan 2017-9-28 modify for 226343 begin
         mShouldSaveRecord = false;
-		//wanghaiyan 2017-9-28 modify for 226343 end
+        //wanghaiyan 2017-9-28 modify for 226343 end
         reset(intent);
         String action = intent.getAction();
         if (CAMERA_ACTION.equals(action)) {
@@ -287,9 +307,9 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
         mSelectReminder.setOnClickListener(this);
         mSelectCamera.setOnClickListener(this);
         mSelectGallery.setOnClickListener(this);
-		//GIONEE:wanghaiyan 2016-11-16 modify for CR01773334 begin
+        //GIONEE:wanghaiyan 2016-11-16 modify for CR01773334 begin
         //mSelectOnlineImage.setOnClickListener(this);
-		//GIONEE:wanghaiyan 2016-11-16 modify for CR01773334 end
+        //GIONEE:wanghaiyan 2016-11-16 modify for CR01773334 end
         mShare.setOnClickListener(this);
         mEncryptAndDelete.setOnClickListener(this);
 
@@ -332,7 +352,7 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
         mSelectReminder = findViewById(R.id.action_reminder);
         mSelectCamera = findViewById(R.id.action_camera);
         mSelectGallery = findViewById(R.id.action_gallery);
-		//GIONEE:wanghaiyan 2016-11-16 modify for CR01773334 begin
+        //GIONEE:wanghaiyan 2016-11-16 modify for CR01773334 begin
         //mSelectOnlineImage = findViewById(R.id.action_online_image);
         //GIONEE:wanghaiyan 2016-11-16 modify for CR01773334 end
         mShare = (ImageView) findViewById(R.id.new_note_activity_title_layout_share);
@@ -362,11 +382,11 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
 
         tintImageViewDrawableList(R.id.action_camera,
                 R.drawable.attachment_take_photos, ColorThemeHelper.getFooterBarIconColor(this, isSecuritySpace));
-		
-		//gionee wanghaiyan add on 2016-08-03 for CR01739902 begin
-		mContentEditText.setInputContentMaxSize();//最大输入值为10000
-		//gionee wanghaiyan add on 2016-08-03 for CR01739902 end
-		 
+
+        //gionee wanghaiyan add on 2016-08-03 for CR01739902 begin
+        mContentEditText.setInputContentMaxSize();//最大输入值为10000
+        //gionee wanghaiyan add on 2016-08-03 for CR01739902 end
+
         //GIONEE:wanghaiyan 2016-11-16 modify for CR01773334 begin
         //tintImageViewDrawableList(R.id.action_online_image,
         //      R.drawable.attachment_online_image, ColorThemeHelper.getFooterBarIconColor(this, isSecuritySpace));
@@ -394,7 +414,7 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
             });
         }
 	   */
-	   //GIONEE wanghaiyan 2016-12-02 modify for 37596 end
+        //GIONEE wanghaiyan 2016-12-02 modify for 37596 end
 
     }
 
@@ -568,7 +588,7 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
                 final int id = NoteUtils.addNoteData(title, jsonContent, mResolver,
                         info.mDateModifiedInMs, info.mDateReminderInMs, info.mLabel,
                         Constants.ENCRYPT_HINT_ABLE, info.mEncrytRemindReadState, mIsEncrypted);
-		        //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) begin
+                //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) begin
                 mNoteId=id;
                 //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) end
                 Runnable update = new Runnable() {
@@ -611,14 +631,14 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
     private void initNoteInfo(Intent intent, Bundle savedInstanceState) {
         String path = intent.getStringExtra(NOTE_ITEM_PATH);
         int id = NoteUtils.getIdFromPath(path, mIsEncrypted);
-	    //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) begin
+        //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) begin
         mNoteId=id;
-	    //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) end
+        //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) end
         if (NoteItem.INVALID_ID == id) {
             id = getSaveNoteId(savedInstanceState);
-	        //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) begin
+            //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) begin
             mNoteId=id;
-	        //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) end
+            //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) end
             if (NoteItem.INVALID_ID != id) {
                 initNoteInfoFromDB(id);
             } else {
@@ -732,9 +752,9 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
             public void onCancleEncrypt(boolean hintAgain) {
                 if (!hintAgain) {
                     mCurrNoteInfo.mEncyptHintState = Constants.ENCRYPT_HINT_DISABLE;
-		            //Gionee wanghaiyan 2017-9-14 modify for 205814 begin
+                    //Gionee wanghaiyan 2017-9-14 modify for 205814 begin
                     saveNote();
-		            //Gionee wanghaiyan 2017-9-14 modify for 205814 end
+                    //Gionee wanghaiyan 2017-9-14 modify for 205814 end
                 }
             }
         });
@@ -848,9 +868,9 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
         mSelectRecord.setEnabled(enable);
         mSelectGallery.setEnabled(enable);
         mSelectCamera.setEnabled(enable);
-	    //GIONEE:wanghaiyan 2016-11-16 modify for CR01773334 begin
+        //GIONEE:wanghaiyan 2016-11-16 modify for CR01773334 begin
         //mSelectOnlineImage.setEnabled(enable);
-		//GIONEE:wanghaiyan 2016-11-16 modify for CR01773334 end
+        //GIONEE:wanghaiyan 2016-11-16 modify for CR01773334 end
     }
 
     private void addImage(Uri imageUri, boolean photoFromOut, boolean fromAttach) {
@@ -859,28 +879,28 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
         if (!mContentEditText.checkContentKeepMore16CharsRemaing()) {
             sendMagAddImageFail(R.string.add_image_fail);
             return;
-        } 
-		//Gionee wanghaiyan 2017-5-16 modify for 142327 end
+        }
+        //Gionee wanghaiyan 2017-5-16 modify for 142327 end
         final Uri fileUri = NoteUtils.convertToFileUri(context, imageUri);
         Bitmap bitmap = NoteUtils.getAddBitmapFromUri(context, fileUri);
         if (bitmap == null) {
-	        //Gionee wanghaiyan 2017-3-28 modify for 96878 begin
+            //Gionee wanghaiyan 2017-3-28 modify for 96878 begin
             sendMagAddImageFail(R.string.add_image_fail);
-	        //Gionee wanghaiyan 2017-3-28 modify for 96878 end
+            //Gionee wanghaiyan 2017-3-28 modify for 96878 end
             return;
         }
-        
 
-        
+
+
         int bitmapHeight = bitmap.getHeight();
         if (bitmapHeight > 2 * NoteUtils.sScreenHeight) {
-	        //Gionee wanghaiyan 2017-3-28 modify for 96878 begin
+            //Gionee wanghaiyan 2017-3-28 modify for 96878 begin
             //mToastManager.showToast(R.string.long_bitmap_add_failed);
             sendMagAddImageFail(R.string.long_bitmap_add_failed);
-	        //Gionee wanghaiyan 2017-3-28 modify for 96878 end
-			//Gionee wanghaiyan 2017-9-18 modify for 202128 begin
+            //Gionee wanghaiyan 2017-3-28 modify for 96878 end
+            //Gionee wanghaiyan 2017-9-18 modify for 202128 begin
             recycleBitmap(bitmap);
-			//Gionee wanghaiyan 2017-9-18 modify for 202128 end
+            //Gionee wanghaiyan 2017-9-18 modify for 202128 end
             return;
         }
 
@@ -946,9 +966,9 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
         mBackgroundHandler.post(new Runnable() {
             @Override
             public void run() {
-              //Gionee wanghaiyan 2017-05-08 modify for 159786 begin
-            	saveNote();
-              //Gionee wanghaiyan 2017-05-08 modify for 159786 end
+                //Gionee wanghaiyan 2017-05-08 modify for 159786 begin
+                saveNote();
+                //Gionee wanghaiyan 2017-05-08 modify for 159786 end
             }
         });
         super.onSaveInstanceState(outState);
@@ -957,7 +977,7 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
     @Override
     protected void onResume() {
         super.onResume();
-	    //GIONEE wanghaiyan 2016-12-02 modify for 37596 begin
+        //GIONEE wanghaiyan 2016-12-02 modify for 37596 begin
 	    /*
         if (mAITipView != null) {
             mIsAiSwitchOpen = NoteShareDataManager.isAISwitchOpen(this);
@@ -992,16 +1012,16 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
     @Override
     protected void onPause() {
         mActive = false;
-	    //GIONEE wanghaiyan 2016-12-02 modify for 37596 begin
+        //GIONEE wanghaiyan 2016-12-02 modify for 37596 begin
 	    /*
         if (mAITipView != null && mIsAiSwitchOpen) {
             mAITipView.pause();
         }
 	   */
-	   //GIONEE wanghaiyan 2016-12-02 modify for 37596 end
-        //Chenyee wanghaiyan 2018-9-28 modify for CSW1703CU-179 begin
+        //GIONEE wanghaiyan 2016-12-02 modify for 37596 end
+        //Chenyee wanghaiyan 2018-9-28 modify for CSW1805A-155 begin
         hintInputMehtod();
-        //Chenyee wanghaiyan 2018-9-28 modify for CSW1703CU-179 end
+        //Chenyee wanghaiyan 2018-9-28 modify for CSW1805A-155 end
         stopSave();
         mExecutor.pause();
         super.onPause();
@@ -1014,9 +1034,9 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
         }
         stopSoudPlayer();
         mAttachmentSelector.cancel();
-	    //Gionee wanghaiyan 2017-9-14 modify for 205814 begin
+        //Gionee wanghaiyan 2017-9-14 modify for 205814 begin
         saveNote();
-	    //Gionee wanghaiyan 2017-9-14 modify for 205814 end
+        //Gionee wanghaiyan 2017-9-14 modify for 205814 end
         super.onStop();
     }
 
@@ -1091,20 +1111,20 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
     //Gionee wanghaiyan 20170307 add for 77568 begin
     private String getAttachmentFilePath(Context context, Uri uri)
     {
-    	if (uri == null) return null;
-    	if (uri.getScheme().equals("content") == true) {	
-    		ContentResolver cr = context.getContentResolver();
-    		Cursor c = cr.query(uri, null, null, null, null);
-    		if (c == null) return null;
-			c.moveToFirst();
-    		String str = c.getString(c.getColumnIndexOrThrow("_data"));
-    		c.close();
-			return str;   		
-    	} else if (uri.getScheme().equals("file") == true) {		
-			String str = uri.getPath();
-			return str;
-    	}    	
-    	return null;
+        if (uri == null) return null;
+        if (uri.getScheme().equals("content") == true) {
+            ContentResolver cr = context.getContentResolver();
+            Cursor c = cr.query(uri, null, null, null, null);
+            if (c == null) return null;
+            c.moveToFirst();
+            String str = c.getString(c.getColumnIndexOrThrow("_data"));
+            c.close();
+            return str;
+        } else if (uri.getScheme().equals("file") == true) {
+            String str = uri.getPath();
+            return str;
+        }
+        return null;
     }
     //Gionee wanghaiyan 20170307 add for 77568 end
 
@@ -1124,18 +1144,18 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
 
                 boolean hasEnoughFreeMemory = NoteUtils.checkEnoughFreeMemory();
                 if (hasEnoughFreeMemory && !mContentEditText.isSelectPositionReachMaxSize()) {
-			    //Gionee wanghaiyan 20170307 add for 77568 begin
-			    if(NoteUtils.gnKRFlag){
-		        	String strPath = getAttachmentFilePath(this, uri);
-		        	Log.d("kptc", "com.cydroid.note.app.NewNoteActivity->onActivityResult(): isLegalFile()");
-		        	int nFlag = pwinSign.isLegalFile(strPath);
-		        	Log.d("kptc", "retCode=" + nFlag);
-                	if(nFlag != 1 && nFlag != 2) {
-				    	pwinSign.showIllegalFileMessage(this);
-                		return;
-	    	        }
-	            }
-	            //Gionee wanghaiyan 20170307 add for 77568 end
+                    //Gionee wanghaiyan 20170307 add for 77568 begin
+                    if(NoteUtils.gnKRFlag){
+                        String strPath = getAttachmentFilePath(this, uri);
+                        Log.d("kptc", "com.cydroid.note.app.NewNoteActivity->onActivityResult(): isLegalFile()");
+                        int nFlag = pwinSign.isLegalFile(strPath);
+                        Log.d("kptc", "retCode=" + nFlag);
+                        if(nFlag != 1 && nFlag != 2) {
+                            pwinSign.showIllegalFileMessage(this);
+                            return;
+                        }
+                    }
+                    //Gionee wanghaiyan 20170307 add for 77568 end
                     asynAddImage(uri, true);
                 } else {
                     mToastManager.showToast(getString(R.string.max_pic_input_mum_limit));
@@ -1146,16 +1166,16 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
                 if (mTakePhotoOutputUri != null) {
                     boolean hasEnoughFreeMemory = NoteUtils.checkEnoughFreeMemory();
                     if (hasEnoughFreeMemory && !mContentEditText.isSelectPositionReachMaxSize()) {
-					//Gionee wanghaiyan 20170307 add for 77568 begin
-					if(NoteUtils.gnKRFlag){
-		            	Log.d("kptc", "com.cydroid.note.app.NewNoteActivity->onActivityResult(): saveSelfSignFile()");
-		            	int errCode = pwinSign.saveSelfSignFile(mTakePhotoOutputUri.getPath());
-		            	Log.d("kptc", "errCode=" + errCode);
-						//Chenyee 2018-5-10 modify for CSW1703KR-68 begin
-						pwinSign.sendBroadcastToRedService(NoteAppImpl.getContext(), mTakePhotoOutputUri.getPath());
-						//Chenyee 2018-5-10 modify for CSW1703KR-68 end
-					}
-					//Gionee wanghaiyan 20170307 add for 77568 end
+                        //Gionee wanghaiyan 20170307 add for 77568 begin
+                        if(NoteUtils.gnKRFlag){
+                            Log.d("kptc", "com.cydroid.note.app.NewNoteActivity->onActivityResult(): saveSelfSignFile()");
+                            int errCode = pwinSign.saveSelfSignFile(mTakePhotoOutputUri.getPath());
+                            Log.d("kptc", "errCode=" + errCode);
+                            //Chenyee 2018-5-10 modify for CSW1703KR-68 begin
+                            pwinSign.sendBroadcastToRedService(NoteAppImpl.getContext(), mTakePhotoOutputUri.getPath());
+                            //Chenyee 2018-5-10 modify for CSW1703KR-68 end
+                        }
+                        //Gionee wanghaiyan 20170307 add for 77568 end
                         asynAddImage(mTakePhotoOutputUri, false);
                         mTakePhotoOutputUri = null;
                     } else {
@@ -1174,6 +1194,13 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
                 encrypt();
                 break;
             }
+            //Chenyee wanghaiyan 2018-10-17 modify for CSW1805A-240 begin
+            case REQUEST_RECORDER: {
+                getContentResolver().takePersistableUriPermission(data.getData(),
+                        Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+                Log.d(TAG, "SD PERMISSION--onActivityResult uri = " + data.getData());
+            }
+            //Chenyee wanghaiyan 2018-10-17 modify for CSW1805A-240 end
             default: {
                 break;
             }
@@ -1211,9 +1238,9 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
         }
         //GIONEE wanghaiyan 2016-12-14 modify for 46059 for begin
         if(!FileUtils.gnEncryptionSpaceSupport){
-           return false;
+            return false;
         }
-        //GIONEE wanghaiyan 2016-12-14 modify for 46059 for end	
+        //GIONEE wanghaiyan 2016-12-14 modify for 46059 for end
         String text = mContentEditText.getText().toString();
         String checkText = "";
         if (!TextUtils.isEmpty(text) && text.length() >= 1000) {
@@ -1272,46 +1299,46 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
     }
 
     private void saveNote() {
-	//gionee wanghaiyan add on 2016-12-22 for 39883 begin
-		com.cydroid.note.common.Log.i("chen_long04","NewNoteActivity saveNote isNoteChanged "+isNoteChanged);     
-	    //Gionee wanghaiyan 2017-9-14 modify for 205814 begin
-	    if (!previewBtnClicked) {
-    		isNoteChanged=isNoteChanged();
-	 		if(!isNoteChanged){
-    		return;
-           	}
-         }
-        com.cydroid.note.common.Log.i("chen_long04","NewNoteActivity saveNote isNoteChanged "+isNoteChanged);     
-		final int noteId = mCurrNoteInfo.mId;
-		final String title = mTitleEditText.getText().toString();
-		final Editable content = mContentEditText.getText();
-		boolean contentEmpty = NoteUtils.isContentEmpty(content);
-		final String jsonContent = contentEmpty ? "" : DataConvert.editableConvertToJson(content);
-		final long modifiedTime = mModifiedTime;
-		final long dateReminderInMs = mCurrNoteInfo.mDateReminderInMs;
-		final ArrayList<Integer> label = new ArrayList<>(mCurrNoteInfo.mLabel);
-		final ContentResolver resolver = mResolver;
-		final int encryptHintState = mCurrNoteInfo.mEncyptHintState;
-		final int encrytRemindReadState = mCurrNoteInfo.mEncrytRemindReadState;
-		if (noteId != NoteItem.INVALID_ID) {
-			mBackgroundHandler.post(new Runnable() {
-				@Override
-				public void run() {
-					NoteUtils.updateNoteData(title, jsonContent, resolver, noteId, modifiedTime, dateReminderInMs,
-					        label, encryptHintState, encrytRemindReadState, mIsEncrypted);
-				}
-			});
-			return;
-		}
-		mBackgroundHandler.post(new Runnable() {
-			@Override
-			public void run() {
-				int id = NoteUtils.addNoteData(title, jsonContent, resolver, modifiedTime, dateReminderInMs, label,
-					    encryptHintState, encrytRemindReadState, mIsEncrypted);
-				mPreNoteInfo.mId = id;
-				mCurrNoteInfo.mId = id;
-			}
-		});
+        //gionee wanghaiyan add on 2016-12-22 for 39883 begin
+        com.cydroid.note.common.Log.i("chen_long04","NewNoteActivity saveNote isNoteChanged "+isNoteChanged);
+        //Gionee wanghaiyan 2017-9-14 modify for 205814 begin
+        if (!previewBtnClicked) {
+            isNoteChanged=isNoteChanged();
+            if(!isNoteChanged){
+                return;
+            }
+        }
+        com.cydroid.note.common.Log.i("chen_long04","NewNoteActivity saveNote isNoteChanged "+isNoteChanged);
+        final int noteId = mCurrNoteInfo.mId;
+        final String title = mTitleEditText.getText().toString();
+        final Editable content = mContentEditText.getText();
+        boolean contentEmpty = NoteUtils.isContentEmpty(content);
+        final String jsonContent = contentEmpty ? "" : DataConvert.editableConvertToJson(content);
+        final long modifiedTime = mModifiedTime;
+        final long dateReminderInMs = mCurrNoteInfo.mDateReminderInMs;
+        final ArrayList<Integer> label = new ArrayList<>(mCurrNoteInfo.mLabel);
+        final ContentResolver resolver = mResolver;
+        final int encryptHintState = mCurrNoteInfo.mEncyptHintState;
+        final int encrytRemindReadState = mCurrNoteInfo.mEncrytRemindReadState;
+        if (noteId != NoteItem.INVALID_ID) {
+            mBackgroundHandler.post(new Runnable() {
+                @Override
+                public void run() {
+                    NoteUtils.updateNoteData(title, jsonContent, resolver, noteId, modifiedTime, dateReminderInMs,
+                            label, encryptHintState, encrytRemindReadState, mIsEncrypted);
+                }
+            });
+            return;
+        }
+        mBackgroundHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                int id = NoteUtils.addNoteData(title, jsonContent, resolver, modifiedTime, dateReminderInMs, label,
+                        encryptHintState, encrytRemindReadState, mIsEncrypted);
+                mPreNoteInfo.mId = id;
+                mCurrNoteInfo.mId = id;
+            }
+        });
 
     }
     //gionee wanghaiyan add on 2016-12-22 for 39883 end
@@ -1354,9 +1381,9 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
             setResult(Activity.RESULT_OK);
         }
         checkSetReminder();
-	    //Gionee wanghaiyan 2017-9-14 modify for 205814 begin
+        //Gionee wanghaiyan 2017-9-14 modify for 205814 begin
         saveNote();
-	    //Gionee wanghaiyan 2017-9-14 modify for 205814 end
+        //Gionee wanghaiyan 2017-9-14 modify for 205814 end
     }
 
     private void checkSetReminder() {
@@ -1381,9 +1408,9 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
         stopSave();
         if (isShouldDelete()) {
             deleteEmptyNote();
-	        //GIONEE wanghaiyan 2016-12-21 modify for 51697 begin
+            //GIONEE wanghaiyan 2016-12-21 modify for 51697 begin
             //return;
-	        //GIONEE wanghaiyan 2016-12-21 modify for 51697 end
+            //GIONEE wanghaiyan 2016-12-21 modify for 51697 end
         }
 
         final NoteSelectionManager manager = new NoteSelectionManager();
@@ -1469,11 +1496,11 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
                 }
                 break;
             case R.id.new_note_activity_title_layout_share:
-		        //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) begin
-		        isNoteChanged=isNoteChanged();
-		        previewBtnClicked=true;
-		        Log.d("chen_long04","NewNoteActivity onClick isNoteChanged "+isNoteChanged);
-                PreviewPictureMakeProxy proxy = new PreviewPictureMakeProxy(this,isNoteChanged,mNoteId);               
+                //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) begin
+                isNoteChanged=isNoteChanged();
+                previewBtnClicked=true;
+                Log.d("chen_long04","NewNoteActivity onClick isNoteChanged "+isNoteChanged);
+                PreviewPictureMakeProxy proxy = new PreviewPictureMakeProxy(this,isNoteChanged,mNoteId);
                 //PreviewPictureMakeProxy proxy = new PreviewPictureMakeProxy(this);
                 //gionee chen_long02 add on 2016-03-14 for CR01649481(39883) end
                 mPreviewPictureMakeProxy = proxy;
@@ -1488,61 +1515,61 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
                 selectLabel();
                 break;
             case R.id.action_bill:
-                //gionee wanghaiyan add on 2016-08-03 for CR01739902 begin 
-            	if(!mContentEditText.checkContentKeepMore16CharsRemaing()){
-            		int charNums=mContentEditText.getNeededCharNums();
-            		mToastManager.showToast(charNums>1?getString(R.string.alert_remaining_chars,charNums):getString       (R.string.alert_remaining_char,charNums));
-                	return;
-            	}
-            	//gionee wanghaiyan add on 2016-08-03 for CR01739902 end
-            		
+                //gionee wanghaiyan add on 2016-08-03 for CR01739902 begin
+                if(!mContentEditText.checkContentKeepMore16CharsRemaing()){
+                    int charNums=mContentEditText.getNeededCharNums();
+                    mToastManager.showToast(charNums>1?getString(R.string.alert_remaining_chars,charNums):getString       (R.string.alert_remaining_char,charNums));
+                    return;
+                }
+                //gionee wanghaiyan add on 2016-08-03 for CR01739902 end
+
                 selectBill();
                 break;
             case R.id.action_reminder:
                 selectReminder();
                 break;
             case R.id.action_recorde:
-				//wanghaiyan 2017-9-28 modify for 226343 begin
+                //wanghaiyan 2017-9-28 modify for 226343 begin
                 mShouldSaveRecord = true;
-				//wanghaiyan 2017-9-28 modify for 226343 end
-                //gionee wanghaiyan add on 2016-08-03 for CR01739902 begin 
-            	if(!mContentEditText.checkContentKeepMore16CharsRemaing()){
-            		int charNums=mContentEditText.getNeededCharNums();
-            		mToastManager.showToast(charNums>1?getString(R.string.alert_remaining_chars,charNums):getString       (R.string.alert_remaining_char,charNums));
-                	return;
-            	}
-            	//gionee wanghaiyan add on 2016-08-03 for CR01739902 end
-			    //GIONEE wanghaiyan 2016-11-25 modify for 32782 begin 
-		        addSafeRecordAudio();
-				//GIONEE wanghaiyan 2016-11-25 modify for 32782 end
+                //wanghaiyan 2017-9-28 modify for 226343 end
+                //gionee wanghaiyan add on 2016-08-03 for CR01739902 begin
+                if(!mContentEditText.checkContentKeepMore16CharsRemaing()){
+                    int charNums=mContentEditText.getNeededCharNums();
+                    mToastManager.showToast(charNums>1?getString(R.string.alert_remaining_chars,charNums):getString       (R.string.alert_remaining_char,charNums));
+                    return;
+                }
+                //gionee wanghaiyan add on 2016-08-03 for CR01739902 end
+                //GIONEE wanghaiyan 2016-11-25 modify for 32782 begin
+                addSafeRecordAudio();
+                //GIONEE wanghaiyan 2016-11-25 modify for 32782 end
                 break;
             case R.id.action_camera:
-                //gionee wanghaiyan add on 2016-08-03 for CR01739902 begin 
-            	if(!mContentEditText.checkContentKeepMore16CharsRemaing()){
-            		int charNums=mContentEditText.getNeededCharNums();
-            		mToastManager.showToast(charNums>1?getString(R.string.alert_remaining_chars,charNums):getString(R.string.alert_remaining_char,charNums));
-                	return;
-            	}
-            	//gionee wanghaiyan add on 2016-08-03 for CR01739902 end
-			    //GIONEE wanghaiyan 2016-11-25 modify for 32782 begin
-	        	addSafeTakePhotos();
-				//GIONEE wanghaiyan 2016-11-25 modify for 32782 end
+                //gionee wanghaiyan add on 2016-08-03 for CR01739902 begin
+                if(!mContentEditText.checkContentKeepMore16CharsRemaing()){
+                    int charNums=mContentEditText.getNeededCharNums();
+                    mToastManager.showToast(charNums>1?getString(R.string.alert_remaining_chars,charNums):getString(R.string.alert_remaining_char,charNums));
+                    return;
+                }
+                //gionee wanghaiyan add on 2016-08-03 for CR01739902 end
+                //GIONEE wanghaiyan 2016-11-25 modify for 32782 begin
+                addSafeTakePhotos();
+                //GIONEE wanghaiyan 2016-11-25 modify for 32782 end
                 break;
             case R.id.action_gallery:
-                //gionee wanghaiyan add on 2016-08-03 for CR01739902 begin 
-            	if(!mContentEditText.checkContentKeepMore16CharsRemaing()){
-            		int charNums=mContentEditText.getNeededCharNums();
-            		mToastManager.showToast(charNums>1?getString(R.string.alert_remaining_chars,charNums):getString(R.string.alert_remaining_char,charNums));
-                	return;
-            	}
-            	//gionee wanghaiyan add on 2016-08-03 for CR01739902 end
-            	addSafeSelectImage();
+                //gionee wanghaiyan add on 2016-08-03 for CR01739902 begin
+                if(!mContentEditText.checkContentKeepMore16CharsRemaing()){
+                    int charNums=mContentEditText.getNeededCharNums();
+                    mToastManager.showToast(charNums>1?getString(R.string.alert_remaining_chars,charNums):getString(R.string.alert_remaining_char,charNums));
+                    return;
+                }
+                //gionee wanghaiyan add on 2016-08-03 for CR01739902 end
+                addSafeSelectImage();
                 break;
-		    //GIONEE:wanghaiyan 2016-11-16 modify for CR01773334 begin
+            //GIONEE:wanghaiyan 2016-11-16 modify for CR01773334 begin
             //case R.id.action_online_image:
             //    gotoOnlineImage();
             //    break;
-		    //GIONEE:wanghaiyan 2016-11-16 modify for CR01773334 end
+            //GIONEE:wanghaiyan 2016-11-16 modify for CR01773334 end
             case R.id.title_more_delete:
                 throwIntoTrash();
                 break;
@@ -1570,18 +1597,18 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
 
             @Override
             public void onRecorderComplete(String soundPath, int durationInSec) {
-				//wanghaiyan 2017-9-28 modify for 226343 begin
-				Log.d(TAG,"wanghaiyan_mShouldSaveRecord" + mShouldSaveRecord);
+                //wanghaiyan 2017-9-28 modify for 226343 begin
+                Log.d(TAG,"wanghaiyan_mShouldSaveRecord" + mShouldSaveRecord);
                 if (!mShouldSaveRecord) {
                     mToastManager.showToast(R.string.record_fail);
                     return;
                 }
-				//wanghaiyan 2017-9-28 modify for 226343 end
+                //wanghaiyan 2017-9-28 modify for 226343 end
                 if (!mContentEditText.isSelectPositionReachMaxSize()) {
                     insertSoundRecorder(soundPath, durationInSec);
-		            //Gionee wanghaiyan 2017-9-14 modify for 205814 begin
+                    //Gionee wanghaiyan 2017-9-14 modify for 205814 begin
                     saveNote();
-		            //Gionee wanghaiyan 2017-9-14 modify for 205814 end
+                    //Gionee wanghaiyan 2017-9-14 modify for 205814 end
                 } else {
                     Toast.makeText(NewNoteActivity.this, R.string.max_content_input_mum_limit, Toast.LENGTH_SHORT).show();
                 }
@@ -1614,11 +1641,11 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
     private void selectTitleMore() {
         View view = LayoutInflater.from(this).inflate(R.layout.new_note_title_more_dialog, null);
         view.findViewById(R.id.title_more_encrypt_or_decrypt).setOnClickListener(this);
-	    //GIONEE wanghaiyan 2016 -12-13 modify for 45337 begin
-	    if(!FileUtils.gnEncryptionSpaceSupport){
-	    view.findViewById(R.id.title_more_encrypt_or_decrypt).setVisibility(View.GONE);
-	    }
-	    //GIONEE wanghaiyan 2016 -12-13 modify for 45337 end
+        //GIONEE wanghaiyan 2016 -12-13 modify for 45337 begin
+        if(!FileUtils.gnEncryptionSpaceSupport){
+            view.findViewById(R.id.title_more_encrypt_or_decrypt).setVisibility(View.GONE);
+        }
+        //GIONEE wanghaiyan 2016 -12-13 modify for 45337 end
         view.findViewById(R.id.title_more_delete).setOnClickListener(this);
         CyeeAlertDialog.Builder builder = new CyeeAlertDialog.Builder(this);
         builder.setView(view);
@@ -1663,9 +1690,9 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
             mCurrNoteInfo.mDateReminderInMs = NoteItem.INVALID_REMINDER;
             ReminderManager.cancelAlarmAndNotification(getApplicationContext(), mCurrNoteInfo.mId, false);
             mContentEditText.setReminderTime(mCurrNoteInfo.mDateReminderInMs);
-	        //Gionee wanghaiyan 2017-9-14 modify for 205814 begin
+            //Gionee wanghaiyan 2017-9-14 modify for 205814 begin
             saveNote();
-	        //Gionee wanghaiyan 2017-9-14 modify for 205814 end
+            //Gionee wanghaiyan 2017-9-14 modify for 205814 end
             checkSetEmptyState();
         }
     }
@@ -1690,11 +1717,11 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
         View view = LayoutInflater.from(context).inflate(R.layout.data_flow_dialog, null);
         ((TextView)view.findViewById(R.id.authority_alert_user_title)).setMovementMethod(ScrollingMovementMethod.getInstance());
         final CyeeCheckBox checkBox = (CyeeCheckBox) view.findViewById(R.id.authority_alert_user_checkBox);
-	    //GIONEE wanghaiyan 2016-12-08 modify for 40315 begin
-	    if(ChameleonColorManager.isNeedChangeColor()){
-                   checkBox.setTextColor(ChameleonColorManager.getContentColorPrimaryOnBackgroud_C1());
-	    }
-	    //GIONEE wanghaiyan 2016-12-08 modify for 40315 end
+        //GIONEE wanghaiyan 2016-12-08 modify for 40315 begin
+        if(ChameleonColorManager.isNeedChangeColor()){
+            checkBox.setTextColor(ChameleonColorManager.getContentColorPrimaryOnBackgroud_C1());
+        }
+        //GIONEE wanghaiyan 2016-12-08 modify for 40315 end
         CyeeAlertDialog.Builder builder = new CyeeAlertDialog.Builder(context);
         builder.setTitle(R.string.data_flow_alert_user_title);
         builder.setView(view);
@@ -1716,9 +1743,9 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
         });
         CyeeAlertDialog dialog = builder.create();
         dialog.setCanceledOnTouchOutside(false);
-	    //Gionee wanghaiyan 2017-3-23 modify for 90801 begin
+        //Gionee wanghaiyan 2017-3-23 modify for 90801 begin
         dialog.setCancelable(true);
-	    //Gionee wanghaiyan 2017-3-23 modify for 90801 end
+        //Gionee wanghaiyan 2017-3-23 modify for 90801 end
         dialog.show();
     }
 
@@ -1818,76 +1845,95 @@ public class NewNoteActivity extends StandardActivity implements OnClickListener
         }
 
     }
-	//GIONEE wanghaiyan 2016-11-25 modify for 32782 begin
-	public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-		switch (requestCode) {
-		    case REQUEST_PERMISSION_TAKE_PHOTOS:
-		        if (grantResults.length > 0
-		                && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-		                mAttachmentSelector.gotoTakePhotos();
-			    return;
-		        } else {
-		            showRemind();
-		        }
-		        break;
-		    case REQUEST_PERMISSION_RECORD_AUDIO:
-		        if (grantResults.length > 0
-		                && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-		                selectSound();
-			    return;
-		        } else {
-		            showRemind();
-		        }
-		        break;
-		    case REQUEST_PERMISSION_SELECT_IMAGE:
-		        if (grantResults.length > 0
-		                && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-		                mAttachmentSelector.gotoSelectImage();
-			    return;
-		        } else {
-		            showRemind();
-		        }
-		        break;
-		    default:
-		        break;
-		}
-	}
+    //GIONEE wanghaiyan 2016-11-25 modify for 32782 begin
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case REQUEST_PERMISSION_TAKE_PHOTOS:
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    mAttachmentSelector.gotoTakePhotos();
+                    return;
+                } else {
+                    showRemind();
+                }
+                break;
+            case REQUEST_PERMISSION_RECORD_AUDIO:
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    selectSound();
+                    return;
+                } else {
+                    showRemind();
+                }
+                break;
+            case REQUEST_PERMISSION_SELECT_IMAGE:
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    mAttachmentSelector.gotoSelectImage();
+                    return;
+                } else {
+                    showRemind();
+                }
+                break;
+            default:
+                break;
+        }
+    }
 
-	private void showRemind() {
-	Toast.makeText(this, R.string.authorization_failed, Toast.LENGTH_SHORT).show();
-	}
+    private void showRemind() {
+        Toast.makeText(this, R.string.authorization_failed, Toast.LENGTH_SHORT).show();
+    }
 
-	private void addSafeTakePhotos() {
+    private void addSafeTakePhotos() {
         //Chenyee wanghaiyan 2018-5-11 modify for CSW1703CX-493 begin
 
         if (!NoteUtils.checkNeededPermissionForRecord(this)) {
             return;
         }
         //Chenyee wanghaiyan 2018-5-11 modify for CSW1703CX-493 end
-		 mAttachmentSelector.gotoTakePhotos();
-	}
+        mAttachmentSelector.gotoTakePhotos();
+    }
 
-	private void addSafeRecordAudio() {
+    private void addSafeRecordAudio() {
+        //Chenyee wanghaiyan 2018-5-11 modify for CSW1703CX-493 begin
+
+        if (!NoteUtils.checkNeededPermissionForRecord(this)) {
+            return;
+        }
+
+        //Chenyee wanghaiyan 2018-10-24 modify for CSW1805A-1060 begin
+        //Chenyee wanghaiyan 2018-10-25 modify for CSW1805A-1159 begin
+        if(FileUtils.isSDCardInserted(this)) {
+            mExternalStorageVolume = StorageManagerHelper.getExternalStorageVolume(this);
+            Log.d(TAG, "mExternalStorageVolume" + mExternalStorageVolume + "rootPath" + rootPath);
+            rootPath = StorageManagerHelper.getSDPath(this);
+            boolean hasExternalPermission = ExternalPermissionsManager.hasExternalSDCardFilePermission(this, new File(rootPath));
+            Log.d(TAG, "SD PERMISSOIN--mExternalStorageVolume = " + mExternalStorageVolume);
+            Log.d(TAG, "hasExternalPermission = " + hasExternalPermission);
+            if (!hasExternalPermission && rootPath != null) {
+                Intent intent = mExternalStorageVolume.createAccessIntent(null);
+                startActivityForResult(intent, REQUEST_RECORDER);
+                return;
+            }
+            selectSound();
+        }else{
+            selectSound();
+        }
+        //Chenyee wanghaiyan 2018-10-24 modify for CSW1805A-1159 end
+        //Chenyee wanghaiyan 2018-10-25 modify for CSW1805A-1060 end
+    }
+
+    private void addSafeSelectImage() {
         //Chenyee wanghaiyan 2018-5-11 modify for CSW1703CX-493 begin
 
         if (!NoteUtils.checkNeededPermissionForRecord(this)) {
             return;
         }
         //Chenyee wanghaiyan 2018-5-11 modify for CSW1703CX-493 end
-		 selectSound();
-	}
-	
-	private void addSafeSelectImage() {
-        //Chenyee wanghaiyan 2018-5-11 modify for CSW1703CX-493 begin
-
-		if (!NoteUtils.checkNeededPermissionForRecord(this)) {
-            return;
-		}
-		//Chenyee wanghaiyan 2018-5-11 modify for CSW1703CX-493 end
 
         mAttachmentSelector.gotoSelectImage();
-	}
-	//GIONEE wanghaiyan 2016-11-25 modify for 32782 end
+    }
+    //GIONEE wanghaiyan 2016-11-25 modify for 32782 end
     //Chenyee wanghaiyan add on 2018-1-27 for SW17W16A-2093 begin
     private long mNoteTime;
     //Chenyee wanghaiyan add on 2018-1-27 for SW17W16A-2093 end

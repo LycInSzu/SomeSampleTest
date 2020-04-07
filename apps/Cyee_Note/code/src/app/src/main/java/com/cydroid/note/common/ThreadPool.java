@@ -2,7 +2,7 @@ package com.cydroid.note.common;
 
 import com.cydroid.note.common.Log;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -164,7 +164,7 @@ public class ThreadPool {
                 try {
                     wait();
                 } catch (Exception ex) {
-                    Logger.printLog(TAG, "ingore exception:" + ex);
+                    Log.d(TAG, "ingore exception:" + ex);
                     // ignore.
                 }
             }

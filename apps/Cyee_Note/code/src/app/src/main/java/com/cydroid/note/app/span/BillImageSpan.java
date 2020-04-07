@@ -13,7 +13,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.R;
 import com.cydroid.note.app.Config;
 
@@ -95,7 +95,7 @@ public class BillImageSpan extends ReplacementSpan implements AbstractClickSpan 
                     drawable.getIntrinsicHeight());
             return drawable;
         } catch (Exception e) {
-            Logger.printLog(TAG, "Unable to find resource: " + resId);
+            Log.d(TAG, "Unable to find resource: " + resId);
         }
         return null;
     }

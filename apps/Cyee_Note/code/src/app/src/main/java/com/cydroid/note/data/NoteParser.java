@@ -3,7 +3,7 @@ package com.cydroid.note.data;
 import android.net.Uri;
 import android.text.TextUtils;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.app.DataConvert;
 import com.cydroid.note.app.NoteAppImpl;
 import com.cydroid.note.app.SlidingWindow.NoteEntry;
@@ -79,7 +79,7 @@ public class NoteParser {
             entry.content = jsonObject.getString(DataConvert.JSON_CONTENT_KEY);
             getOriginMedia(jsonObject, entry, entry.content);
         } catch (Exception e) {
-            Logger.printLog(TAG, "getOriginContent fail : " + e);
+            Log.d(TAG, "getOriginContent fail : " + e);
         }
     }
 
@@ -118,7 +118,7 @@ public class NoteParser {
                 entry.originUri = Uri.parse(originUri);
             }
         } catch (Exception e) {
-            Logger.printLog(TAG, "getOriginMedia fail : " + e);
+            Log.d(TAG, "getOriginMedia fail : " + e);
         }
 
     }

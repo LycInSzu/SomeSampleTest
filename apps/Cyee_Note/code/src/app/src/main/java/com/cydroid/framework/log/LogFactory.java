@@ -1,4 +1,4 @@
-package com.gionee.framework.log;
+package com.cydroid.framework.log;
 
 import static com.gionee.framework.component.BaseApplication.FLAG_OPEN_LOG_TO_FILE;
 import static com.gionee.framework.component.BaseApplication.MASK_LOG_FLAG;

@@ -46,21 +46,24 @@
 
             <!-- GIONEE wanghaiyan 2016-12-20 modify for 50571 begin-->
             <!-- GIONEE wanghaiyan 2017-05-25 modify for 147800 begin-->
-			<!--Gionee wanghaiyan 2018-5-26 modify for CSW1707A-1115 begin-->
+            <!--Gionee wanghaiyan 2018-5-26 modify for CSW1707A-1115 begin-->
+            <!--Chenyee wanghaiyan 2018-10-22 modify for CSW1805A-876 begin-->
+            <!--Chenyee wanghaiyan 2018-10-25 modify for CSW1805A-1172 begin-->
             <CheckBox
                 android:id="@id/note_item_checkbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginBottom="-7dp"
+                android:layout_marginBottom="-2dp"
                 android:layout_marginStart="@dimen/home_note_item_reminder_margin_left"
-                android:layout_marginEnd="-5dp"
-                android:buttonTint="@color/check_box_state_color"
+                android:layout_marginEnd="-2dp"
                 android:clickable="false"
                 android:visibility="invisible" />
-			<!--Gionee wanghaiyan 2018-5-26 modify for CSW1707A-1115 end-->
-	     	<!-- GIONEE wanghaiyan 2017-05-25 modify for 147800 end-->
+            <!--Chenyee wanghaiyan 2018-10-25 modify for CSW1805A-1172 end-->
+            <!--Chenyee wanghaiyan 2018-10-22 modify for CSW1805A-876 end-->
+            <!--Gionee wanghaiyan 2018-5-26 modify for CSW1707A-1115 end-->
+            <!-- GIONEE wanghaiyan 2017-05-25 modify for 147800 end-->
             <cyee.widget.CyeeTextView
                 android:id="@id/note_item_time"
                 android:layout_width="wrap_content"
@@ -71,7 +74,7 @@
                 android:textSize="@dimen/home_note_item_time_size" />
 
             <!-- GIONEE wanghaiyan 2017-05-25 modify for 147800 begin-->
-			<!--Gionee wanghaiyan 2018-5-26 modify for CSW1707A-1115 begin-->
+            <!--Gionee wanghaiyan 2018-5-26 modify for CSW1707A-1115 begin-->
             <cyee.widget.CyeeTextView
                 android:id="@id/note_item_content"
                 android:layout_width="wrap_content"
@@ -83,11 +86,11 @@
                 android:layout_marginTop="@dimen/home_note_item_content_margin_top"
                 android:layout_toStartOf="@id/note_item_reminder"
                 android:textColor="@color/home_note_item_content_color"
-                android:textSize="@dimen/home_note_item_content_size" 
+                android:textSize="@dimen/home_note_item_content_size"
                 android:lines="2"
                 android:ellipsize="end"/>
-		   <!--Gionee wanghaiyan 2018-5-26 modify for CSW1707A-1115 begin-->
-	       <!-- GIONEE wanghaiyan 2017-05-25 modify for 147800 end-->
+            <!--Gionee wanghaiyan 2018-5-26 modify for CSW1707A-1115 begin-->
+            <!-- GIONEE wanghaiyan 2017-05-25 modify for 147800 end-->
         </com.cydroid.note.app.view.NoteCardBottomView>
 
     </LinearLayout>

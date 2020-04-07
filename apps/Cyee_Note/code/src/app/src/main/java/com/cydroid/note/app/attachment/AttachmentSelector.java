@@ -27,7 +27,7 @@ import android.widget.Toast;
 import cyee.app.CyeeAlertDialog;
 import com.cydroid.note.common.Log;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.R;
 import com.cydroid.note.app.NewNoteActivity;
 import com.cydroid.note.app.NoteAppImpl;
@@ -280,10 +280,10 @@ public class AttachmentSelector {
             }
         } catch (ActivityNotFoundException e) {
             Toast.makeText(mActivity, R.string.attachment_enter_camera_fail, Toast.LENGTH_SHORT).show();
-            Logger.printLog(TAG, "gotoTakePhotos fail : " + e.toString());
+            Log.d(TAG, "gotoTakePhotos fail : " + e.toString());
         } catch (FileUriExposedException e) {
             Toast.makeText(mActivity, R.string.attachment_enter_camera_fail, Toast.LENGTH_SHORT).show();
-            Logger.printLog(TAG, "gotoTakePhotos fail : " + e.toString());
+            Log.d(TAG, "gotoTakePhotos fail : " + e.toString());
         }
     }
 }

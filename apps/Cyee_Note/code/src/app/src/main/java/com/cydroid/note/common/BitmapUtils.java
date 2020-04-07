@@ -8,7 +8,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.text.TextPaint;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.R;
 import com.cydroid.note.app.Config;
 
@@ -103,7 +103,7 @@ public class BitmapUtils {
             outputStream = new FileOutputStream(filePath);
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
         } catch (Exception e) {
-            Logger.printLog(TAG, "compressToFile fail : " + e.toString());
+            Log.d(TAG, "compressToFile fail : " + e.toString());
         } finally {
             NoteUtils.closeSilently(outputStream);
         }

@@ -32,7 +32,7 @@ import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.ProgressBar;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.R;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -141,7 +141,7 @@ public class PhotoViewActivity extends Activity {
                                     break;
                             }
                             if (DEBUG) {
-                                Logger.printLog(TAG, "onLoadingFailed msg = " + message);
+                                Log.d(TAG, "onLoadingFailed msg = " + message);
                             }
                             progressBar.setVisibility(View.GONE);
                         }

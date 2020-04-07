@@ -18,7 +18,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.R;
 import com.cydroid.note.app.view.NoteGridLayoutManager;
 import com.cydroid.note.app.view.NoteSearchView;

@@ -9,7 +9,7 @@ import android.text.Spannable;
 import android.text.TextUtils;
 import com.cydroid.note.common.Log;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.app.attachment.AttachmentSelector;
 import com.cydroid.note.app.span.BillItem;
 import com.cydroid.note.app.span.PhotoImageSpan;
@@ -271,7 +271,7 @@ public class BuiltInNote {
                         NoteUtils.saveBitmap(rawBitmap, file);
                         rawBitmap.recycle();
                     }else {
-                        Logger.printLog(TAG, "bitmap file null");
+                        Log.d(TAG, "bitmap file null");
                     }
                 }
                 if (originUri != null) {
@@ -289,7 +289,7 @@ public class BuiltInNote {
                     jsonObject.put(PhotoImageSpan.PIC_HEIGHT, Config.EditPage.get(NoteAppImpl.getContext()).mImageHeight);
                     return jsonObject;
                 }else {
-                    Logger.printLog(TAG, "originUri null");
+                    Log.d(TAG, "originUri null");
                 }
             } catch (JSONException e) {
                 Log.w(TAG, "error", e);
@@ -378,7 +378,7 @@ public class BuiltInNote {
         try {
             NoteAppImpl.getContext().getContentResolver().applyBatch(NoteContract.AUTHORITY, insertOps);
         } catch (Exception e) {
-            Logger.printLog(TAG, "insert buildidnote fail : " + e.toString());
+            Log.d(TAG, "insert buildidnote fail : " + e.toString());
         }
     }
 

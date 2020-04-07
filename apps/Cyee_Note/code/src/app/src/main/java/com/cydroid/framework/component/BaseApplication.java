@@ -2,7 +2,7 @@ package com.gionee.framework.component;
 
 import android.app.Application;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 
 public class BaseApplication extends Application {
 
@@ -27,9 +27,11 @@ public class BaseApplication extends Application {
         super.onCreate();
     }
 
-
+    
+    /*
     public final void enableLog(int status) {
         Logger.enableLog(status);
     }
+	*/
 
 }

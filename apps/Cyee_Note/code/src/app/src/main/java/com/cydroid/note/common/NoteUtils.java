@@ -27,7 +27,7 @@ import android.util.DisplayMetrics;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.R;
 import com.cydroid.note.app.Config;
 import com.cydroid.note.app.DataConvert;
@@ -46,7 +46,7 @@ import com.cydroid.note.provider.NoteContract;
 import com.cydroid.note.provider.NoteShareDataManager;
 import com.cydroid.note.trash.data.TrashNoteItem;
 import com.cydroid.note.widget.WidgetUtil;
-import com.cydroid.note.common.Log;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -73,7 +73,8 @@ import java.util.regex.Pattern;
 import android.media.AudioManager;
 import android.media.AudioManager.OnAudioFocusChangeListener;
 import com.cydroid.note.common.Log;
-import cyee.provider.CyeeSettings;
+//Chenyee wanghaiyan
+import chenyee.provider.CyeeSettings;
 import com.cydroid.note.app.NoteAppImpl;
 //Gionee wanghaiyan 2015-11-12 add for CR01581714 end
 import java.util.Locale;
@@ -116,7 +117,7 @@ public class NoteUtils {
         sScreenHeight = Math.max(metrics.widthPixels, metrics.heightPixels);
         sDensity = metrics.density;
         if (DEBUG) {
-            Logger.printLog(TAG, "sScreenWidth = " + sScreenWidth + ",sScreenHeight = " + sScreenHeight);
+            Log.d(TAG, "sScreenWidth = " + sScreenWidth + ",sScreenHeight = " + sScreenHeight);
         }
     }
 
@@ -252,7 +253,7 @@ public class NoteUtils {
                 }
             }
         } catch (Throwable e) {
-            Logger.printLog(TAG, "getOriginData fail : " + e);
+            Log.d(TAG, "getOriginData fail : " + e);
         }
     }
 
@@ -326,10 +327,10 @@ public class NoteUtils {
             success = bitmap.compress(Bitmap.CompressFormat.JPEG, 90, os);
             return success;
         } catch (Throwable e) {
-            Logger.printLog(TAG, "error:" + e);
+            Log.d(TAG, "error:" + e);
         } finally {
             if (!success) {
-                Logger.printLog(TAG, "bitmap file delete");
+                Log.d(TAG, "bitmap file delete");
                 file.delete();  //NOSONAR
             }
             NoteUtils.closeSilently(os);
@@ -345,10 +346,10 @@ public class NoteUtils {
             success = bitmap.compress(format, quality, os);
             return success;
         } catch (Throwable e) {
-            Logger.printLog(TAG, "error:" + e);
+            Log.d(TAG, "error:" + e);
         } finally {
             if (!success) {
-                Logger.printLog(TAG, "bitmap file delete "+quality);
+                Log.d(TAG, "bitmap file delete "+quality);
                 file.delete();  //NOSONAR
             }
             NoteUtils.closeSilently(os);
@@ -403,7 +404,7 @@ public class NoteUtils {
                 }
             }
         } catch (Exception e) {
-            Logger.printLog(TAG, "customName fail:" + e);
+            Log.d(TAG, "customName fail:" + e);
         }
 
         return path;
@@ -434,7 +435,7 @@ public class NoteUtils {
         try {
             f.flush();
         } catch (IOException t) {
-            Logger.printLog(TAG, "flush fail :" + t);
+            Log.d(TAG, "flush fail :" + t);
         }
     }
 
@@ -445,7 +446,7 @@ public class NoteUtils {
         try {
             c.close();
         } catch (IOException t) {
-            Logger.printLog(TAG, "close fail :" + t);
+            Log.d(TAG, "close fail :" + t);
         }
     }
 
@@ -455,7 +456,7 @@ public class NoteUtils {
                 fd.close();
             }
         } catch (Throwable t) {
-            Logger.printLog(TAG, "fail to close:" + t);
+            Log.d(TAG, "fail to close:" + t);
         }
     }
 
@@ -465,7 +466,7 @@ public class NoteUtils {
                 cursor.close();
             }
         } catch (Throwable t) {
-            Logger.printLog(TAG, "fail to close:" + t);
+            Log.d(TAG, "fail to close:" + t);
         }
     }
 
@@ -475,7 +476,7 @@ public class NoteUtils {
                 database.close();
             }
         } catch (Throwable t) {
-            Logger.printLog(TAG, "fail to close:" + t);
+            Log.d(TAG, "fail to close:" + t);
         }
     }
 
@@ -520,7 +521,7 @@ public class NoteUtils {
             jsonStringer.endObject();
             return jsonStringer.toString();
         } catch (JSONException e) {
-            Logger.printLog(TAG, "error:" + e);
+            Log.d(TAG, "error:" + e);
             return null;
         }
     }
@@ -720,7 +721,8 @@ public class NoteUtils {
     public static int addNoteData(String title, String jsonContent, ContentResolver resolver,
                                   long modifiedTime, long reminderInMs, ArrayList<Integer> label,
                                   int encryptHintstate, int encrytRemindReadState, boolean isIsEncrypt) {
-        try{
+        //Chenyee wanghaiyan 2018-10-30 modify for CSW1805A-1440 begin
+        try {
             ContentValues values = new ContentValues();
             values.put(NoteContract.NoteContent.COLUMN_TITLE, title);
             values.put(NoteContract.NoteContent.COLUMN_CONTENT, jsonContent);
@@ -736,14 +738,12 @@ public class NoteUtils {
             Uri uri = resolver.insert(getContentUri(isIsEncrypt), values);
             int id = (int) ContentUris.parseId(uri);
             return id;
-            //Chenyee wanghaiyan 2018-10-19 modify for CSW1703A-3906 begin
-        } catch(Exception e){
+        } catch (Exception e) {
             Log.d(TAG, "e = " + e);
             Toast.makeText(NoteAppImpl.getContext(), R.string.low_memory, Toast.LENGTH_SHORT).show();
         }
         return -1;
-        //Chenyee wanghaiyan 2018-10-19 modify for CSW1703A-3906 end
-
+        //Chenyee wanghaiyan 2018-10-30 modify for CSW1805A-1440 end
     }
 
     public static boolean checkEnoughFreeMemory() {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cydroid.note"
-    android:versionCode="80100028"
-    android:versionName="8.1.0.ce">
+    android:versionCode="90000012"
+    android:versionName="9.0.0.m">
 
     <uses-sdk
         android:minSdkVersion="17"

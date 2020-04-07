@@ -66,7 +66,7 @@ class HotWordUtils {
                 byte[] data = readKeyWordData(keyWords[0]);
                 return getHotWorks(data);
             } catch (Exception e) {
-                Log.w(TAG, e);
+                Log.w(TAG, "Exception error", e);
             }
             return null;
         }
@@ -163,7 +163,7 @@ class HotWordUtils {
             inStream = new FileInputStream(file);
             return readKeyWordData(inStream);
         } catch (FileNotFoundException e) {
-            Log.w(TAG, e);
+            Log.w(TAG, "FileNotFoundException error", e);
         } finally {
             NoteUtils.closeSilently(inStream);
         }
@@ -178,9 +178,9 @@ class HotWordUtils {
             inStream = conn.getInputStream();
             return readKeyWordData(inStream);
         } catch (MalformedURLException e) {
-            Log.w(TAG, e);
+            Log.w(TAG, "MalformedURLException error", e);
         } catch (IOException e) {
-            Log.w(TAG, e);
+            Log.w(TAG, "IOException error", e);
         } finally {
             NoteUtils.closeSilently(inStream);
         }
@@ -197,7 +197,7 @@ class HotWordUtils {
             }
             return outStream.toByteArray();
         } catch (IOException e) {
-            Log.w(TAG, e);
+            Log.w(TAG, "IOException error", e);
         } finally {
             NoteUtils.closeSilently(inStream);
         }

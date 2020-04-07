@@ -2,7 +2,7 @@ package com.gionee.framework.storage;
 
 //import com.gionee.amiweather.framework.ApplicationProperty;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 
 public final class StorageMgr implements Storage {
 
@@ -48,7 +48,7 @@ public final class StorageMgr implements Storage {
 
     @Override
     public String getSdcardRootPath() {
-        Logger.printLog(TAG, "sdcard path = " + mImplStorageManager.getSdcardRootPath());
+        Log.d(TAG, "sdcard path = " + mImplStorageManager.getSdcardRootPath());
         return mImplStorageManager.getSdcardRootPath();
     }
 

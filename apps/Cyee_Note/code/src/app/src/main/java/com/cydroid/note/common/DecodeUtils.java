@@ -9,7 +9,7 @@ import android.graphics.Matrix;
 import android.media.ExifInterface;
 import android.net.Uri;
 
-import com.gionee.framework.log.Logger;
+import com.cydroid.note.common.Log;
 import com.cydroid.note.encrypt.EncryptUtil;
 import com.cydroid.note.encrypt.FileConfuseSession;
 
@@ -33,7 +33,7 @@ public class DecodeUtils {
             Bitmap bitmap = BitmapFactory.decodeStream(is, null, options);
             return bitmap;
         } catch (Throwable e) {
-            Logger.printLog(TAG, "decodeRawBitmap rawFileName fail" + e);
+            Log.d(TAG, "decodeRawBitmap rawFileName fail" + e);
         } finally {
             NoteUtils.closeSilently(is);
         }
@@ -54,7 +54,7 @@ public class DecodeUtils {
             Bitmap bitmap = BitmapFactory.decodeStream(is, null, options);
             return bitmap;
         } catch (Throwable e) {
-            Logger.printLog(TAG, "decodeRawBitmap rawFileName fail" + e);
+            Log.d(TAG, "decodeRawBitmap rawFileName fail" + e);
         } finally {
             NoteUtils.closeSilently(is);
         }
@@ -80,7 +80,7 @@ public class DecodeUtils {
             Bitmap bitmap = decodeThumbnail(is, size[0], size[1], targetW, targetH, rotation, isCropped);
             return bitmap;
         } catch (Throwable e) {
-            Logger.printLog(TAG, e.toString());
+            Log.d(TAG, e.toString());
         } finally {
             NoteUtils.closeSilently(is);
         }
@@ -101,7 +101,7 @@ public class DecodeUtils {
         try {
             exif = new ExifInterface(filepath);
         } catch (IOException ex) {
-            Logger.printLog(TAG, "cannot read exif" + ex);
+            Log.d(TAG, "cannot read exif" + ex);
         }
         if (exif != null) {
             int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, -1);
@@ -177,7 +177,7 @@ public class DecodeUtils {
             size[1] = options.outHeight;
             return size;
         } catch (FileNotFoundException e) {
-            Logger.printLog(TAG, "loadBitmapSize error:" + e);
+            Log.d(TAG, "loadBitmapSize error:" + e);
         } finally {
             NoteUtils.closeSilently(is);
         }
@@ -197,7 +197,7 @@ public class DecodeUtils {
             }
             return decodeBitmap(is);
         } catch (Throwable e) {
-            Logger.printLog(TAG, "decodeBitmap filePath error: " + e);
+            Log.d(TAG, "decodeBitmap filePath error: " + e);
             return null;
         } finally {
             NoteUtils.closeSilently(is);
@@ -214,7 +214,7 @@ public class DecodeUtils {
             }
 
         } catch (Throwable e) {
-            Logger.printLog(TAG, "decodeBitmap error:" + e);
+            Log.d(TAG, "decodeBitmap error:" + e);
         } finally {
             NoteUtils.closeSilently(is);
         }
@@ -226,7 +226,7 @@ public class DecodeUtils {
             Bitmap bitmap = BitmapFactory.decodeStream(is);
             return bitmap;
         } catch (Throwable e) {
-            Logger.printLog(TAG, "decodeBitmap error111 :" + e);
+            Log.d(TAG, "decodeBitmap error111 :" + e);
             return null;
         }
     }

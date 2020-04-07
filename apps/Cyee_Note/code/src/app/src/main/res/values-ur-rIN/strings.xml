@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- common string -->
+  <string name="app_name">نوٹ</string>
+  <string name="app_name_outside">نوٹ</string>
+  <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626813 begin -->
+  <string name="button_sure">اوکے</string>
+  <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626813 end -->
+  <string name="button_cancel">منسوخ کریں</string>
+  <string name="button_delete">ڈلیٹ کریں</string>
+    <string name="file_note_found">فائل نہیں ملی</string>
+  <!-- home activity, search-->
+  <string name="search_hint">نوٹ تلاش کریں</string>
+  <string name="search_page_label_title">لیبل کے مطابق ملاحظہ کریں</string>
+  <string name="note_main_activity_title_layout_title_text">نوٹ</string>
+    <string name="note_action_del_string">ڈلیٹ کریں</string>
+  <!-- gionee wanghaiyan modify on 2016-12-07 for 40606 begin -->
+  <string name="note_action_edit_string">نیا</string>
+  <!-- gionee wanghaiyan modify on 2016-12-07 for 40606 end -->
+  <string name="note_action_share_string">شیئر کریں</string>
+  <string name="note_action_del_message">کیا منتخب نوٹس کوڈلیٹ کرنا چاہتے ہیں?</string>
+  <string name="dialog_negative_text">مسترد کریں</string>
+    <string name="alert_time_early">وقت ابھی سے پہلے کا ہے،براہ کرم دوبارہ سیٹ کریں</string>
+  <!-- Edit page , attachment -->
+    <string name="attachment_enter_camera_fail">کوئی کیمرہ نہیں</string>
+  <!--label select dialog  -->
+  <string name="default_label_life">زندگی</string>
+  <string name="default_label_meeting">میٹنگ</string>
+  <string name="default_label_travel">سفر</string>
+  <string name="default_label_inspiration">تحریک</string>
+  <string name="label_selector_dialog_custom_label_text">لیبل</string>
+  <!--label select dialog  -->
+  <string name="label_custom_action_bar_title">کسٹم لیبل</string>
+  <string name="label_custom_edit_text_hint">ان پٹ لیبل</string>
+  <string name="label_custom_exist">لیبل موجود ہے، دوبارہ درج کریں</string>
+  <string name="label_custom_delete_attention">لیبل کے ہٹائے جانے پر نوٹس نہیں ہٹیں گے، کیا آپ لیبل کو ڈلیٹ کرنا چاہتے ہیں?</string>
+  <plurals name="number_of_items_selected">
+    <item quantity="zero">%1$d منتخب کۓ جا چکے ہیں</item>
+    <item quantity="one">%1$d منتخب کۓ جا چکے ہیں</item>
+    <item quantity="other">%1$d منتخب کۓ جا چکے ہیں</item>
+  </plurals>
+  <string name="select_all">تمام کو منتخب کریں</string>
+  <string name="unselect_all">تمام کو غیرمنتخب کریں</string>
+  <!--NewNoteActivity-->
+  <string name="title_hint">عنوان درج کریں</string>
+  <string name="title_focus_hint">عنوان درج کریں</string>
+  <string name="content_hint">مواد درج کریں</string>
+  <string name="add_image_fail">تصاویر شامل کرنے میں ناکام رہا</string>
+  <string name="note_tip_loading">لوڈ ہو رہا ہے</string>
+  <string name="note_tip_loadFinish">کوئی مواد نہیں ہے</string>
+  <string name="note_tip_search">استفسار کے تحت</string>
+  <string name="note_tip_searchFinish">کوئی میچ اکاؤنٹ مواد نہیں ملا</string>
+  <!--PreviewPictureMakeProxy-->
+  <string name="create_picture">فوٹو بنایا جا رہا ہے...</string>
+  <string name="create_picture_fail">تصویر کو پیدا کرنے میں ناکام ہوگیا</string>
+  <string name="create_picture_create_bmp_fail">مواد بہت طویل ہے، سسٹم نے ناکامی کا فوٹو جینریٹ کِیا ہے</string>
+  <string name="create_picture_fail_no_space">فوٹو جینریٹ کرنے کے لۓ کافی اسٹوریج اسپیس نہیں ہے</string>
+  <!--PreviewActivity-->
+    <string name="share_preview">پریویو شیئر کریں</string>
+    <string name="file_save_toast_text">"فوٹو محفوظ ہو رہا ہے "</string>
+  <string name="file_save_fail_toast_text">محفوظ کرنے کے لۓ کافی اسپیس نہیں ہے</string>
+  <string name="file_save_fail_origin_no_exist">اصل فائل موجود نہیں ہے، فوٹو محفوظ نہیں کیا جا سکتا</string>
+  <string name="date_upgrade_message">نوٹ پیڈ کو اپڈیٹ کر رہا ہے،براہ کرم کچھ لمحہ انتظار کریں</string>
+  <string name="import_backup_config_dialog_title">نوٹ پیڈ درآمد کریں</string>
+  <string name="import_backup_config_dialog_message">یہ ورژن نۓ ڈیزائن والا ہے، لوکل بیک اپ فنکشن ابھی سپورٹ نہیں کرے گا ، پتہ چلا ہے کہ آپ کے پاس دستیاب ڈیٹا کا بیک اپ درآمد نہیں ہو ہے،براہ کرم بیک اپ ڈیٹا کے بارے میں وقت پر جانکاری دیں، تاكہ وہ نہ کھوۓ.</string>
+  <string name="import_backup_config_dialog_btn_cancel">منسوخ کریں</string>
+  <string name="import_backup_config_dialog_btn_import">درآمد کریں</string>
+  <string name="import_backup_config_dialog_checkbox_text">کوئی طویل تجویز نہیں</string>
+  <string name="import_backup_progress_dialog_title">درآمد کریں</string>
+  <string name="import_backup_progress_dialog_message">نوٹ پیڈ ڈیٹا درآمد ہو رہا ہے</string>
+  <string name="import_backup_fail_message">درآمد طریقہ کار میں کوئی خامی آئی ہے،براہ کرم چیک کریں کہ کیا آپ کے میموری کارڈ میں %1$dMB سے زیادہ اسپیس بچا ہے یا نہیں، پروگرام واپس یہ چیک کرے گا کہ کیا آپ کو اگلے بوٹ کو درآمد کرنے کی ضرورت ہے.</string>
+    <string name="attachment_record_permission_hint">براہ کرم ساؤنڈ رِکَارڈ کی اجازت ہے یا نہیں، چیک کریں</string>
+  <string name="max_content_input_mum_limit">مواد زیادہ سے زیادہ درج کی جانے والی حد تک پہنچ گیا ہے.</string>
+  <string name="max_pic_input_mum_limit">تصویر کی حد کی زیادہ سے زیادہ تعداد تک پہونچ گیا ہے.</string>
+  <string name="setting_title">سیٹنگ</string>
+  <string name="inscribed_signature">ثبت کۓ دستخط</string>
+  <string name="version_update">ورژن اپڈیٹ</string>
+  <string name="no_version">موجودہ ورژن نیا ہے</string>
+  <string name="progress_checking">ورژن چیک ہو رہا ہے،براہ کرم کچھ دیر انتظار کریں...</string>
+    <string name="about_us">ہمارے بارے میں</string>
+  <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626568 begin -->
+  <string name="signature_input_hint">براہ کرم دستخط کریں</string>
+  <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626568 end -->
+    <string name="aboutus_version_content_text">ورژن:V</string>
+  <string name="aboutus_copyright_content_text">کاپی رائٹ©2015 Shenzhen Gionee communication equipment Co.، Ltd. جمیع حقوق محفوظ.</string>
+  <string name="network_error">نیٹ ورک میں خامی</string>
+  <string name="no_space">کوئی اسپیس نہیں ہے</string>
+  <string name="file_not_found">فائل نہیں ملی</string>
+  <string name="local_file_verify_failed">مقامی فائل کی تصدیق کرنے میں ناکام ہوگیا</string>
+  <string name="server_error">سرور میں خامی</string>
+  <string name="upgrading">اپگریڈ ہو رہا ہے...</string>
+  <string name="verify_failed">تصدیق ناکام رہی</string>
+  <string name="no_sdcard">کوئی SD کارڈ نہیں ہے</string>
+  <string name="low_memory">میموری کم ہے</string>
+  <string name="dialog_update_compelete">ایک نۓ ورژن کا پتہ چلا ہے. تازہ ترین ورژن اپ گریڈ کریں.</string>
+  <string name="dialog_update_or_not">,\n\nکیا اب اپڈیٹ ہو گیا ہے?</string>
+  <string name="dialog_update">اپڈیٹ کریں</string>
+  <string name="dialog_install">انسٹال کریں</string>
+    <string name="down_load_dialog_msg">ڈاؤن لوڈ ہو رہا ہے...</string>
+  <string name="down_load_paused_msg">ڈاؤن لوڈ رکا ہوا ہے</string>
+  <string name="app_widget2x2">Note2x2</string>
+  <string name="app_widget4x4">Note4x4</string>
+  <string name="time_am">AM</string>
+  <string name="time_pm">PM</string>
+  <string name="message_media_record_time_max">زیادہ سے زیادہ ریکارڈنگ وقت تک پہونچ گیا ہے. براہ کرم ریکارڈنگ کو روک دیں.</string>
+    <string name="ai_activity_title">AI</string>
+  <string name="ami_recommend_panel_title">Ami Recommend</string>
+  <string name="favor_recommend_panel_title">فیور کی تجویز ہے</string>
+  <string name="recommend_search_hint_text">ان پٹ اہم الفاظ</string>
+  <string name="authorization_failed">اِس فیچر کو استعمال کرنے کی اجازت نہیں مل سکتی ہے</string>
+  <string name="ai_activity_not_network_tip">موجودہ نیٹ ورک منقطع ہوگیا ہے، لیکن نیٹ ورک تلاش بھی کر رہا ہے</string>
+    <string name="note_storage_inner">فون اسٹوریج</string>
+    <string name="alert_remaining_chars">آپ کواب بھی <xliff:g id="file">%d</xliff:g> حروف ڈلیٹ کرنے کی ضرورت ہے</string>
+  <string name="alert_remaining_char">آپ کو اب بھی <xliff:g id="file">%d</xliff:g> کیرکیٹر ڈلیٹ کرنے کی ضرورت</string>
+  <string name="data_flow_alert_user_title">نوٹ کا استعمال کرنے کے لئے خوش آمدید</string>
+  <string name="data_flow_alert_user_content">اپلی کیشن کا استعمال کرتے ہوئے پرمیشن تک رسائی حاصل کرنے کی اجازت دیں: \nنیٹ ورک کنیکشن ، آڈیو ریکارڈ کریں، تصویر لیں ، اپنے بیرونی سٹوریج کے مواد تک رسائی کریں، \nکیا جاری رکھنا چاہتے ہیں؟?</string>
+  <string name="data_flow_alert_user_checkbox">کبھی یاد نہ دلائیں</string>
+  <string name="alert_user_title_str">سسٹم پرامپٹ ہونا</string>
+  <string name="alert_user_ok">جاری رکھیں</string>
+  <string name="alert_user_cancle">باہر نکلیں</string>
+    <string name="notification_title">تصویر ڈاؤن لوڈ کریں</string>
+  <string name="download_poto_hint">میں تصویر ڈاؤن لوڈ کریں：</string>
+  <string name="download_compelete">ڈاؤن لوڈ مکمل</string>
+  <string name="download_unsurpport_hint">ان سپورٹ کی قسم</string>
+  <string name="vsq_tip_text">* پاسورڈ کی تصدیق کرنے کے لئے حفاظتی سوال و جواب</string>
+    <string name="vsq_confirm_btn_text">تصدیق کریں</string>
+    <string name="choose_question_dialog_title">سوال</string>
+  <string name="setting_secret_name">اینکرپٹ کرنے کی یاد دہانی</string>
+  <string name="setting_secret_tip">نوٹ پیڈ کی نجی مواد کے لئے اینکرپٹ کرنے کی یاد دہانی کرانا</string>
+  <string name="guideline_enter_private_album">دو انگلیوں سے ہوم پیج پرنیچے سرکائیں.</string>
+  <string name="note_action_encrypt_string">اینکرپٹ کریں</string>
+  <string name="note_action_decrypt_string">ڈیکرپشن کریں</string>
+  <string name="password_set_successed_title">سیٹ کرنا کامیاب رہا</string>
+  <string name="modified_password">پاسورڈ بدلیں</string>
+  <string name="modified_protect_question">پاس ورڈ کی سیکورٹی سے متعلق سوالات کو تبدیل کریں</string>
+  <string name="secret_room">بیک روم</string>
+  <string name="forget_password">اپنا پاس ورڈ بھول گئے</string>
+  <string name="setting_password">اپنے کے چار نمبر کے پاس ورڈ سیٹ کریں</string>
+  <string name="verification_password">پاسورڈ کی تصدیق</string>
+  <string name="password_error_hint">غلط پاسورڈ، آپ %1$s مرتبہ درج کر سکتے ہیں</string>
+  <string name="setting_password_hint">نجی نوٹوں استعمال کرنے سے پہلے، سب سے پہلے اپنا پاس ورڈ مقرر کریں</string>
+  <string name="ensure_password">پاسورڈ کی تصدیق کریں</string>
+  <string name="password_not_match">پاس ورڈ میل نہیں کھا رہا، پھر سے کوشش کریں</string>
+  <string name="enter_password">برائے کرم اپنا پاس ورڈ داخل کریں</string>
+  <string name="enter_password_later">برا کرم %1$s منٹ میں دوبارہ کوشش کریں</string>
+  <string name="verify_sq_activity_title">پاس ورڈ کے تحفظ کی تصدیق کریں</string>
+  <string name="setting_password_protect_QA">پاسورڈ کا سیکورٹیی انتظام سیٹ کریں</string>
+  <string name="answer_incorrect">غلط جواب</string>
+    <string name="sq_q_text_tip">Q:</string>
+  <string name="sq_a_text_tip">A:</string>
+  <string name="note_content_notChange_hint">مواد نہیں بدلہ ہے اَور آپنے پہلے ہی محفوظ کر لیا ہے</string>
+    <string name="encrypt_hint_title">انیکریٹ تجاویز</string>
+  <string name="encrypt_hint_content">نوٹ میں پرائیویسی کے وا ہونے کا خطرہ ہے، اس کرو اینکرپٹ کرنے کی سفارش کی جاتی ہے </string>
+  <string name="encrypt_hint_manager_dialog_sure">اینکرپٹ کریں</string>
+  <string name="successful_modification">کامیابی سے تبدیل کریں</string>
+  <string name="password_set_successed_congratulations">مبارک ہو!</string>
+  <string name="password_set_successed">آپ نے کامیابی سے پاسورڈ سیٹ کر لیا</string>
+  <string name="password_set_successed_tips">برا کرم مندرجہ ذیل امور نوٹ کریں:</string>
+  <string name="password_set_successed_tips_first">1. ٹول کو کلین کرتے وقت ناٹ میڈیا منتخب نا کریں ورنہ اینکرپٹڈ ناٹ پیڈ کی تصاویر اور ٹیپ براؤز نہیں کر سکیں گے.</string>
+  <string name="password_set_successed_tips_second">2.نوٹ پیڈ کے اینکرپشن کے بعد اپلی کیشن کو ان انسٹال نہ کریں، دوسری صورت میں اینکرپٹ شدہ نوٹ پیڈ دوبارہ حاصل نہیں ہو پائے گا.</string>
+  <string name="password_set_successed_sure">اوکے</string>
+  <string name="encrypt_main_note_tip_load_finish">یہ تو بالکل خالی ہے .کیا آپ چھوٹے موٹے سیکریٹ؟ شامل کرنا چاہتے ہیں ، نوٹ پیڈ پر براؤزنگ کرتے ہوئے شامل کرنے کے لئے " اینکرپشن " بٹن پر کلک کریں.</string>
+  <!-- GIONEE wanghaiyan 2016-12-17 modify for 47298 begin-->
+  <string name="title_more_dialog_title">دیگر</string>
+  <!-- GIONEE wanghaiyan 2016-12-17 modify for 47298 end-->
+  <string name="confirm_protect_question"> پاس ورڈ کی سیکورٹی کے محفوظ کردہ سوال جواب کی تصدیق کریں</string>
+  <string name="protect_question_empty">تحفظ سے متعلق سوال خالی نہیں چھوڑا جا سکتا</string>
+  <string name="encrypt_switch_close">بند کریں</string>
+  <string name="encrypt_switch_open">کھولیں</string>
+  <string name="security_os_footer_add">جوڑیں</string>
+  <string name="security_os_footer_search">تلاش کریں</string>
+  <string name="security_os_footer_secrete_space">ذاتی اسپیس</string>
+  <string name="encrypt_main_activity_security_os_title">خفیہ کردہ نوٹس</string>
+  <string name="encrypt_main_activity_security_os_add_tip">کوئی مواد نہیں ہے</string>
+  <string name="encrypt_select_confirm">تصدیق کریں</string>
+  <string name="encrypt_select_cancel">منسوخ کریں</string>
+  <string name="encrypt_select_count_text">کوئی آئٹم منتخب نہیں کیاگیا</string>
+  <string name="encrypt_main_note_security_os_tip_load_finish">کوئی نوٹ شامل نہیں کئے گئے ہیں.</string>
+  <string name="encrypt_note_action_del_message">آپ منتخب کردہ نوٹ کو ڈلیٹ کرنا ہیں؟ \n منتخب شدہ نوٹوں کا مواد ہمیشہ کے لیے ڈلیٹ ہو جائے گا!</string>
+  <string name="encrypt_finish_hint_for_security_os">نجی اسپیس کے لئے اینکرپٹ کیا ہوا</string>
+  <string name="decrypt_finish_hint">ڈکرپشن مکمل ہوا</string>
+  <string name="add_pics">تصاویر شامل کریں</string>
+  <string name="encrypt_fail">اینکرپٹ کرنا ناکام</string>
+  <string name="decrypt_fail">ڈکرپشن ناکام ہوا</string>
+  <string name="encrypt_success">اینکرپشن کی کامیابی</string>
+    <string name="delete_hint">ڈلیٹ ہو رہا ہے، براہ کرم اس کی بعد میں دوبارہ کوشش کریں</string>
+  <string name="encrypt_hint">اینکرپٹ ہو رہا ہے ، براہ کرم اس کی بعد میں دوبارہ کوشش کریں</string>
+  <string name="decrypt_hint">ڈی رپٹنگ، اسے بعد میں دوبارہ کوشش کریں براہ کرم</string>
+  <string name="recovery_hint">دوبارہ حاصل کر رہا ہے، براہ کرم اس کی بعد میں دوبارہ کوشش کریں</string>
+  <string name="partial_encrypt">%1$s انکرپشن کامیاب ہوا،%2$s انکرپشن ناکام ہوگیا. </string>
+  <string name="partial_decrypt">%1$s ڈکرپشن کامیاب ہوا،%2$s ڈکرپشن ناکام رہا. </string>
+  <!--Trash-->
+  <string name="trash">ٹریش</string>
+  <!-- GIONEE wanghaiyan 2017-02-05 modify for 67550 begin-->
+  <string name="trash_first_delete_alert">ڈلیٹ کئے ہوئے نوٹس ٹریش میں منتقل ہو جائیں گے( سیٹنگ - ٹریش ) اور سات دن کے بعد صاف ہو جائیں گے .\n آپ ٹریس سے ان کو ڈلیٹ بھی کر سکتے ہیں اور بحال بھی کر سکتے ہیں.</string>
+  <!-- GIONEE wanghaiyan  2017-02-05 modify for 67550 end-->
+  <string name="trash_recover">ركور کریں</string>
+  <plurals name="trash_left_days">
+    <item quantity="zero">"%1$d دن رہ گیا ہے"</item>
+    <item quantity="one">"%1$d دن رہ گیا ہے"</item>
+    <item quantity="other">"%1$d دن رہ گئے ہیں"</item>
+  </plurals>
+  <string name="trash_recover_hint">دوبارہ حاصل کر رہا ہے، براہ کرم اس کی بعد میں دوبارہ کوشش کریں</string>
+  <string name="trash_delete_message">منتخب نوٹوں کو ہمیشہ کے لئےڈلیٹ کرنا چاہتے ہیں ؟?</string>
+    <string name="note_action_search_string">تلاش کریں</string>
+  <string name="note_action_setting_string">سیٹنگ</string>
+  <string name="unkown">نامعلوم</string>
+  <string name="download">ڈاؤن لوڈ کریں</string>
+  <string name="down_load_fail_msg">ڈاؤن لوڈ ناکام رہا</string>
+  <string name="install_amiweather_tip">Ami موسم ، موسم کی پیشن گوئی فراہم کرے گا، فون سراغ رانی کو انسٹال نہیں کیا گیا Ami موسم ڈاؤن لوڈ اور انسٹال کرنا چاہتے ہیں کہ نہیں</string>
+  <string name="install_amicalendar_tip">Ami کیلنڈر سروس کیلنڈر فراہم کرے گا، فون سراغ رانی کو انسٹال نہیں کیا گیا آیا Ami کیلنڈر ڈاؤن لوڈ اور انسٹال کرنا چاہتے ہیں کہ نہیں</string>
+  <string name="no_network">نیٹ ورک استعمال میں نہیں ہے</string>
+  <string name="no_pictures">سٹوریج کارڈ میں کوئی تصویر نہیں ہے.</string>
+
+    <string name="add_attach_fail">افسوس، فائل کی اس شکل کوسپورٹ نہیں کرتے.</string>
+  <string name="long_bitmap_add_failed">تصویر کی لمبائی حد سے باہر ہے، شامل کرنا ناکام رہا</string>
+</resources>

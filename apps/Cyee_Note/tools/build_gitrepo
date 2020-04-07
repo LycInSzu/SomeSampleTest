@@ -1,0 +1,5 @@
+#!/bin/bash
+source config_svn_ignore
+cd $RSYNC_SRC/app
+git co master && git pull origin master && gradle clean && gradle aR
+

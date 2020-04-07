@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/label_custom_list_item_height"
+    android:background="@android:color/transparent"
+    android:minHeight="@dimen/label_custom_list_item_height"
+    android:paddingStart="@dimen/label_custom_list_item_padding_left"
+    android:paddingEnd="@dimen/label_custom_list_item_padding_right">
+
+    <ImageView
+        android:id="@+id/label_custom_list_item_delete"
+        style="@style/label_custom_edit_button_style"
+        android:layout_width="@dimen/label_custom_list_item_height"
+        android:layout_height="@dimen/label_custom_list_item_height"
+        android:layout_alignParentEnd="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/search_clear_icon" />
+
+    <TextView
+        android:id="@+id/label_custom_list_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_custom_list_item_height"
+        android:layout_toStartOf="@id/label_custom_list_item_delete"
+        android:gravity="center_vertical"
+        android:textColor="@color/setting_list_item_text_color"
+        android:textSize="@dimen/label_custom_list_item_text_size" />
+
+</RelativeLayout>

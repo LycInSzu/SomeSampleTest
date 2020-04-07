@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/* //device/apps/common/assets/res/any/colors.xml
+**
+** Copyright 2006, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string name="app_name">Catatan</string>
+    <string name="app_name_outside">Catatan</string>
+    <string name="button_sure">OKE</string>
+    <string name="button_cancel">Batal</string>
+    <string name="button_delete">Hapus</string>
+    <string name="file_note_found">File tidak ditemukan</string>
+    <string name="search_hint">Mencari catatan</string>
+    <string name="search_page_label_title">Tampilkan oleh label</string>
+    <string name="note_main_activity_title_layout_title_text">Catatan</string>
+    <string name="note_action_del_string">Hapus</string>
+    <string name="note_action_edit_string">Baru</string>
+    <string name="note_action_share_string">Bagikan</string>
+    <string name="note_action_del_message">Yakin untuk menghapus catatan yang terpilih?</string>
+    <string name="dialog_negative_text">Abaikan</string>
+    <string name="alert_time_early">Waktu sebelum sekarang. Memuat memasang ulang</string>
+    <string name="attachment_enter_camera_fail">Tidak ada Kamera</string>
+    <string name="default_label_life">Hidup</string>
+    <string name="default_label_meeting">Rapat</string>
+    <string name="default_label_travel">Perjalanan</string>
+    <string name="default_label_inspiration">Inspirasi</string>
+    <string name="label_selector_dialog_custom_label_text">Label</string>
+    <string name="label_custom_action_bar_title">Kostum label</string>
+    <string name="label_custom_edit_text_hint">Masukan label, panjang maksimal 12</string>
+    <string name="label_custom_exist">Label sudah ada, masukan lagi</string>
+    <string name="label_custom_delete_attention">Ini tidak akan menghapus catatan, pada saat label dihapus, apakah anda akan menghapus label?</string>
+    <plurals name="number_of_items_selected"> 
+        <item quantity="zero">%1$d Dipilih</item>
+        <item quantity="one">%1$d Dipilih</item>
+        <item quantity="other">%1$d Dipilih</item>
+    </plurals>
+    <string name="select_all">Pilih semua</string>
+    <string name="unselect_all">Tidak pilih semua</string>
+    <string name="title_hint">Masukkan Judul</string>
+    <string name="title_focus_hint">Masukan judul, panjang maksimal 15</string>
+    <string name="content_hint">Masukkan isi</string>
+    <string name="add_image_fail">menambahkan gambar gagal</string>
+    <string name="note_tip_loading">Memuat</string>
+    <string name="note_tip_loadFinish">Tidak ada konten</string>
+    <string name="note_tip_search">Dibawah pertanyaan</string>
+    <string name="note_tip_searchFinish">Tidak ada yang sesuai dengan konten</string>
+    <string name="create_picture">Membuat gambar...</string>
+    <string name="create_picture_fail">Membuat gambat gagal</string>
+    <string name="create_picture_create_bmp_fail">Konten terlalu panjang, sistem gagal membuat gambar</string>
+    <string name="create_picture_fail_no_space">Pro, tidak memiliki ruang penyimpanan yang cukup untuk membuat sebuah gambar</string>
+    <string name="share_preview">Membagikan pratinjau</string>
+    <string name="file_save_toast_text">Menyimpan gambar di</string>
+    <string name="file_save_fail_toast_text">Pro, tidak ada ruang yang cukup untuk menyimpan</string>
+    <string name="file_save_fail_origin_no_exist">Pro, File original hilang, tidak dapa menyimpan gambar</string>
+    <string name="date_upgrade_message">Memperbarui data Notepad, Silahkan tunggus sebentar</string>
+    <string name="import_backup_config_dialog_title">Import Notepad</string>
+    <string name="import_backup_config_dialog_message">Versi ini dari design terbaru, Fungsi pencadangan lokal tidak lagi didukung, mendeteksi andan memiliki cadangan data yang belum diimport, Silahkan cocokan waktu cadangan data, sehingga tidak hilang.</string>
+    <string name="import_backup_config_dialog_btn_cancel">Batal</string>
+    <string name="import_backup_config_dialog_btn_import">Import</string>
+    <string name="import_backup_config_dialog_checkbox_text">Tidak ada lagi tips</string>
+    <string name="import_backup_progress_dialog_title">Import</string>
+    <string name="import_backup_progress_dialog_message">Import data Notepad</string>
+    <string name="import_backup_fail_message">Proses import mengalami gangguan, Silahkan periksa ruang yang tersisa pada kartu memori anda lebih besar dari%1$dMB, Program akan kembali untuk memeriksa jika anda membutuhkan import boot selanjutnya..</string>
+    <string name="attachment_record_permission_hint">Silakan memeriksa izin rekaman suara</string>
+    <string name="max_content_input_mum_limit">Batas maksimal masukan konten telah mencapai batasnya</string>
+    <string name="max_pic_input_mum_limit">Telah mencapai batas jumlah maksimum gambar</string>
+    <string name="setting_title">Pengaturan</string>
+    <string name="inscribed_signature">Tanda tangan dibuat</string>
+    <string name="version_update">Perbaruan versi</string>
+    <string name="no_version">Versi saat ini adalah versi terbaru</string>
+    <string name="progress_checking">Sedang memeriksa versi, silakan menunggu sebentar...</string>
+    <string name="about_us">Tentang kami</string>
+    <string name="signature_input_hint">Silakan memasukkan tanda tangan</string>
+    <string name="aboutus_version_content_text">Versi:V</string>
+    <string name="aboutus_copyright_content_text">Hak Cipta©2015 Shenzhen Gionee communication equipment Co., Ltd. Seluruh hak cipta dilindungi.</string>
+    <string name="network_error">Jaringan Error</string>
+    <string name="no_space">Tidak ada ruang</string>
+    <string name="file_not_found">File tidak ditemukan</string>
+    <string name="local_file_verify_failed">Gagal memverifikasi berkas lokal</string>
+    <string name="server_error">Kesalahan server</string>
+    <string name="upgrading">Sedang memperbarui...</string>
+    <string name="verify_failed">Verifikasi gagal</string>
+    <string name="no_sdcard">Tidak ada kartu SD</string>
+    <string name="low_memory">Memori rendah</string>
+    <string name="dialog_update_compelete">Versi baru terdeteksi. Silakan memperbarui versi terbaru.</string>
+    <string name="dialog_update_or_not">,\n\ndiperbarui sekarang?</string>
+    <string name="dialog_update">Update</string>
+    <string name="dialog_install">Pasang</string>
+    <string name="down_load_dialog_msg">downloading...</string>
+    <string name="down_load_paused_msg">Pengunduhan dihentikan sementara</string>
+    <string name="app_widget2x2">Catatan 2x2</string>
+    <string name="app_widget4x4">Catatan 4x4</string>
+    <string name="time_am">AM</string>
+    <string name="time_pm">PM</string>
+    <string name="message_media_record_time_max">Durasi rekaman telah mencapai maksimal, merekam dihentikan</string>
+    <string name="ai_activity_title">AI</string>
+    <string name="ami_recommend_panel_title">Ami Recommend</string>
+    <string name="favor_recommend_panel_title">Favor Recommend</string>
+    <string name="recommend_search_hint_text">Masukkan kata kunci</string>
+    <string name="authorization_failed">Tidak mendapatkan izin untuk menggunakan fitur ini</string>
+    <string name="ai_activity_not_network_tip">Jaringan saat ini tidak tersambung, tetapi juga pencarian jaringan</string>
+    <string name="note_storage_inner">Penyimpanan internal</string>
+    <string name="alert_remaining_chars">Anda masih harus menghapus <xliff:g id="file">%d</xliff:g> Karakter</string>
+    <string name="alert_remaining_char">Anda masih harus menghapus <xliff:g id="file">%d</xliff:g> Karakter</string>
+    <string name="data_flow_alert_user_title">Selamat datang di Catatan</string>
+    <string name="data_flow_alert_user_content">app:\nsambungan jaringan, rekam audio, ambil gambar, akses konten penyimpanan eksternal Anda.\nLanjut?</string>
+    <string name="data_flow_alert_user_checkbox">Jangan pernah mengingatkan</string>
+    <string name="alert_user_title_str">Sistem Prompt</string>
+    <string name="alert_user_ok">melanjutkan</string>
+    <string name="alert_user_cancle">keluar</string>
+    <string name="notification_title">unduh gambar</string>
+    <string name="download_poto_hint">Unduh gambar ke:</string>
+    <string name="download_compelete">Mengundah selesai</string>
+    <string name="download_unsurpport_hint">Tipe tidak didukung</string>
+    <string name="vsq_tip_text">* jawab pertanyaan untuk mengkonfirmasi perlindungan kata sandi</string>
+    <string name="vsq_confirm_btn_text">Konfirmasi</string>
+    <string name="choose_question_dialog_title">Pertanyaan</string>
+    <string name="setting_secret_name">Mengingatkan enkripsi</string>
+    <string name="setting_secret_tip">Mengingatkan enkripsi untuk konten pribadi notepad</string>
+    <string name="guideline_enter_private_album">Gulir ke bawah dengan dua jari pada laman utama dan masukkan catatan pribadi</string>
+    <string name="note_action_encrypt_string">Enkripsi</string>
+    <string name="note_action_decrypt_string">Batalkan enkripsi</string>
+    <string name="password_set_successed_title">Berhasil menyetel</string>
+    <string name="modified_password">Ubah kata sandi</string>
+    <string name="modified_protect_question">Ubah pertanyaan perlindungan kata sandi</string>
+    <string name="secret_room">Ruang belakang</string>
+    <string name="forget_password">Lupa kata sandi</string>
+    <string name="setting_password">Setel kata sandi empat digit Anda</string>
+    <string name="verification_password">Verifikasi kata sandi</string>
+    <string name="password_error_hint">Kata sandi salah, Anda dapat memasukkan %1$s kali</string>
+    <string name="setting_password_hint">Sebelum menggunakan Catatan pribadi, silakan menyetel kata sandi Anda terlebih dahulu</string>
+    <string name="ensure_password">Konfirmasi Kata Sandi</string>
+    <string name="password_not_match">Kata sandi tidak sesuai, coba lagi</string>
+    <string name="enter_password">Silakan memasukkan kata sandi Anda</string>
+    <string name="enter_password_later">Silakan mencoba lagi dalam %1$s menit</string>
+    <string name="verify_sq_activity_title">Verifikasi perlindungan kata sandi</string>
+    <string name="setting_password_protect_QA">Setel perlindungan kata sandi</string>
+    <string name="answer_incorrect">Jawaban salah</string>
+    <string name="sq_q_text_tip">P:</string>
+    <string name="sq_a_text_tip">J:</string>
+    <string name="note_content_notChange_hint">Konten tidak diubah dan anda telah menyimpannya sebelumnya</string>
+    <string name="encrypt_hint_title">Tips enkripsi</string>
+    <string name="encrypt_hint_content">Terdapat risiko kebocoran privasi pada catatan, disarankan untuk melakukan enkripsi</string>
+    <string name="encrypt_hint_manager_dialog_sure">Enkripsi</string>
+    <string name="successful_modification">Berhasil mengubah</string>
+    <string name="password_set_successed_congratulations">Selamat!</string>
+    <string name="password_set_successed">Anda telah berhasil menyetel kata sandi</string>
+    <string name="password_set_successed_tips">Silakan catat hal-hal berikut ini:</string>
+    <string name="password_set_successed_tips_first">1. Jangan memilih .NoteMedia saat sedang menggunakan alat pembersih atau gambar dan rekaman dari notepad yang terenkripsi tidak akan bisa dicari</string>
+    <string name="password_set_successed_tips_second">2. Jangan mencopot pemasangan aplikasi setelah melakukan enkripsi pada notepad atau notepad yang terenkripsi tidak dapat diperoleh.</string>
+    <string name="password_set_successed_sure">OKE</string>
+    <string name="encrypt_main_note_tip_load_finish">Ruang ini kosong. Apakah Anda ingin menambahkan beberapa rahasia? Klik tombol "enkripsi" untuk menambahkan sesuatu di sini sambil melihat-lihat notepad.</string>
+    <string name="title_more_dialog_title">Lainnya</string>
+    <string name="confirm_protect_question">Konfirmasi jawaban dari pertanyaan perlindungan kata sandi yang sudah disimpan</string>
+    <string name="protect_question_empty">Pertanyaan perlindungan tidak boleh kosong</string>
+    <string name="encrypt_switch_close">Tutup</string>
+    <string name="encrypt_switch_open">Buka</string>
+    <string name="security_os_footer_add">Tambahkan</string>
+    <string name="security_os_footer_search">Telusuri</string>
+    <string name="security_os_footer_secrete_space">Ruang Pribadi</string>
+    <string name="encrypt_main_activity_security_os_title">Catatan Terenkripsi</string>
+    <string name="encrypt_main_activity_security_os_add_tip">Tidak ada konten</string>
+    <string name="encrypt_select_confirm">Konfirmasi</string>
+    <string name="encrypt_select_cancel">Batal</string>
+    <string name="encrypt_select_count_text">Tidak ada butir yang terpilih</string>
+    <string name="encrypt_main_note_security_os_tip_load_finish">Tidak ada catatan yang ditambahkan.</string>
+    <string name="encrypt_note_action_del_message">Apakah Anda yakin akan menghapus catatan yang Anda pilih?\nKonten catatan yang Anda pilih akan dihapus selamanya!</string>
+    <string name="encrypt_finish_hint_for_security_os">Terenkripsi ke ruang pribadi</string>
+    <string name="decrypt_finish_hint">Dekripsi selesai</string>
+    <string name="add_pics">Tambahkan gambar</string>
+    <string name="encrypt_fail">Enkripsi gagal</string>
+    <string name="decrypt_fail">Dekripsi gagal</string>
+    <string name="encrypt_success">Enkripsi berhasil</string>
+    <string name="delete_hint">Sedang menghapus, silakan mencoba kembali</string>
+    <string name="encrypt_hint">Sedang melakukan enkripsi, silakan mencoba kembali</string>
+    <string name="decrypt_hint">Sedang melakukan dekripsi, silakan mencoba kembali</string>
+    <string name="recovery_hint">Sedang memulihkan, silakan mencoba kembali</string>
+    <string name="partial_encrypt">%1$s enkripsi berhasil, %2$s enkripsi gagal.</string>
+    <string name="partial_decrypt">%1$s dekripsi gagal, %2$s dekripsi gagal.</string>
+    <string name="trash">Sampah</string>
+    <string name="trash_first_delete_alert">Catatan yang dihapus akan dipindahkan ke Tempat Sampah (setelan-&gt;Tempat Sampah) dan akan dihapus selamanya setelah tujuh hari. \nAnda dapat menghapus atau memulihkannya di Tempat Sampah.</string>
+    <string name="trash_recover">Pulihkan</string>
+    <plurals name="trash_left_days"> 
+        <item quantity="zero">"Tersisa %1$d hari"</item>
+        <item quantity="one">"Tersisa %1$d hari"</item>
+        <item quantity="other">"Tersisa %1$d hari"</item>
+    </plurals>
+    <string name="trash_recover_hint">Sedang memulihkan, silakan mencoba kembali</string>
+    <string name="trash_delete_message">Apakah Anda yakin akan menghapus catatan yang Anda pilih selamanya?</string>
+    <string name="note_action_search_string">Telusuri</string>
+    <string name="note_action_setting_string">Pengaturan</string>
+    <string name="unkown">Tidak diketahui</string>
+    <string name="download">unduh sekarang</string>
+    <string name="down_load_fail_msg">Unduh gagal</string>
+    <string name="install_amiweather_tip">Ami weather akan memberikan ramalan cuaca, ponsel terdeteksi belum memasang Ami weather. Apakah Anda akan mengunduh dan memasangnya?</string>
+    <string name="install_amicalendar_tip">Ami calender akan memberikan layanan kalender, ponsel terdeteksi belum memasang Ami calendar. Apakah Anda akan mengunduh dan memasangnya?</string>
+    <string name="no_network">Jaringan tidak digunakan</string>
+    <string name="no_pictures">Tidak ada gambar di dalam kartu penyimpanan.</string>
+    <string name="add_attach_fail">Maaf, format berkas ini tidak didukung.</string>
+    <string name="long_bitmap_add_failed">Ukuran gambar melebihi batas, gagal menambahkan</string>
+</resources>

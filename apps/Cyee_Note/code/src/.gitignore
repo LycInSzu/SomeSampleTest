@@ -1,0 +1,14 @@
+.gradle
+local.properties
+.idea/
+.DS_Store
+build/
+captures
+.*
+!.gitignore
+*~
+app/src/main/bin/
+*.iml
+app/src/main/gen/
+app/src/main/project.properties
+obj/

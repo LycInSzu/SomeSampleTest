@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="button_cancel">Kanselleer</string>
+    <string name="button_delete">Vee uit</string>
+    <string name="note_action_del_string">Vee uit</string>
+    <string name="select_all">Kies almal</string>
+    <string name="import_backup_config_dialog_btn_cancel">Kanselleer</string>
+    <string name="encrypt_select_cancel">Kanselleer</string>
+</resources>

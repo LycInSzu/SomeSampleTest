@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/modified_encrypt"
+        style="@style/ChickBgEffect"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_custom_list_item_height"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/label_custom_list_item_padding_left"
+        android:paddingEnd="@dimen/label_custom_list_item_padding_right"
+        android:text="@string/modified_password"
+        android:textColor="@color/setting_list_item_text_color"
+        android:textSize="@dimen/label_custom_list_item_text_size" />
+
+    <TextView
+        android:id="@+id/modified_password_protect"
+        style="@style/ChickBgEffect"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_custom_list_item_height"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/label_custom_list_item_padding_left"
+        android:paddingEnd="@dimen/label_custom_list_item_padding_right"
+        android:text="@string/modified_protect_question"
+        android:textColor="@color/setting_list_item_text_color"
+        android:textSize="@dimen/label_custom_list_item_text_size" />
+</LinearLayout>

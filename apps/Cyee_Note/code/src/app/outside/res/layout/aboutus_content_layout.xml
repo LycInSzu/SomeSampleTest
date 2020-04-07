@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/abstract_note_activity_root_bg_color">
+
+    <ImageView
+        android:id="@+id/aboutus_launcher_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/aboutus_launcher_icon_top_margin"
+        android:src="@drawable/about_app_icon" />
+
+    <TextView
+        android:id="@+id/aboutus_note_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/aboutus_launcher_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/aboutus_note_text_top_margin"
+        android:text="@string/app_name"
+        android:textColor="@color/about_app_note_name_color"
+        android:textSize="@dimen/aboutus_note_content_textsize" />
+
+    <TextView
+        android:id="@+id/aboutus_version_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/aboutus_note_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/aboutus_version_text_top_margin"
+        android:text="@string/aboutus_version_content_text"
+        android:textColor="@color/about_app_note_version_color"
+        android:textSize="@dimen/aboutus_version_content_textsize" />
+
+    <TextView
+        android:id="@+id/aboutus_copyright_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/aboutus_copyright_text_bottom_margin"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxEms="17"
+        android:text="@string/aboutus_copyright_content_text"
+        android:textColor="@color/about_app_note_copyright_color"
+        android:textSize="@dimen/aboutus_copyright_content_textsize" />
+
+    <com.cydroid.note.app.view.LoadAppLayout
+        android:id="@+id/app_info_load_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="66dp"
+        android:orientation="horizontal" />
+
+</RelativeLayout>
+
+

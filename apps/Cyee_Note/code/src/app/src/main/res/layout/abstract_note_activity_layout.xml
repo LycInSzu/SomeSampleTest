@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cydroid.note.app.view.NoteRootView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/abstract_note_activity_layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+<!--
+    <FrameLayout
+        android:id="@id/abstract_note_activity_layout_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <FrameLayout
+            android:id="@id/abstract_note_activity_layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/abstract_note_activity_title_height"
+            android:visibility="gone" />
+    </FrameLayout>-->
+
+    <com.cydroid.note.app.view.NoteContainerView
+        android:id="@id/abstract_note_activity_layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/abstract_note_activity_layout_footer"
+        android:layout_below="@id/abstract_note_activity_layout_head"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@id/abstract_note_activity_layout_footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abstract_note_activity_footer_height"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/encrypt_user_guide"
+        layout="@layout/new_guide_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</com.cydroid.note.app.view.NoteRootView>

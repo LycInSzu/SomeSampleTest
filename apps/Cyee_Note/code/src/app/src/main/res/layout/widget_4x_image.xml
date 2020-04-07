@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Chenyee wanghaiyan 2017-12-06 modify for SW17W16A-2001 begin-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/widget_backgroud"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/widget_photo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widget_photo_height_4x"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/widget_photo">
+
+            <RelativeLayout
+                android:id="@+id/title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/widget_text_title_margin_top_4x"
+                >
+
+                <TextView
+                    android:id="@+id/widget_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/widget_text_margin_left_4x"
+                    android:layout_toStartOf="@+id/widget_alarm"
+                    android:singleLine="true"
+                    android:textColor="@color/home_note_item_title_color"
+                    android:textSize="@dimen/home_note_item_title_size" />
+
+                <ImageView
+                    android:id="@+id/widget_alarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/widget_alarm_margin_right_4x" />
+            </RelativeLayout>
+            <!--gionee wanghaiyan modify on 2016-12-05 for 39743 begin -->
+			<!--Chenyee wanghaiyan modify CSW1707A-1207 for begin -->
+            <TextView
+                android:id="@+id/widget_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/title_layout"
+                android:layout_marginStart="@dimen/widget_text_margin_left_4x"
+                android:layout_marginEnd="@dimen/widget_text_margin_left_4x"
+                android:layout_marginBottom="@dimen/widget_text_margin_left_4x"
+                android:ellipsize="end"
+                android:lineSpacingExtra="4dp"
+                android:lineSpacingMultiplier="1.0"
+				android:maxLines="8"
+                android:textColor="@color/edit_note_item_signature_color"
+                android:textSize="@dimen/home_note_item_content_size" />
+			<!--Chenyee wanghaiyan modify CSW1707A-1207 for end -->
+
+            <TextView
+                android:id="@+id/widget_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="@dimen/widget_time_margin_bottom_4x"
+                android:layout_marginEnd="@dimen/widget_time_margin_bottom_4x"
+                android:textColor="@color/edit_note_item_time_color"
+                android:textSize="@dimen/widget_time_size" />
+           <!--gionee wanghaiyan modify on 2016-12-05 for 39743 end-->
+            <!--Chenyee wanghaiyan 2017-12-06 modify for SW17W16A-2001 end-->
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

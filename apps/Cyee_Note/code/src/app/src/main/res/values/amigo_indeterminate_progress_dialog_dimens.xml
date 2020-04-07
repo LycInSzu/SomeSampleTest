@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cyee_indeterminate_progress_dialog_height">158dp</dimen>
+    <dimen name="cyee_indeterminate_progress_dialog_message_top_margin">21dp</dimen>
+    <dimen name="cyee_indeterminate_progress_dialog_message_text_size">16sp</dimen>
+</resources>

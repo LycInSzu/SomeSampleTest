@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:color="@color/new_note_title_share_color_disable" android:state_enabled="false" />
+    <item android:color="@color/new_note_title_color_enable" />
+
+</selector>

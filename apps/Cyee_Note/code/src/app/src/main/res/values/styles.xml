@@ -1,0 +1,127 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Note" />
+
+    <style name="new_note_menu_item">
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="Note.VerticalLine" parent="@style/Note">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@drawable/new_note_menu_bar_vertical_sep_line</item>
+        <item name="android:layout_width">1.0dip</item>
+        <item name="android:layout_height">@dimen/new_note_menu_ver_line_height</item>
+    </style>
+
+    <style name="NoteBaseTheme" parent="@com.cyee:style/Theme.Cyee.Light">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!--<item name="android:textColorHighlight">@color/system_stress_color</item>-->
+        <!--<item name="android:textSelectHandleLeft">@drawable/cyee_text_select_handle_left</item>-->
+        <!--<item name="android:textSelectHandleRight">@drawable/cyee_text_select_handle_right</item>-->
+        <!--<item name="android:textSelectHandle">@drawable/cyee_text_select_handle_middle</item>-->
+        <!--<item name="android:textCursorDrawable">@drawable/cyee_text_cursor_light</item>-->
+        <item name="android:buttonStyle">@com.cyee:style/Widget.Cyee.Light.Button</item>
+    </style>
+
+    <style name="NoteMainActivityTheme" parent="NoteBaseTheme">
+        <!--        <item name="android:windowIsTranslucent">true</item>
+                <item name="android:windowBackground">@android:color/transparent</item>-->
+        <item name="android:windowBackground">@color/note_mian_acitivity_window_bg</item>
+    </style>
+
+    <style name="EncryptMainActivityTheme" parent="NoteBaseTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="NewNoteActivityTheme" parent="NoteBaseTheme"></style>
+
+    <style name="LabelNoteActivityTheme" parent="NoteBaseTheme"></style>
+
+    <style name="LabelCustomActivityTheme" parent="NoteBaseTheme"></style>
+    <!--Cyee Dialog Theme begin-->
+    <style name="BaseDialogTheme">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/dialog_background</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="DialogTheme" parent="BaseDialogTheme">
+        <item name="android:windowSoftInputMode">adjustUnspecified|stateHidden</item>
+        <item name="android:windowAnimationStyle">@style/AnimationDialog</item>
+    </style>
+
+    <style name="SoundRecorderDialog" parent="DialogTheme">
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="PasswordQuestionsDialogTheme" parent="BaseDialogTheme">
+        <item name="android:windowSoftInputMode">adjustUnspecified|stateHidden</item>
+        <item name="android:windowAnimationStyle">@style/AnimationDialog</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="EncryptDialogTheme" parent="BaseDialogTheme">
+        <item name="android:windowSoftInputMode">adjustUnspecified|stateUnspecified</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="AnimationDialog">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+    <style name="ImageGalleryTheme" parent="android:Theme.Black.NoTitleBar.Fullscreen"></style>
+
+    <style name="loading_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="RippleEffect">
+        <item name="android:background">@drawable/chick_effect_bg_dw</item>
+    </style>
+
+    <style name="ChickBgEffect">
+        <item name="android:background">@drawable/chick_effect_bg_dw</item>
+    </style>
+
+    <style name="noteCardChickBgEffect">
+        <item name="android:background">@drawable/note_card_chick_bg_dw</item>
+    </style>
+
+    <style name="NewNoteViewItemBg">
+        <item name="android:background">?android:attr/actionBarItemBackground</item>
+    </style>
+
+    <style name="ListSelectorEffect">
+        <item name="android:listSelector">@drawable/chick_effect_bg_dw</item>
+    </style>
+
+    <style name="label_custom_edit_button_style" parent="noteCardChickBgEffect"></style>
+
+    <declare-styleable name="PasswordInputView">
+        <attr name="passwordColor" format="color" />
+        <attr name="passwordRadius" format="dimension" />
+    </declare-styleable>
+
+</resources>

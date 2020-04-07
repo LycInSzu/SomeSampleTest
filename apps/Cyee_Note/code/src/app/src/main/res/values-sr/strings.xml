@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Белешкa</string>
+    <string name="search_hint">Унесите</string>
+    <string name="app_name_outside">Белешке</string>
+    <string name="button_sure">Потврди</string>
+    <string name="button_cancel">Откажи</string>
+    <string name="button_delete">Избриши</string>
+    <string name="note_main_activity_title_layout_title_text">Биљешка</string>
+    <string name="note_action_del_string">Избриши</string>
+    <string name="note_action_edit_string">Урeди</string>
+    <string name="note_action_share_string">Дели</string>
+    <string name="dialog_negative_text">Одбаци</string>
+    <string name="alert_time_early">време истекло, молим почни поново</string>
+    <string name="default_label_meeting">Састанак</string>
+    <string name="label_selector_dialog_custom_label_text">Ознака</string>
+    <plurals name="number_of_items_selected">
+        <item quantity="zero">Изабранo je %1$d</item>
+        <item quantity="one">Изабранo je %1$d</item>
+        <item quantity="other">Изабранo je %1$d</item>
+    </plurals>
+    <string name="select_all">Изабери све</string>
+    <string name="unselect_all">Поништи изабир фајлова</string>
+    <string name="note_tip_loading">Учитавање</string>
+    <string name="note_tip_loadFinish">Без садржаја</string>
+    <string name="import_backup_config_dialog_btn_cancel">Откажи</string>
+    <string name="import_backup_config_dialog_btn_import">Увези</string>
+    <string name="import_backup_progress_dialog_title">Увези</string>
+    <string name="setting_title">Поставке</string>
+    <string name="version_update">Ажурирње верзије</string>
+    <string name="about_us">О нама</string>
+    <string name="network_error">Грешка на мрежи</string>
+    <string name="server_error">Грешка на серверу</string>
+    <string name="upgrading">Надограђивање</string>
+    <string name="verify_failed">Овјера неуспешна</string>
+    <string name="low_memory">Hедостатка меморије</string>
+    <string name="dialog_update">Ажурирај</string>
+    <string name="dialog_install">Инсталирај</string>
+    <string name="down_load_dialog_msg">Преузимање</string>
+    <string name="alert_user_cancle">Излаз</string>
+    <string name="encrypt_switch_close">Затвори</string>
+    <string name="encrypt_select_cancel">отказати</string>
+</resources>

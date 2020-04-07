@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@id/new_note_activity_title_layout_back"
+        style="@style/RippleEffect"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:scaleType="center"/>
+
+    <ImageView
+        android:id="@id/new_note_activity_title_layout_share"
+        style="@style/RippleEffect"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@id/new_note_activity_title_layout_delete"
+        android:scaleType="center" />
+
+    <ImageView
+        android:id="@id/new_note_activity_title_layout_delete"
+        style="@style/RippleEffect"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:scaleType="center" />
+
+</RelativeLayout>

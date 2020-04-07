@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- common string -->
+  <string name="app_name">ನೋಟ್‌ಗಳು</string>
+  <string name="app_name_outside">ನೋಟ್‌ಗಳು</string>
+  <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626813 begin -->
+  <string name="button_sure">ಓಕೆ</string>
+  <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626813 end -->
+  <string name="button_cancel">ರದ್ದುಪಡಿಸಿ</string>
+  <string name="button_delete">ಡಿಲೀಟ್ ಮಾಡಿ</string>
+    <string name="file_note_found">ಫೈಲ್ ಕಂಡುಬಂದಿಲ್ಲ</string>
+  <!-- home activity, search-->
+  <string name="search_hint">ನೋಟ್‌ಗನ್ನು ಹುಡುಕಿ</string>
+  <string name="search_page_label_title">ಲೇಬಲ್ ಮೂಲಕ ವ್ಯೂ ಮಾಡಿ</string>
+  <string name="note_main_activity_title_layout_title_text">ನೋಟ್‌ಗಳು</string>
+    <string name="note_action_del_string">ಡಿಲೀಟ್ ಮಾಡಿ</string>
+  <!-- gionee wanghaiyan modify on 2016-12-07 for 40606 begin -->
+  <string name="note_action_edit_string">ಹೊಸತು</string>
+  <!-- gionee wanghaiyan modify on 2016-12-07 for 40606 end -->
+  <string name="note_action_share_string">ಹಂಚಿಕೊಳ್ಳಿ</string>
+  <string name="note_action_del_message">ಆಯ್ಕೆಮಾಡಿದ ನೋಟ್‌ಗಳನ್ನು ಡಿಲೀಟ್ ಮಾಡುವುದು ಖಚಿತವೇ?</string>
+  <string name="dialog_negative_text">ವಜಾ ಮಾಡಿ</string>
+    <string name="alert_time_early">ಈಗಿನ ಮುನ್ನ ಸಮಯ, ದಯವಿಟ್ಟು ರೀಸೆಟ್ ಮಾಡಿ</string>
+  <!-- Edit page , attachment -->
+    <string name="attachment_enter_camera_fail">ಕ್ಯಾಮೆರಾ ಇಲ್ಲ</string>
+  <!--label select dialog  -->
+  <string name="default_label_life">ಜೀವನ</string>
+  <string name="default_label_meeting">ಮೀಟಿಂಗ್</string>
+  <string name="default_label_travel">ಟ್ರಾವೆಲ್</string>
+  <string name="default_label_inspiration">ಪ್ರೇರಣೆ</string>
+  <string name="label_selector_dialog_custom_label_text">ಲೇಬಲ್</string>
+  <!--label select dialog  -->
+  <string name="label_custom_action_bar_title">ಕಸ್ಟಮ್ ಲೇಬಲ್</string>
+  <string name="label_custom_edit_text_hint">ಇನ್ಪುಟ್ ಲೇಬಲ್</string>
+  <string name="label_custom_exist">ಲೇಬಲ್ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ, ಮತ್ತೆ ಇನ್ಪುಟ್ ಮಾಡಿ</string>
+  <string name="label_custom_delete_attention">ಲೇಬಲ್ ಡಿಲೀಟ್ ಮಾಡುವಾಗ ನೋಟ್‌ಗಳು ಡಿಲೀಟ್ ಆಗುವುದಿಲ್ಲ, ಲೇಬಲ್ ಡಿಲೀಟ್ ಮಾಡುವುದು ಖಚಿತವೇ?</string>
+  <plurals name="number_of_items_selected">
+    <item quantity="zero">%1$d ಆಯ್ಕೆ ಮಾಡಲಾಗಿದೆ</item>
+    <item quantity="one">%1$d ಆಯ್ಕೆ ಮಾಡಲಾಗಿದೆ</item>
+    <item quantity="other">%1$d ಆಯ್ಕೆ ಮಾಡಲಾಗಿದೆ</item>
+  </plurals>
+  <string name="select_all">ಎಲ್ಲವನ್ನೂ ಆಯ್ಕೆಮಾಡಿ</string>
+  <string name="unselect_all">ಆಯ್ದ ಎಲ್ಲವನ್ನು ರದ್ದುಮಾಡಿ</string>
+  <!--NewNoteActivity-->
+  <string name="title_hint">ಇನ್ಪುಟ್ ಶೀರ್ಷಿಕೆ</string>
+  <string name="title_focus_hint">ಇನ್ಪುಟ್ ಶೀರ್ಷಿಕೆ</string>
+  <string name="content_hint">ಕಂಟೆಂಟ್ ಇನ್ಪುಟ್ ಮಾಡಿ</string>
+  <string name="add_image_fail">ಫೋಟೋಗಳನ್ನು ಸೇರಿಸುವುದು ವಿಫಲವಾಗಿದೆ</string>
+  <string name="note_tip_loading">ಲೋಡ್ ಆಗುತ್ತಿದೆ</string>
+  <string name="note_tip_loadFinish">ಯಾವುದೇ ಕಂಟೆಂಟ್ ಇಲ್ಲ</string>
+  <string name="note_tip_search">ಪ್ರಶ್ನೆ ಅಡಿಯಲ್ಲಿ</string>
+  <string name="note_tip_searchFinish">ಕಂಟೆಂಟಿಗೆ ಮ್ಯಾಚ್ ಇಲ್ಲ</string>
+  <!--PreviewPictureMakeProxy-->
+  <string name="create_picture">ಫೋಟೋವನ್ನು ರಚಿಸಲಾಗುತ್ತಿದೆ...</string>
+  <string name="create_picture_fail">ಫೋಟೋ ಜನರೇಟ್ ಮಾಡುವುದು ವಿಫಲವಾಗಿದೆ</string>
+  <string name="create_picture_create_bmp_fail">ಕಂಟೆಂಟ್ ಬಹಳ ಉದ್ದವಾಗಿದೆ, ಸಿಸ್ಟಂ ವಿಫಲವಾದ ಫೋಟೋವನ್ನು ಜನರೇಟ್ ಮಾಡುತ್ತದೆ</string>
+  <string name="create_picture_fail_no_space">ಪ್ರೊ, ಫೋಟೋವನ್ನು ಜನರೇಟ್ ಮಾಡಲು ಸಾಕಷ್ಟು ಸ್ಟೋರೇಜ್ ಸ್ಥಳವನ್ನು ಹೊಂದಿಲ್ಲ</string>
+  <!--PreviewActivity-->
+    <string name="share_preview">ಪ್ರಿವ್ಯೂ ಹಂಚಿಕೆ ಮಾಡಿ</string>
+    <string name="file_save_toast_text">"ಗೆ ಫೋಟೋಗಳನ್ನು ಸೇವ್ ಮಾಡಿ "</string>
+  <string name="file_save_fail_toast_text">ಪ್ರೊ, ಸೇವ್ ಮಾಡಲು ಸಾಕಷ್ಟು ಸ್ಥಳಾವಕಾಶವಿಲ್ಲ</string>
+  <string name="file_save_fail_origin_no_exist">ಪ್ರೊ, ಮೂಲ ಫೈಲ್ ಕಾಣೆಯಾಗಿದೆ,ಫೋಟೋವನ್ನು ಸೇವ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ</string>
+  <string name="date_upgrade_message">ನೋಟ್ ಪ್ಯಾಡ್ ಡೇಟಾವನ್ನು ಅಪ್ಡೇಟ್ ಮಾಡಲಾಗುತ್ತಿದೆ, ದಯವಿಟ್ಟು ಒಂದು ಕ್ಷಣ ನಿರೀಕ್ಷಿಸಿ</string>
+  <string name="import_backup_config_dialog_title">ನೋಟ್ ಪ್ಯಾಡ್ ಇಂಪೋರ್ಟ್</string>
+  <string name="import_backup_config_dialog_message">ಈ ಹೊಸ ವಿನ್ಯಾಸದ ವರ್ಷನ್ನಿನಲ್ಲಿ ಸ್ಥಳೀಯ ಬ್ಯಾಕಪ್ ಕ್ರಿಯೆಯ ಬೆಂಬಲ ಇರುವುದಿಲ್ಲ, ನೀವು ಡೇಟಾ ಬ್ಯಾಕಪ್ ಇಂಪೋರ್ಟ್ ಮಾಡದೇ ಇರುವುದು ಕಂಡುಬಂದಿದೆ, ಬ್ಯಾಕಪ್ ಡೇಟಾವನ್ನು ಸಕಾಲದಲ್ಲಿ ಇಂಪೋರ್ಟ್ ಮಾಡುವುದರಿಂದ ಕಳೆದುಕೊಳ್ಳುವುದರ ಭಯ ಇರುವುದಿಲ್ಲ.</string>
+  <string name="import_backup_config_dialog_btn_cancel">ರದ್ದುಪಡಿಸಿ</string>
+  <string name="import_backup_config_dialog_btn_import">ಇಂಪೋರ್ಟ್ ಮಾಡಿ</string>
+  <string name="import_backup_config_dialog_checkbox_text">ಇನ್ನೇನು ಸಲಹೆಗಳಿಲ್ಲ</string>
+  <string name="import_backup_progress_dialog_title">ಇಂಪೋರ್ಟ್ ಮಾಡಿ</string>
+  <string name="import_backup_progress_dialog_message">ನೋಟ್ ಪ್ಯಾಡ್ ಡೇಟಾ ಇಂಪೋರ್ಟ್ ಮಾಡಲಾಗುತ್ತಿದೆ</string>
+  <string name="import_backup_fail_message">ಇಂಪೋರ್ಟ್ ಪ್ರಕ್ರಿಯೆಯಲ್ಲಿ ಸಮಸ್ಯೆ ಕಾಣಿಸಿಕೊಂಡಿದೆ, ನಿಮ್ಮ ಮೆಮೊರಿ ಕಾರ್ಡಿನಲ್ಲಿ ಉಳಿದಿರುವ ಸ್ಥಳಾವಕಾಶ %1$dMB ಗಿಂತಲೂ ಹೆಚ್ಚಾಗಿದೆಯೇ ಎಂದು ದಯವಿಟ್ಟು ಪರೀಕ್ಷಿಸಿ, ಮುಂದಿನ ಬೂಟಿನಲ್ಲಿ ಇಂಪೋರ್ಟ್ ಮಾಡಬೇಕೆಂದು ನೀವು ಬಯಸಿದರೆ ಪರೀಕ್ಷಿಸಲು ಪ್ರೊಗ್ರಾಮ್ ಮತ್ತೆ ಹಿಂದಕ್ಕೆ ಹೋಗುತ್ತದೆ.</string>
+    <string name="attachment_record_permission_hint">ದಯವಿಟ್ಟು ಸೌಂಡ್ ರೆಕಾರ್ಡಿಗೆ ಸಿಕ್ಕಿರುವ ಅನುಮತಿಯನ್ನು ಪರಿಶೀಲಿಸಿ</string>
+  <string name="max_content_input_mum_limit">ಇನ್ಪುಟ್ ಕಂಟೆಂಟ್ ಗರಿಷ್ಠ ಮಿತಿ ತಲುಪಿದೆ.</string>
+  <string name="max_pic_input_mum_limit">ಗರಿಷ್ಠ ನಂಬರ್‌ ಫೋಟೋಗಳ ಮಿತಿಯನ್ನು ತಲುಪಿದೆ.</string>
+  <string name="setting_title">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
+  <string name="inscribed_signature">ದಾಖಲಿಸಿದ ಸಹಿ</string>
+  <string name="version_update">ವರ್ಷನ್ನಿನ ಅಪ್ಡೇಟ್‌</string>
+  <string name="no_version">ಪ್ರಸ್ತುತ ವರ್ಷನ್ ಇತ್ತೀಚಿನದ್ದಾಗಿದೆ</string>
+  <string name="progress_checking">ವರ್ಷನ್ನಿನನ್ನು ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ, ದಯವಿಟ್ಟು ಒಂದು ಕ್ಷಣ ನಿರೀಕ್ಷಿಸಿ...</string>
+    <string name="about_us">ನಮ್ಮ ಬಗ್ಗೆ</string>
+  <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626568 begin -->
+  <string name="signature_input_hint">ದಯವಿಟ್ಟು ಸಹಿಯನ್ನು ಇನ್ಪುಟ್ ಮಾಡಿ</string>
+  <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626568 end -->
+    <string name="aboutus_version_content_text">ವರ್ಷನ್:V</string>
+  <string name="aboutus_copyright_content_text">ಹಕ್ಕುಸ್ವಾಮ್ಯ©2015 Shenzhen Gionee communication equipment Co., Ltd. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.</string>
+  <string name="network_error">ನೆಟ್ವರ್ಕ್‌ ದೋಷ</string>
+  <string name="no_space">ಸ್ಥಳಾವಕಾಶವಿಲ್ಲ</string>
+  <string name="file_not_found">ಫೈಲ್ ಕಂಡುಬಂದಿಲ್ಲ</string>
+  <string name="local_file_verify_failed">ಸ್ಥಳೀಯ ಫೈಲ್ ಪರಿಶೀಲನೆ ವಿಫಲವಾಗಿದೆ</string>
+  <string name="server_error">ಸರ್ವರ್ ದೋಷ</string>
+  <string name="upgrading">ಅಪ್ಗ್ರೇಡ್ ಆಗುತ್ತಿದೆ...</string>
+  <string name="verify_failed">ದೃಢೀಕರಣ ವಿಫಲವಾಗಿದೆ</string>
+  <string name="no_sdcard">SD ಕಾರ್ಡ್ ಇಲ್ಲ</string>
+  <string name="low_memory">ಮೆಮೊರಿ ಕಡಿಮೆ ಇದೆ</string>
+  <string name="dialog_update_compelete">ಒಂದು ಹೊಸ ವರ್ಷನ್ ಕಂಡುಬಂದಿದೆ. ದಯವಿಟ್ಟು ಇತ್ತೀಚಿನ ವರ್ಷನ್ನಿಗೆ ಅಪ್ಗ್ರೇಡ್ ಮಾಡಿ.</string>
+  <string name="dialog_update_or_not">,\n\n ಇದು ಈಗ ಅಪ್ಡೇಟ್ ಆಗಿದೆಯೇ?</string>
+  <string name="dialog_update">ಅಪ್ಡೇಟ್‌ ಮಾಡಿ</string>
+  <string name="dialog_install">ಇನ್ಸ್ಟಾಲ್ ಮಾಡಿ</string>
+    <string name="down_load_dialog_msg">ಡೌನ್ಲೋಡ್ ಆಗುತ್ತಿದೆ...</string>
+  <string name="down_load_paused_msg">ಡೌನ್ಲೋಡನ್ನು ಪೌಸ್ ಮಾಡಲಾಗಿದೆ</string>
+  <string name="app_widget2x2">Note2x2</string>
+  <string name="app_widget4x4">Note4x4</string>
+  <string name="time_am">AM</string>
+  <string name="time_pm">PM</string>
+  <string name="message_media_record_time_max">ಗರಿಷ್ಠ ರೆಕ್ಷೊರ್ದಿನ್ಗ ಸಮಯ ತಲುಪಿದೆ. ದಯವಿಟ್ಟು ರೆಕಾರ್ಡಿಂಗ್ ನಿಲ್ಲಿಸಿ.</string>
+    <string name="ai_activity_title">AI</string>
+  <string name="ami_recommend_panel_title">Ami Recommend</string>
+  <string name="favor_recommend_panel_title">ಪರವಾಗಿ ಶಿಫಾರಸು ಮಾಡಿರುವುದು</string>
+  <string name="recommend_search_hint_text">ಕೀ ವರ್ಡ್ ಇನ್ಪುಟ್ ಮಾಡಿ</string>
+  <string name="authorization_failed">ಈ ವೈಶಿಷ್ಟ್ಯತೆಯನ್ನು ಬಳಸಲು ಅನುಮತಿ ಪಡೆಯಲಾಗುವುದಿಲ್ಲ</string>
+  <string name="ai_activity_not_network_tip">ಸದ್ಯದ ನೆಟ್ವರ್ಕ್ ಡಿಸ್ಕನೆಕ್ಟ್ ಆಗಿದೆ, ಆದರೂ ನೆಟ್ವರ್ಕ್ ಹುಡುಕಲಾಗುತ್ತಿದೆ</string>
+    <string name="note_storage_inner">ಫೋನ್ ಸ್ಟೋರೇಜ್‌</string>
+    <string name="alert_remaining_chars">ನೀವು ಇನ್ನೂ <xliff:g id="file">%d</xliff:g> ಅಕ್ಷರಗಳನ್ನು ಡಿಲೀಟ್ ಮಾಡಬೇಕಾಗಿದೆ</string>
+  <string name="alert_remaining_char">ನೀವು ಇನ್ನೂ <xliff:g id="file">%d</xliff:g> ಅಕ್ಷರವನ್ನು ಡಿಲೀಟ್ ಮಾಡಬೇಕಾಗಿದೆ</string>
+  <string name="data_flow_alert_user_title">ನೋಟ್ ಬಳಸಲು ಸ್ವಾಗತ</string>
+  <string name="data_flow_alert_user_content">ಈ ಆ್ಯಪನ್ನು ಬಳಸುವಾಗ ಅನುಮತಿಗಳನ್ನು ಅಕ್ಸೆಸ್ ಮಾಡಲು ಅವಕಾಶ ನೀಡಿ:\nನೆಟ್ವರ್ಕ್ ಕನೆಕ್ಷನ್, ಆಡಿಯೋ ರೆಕಾರ್ಡ್ ಮಾಡಿ, ಫೋಟೋ ತೆಗೆಯಿರಿ, ನಿಮ್ಮ ಬಾಹ್ಯ ಸ್ಟೋರೇಜಿನ ಕಂಟೆಂಟನ್ನು ಅಕ್ಸೆಸ್ ಮಾಡಿ\n ಮುಂದುವರಿಸುವುದೇ?</string>
+  <string name="data_flow_alert_user_checkbox">ಎಂದೂ ನೆನಪಿಸಬೇಡಿ</string>
+  <string name="alert_user_title_str">ಸಿಸ್ಟಂ ಪ್ರಾಂಪ್ಟ್</string>
+  <string name="alert_user_ok">ಮುಂದುವರಿಸಿ</string>
+  <string name="alert_user_cancle">ನಿರ್ಗಮಿಸಿ</string>
+    <string name="notification_title">ಫೋಟೋ ಡೌನ್ಲೋಡ್ ಮಾಡಿ</string>
+  <string name="download_poto_hint">ಫೋಟೋ ಇಲ್ಲಿಗೆ ಡೌನ್ಲೋಡ್ ಮಾಡಿ：</string>
+  <string name="download_compelete">ಡೌನ್ಲೋಡ್ ಸಂಪೂರ್ಣ</string>
+  <string name="download_unsurpport_hint">ಬೆಂಬಲಿತವಲ್ಲದ ಬಗೆ</string>
+  <string name="vsq_tip_text">* ಪಾಸ್ವರ್ಡ್ ರಕ್ಷಣಾ ಪ್ರಶ್ನೆಯ ಉತ್ತರವನ್ನು ಖಚಿತಪಡಿಸಿ</string>
+    <string name="vsq_confirm_btn_text">ಖಚಿತಪಡಿಸಿ</string>
+    <string name="choose_question_dialog_title">ಪ್ರಶ್ನೆ</string>
+  <string name="setting_secret_name">ಎನ್ಕ್ರಿಪ್ಷನ್ ಜ್ಞಾಪನೆ</string>
+  <string name="setting_secret_tip">ನೋಟ್‌ಪ್ಯಾಡಿನ ಖಾಸಗಿ ಕಂಟೆಂಟಿಗಾಗಿ ಎನ್ಕ್ರಿಪ್ಷನ್ ಜ್ಞಾಪನೆ</string>
+  <string name="guideline_enter_private_album">ಹೋಮ್ ಪೇಜಿನಲ್ಲಿ ಎರಡು ಬೆರಳಿನಿಂದ ಕೆಳಗೆ ಸ್ಲೈಡ್ ಮಾಡಿ ಮತ್ತು ಖಾಸಗಿ ನೋಟ್‌ಗಳನ್ನು ಪ್ರವೇಶಿಸಿ.</string>
+  <string name="note_action_encrypt_string">ಎನ್ಕ್ರಿಪ್ಟ್ ಮಾಡುವುದೇ</string>
+  <string name="note_action_decrypt_string">ಡೀಕ್ರಿಪ್ಟ್ ಮಾಡಿ</string>
+  <string name="password_set_successed_title">ಯಶಸ್ವಿಯಾಗಿ ಸೆಟ್ ಮಾಡಲಾಗಿದೆ</string>
+  <string name="modified_password">ಪಾಸ್ವರ್ಡ್ ಬದಲಾಯಿಸಿ</string>
+  <string name="modified_protect_question">ಪಾಸ್ವರ್ಡ್ ರಕ್ಷಣಾ ಪ್ರಶ್ನೆಗಳನ್ನು ಬದಲಾಯಿಸಿ</string>
+  <string name="secret_room">ಹಿಂದಿನ ರೂಮ್</string>
+  <string name="forget_password">ಪಾಸ್ವರ್ಡ್ ಮರೆತಿರಾ</string>
+  <string name="setting_password">ನಿಮ್ಮ ನಾಲ್ಕು ಅಂಕಿಯ ಪಾಸ್ವರ್ಡ್ ಸೆಟ್ ಮಾಡಿ</string>
+  <string name="verification_password">ಪಾಸ್ವರ್ಡ್ ಪರಿಶೀಲಿಸಿ</string>
+  <string name="password_error_hint">ತಪ್ಪು ಪಾಸ್ವರ್ಡ್, ನೀವು %1$s ಬಾರಿ ನಮೂದಿಸಬಹುದು</string>
+  <string name="setting_password_hint">ಖಾಸಗಿ ನೋಟ್‌ಗಳನ್ನು ಬಳಸುವ ಮೊದಲು, ದಯವಿಟ್ಟು ಮೊದಲು ನಿಮ್ಮ ಪಾಸ್ವರ್ಡ್ ಸೆಟ್ ಮಾಡಿ</string>
+  <string name="ensure_password">ಪಾಸ್‌ವರ್ಡ್‌ ದೃಢೀಕರಿಸಿ</string>
+  <string name="password_not_match">ಪಾಸ್ವರ್ಡ್ ಹೊಂದಿಕೆಯಾಗುತ್ತಿಲ್ಲ, ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ</string>
+  <string name="enter_password">ದಯವಿಟ್ಟು ನಿಮ್ಮ ಪಾಸ್ವರ್ಡನ್ನು ನಮೂದಿಸಿ</string>
+  <string name="enter_password_later">ದಯವಿಟ್ಟು %1$s ನಿಮಿಷದ ನಂತರ ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ</string>
+  <string name="verify_sq_activity_title">ಪಾಸ್ವರ್ಡ್ ಭದ್ರತೆಯನ್ನು ಪರಿಶೀಲಿಸಿ</string>
+  <string name="setting_password_protect_QA">ಪಾಸ್ವರ್ಡ್ ರಕ್ಷಣೆ ಸೆಟ್ ಮಾಡಿ</string>
+  <string name="answer_incorrect">ತಪ್ಪು ಉತ್ತರ</string>
+    <string name="sq_q_text_tip">Q:</string>
+  <string name="sq_a_text_tip">ಎ:</string>
+  <string name="note_content_notChange_hint">ಕಂಟೆಂಟ್ ಬದಲಾಯಿಸಲಾಗಿಲ್ಲ ಮತ್ತು ನೀವು ಮೊದಲೇ ಸೇವ್ ಮಾಡಿದ್ದೀರಿ</string>
+    <string name="encrypt_hint_title">ಎನ್ಕ್ರಿಪ್ಟ್ ಸಲಹೆಗಳು</string>
+  <string name="encrypt_hint_content">ಈ ನೋಟ್‌ನಲ್ಲಿ ಖಾಸಗಿತನ ಸೋರಿಕೆಯಾಗುವ ಅಪಾಯವಿದೆ, ಅದ್ದರಿಂದ ಎನ್ಕ್ರಿಪ್ಟ್ ಮಾಡಲು ಶಿಫಾರಸು ಮಾಡಲಾಗುತ್ತದೆ </string>
+  <string name="encrypt_hint_manager_dialog_sure">ಎನ್ಕ್ರಿಪ್ಟ್ ಮಾಡುವುದೇ</string>
+  <string name="successful_modification">ಯಶಸ್ವಿಯಾಗಿ ಬದಲಾಯಿಸಿ</string>
+  <string name="password_set_successed_congratulations">ಅಭಿನಂದನೆಗಳು!</string>
+  <string name="password_set_successed">ನೀವು ಯಶಸ್ವಿಯಾಗಿ ಪಾಸ್ವರ್ಡನ್ನು ಸೆಟ್ ಮಾಡಿದ್ದೀರಿ</string>
+  <string name="password_set_successed_tips">ದಯವಿಟ್ಟು ಕೆಳಗಿನ ಸಂಗತಿಗಳನ್ನು ಗಮನಿಸಿ:</string>
+  <string name="password_set_successed_tips_first">1. ಆಯ್ಕೆ ಮಾಡಬೇಡಿ. ಕ್ಲೀನಿಂಗ್ ಟೂಲ್ಸ್ ಬಳಸುವಾಗ ಗುರುತು ಮಾಡಿಕೊಳ್ಳಿ, ಇಲ್ಲವಾದರೆ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಲಾದ ನೋಟ್‌ಪ್ಯಾಡಿನ ಫೋಟೋಗಳು ಮತ್ತು ಟೇಪುಗಳನ್ನು ಬ್ರೌಸ್ ಮಾಡಲಾಗುವುದಿಲ್ಲ.</string>
+  <string name="password_set_successed_tips_second">2. ನೋಟ್‌ಪ್ಯಾಡ್ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಿದ ನಂತರ ಅಪ್ಲಿಕೇಶನನ್ನು ಅನ್ಇನ್ಸ್ಟಾಲ್ ಮಾಡಬೇಡಿ, ಹೀಗೆ ಮಾಡುವುದರಿಂದ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಲಾದ ನೋಟ್‌ಪ್ಯಾಡನ್ನು ಮತ್ತೆ ಪಡೆದುಕೊಳ್ಳಲು ಸಾಧ್ಯವಾಗುವುದಿಲ್ಲ.</string>
+  <string name="password_set_successed_sure">ಓಕೆ</string>
+  <string name="encrypt_main_note_tip_load_finish">ಬದಲಿಗೆ ಇಲ್ಲಿ ಖಾಲಿ ಇದೆ. ನೀವು ಇಲ್ಲಿ ಸ್ವಲ್ಪ ರಹಸ್ಯವನ್ನು ಸೇರಿಸಲು ಬಯಸುವಿರಾ?ನೋಟ್‌ಪ್ಯಾಡ್ ಬ್ರೌಸ್ ಮಾಡುವಾಗ ಇಲ್ಲಿ ಸೇರಿಸಲು "ಎನ್ಕ್ರಿಪ್ಷನ್" ಬಟನ್ ಕ್ಲಿಕ್ ಮಾಡಿ.</string>
+  <!-- GIONEE wanghaiyan 2016-12-17 modify for 47298 begin-->
+  <string name="title_more_dialog_title">ಇತರೆ</string>
+  <!-- GIONEE wanghaiyan 2016-12-17 modify for 47298 end-->
+  <string name="confirm_protect_question"> ಸೇವ್ ಮಾಡಲಾದ ಪಾಸ್ವರ್ಡ್ ಸುರಕ್ಷಾ ಪ್ರಶ್ನೆಯ ಉತ್ತರವನ್ನು ಖಚಿತಪಡಿಸಿ</string>
+  <string name="protect_question_empty">ಸುರಕ್ಷಣಾ ಪ್ರಶ್ನೆಯು ಖಾಲಿ ಇರಲು ಸಾಧ್ಯವಿಲ್ಲ</string>
+  <string name="encrypt_switch_close">ಮುಚ್ಚಿರಿ</string>
+  <string name="encrypt_switch_open">ತೆರೆಯಿರಿ</string>
+  <string name="security_os_footer_add">ಸೇರಿಸಿ</string>
+  <string name="security_os_footer_search">ಹುಡುಕಿ</string>
+  <string name="security_os_footer_secrete_space">ಖಾಸಾಗಿ ಸ್ಥಳ</string>
+  <string name="encrypt_main_activity_security_os_title">ಎನ್ಕ್ರಿಪ್ಟ್ ಟಿಪ್ಪಣಿಗಳು</string>
+  <string name="encrypt_main_activity_security_os_add_tip">ಯಾವುದೇ ಕಂಟೆಂಟ್ ಇಲ್ಲ</string>
+  <string name="encrypt_select_confirm">ಖಚಿತಪಡಿಸಿ</string>
+  <string name="encrypt_select_cancel">ರದ್ದುಪಡಿಸಿ</string>
+  <string name="encrypt_select_count_text">ಯಾವುದೇ ಐಟಂಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಿಲ್ಲ</string>
+  <string name="encrypt_main_note_security_os_tip_load_finish">ಯಾವ ನೋಟ್‌ಗಳನ್ನು ಸೇರಿಸಲಾಗಿಲ್ಲ.</string>
+  <string name="encrypt_note_action_del_message">ಆಯ್ಕೆ ಮಾಡಲಾದ ನೋಟ್‌ಗಳನ್ನು ಖಚಿತವಾಗಿ ಡಿಲೀಟ್ ಮಾಡಲು ನೀವು ಖಚಿತವಾಗಿ ಬಯಸುವಿರಾ?\n ಆಯ್ಕೆ ಮಾಡಲಾದ ನೋಟ್‌ಗಳ ಕಂಟೆಂಟ್ ಶಾಶ್ವತವಾಗಿ ಡಿಲೀಟ್ ಆಗುತ್ತದೆ!</string>
+  <string name="encrypt_finish_hint_for_security_os">ಖಾಸಗಿ ಸ್ಥಳಕ್ಕೆ ಎನ್ಕ್ರಿಪ್ಟ್ ಮಾಡಲಾಗಿದೆ</string>
+  <string name="decrypt_finish_hint">ಡೀಕ್ರಿಪ್ಟ್ ಮಾಡುವುದು ಪೂರ್ಣವಾಗಿದೆ</string>
+  <string name="add_pics">ಫೋಟೋಗಳನ್ನು ಸೇರಿಸಿ</string>
+  <string name="encrypt_fail">ಎನ್ಕ್ರಿಪ್ಷನ್ ವಿಫಲ</string>
+  <string name="decrypt_fail">ಡೀಕ್ರಿಪ್ಟ್ ವಿಫಲ</string>
+  <string name="encrypt_success">ಎನ್ಕ್ರಿಪ್ಷನ್ ಸಫಲ</string>
+    <string name="delete_hint">ಡಿಲೀಟ್ ಆಗುತ್ತಿದೆ, ದಯವಿಟ್ಟು ನಂತರ ಇದನ್ನು ಮತ್ತೊಮೆ ಪ್ರಯತ್ನಿಸಿ</string>
+  <string name="encrypt_hint">ಎನ್ಕ್ರಿಪ್ಟ್ ಆಗುತ್ತಿದೆ, ದಯವಿಟ್ಟು ನಂತರ ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ</string>
+  <string name="decrypt_hint">ಡೀಕ್ರಿಪ್ಟ್ ಆಗುತ್ತಿದೆ, ದಯವಿಟ್ಟು ನಂತರ ಇದನ್ನು ಮತ್ತೊಮೆ ಪ್ರಯತ್ನಿಸಿ</string>
+  <string name="recovery_hint">ರಿಕವರಿ ಮಾಡಲಾಗುತ್ತಿದೆ, ದಯವಿಟ್ಟು ಇದನ್ನು ನಂತರ ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ</string>
+  <string name="partial_encrypt">%1$s ಎನ್ಕ್ರಿಪ್ಷನ್ ಯಶಸ್ವಿಯಾಗಿದೆ, %2$s ಎನ್ಕ್ರಿಪ್ಷನ್ ವಿಫಲವಾಗಿದೆ. </string>
+  <string name="partial_decrypt">%1$s ಡೀಕ್ರಿಪ್ಷನ್ ಯಶಸ್ವಿಯಾಗಿದೆ, %2$s ಡೀಕ್ರಿಪ್ಷನ್ ವಿಫಲವಾಗಿದೆ. </string>
+  <!--Trash-->
+  <string name="trash">ಟ್ರ್ಯಾಷ್</string>
+  <!-- GIONEE wanghaiyan 2017-02-05 modify for 67550 begin-->
+  <string name="trash_first_delete_alert">ಡಿಲೀಟ್ ಮಾಡಲಾದ ನೋಟ್‌ಗಳು ಟ್ರ್ಯಾಶಿಗೆ ವರ್ಗಾವಣೆಯಾಗುತ್ತವೆ (ಸೆಟ್ಟಿಂಗ್->ಟ್ರ್ಯಾಶ್) ಮತ್ತು ಅವು ಏಳು ದಿನಗಳ ನಂತರ ಶಾಶ್ವತವಾಗಿ ಡಿಲೀಟ್ ಆಗುತ್ತವೆ.\n ನೀವು ಟ್ರ್ಯಾಶಿನಿಂದ ಡಿಲೀಟ್ ಮಾಡಬಹುದು ಅಥವಾ ರಿಕವರಿ ಮಾಡಿಕೊಳ್ಳಬಹುದು.</string>
+  <!-- GIONEE wanghaiyan  2017-02-05 modify for 67550 end-->
+  <string name="trash_recover">ರಿಕವರಿ ಮಾಡಿ</string>
+  <plurals name="trash_left_days">
+    <item quantity="zero">"%1$d ದಿನ ಉಳಿದಿದೆ"</item>
+    <item quantity="one">"%1$d ದಿನ ಉಳಿದಿದೆ"</item>
+    <item quantity="other">"%1$d ದಿನಗಳು ಉಳಿದಿವೆ"</item>
+  </plurals>
+  <string name="trash_recover_hint">ರಿಕವರಿ ಮಾಡಲಾಗುತ್ತಿದೆ, ದಯವಿಟ್ಟು ಇದನ್ನು ನಂತರ ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ</string>
+  <string name="trash_delete_message">ಆಯ್ದ ನೋಟ್‌ಗಳನ್ನು ಶಾಶ್ವತವಾಗಿ ಡಿಲೀಟ್ ಮಾಡುವುದೇ?</string>
+    <string name="note_action_search_string">ಹುಡುಕಿ</string>
+  <string name="note_action_setting_string">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
+  <string name="unkown">ಗೊತ್ತಿಲ್ಲದ</string>
+  <string name="download">ಡೌನ್ಲೋಡ್ ಮಾಡಿ</string>
+  <string name="down_load_fail_msg">ಡೌನ್ಲೋಡ್ ವಿಫಲವಾಗಿದೆ</string>
+  <string name="install_amiweather_tip">Ami Weather ಹವಾಮಾನ ಮುನ್ಸೂಚನೆಯನ್ನು ಒದಗಿಸುತ್ತದೆ, ಈ ಫೋನಿನಲ್ಲಿ Ami Weather ಇನ್ಸ್ಟಾಲ್ ಆಗಿಲ್ಲ, ಡೌನ್ಲೋಡ್ ಮಾಡಿ ಇನ್ಸ್ಟಾಲ್ ಮಾಡುವುದೇ</string>
+  <string name="install_amicalendar_tip">Ami Calendar ಕ್ಯಾಲೆಂಡರ್ ಸೇವೆಯನ್ನು ಒದಗಿಸುತ್ತದೆ, ಈ ಫೋನಿನಲ್ಲಿ Ami Calendar ಇನ್ಸ್ಟಾಲ್ ಆಗಿಲ್ಲ, ಡೌನ್ಲೋಡ್ ಮಾಡಿ ಇನ್ಸ್ಟಾಲ್ ಮಾಡುವುದೇ</string>
+  <string name="no_network">ನೆಟ್ವರ್ಕ್ ಬಳಕೆಯಾಗುತ್ತಿಲ್ಲ</string>
+  <string name="no_pictures">ಸ್ಟೋರೇಜ್ ಕಾರ್ಡಿನಲ್ಲಿ ಫೋಟೋ ಲಭ್ಯವಿಲ್ಲ.</string>
+
+    <string name="add_attach_fail">ಕ್ಷಮಿಸಿ, ಈ ಫೈಲ್ ಫಾರ್ಮ್ಯಾಟನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ.</string>
+  <string name="long_bitmap_add_failed">ಫೋಟೋದ ಉದ್ದವು ಪರಿಮಿತಿ ಮೀರಿದೆ, ಸೇರಿಸುವುದು ವಿಫಲವಾಗಿದೆ</string>
+</resources>

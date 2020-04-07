@@ -1,0 +1,125 @@
+apply plugin: 'com.android.application'
+apply from: 'public-xml.gradle'
+
+def copySplashPicture(String name) {
+    if (name != null && !"".equals(name)) {
+        def fromFilePath = "${gradle.rootProject.projectDir.getAbsolutePath()}/app/splash/${name}.jpg"
+        def toFilePath = "${gradle.rootProject.projectDir.getAbsolutePath()}/app/src/main/res/drawable-xxhdpi/cover.jpg"
+        def fromFile = new File(fromFilePath)
+        if (fromFile.exists()) {
+            def toFile = new File(toFilePath)
+            toFile.withOutputStream {
+                os ->
+                    fromFile.withInputStream { ins ->
+                        os << ins
+                    }
+            }
+        } else {
+            fromFilePath = "${gradle.rootProject.projectDir.getAbsolutePath()}/app/splash/cover.jpg"
+            fromFile = new File(fromFilePath)
+            def toFile = new File(toFilePath)
+            toFile.withOutputStream {
+                os ->
+                    fromFile.withInputStream { ins ->
+                        os << ins
+                    }
+            }
+        }
+    }
+}
+
+if (gradle.ext.isGionee == "false") {
+    if (gradle.ext.isShouFa == "true") {
+        gradle.taskGraph.beforeTask {
+            if (it.name.startsWith("check")) {
+                def String name = it.name
+                name = name.replaceAll("check", "").replaceAll("DebugManifest", "").replaceAll("ReleaseManifest", "")
+                copySplashPicture(name)
+            }
+        }
+    } else {
+        copySplashPicture("cover")
+    }
+}
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
+
+    def defalultSrcDirs = sourceSets.main.java.srcDirs
+    def defalultResDirs = sourceSets.main.res.srcDirs
+    println defalultSrcDirs
+    def anotherSrcDirs = "${projectDir}${gradle.ext.sourceRootDir}/java"
+    def anotherResDirs = "${projectDir}${gradle.ext.sourceRootDir}/res"
+    def manifestFile = "${projectDir}${gradle.ext.sourceRootDir}/AndroidManifest.xml"
+
+    sourceSets {
+        main {
+            java.srcDirs = [defalultSrcDirs, anotherSrcDirs]
+            res.srcDirs = [defalultResDirs, anotherResDirs]
+            manifest.srcFile(manifestFile)
+            aidl.srcDirs = ['src/main/aidl']
+        }
+    }
+
+    defaultConfig {
+        applicationId gradle.ext.applicationId
+        minSdkVersion 17
+        targetSdkVersion 24
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('platform.keystore')
+            storePassword "android"
+            keyAlias "platform"
+            keyPassword "android"
+        }
+    }
+
+    buildTypes {
+        release {
+            buildConfigField "boolean", "IS_GIONEE_VERSION", "${gradle.ext.isGionee}"
+            signingConfig signingConfigs.release
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            buildConfigField "boolean", "IS_GIONEE_VERSION", "${gradle.ext.isGionee}"
+            signingConfig signingConfigs.release
+            debuggable true
+        }
+    }
+
+    productFlavors {
+        if (gradle.ext.isGionee == "false") {
+            def length = gradle.ext.channelNames.size()
+            for (int i = 0; i < length; i++) {
+                "${gradle.ext.channelNames[i]}" {
+                    manifestPlaceholders = [channel: "${gradle.ext.channelNumbers[i]}"]
+                }
+            }
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
+    provided 'findbugs:annotations:1.0.0'
+    compile project(':cyee')
+    compile files('libs/com.gionee.appupgrade.jar')
+    compile 'com.android.support:gridlayout-v7:24.2.1'
+    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.github.chrisbanes.photoview:library:1.2.4'
+    provided files('src/main/libs/zytSdk.jar')
+    compile files('libs/queryWeather_m.jar')
+    compile files('libs/FeedbackHttp.jar')
+}

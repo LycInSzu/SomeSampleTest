@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/home_note_item_gap">
+
+    <com.cydroid.note.app.view.NoteCardBottomView
+        android:id="@id/note_item_card_bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_note_item_text_height"
+        android:paddingBottom="@dimen/home_note_item_text_padding_bottom"
+        android:paddingStart="@dimen/home_note_item_text_padding_left"
+        android:paddingEnd="@dimen/home_note_item_text_padding_right"
+        android:paddingTop="@dimen/home_note_item_text_padding_top">
+
+        <ImageView
+            android:id="@id/note_item_reminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/home_note_item_reminder_margin_left"
+            android:visibility="invisible" />
+
+        <cyee.widget.CyeeTextView
+            android:id="@id/note_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/note_item_reminder"
+            android:singleLine="true"
+            android:textColor="@color/home_note_item_title_color"
+            android:textSize="@dimen/home_note_item_title_size" />
+
+        <!-- GIONEE wanghaiyan 2016-12-20 modify for 50571 begin-->
+        <!-- GIONEE wanghaiyan 2017-05-25 modify for 147800 begin-->
+		<!--Gionee wanghaiyan 2018-5-26 modify for CSW1707A-1115 begin-->
+        <CheckBox
+            android:id="@id/note_item_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="-7dp"
+            android:layout_marginStart="@dimen/home_note_item_reminder_margin_left"
+            android:layout_marginEnd="-5dp"
+            android:buttonTint="@color/check_box_state_color"
+            android:clickable="false"
+            android:visibility="invisible" />
+		<!--Gionee wanghaiyan 2018-5-26 modify for CSW1707A-1115 end-->
+	 	<!-- GIONEE wanghaiyan 2017-05-25 modify for 147800 end-->
+        <cyee.widget.CyeeTextView
+            android:id="@id/note_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/note_item_checkbox"
+            android:textSize="@dimen/home_note_item_time_size" />
+
+	 <!-- GIONEE wanghaiyan 2017-05-25 modify for 147800 begin-->
+	 <!--Gionee wanghaiyan 2018-5-26 modify for CSW1707A-1115 begin-->	
+        <cyee.widget.CyeeTextView
+            android:id="@id/note_item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/note_item_time"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/note_item_title"
+            android:layout_marginBottom="@dimen/note_item_content_margin_bottom"
+            android:layout_marginTop="@dimen/home_note_item_content_margin_top"
+            android:layout_toStartOf="@id/note_item_reminder"
+            android:textColor="@color/home_note_item_content_color"
+            android:textSize="@dimen/home_note_item_content_size" 
+            android:lines="2"
+            android:ellipsize="end"/>
+    </com.cydroid.note.app.view.NoteCardBottomView>
+	<!--Gionee wanghaiyan 2018-5-26 modify for CSW1707A-1115 end-->
+    <!-- GIONEE wanghaiyan 2017-05-25 modify for 147800 end-->
+
+    <View
+        android:id="@id/note_item_content_onclick_view"
+        style="@style/noteCardChickBgEffect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

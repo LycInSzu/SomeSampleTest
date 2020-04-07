@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.cydroid.note.app.view.EditScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbarStyle="outsideOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/new_note_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.cydroid.note.app.view.EditLabelView
+                    android:id="@+id/new_note_label_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/note_edit_text_line_color" />
+            </LinearLayout>
+            
+           <!--gionee wanghaiyan added on 2016-10-11 for CR01766578 begin-->
+            <com.cydroid.note.app.view.NoteTitleEditText
+                android:id="@+id/new_note_title"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@null"
+                android:gravity="start|top"
+                android:hint="@string/title_hint"
+                android:paddingStart="@dimen/edit_note_content_padding_left"
+                android:paddingEnd="@dimen/edit_note_content_padding_right"
+                android:paddingTop="@dimen/edit_note_content_line_padding_top"
+                android:singleLine="true"
+                android:maxLength="30"
+                android:textColor="@color/note_title_color"
+                android:textCursorDrawable="@drawable/edit_cursor_dw"
+                android:textSize="@dimen/edit_note_title_text_size"
+                android:textStyle="bold" />
+             <!--gionee wanghaiyan added on 2016-10-11 for CR01766578 end-->
+             <!--gionee wanghaiyan added on 2016-09-06 for CR01754645 begin-->
+            <com.cydroid.note.app.view.NoteContentEditText
+                android:id="@+id/new_note_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="start|top"
+                android:hint="@string/content_hint"
+                android:paddingBottom="@dimen/edit_note_content_padding_bottom"
+                android:paddingStart="@dimen/edit_note_content_padding_left"
+                android:paddingEnd="@dimen/edit_note_content_padding_right"
+                android:paddingTop="10dp"
+                android:textColor="@color/note_content_color"
+                android:textCursorDrawable="@drawable/cursor_dw"
+                android:textSize="@dimen/edit_note_content_text_size" 
+                android:maxLength="10000"
+                android:inputType="textAutoCorrect|textCapSentences|textMultiLine"/>
+        </LinearLayout>
+           <!--gionee wanghaiyan added on 2016-09-06 for CR01754645 end-->
+
+    </com.cydroid.note.app.view.EditScrollView>
+
+    <ViewStub
+        android:id="@+id/ai_tip_view_stub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="15dp"
+        android:layout="@layout/new_note_activity_content_ai_ly" />
+
+
+</merge>

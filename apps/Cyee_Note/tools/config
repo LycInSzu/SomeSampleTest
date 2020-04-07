@@ -1,0 +1,5 @@
+#!/bin/bash
+RSYNC_SRC="/home/gaojt/note"
+RSYNC_DST="/home/gaojt/work/pvt_Note2.0.0"
+APK_SRC=$RSYNC_SRC"/app/build/outputs/apk/app-release.apk"
+ANDROID_MANIFEST=$RSYNC_SRC/app/src/main/AndroidManifest.xml

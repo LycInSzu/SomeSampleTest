@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sound_recorder_dialog_height">
+
+        <ImageView
+            android:id="@+id/sound_recorder_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/sound_recorder_dialog_point_margin_left"
+            android:src="@drawable/sound_recorder_dialog_point" />
+
+        <!--Gionee wanghaiyan 2017-6-15 modfiy for 157970 begin -->
+        <TextView
+            android:id="@+id/sound_recorder_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/sound_recorder_dialog_time_margin_left"
+            android:layout_toEndOf="@id/sound_recorder_point"
+            android:textColor="@color/sound_recorder_dialog_time_color"
+            android:textSize="@dimen/sound_recorder_dialog_time_size" 
+            android:layoutDirection="ltr"/>
+        <!--Gionee wanghaiyan 2017-6-15 modfiy for 157970 end -->
+
+        <FrameLayout
+            android:layout_width="@dimen/sound_recorder_dialog_button_bg_size"
+            android:layout_height="@dimen/sound_recorder_dialog_button_bg_size"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/sound_recorder_dialog_button_margin_right"
+            android:background="@drawable/sound_recorder_dialog_button_bg">
+
+            <ImageView
+                android:id="@+id/sound_recorder_stop"
+                style="@style/noteCardChickBgEffect"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/media_stop" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</FrameLayout>

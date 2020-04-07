@@ -1,0 +1,3 @@
+<resources>
+    <dimen name="label_selector_dialog_checkbox_margin_right">0dip</dimen>
+</resources>

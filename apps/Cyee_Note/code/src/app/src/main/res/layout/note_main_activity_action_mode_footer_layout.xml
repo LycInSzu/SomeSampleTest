@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/note_main_activity_action_mode_footer_layout_divide_height"
+        android:background="@color/footer_bar_seperator_line_color" />
+
+    <LinearLayout
+        android:id="@+id/action_del_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top|center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/footer_edit_or_encrypt_action"
+            style="@style/RippleEffect"
+            android:layout_width="@dimen/note_main_activity_action_mode_footer_layout_item_width"
+            android:layout_height="match_parent"
+            android:drawablePadding="@dimen/note_main_activity_action_mode_footer_layout_item_drawable_padding"
+            android:gravity="center"
+            android:paddingTop="@dimen/note_main_activity_action_mode_footer_layout_item_top_padding"
+            android:text="@string/note_action_edit_string"
+            android:textColor="@color/action_bar_text_color"
+            android:textSize="@dimen/note_main_activity_action_mode_footer_layout_item_text_size" />
+
+        <TextView
+            android:id="@+id/footer_delete_or_search_action"
+            style="@style/RippleEffect"
+            android:layout_width="@dimen/note_main_activity_action_mode_footer_layout_item_width"
+            android:layout_height="match_parent"
+            android:drawablePadding="@dimen/note_main_activity_action_mode_footer_layout_item_drawable_padding"
+            android:gravity="center"
+            android:paddingTop="@dimen/note_main_activity_action_mode_footer_layout_item_top_padding"
+            android:text="@string/note_action_encrypt_string"
+            android:textColor="@color/action_bar_text_color"
+            android:textSize="@dimen/note_main_activity_action_mode_footer_layout_item_text_size" />
+
+<!--        <TextView
+            android:visibility="gone"
+            android:id="@+id/note_main_activity_foot_layout_ami_mark"
+            style="@style/RippleEffect"
+            android:layout_width="@dimen/note_main_activity_action_mode_footer_layout_item_width"
+            android:layout_height="match_parent"
+            android:drawablePadding="@dimen/note_main_activity_action_mode_footer_layout_item_drawable_padding"
+            android:gravity="center"
+            android:paddingTop="@dimen/note_main_activity_action_mode_footer_layout_item_top_padding"
+            android:text="@string/ami_mark"
+            android:textColor="@color/action_bar_text_color"
+            android:textSize="@dimen/note_main_activity_action_mode_footer_layout_item_text_size" />-->
+
+        <TextView
+            android:id="@+id/note_main_activity_foot_layout_setting"
+            style="@style/RippleEffect"
+            android:layout_width="@dimen/note_main_activity_action_mode_footer_layout_item_width"
+            android:layout_height="match_parent"
+            android:drawablePadding="@dimen/note_main_activity_action_mode_footer_layout_item_drawable_padding"
+            android:gravity="center"
+            android:paddingTop="@dimen/note_main_activity_action_mode_footer_layout_item_top_padding"
+            android:text="@string/setting_title"
+            android:textColor="@color/action_bar_text_color"
+            android:textSize="@dimen/note_main_activity_action_mode_footer_layout_item_text_size" />
+    </LinearLayout>
+
+</LinearLayout>

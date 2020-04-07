@@ -1,0 +1,307 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- common string -->
+    <string name="app_name">Notes</string>
+    <string name="app_name_outside">Notes</string>
+    <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626813 begin -->
+    <string name="button_sure">OK</string>
+    <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626813 end -->
+    <string name="button_cancel">Cancel</string>
+    <string name="button_delete">Delete</string>
+
+    <string name="file_note_found">File not found</string>
+
+    <!-- home activity, search-->
+    <string name="search_hint">Search notes</string>
+    <string name="search_page_label_title">View by label</string>
+
+    <string name="note_main_activity_title_layout_title_text">Notes</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="note_action_del_string">Delete</string>
+    <!-- gionee wanghaiyan modify on 2016-12-07 for 40606 begin -->
+    <string name="note_action_edit_string">New</string>
+    <!-- gionee wanghaiyan modify on 2016-12-07 for 40606 end -->
+    <string name="note_action_share_string">Share</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="note_action_del_message">Are you sure you want to delete the selected note?</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="dialog_negative_text">Dismiss</string>
+    <string name="alert_time_early">Time before now, please reset</string>
+
+    <!-- Edit page , attachment -->
+    <string name="attachment_enter_camera_fail">The camera can\'t be use</string>
+
+    <!--label select dialog  -->
+    <string name="default_label_life">Life</string>
+    <string name="default_label_meeting">Meeting</string>
+    <string name="default_label_travel">Travel</string>
+    <string name="default_label_inspiration">Inspiration</string>
+    <string name="label_selector_dialog_custom_label_text">Label</string>
+
+    <!--label select dialog  -->
+    <string name="label_custom_action_bar_title">Custom label</string>
+    <string name="label_custom_edit_text_hint">Input label</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="label_custom_exist">A label with this name already exists. Please try again.</string>
+    <string name="label_custom_delete_attention">It will not delete notes until the label is deleted, are you sure to delete the label?</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <plurals name="number_of_items_selected">
+        <item quantity="zero">%1$d Selected</item>
+        <item quantity="one">%1$d Selected</item>
+        <item quantity="other">%1$d Selected</item>
+    </plurals>
+
+    <string name="select_all">Select all</string>
+    <string name="unselect_all">Unselect all</string>
+
+    <!--NewNoteActivity-->
+    <string name="title_hint">Input title</string>
+    <string name="title_focus_hint">Input title</string>
+    <string name="content_hint">Input content</string>
+    <string name="add_image_fail">Failed to add pictures</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="note_tip_loading">Loading...</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="note_tip_loadFinish">No content</string>
+
+    <string name="note_tip_search">Under query</string>
+    <string name="note_tip_searchFinish">No match for content</string>
+
+    <!--PreviewPictureMakeProxy-->
+    <string name="create_picture">Creating picture...</string>
+    <string name="create_picture_fail">Failed to generate picture</string>
+    <string name="create_picture_create_bmp_fail">Content is too long, the system generates a picture of failure</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="create_picture_fail_no_space">There is no enough space to produce the picture</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+
+    <!--PreviewActivity-->
+    <string name="share_preview">Share preview</string>
+    <string name="file_save_toast_text">"Image saves to "</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="file_save_fail_toast_text">There is no enough space to save the file</string>
+    <string name="file_save_fail_origin_no_exist">You have lost the originial file, so the picture can not be saved</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="date_upgrade_message">Is updating the Notepad data, please wait a moment</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="import_backup_config_dialog_title">Import Notepad</string>
+    <string name="import_backup_config_dialog_message">In this version of the new design, local backups are not supported. We detect that you have some data backup that has not yet been imported. Please import this data in time to avoid losing it</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="import_backup_config_dialog_btn_cancel">Cancel</string>
+    <string name="import_backup_config_dialog_btn_import">Import</string>
+    <string name="import_backup_config_dialog_checkbox_text">No longer tips</string>
+    <string name="import_backup_progress_dialog_title">Import</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="import_backup_progress_dialog_message">Importing Notepad data...</string>
+    <string name="import_backup_fail_message">The import process encountered a problem, Please ensure that there is at least %1$dMB space available in your memory card. The program will go back to check whether you need to import or not when it launch next time.</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    
+    <string name="attachment_record_focus_fail">Current recording equipment occupied, unable to record.</string>
+    <string name="attachment_sound_paly_focus_fail">Current recording equipment occupied, unable to play.</string>
+    <string name="attachment_record_permission_hint">Please check the permission of sound record granted</string>
+    <string name="max_content_input_mum_limit">Maximum input content limit has been reached.</string>
+    <string name="max_pic_input_mum_limit">Maximum numbers of picture limit has been reached.</string>
+
+    <string name="setting_title">Settings</string>
+    <string name="inscribed_signature">Inscribed signature</string>
+    <string name="version_update">Version update</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="no_version">The current version is the latest</string>
+    <string name="progress_checking">Checking for a new version, please wait...</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="about_us">About us</string>
+    <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626568 begin -->
+    <string name="signature_input_hint">Please input signature</string>
+    <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626568 end -->
+    <string name="aboutus_version_content_text">Version:V</string>
+    <string name="aboutus_copyright_content_text">Copyright©2015 Shenzhen Gionee communication equipment Co., Ltd. All rights reserved.</string>
+    <string name="network_error">Network error</string>
+    <string name="no_space">No space</string>
+    <string name="file_not_found">File not found</string>
+    <string name="local_file_verify_failed">Failed to verify local file</string>
+    <string name="server_error">Server error</string>
+    <string name="upgrading">Upgrading...</string>
+    <string name="verify_failed">Verification failed</string>
+    <string name="no_sdcard">No SD card</string>
+    <string name="low_memory">Low memory</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="dialog_update_compelete">A new version has been detected. Please upgrade the app!</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="dialog_update_or_not">,\n\nIs now updated?</string>
+    <string name="dialog_update">Update</string>
+    <string name="dialog_install">Install</string>
+    <string name="down_load_dialog_msg">Downloading...</string>
+    <string name="down_load_paused_msg">DownLoad paused</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+
+    <string name="app_widget2x2">Note2x2</string>
+    <string name="app_widget4x4">Note4x4</string>
+    <string name="time_am">AM</string>
+    <string name="time_pm">PM</string>
+
+    <string name="message_media_record_time_max">Maximum recording time reached. Please stop recording.</string>
+
+    <string name="ai_activity_title">AI</string>
+    <string name="ami_recommend_panel_title">Ami Recommend</string>
+    <string name="favor_recommend_panel_title">Favor Recommend</string>
+    <string name="recommend_search_hint_text">Input key words</string>
+    <string name="authorization_failed">Can\'t get permission to use this feature</string>
+    <string name="ai_activity_not_network_tip">The current network is disconnected, but also the network search</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="note_storage_inner">Phone Storage</string>
+    <string name="alert_remaining_chars">You still need to delete <xliff:g id="file">%d</xliff:g> characters</string>
+    <string name="alert_remaining_char">You still need to delete <xliff:g id="file">%d</xliff:g> character</string>
+
+    <string name="data_flow_alert_user_title">Welcome to use Note</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="data_flow_alert_user_content">The app requires the following permissions:\n Network connection, record audio, take photos, access to external storage. Do you want to continue?</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="data_flow_alert_user_checkbox">Never remind</string>
+    <string name="alert_user_title_str">System Prompt</string>
+    <string name="alert_user_ok">Continue</string>
+    <string name="alert_user_cancle">Exit</string>
+
+    <string name="notification_title">download picture</string>
+    <string name="download_poto_hint">Download picture to：</string>
+    <string name="download_compelete">Download complete</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="download_unsurpport_hint">Unsupported type</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="vsq_tip_text">* To confirm the password protection question answer</string>
+    <string name="vsq_confirm_btn_text">Confirm</string>
+    <string name="choose_question_dialog_title">Question</string>
+
+    <string name="setting_secret_name">Encryption reminding</string>
+    <string name="setting_secret_tip">Encryption reminding for private content of notepad</string>
+    <string name="guideline_enter_private_album">Slide down with two fingers at home page and enter private notes.</string>
+
+    <string name="note_action_encrypt_string">Encrypt</string>
+    <string name="note_action_decrypt_string">Decrypt</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="password_set_successed_title">Set successfully</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="modified_password">Change password</string>
+    <string name="modified_protect_question">Change password protection questions</string>
+
+    <string name="secret_room">Back room</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="forget_password">Forget password</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="setting_password">Set your four digit password</string>
+    <string name="verification_password">Verify password</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="password_error_hint">The password is incorrect. You have %1$s attempts left.</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="setting_password_hint">Before using the private Notes, please set your password first</string>
+    <string name="ensure_password">Confirm Password</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="password_not_match">Password do not match，Please try again</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="enter_password">Please enter your password</string>
+    <string name="enter_password_later">Please try again in %1$s minute</string>
+    <string name="verify_sq_activity_title">Verify password protection</string>
+    <string name="setting_password_protect_QA">Set password protection</string>
+    <string name="answer_incorrect">Wrong answer</string>
+    <string name="sq_q_text_tip">Q:</string>
+    <string name="sq_a_text_tip">A:</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="note_content_notChange_hint">The content is not changed and you have saved it before</string>
+
+    <string name="encrypt_hint_title">Encryption tips</string>
+    <string name="encrypt_hint_content">There is a security risk on the note. We recommend that you encrypt it.</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="encrypt_hint_manager_dialog_sure">Encrypt</string>
+    <string name="successful_modification">Change successfully</string>
+
+    <string name="password_set_successed_congratulations">Congratulations!</string>
+    <string name="password_set_successed">You have successfully set the password</string>
+    <string name="password_set_successed_tips">Please note the following matters:</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="password_set_successed_tips_first">1.Do not select NoteMedia while using cleaning tools, otherwise you can not browse the images and tapes of the encrypted notepad.</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="password_set_successed_tips_second">2. Do not uninstall the application after encrypting the notepad, otherwise the encrypted notepad will not be able to retrieve.</string>
+    <string name="password_set_successed_sure">OK</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="encrypt_main_note_tip_load_finish">It is empty here. Do you want to add some little secrets? Click on the "encryption" button to add here while browsing the notepad.</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <!-- GIONEE wanghaiyan 2016-12-17 modify for 47298 begin-->
+    <string name="title_more_dialog_title">Other</string>
+    <!-- GIONEE wanghaiyan 2016-12-17 modify for 47298 end-->
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="confirm_protect_question">Confirm the saved answer of the security qustion</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="protect_question_empty">The protection question cannot be empty</string>
+    <string name="encrypt_switch_close">Close</string>
+    <string name="encrypt_switch_open">Open</string>
+
+    <string name="security_os_footer_add">Add</string>
+    <string name="security_os_footer_search">Search</string>
+    <string name="security_os_footer_secrete_space">Private Space</string>
+    <string name="encrypt_main_activity_security_os_title">Encrypted Notes</string>
+    <string name="encrypt_main_activity_security_os_add_tip">No Content</string>
+    <string name="encrypt_select_confirm">Confirm</string>
+    <string name="encrypt_select_cancel">Cancel</string>
+    <string name="encrypt_select_count_text">No items selected</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="encrypt_main_note_security_os_tip_load_finish">There are no notes added.</string>
+    <string name="encrypt_note_action_del_message">Are you sure you want to delete the selected notes?\nThe content of the selected notes will be deleted forever!</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="encrypt_finish_hint_for_security_os">Encrypted to private space</string>
+    <string name="decrypt_finish_hint">Decryption completed</string>
+
+    <string name="add_pics">Add pictures</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="encrypt_fail">Encryption failed</string>
+    <string name="decrypt_fail">Decryption failed</string>
+    <string name="encrypt_success">Encryption successful</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="delete_hint">Deleting，please try it again later</string>
+    <string name="encrypt_hint">Ecrypting，please try it again later</string>
+    <string name="decrypt_hint">Derypting，please try it again later</string>
+    <string name="recovery_hint">Recovering，please try it again later</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="partial_encrypt">%1$s encryption successful, %2$s encryption failed.</string>
+    <string name="partial_decrypt">%1$s decryption successful, %2$s decryption failed.</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <!--Trash-->
+    <string name="trash">Trash</string>
+    <!-- GIONEE wanghaiyan 2017-02-05 modify for 67550 begin-->
+    <string name="trash_first_delete_alert">Deleted notes will be moved to Trash(Settings->Trash) and they will be cleaned up forever after seven days. \nYou can delete or recover them in Trash.</string>
+    <!-- GIONEE wanghaiyan  2017-02-05 modify for 67550 end-->
+    <string name="trash_recover">Recover</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <plurals name="trash_left_days">
+        <item quantity="zero">"%1$d day left"</item>
+        <item quantity="one">"%1$d day left"</item>
+        <item quantity="other">"%1$d days left"</item>
+    </plurals>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="trash_recover_hint">Recovering，please try it again later</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="trash_delete_message">Are you sure you want to delete the selected notes forever?</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="note_action_search_string">Search</string>
+    <string name="note_action_setting_string">Settings</string>
+    <!--Chenyee <wanghaiyan> <20180205> modify for SW17W16A-3370 beign-->
+    <string name="unkown">Unknown</string>
+    <!--Chenyee <wanghaiyan> <20180205> modify for SW17W16A-3370 end-->
+    <string name="download">Download</string>
+    <string name="down_load_fail_msg">Download failed</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="install_amiweather_tip">Ami weather will provide the weather forecast. We are unable to detect the Ami weather app on your phone. Do you want to download and install it?</string>
+    <string name="install_amicalendar_tip">Ami calendar will provide the calendar service. We are unable to detect Ami calendar app on your phone. Do you want to download and install the app?</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="no_network">The network is not used</string>
+
+    <string name="no_pictures">There is no picture in the storage card.</string>
+    <!--Gionee <GN_Oversea_Req> <wanghaiyan> <20170424> modify for 123076 beign-->
+    <string name="add_attach_fail">Sorry, do not support this file format.</string>
+    <!--Gionee <GN_Oversea_Req> <wanghaiyan> <20170424> modify for 123076 end-->
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="long_bitmap_add_failed">The size of the image is too large, failed to add</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="goto_weather_failed">Can not find app!</string>
+    <string name="record_fail">Recording failed</string>
+</resources>

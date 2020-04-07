@@ -1,0 +1,19 @@
+#!/bin/bash
+source config_svn_ignore
+
+rsync -av --delete --delete-excluded  --exclude-from='excludes.list' $RSYNC_SRC/ $RSYNC_DST/code/src/
+rsync -av --delete --delete-excluded  --exclude-from='excludes.list' $RSYNC_SRC/app/build/outputs/mapping/release/ $RSYNC_DST/proguard-mapping/
+
+rsync -av --exclude-from='excludes.list' $RSYNC_SRC/app/build/generated/res/rs/release/raw/ $RSYNC_DST/code/src/app/src/main/res/raw/
+
+rsync -av --exclude-from='excludes.list' $RSYNC_SRC/app/build/generated/source/buildConfig/release/ $RSYNC_DST/code/src/app/src/buildConfig/
+
+rsync -av --exclude-from='excludes.list' $RSYNC_SRC/app/build/generated/source/rs/release/ $RSYNC_DST/code/src/app/src/rs/
+
+./nosonar_dir $RSYNC_DST/code/src/app/src/rs/
+
+cp $RSYNC_SRC/app/src/main/AndroidManifest.xml $RSYNC_DST/code/AndroidManifest.xml
+cp $RSYNC_SRC/app/build/outputs/apk/app-release.apk $RSYNC_DST/code/Amigo_Note.apk
+
+
+

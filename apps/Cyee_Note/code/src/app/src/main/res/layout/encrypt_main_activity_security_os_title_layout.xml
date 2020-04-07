@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/note_main_activity_title_layout_title_left_margin"
+        android:layout_toStartOf="@+id/encrypt_main_activity_security_os_title_layout_desktop"
+        android:gravity="start|center_vertical"
+        android:text="@string/encrypt_main_activity_security_os_title"
+        android:textColor="@color/note_main_activity_title_layout_title_text_color"
+        android:textSize="@dimen/note_main_activity_title_layout_title_text_size" />
+
+    <ImageView
+        android:id="@+id/encrypt_main_activity_security_os_title_layout_desktop"
+        style="@style/RippleEffect"
+        android:layout_width="@dimen/note_main_activity_title_icon_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:scaleType="center" />
+
+</RelativeLayout>

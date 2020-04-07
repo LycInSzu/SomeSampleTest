@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/cyee_confirm_dialog_id_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cyee_confirm_dialog_title_height"
+        android:gravity="start|bottom"
+        android:paddingBottom="@dimen/cyee_confirm_dialog_title_bottom_padding"
+        android:paddingStart="@dimen/cyee_confirm_dialog_title_left_padding"
+        android:text="@string/inscribed_signature"
+        android:textColor="@color/system_stress_color"
+        android:textSize="@dimen/cyee_confirm_dialog_title_text_size" />
+
+    <!-- GIONEE wanghaiyan 2016-12-30 modify for 57505 begin-->
+    <!-- GIONEE wanghaiyan 2017-05-26modify for 148712 begin-->
+    <EditText
+        android:id="@+id/input_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/cyee_confirm_dialog_message_padding"
+        android:hint="@string/signature_input_hint"
+        android:textColor="@color/cyee_confirm_dialog_message_text_color"
+        android:textCursorDrawable="@drawable/edit_cursor_dw"
+        android:inputType="textNoSuggestions"
+        android:background="@drawable/shape" 
+        android:textSize="@dimen/cyee_confirm_dialog_message_text_size" />
+    <!-- GIONEE wanghaiyan 2017-05-26modify for 148712 end-->
+    <!-- GIONEE wanghaiyan 2016-12-30 modify for 57505 end-->
+
+</LinearLayout>

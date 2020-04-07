@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="max_pic_input_mum_limit">Суреттер максималды шектеулі санға жетті</string>  
+    <string name="down_load_paused_msg">Жүктеу тоқтатылды</string>  
+    <string name="ai_activity_title">Барлығы</string>  
+    <string name="ami_recommend_panel_title">Эми ұсынулары</string>  
+    <string name="favor_recommend_panel_title">Сүйікті ұсынулар</string>  
+    <string name="recommend_search_hint_text">Енгізудің кілтті сөзі</string>  
+    <string name="ai_activity_not_network_tip">Осы желілік қосылыс және де желілік іздеу үзілді</string>
+    <string name="data_flow_alert_user_title">Ескертуге қош келдіңіз</string>
+    <string name="data_flow_alert_user_content">Қосымша келесі рұқсаттарды талап етеді:\n желі бойынша қосылу, аудио жазу, фото түсіру, сыртқы жадыға қол жеткізу. Сіз шынында жалғастырғыңыз келе ме?</string>  
+    <string name="data_flow_alert_user_checkbox">Ешқашан еске түсірмеу</string>  
+    <string name="alert_user_title_str">Жүйелік кеңестер</string>
+    <string name="notification_title">Суретті жүктеу</string>
+    <string name="download_compelete">Жүктеу аяқталды</string>  
+    <string name="download_unsurpport_hint">Тип қолданылмайды</string>  
+    <string name="vsq_tip_text">*Қорғау құпиясөзін растау үшін сұраққа жауа беру</string>
+    <string name="vsq_confirm_btn_text">Растау</string>
+    <string name="choose_question_dialog_title">Сұрақ</string>
+    <string name="setting_secret_name">Шифрлеуді еске салу</string>  
+    <string name="setting_secret_tip">Жазба контентінің жеке кітапшасы үшін шифрлеуді еске салу</string>  
+    <string name="guideline_enter_private_album">Екі саусақтап басты бетке төмен қарай парақтаңыз және жеке ескертпелерді енгізіңіз</string>  
+    <string name="note_action_encrypt_string">Шифрлеу</string>  
+    <string name="note_action_decrypt_string">Шифрді ашу</string>  
+    <string name="password_set_successed_title">Орнату сәтті орындалды</string>  
+    <string name="modified_password">Құпиясөзді өзгерту</string>  
+    <string name="modified_protect_question">Құпиясөз қорғанысының сұрағын өзгерту</string>  
+    <string name="secret_room">Артқа</string>  
+    <string name="forget_password">Құпиясөзді ұмыттыңыз ба?</string>  
+    <string name="setting_password">Төрт мәнді құпиясөзіңізді көрсеіңіз</string>  
+    <string name="verification_password">Құпиясөзді растаңыз</string>  
+    <string name="password_error_hint">Құпиясөз дұрыс емес, сіз %1$s рет енгізе аласы</string>  
+    <string name="setting_password_hint">Жеке жазбаларыңызды қолданбас бұрын, өтінемін, құписөзіңізді енгізіңіз</string>  
+    <string name="ensure_password">Құпиясөзді растау</string>  
+    <string name="enter_password">Өтінемін, құпиясөзді енгізіңіз</string>  
+    <string name="enter_password_later">Өтінемін, %1$s минут ішінде қайталап көріңіз</string>  
+    <string name="verify_sq_activity_title">Құпиясөз қорғанысын растаңыз</string>  
+    <string name="setting_password_protect_QA">Құпиясөз қорғанысын көрсетіңіз</string>  
+    <string name="answer_incorrect">Жауап дұрыс емес</string>
+    <string name="encrypt_hint_title">Шифрге кеңес беру</string>
+    <string name="encrypt_hint_content">Жазбаға құпия ақпараттың жариялану қаупі төніп тұр, шифрлеу ұсынылады</string>  
+    <string name="encrypt_hint_manager_dialog_sure">Шифрлеу</string>  
+    <string name="successful_modification">Сәтті өзгертілді</string>  
+    <string name="password_set_successed_congratulations">Құттықтаймыз!</string>  
+    <string name="password_set_successed">Сіз құпиясөзді сәтті орнаттыңыз</string>  
+    <string name="password_set_successed_tips">Келесі тармақтарға назар аударыңыз:</string>  
+    <string name="password_set_successed_tips_first">1.Таңдамаңыз. Мультимедиалық файлдарды тазарту қосымшаларын пайдаланғанда белгілеңіз, әйтпесе шифрленген жазба кітабының суреттері мен таспалары көрсетілмейді.</string>  
+    <string name="password_set_successed_tips_second">2. Жазба кітабын шифрлегеннен кейін жоймаңыз, әйтпесе шифрленген жазба кітабын шығару мүмкін болмайды</string>  
+    <string name="password_set_successed_sure">Жақсы</string>  
+    <string name="encrypt_main_note_tip_load_finish">Бұл жер бос. Сіз қосымша құпия мәліметтерді енгізгіңіз келе ме? Жазба кітабын көрсету кезінде қосу үшін, мұнда "шифрлеуді" басыңыз</string>  
+    <string name="title_more_dialog_title">Басқалар</string>  
+    <string name="confirm_protect_question">Құпиясөздің сақталған қорғанысын, сұрақ-жауапты растау</string>  
+    <string name="protect_question_empty">Қорғаныс сұрағы бос бола алмайды</string>  
+    <string name="encrypt_switch_open">Ашу</string>  
+    <string name="security_os_footer_add">Қосу</string>  
+    <string name="security_os_footer_search">Іздеу</string>  
+    <string name="security_os_footer_secrete_space">Жеке кеңістік</string>  
+    <string name="encrypt_main_activity_security_os_title">Шифрленген жазбалар</string>  
+    <string name="encrypt_main_activity_security_os_add_tip">Контент жоқ</string>  
+    <string name="encrypt_select_confirm">Растау</string>  
+    <string name="encrypt_select_cancel">Болдырмау</string>  
+    <string name="encrypt_select_count_text">Тармақтар таңдалмаған</string>  
+    <string name="encrypt_main_note_security_os_tip_load_finish">Мұнда ескертпелер қосылмаған</string>  
+    <string name="encrypt_note_action_del_message">Сіз таңдалған жазбаларды жойғыңыз келетінінен сенімдісіз бе? Таңдалған жазбаның контенті біржола жойылады</string>  
+    <string name="encrypt_finish_hint_for_security_os">Жеке кеңістікте шифрленді</string>  
+    <string name="decrypt_finish_hint">Шифрді ашу аяқталды</string>  
+    <string name="add_pics">Сурет қосу</string>  
+    <string name="encrypt_fail">Шифрлеуді мүмкін болмады</string>  
+    <string name="decrypt_fail">Шифрді ашу мүмкін болмады</string>  
+    <string name="encrypt_success">Шифрлеу сәтті орындалды</string>
+    <string name="partial_encrypt">%1$s зшифрді ашу сәтті орындалды, %2$s шифрлеу мүмкін болмады.</string>
+    <string name="partial_decrypt">%1$s расшифровка выполнена успешно, %2$s расшифровка не удалась.</string>  
+    <string name="trash">Себет</string>  
+    <string name="trash_first_delete_alert">Себет және ол жеті күннен кейін бір жола тазарталатын болады. Сіз оларды себетте не жоя не қалпына келтіре аласыз.</string>  
+    <string name="trash_recover">Қалпына келтіру</string>  
+    <plurals name="trash_left_days"> 
+        <item quantity="zero">"%1$d күн қалды"</item>  
+        <item quantity="one">"%1$d күн қалды"</item>  
+        <item quantity="other">"%1$d күн қалды"</item> 
+    </plurals>
+    <string name="note_action_search_string">Іздеу</string>
+    <string name="note_action_setting_string">Баптаулар</string>  
+    <string name="unkown">Белгісіз</string>  
+    <string name="down_load_fail_msg">Жүктеу мүмкін болмады</string>  
+    <string name="install_amiweather_tip">Эми ауа райы ауа райын, Эми ауа райы орнатылмаған телефонды анықтауды қамтиды немесе жүктейді және орнатады</string>  
+    <string name="install_amicalendar_tip">Эми күнтізбесі күнтізбе қызметтерін, Эми күнтізбесі орнатылмаған телефонды анықтауды қамтиды немесе жүктейді және орнатады</string>  
+    <string name="no_network">Желі пайдаланылмайды</string>  
+    <string name="no_pictures">Жад картасында сурет жоқ</string>
+    <string name="add_attach_fail">Кешіріңіз, бұл файл пішімі қолданылмайды</string>
+    <string name="long_bitmap_add_failed">Фотосурет ұзындығы лимиттен асып түседі, қосу мүмкін болмады</string>
+</resources>

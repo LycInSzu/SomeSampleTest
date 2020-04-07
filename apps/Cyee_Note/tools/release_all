@@ -1,0 +1,3 @@
+#!/bin/bash
+./build_gitrepo && ./sync_to_note && ./apk_env_build && ./svn_sync
+

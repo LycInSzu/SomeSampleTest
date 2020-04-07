@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cyee_confirm_dialog_title_height">46dp</dimen>
+    <dimen name="cyee_confirm_dialog_title_left_padding">20dp</dimen>
+    <dimen name="cyee_confirm_dialog_title_bottom_padding">10dp</dimen>
+    <dimen name="cyee_confirm_dialog_title_text_size">18sp</dimen>
+    <dimen name="cyee_confirm_dialog_message_padding">20dp</dimen>
+    <dimen name="cyee_confirm_dialog_message_text_size">16sp</dimen>
+    <dimen name="cyee_confirm_dialog_checkbox_padding">20dp</dimen>
+    <dimen name="cyee_confirm_dialog_checkbox_text_size">14sp</dimen>
+    <dimen name="cyee_confirm_dialog_button_height">52dp</dimen>
+    <dimen name="cyee_confirm_dialog_button_text_size">16sp</dimen>
+    <dimen name="cyee_confirm_dialog_button_margin">8dp</dimen>
+
+</resources>

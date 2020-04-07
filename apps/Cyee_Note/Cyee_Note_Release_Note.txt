@@ -1,0 +1,32 @@
+==================
+Build Notes
+==================
+1.版本目的:
+--
+2.功能变更:
+--
+3.重点测试的问题:
+--
+4.应用数据库是否改变:
+No
+
+==================
+Release Location
+==================
+/software_release/Applications/Cyee_Note/Cyee_Note_overseaO_V8.0.0.ab.zip
+
+==================
+CR List
+==================
+[Repository Url]: http://192.168.110.97/svn/Cyee_Note/branches/branch_oversea_Cyee_Note_AndroidO_1.0.0_rel
+svn log -v --xml -r 16:15 http://192.168.110.97/svn/Cyee_Note/branches/branch_oversea_Cyee_Note_AndroidO_1.0.0_rel|grep <msg>
+189723		打开		王海燕(应用二组)		O平台apk适配工作
+Tag url: http://192.168.110.97/svn/Cyee_Note/tags/Cyee_Note_overseaO_V8.0.0.ab
+Previous tag: Cyee_Note_overseaO_V8.0.0.aa
+Code difference: svn diff -r 16:15 http://192.168.110.97/svn/Cyee_Note/branches/branch_oversea_Cyee_Note_AndroidO_1.0.0_rel
+
+=========autotest test start=========
+whethor autotest:
+application_autotest product:
+GBL7553
+=========autotest test end=========

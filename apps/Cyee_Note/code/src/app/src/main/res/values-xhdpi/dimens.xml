@@ -1,0 +1,6 @@
+<resources>
+	<!--Chenyee wanghaiyan 2018-6-12 modify for SWW1618OTA-568 begin-->
+	<integer name="widget_content_lines_2x">4</integer>
+	<integer name="widget_content_lines_2x_image">2</integer>
+	<!--Chenyee wanghaiyan 2018-6-12 modify for SWW1618OTA-568 end-->
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="password_set_successed_congratulations_container_height">80dp</dimen>
+    <dimen name="password_set_successed_congratulations_margin_top">18dp</dimen>
+    <dimen name="password_set_successed_tips_container_margin_top">50dp</dimen>
+	<!--Chenyee wanghaiyan 2018-6-12 modify for SWW1618OTA-568 begin-->
+	<integer name="widget_content_lines_2x_image">2</integer>
+	<integer name="widget_content_lines_2x">4</integer>
+	<!--Chenyee wanghaiyan 2018-6-12 modify for SWW1618OTA-568 end-->
+</resources>

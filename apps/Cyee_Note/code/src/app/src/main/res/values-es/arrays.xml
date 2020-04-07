@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string-array name="same_app_packagename"> 
+        <item>com.youdao.note</item>
+        <item>com.lenovo.supernote</item>
+        <item>pinkdiary.xiaoxiaotu.com</item>
+        <item>com.evernote</item>
+        <item>com.cooldigit.notes</item>
+        <item>com.fihtdc.note</item>
+        <item>com.baidu.quickmind</item>
+        <item>com.itjinks.iosnotes</item>
+        <item>com.huawei.mobilenotes</item>
+        <item>com.snda.inote.lenovo</item>
+        <item>com.smartisan.notes</item>
+        <item>com.xiaomi.notes</item>
+        <item>de.softxperience.android.noteeverything</item>
+        <item>org.dayup.gnotes</item>
+        <item>com.google.android.keep</item>
+    </string-array>
+    <string-array name="password_protect_question">
+        <item>¿Cuál es tu fecha de nacimiento?</item>
+        <item>¿Cuál es tu hobby favorito?</item>
+        <item>¿Cuál es tu deporte favorito?</item>
+        <item>¿Cuál es tu idolo favorito?</item>
+        <item>¿Cuál es el nombre de tu cyee cercano?</item>
+    </string-array>
+</resources>

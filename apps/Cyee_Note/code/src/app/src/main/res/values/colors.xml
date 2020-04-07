@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- for ChameleonColor -->
+    <color name="system_stress_color">#00a6ce</color>
+    <color name="check_box_button_unchecked_color">#33000000</color>
+
+    <!-- home activity, include recyclerView -->
+    <color name="home_activity_background">#f1f0e8</color>
+    <color name="home_note_item_background">#ffffff</color>
+    <color name="home_note_item_title_color">#705345</color>
+    <color name="home_note_item_time_color">#80000000</color>
+    <color name="home_note_item_trash_time_color">#bc5e3a</color>
+    <color name="home_note_item_content_color">#80000000</color>
+
+    <!--note_main_activity_title_layout-->
+    <color name="note_main_activity_title_layout_title_text_color">#ffffff</color>
+    <color name="note_main_activity_title_layout_icon_tint_color">#ffffff</color>
+    <color name="note_main_activity_title_layout_icon_tint_color_business_style">#828282</color>
+
+    <!--note_main_activity_action_mode_title_layout-->
+    <color name="note_main_activity_action_mode_title_layout_text_color">#ffffff</color>
+    <color name="note_main_activity_action_mode_title_layout_select_button_text_color">#ffffff
+    </color>
+
+    <!--note_main_activity_action_mode_footer_layout-->
+    <color name="note_main_activity_action_mode_footer_layout_divide_color">#80cccccc</color>
+
+    <!-- home activity, search-->
+    <color name="search_view_background_color">#20000000</color>
+    <!-- GIONEE wanghaiyan 2016-12-29 modify for #57164 begin-->
+    <color name="search_view_hint_text_color">#20000000</color>
+    <color name="search_view_text_color">#000000</color>
+    <!-- GIONEE wanghaiyan 2016-12-29 modify for #57164 end-->
+    <color name="search_view_clear_button_tint_color">#ffffff</color>
+    <color name="search_page_label_title_color">#ab9d98</color>
+    <color name="search_page_label_item_color_normal">#6b5b4e</color>
+    <!-- GIONEE wanghaiyan 2018-3-20 modify for #CSW1705A-2353 begin-->
+    <color name="abstract_note_activity_layout_head_default_bg">#00a3e4</color>
+    <!-- GIONEE wanghaiyan 2018-3-20 modify for #CSW1705A-2353 end-->
+    <color name="abstract_note_activity_layout_head_default_bg_business_style">#efefef</color>
+    <color name="abstract_note_activity_layout_head_security_os_bg">#314d79</color>
+    <color name="abstract_note_activity_root_bg_color">#f1f0e8</color>
+    <color name="abstract_note_activity_root_business_bg_color">#fafafa</color>
+
+
+    <!--NoteEditText -->
+    <color name="note_edit_text_line_color">#36BCA47E</color>
+    <color name="note_edit_sound_bg_color">#ffffff</color>
+    <color name="edit_note_item_sound_point_color">#db7965</color>
+    <color name="edit_note_item_sound_duration_color">#705345</color>
+    <color name="edit_note_item_time_color">#50705345</color>
+    <color name="edit_note_item_signature_color">#99705345</color>
+    <color name="edit_note_item_reminder_color">#81675a</color>
+    <color name="edit_note_label_item_text_color">#ab9d98</color>
+    <color name="note_title_color">#705345</color>
+    <color name="note_content_color">#cc705345</color>
+    <color name="edit_note_bill_foreground_color">#80705345</color>
+
+    <!--attachment selector dialog  -->
+    <color name="dialog_background">#f8f8f4</color>
+    <color name="dialog_ripple_color">#7fffffff</color>
+    <color name="attachment_selector_dialog_grid_item_text_color">#6b5b4e</color>
+    <color name="attachment_selector_dialog_grid_item_graded_text_color">#206b5b4e</color>
+
+    <!--sound recorder/play dialog  -->
+    <color name="sound_recorder_dialog_point_color">#d97b65</color>
+    <color name="sound_recorder_dialog_time_color">#968a80</color>
+    <color name="sound_recorder_dialog_button_ring_inner_color">#ffffff</color>
+    <color name="sound_recorder_dialog_button_ring_outer_color">#f0f0ec</color>
+
+    <!--reminder selector dialog  -->
+    <color name="datetime_title_text_normal_color">#cc000000</color>
+
+    <!--label select dialog  -->
+    <color name="label_selector_dialog_button_text_color">#6b5b4e</color>
+    <color name="label_selector_dialog_list_item_text_color_normal">#6b5b4e</color>
+
+    <!--label custom activity  -->
+    <color name="label_custom_title_layout_text_color">#ffffff</color>
+    <color name="label_custom_edit_text_background">#0c000000</color>
+    <color name="label_custom_edit_text_hint_color">#806b5b4e</color>
+    <color name="label_custom_edit_button_unable_color">#dbd0c9</color>
+    <color name="label_custom_list_item_text_color">#6b5b4e</color>
+
+    <!-- sound image span -->
+    <color name="sound_record_time_textcolor">#705345</color>
+    <color name="sound_dot_color">#d97b65</color>
+
+    <color name="action_bar_text_color_normal">#6b5b4e</color>
+    <color name="action_bar_text_color_unabled">#506b5b4e</color>
+    <color name="action_bar_image_color_normal">#968a80</color>
+    <color name="action_bar_image_color_unabled">#50968a80</color>
+    <color name="action_bar_image_color_top_normal">#ffffff</color>
+    <color name="action_bar_image_color_top_unabled">#d4d4d4</color>
+    <color name="action_bar_new_note_activity_enable">#ffffff</color>
+    <color name="action_bar_private_space_color">#314d79</color>
+
+    <color name="note_tip_text_color">#50000000</color>
+    <color name="note_tip_text_white_bg_color">#50000000</color>
+    <color name="note_tip_text_dart_bg_color">#50ffffff</color>
+
+    <color name="about_app_note_name_color">#6b5b4e</color>
+    <color name="about_app_note_version_color">#806b5b4e</color>
+    <color name="about_app_note_copyright_color">#6b5b4e</color>
+    <!-- Preview activity -->
+    <color name="share_ami_tag_text_color">#a87973</color>
+    <color name="preview_activity_bg_color">#2a2524</color>
+
+    <color name="import_backup_checkbox_text_color">#80000000</color>
+
+    <color name="new_note_activity_normal_bg_color">#f1f0e8</color>
+    <color name="new_note_activity_normal_bg_color_business_style">#efefee</color>
+    <color name="setting_list_item_text_color_signature_press">#ffffff</color>
+    <color name="setting_list_item_text_color_press">#ffffff</color>
+    <color name="setting_list_signature_text_color_no_press">#806b5b4e</color>
+    <color name="label_custom_list_item_text_color_no_press">#6b5b4e</color>
+
+    <color name="new_note_title_share_color_disable">#50ffffff</color>
+    <color name="new_note_title_share_color_disable_business_style">#cecece</color>
+    <color name="new_note_title_delet_color_disable">#50ffffff</color>
+    <color name="new_note_title_color_enable">#ffffff</color>
+    <color name="new_note_title_color_enable_business_style">#828282</color>
+
+    <drawable name="chick_bg_pressed">#ff9000</drawable>
+    <drawable name="note_card_chick_bg_pressed">#33000000</drawable>
+    <drawable name="transparent_drawable">#00000000</drawable>
+    <color name="recommend_search_panel_bg_color">#e2e2d8</color>
+    <color name="recommend_panel_bg_color">#ffffff</color>
+    <color name="recommend_panel_line_color">#e7e6e5</color>
+
+    <color name="ai_search_image_while_press">#ffffff</color>
+    <color name="ai_search_image_black_hint">#33000000</color>
+    <color name="ai_search_image_normal">#80000000</color>
+
+    <color name="note_mian_acitivity_window_bg">#f1f0e8</color>
+
+
+    <color name="setting_title_bg">#ffffff</color>
+    <color name="new_note_foot_bg">#f8f8f4</color>
+    <color name="new_note_foot_bg_business_style">#fdfdfd</color>
+
+    <color name="dialog_text_color">#cc000000</color>
+    <color name="dialog_hint_text_color">#66000000</color>
+
+    <color name="enable_text_color">#80000000</color>
+    <color name="disable_text_color">#30000000</color>
+
+    <color name="title_more_dialog_text_color">#666666</color>
+    <color name="question_select_dialog_text_color">#666666</color>
+    <color name="new_guide_line_background">#CC000000</color>
+
+    <color name="password_set_successed_congratulations_text_color">#705345</color>
+    <color name="password_set_successed_tips_text_color">#80705345</color>
+    <color name="encrypt_select_title_grayed_color">#20ffffff</color>
+
+    <color name="weather_color">#99675551</color>
+
+    <color name="footer_bar_seperator_line_color">#50808080</color>
+
+    <color name="big_text_white_bg_color">#CC000000</color>
+    <color name="big_text_dark_bg_color">#CCffffff</color>
+    <color name="small_text_white_bg_color">#80000000</color>
+    <color name="small_text_dark_bg_color">#80ffffff</color>
+
+    <color name="default_ccs_color">#66000000</color>
+
+
+    <color name="password_protect_btn_bg_color">#20ffffff</color>
+   <color name="cyee_transparent">#00000000</color>  
+
+</resources>

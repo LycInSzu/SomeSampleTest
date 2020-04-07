@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string-array name="password_protect_question">
+        <item>Jaka jest Twoja data urodzenia?</item>
+        <item>Jakie jest Twoje ulubione hobby?</item>
+        <item>Jaki jest Twój ulubiony sport?</item>
+        <item>Jaki jest Twój ulubiony idol?</item>
+        <item>Jak nazywa się Twój najbliższy przyjaciel?</item>
+    </string-array>
+</resources>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="same_app_packagename">
+    <item>com.youdao.note</item>
+    <item>com.lenovo.supernote</item>
+    <item>pinkdiary.xiaoxiaotu.com</item>
+    <item>com.evernote</item>
+    <item>com.cooldigit.notes</item>
+    <item>com.fihtdc.note</item>
+    <item>com.baidu.quickmind</item>
+    <item>com.itjinks.iosnotes</item>
+    <item>com.huawei.mobilenotes</item>
+    <item>com.snda.inote.lenovo</item>
+    <item>com.smartisan.notes</item>
+    <item>com.xiaomi.notes</item>
+    <item>de.softxperience.android.noteeverything</item>
+    <item>org.dayup.gnotes</item>
+    <item>com.google.android.keep</item>
+  </string-array>
+  <string-array name="password_protect_question">
+    <item>તમારી જન્મ તારીખ શું છે? </item>
+    <item>તમારો મનપસંદ શોખ શું છે?</item>
+    <item>તમારી મનપસંદ રમત કઈ છે?</item>
+    <item>તમારી મનપસંદ પ્રતિમા કઈ છે?</item>
+    <item>તમારા નજીકના મિત્રનું નામ શું છે?</item>
+  </string-array>
+</resources>

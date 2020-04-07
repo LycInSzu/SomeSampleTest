@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- common string -->
+  <string name="app_name">കുറിപ്പുകള്‍</string>
+  <string name="app_name_outside">കുറിപ്പുകള്‍</string>
+  <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626813 begin -->
+  <string name="button_sure">ഒകെ</string>
+  <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626813 end -->
+  <string name="button_cancel">റദ്ദാക്കുക</string>
+  <string name="button_delete">ഡിലീറ്റ് ചെയ്യുക</string>
+    <string name="file_note_found">ഫയൽ കണ്ടെത്തിയില്ല</string>
+  <!-- home activity, search-->
+  <string name="search_hint">കുറിപ്പുകൾ തിരയുക</string>
+  <string name="search_page_label_title">ലേബൽ അനുസരിച്ച് കാണുക</string>
+  <string name="note_main_activity_title_layout_title_text">കുറിപ്പുകള്‍</string>
+    <string name="note_action_del_string">ഡിലീറ്റ് ചെയ്യുക</string>
+  <!-- gionee wanghaiyan modify on 2016-12-07 for 40606 begin -->
+  <string name="note_action_edit_string">പുതിയത്</string>
+  <!-- gionee wanghaiyan modify on 2016-12-07 for 40606 end -->
+  <string name="note_action_share_string">ഷെയർ ചെയ്യുക</string>
+  <string name="note_action_del_message">തിരഞ്ഞെടുത്ത കുറിപ്പുകൾ ഉറപ്പായും ഇല്ലാതാക്കണോ?</string>
+  <string name="dialog_negative_text">നിരസിക്കുക</string>
+    <string name="alert_time_early">ഇപ്പോഴത്തേതിന് മുമ്പുള്ള സമയം, ദയവായി റീസെറ്റ് ചെയ്യുക</string>
+  <!-- Edit page , attachment -->
+    <string name="attachment_enter_camera_fail">ക്യമാറ ഇല്ല</string>
+  <!--label select dialog  -->
+  <string name="default_label_life">ലൈഫ്‌</string>
+  <string name="default_label_meeting">യോഗം</string>
+  <string name="default_label_travel">ട്രാവൽ</string>
+  <string name="default_label_inspiration">പ്രചോദനം</string>
+  <string name="label_selector_dialog_custom_label_text">ലേബല്‍</string>
+  <!--label select dialog  -->
+  <string name="label_custom_action_bar_title">കസ്റ്റം ലേബൽ</string>
+  <string name="label_custom_edit_text_hint">ലേബൽ ഇൻപുട്ട് ചെയ്യുക</string>
+  <string name="label_custom_exist">ലേബൽ നിലവിലുണ്ട്, വീണ്ടും ഇൻപുട്ട് ചെയ്യുക</string>
+  <string name="label_custom_delete_attention">ലേബൽ ഇല്ലാതാക്കുമ്പോൾ കുറിപ്പുകൾ ഇല്ലാതാവില്ല, ലേബൽ ഉറപ്പായും ഇല്ലാതാക്കണോ?</string>
+  <plurals name="number_of_items_selected">
+    <item quantity="zero">%1$d തെരെഞ്ഞെടുക്കപ്പെട്ടത്‌</item>
+    <item quantity="one">%1$d തെരെഞ്ഞെടുക്കപ്പെട്ടത്‌</item>
+    <item quantity="other">%1$d തെരെഞ്ഞെടുക്കപ്പെട്ടത്‌</item>
+  </plurals>
+  <string name="select_all">എല്ലാം തിരഞ്ഞെടുക്കുക</string>
+  <string name="unselect_all">എല്ലാ സെലക്ഷനും ഒഴിവാക്കുക</string>
+  <!--NewNoteActivity-->
+  <string name="title_hint">ഇന്‍പുട്ട് ശീര്‍ഷകം</string>
+  <string name="title_focus_hint">ഇന്‍പുട്ട് ശീര്‍ഷകം</string>
+  <string name="content_hint">ഉള്ളടക്കം ഇൻപുട്ട് ചെയ്യുക</string>
+  <string name="add_image_fail">ചിത്രങ്ങൾ ചേർക്കുന്നത് പരാജയപ്പെട്ടു</string>
+  <string name="note_tip_loading">ലോഡ് ചെയ്യുന്നു</string>
+  <string name="note_tip_loadFinish">കണ്ടന്‍റ് ഇല്ല</string>
+  <string name="note_tip_search">അന്വേഷണത്തിൽ</string>
+  <string name="note_tip_searchFinish">കണ്ടന്‍റിന് പൊരുത്തമില്ല</string>
+  <!--PreviewPictureMakeProxy-->
+  <string name="create_picture">ചിത്രം ഉണ്ടാക്കുന്നു...</string>
+  <string name="create_picture_fail">ചിത്രം ഉളവാക്കുന്നത് പരാജയപ്പെട്ടു</string>
+  <string name="create_picture_create_bmp_fail">കണ്ടെന്‍റ് വളരെ ദീർഘം, സിസ്റ്റം ഒരു പരാജയത്തിന്‍റെ ചിത്രം ഉളവാക്കുന്നു</string>
+  <string name="create_picture_fail_no_space">പ്രശ്നം, ചിത്രം ഉളവാക്കാൻ വേണ്ടത്ര സ്റ്റോറേജ് സ്പേസ് ഇല്ല</string>
+  <!--PreviewActivity-->
+    <string name="share_preview">പ്രിവ്യൂ ഷെയർ ചെയ്യുക</string>
+    <string name="file_save_toast_text">"ചിത്രം ഇതിലേക്ക് സേവ് ചെയ്യുന്നു "</string>
+  <string name="file_save_fail_toast_text">പ്രശ്നം, സേവ് ചെയ്യാൻ വേണ്ടത്ര സ്പേസ് ഇല്ല</string>
+  <string name="file_save_fail_origin_no_exist">പ്രശ്നം, ഒറിജിനൽ ഫയൽ കാണാനില്ല, ചിത്രം സേവ് ചെയ്യാൻ സാധിക്കില്ല</string>
+  <string name="date_upgrade_message">നോട്ട്പാഡ് ഡാറ്റ അപ്ഡേറ്റ് ചെയ്യുന്നു, ഒരു നിമിഷം കാക്കുക</string>
+  <string name="import_backup_config_dialog_title">നോട്ട്പാഡ് ഇംപോർട്ട്</string>
+  <string name="import_backup_config_dialog_message">പുതിയ ഡിസൈനിന്‍റെ ഈ വെർഷൻ, ലോക്കൽ ബാക്കപ്പ് പ്രവർത്തനം ഇപ്പോൾ പിന്തുണക്കുന്നില്ല. നിങ്ങൾക്ക് ഇംപോർട്ട് ചെയ്യാത്ത ബാക്കപ്പ് ഉണ്ടെന്ന് കണ്ടെത്തി, നഷ്ടമാകാതിരിക്കാൻ ദയവായി ബാക്കപ്പ് ഡാറ്റ യഥാസമയം അവതരിപ്പിക്കുക.</string>
+  <string name="import_backup_config_dialog_btn_cancel">റദ്ദാക്കുക</string>
+  <string name="import_backup_config_dialog_btn_import">ഇംപോർട്ട്</string>
+  <string name="import_backup_config_dialog_checkbox_text">ഇനി നുറുങ്ങുകൾ ഇല്ല</string>
+  <string name="import_backup_progress_dialog_title">ഇംപോർട്ട്</string>
+  <string name="import_backup_progress_dialog_message">നോട്ട്പാഡ് ഡാറ്റ ഇംപോർട്ട് ചെയ്യുന്നു</string>
+  <string name="import_backup_fail_message">ഇംപോർട്ട് പ്രക്രിയക്ക് ഒരു പ്രശ്നം നേരിട്ടു, നിങ്ങളുടെ മെമ്മറി കാർഡിലെ ശേഷിക്കുന്ന സ്പേസ് %1$dMB യേക്കാൾ കൂടുതലാണോയെന്ന് പരിശോധിക്കുക, നിങ്ങൾക്ക് അടുത്ത ബൂട്ട് ഇംപോർട്ട് ചെയ്യണമെങ്കിൽ, പ്രോഗ്രാം തിരികെ പോയി പരിശോധിക്കുന്നതാണ്.</string>
+    <string name="attachment_record_permission_hint">ദയവായി അനുവദിച്ച സൌണ്ട് റിക്കാർഡിന്‍റെ അനുമതി പരിശോധിക്കുക</string>
+  <string name="max_content_input_mum_limit">പരമാവധി ഇൻപുട്ട് കണ്ടന്‍റ് പരിധി എത്തി.</string>
+  <string name="max_pic_input_mum_limit">ചിത്രപരിധിയുടെ പരമാവധി എണ്ണം എത്തി.</string>
+  <string name="setting_title">സെറ്റിംഗ്സ്</string>
+  <string name="inscribed_signature">ഉല്ലേഖനം ചെയ്ത ഹസ്താക്ഷരം</string>
+  <string name="version_update">വെർഷൻ അപ്ഡേറ്റ്</string>
+  <string name="no_version">നിലവിലെ വെർഷനാണ് ഏറ്റവും പുതിയത്</string>
+  <string name="progress_checking">വെർഷൻ പരിശോധിക്കുന്നു, ദയവായി ഒരു നിമിഷം കാക്കുക...</string>
+    <string name="about_us">ഞങ്ങളെക്കുറിച്ച</string>
+  <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626568 begin -->
+  <string name="signature_input_hint">ദയവായി ഹസ്താക്ഷരം ഇൻപുട്ട് ചെയ്യുക</string>
+  <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626568 end -->
+    <string name="aboutus_version_content_text">വെർഷൻ:V</string>
+  <string name="aboutus_copyright_content_text">കോപ്പിറൈറ്റ്©2015 Shenzhen Gionee communication equipment Co., Ltd. എല്ലാ അവകാശങ്ങളും നിക്ഷിപ്തം.</string>
+  <string name="network_error">നെറ്റ്‌‌വര്‍ക്ക് പിശക്</string>
+  <string name="no_space">സ്ഥലമില്ല</string>
+  <string name="file_not_found">ഫയൽ കണ്ടെത്തിയില്ല</string>
+  <string name="local_file_verify_failed">ലോക്കൽ ഫയൽ വെരിഫൈ ചെയ്യുന്നത് പരാജയപ്പെട്ടു</string>
+  <string name="server_error">സെര്‍വര്‍ പിശക്</string>
+  <string name="upgrading">അപ്‌ഗ്രേഡ് ചെയ്‌തുകൊിരിക്കുന്നു...</string>
+  <string name="verify_failed">വെരിഫിക്കേഷൻ പരാജയപ്പെട്ടു</string>
+  <string name="no_sdcard">SD കാര്‍ഡ് ഇല്ല</string>
+  <string name="low_memory">കുറഞ്ഞ മെമ്മറി</string>
+  <string name="dialog_update_compelete">ഒരു പുതിയ വെർഷൻ കണ്ടെത്തി. ദയവായി ഏറ്റവും പുതിയ വെർഷനിലേക്ക് അപ്ഗ്രേഡ് ചെയ്യുക.</string>
+  <string name="dialog_update_or_not">,\n\n ഇപ്പോൾ അപ്ഡേറ്റ് ചെയ്തോ?</string>
+  <string name="dialog_update">അപ്ഡേറ്റ് ചെയ്യുക</string>
+  <string name="dialog_install">ഇൻസ്റ്റോൾ ചെയ്യുക</string>
+    <string name="down_load_dialog_msg">ഡൌൺലോഡ് ചെയ്യുന്നു...</string>
+  <string name="down_load_paused_msg">ഡൌണ്‍ലോഡ് താല്‍കാലികമായി നിര്‍ത്തിയിരിക്കുന്നു</string>
+  <string name="app_widget2x2">Note2x2</string>
+  <string name="app_widget4x4">Note4x4</string>
+  <string name="time_am">AM</string>
+  <string name="time_pm">PM</string>
+  <string name="message_media_record_time_max">പരമാവധി റിക്കാർഡിംഗ് സമയം എത്തി. ദയവായി റിക്കാർഡിംഗ് നിർത്തുക.</string>
+    <string name="ai_activity_title">AI</string>
+  <string name="ami_recommend_panel_title">Ami Recommend</string>
+  <string name="favor_recommend_panel_title">ഫേവർ ശുപാർശ</string>
+  <string name="recommend_search_hint_text">കീ വേർഡുകൾ ഇൻപുട്ട് ചെയ്യുക</string>
+  <string name="authorization_failed">ഈ ഫീച്ചർ ഉപയോഗിക്കുന്നതിന് അനുമതി നേടാൻ കഴിയില്ല</string>
+  <string name="ai_activity_not_network_tip">നിലവിലെ നെറ്റ്‍വർക്ക് വിച്ഛേദിച്ചു, മാത്രമല്ല നെറ്റ്‍വർക്ക് തിരയുന്നു</string>
+    <string name="note_storage_inner">ഫോൺ സ്റ്റോറേജ്</string>
+    <string name="alert_remaining_chars">നിങ്ങൾ ഇനിയും <xliff:g id="file">%d</xliff:g> ക്യാരക്ടറുകൾ ഡിലീറ്റ് ചെയ്യണം</string>
+  <string name="alert_remaining_char">നിങ്ങൾ ഇനിയും <xliff:g id="file">%d</xliff:g> ക്യാരക്ടർ ഡിലീറ്റ് ചെയ്യണം</string>
+  <string name="data_flow_alert_user_title">കുറിപ്പ് ഉപയോഗിക്കാൻ സ്വാഗതം സ്വാഗതം</string>
+  <string name="data_flow_alert_user_content">ആപ്പ് ഉപയോഗിക്കുമ്പോൾ അനുമതി എടുക്കാൻ അനുവദിക്കുക:\nനെറ്റ്‍വർക്ക് കണക്ഷൻ, ഓഡിയോ റിക്കാർഡ്, ഫോട്ടോ എടുക്കുക, ബാഹ്യ സ്റ്റോറേജിലെ കണ്ടെന്‍റ് ആക്സസ് ചെയ്യുക;\n തുടരണോ?</string>
+  <string name="data_flow_alert_user_checkbox">ഒരിക്കലും ഓർമ്മിപ്പിക്കരുത്</string>
+  <string name="alert_user_title_str">സിസ്റ്റം പ്രോംപ്റ്റ്</string>
+  <string name="alert_user_ok">തുടരുക</string>
+  <string name="alert_user_cancle">എക്സിറ്റ്</string>
+    <string name="notification_title">ചിത്രം ഡൌൺലോഡ് ചെയ്യുക</string>
+  <string name="download_poto_hint">ചിത്രം ഇതിലേക്ക് ഡൌൺലോഡ് ചെയ്യുക：</string>
+  <string name="download_compelete">ഡൌണ്‍ലോഡ് പൂര്‍ത്തിയായി</string>
+  <string name="download_unsurpport_hint">അൺസപ്പോർട്ട് ടൈപ്പ്</string>
+  <string name="vsq_tip_text">* പാസ്സ്‌വേര്‍ഡ്‌ പരിരക്ഷ ചോദ്യത്തിന്റെ ഉത്തരം സ്ഥിരീകരിക്കാൻ</string>
+    <string name="vsq_confirm_btn_text">സ്ഥിരീകരിക്കുക</string>
+    <string name="choose_question_dialog_title">ചോദ്യം</string>
+  <string name="setting_secret_name">എൻക്രിപ്ഷൻ റിമൈൻഡിംഗ്</string>
+  <string name="setting_secret_tip">നോട്ട്പാഡിന്‍റെ സ്വകാര്യ കണ്ടന്‍റിന് എൻക്രിപ്ഷൻ റിമൈൻഡിംഗ്</string>
+  <string name="guideline_enter_private_album">ഹോം പേജിൽ രണ്ട് വിരലുകൾ കൊണ്ട് സ്ലൈഡ് ഡൌൺ ചെയ്യുക, സ്വകാര്യ നോട്ടുകൾ എന്‍റർ ചെയ്യുക.</string>
+  <string name="note_action_encrypt_string">എൻക്രിപ്റ്റ് ചെയ്യണോ</string>
+  <string name="note_action_decrypt_string">ഡിക്രിപ്റ്റ് ചെയ്യുക</string>
+  <string name="password_set_successed_title">സെറ്റ് ചെയ്യുന്നത് വിജയകരം</string>
+  <string name="modified_password">പാസ്സ്‌വേർഡ്‌ മാറ്റുക</string>
+  <string name="modified_protect_question">പാസ്സ്‍വേർഡ് സംരക്ഷണ ചോദ്യങ്ങൾ</string>
+  <string name="secret_room">ബാക്ക് റൂം</string>
+  <string name="forget_password">പാസ്സ്‍വേർഡ് മറക്കുക</string>
+  <string name="setting_password">നിങ്ങളുടെ നാലക്ക പാസ്സ്‍വേർഡ് സെറ്റ് ചെയ്യുക</string>
+  <string name="verification_password">പാസ്സ്‍വേർഡ് വെരിഫൈ ചെയ്യുക</string>
+  <string name="password_error_hint">തെറ്റായ പാസ്സ്‍വേർഡ്, നിങ്ങൾക്ക് "%1$s" തവണ എന്‍റർ ചെയ്യാം</string>
+  <string name="setting_password_hint">സ്വകാര്യ നോട്ടുകൾ ഉപയോഗിക്കുന്നതിന് മുമ്പ്, ആദ്യം നിങ്ങളുടെ പാസ്സ്‍വേർഡ് സെറ്റ് ചെയ്യുക</string>
+  <string name="ensure_password">പാസ്സ്‌വേർഡ്‌ സ്ഥിരീകരിക്കുക</string>
+  <string name="password_not_match">പാസ്സ്‍വേർഡ് പൊരുത്തപ്പെടുന്നില്ല, വീണ്ടും ശ്രമിക്കുക</string>
+  <string name="enter_password">നിങ്ങളുടെ പാസ്സ്‌വേര്‍ഡ്‌ രേഖപ്പെടുത്തുക</string>
+  <string name="enter_password_later">ദയവായി %1$s മിനിട്ടിൽ വീണ്ടും ശ്രമിക്കുക</string>
+  <string name="verify_sq_activity_title">പാസ്സ്‍വേർഡ് സംരക്ഷണം വെരിഫൈ ചെയ്യുക</string>
+  <string name="setting_password_protect_QA">പാസ്സ്‍വേർഡ് സംരക്ഷണം സെറ്റ് ചെയ്യുക</string>
+  <string name="answer_incorrect">തെറ്റായ ഉത്തരം</string>
+    <string name="sq_q_text_tip">Q:</string>
+  <string name="sq_a_text_tip">a:</string>
+  <string name="note_content_notChange_hint">കണ്ടെന്‍റ് മാറ്റിയിട്ടില്ല, നിങ്ങൾ നേരത്തെ സേവ് ചെയ്തിട്ടുണ്ട്</string>
+    <string name="encrypt_hint_title">ടിപ്സ് എൻക്രിപ്റ്റ് ചെയ്യുക</string>
+  <string name="encrypt_hint_content">നോട്ടിന് സ്വകാര്യത ചോരുന്ന റിസ്ക്കുണ്ട്, എൻക്രിപ്റ്റ് ചെയ്യാൻ ശുപാർശ </string>
+  <string name="encrypt_hint_manager_dialog_sure">എൻക്രിപ്റ്റ് ചെയ്യണോ</string>
+  <string name="successful_modification">വിജയകരമായി മാറ്റുക</string>
+  <string name="password_set_successed_congratulations">അഭിനന്ദനങ്ങള്‍</string>
+  <string name="password_set_successed">നിങ്ങൾ പാസ്സ്‍വേർഡ് വിജയകരമായി സെറ്റ് ചെയ്തു</string>
+  <string name="password_set_successed_tips">ദയവായി ഇപ്പറയുന്ന കാര്യങ്ങൾ ശ്രദ്ധിക്കുക:</string>
+  <string name="password_set_successed_tips_first">1. തിരഞ്ഞെടുക്കരുത്. ക്ലീനിംഗ് ടൂളുകൾ ഉപയോഗിക്കുമ്പോൾ നോട്ട്മീഡിയ, അതല്ലെങ്കിൽ എൻക്രിപ്റ്റഡ് നോട്ട്പാഡിലെ ചിത്രങ്ങളും ടേപ്പുകളും ബ്രൌസ് ചെയ്യാൻ കഴിയില്ല.</string>
+  <string name="password_set_successed_tips_second">2. നോട്ട്പാഡ് എൻക്രിപ്റ്റ് ചെയ്തശേഷം ആപ്ലിക്കേഷൻ അൺഇൻസ്റ്റോൾ ചെയ്യരുത്, അതല്ലെങ്കിൽ എൻക്രിപ്റ്റ് ചെയ്ത നോട്ട്പാഡ് വീണ്ടെടുക്കാൻ കഴിയില്ല.</string>
+  <string name="password_set_successed_sure">ഒകെ</string>
+  <string name="encrypt_main_note_tip_load_finish">ഇത് ഇവിടെ ശൂന്യമാണ്. അൽപ്പം രഹസ്യം ചേർക്കാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നുവോ? "എൻക്രിപ്ഷൻ" ബട്ടൻ ക്ലിക്ക് ചെയ്ത് നോട്ട്പാഡ് ബ്രൌസ് ചെയ്യുമ്പോൾ ചേർക്കുക.</string>
+  <!-- GIONEE wanghaiyan 2016-12-17 modify for 47298 begin-->
+  <string name="title_more_dialog_title">മറ്റ്</string>
+  <!-- GIONEE wanghaiyan 2016-12-17 modify for 47298 end-->
+  <string name="confirm_protect_question"> സേവ് ചെയ്ത പാസ്സ്‍വേർഡ് സംരക്ഷണ ചോദ്യത്തിന്‍റെ ഉത്തരം സ്ഥിരീകരിക്കുക</string>
+  <string name="protect_question_empty">സംരക്ഷണ ചോദ്യം ശൂന്യമാകാൻ പാടില്ല</string>
+  <string name="encrypt_switch_close">ക്ലോസ് ചെയ്യുക</string>
+  <string name="encrypt_switch_open">തുറക്കുക</string>
+  <string name="security_os_footer_add">ചേർക്കുക</string>
+  <string name="security_os_footer_search">തിരയുക</string>
+  <string name="security_os_footer_secrete_space">സ്വകാര്യ സ്പേസ്</string>
+  <string name="encrypt_main_activity_security_os_title">എൻക്രിപ്റ്റ് ചെയ്ത നോട്ടുകൾ</string>
+  <string name="encrypt_main_activity_security_os_add_tip">കണ്ടന്‍റ് ഇല്ല</string>
+  <string name="encrypt_select_confirm">സ്ഥിരീകരിക്കുക</string>
+  <string name="encrypt_select_cancel">റദ്ദാക്കുക</string>
+  <string name="encrypt_select_count_text">ഐറ്റമൊന്നും തിരഞ്ഞെടുത്തില്ല</string>
+  <string name="encrypt_main_note_security_os_tip_load_finish">കുറിപ്പുകൾ ചേർത്തിട്ടില്ല.</string>
+  <string name="encrypt_note_action_del_message">തിരഞ്ഞെടുത്ത നോട്ടുകൾ ഡിലീറ്റ് ചെയ്യണമെന്ന് ഉറപ്പാണോ?\nതിരഞ്ഞെടുത്ത നോട്ടിലെ ഉള്ളടക്കം ഡിലീറ്റ് ആകും!</string>
+  <string name="encrypt_finish_hint_for_security_os">സ്വകാര്യ സ്പേസിലേക്ക് എൻക്രിപ്റ്റ് ചെയ്തു</string>
+  <string name="decrypt_finish_hint">ഡിക്രിപ്ഷൻ പൂർത്തിയായി</string>
+  <string name="add_pics">ചിത്രങ്ങൾ ചേർക്കുക</string>
+  <string name="encrypt_fail">എൻക്രിപ്ഷൻ പരാജയം</string>
+  <string name="decrypt_fail">ഡിക്രിപ്ഷൻ പരാജയം</string>
+  <string name="encrypt_success">എൻക്രിപ്ഷൻ വിജയം</string>
+    <string name="delete_hint">ഡിലീറ്റ് ചെയ്യുന്നു, ദയവായി പിന്നീട് ശ്രമിക്കുക</string>
+  <string name="encrypt_hint">എൻക്രിപ്റ്റ് ചെയ്യുന്നു, ദയവായി വീണ്ടും ശ്രമിക്കുക</string>
+  <string name="decrypt_hint">ഡിക്രിപ്റ്റിംഗ്, ദയവായി പിന്നീട് ശ്രമിക്കുക</string>
+  <string name="recovery_hint">വീണ്ടെടുക്കുന്നു, ദയവായി പിന്നീട് ശ്രമിക്കുക</string>
+  <string name="partial_encrypt">%1$s എൻക്രിപ്ഷൻ വിജയം, %2$s എൻക്രിപ്ഷൻ പരാജയം. </string>
+  <string name="partial_decrypt">%1$s ഡിക്രിപ്ഷൻ വിജയം, %2$s ഡിക്രിപ്ഷൻ പരാജയം. </string>
+  <!--Trash-->
+  <string name="trash">ട്രാഷ്</string>
+  <!-- GIONEE wanghaiyan 2017-02-05 modify for 67550 begin-->
+  <string name="trash_first_delete_alert">ഡിലീറ്റ് ചെയ്ത കുറിപ്പുകൾ ട്രാഷിലേക്ക് (സെറ്റിംഗ്സ്->ട്രാഷ്) നീക്കും, അവ ഏഴ് ദിവസത്തിന് ശേഷം എന്നേക്കുമായി ഒഴിവാക്കും. \nനിങ്ങൾക്ക് അവ ഡിലീറ്റ് ചെയ്യുകയോ ട്രാഷിൽ നിന്ന് വീണ്ടെടുക്കുകയോ ചെയ്യാം.</string>
+  <!-- GIONEE wanghaiyan  2017-02-05 modify for 67550 end-->
+  <string name="trash_recover">വീണ്ടെടുക്കുക</string>
+  <plurals name="trash_left_days">
+    <item quantity="zero">"%1$d ദിവസം ശേഷിക്കുന്നു"</item>
+    <item quantity="one">"%1$d ദിവസം ശേഷിക്കുന്നു"</item>
+    <item quantity="other">"%1$d ദിവസങ്ങൾ ശേഷിക്കുന്നു"</item>
+  </plurals>
+  <string name="trash_recover_hint">വീണ്ടെടുക്കുന്നു, ദയവായി പിന്നീട് ശ്രമിക്കുക</string>
+  <string name="trash_delete_message">തിരഞ്ഞെടുത്ത കുറിപ്പുകൾ സ്ഥിരമായി ഡിലീറ്റ് ചെയ്യണമെന്ന് ഉറപ്പാണോ?</string>
+    <string name="note_action_search_string">തിരയുക</string>
+  <string name="note_action_setting_string">സെറ്റിംഗ്സ്</string>
+  <string name="unkown">അജ്ഞാതം</string>
+  <string name="download">ഡൗൺലോഡ് ചെയ്യുക</string>
+  <string name="down_load_fail_msg">ഡൌണ്‍ലോഡ് പരാജയപ്പെട്ടു</string>
+  <string name="install_amiweather_tip">Ami വെതർ കാലാവസ്ഥാ പ്രവചനം നൽകും, ഫോണിൽ Ami വെതർ ഇൻസ്റ്റോൾ ചെയ്തിട്ടില്ല, ഡൌൺലോഡ് ചെയ്ത് ഇൻസ്റ്റോൾ ചെയ്യണോ</string>
+  <string name="install_amicalendar_tip">Ami calendar കലണ്ടർ സേവനം ലഭ്യമാക്കും, ഫോൺ ഡിറ്റക്ഷൻ Ami calendar ൽ ഇൻസ്റ്റോൾ ചെയ്തിട്ടില്ല, ഡൌൺലോഡ് ചെയ്ത് ഇൻസ്റ്റോൾ ചെയ്യണോ</string>
+  <string name="no_network">നെറ്റ്‍വർക്ക് ഉപയോഗിച്ചില്ല</string>
+  <string name="no_pictures">സ്റ്റോറേജ് കാർഡിൽ ചിത്രം ഒന്നുമില്ല.</string>
+
+    <string name="add_attach_fail">ക്ഷമിക്കണം, ഈ ഫയൽ ഫോർമാറ്റ് പിന്തുണയ്ക്കുന്നില്ല.</string>
+  <string name="long_bitmap_add_failed">ചിത്രത്തിന്‍റെ നീളം പരിധി കഴിഞ്ഞു, ചേർക്കുന്നത് പരാജയപ്പെട്ടു</string>
+</resources>

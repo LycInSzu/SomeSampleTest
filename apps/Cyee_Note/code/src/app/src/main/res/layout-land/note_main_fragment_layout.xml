@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.cydroid.note.app.view.GestureDetectionContainer
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/note_tip_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/note_tip_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_marginTop="@dimen/note_tip_image_top_margin"
+            android:src="@drawable/note_tip_image" />
+
+        <TextView
+            android:id="@+id/note_tip_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/note_tip_text_top_margin"
+            android:paddingStart="@dimen/note_main_fragment_tips_padding_left_right"
+            android:paddingEnd="@dimen/note_main_fragment_tips_padding_left_right"
+            android:textSize="@dimen/note_tip_text_size" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--Gionee wanghaiyan 2017-4-11 modify for 107499 begin-->
+        <com.cydroid.note.app.view.NoteRecyclerView
+            android:id="@+id/home_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:paddingStart="@dimen/home_activity_horizontal_margin"
+            android:scrollbars="vertical" />
+        <!--Gionee wanghaiyan 2017-4-11 modify for 107499 end-->
+    </RelativeLayout>
+
+
+</com.cydroid.note.app.view.GestureDetectionContainer>
+
+

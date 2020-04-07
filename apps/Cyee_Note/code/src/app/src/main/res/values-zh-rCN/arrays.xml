@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="password_protect_question">
+        <item>你自己生日日期是？</item>
+        <item>你最喜欢的爱好是？</item>
+        <item>你最喜欢的运动是？</item>
+        <item>你最喜欢的偶像是？</item>
+        <item>你好朋友的名字是？</item>
+    </string-array>
+
+    <string-array name="same_app_name">
+        <item>有道云笔记</item>
+        <item>乐云记事</item>
+        <item>粉粉日记</item>
+        <item>印象笔记</item>
+        <item>备忘录</item>
+        <item>记事本</item>
+        <item>百度云记事本</item>
+        <item>IOS8备忘录</item>
+        <item>和笔记</item>
+        <item>乐记事</item>
+        <item>锤子便签</item>
+        <item>小米便签</item>
+        <item>万能记事本</item>
+        <item>随笔记</item>
+        <item>谷歌记事本</item>
+    </string-array>
+    <string-array name="same_app_packagename">
+        <item>com.youdao.note</item>
+        <item>com.lenovo.supernote</item>
+        <item>pinkdiary.xiaoxiaotu.com</item>
+        <item>com.evernote</item>
+        <item>com.cooldigit.notes</item>
+        <item>com.fihtdc.note</item>
+        <item>com.baidu.quickmind</item>
+        <item>com.itjinks.iosnotes</item>
+        <item>com.huawei.mobilenotes</item>
+        <item>com.snda.inote.lenovo</item>
+        <item>com.smartisan.notes</item>
+        <item>com.xiaomi.notes</item>
+        <item>de.softxperience.android.noteeverything</item>
+        <item>org.dayup.gnotes</item>
+        <item>com.google.android.keep</item>
+    </string-array>
+</resources>

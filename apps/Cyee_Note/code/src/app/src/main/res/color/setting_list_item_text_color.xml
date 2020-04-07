@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:color="@color/setting_list_item_text_color_press" android:state_pressed="true" />
+    <item android:color="@color/label_custom_list_item_text_color_no_press" />
+
+</selector>

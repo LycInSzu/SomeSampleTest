@@ -1,0 +1,8 @@
+#!/bin/bash
+cd ../
+curPath=`pwd`
+cd ~/build_apk_env_5.0
+echo $curPath
+#jdk6
+./apk -s $curPath/Amigo_Note_01.mk
+#jdk7

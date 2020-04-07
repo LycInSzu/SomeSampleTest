@@ -1,0 +1,35 @@
+def initNoteEnvirment() {
+    Properties properties = new Properties()
+    File propertyFile = new File(rootDir.getAbsolutePath() + "/note.properties")
+    properties.load(propertyFile.newDataInputStream())
+
+
+    Properties channel = new Properties()
+    File channelFile = new File(rootDir.getAbsolutePath() + "/channel.properties")
+    channel.load(channelFile.newDataInputStream())
+
+    gradle.ext.isGionee = properties.getProperty('isGionee')
+    if (gradle.ext.isGionee == "true") {
+        gradle.ext.applicationId = "com.android.note"
+        gradle.ext.sourceRootDir = properties.getProperty('gioneeSourceRootDir')
+    } else {
+        gradle.ext.applicationId = "com.gionee.aminote"
+        gradle.ext.sourceRootDir = properties.getProperty('outSideSourceRootDir')
+
+        gradle.ext.isShouFa = properties.getProperty('isShouFa')
+        def channelNames = properties.getProperty('channelName').split(',')
+        def channelNumbers = new String[channelNames.length]
+        int i = 0
+        channelNames.each {
+            channelNumbers[i] = channel.getProperty(it)
+            println "name:${it} #### number:${channelNumbers[i]}"
+            i++
+        }
+        gradle.ext.channelNames = channelNames
+        gradle.ext.channelNumbers = channelNumbers
+    }
+
+}
+
+initNoteEnvirment()
+include ':app', ':cyee'

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- common string -->
+    <string name="app_name">기록장</string>
+    <string name="app_name_outside">기록장</string>
+    <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626813 begin -->
+    <string name="button_sure">확인</string>
+    <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626813 end -->
+    <string name="button_cancel">취소</string>
+    <string name="button_delete">삭제</string>
+
+    <string name="file_note_found">화일없음</string>
+
+    <!-- home activity, search-->
+    <string name="search_hint">기록장검색</string>
+    <string name="search_page_label_title">기록표식자로 보기</string>
+
+    <string name="note_main_activity_title_layout_title_text">기록장</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="note_action_del_string">삭제</string>
+    <!-- gionee wanghaiyan modify on 2016-12-07 for 40606 begin -->
+    <string name="note_action_edit_string">추가</string>
+    <!-- gionee wanghaiyan modify on 2016-12-07 for 40606 end -->
+    <string name="note_action_share_string">전송</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="note_action_del_message">선택한 기록장삭제?</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="dialog_negative_text">취소</string>
+    <string name="alert_time_early">시간오유, 다시 설정하십시오.</string>
+
+    <!-- Edit page , attachment -->
+    <string name="attachment_enter_camera_fail">사진기 없음</string>
+
+    <!--label select dialog  -->
+    <string name="default_label_life">생활</string>
+    <string name="default_label_meeting">회의</string>
+    <string name="default_label_travel">려행</string>
+    <string name="default_label_inspiration">일기</string>
+    <string name="label_selector_dialog_custom_label_text">기록표식</string>
+
+    <!--label select dialog  -->
+    <string name="label_custom_action_bar_title">사용자</string>
+    <string name="label_custom_edit_text_hint">표식입력</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="label_custom_exist">기록표식 있음, 다시 입력하십시오.</string>
+    <string name="label_custom_delete_attention">기록표식을 삭제하여도 기록장은 삭제되지 않습니다. 기록표식삭제?</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <plurals name="number_of_items_selected">
+        <item quantity="zero">%1$d개 선택</item>
+        <item quantity="one">%1$d개 선택</item>
+        <item quantity="other">%1$d개 선택</item>
+    </plurals>
+
+    <string name="select_all">모두 선택</string>
+    <string name="unselect_all">모두 선택취소</string>
+
+    <!--NewNoteActivity-->
+    <string name="title_hint">제목입력</string>
+    <string name="title_focus_hint">제목입력</string>
+    <string name="content_hint">내용입력</string>
+    <string name="add_image_fail">그림추가실패</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="note_tip_loading">적재중</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="note_tip_loadFinish">내용없음</string>
+
+    <string name="note_tip_search">검색내용</string>
+    <string name="note_tip_searchFinish">검색된 내용없음</string>
+
+    <!--PreviewPictureMakeProxy-->
+    <string name="create_picture">그림생성중</string>
+    <string name="create_picture_fail">그림생성실패</string>
+    <string name="create_picture_create_bmp_fail">내용이 너무 깁니다. 그림생성실패</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="create_picture_fail_no_space">기억용량부족</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+
+    <!--PreviewActivity-->
+    <string name="share_preview">미리보기</string>
+    <string name="file_save_toast_text">화상보관위치</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="file_save_fail_toast_text">보관기억용량이 부족합니다.</string>
+    <string name="file_save_fail_origin_no_exist">원천화일오유로 그림을 보관할수 없습니다.</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="date_upgrade_message">기록자료갱신중</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="import_backup_config_dialog_title">기록장불러들이기</string>
+    <string name="import_backup_config_dialog_message"></string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="import_backup_config_dialog_btn_cancel">취소</string>
+    <string name="import_backup_config_dialog_btn_import">불러들이기</string>
+    <string name="import_backup_config_dialog_checkbox_text">다시 현시하지 않습니다.</string>
+    <string name="import_backup_progress_dialog_title">불러들이기</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="import_backup_progress_dialog_message">기록자료불러들이는 중</string>
+    <string name="import_backup_fail_message">불러들이는중 오유발생, 기억카드용량이 %1$dMB이상인가를 확인하십시오. 확인하십시오.</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    
+    <string name="attachment_record_focus_fail">현재 록음장치가 사용중이므로 록음할수 없습니다.</string>
+    <string name="attachment_sound_paly_focus_fail">현재 록음장치가 사용중이므로 재생할수 없습니다.</string>
+    <string name="attachment_record_permission_hint">음성록음권한을 확인하십시오.</string>
+    <string name="max_content_input_mum_limit">입력내용수초과</string>
+    <string name="max_pic_input_mum_limit">그림수초과</string>
+
+    <string name="setting_title">설정</string>
+    <string name="inscribed_signature">서명추가</string>
+    <string name="version_update">판번호갱신</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="no_version">현재 판번호는 최종입니다.</string>
+    <string name="progress_checking">판번호확인중</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="about_us">정보</string>
+    <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626568 begin -->
+    <string name="signature_input_hint">서명입력</string>
+    <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626568 end -->
+    <string name="aboutus_version_content_text">판번호:V</string>
+    <string name="aboutus_copyright_content_text"></string>
+    <string name="network_error">망오유</string>
+    <string name="no_space">공간없음</string>
+    <string name="file_not_found">화일없음</string>
+    <string name="local_file_verify_failed">화일검증실패</string>
+    <string name="server_error">봉사오유</string>
+    <string name="upgrading">갱신중</string>
+    <string name="verify_failed">확인실패</string>
+    <string name="no_sdcard">기억카드 없음</string>
+    <string name="low_memory">기억용량부족</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="dialog_update_compelete">마지막판번호로 갱신하십시오.</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="dialog_update_or_not">",\n갱신?"</string>
+    <string name="dialog_update">갱신</string>
+    <string name="dialog_install">설치</string>
+    <string name="down_load_dialog_msg">내리적재중</string>
+    <string name="down_load_paused_msg">내리적재림시중지</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+
+    <string name="app_widget2x2">기록장(2x2)</string>
+    <string name="app_widget4x4">기록장(4x4)</string>
+    <string name="time_am">오전</string>
+    <string name="time_pm">오후</string>
+
+    <string name="message_media_record_time_max">록음시간초과로 중지됩니다.</string>
+
+    <string name="ai_activity_title">AI</string>
+    <string name="ami_recommend_panel_title">선택</string>
+    <string name="favor_recommend_panel_title">즐겨찾기선택</string>
+    <string name="recommend_search_hint_text">열쇠단어입력</string>
+    <string name="authorization_failed">이 기능을 리용할 권한을 얻을수 없습니다.</string>
+    <string name="ai_activity_not_network_tip">현재 망에 련결되여있지 않지만 검색할수 있습니다. </string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="note_storage_inner">전화기</string>
+    <string name="alert_remaining_chars">%d개 문자를 삭제해야 합니다.</string>
+    <string name="alert_remaining_char">%d개 문자를 삭제해야 합니다.</string>
+
+    <string name="data_flow_alert_user_title">기록장사용</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="data_flow_alert_user_content">"프로그람을 사용하는동안 다음의 권한에 접속합니다.:
+망련결, 음성록음, 사진촬영, 외부기억기자료에 접속 \n계속?"</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="data_flow_alert_user_checkbox">다시 현시하지 않습니다.</string>
+    <string name="alert_user_title_str">확인</string>
+    <string name="alert_user_ok">계속</string>
+    <string name="alert_user_cancle">완료</string>
+
+    <string name="notification_title">그림내리적재</string>
+    <string name="download_poto_hint">내리적재：</string>
+    <string name="download_compelete">내리적재완료</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="download_unsurpport_hint">지원하지 않는 형식</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="vsq_tip_text">* 암호보호용 질문대답확인</string>
+    <string name="vsq_confirm_btn_text">확인</string>
+    <string name="choose_question_dialog_title">질문</string>
+
+    <string name="setting_secret_name">암호암시</string>
+    <string name="setting_secret_tip">문서내용보호를 위한 암호암시</string>
+    <string name="guideline_enter_private_album">홈페지에서 두 손가락을 아래로 끌기하고 비밀기록을 입력하십시오.</string>
+
+    <string name="note_action_encrypt_string">암호설정</string>
+    <string name="note_action_decrypt_string">암호해제</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="password_set_successed_title">설정성공</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="modified_password">암호변경</string>
+    <string name="modified_protect_question">암호보호질문변경</string>
+
+    <string name="secret_room">이전</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="forget_password">암호잊어버림</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="setting_password">수자암호를 설정하십시오.</string>
+    <string name="verification_password">암호검증</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="password_error_hint">암호오유, %1$s번 입력가능</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="setting_password_hint">비밀기록장을 사용하기전에 암호를 설정하여야 합니다.</string>
+    <string name="ensure_password">암호확인</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="password_not_match">암호가 정확하지 않습니다. 다시 입력하십시오.</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="enter_password">암호를 입력하십시오.</string>
+    <string name="enter_password_later">%1$s분후에 다시 입력하여야 합니다.</string>
+    <string name="verify_sq_activity_title">암호보호검증</string>
+    <string name="setting_password_protect_QA">암호보호설정</string>
+    <string name="answer_incorrect">대답오유</string>
+    <string name="sq_q_text_tip">Q:</string>
+    <string name="sq_a_text_tip">A:</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="note_content_notChange_hint">기록내용은 변경되지 않으며 이전 내용을 보관합니다.</string>
+
+    <string name="encrypt_hint_title">암호화</string>
+    <string name="encrypt_hint_content">비밀이 루설될수 있으므로 보안을 위해 암호를 설정합니다.</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="encrypt_hint_manager_dialog_sure">암호화</string>
+    <string name="successful_modification">변경성공</string>
+
+    <string name="password_set_successed_congratulations">축하합니다.</string>
+    <string name="password_set_successed">암호설정성공</string>
+    <string name="password_set_successed_tips">다음의 문제들을 기록하십시오.:</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="password_set_successed_tips_first">1.정리도구를 리용하는동안 그림, 비밀기록장을 열람할수 없으므로 기록장을 선택하지 마시십시오. </string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="password_set_successed_tips_second">2.기록장을 암호화한 후에 프로람을 삭제하지 마십시오. 비밀기록장의 내용이 복귀되지 않을수 있습니다.</string>
+    <string name="password_set_successed_sure">확인</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="encrypt_main_note_tip_load_finish">비밀기록을 추가하려면 기록장을 열람하는 상태에서 암호화단추를 누르십시오.</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <!-- GIONEE wanghaiyan 2016-12-17 modify for 47298 begin-->
+    <string name="title_more_dialog_title">기타</string>
+    <!-- GIONEE wanghaiyan 2016-12-17 modify for 47298 end-->
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="confirm_protect_question">보관된 질문대답확인</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="protect_question_empty">질문내용을 입력하여야 합니다.</string>
+    <string name="encrypt_switch_close">닫기</string>
+    <string name="encrypt_switch_open">열기</string>
+
+    <string name="security_os_footer_add">추가</string>
+    <string name="security_os_footer_search">검색</string>
+    <string name="security_os_footer_secrete_space">개별령역</string>
+    <string name="encrypt_main_activity_security_os_title">암호화된 기록장</string>
+    <string name="encrypt_main_activity_security_os_add_tip">내용없음</string>
+    <string name="encrypt_select_confirm">확인</string>
+    <string name="encrypt_select_cancel">취소</string>
+    <string name="encrypt_select_count_text">선택된 항목없음</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="encrypt_main_note_security_os_tip_load_finish">"추가된 기록없음"</string>
+    <string name="encrypt_note_action_del_message">"선택된 기록삭제?
+기록장의 내용이 완전히 삭제됩니다."</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="encrypt_finish_hint_for_security_os">개별령역에서 암호화됨</string>
+    <string name="decrypt_finish_hint">암호해제됨</string>
+
+    <string name="add_pics">그림추가</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="encrypt_fail">암호설정실패</string>
+    <string name="decrypt_fail">암호해제실패</string>
+    <string name="encrypt_success">암호설정됨</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="delete_hint">삭제중, 후에 다시 하십시오.</string>
+    <string name="encrypt_hint">암호화중, 후에 다시 하십시오.</string>
+    <string name="decrypt_hint">암호해제중, 후에 다시 하십시오.</string>
+    <string name="recovery_hint">복귀중, 후에 다시 하십시오.</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="partial_encrypt">%1$s 개 암호화됨, %2$s 개 암호화실패</string>
+    <string name="partial_decrypt">%1$s 개 암호해제됨, %2$s 개 암호해제실패</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <!--Trash-->
+    <string name="trash">휴지통</string>
+    <!-- GIONEE wanghaiyan 2017-02-05 modify for 67550 begin-->
+    <string name="trash_first_delete_alert">"삭제된 기록은 휴지통에 보관되며 7일후에 완전히 삭제됩니다. 
+휴지통에서 자료를 삭제하거나 복귀할수 있습니다."</string>
+    <!-- GIONEE wanghaiyan  2017-02-05 modify for 67550 end-->
+    <string name="trash_recover">복귀</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <plurals name="trash_left_days">
+        <item quantity="zero">"%1$d일 남음"</item>
+        <item quantity="one">"%1$d일 남음"</item>
+        <item quantity="other">"%1$d일 남음"</item>
+    </plurals>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="trash_recover_hint">복귀중，후에 다시 하십시오.</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="trash_delete_message">선택된 기록을 완전히 삭제하겠습니까？</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="note_action_search_string">검색</string>
+    <string name="note_action_setting_string">설정</string>
+
+    <string name="unkown">미정</string>
+    <string name="download">내리적재</string>
+    <string name="down_load_fail_msg">내리적재실패</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="install_amiweather_tip">기상예보를 제공합니다. 기상예보프로그람이 설치되지 않았습니다. 내리적재하여 설치?</string>
+    <string name="install_amicalendar_tip">달력을 제공합니다. 달력프로그람이 설치되지 않았습니다. 내리적재하여 설치?</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+    <string name="no_network">망사용하지 않음</string>
+
+    <string name="no_pictures">기억카드에 그림없음</string>
+
+    <string name="add_attach_fail">미안하지만 화일형식을 지원하지 않습니다.</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 beign-->
+    <string name="long_bitmap_add_failed">그림크기초과, 추가실패</string>
+    <!--Gionee <GN_Oversea_Req> <chenyu> <20170302> modify for CR01778829 end-->
+</resources>

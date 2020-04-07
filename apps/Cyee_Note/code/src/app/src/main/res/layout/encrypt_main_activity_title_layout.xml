@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@+id/encrypt_main_activity_title_layout_back"
+        style="@style/RippleEffect"
+        android:layout_width="@dimen/note_main_activity_action_mode_title_layout_back_icon_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:scaleType="center"
+        android:src="@drawable/note_title_back_icon"
+        android:tint="@color/note_main_activity_title_layout_icon_tint_color"/>
+
+    <TextView
+        android:id="@id/note_main_activity_action_mode_title_layout_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/note_main_activity_action_mode_title_layout_text_left_margin"
+        android:layout_toStartOf="@+id/encrypt_main_activity_title_layout_setting"
+        android:layout_toEndOf="@id/encrypt_main_activity_title_layout_back"
+        android:ellipsize="marquee"
+        android:gravity="start|center_vertical"
+        android:singleLine="true"
+        android:textColor="@color/note_main_activity_title_layout_title_text_color"
+        android:textSize="@dimen/note_main_activity_action_mode_title_layout_text_size" />
+
+    <ImageView
+        android:id="@+id/encrypt_main_activity_title_layout_setting"
+        style="@style/RippleEffect"
+        android:layout_width="@dimen/note_main_activity_title_icon_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:scaleType="center"
+        android:src="@drawable/note_main_activity_title_dw_setting"
+        android:tint="@color/note_main_activity_title_layout_icon_tint_color" />
+
+    <ImageView
+        android:id="@+id/encrypt_main_activity_title_layout_search"
+        style="@style/RippleEffect"
+        android:layout_width="@dimen/note_main_activity_title_icon_width"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@id/encrypt_main_activity_title_layout_setting"
+        android:scaleType="center"
+        android:src="@drawable/note_main_activity_title_dw_search"
+        android:tint="@color/note_main_activity_title_layout_icon_tint_color" />
+</RelativeLayout>

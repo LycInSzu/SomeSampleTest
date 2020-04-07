@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="button_sure">ٹھیک ہے</string>
+    <string name="button_cancel">منسوخ</string>
+    <string name="button_delete">حذف کریں</string>
+    <string name="note_action_del_string">حذف کریں</string>
+    <string name="select_all">تمام منتخب کریں</string>
+    <string name="unselect_all">منسوخ select</string>
+    <string name="import_backup_config_dialog_btn_cancel">منسوخ</string>
+    <string name="password_set_successed_sure">ٹھیک ہے</string>
+    <string name="encrypt_switch_close">بند</string>
+    <string name="encrypt_select_cancel">منسوخ</string>
+</resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Märkused</string>
+    <string name="app_name_outside">Märkused</string>
+    <string name="button_sure">OK</string>
+    <string name="button_cancel">Tühista</string>
+    <string name="button_delete">Kustuta</string>
+    <string name="file_note_found">Faili ei leitud.</string>
+    <string name="search_hint">Otsi märkmeid</string>
+    <string name="search_page_label_title">Vaata sildi järgi</string>
+    <string name="note_main_activity_title_layout_title_text">Märkus</string>
+    <string name="note_action_del_string">Kustuta</string>
+    <string name="note_action_edit_string">Uus</string>
+    <string name="note_action_share_string">Jaga</string>
+    <string name="note_action_del_message">Kas kustutan valitud märkused?</string>
+    <string name="dialog_negative_text">Unusta</string>
+    <string name="alert_time_early">Kellaaeg on minevikus, palun taastage</string>
+    <string name="attachment_enter_camera_fail">Kaamera puudub</string>
+    <string name="default_label_life">Elu</string>
+    <string name="default_label_meeting">Kohtumine</string>
+    <string name="default_label_travel">Reisimine</string>
+    <string name="default_label_inspiration">Inspiratsioon</string>
+    <string name="label_selector_dialog_custom_label_text">Silt</string>
+    <string name="label_custom_action_bar_title">Kohandatud silt</string>
+    <string name="label_custom_edit_text_hint">Sisesta silt</string>
+    <string name="label_custom_exist">Silt o juba olemas, sisestage uus</string>
+    <string name="label_custom_delete_attention">Peale sildi kustutamist märkusi ei kustutata, kas kustutan sildi?</string>
+    <plurals name="number_of_items_selected">
+        <item quantity="zero">%1$d on valitud</item>
+        <item quantity="one">%1$d on valitud</item>
+        <item quantity="other">%1$d on valitud</item>
+    </plurals>
+    <string name="select_all">Vali kõik</string>
+    <string name="unselect_all">Tühista kõik valikud</string>
+    <string name="title_hint">Sisesta pealkiri</string>
+    <string name="title_focus_hint">Sisesta pealkiri</string>
+    <string name="content_hint">Lisa sisu</string>
+    <string name="add_image_fail">Piltide lisamine ebaõnnestus</string>
+    <string name="note_tip_loading">Laadimine</string>
+    <string name="note_tip_loadFinish">Sisu puudub</string>
+    <string name="note_tip_search">Päringus</string>
+    <string name="note_tip_searchFinish">Ei sobi sisuga</string>
+    <string name="create_picture">Koostan pilti...</string>
+    <string name="create_picture_fail">Pildi koostamine ebaõnnestus</string>
+    <string name="create_picture_create_bmp_fail">Sisu on liiga pikk, süsteem genereerib vigase pildi</string>
+    <string name="create_picture_fail_no_space">Pildi loomiseks ei ole piisavalt vaba mälu</string>
+    <string name="share_preview">Jaga eelvaadet</string>
+    <string name="file_save_toast_text">Pilt salvestatakse asukohta</string>
+    <string name="file_save_fail_toast_text">Salvestamiseks ei ole piisavalt vaba mälu</string>
+    <string name="file_save_fail_origin_no_exist">Originaalfaili ei leitud, pilti ei saa salvestada</string>
+    <string name="date_upgrade_message">Notepad andmeid värskendatakse, palun oodake</string>
+    <string name="import_backup_config_dialog_title">Notepadi importimine</string>
+    <string name="import_backup_config_dialog_message">See on uus versioon, lokaalsed varundatud failid ei ole toetatud. Andmete kadumise vältimiseks tuleks andmeid sagemini varundama.</string>
+    <string name="import_backup_config_dialog_btn_cancel">Tühista</string>
+    <string name="import_backup_config_dialog_btn_import">Impordi</string>
+    <string name="import_backup_config_dialog_checkbox_text">Näpunäiteid rohkem pole</string>
+    <string name="import_backup_progress_dialog_title">Impordi</string>
+    <string name="import_backup_progress_dialog_message">Notepadi andmete importimine</string>
+    <string name="import_backup_fail_message">Importimine ebaõnnestus. Veenduge, et vaba mälu on vähemalt %1$dMB, programm kontrollib järgmisel importimisel süsteemi uuesti.</string>
+    <string name="attachment_record_permission_hint">Palun kontrollige, kas heli salvestamisele on antud ligipääsuluba</string>
+    <string name="max_content_input_mum_limit">Sisendi maksimaalne mahupiir on kätte jõudnud.</string>
+    <string name="setting_title">Seadistamine</string>
+    <string name="inscribed_signature">Kirjutatud allkiri</string>
+    <string name="version_update">Versiooniuuendus</string>
+    <string name="no_version">Kehtiv versioon on kõige uuem</string>
+    <string name="progress_checking">kontrollib versiooni, palun oodake...</string>
+    <string name="about_us">Meist</string>
+    <string name="signature_input_hint">Palun sisestage allkiri</string>
+    <string name="aboutus_version_content_text">Versioon:V</string>
+    <string name="aboutus_copyright_content_text">Copyright©2015 Allview Mobile Co., Ltd. all rights reserved</string>
+    <string name="network_error">võrgu viga</string>
+    <string name="no_space">mälu on täis</string>
+    <string name="file_not_found">faili ei leitud.</string>
+    <string name="local_file_verify_failed">lokaalse faili kinnitamine ebaõnnestus</string>
+    <string name="server_error">serveri viga</string>
+    <string name="upgrading">värskendamine</string>
+    <string name="verify_failed">kinnitamine ebaõnnestus</string>
+    <string name="no_sdcard">SD-kaart puudub</string>
+    <string name="low_memory">mälu on vähe</string>
+    <string name="dialog_update_compelete">Värskenda! TuvastatiV</string>
+    <string name="dialog_update_or_not">,\n\nOn värskendatud?</string>
+    <string name="dialog_update">Värskenda</string>
+    <string name="dialog_install">Installi</string>
+    <string name="down_load_dialog_msg">Allalaadimine</string>
+    <string name="app_widget2x2">Märkus2x2</string>
+    <string name="app_widget4x4">Märkus4x4</string>
+    <string name="time_am">AM</string>
+    <string name="time_pm">PM</string>
+    <string name="message_media_record_time_max">Salvestusaeg jõuab maksimumini, peata salvestamine</string>
+    <string name="authorization_failed">Selle funktsiooni kasutamiseks ei saa ligipääsu</string>
+    <string name="note_storage_inner">Telefoni mälu</string>
+    <string name="note_widget_hint">Puuduta märkuse lisamiseks</string>
+    <string name="alert_remaining_chars">Teil tuleb kustutada veel <xliff:g id="file">%d</xliff:g> tähemärki</string>
+    <string name="alert_remaining_char">Teil tuleb kustutada veel <xliff:g id="file">%d</xliff:g> tähemärk</string>
+    <string name="alert_user_ok">Jätka</string>
+    <string name="alert_user_cancle">Välju</string>
+    <string name="sq_q_text_tip">K:</string>
+    <string name="sq_a_text_tip">V:</string>
+    <string name="password_set_successed_sure">OK</string>
+    <string name="encrypt_switch_close">Sulge</string>
+    <string name="encrypt_select_cancel">Tühista</string>
+    <string name="note_action_setting_string">Seaded</string>
+    <string name="download">Allalaadimine</string>
+</resources>

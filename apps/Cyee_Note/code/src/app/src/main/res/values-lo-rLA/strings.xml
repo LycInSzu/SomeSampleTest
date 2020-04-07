@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="button_cancel">ຍົກເລີກ</string>
+    <string name="button_delete">ລຶບ</string>
+    <string name="note_action_del_string">ລຶບ</string>
+    <string name="select_all">ເລືອກທັງຫມົດ</string>
+    <string name="import_backup_config_dialog_btn_cancel">ຍົກເລີກ</string>
+    <string name="encrypt_select_cancel">ຍົກເລີກ</string>
+</resources>

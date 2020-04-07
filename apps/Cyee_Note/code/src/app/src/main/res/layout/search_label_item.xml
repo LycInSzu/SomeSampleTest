@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cyee.widget.CyeeTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/search_page_label_item_height"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/search_page_label_item_height"
+    android:paddingStart="@dimen/search_page_horizon_padding"
+    android:paddingEnd="@dimen/search_page_horizon_padding"
+    android:textColor="@color/search_page_label_item_color"
+    android:textSize="@dimen/search_page_label_item_size">
+
+</cyee.widget.CyeeTextView>

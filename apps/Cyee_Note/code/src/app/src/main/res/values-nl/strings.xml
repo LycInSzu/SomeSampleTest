@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="button_cancel">Annuleren</string>
+    <string name="button_delete">Verwijderen</string>
+    <string name="note_action_del_string">Verwijderen</string>
+    <string name="select_all">Selecteer alles</string>
+    <string name="unselect_all">Selectie annuleren</string>
+    <string name="import_backup_config_dialog_btn_cancel">Annuleren</string>
+    <string name="encrypt_switch_close">Dicht</string>
+    <string name="encrypt_select_cancel">Annuleren</string>
+</resources>

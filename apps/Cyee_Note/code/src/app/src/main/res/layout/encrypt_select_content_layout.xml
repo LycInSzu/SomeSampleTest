@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/encrypt_select_count_container"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="@dimen/encrypt_select_count_container_height">
+
+        <cyee.widget.CyeeTextView
+            android:id="@+id/encrypt_select_count"
+            style="@style/RippleEffect"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/encrypt_select_cancel_confirm_item_margin"
+            android:gravity="center"
+            android:text="@string/encrypt_select_count_text"
+            android:textColor="@color/action_bar_text_color"
+            android:textSize="@dimen/encrypt_select_count_text_size" />
+
+        <cyee.widget.CyeeTextView
+            android:id="@+id/encrypt_select_all"
+            style="@style/RippleEffect"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/encrypt_select_cancel_confirm_item_margin"
+            android:gravity="center"
+            android:text="@string/select_all"
+            android:textColor="@color/action_bar_text_color"
+            android:textSize="@dimen/encrypt_select_count_text_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/note_tip_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_marginTop="@dimen/note_tip_image_top_margin"
+            android:src="@drawable/note_tip_image" />
+
+        <cyee.widget.CyeeTextView
+            android:id="@+id/note_tip_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/note_tip_text_top_margin"
+            android:paddingStart="@dimen/note_main_fragment_tips_padding_left_right"
+            android:paddingEnd="@dimen/note_main_fragment_tips_padding_left_right"
+            android:text="@string/encrypt_main_activity_security_os_add_tip"
+            android:textSize="@dimen/note_tip_text_size" />
+    </LinearLayout>
+
+    <com.cydroid.note.app.view.NoteRecyclerView
+        android:id="@+id/encrypt_select_note_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:paddingStart="@dimen/home_activity_horizontal_margin" />
+
+</LinearLayout>

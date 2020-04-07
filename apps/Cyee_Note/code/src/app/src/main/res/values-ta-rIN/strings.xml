@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- common string -->
+  <string name="app_name">குறிப்புகள்</string>
+  <string name="app_name_outside">குறிப்புகள்</string>
+  <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626813 begin -->
+  <string name="button_sure">சரி</string>
+  <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626813 end -->
+  <string name="button_cancel">ரத்துசெய்</string>
+  <string name="button_delete">நீக்கவும்</string>
+    <string name="file_note_found">கோப்பு கண்டறியப்படவில்லை</string>
+  <!-- home activity, search-->
+  <string name="search_hint">தேடல் குறிப்புகள்</string>
+  <string name="search_page_label_title">லேபிள் மூலம் காணவும்</string>
+  <string name="note_main_activity_title_layout_title_text">குறிப்புகள்</string>
+    <string name="note_action_del_string">நீக்கவும்</string>
+  <!-- gionee wanghaiyan modify on 2016-12-07 for 40606 begin -->
+  <string name="note_action_edit_string">புதிய</string>
+  <!-- gionee wanghaiyan modify on 2016-12-07 for 40606 end -->
+  <string name="note_action_share_string">பகிர்வு</string>
+  <string name="note_action_del_message">தேர்வு செய்த குறிப்புகளை நீக்குவதில் உறுதியாக இருக்கிறீர்களா?</string>
+  <string name="dialog_negative_text">நிராகரி</string>
+    <string name="alert_time_early">நேரம் இப்போதைக்கு முன்னதாக, தயவுசெய்து ரீசெட் செய்யவும்</string>
+  <!-- Edit page , attachment -->
+    <string name="attachment_enter_camera_fail">கேமரா இல்லை</string>
+  <!--label select dialog  -->
+  <string name="default_label_life">லைஃப்</string>
+  <string name="default_label_meeting">மீட்டிங்</string>
+  <string name="default_label_travel">பயணம்</string>
+  <string name="default_label_inspiration">இன்ஸ்பிரேஷன்</string>
+  <string name="label_selector_dialog_custom_label_text">லேபிள்</string>
+  <!--label select dialog  -->
+  <string name="label_custom_action_bar_title">லேபிள் தனிப்பயன்</string>
+  <string name="label_custom_edit_text_hint">லேபிளை உள்ளிடவும்</string>
+  <string name="label_custom_exist">லேபிள் உள்ளது, மீண்டும் உள்ளிடவும்</string>
+  <string name="label_custom_delete_attention">லேபிள் நீக்கப்படும் போது, இது குறிப்புகளை நீக்காது, லேபிளை நீக்குவதில் நீங்கள் உறுதியாக இருக்கிறீர்களா?</string>
+  <plurals name="number_of_items_selected">
+    <item quantity="zero">%1$d தேர்ந்தெடுக்கப்பட்டது</item>
+    <item quantity="one">%1$d தேர்ந்தெடுக்கப்பட்டது</item>
+    <item quantity="other">%1$d தேர்ந்தெடுக்கப்பட்டது</item>
+  </plurals>
+  <string name="select_all">அனைத்தும் தேர்ந்தெடுக்கவும்</string>
+  <string name="unselect_all">அனைத்தையும் தேர்வுநீக்கம் செய்யவும்</string>
+  <!--NewNoteActivity-->
+  <string name="title_hint">தலைப்பை உள்ளிடவும்</string>
+  <string name="title_focus_hint">தலைப்பை உள்ளிடவும்</string>
+  <string name="content_hint">உள்ளடக்க உள்ளீடு</string>
+  <string name="add_image_fail">படங்களை சேர்ப்பதில் தோல்வியடைந்தது</string>
+  <string name="note_tip_loading">ஏற்றுகிறது</string>
+  <string name="note_tip_loadFinish">உள்ளடக்கம் இல்லை</string>
+  <string name="note_tip_search">கேள்வியிலுள்ளது</string>
+  <string name="note_tip_searchFinish">உள்ளடக்கத்திற்கு பொருத்தமாக இல்லை</string>
+  <!--PreviewPictureMakeProxy-->
+  <string name="create_picture">படங்களை உருவாக்குகிறது...</string>
+  <string name="create_picture_fail">படத்தை உருவாக்குவதில் தோல்வியடைந்தது</string>
+  <string name="create_picture_create_bmp_fail">உள்ளடக்கம் மிகவும் பெரியது, ஒரு தோல்வி காண்பிப்பதை சிஸ்டம் உருவாக்குகிறது</string>
+  <string name="create_picture_fail_no_space">ப்ரோ, ஒரு படத்தை உருவாக்க போதுமான சேமிப்பக இடம் இல்லை</string>
+  <!--PreviewActivity-->
+    <string name="share_preview">முன்னோட்டதை பகிர்வும்</string>
+    <string name="file_save_toast_text">"வில் படங்கள் சேமிக்கப்படுகிறது "</string>
+  <string name="file_save_fail_toast_text">ப்ரோ, சேமிப்பதற்கு போதுமான இடம் இல்லை</string>
+  <string name="file_save_fail_origin_no_exist">ப்ரோ, அசல் கோப்பை காணவில்லை, படத்தை சேமிக்க இயலாது</string>
+  <string name="date_upgrade_message">நோட்பேட் தரவு புதுப்பிக்கபடுகிறது, தயவுசெய்து ஒரு கணம் காத்திருக்கவும்</string>
+  <string name="import_backup_config_dialog_title">நோட்பேடை இறக்குமதி செய்யவும்</string>
+  <string name="import_backup_config_dialog_message">இந்த பதிப்பின் புதிய டிசைன், உங்களிடம் உள்ள தரவின் பேக்கபில் இறக்குமதி செய்யப்படவில்லை என்பது கண்டுபிடிக்கப்பட்டுள்ளது, லோக்கல் பேக்கப் செயல்பாட்டை அதிக நேரம் ஆதரிக்காது. தயவுசெய்து உரிய நேரத்தில் தரவை பேக்கப் எடுத்தால், தரவை இழக்க நேரிடாது.</string>
+  <string name="import_backup_config_dialog_btn_cancel">ரத்துசெய்</string>
+  <string name="import_backup_config_dialog_btn_import">இறக்கமதி செய்யவும்</string>
+  <string name="import_backup_config_dialog_checkbox_text">குறிப்புகள் இல்லை</string>
+  <string name="import_backup_progress_dialog_title">இறக்கமதி செய்யவும்</string>
+  <string name="import_backup_progress_dialog_message">நோட்பேட் தரவை இறக்குமதி செய்கிறது</string>
+  <string name="import_backup_fail_message">இறக்குமதி செயல்முறை ஒரு பிரச்சனையை எதிர்கொண்டுள்ளது, உங்கள் மெமரி கார்டு மீதமுள்ள இடம் %1$dMB-ஐ விட அதிகமாக உள்ளதா என்பதை சரிபார்க்கவும், நீங்கள் அடுத்த பூட்-ஐ இறக்குமதி செய்ய வேண்டும் என்றால் இந்த புரோக்ராமை சரிபார்த்த பின்னே செல்ல வேண்டும்.</string>
+    <string name="attachment_record_permission_hint">தயவுசெய்து வழங்கப்பட்ட சவுண்ட் ரெக்கார்டின் அனுமதியை சரிபார்க்கவும்</string>
+  <string name="max_content_input_mum_limit">அதிகபட்ச உள்ளீடு உள்ளடக்கத்தின் வரம்பு அடைந்தது.</string>
+  <string name="max_pic_input_mum_limit">அதிகபட்ச படத்தின் வரம்பை அடைந்தது.</string>
+  <string name="setting_title">அமைப்புகள்</string>
+  <string name="inscribed_signature">பொறிக்கப்பட்டுள்ளது கையெழுத்து</string>
+  <string name="version_update">பதிப்பை புதுப்பிக்கவும்</string>
+  <string name="no_version">தற்போதைய பதிப்பு சமீபத்தியது ஆகும்</string>
+  <string name="progress_checking">பதிப்பை சரிபார்க்கிறது, தயவுசெய்து சிறிது நேரம் காத்திருக்கவும்...</string>
+    <string name="about_us">எங்களை பற்றி</string>
+  <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626568 begin -->
+  <string name="signature_input_hint">தயவுசெய்து கையெழுத்தை உள்ளிடவும்</string>
+  <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626568 end -->
+    <string name="aboutus_version_content_text">பதிப்பு:V</string>
+  <string name="aboutus_copyright_content_text">பதிப்புரிமை © 2015Shenzhen Gionee communication equipment Co., Ltd. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</string>
+  <string name="network_error">நெட்வொர்க் பிழை</string>
+  <string name="no_space">இடம் இல்லை</string>
+  <string name="file_not_found">கோப்பு கண்டறியப்படவில்லை</string>
+  <string name="local_file_verify_failed">லோக்கல் கோப்பை சரிபார்ப்பதில் தோல்வியடைந்தது</string>
+  <string name="server_error">சர்வர் பிழை</string>
+  <string name="upgrading">மேம்படுத்துகிறது...</string>
+  <string name="verify_failed">சரிபார்ப்பு தோல்வியடைந்தது</string>
+  <string name="no_sdcard">SD கார்டு எதுவும் இல்லை</string>
+  <string name="low_memory">குறைவான நினைவகம்</string>
+  <string name="dialog_update_compelete">ஒரு புதிய பதிப்பு கண்டறியப்பட்டது. தயவுசெய்து சமீபத்திய பதிப்பிற்கு மேம்படுத்தவும்.</string>
+  <string name="dialog_update_or_not">,\n\nஇப்போது புதுப்பிக்கப்பட்டு உள்ளதா?</string>
+  <string name="dialog_update">புதுப்பித்தல்</string>
+  <string name="dialog_install">நிறுவல்</string>
+    <string name="down_load_dialog_msg">பதிவிறக்குகிறது...</string>
+  <string name="down_load_paused_msg">பதிவிறக்கம் இடைநிறுத்தம் செய்யப்பட்டிருக்கிறது</string>
+  <string name="app_widget2x2">Note2x2</string>
+  <string name="app_widget4x4">Note4x4</string>
+  <string name="time_am">AM</string>
+  <string name="time_pm">PM</string>
+  <string name="message_media_record_time_max">அதிகபட்த ரெக்கார்டிங் நேரத்தை அடைந்தது. தயவுசெய்து ரெக்கார்டிங்தை நிறுத்தவும்.</string>
+    <string name="ai_activity_title">AI</string>
+  <string name="ami_recommend_panel_title">Ami Recommend</string>
+  <string name="favor_recommend_panel_title">பரிந்துரைக்கப்பட்ட</string>
+  <string name="recommend_search_hint_text">கீ வார்த்தைகள் உள்ளிடவும்</string>
+  <string name="authorization_failed">இந்த அம்சத்தை பயன்படுத்த அனுமதியை பெற முடியாது</string>
+  <string name="ai_activity_not_network_tip">தற்போதைய நெட்வொர்க் துண்டிக்கப்பட்டது, ஆனால் நெட்வொர்க் தேடலில் உள்ளது</string>
+    <string name="note_storage_inner">போன் சேமிப்பகம்</string>
+    <string name="alert_remaining_chars">நீங்கள் இன்னும் <xliff:g id="file">%d</xliff:g> எழுத்துக்களை நீக்க வேண்டும்</string>
+  <string name="alert_remaining_char">நீங்கள் இன்னும் <xliff:g id="file">%d</xliff:g> எழுத்தை நீக்க வேண்டும்</string>
+  <string name="data_flow_alert_user_title">குறிப்பு பயன்படுத்துவதற்கு வரவேற்கிறோம்</string>
+  <string name="data_flow_alert_user_content">ஆப்-ஐ பயன்படுத்தும் போது அனுமதிகளை அணுகுவதற்கு அனுமதிக்கவும்:\nநெட்வொர்க் இணைப்பு, ரெக்கார்டு ஆடியோ, போட்டோக்கள் எடுத்தல், உங்கள் வெளிப்புற சேமிப்பகத்தின் உள்ளடக்கத்தை மாற்றியமைப்பது முதலியவற்றை\n தொடர வேண்டுமா?</string>
+  <string name="data_flow_alert_user_checkbox">எப்போதும் நினைவூட்ட வேண்டாம்</string>
+  <string name="alert_user_title_str">அமைப்பு நிலைத்தூண்டி</string>
+  <string name="alert_user_ok">தொடரவும்</string>
+  <string name="alert_user_cancle">வெளியேறு</string>
+    <string name="notification_title">படத்தை பதிவிறக்கவும்</string>
+  <string name="download_poto_hint">படத்தை பதிவிறக்கவும்：</string>
+  <string name="download_compelete">பதிவிறக்கம் முடிந்தது</string>
+  <string name="download_unsurpport_hint">ஆதரிக்கப்படாத வகை</string>
+  <string name="vsq_tip_text">* கடவுச்சொல் பாதுகாப்பு கேள்வி பதிலை உறுதி செய்யவும்</string>
+    <string name="vsq_confirm_btn_text">உறுதிசெய்யவும்</string>
+    <string name="choose_question_dialog_title">கேள்வி</string>
+  <string name="setting_secret_name">மறையாக்கம் நினைவூட்டுகிறது</string>
+  <string name="setting_secret_tip">நோட்பேடின் தனிப்பட்ட உள்ளடக்கத்திற்காக மறையாக்கம் நினைவூட்டுகிறது</string>
+  <string name="guideline_enter_private_album">முகப்பு பக்கத்திலும் தனிப்பட்ட குறிப்புகளில் நுழைவதற்கு இரண்டு விரல்களால் கீழாக ஸ்லைடு செய்யவும்.</string>
+  <string name="note_action_encrypt_string">மறையாக்கம் செய்யவா</string>
+  <string name="note_action_decrypt_string">மறைநீக்கம்</string>
+  <string name="password_set_successed_title">வெற்றிகரமாக அமைக்கப்பட்டது</string>
+  <string name="modified_password">கடவுச்சொல்லை மாற்றவும்</string>
+  <string name="modified_protect_question">கடவுச்சொல் பாதுகாப்பு கேள்விகளை மாற்றவும்</string>
+  <string name="secret_room">பேக் ரூம்</string>
+  <string name="forget_password">கடவுச்சொல்லை மறந்துவிட்டீர்களா</string>
+  <string name="setting_password">உங்கள் நான்கு இலக்க கடவுச்ச1ல்லை அமைக்கவும்</string>
+  <string name="verification_password">கடவுச்சொல்லை சரிபார்க்கவும்</string>
+  <string name="password_error_hint">தவறான கடவுச்சொல், நீங்கள் %1$s முறைகள் உள்ளிட முடியும்</string>
+  <string name="setting_password_hint">தனிப்பட்ட குறிப்புகளை பயன்படுத்துவதற்கு முன்னர், தயவுசெய்து உங்கள் கடவுச்சொல்லை முதலில் அமைக்கவும்</string>
+  <string name="ensure_password">கடவுச்சொல்லை உறுதிப்படுத்தவும்</string>
+  <string name="password_not_match">கடவுச்சொல் பொருந்தவில்லை, மீண்டும் முயற்சிக்கவும்</string>
+  <string name="enter_password">தயவுசெய்து உங்கள் கடவுச்சொல்லை டைப் செய்யவும்</string>
+  <string name="enter_password_later">தயவுசெய்து %1$s நிமிடத்தில் மீண்டும் முயற்சிக்கவும்</string>
+  <string name="verify_sq_activity_title">கடவுச்சொல் பாதுகாத்தலை சரிபார்க்கவும்</string>
+  <string name="setting_password_protect_QA">கடவுச்சொல் பாதுகாப்பு அமைக்கவும்</string>
+  <string name="answer_incorrect">தவறான பதில்</string>
+    <string name="sq_q_text_tip">கேள்வி:</string>
+  <string name="sq_a_text_tip">ஏ:</string>
+  <string name="note_content_notChange_hint">உள்ளடக்கம் மாற்றப்படவில்லை மற்றும் நீங்கள் முன்னர் சேமித்துள்ளீர்கள்</string>
+    <string name="encrypt_hint_title">மறையாக்கத்தின் குறிப்புகள்</string>
+  <string name="encrypt_hint_content">குறிப்பு தனியுரிமை கசிந்துவிடும் ஆபத்திலுள்ளது, அதனை மறையாக்கம் செய்யுமாறு பரிந்துரைக்கப்படுகிறது </string>
+  <string name="encrypt_hint_manager_dialog_sure">மறையாக்கம் செய்யவா</string>
+  <string name="successful_modification">வெற்றிகரமாக மாற்றவும்</string>
+  <string name="password_set_successed_congratulations">வாழ்த்துக்கள்!</string>
+  <string name="password_set_successed">நீங்கள் வெற்றிகரமாக கடவுச்சொல் அமைத்துள்ளீர்கள்</string>
+  <string name="password_set_successed_tips">தயவுசெய்து பின்வரும் விஷயங்களை கவனத்தில் கொள்ளவும்:</string>
+  <string name="password_set_successed_tips_first">1. தேர்ந்தெடுக்க வேண்டாம். குறிப்பு: மீடியா கிளீனிங் டூல்களை பயன்படுத்தும் போது, மறையாக்கம் செய்த நோட்பேடின் டேப்கள் மற்றும் படங்களை பிரௌஸ் செய்ய முடியாது.</string>
+  <string name="password_set_successed_tips_second">2. நோட்பேடை மறையாக்கம் செய்த பிறகு பயன்பாட்டை நிறுவல்நீக்கம் செய்ய கூடாது, இல்லையெனில் மறையாக்கம் செய்த நோட்பேடை மீட்டெடுக்க முடியாது.</string>
+  <string name="password_set_successed_sure">சரி</string>
+  <string name="encrypt_main_note_tip_load_finish">இது இங்கே மாறாக காலியாக உள்ளது. நீங்கள் சில சிறிய ரகசியங்களை சேர்க்க வேண்டுமா? நோட்பேடை பிரௌஸ் செய்யும் போது இங்கே சேர்ப்பதற்கு "மறையாக்கம்" பட்டன் மீது கிளிக் செய்யவும்.</string>
+  <!-- GIONEE wanghaiyan 2016-12-17 modify for 47298 begin-->
+  <string name="title_more_dialog_title">மற்ற</string>
+  <!-- GIONEE wanghaiyan 2016-12-17 modify for 47298 end-->
+  <string name="confirm_protect_question"> சேமித்த கடவுச்சொல் பாதுகாப்பு கேள்வி பதிலை உறுதிசெய்யவும்</string>
+  <string name="protect_question_empty">பாதுகாப்பு கேள்வி காலியாக இருக்க முடியாது</string>
+  <string name="encrypt_switch_close">மூடவும்</string>
+  <string name="encrypt_switch_open">திறக்கவும்</string>
+  <string name="security_os_footer_add">சேர்க்கவும்</string>
+  <string name="security_os_footer_search">தேடல்</string>
+  <string name="security_os_footer_secrete_space">தனிப்பட்ட இடம்</string>
+  <string name="encrypt_main_activity_security_os_title">மறையாக்கம் செய்த குறிப்புகள்</string>
+  <string name="encrypt_main_activity_security_os_add_tip">உள்ளடக்கம் இல்லை</string>
+  <string name="encrypt_select_confirm">உறுதிசெய்யவும்</string>
+  <string name="encrypt_select_cancel">ரத்துசெய்</string>
+  <string name="encrypt_select_count_text">உருப்படிகள் தேர்ந்தெடுக்கப்படவில்லை</string>
+  <string name="encrypt_main_note_security_os_tip_load_finish">இங்கு எந்த குறிப்பும் சேர்க்கப்படவில்லை.</string>
+  <string name="encrypt_note_action_del_message">நீங்கள் தேர்ந்தெடுத்த குறிப்புகளை உறுதியாக நீக்க வேண்டுமா?\nதேர்ந்தெடுத்த குறிப்புகளின் உள்ளடக்கத்தை முற்றிலும் நீக்க வேண்டும்!</string>
+  <string name="encrypt_finish_hint_for_security_os">தனிப்பட்ட இடத்திற்கு மறையாக்கம் செய்யப்பட்டது</string>
+  <string name="decrypt_finish_hint">மறைவிலக்கம் முடிந்தது</string>
+  <string name="add_pics">படங்களை சேர்க்கவும்</string>
+  <string name="encrypt_fail">மறையாக்கம் தோல்வி</string>
+  <string name="decrypt_fail">மறைவிலக்கம் தோல்வி</string>
+  <string name="encrypt_success">மறையாக்கம் வெற்றி</string>
+    <string name="delete_hint">நீக்கப்படுகிறது,தயவுசெய்து இதை பிறகு மீ</string>
+  <string name="encrypt_hint">மறையாக்குகிறது,தயவுசெய்து இதை பிறகு மீண்டும் முயற்சிக்கவும்</string>
+  <string name="decrypt_hint">மறைவிலக்குகிறது,தயவுசெய்து இதை பிறகு மீண்டும் முயற்சிக்கவும்</string>
+  <string name="recovery_hint">மீட்டெடுக்கிறது, தயவுசெய்து இதை பிறகு மீண்டும் முயற்சிக்கவும்</string>
+  <string name="partial_encrypt">%1$s மறையாக்கம் வெற்றியடைந்தது, %2$s மறையாக்கம் தோல்வியடைந்தது. </string>
+  <string name="partial_decrypt">%1$s மறைவிலக்கம் வெற்றியடைந்தது, %2$s மறைநீக்கம் தோல்வியடைந்தது. </string>
+  <!--Trash-->
+  <string name="trash">ட்ராஷ்</string>
+  <!-- GIONEE wanghaiyan 2017-02-05 modify for 67550 begin-->
+  <string name="trash_first_delete_alert">நீக்கப்பட்ட குறிப்புகள் டிராஷிற்கு நகர்த்தப்படும்(அமைப்புகள்->டிராஷ்) மற்றும் அவை எப்போது ஏழு நாட்களுக்கு பிறகு சுத்தம் செய்யப்படும். \nநீங்கள் நீக்கலாம் அல்லது டிராஷில் இருந்து மீட்டெடுக்கலாம்.</string>
+  <!-- GIONEE wanghaiyan  2017-02-05 modify for 67550 end-->
+  <string name="trash_recover">மீட்டெடுக்கவும்</string>
+  <plurals name="trash_left_days">
+    <item quantity="zero">"%1$d நாள் மீதமுள்ளது"</item>
+    <item quantity="one">"%1$d நாள் மீதமுள்ளது"</item>
+    <item quantity="other">"%1$d நாட்கள் மீதமுள்ளது"</item>
+  </plurals>
+  <string name="trash_recover_hint">மீட்டெடுக்கிறது, தயவுசெய்து இதை பிறகு மீண்டும் முயற்சிக்கவும்</string>
+  <string name="trash_delete_message">தேர்ந்தெடுக்கப்பட்ட குறிப்புகளை எப்போதைக்கும் நீக்க விரும்புகிறீர்களா?</string>
+    <string name="note_action_search_string">தேடல்</string>
+  <string name="note_action_setting_string">அமைப்புகள்</string>
+  <string name="unkown">தெரியாதது</string>
+  <string name="download">பதிவிறக்கம்</string>
+  <string name="down_load_fail_msg">பதிவிறக்கம் தோல்வியடைந்துவிட்டது</string>
+  <string name="install_amiweather_tip">Ami weather, வானிலை முன்னறிவிப்பை வழங்கும், போனின் கண்டறிதல் Ami weather-யில் நிறுவப்படவில்லை, பதிவிறக்கும் செய்து நிறுவ வேண்டுமா</string>
+  <string name="install_amicalendar_tip">Ami calendar, நாட்காட்டி சேவை வழங்கும், போனின் கண்டறிதல் Ami நாட்காட்டியில் நிறுவப்படவில்லை, பதிவிறக்கும் செய்து நிறுவ வேண்டுமா</string>
+  <string name="no_network">நெட்வொர்க் பயன்படுத்தப்படவில்லை</string>
+  <string name="no_pictures">சேமிப்பக கார்டில் படம் இல்லை.</string>
+
+    <string name="add_attach_fail">மன்னிக்கவும், இந்த கோப்பு வடிவத்திற்கு ஆதரிக்காது.</string>
+  <string name="long_bitmap_add_failed">படத்தின் நீளம் வரம்பை தாண்டியுள்ளது. சேர்த்தல் தோல்வியடைந்தது</string>
+</resources>

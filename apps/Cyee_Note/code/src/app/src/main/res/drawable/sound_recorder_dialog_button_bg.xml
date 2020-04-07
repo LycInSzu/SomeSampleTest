@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <solid android:color="@color/sound_recorder_dialog_button_ring_inner_color" />
+    <stroke
+        android:width="@dimen/sound_recorder_dialog_button_bg_ring_thickness"
+        android:color="@color/sound_recorder_dialog_button_ring_outer_color" />
+</shape>

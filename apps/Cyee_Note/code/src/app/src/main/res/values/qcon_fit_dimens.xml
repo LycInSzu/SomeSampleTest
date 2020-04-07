@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--qcom_new_note_activity_layout-->
+    <dimen name="qcom_title_line_amend">1dp</dimen>
+    <dimen name="qcom_note_title_paddingtop">10dp</dimen>
+    <dimen name="qcom_note_title_paddingbottom">10dp</dimen>
+
+    <dimen name="qcom_title_cursor_paddinttop">2dp</dimen>
+    <dimen name="qcom_title_cursor_paddintbottom">4dp</dimen>
+
+    <dimen name="qcom_content_cursor_paddinttop">8dp</dimen>
+    <dimen name="qcom_content_cursor_paddintbottom">-10dp</dimen>
+</resources>

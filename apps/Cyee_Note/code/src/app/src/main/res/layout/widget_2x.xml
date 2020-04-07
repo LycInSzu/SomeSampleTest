@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/widget_backgroud"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:id="@+id/widget_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:clickable="true">
+
+        <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/widget_text_title_margin_top_2x"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/widget_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/widget_text_title_margin_left_2x"
+                android:layout_toStartOf="@+id/widget_alarm"
+                android:singleLine="true"
+                android:textColor="@color/home_note_item_title_color"
+                android:textSize="@dimen/home_note_item_title_size" />
+
+            <ImageView
+                android:id="@+id/widget_alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/widget_alarm_margin_right_2x" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/widget_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/widget_time"
+            android:layout_below="@id/title_layout"
+            android:layout_marginStart="@dimen/widget_text_content_margin_top_2x"
+            android:layout_marginEnd="@dimen/widget_text_content_margin_top_2x"
+            android:layout_marginTop="@dimen/widget_text_content_margin_top_2x"
+            android:layout_marginBottom="@dimen/widget_text_content_margin_top_2x"
+            android:ellipsize="end"
+            android:lineSpacingExtra="4dp"
+            android:lineSpacingMultiplier="1.0"
+            android:maxLines="@integer/widget_content_lines_2x"
+            android:textColor="@color/edit_note_item_signature_color"
+            android:textSize="@dimen/home_note_item_content_size" />
+
+        <TextView
+            android:id="@+id/widget_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="@dimen/widget_time_margin_bottom_2x"
+            android:layout_marginEnd="@dimen/widget_time_margin_bottom_2x"
+            android:textColor="@color/edit_note_item_time_color"
+            android:textSize="@dimen/widget_time_size" />
+
+    </RelativeLayout>
+</FrameLayout>

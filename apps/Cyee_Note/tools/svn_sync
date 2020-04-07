@@ -1,0 +1,33 @@
+#!/bin/bash
+source config_svn_ignore
+
+ANDROID_MANIFEST=code/AndroidManifest.xml
+
+get_version_name(){
+
+    local gn_apk_version_name="android:versionName"
+    local gn_manifest=$ANDROID_MANIFEST
+    [ ! -f "$gn_manifest" ] && return
+
+    string=$(cat $gn_manifest | sed -n "/$gn_apk_version_name/p")
+
+    if [ -z "$string" ];then
+        echo "no \"$gn_apk_version_name\" in the $gn_manifest " >&2
+        return
+    fi
+
+    local tmp=$(echo ${string#*android:versionName*=})
+    local version_name=$(echo ${tmp%android:*})
+    version_name=$(echo ${version_name%>*})
+    echo $version_name
+}
+
+cd $RSYNC_DST
+
+svn st | awk '{if ($1 == "?") {print $2} }' | xargs svn add
+svn st | awk '{if ($1 == "!") {print $2}}' | xargs svn rm
+svn up
+
+version_name=$(get_version_name)
+echo $version_name
+svn ci -m "release version: $version_name"

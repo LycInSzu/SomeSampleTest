@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <size
+        android:width="@dimen/sound_recorder_dialog_point_radius"
+        android:height="@dimen/sound_recorder_dialog_point_radius" />
+
+    <solid android:color="@color/sound_recorder_dialog_point_color" />
+
+</shape>

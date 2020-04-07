@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/note_main_activity_action_mode_footer_layout_divide_height"
+        android:background="@color/note_main_activity_action_mode_footer_layout_divide_color" />
+
+    <LinearLayout
+        android:id="@+id/action_del_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top|center_horizontal"
+        android:orientation="horizontal">
+
+        <cyee.widget.CyeeTextView
+            android:id="@+id/encrypt_main_activity_security_os_footer_desktop"
+            style="@style/RippleEffect"
+            android:layout_width="@dimen/note_main_activity_action_mode_footer_layout_item_width"
+            android:layout_height="match_parent"
+            android:drawablePadding="@dimen/note_main_activity_action_mode_footer_layout_item_drawable_padding"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/note_main_activity_action_mode_footer_layout_item_top_padding"
+            android:text="@string/security_os_footer_secrete_space"
+            android:textColor="@color/action_bar_text_color"
+            android:textSize="@dimen/note_main_activity_action_mode_footer_layout_item_text_size" />
+
+        <cyee.widget.CyeeTextView
+            android:id="@+id/encrypt_main_activity_security_os_footer_search"
+            style="@style/RippleEffect"
+            android:layout_width="@dimen/note_main_activity_action_mode_footer_layout_item_width"
+            android:layout_height="match_parent"
+            android:drawablePadding="@dimen/note_main_activity_action_mode_footer_layout_item_drawable_padding"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/note_main_activity_action_mode_footer_layout_item_top_padding"
+            android:text="@string/security_os_footer_search"
+            android:textColor="@color/action_bar_text_color"
+            android:textSize="@dimen/note_main_activity_action_mode_footer_layout_item_text_size" />
+
+        <cyee.widget.CyeeTextView
+            android:id="@+id/encrypt_main_activity_security_os_footer_add"
+            style="@style/RippleEffect"
+            android:layout_width="@dimen/note_main_activity_action_mode_footer_layout_item_width"
+            android:layout_height="match_parent"
+            android:drawablePadding="@dimen/note_main_activity_action_mode_footer_layout_item_drawable_padding"
+            android:drawableTop="@drawable/encrypt_add"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/note_main_activity_action_mode_footer_layout_item_top_padding"
+            android:text="@string/security_os_footer_add"
+            android:textColor="@color/action_bar_text_color"
+            android:textSize="@dimen/note_main_activity_action_mode_footer_layout_item_text_size" />
+    </LinearLayout>
+
+</LinearLayout>

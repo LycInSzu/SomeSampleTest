@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cydroid.note"
+    android:versionCode="80100028"
+    android:versionName="8.1.0.ce">
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="26" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.gionee.alarm.permission.SET_ACCURATE_WAKE_ALARM" />
+	<!--<uses-permission android:name="android.permission.MANAGE_DOCUMENTS" /> -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="com.gionee.launcher.permission.PRESSURE_SENSOR" />
+    <uses-permission android:name="com.gionee.permission.ACCESS_SECRET" />
+    <uses-permission android:name="android.permission.NFC"/>
+
+    <user-permission android:name="com.gionee.encryptspace.permission.ACCESS_TOKEN_SERVICE" />
+    <!--Gionee wanghaiyan 2017-4-11 modify for 107499 begin-->
+    <!--Chenyee wanghaiyan 2017-11-07 modify for SW17W16A-955 begin-->
+    <application
+        android:name="com.cydroid.note.app.NoteAppImpl"
+        android:allowBackup="true"
+        android:configChanges="density"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:logo="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:restoreAnyVersion="true">
+	<!--Cheeyee wanghaiyan 2017-11-07 modify for SW17W16A-955 end-->
+    <!--Gionee wanghaiyan 2017-4-11 modify for 107499 end-->
+        <meta-data
+            android:name="FeedBack_AppId"
+            android:value="1b3c3bc3fe0b44e79a8ac3f1eab3cac9" />
+
+        <meta-data
+            android:name="BaiduMobAd_EXCEPTION_LOG"
+            android:value="true" />
+
+        <meta-data
+            android:name="BaiduMobAd_SEND_STRATEGY"
+            android:value="APP_START" />
+
+        <meta-data
+            android:name="CyeeAlarmAlignPermissioin"
+            android:value="B1267B112ECC00DAABE9AE777BEC0F7E89047DEE2297F0814D3DB633B514E0CF" />
+
+        <activity
+            android:name="com.cydroid.note.app.NoteMainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoteMainActivityTheme"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.cydroid.note.intent.action.PRESSURE_SEARCH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="note.intent.action.openHomeActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+            android:name="com.cydroid.note.HomeActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:targetActivity="com.cydroid.note.app.NoteMainActivity"
+            android:theme="@style/NoteMainActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!--Gionee wanghaiyan 2017-7-14 modify for 161688 begin-->
+        <!--Gionee wanghaiyan 2018-1-18 modify for CSW1705A-1025 begin-->
+	<!--Gionee wanghaiyan 2018-1-26 modify for CSW1705A-1150 begin-->
+        <activity
+            android:name="com.cydroid.note.app.NewNoteActivity"
+            android:configChanges="locale|layoutDirection"
+            android:hardwareAccelerated="false"
+            android:launchMode="singleTask"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/NewNoteActivityTheme">
+	    <!--Gionee wanghaiyan 2018-1-26 modify for CSW1705A-1150 end-->
+            <!--Gionee wanghaiyan 2018-1-18 modify for CSW1705A-1025 end-->
+        <!--Gionee wanghaiyan 2017-7-14 modify for 161688 end-->
+
+            <intent-filter>
+                <action android:name="note.check.note.action" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="note.intent.action.createNewNote" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="com.cydroid.note.action.detailedNote" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="note.intent.action.from.camera" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="com.cydroid.note.deeplinker.DeepLinkerActivity"
+            android:resizeableActivity="false"
+            android:theme="@style/NoteBaseTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.cydroid.note"
+                    android:scheme="aminote" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.cydroid.note.app.LabelNoteActivity"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/LabelNoteActivityTheme" />
+
+        <activity
+            android:name="com.cydroid.note.photoview.PhotoViewActivity"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImageGalleryTheme" />
+
+        <activity
+            android:name="com.cydroid.note.photoview.PreviewActivity"
+            android:hardwareAccelerated="false"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoteMainActivityTheme" />
+
+        <activity
+            android:name="com.cydroid.note.app.LabelCustomActivity"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/LabelCustomActivityTheme" />
+
+        <activity
+            android:name="com.cydroid.note.app.SettingActivity"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/LabelCustomActivityTheme" />
+
+        <activity
+            android:name="com.cydroid.note.trash.app.TrashMainActivity"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/LabelCustomActivityTheme" />
+
+        <activity
+            android:name="com.cydroid.note.app.AboutUsActivity"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/LabelCustomActivityTheme" />
+
+        <activity
+            android:name="com.cydroid.note.ai.AIActivity"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoteBaseTheme" />
+
+        <activity
+            android:name="com.cydroid.note.ai.WebPageActivity"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoteBaseTheme" />
+
+        <activity
+            android:name="com.cydroid.note.app.OnlineImageActivity"
+            android:hardwareAccelerated="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoteBaseTheme" />
+
+        <activity
+            android:name="com.cydroid.note.encrypt.PasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoteBaseTheme"
+            android:windowSoftInputMode="stateVisible" />
+
+        <activity
+            android:name="com.cydroid.note.encrypt.PasswordProtectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoteBaseTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+
+        <activity
+            android:name=".encrypt.EncryptMainActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity=".Encrypt"
+            android:theme="@style/NoteMainActivityTheme">
+            <intent-filter>
+                <action android:name="action.note.private.space" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".encrypt.EncryptDetailActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoteBaseTheme" />
+
+        <activity
+            android:name=".encrypt.PasswordSetSuccessedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoteBaseTheme" />
+
+        <activity
+            android:name=".encrypt.EncryptSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoteBaseTheme" />
+
+        <activity
+            android:name=".encrypt.EncryptSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoteBaseTheme" />
+
+        <provider
+            android:name="com.cydroid.note.provider.NoteProvider"
+            android:authorities="com.cydroid.note.provider.NoteProvider"
+            android:exported="true" />
+
+        <receiver
+            android:name="com.cydroid.note.widget.NoteWidgetProvider_2x"
+            android:label="@string/app_widget2x2">
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_2x_info" />
+
+        </receiver>
+
+        <receiver
+            android:name="com.cydroid.note.widget.NoteWidgetProvider_4x"
+            android:label="@string/app_widget4x4">
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_4x_info" />
+
+        </receiver>
+
+        <receiver android:name="com.cydroid.note.app.reminder.ReminderReceiver">
+            <intent-filter>
+                <action android:name="com.cydroid.note.action.pop_reminder" />
+                <action android:name="com.cydroid.note.action.widget_reminder" />
+                <action android:name="com.cydroid.note.action.cancel_alarm" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.cydroid.note.action.security_os" />
+                <action android:name="com.cydroid.note.action.go_note_detail" />
+                <action android:name="com.cydroid.note.action.TRASH_CLEAN" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".app.view.DownLoadCompleteBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"></action>
+                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED"></action>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.cydroid.note.dataghost.DataTransferService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="dataghost.intent.action.AGENT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.cydroid.note.dataghost.PrivateDataTransferService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="dataghost.intent.action.PRIVATE_AGENT" />
+            </intent-filter>
+        </service>
+
+        <!-- <GN_Oversea_Bug><wanghaiyan><20161230> modify for #57307 begin -->
+        <provider
+ 			android:name="android.support.v4.content.FileProvider"
+ 			android:authorities="com.cydroid.note.fileprovider"
+  			android:exported="false"
+ 			android:grantUriPermissions="true">
+  			<meta-data
+      			android:name="android.support.FILE_PROVIDER_PATHS"
+      			android:resource="@xml/filepaths" />
+	   </provider>
+       <!-- <GN_Oversea_Bug><wanghaiyan><20161230> modify for #57307 end -->
+
+    </application>
+
+</manifest>
+

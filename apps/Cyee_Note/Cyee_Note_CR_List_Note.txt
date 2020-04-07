@@ -1,0 +1,1013 @@
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/pvt_Note2.0.0
+svn: warning: W170000: URL 'http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_01_V' non-existent in revision 1356
+
+svn: E200009: Could not display info for all targets because some targets don't exist
+svn: E205000: Syntax error in revision argument '1356:'
+File does not exist:  at getAppChangeSet.pl line 48
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2290:2220 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+CR01764565      Resolved   wanghaiyan 同步CR01760959-【用户反馈】很抱歉，“记事本”已停止运行。  com.android.note:2.0.3.ab  累计报错10
+CR01764674      Resolved   wanghaiyan 记事本：加密记事本添加录音后进入文件管理中删除.NoteMeida文件夹解密该记事本后，进入该记事本中播放录音，提示文件不存在
+CR01764725      Resolved   wanghaiyan 2.0.6记事本-隐藏version update/User feedback/About us等菜单
+CR01766361      Resolved   wanghaiyan S9-记事本-有中文图片
+CR01766365      Resolved   wanghaiyan S9-内置中文便签-需要去掉
+CR01772571      Opened     wanghaiyan 7533-N平台记事本适配
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_oversea_V2.0.6.b
+Previous tag: Amigo_Note_oversea_V2.0.6.a
+Code difference: svn diff -r 2290:2220 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2300:2297 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+CR01772571      Coded      wanghaiyan 7533-N平台记事本适配
+CR01773334      Resolved   wanghaiyan N平台记事本-去掉在线图片
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.d
+Previous tag: Amigo_Note_overseaN_V2.0.6.c
+Code difference: svn diff -r 2300:2297 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2307:2306 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+CR01774355      Opened     wanghaiyan SW1609 bug修改代码提交
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.e
+Previous tag: Amigo_Note_overseaN_V2.0.6.d
+Code difference: svn diff -r 2307:2306 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2308:2309 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.f
+Previous tag: Amigo_Note_overseaN_V2.0.6.e
+Code difference: svn diff -r 2308:2309 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2315:2313 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+CR01774355      Opened     wanghaiyan SW1609 bug修改代码提交
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.g
+Previous tag: Amigo_Note_overseaN_V2.0.6.f
+Code difference: svn diff -r 2315:2313 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2324:2317 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+36866		分配		王海燕(应用二组)		便签-去掉用户反馈，关于我们，在线升级等菜单
+37025		打开		王海燕(应用二组)		便签-插T卡情况下，修改录音优先保存路径
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.h
+Previous tag: Amigo_Note_overseaN_V2.0.6.g
+Code difference: svn diff -r 2324:2317 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2328:2326 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+28422		已修复		王海燕(应用二组)		便签--搜索--点击输入框不弹出虚拟键盘
+37596		打开		王海燕(应用二组)		便签--新建--有智能小助手，海外项目不上此功能
+						
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.i
+Previous tag: Amigo_Note_overseaN_V2.0.6.h
+Code difference: svn diff -r 2328:2326 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2333:2330 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+malformed JSON string, neither array, object, number, string or atom, at character offset 0 (before "<!DOCTYPE html>\n<ht...") at getAppChangeSet.pl line 185.
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2340:2335 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+39727		已修复		王海燕(应用二组)		英文--便签--新建添加图片--选择界面显示有中文“图库”字样
+40287		已修复		王海燕(应用二组)		便签-插T卡情况下优先保存图片到T卡里，当保存在内部存储器时，修改内部存储器名称为Phone Storage
+40498		打开		王海燕(应用二组)		私密空间-记事本-点搜索按钮-不能弹出输入法
+40545		打开		王海燕(应用二组)		私密空间-记事本-有智能小助手，需要去掉
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.k
+Previous tag: Amigo_Note_overseaN_V2.0.6.j
+Code difference: svn diff -r 2340:2335 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2346:2342 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+40586		已修复		王海燕(应用二组)		英文--便签--新建--转发--便签左下方显示“来自 Ami记事本”，应显示“From Ami note”
+40606		已修复		王海燕(应用二组)		英文下，便签首页“新建按钮”被翻译为“编辑”
+40950		打开		王海燕(应用二组)		FM挂后台，进入便签添加录音，点击录音播放，FM频道的声音不会暂停，录音无声
+						
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.l
+Previous tag: Amigo_Note_overseaN_V2.0.6.k
+Code difference: svn diff -r 2346:2342 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2355:2348 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+40315		打开		王海燕(应用二组)		开启日常省电模式，首次进入便签，弹出框，勾选框的字体与底色相近，且又一个中文逗号
+41382		关闭		王海燕(应用二组)		新建便签-->添加闹钟，闹钟的时间范围1900年1月1日--2100年12月31日，而系统时间设置范围1970.1.1--2037.12.31
+41541		已修复		王海燕(应用二组)		记事本-添加闹钟-点时间，日期tab不可见，点日期-时间tab不可见
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.n
+Previous tag: Amigo_Note_overseaN_V2.0.6.l
+Code difference: svn diff -r 2355:2348 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2362:2357 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+39883		已修复		王海燕(应用二组)		便签--新建转发--保存--保存后“保存”按钮还高亮，点击可继续保存同样的文件
+42352		已修复		王海燕(应用二组)		记事本长按一条便签加密-在弹出设置暗码界面后按home键返回到待机桌面，再次进入记事本回到记事本首页
+43513		关闭		王海燕(应用二组)		日常省电模式下，便签，删除便签，弹出框，字体颜色与底色相似，看不清
+43516		关闭		王海燕(应用二组)		便签，已有删除文件，弹出框，Ok的k未大写
+45337		已修复		王海燕(应用二组)		便签--新建便签--菜单键显示有加密项，点击提示双指下滑，请屏蔽
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.o
+Previous tag: Amigo_Note_overseaN_V2.0.6.n
+Code difference: svn diff -r 2362:2357 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2365:2364 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+45281		打开		王海燕(应用二组)		记事本-去掉加密功能
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.p
+Previous tag: Amigo_Note_overseaN_V2.0.6.o
+Code difference: svn diff -r 2365:2364 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2368:2367 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+45793		打开		王海燕(应用二组)		记事本-编辑-预览-分享到Save to Amigo Note，会生成一个空记事本
+						
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.q
+Previous tag: Amigo_Note_overseaN_V2.0.6.p
+Code difference: svn diff -r 2368:2367 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2372:2370 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+46059		打开		王海燕(应用二组)		记事本--设置--有加密提醒，请去掉此功能
+						
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.r
+Previous tag: Amigo_Note_overseaN_V2.0.6.q
+Code difference: svn diff -r 2372:2370 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2386:2374 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+CR01758068      Closed     wanghaiyan 【验收测试_随机1/20】进入相机--开启扫描成文拍摄一张照片--辨识--点击右上方的预览分享图标--弹出“Notes”报错。
+40514		打开		王海燕(应用二组)		新建便签，一直输入内容至提示‘字数超限’，然后删除全部内容，再添加图片或录音，提示字符超限
+47255		已修复		王海燕(应用二组)		记事本-新建记事本-分享-保存，弹出的提示语首字母未大写
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.s
+Previous tag: Amigo_Note_overseaN_V2.0.6.r
+Code difference: svn diff -r 2386:2374 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2390:2388 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+47298		打开		王海燕(应用二组)		便签--编辑界面，点击右上方按钮，Others应改为Other
+48534		已修复		王海燕(应用二组)		便签->无任何便签时点击右上角切换类型显示图标时->便签界面提示信息"No content"会闪过另一个提示语 
+						
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.t
+Previous tag: Amigo_Note_overseaN_V2.0.6.s
+Code difference: svn diff -r 2390:2388 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2393:2392 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+47860		已修复		王海燕(应用二组)		新建便签，点击添加图片，提示‘存储中无图片’，实际是有图片的
+						
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.u
+Previous tag: Amigo_Note_overseaN_V2.0.6.t
+Code difference: svn diff -r 2393:2392 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2398:2395 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+48977		已修复		王海燕(应用二组)		在锁屏界面点击分享，分享框中记事本显示错误，显示的是“保存至Ami...”
+49673		已修复		王海燕(应用二组)		系统语言为中文，便签-新建，光标在正文区域和标题栏区域时，标题栏提示语不一致
+50571		已修复		王海燕(应用二组)		日常省电下，便签--批量操作便签，没有被选中的便签看不到小方框
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.v
+Previous tag: Amigo_Note_overseaN_V2.0.6.u
+Code difference: svn diff -r 2398:2395 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2405:2400 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+48095		重打开		王海燕(应用二组)		记事本-新建便签-添加提醒闹钟，桌面，来便签闹钟提醒时，通知栏的便签图标显示错误
+48774		已修复		王海燕(应用二组)		便签->新建便签->点击右下角倒数第二个相机按钮拍照后进入图库->生成的"photo"文件夹名称首字母未大写;附截图
+51694		已修复		王海燕(应用二组)		记事本-搜索栏区分了大小写，
+51697		已修复		王海燕(应用二组)		新建便签--不输入任何内容，按键盘上的回车键后，点击右上角的菜单键里面的删除选项，点击无法删除。
+51857		已修复		王海燕(应用二组)		记事本-编辑界面记事本点列表菜单记事本报错
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.w
+Previous tag: Amigo_Note_overseaN_V2.0.6.v
+Code difference: svn diff -r 2405:2400 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2409:2407 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+49943		打开		王海燕(应用二组)		点击Notes中的一封旧便签查看（未编辑）后返回，便签的编辑时间以及排序都改变了
+52253		打开		王海燕(应用二组)		便签--长按一条便签，没有出现加密选项（双指下滑是有密室这个功能的），不能加密便签到密室。
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.x
+Previous tag: Amigo_Note_overseaN_V2.0.6.w
+Code difference: svn diff -r 2409:2407 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2418:2411 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+53637		已修复		王海燕(应用二组)		记事本-便签编辑界面的时间格式与保存后的时间显示不一致
+55368		打开		王海燕(应用二组)		记事本-任意输入一个记事本点击第一个图标弹出框，右边的四个勾选框为灰色-建议对勾选框颜色加深
+56099		打开		王海燕(应用二组)		记事本-阿拉伯语言下-调整布局显示为从右向左
+						
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.y
+Previous tag: Amigo_Note_overseaN_V2.0.6.x
+Code difference: svn diff -r 2418:2411 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2423:2420 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+57164		打开		王海燕(应用二组)		便签-搜索，输入字母字体颜色显示白色不显眼，且有下划线
+						
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.z
+Previous tag: Amigo_Note_overseaN_V2.0.6.y
+Code difference: svn diff -r 2423:2420 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2429:2425 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+57307		打开		王海燕(应用二组)		照相机冻结后进入便签-编辑便签-点击照相机，会留下一张照片在图库中，无法删除
+57505		已修复		王海燕(应用二组)		记事本-settings-落款签名-，输入字符-可以联想单词用来替换错误的单词，替换的单词太长，会引起角标越界导致记事本停止运行
+57545		已修复		王海燕(应用二组)		首次进入便签弹出的提示框中的内容缺少句号
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.aa
+Previous tag: Amigo_Note_overseaN_V2.0.6.z
+Code difference: svn diff -r 2429:2425 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2433:2431 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+57307		已修复		王海燕(应用二组)		照相机冻结后进入便签-编辑便签-点击照相机，会留下一张照片在图库中，无法删除
+58898		已修复		王海燕(应用二组)		阿拉伯语或者希伯来语下，输入字符-添加清单后-清单无法勾选
+						
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.ab
+Previous tag: Amigo_Note_overseaN_V2.0.6.aa
+Code difference: svn diff -r 2433:2431 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2445:2435 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+64127		打开		王海燕(应用二组)		【自动化_monkey72h】【随机】com.android.note（java.lang.IndexOutOfBoundsException 数组索引越界异常）报错
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.ac
+Previous tag: Amigo_Note_overseaN_V2.0.6.ab
+Code difference: svn diff -r 2445:2435 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2448:2447 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+65800		已修复		王海燕(应用二组)		N平台合英文翻译
+						
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.ad
+Previous tag: Amigo_Note_overseaN_V2.0.6.ac
+Code difference: svn diff -r 2448:2447 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2452:2450 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+66212		打开		张胜		M到N Android部分翻译和入
+						
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.ae
+Previous tag: Amigo_Note_overseaN_V2.0.6.ad
+Code difference: svn diff -r 2452:2450 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2457:2455 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+66212		打开		张胜		M到N Android部分翻译和入
+						
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.af
+Previous tag: Amigo_Note_overseaN_V2.0.6.ae
+Code difference: svn diff -r 2457:2455 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2460:2459 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+67550		打开		王海燕(应用二组)		便签--长按任意便签--删除，弹出提示语有误
+						
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.ag
+Previous tag: Amigo_Note_overseaN_V2.0.6.af
+Code difference: svn diff -r 2460:2459 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2463:2462 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+67596		打开		王海燕(应用二组)		添加（2*2）Note小部件，编辑便签，添加图标，小部件显示不了图片
+						
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.ah
+Previous tag: Amigo_Note_overseaN_V2.0.6.ag
+Code difference: svn diff -r 2463:2462 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2469:2465 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+CR01778136      Opened     guanxw     N平台翻译修改
+68369		打开		王海燕(应用二组)		【OTA】6148->8037，打开便签，提示停止运行
+						
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.ai
+Previous tag: Amigo_Note_overseaN_V2.0.6.ah
+Code difference: svn diff -r 2469:2465 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2473:2471 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+malformed JSON string, neither array, object, number, string or atom, at character offset 0 (before "Can't connect to os....") at getAppChangeSet.pl line 194
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2494:2481 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+CR01778460      Opened     zhanglz    【客户需求】M平台翻译导入N平台
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_oversea_V2.0.3.di
+Previous tag: Amigo_Note_oversea_V2.0.3.dh
+Code difference: svn diff -r 2494:2481 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2498:2475 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+CR01778460      Opened     zhanglz    【客户需求】M平台翻译导入N平台
+75442		打开		秦凯		[客户需求]工程导入客户反馈的罗马尼亚语（RO）和波兰语（PL）
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.ak
+Previous tag: Amigo_Note_overseaN_V2.0.6.aj
+Code difference: svn diff -r 2498:2475 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2499:2500 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.al
+Previous tag: Amigo_Note_overseaN_V2.0.6.ak
+Code difference: svn diff -r 2499:2500 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2510:2502 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+CR01778603      Opened     chenyu     N平台翻译导入
+77724		打开		王海燕(应用二组)		【客户需求】编辑便签时，插入闹钟的时间格式为dd-MM-yyyy,便签列表显示的时间格式应该为HH-mm dd-MM-yyyy
+						
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.am
+Previous tag: Amigo_Note_overseaN_V2.0.6.al
+Code difference: svn diff -r 2510:2502 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2514:2512 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+76880		打开		庞振		[1609GD]印尼语翻译修改
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.an
+Previous tag: Amigo_Note_overseaN_V2.0.6.am
+Code difference: svn diff -r 2514:2512 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2517:2516 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+77568		打开		王海燕(应用二组)		【客户需求】便签加密解密
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.ao
+Previous tag: Amigo_Note_overseaN_V2.0.6.an
+Code difference: svn diff -r 2517:2516 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2522:2519 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+CR01778321      Opened     liwenbin   [客户需求]印度尼西亚语翻译
+75442		打开		秦凯		[客户需求]工程导入客户反馈的罗马尼亚语（RO）和波兰语（PL）
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.ap
+Previous tag: Amigo_Note_overseaN_V2.0.6.ao
+Code difference: svn diff -r 2522:2519 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2527:2524 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+malformed JSON string, neither array, object, number, string or atom, at character offset 0 (before "<!DOCTYPE html>\n<ht...") aCR01778829      Opened     chenyu     N平台印度英语翻译修改导入
+t getAppChangeSet.pl line 185
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2530:2519 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+malformed JSON string, neither array, object, number, string or atom, at character offset 0 (before "<!DOCTYPE html>\n<ht...") aCR01778321      Opened     liwenbin   [客户需求]印度尼西亚语翻译
+CR01778829      Opened     chenyu     N平台印度t getAppChangeSet.pl line 185
+英语翻译修改导入
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2535:2532 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+90801		打开		王海燕(应用二组)		便签-长按任意便签点击删除-弹出对话框后按返回键没反应，对话框不会消失。对比在图库里删除某图片弹出对话框后按返回键，对话框会消失
+90809		打开		赵朋		【客户反馈】 修改繁体中文翻译
+90829		已修复		王海燕(应用二组)		进设置将字体设为最大后，进便签-删除便签，弹出的对话框右边有显示上下拉动条，但上下滑动没有反应
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.as
+Previous tag: Amigo_Note_overseaN_V2.0.6.ar
+Code difference: svn diff -r 2535:2532 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2536:2537 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.at
+Previous tag: Amigo_Note_overseaN_V2.0.6.as
+Code difference: svn diff -r 2536:2537 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2540:2539 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+90654		打开		王海燕(应用二组)		便签-新建便签-长按便签点击删除-按HOME键退出，切换字体，再次进便签-点击对话框的继续按钮，便签被删除后，删除进度条不会消失
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.au
+Previous tag: Amigo_Note_overseaN_V2.0.6.at
+Code difference: svn diff -r 2540:2539 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2544:2542 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+CR01778321      Opened     liwenbin   [客户需求]印度尼西亚语翻译
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.av
+Previous tag: Amigo_Note_overseaN_V2.0.6.au
+Code difference: svn diff -r 2544:2542 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2545:2546 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.ay
+Previous tag: Amigo_Note_overseaN_V2.0.6.av
+Code difference: svn diff -r 2545:2546 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2558:2548 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+89795		打开		王海燕(应用二组)		【内存泄露】便签模块存在内存泄露
+96692		已修复		王海燕(应用二组)		记事本-回收站删除记事本-弹出对话框-home键回到主菜单，进这是菜单字体或改变字体大小-再回到记事本本回收站界面-点删除，进度条不消失
+96813		已修复		王海燕(应用二组)		同步国内bug-66374-bug-详情界面加密正则表达式的完善
+96826		已修复		王海燕(应用二组)		同步国内bug 66489-安全OS-私密空间》私密记事本》屏幕底部私密空间，搜索，添加》字体变小（其它私密联系人，信息，文件等应用显示正常，无法恢复，对比S9不存在）概率：100%
+96878		打开		王海燕(应用二组)		长截屏两张超过十页图片 记事本-添加这两张图片-记事本停止运行
+97043		已修复		王海燕(应用二组)		同步国内bug-记事本，新建10个记事本，全部删除再恢复，再全选所有记事本点加密，弹出的pop框显示正在删除    
+97370		打开		王海燕(应用二组)		更换androidN控件的JAR包
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.az
+Previous tag: Amigo_Note_overseaN_V2.0.6.ay
+Code difference: svn diff -r 2558:2548 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2561:2560 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+90809		打开		赵朋		【客户反馈】 修改繁体中文翻译
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.ba
+Previous tag: Amigo_Note_overseaN_V2.0.6.az
+Code difference: svn diff -r 2561:2560 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2564:2532 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+CR01778321      Opened     liwenbin   [客户需求]印度尼西亚语翻译
+75442		打开		秦凯		[客户需求]工程导入客户反馈的罗马尼亚语（RO）和波兰语（PL）
+89795		已修复		王海燕(应用二组)		【内存泄露】便签模块存在内存泄露
+90654		关闭		王海燕(应用二组)		便签-新建便签-长按便签点击删除-按HOME键退出，切换字体，再次进便签-点击对话框的继续按钮，便签被删除后，删除进度条不会消失
+90801		关闭		王海燕(应用二组)		便签-长按任意便签点击删除-弹出对话框后按返回键没反应，对话框不会消失。对比在图库里删除某图片弹出对话框后按返回键，对话框会消失
+90809		打开		赵朋		【客户反馈】 修改繁体中文翻译
+90829		关闭		王海燕(应用二组)		进设置将字体设为最大后，进便签-删除便签，弹出的对话框右边有显示上下拉动条，但上下滑动没有反应
+96692		已修复		王海燕(应用二组)		记事本-回收站删除记事本-弹出对话框-home键回到主菜单，进这是菜单字体或改变字体大小-再回到记事本本回收站界面-点删除，进度条不消失
+96813		已修复		王海燕(应用二组)		同步国内bug-66374-bug-详情界面加密正则表达式的完善
+96826		已修复		王海燕(应用二组)		同步国内bug 66489-安全OS-私密空间》私密记事本》屏幕底部私密空间，搜索，添加》字体变小（其它私密联系人，信息，文件等应用显示正常，无法恢复，对比S9不存在）概率：100%
+96878		已修复		王海燕(应用二组)		长截屏两张超过十页图片 记事本-添加这两张图片-记事本停止运行
+97043		已修复		王海燕(应用二组)		同步国内bug-记事本，新建10个记事本，全部删除再恢复，再全选所有记事本点加密，弹出的pop框显示正在删除    
+97370		已修复		王海燕(应用二组)		更换androidN控件的JAR包
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.bb
+Previous tag: Amigo_Note_overseaN_V2.0.6.ar
+Code difference: svn diff -r 2564:2532 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2567:2566 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+96979		打开		王海燕(应用二组)		【走查】记事本--分享--通过邮件、信息等应用分享--分享后无来自“Ami记事本”后缀名
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.bc
+Previous tag: Amigo_Note_overseaN_V2.0.6.bb
+Code difference: svn diff -r 2567:2566 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2572:2566 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+malformed JSON string, neither array, object, number, string or atom, at character offset 0 (before "<!DOCTYPE html>\n<ht...") at getAppChangeSet.pl line 185
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2579:2574 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+106319		打开		张胜		[客户需求]合入西班牙语和匈牙利语翻译
+106963		打开		李姝锦		【W1609GH】apk导入俄语哈萨克语翻译。
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.be
+Previous tag: Amigo_Note_overseaN_V2.0.6.bd
+Code difference: svn diff -r 2579:2574 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2582:2581 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+107499		打开		王海燕(应用二组)		【希伯来语未靠右显示】便签--新建便签--输入字符与显示字符未靠右显示，附图
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.bf
+Previous tag: Amigo_Note_overseaN_V2.0.6.be
+Code difference: svn diff -r 2582:2581 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2583:2584 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.bg
+Previous tag: Amigo_Note_overseaN_V2.0.6.bf
+Code difference: svn diff -r 2583:2584 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2588:2586 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+malformed JSON string, neither array, object, number, string or atom, at character offset 0 (before "<!DOCTYPE html>\n<ht...") at getAppChangeSet.pl line 185
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2594:2590 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+119239		打开		王海燕(应用二组)		【随机一次】便签进行12小时内存泄漏 测试出现2个com.android.note报错
+119809		已修复		王海燕(应用二组)		记事本-编辑状态-没有输入任何内容-按概览键进最近任务-清除当前记事本-会保存一个空的记事本
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.bi
+Previous tag: Amigo_Note_overseaN_V2.0.6.bh
+Code difference: svn diff -r 2594:2590 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2602:2596 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+malformed JSON string, neither array, object, number, string or atom, at character offset 0 (before "<!DOCTYPE html>\n<ht...") at getAppChangeSet.pl line 185
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2606:2604 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+122967		打开		王海燕(应用二组)		连上WiFi，时间默认为客户时间，进入设置更改为北京时间，再进入便签，点击新建，右下方时间与状态栏时间不一致。添加定时闹钟，点击OK发现左下角闹钟时间不是设置的时间。
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.bk
+Previous tag: Amigo_Note_overseaN_V2.0.6.bj
+Code difference: svn diff -r 2606:2604 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2611:2608 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+CR01780050      Opened     lijf       N平台rom模块编译mk增加印度10种语言
+75213		打开		管小文		N平台翻译修改
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.bl
+Previous tag: Amigo_Note_overseaN_V2.0.6.bk
+Code difference: svn diff -r 2611:2608 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2616:2613 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+malformed JSON string, neither array, object, number, string or atom, at character offset 0 (before "<!DOCTYPE html>\n<ht...") at getAppChangeSet.pl line 185
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2619:2618 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+134296		打开		王海燕(应用二组)		便签--新建便签，按APP键，清除便签，再次进入便签，便签中生成一个空的便签
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.bn
+Previous tag: Amigo_Note_overseaN_V2.0.6.bm
+Code difference: svn diff -r 2619:2618 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2624:2621 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+malformed JSON string, neither array, object, number, string or atom, at character offset 0 (before "<!DOCTYPE html>\n<ht...") aCR01780046      Opened     zengfanjie N平台Rom模块印度十种语言上传svn
+t getAppChangeSet.pl line 185
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2627:2626 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+135396		打开		付佳兵		【客户需求】便签--新建时--插入闹钟--观察弹出显示的时间格式显示与客户需求不同，要求显示为HH-mm dd-MM-yyyy
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.bq
+Previous tag: Amigo_Note_overseaN_V2.0.6.bp
+Code difference: svn diff -r 2627:2626 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2630:2629 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+123857		重打开		王海燕(应用二组)		【monkey】monkey单模块测试12H，com.android.note出现一次CRASH（java.lang.OutOfMemoryError）
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.br
+Previous tag: Amigo_Note_overseaN_V2.0.6.bq
+Code difference: svn diff -r 2630:2629 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2635:2632 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+75213		打开		管小文		N平台翻译修改
+141466		打开		王海燕(应用二组)		便签--首页--上方天气信息未去掉，点击无作用
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.bs
+Previous tag: Amigo_Note_overseaN_V2.0.6.br
+Code difference: svn diff -r 2635:2632 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2640:2637 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+142327		打开		王海燕(应用二组)		便签-输入内容到极限后，删除20个字符，添加多张图片后-确认，添加图片过程中，提示便签报错
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.bt
+Previous tag: Amigo_Note_overseaN_V2.0.6.bs
+Code difference: svn diff -r 2640:2637 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2641:2642 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.bu
+Previous tag: Amigo_Note_overseaN_V2.0.6.bt
+Code difference: svn diff -r 2641:2642 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2645:2644 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+CR01780046      Opened     zengfanjie N平台Rom模块印度十种语言上传svn
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.bv
+Previous tag: Amigo_Note_overseaN_V2.0.6.bu
+Code difference: svn diff -r 2645:2644 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2648:2647 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+144172		打开		李玉崇		【AC语言专项】阿语未翻译，便签中删除任意便签后，进入设置回收站中，有部分内容未翻译，选择一便签进行删除，弹出提示内容也未翻译
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.bw
+Previous tag: Amigo_Note_overseaN_V2.0.6.bv
+Code difference: svn diff -r 2648:2647 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2651:2650 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+123857		重打开		王海燕(应用二组)		【monkey】monkey单模块测试12H，com.android.note出现一次CRASH（java.lang.OutOfMemoryError）
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.bx
+Previous tag: Amigo_Note_overseaN_V2.0.6.bw
+Code difference: svn diff -r 2651:2650 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2663:2653 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+CR01780046      Opened     zengfanjie N平台Rom模块印度十种语言上传svn
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.by
+Previous tag: Amigo_Note_overseaN_V2.0.6.bx
+Code difference: svn diff -r 2663:2653 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2666:2665 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+malformed JSON string, neither array, object, number, string or atom, at character offset 0 (before "<!DOCTYPE html>\n<ht...") at getAppChangeSet.pl line 185
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2667:2668 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.ca
+Previous tag: Amigo_Note_overseaN_V2.0.6.bz
+Code difference: svn diff -r 2667:2668 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2671:2670 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+malformed JSON string, neither array, object, number, string or atom, at character offset 0 (before "<!DOCTYPE html>\n<ht...") at getAppChangeSet.pl line 185
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2676:2673 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+malformed JSON string, neither array, object, number, string or atom, at character offset 0 (before "<!DOCTYPE html>\n<ht...") at getAppChangeSet.pl line 185
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2679:2678 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+147800		打开		王海燕(应用二组)		进入便签，长按任意便签进行选择，含有标题的便签选择框与文字间距太少，不美观
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.cd
+Previous tag: Amigo_Note_overseaN_V2.0.6.cc
+Code difference: svn diff -r 2679:2678 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2680:2352 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+CR01758068      Closed     wanghaiyan 【验收测试_随机1/20】进入相机--开启扫描成文拍摄一张照片--辨识--点击右上方的预览分享图标--弹出“Notes”报错。
+CR01778136      Opened     guanxw     N平台翻译修改
+CR01778321      Opened     liwenbin   [客户需求]印度尼西亚语翻译
+CR01778460      Opened     zhanglz    【客户需求】M平台翻译导入N平台
+CR01778603      Opened     chenyu     N平台翻译导入
+CR01778829      Opened     chenyu     N平台印度英语翻译修改导入
+CR01780046      Opened     zengfanjie N平台Rom模块印度十种语言上传svn
+CR01780050      Opened     lijf       N平台rom模块编译mk增加印度10种语言
+39883		关闭		王海燕(应用二组)		便签--新建转发--保存--保存后“保存”按钮还高亮，点击可继续保存同样的文件
+40315		关闭		王海燕(应用二组)		开启日常省电模式，首次进入便签，弹出框，勾选框的字体与底色相近，且又一个中文逗号
+40514		关闭		王海燕(应用二组)		新建便签，一直输入内容至提示‘字数超限’，然后删除全部内容，再添加图片或录音，提示字符超限
+42352		关闭		王海燕(应用二组)		记事本长按一条便签加密-在弹出设置暗码界面后按home键返回到待机桌面，再次进入记事本回到记事本首页
+43513		关闭		王海燕(应用二组)		日常省电模式下，便签，删除便签，弹出框，字体颜色与底色相似，看不清
+43516		关闭		王海燕(应用二组)		便签，已有删除文件，弹出框，Ok的k未大写
+45281		已修复		王海燕(应用二组)		记事本-去掉加密功能
+45337		关闭		王海燕(应用二组)		便签--新建便签--菜单键显示有加密项，点击提示双指下滑，请屏蔽
+45793		已修复		王海燕(应用二组)		记事本-编辑-预览-分享到Save to Amigo Note，会生成一个空记事本
+46059		关闭		王海燕(应用二组)		记事本--设置--有加密提醒，请去掉此功能
+47255		关闭		王海燕(应用二组)		记事本-新建记事本-分享-保存，弹出的提示语首字母未大写
+47298		关闭		王海燕(应用二组)		便签--编辑界面，点击右上方按钮，Others应改为Other
+47860		关闭		王海燕(应用二组)		新建便签，点击添加图片，提示‘存储中无图片’，实际是有图片的
+48095		关闭		王海燕(应用二组)		记事本-新建便签-添加提醒闹钟，桌面，来便签闹钟提醒时，通知栏的便签图标显示错误
+48534		关闭		王海燕(应用二组)		便签->无任何便签时点击右上角切换类型显示图标时->便签界面提示信息"No content"会闪过另一个提示语 
+48774		关闭		王海燕(应用二组)		便签->新建便签->点击右下角倒数第二个相机按钮拍照后进入图库->生成的"photo"文件夹名称首字母未大写;附截图
+48977		关闭		王海燕(应用二组)		在锁屏界面点击分享，分享框中记事本显示错误，显示的是“保存至Ami...”
+49673		关闭		王海燕(应用二组)		系统语言为中文，便签-新建，光标在正文区域和标题栏区域时，标题栏提示语不一致
+49943		关闭		王海燕(应用二组)		点击Notes中的一封旧便签查看（未编辑）后返回，便签的编辑时间以及排序都改变了
+50571		关闭		王海燕(应用二组)		日常省电下，便签--批量操作便签，没有被选中的便签看不到小方框
+51694		已修复		王海燕(应用二组)		记事本-搜索栏区分了大小写，
+51697		关闭		王海燕(应用二组)		新建便签--不输入任何内容，按键盘上的回车键后，点击右上角的菜单键里面的删除选项，点击无法删除。
+51857		已修复		王海燕(应用二组)		记事本-编辑界面记事本点列表菜单记事本报错
+52253		关闭		王海燕(应用二组)		便签--长按一条便签，没有出现加密选项（双指下滑是有密室这个功能的），不能加密便签到密室。
+53637		已修复		王海燕(应用二组)		记事本-便签编辑界面的时间格式与保存后的时间显示不一致
+55368		已修复		王海燕(应用二组)		记事本-任意输入一个记事本点击第一个图标弹出框，右边的四个勾选框为灰色-建议对勾选框颜色加深
+56099		已修复		王海燕(应用二组)		记事本-阿拉伯语言下-调整布局显示为从右向左
+57164		关闭		王海燕(应用二组)		便签-搜索，输入字母字体颜色显示白色不显眼，且有下划线
+57307		关闭		王海燕(应用二组)		照相机冻结后进入便签-编辑便签-点击照相机，会留下一张照片在图库中，无法删除
+57505		已修复		王海燕(应用二组)		记事本-settings-落款签名-，输入字符-可以联想单词用来替换错误的单词，替换的单词太长，会引起角标越界导致记事本停止运行
+57545		关闭		王海燕(应用二组)		首次进入便签弹出的提示框中的内容缺少句号
+58898		已修复		王海燕(应用二组)		阿拉伯语或者希伯来语下，输入字符-添加清单后-清单无法勾选
+64127		关闭		王海燕(应用二组)		【自动化_monkey72h】【随机】com.android.note（java.lang.IndexOutOfBoundsException 数组索引越界异常）报错
+65800		已修复		王海燕(应用二组)		N平台合英文翻译
+66156		已修复		王海燕(应用二组)		【客户需求】便签-录音时间限制5分钟
+66212		打开		张胜		M到N Android部分翻译和入
+67550		关闭		王海燕(应用二组)		便签--长按任意便签--删除，弹出提示语有误
+67596		关闭		王海燕(应用二组)		添加（2*2）Note小部件，编辑便签，添加图标，小部件显示不了图片
+68369		关闭		王海燕(应用二组)		【OTA】6148->8037，打开便签，提示停止运行
+75213		打开		管小文		N平台翻译修改
+75442		打开		秦凯		[客户需求]工程导入客户反馈的罗马尼亚语（RO）和波兰语（PL）
+76880		打开		庞振		[1609GD]印尼语翻译修改
+77568		已修复		王海燕(应用二组)		【客户需求】便签加密解密
+77724		已修复		王海燕(应用二组)		【客户需求】编辑便签时，插入闹钟的时间格式为dd-MM-yyyy,便签列表显示的时间格式应该为HH-mm dd-MM-yyyy
+79957		打开		王海燕(应用二组)		更新英文字串-上传本地apk到SWW1609GI_TEST2
+89795		关闭		王海燕(应用二组)		【内存泄露】便签模块存在内存泄露
+90654		关闭		王海燕(应用二组)		便签-新建便签-长按便签点击删除-按HOME键退出，切换字体，再次进便签-点击对话框的继续按钮，便签被删除后，删除进度条不会消失
+90801		关闭		王海燕(应用二组)		便签-长按任意便签点击删除-弹出对话框后按返回键没反应，对话框不会消失。对比在图库里删除某图片弹出对话框后按返回键，对话框会消失
+90809		打开		赵朋		W1609GT【客户反馈】 修改繁体中文翻译
+90829		关闭		王海燕(应用二组)		进设置将字体设为最大后，进便签-删除便签，弹出的对话框右边有显示上下拉动条，但上下滑动没有反应
+96692		已修复		王海燕(应用二组)		记事本-回收站删除记事本-弹出对话框-home键回到主菜单，进这是菜单字体或改变字体大小-再回到记事本本回收站界面-点删除，进度条不消失
+96813		已修复		王海燕(应用二组)		同步国内bug-66374-bug-详情界面加密正则表达式的完善
+96826		已修复		王海燕(应用二组)		同步国内bug 66489-安全OS-私密空间》私密记事本》屏幕底部私密空间，搜索，添加》字体变小（其它私密联系人，信息，文件等应用显示正常，无法恢复，对比S9不存在）概率：100%
+96878		已修复		王海燕(应用二组)		长截屏两张超过十页图片 记事本-添加这两张图片-记事本停止运行
+96979		关闭		王海燕(应用二组)		【走查】记事本--分享--通过邮件、信息等应用分享--分享后无来自“Ami记事本”后缀名
+97043		已修复		王海燕(应用二组)		同步国内bug-记事本，新建10个记事本，全部删除再恢复，再全选所有记事本点加密，弹出的pop框显示正在删除    
+97370		已修复		王海燕(应用二组)		更换androidN控件的JAR包
+102587		打开		付佳兵		【客户需求】 修改希伯来语翻译
+106319		打开		张胜		[客户需求]合入西班牙语和匈牙利语翻译
+106963		打开		李姝锦		【W1609GH】apk导入俄语哈萨克语翻译。
+107499		关闭		王海燕(应用二组)		【希伯来语未靠右显示】便签--新建便签--输入字符与显示字符未靠右显示，附图
+116621		打开		卞荣		更新apk翻译
+117020		已修复		王海燕(应用二组)		【客户需求】新建便签-移除上方显示的城市、天气选项
+119239		关闭		王海燕(应用二组)		【随机一次】便签进行12小时内存泄漏 测试出现2个com.android.note报错
+119809		已修复		王海燕(应用二组)		记事本-编辑状态-没有输入任何内容-按概览键进最近任务-清除当前记事本-会保存一个空的记事本
+122967		关闭		王海燕(应用二组)		连上WiFi，时间默认为客户时间，进入设置更改为北京时间，再进入便签，点击新建，右下方时间与状态栏时间不一致。添加定时闹钟，点击OK发现左下角闹钟时间不是设置的时间。
+123076		关闭		王海燕(应用二组)		编辑便签后-分享-选择分享至便签，弹出提示语逗号后首字母没小写
+123857		已修复		王海燕(应用二组)		【monkey】monkey单模块测试12H，com.android.note出现一次CRASH（java.lang.OutOfMemoryError）
+123860		已修复		王海燕(应用二组)		【内存泄漏】com.android.note模块疑似存在内存泄漏
+133029		打开		李姝锦		【W1609GH】【客户需求】新增翻译问题
+134296		关闭		王海燕(应用二组)		便签--新建便签，按APP键，清除便签，再次进入便签，便签中生成一个空的便签
+135396		关闭		付佳兵		【客户需求】便签--新建时--插入闹钟--观察弹出显示的时间格式显示与客户需求不同，要求显示为HH-mm dd-MM-yyyy
+141466		关闭		王海燕(应用二组)		便签--首页--上方天气信息未去掉，点击无作用
+142327		关闭		王海燕(应用二组)		便签-输入内容到极限后，删除20个字符，添加多张图片后-确认，添加图片过程中，提示便签报错
+144172		关闭		李玉崇		【AC语言专项】阿语未翻译，便签中删除任意便签后，进入设置回收站中，有部分内容未翻译，选择一便签进行删除，弹出提示内容也未翻译
+147201		已修复		王海燕(应用二组)		便签--新建便签--添加提醒--时间设置为12:00AM或12:00PM--提醒时间与系统时间不一致，AM与PM相反
+147768		打开		李玉崇		Note——新建的法语和阿拉伯语翻译错误
+147800		打开		王海燕(应用二组)		进入便签，长按任意便签进行选择，含有标题的便签选择框与文字间距太少，不美观
+147951		打开		李文彬		[客户需求]民间缅甸语翻译
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_oversea_V2.0.6.ce
+Previous tag: Amigo_Note_overseanight_V2.0.6.m
+Code difference: svn diff -r 2680:2352 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2682:2681 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.cf
+Previous tag: Amigo_Note_overseaN_V2.0.6.cd
+Code difference: svn diff -r 2682:2681 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2687:2685 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+malformed JSON string, neither array, object, number, string or atom, at character offset 0 (before "<!DOCTYPE html>\n<ht...") aCR01780046      Opened     zengfanjie N平台Rom模块印度十种语言上传svn
+t getAppChangeSet.pl line 185
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2690:2689 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+malformed JSON string, neither array, object, number, string or atom, at character offset 0 (before "<!DOCTYPE html>\n<ht...") at getAppChangeSet.pl line 185
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2694:2692 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+CR01780475      Opened     pangzhen   [Android N]泰语翻译修改
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.ci
+Previous tag: Amigo_Note_overseaN_V2.0.6.ch
+Code difference: svn diff -r 2694:2692 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2698:2696 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+149648		打开		李文彬		[客户需求]泰语翻译
+157611		打开		庞振		[Android N]泰语翻译
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.cj
+Previous tag: Amigo_Note_overseaN_V2.0.6.ci
+Code difference: svn diff -r 2698:2696 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2703:2700 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+157925		打开		王海燕(应用二组)		清除便签数据后，首次进入便签新建保存后，界面右上方的切换列表显示按钮错误。
+157970		打开		王海燕(应用二组)		【语言专项】阿拉伯语下，编辑便签-添加录音，录音过程中秒和时的位置颠倒了
+157976		打开		王海燕(应用二组)		【语言专项】阿拉伯语下，编辑便签-添加闹钟界面时和分位置颠倒了
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.ck
+Previous tag: Amigo_Note_overseaN_V2.0.6.cj
+Code difference: svn diff -r 2703:2700 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2707:2705 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+75213		打开		管小文		N平台翻译修改
+158600		打开		王海燕(应用二组)		【语言专项】阿拉伯语下，编辑便签添加录音后，点击录音开始播放，时和秒的位置颠倒了
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.cl
+Previous tag: Amigo_Note_overseaN_V2.0.6.ck
+Code difference: svn diff -r 2707:2705 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2710:2709 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+malformed JSON string, neither array, object, number, string or atom, at character offset 0 (before "<!DOCTYPE html>\n<ht...") at getAppChangeSet.pl line 185
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2714:2712 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+149648		打开		李文彬		[客户需求]泰语翻译
+161345		打开		张晗		[1618TC]Amigo_Note模块 翻译
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.cn
+Previous tag: Amigo_Note_overseaN_V2.0.6.cm
+Code difference: svn diff -r 2714:2712 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2715:2716 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.co
+Previous tag: Amigo_Note_overseaN_V2.0.6.cn
+Code difference: svn diff -r 2715:2716 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2722:2718 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+malformed JSON string, neither array, object, number, string or atom, at character offset 0 (before "<!DOCTYPE html>\n<ht...") at getAppChangeSet.pl line 185
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2725:2718 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+163868		打开		王海燕(应用二组)		记事本-相机被冻结或者无法使用时，调用相机提示语有误
+167295		打开		付佳兵		【客户反馈】 土耳其语翻译修改
+167514		打开		贺前进		[1618TC]土耳其语翻译
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.cq
+Previous tag: Amigo_Note_overseaN_V2.0.6.co
+Code difference: svn diff -r 2725:2718 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2726:2718 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+163868		打开		王海燕(应用二组)		记事本-相机被冻结或者无法使用时，调用相机提示语有误
+167295		打开		李锦防		【客户反馈】 土耳其语翻译修改
+167514		打开		贺前进		[1618TC]土耳其语翻译
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.cr
+Previous tag: Amigo_Note_overseaN_V2.0.6.co
+Code difference: svn diff -r 2726:2718 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2730:2729 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+malformed JSON string, neither array, object, number, string or atom, at character offset 0 (before "<!DOCTYPE html>\n<ht...") at getAppChangeSet.pl line 185
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2733:2732 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+161688		打开		王海燕(应用二组)		内存泄漏测试：便签疑似出现内存泄漏，请研发继续确认
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.ct
+Previous tag: Amigo_Note_overseaN_V2.0.6.cs
+Code difference: svn diff -r 2733:2732 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2738:2735 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+malformed JSON string, neither array, object, number, string or atom, at character offset 0 (before "<!DOCTYPE html>\n<ht...") at getAppChangeSet.pl line 185
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2741:2740 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+181997		打开		王海燕(应用二组)		便签内容有图片，全选内容-选择分享-便签，新的便签内容显示有gionee字眼
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.cv
+Previous tag: Amigo_Note_overseaN_V2.0.6.cu
+Code difference: svn diff -r 2741:2740 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+svn log -v --xml -r 2744:2743 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel|grep <msg>
+182045		打开		王海燕(应用二组)		默认语言下，便签--便器界面显示温度有异常
+Tag url: http://192.168.110.97/svn/Amigo_Note/tags/Amigo_Note_overseaN_V2.0.6.cw
+Previous tag: Amigo_Note_overseaN_V2.0.6.cv
+Code difference: svn diff -r 2744:2743 http://192.168.110.97/svn/Amigo_Note/branches/branch_oversea_Amigo_Note_2.0.6_rel
+
+==================
+==================
+
+
+==================
+==================
+
+
+==================
+==================
+[Repository Url]: http://192.168.110.97/svn/Cyee_Note/branches/branch_oversea_Cyee_Note_AndroidO_1.0.0_rel
+svn log -v --xml -r 16:15 http://192.168.110.97/svn/Cyee_Note/branches/branch_oversea_Cyee_Note_AndroidO_1.0.0_rel|grep <msg>
+189723		打开		王海燕(应用二组)		O平台apk适配工作
+Tag url: http://192.168.110.97/svn/Cyee_Note/tags/Cyee_Note_overseaO_V8.0.0.ab
+Previous tag: Cyee_Note_overseaO_V8.0.0.aa
+Code difference: svn diff -r 16:15 http://192.168.110.97/svn/Cyee_Note/branches/branch_oversea_Cyee_Note_AndroidO_1.0.0_rel
+
+==================

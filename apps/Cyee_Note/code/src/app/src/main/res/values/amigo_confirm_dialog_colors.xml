@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cyee_confirm_dialog_message_text_color">#6b5b4e</color>
+    <color name="cyee_confirm_dialog_cancel_text_color">#6b5b4e</color>
+</resources>

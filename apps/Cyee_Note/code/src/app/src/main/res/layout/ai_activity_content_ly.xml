@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.cydroid.note.ai.AISearchView
+        android:id="@+id/recommend_search_panel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="9dp"
+        android:background="@color/recommend_search_panel_bg_color">
+
+
+        <ImageView
+            android:id="@+id/recommend_search_btn"
+            style="@style/RippleEffect"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp" />
+
+        <cyee.widget.CyeeEditText
+            android:id="@+id/recommend_search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@id/recommend_search_btn"
+            android:background="@null"
+            android:hint="@string/recommend_search_hint_text"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            android:textCursorDrawable="@drawable/edit_cursor_dw"
+            android:textColor="#80000000"
+            android:textColorHint="#50000000"
+            android:textSize="16sp" />
+
+    </com.cydroid.note.ai.AISearchView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/recommend_search_panel"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/recommend_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/ami_recommend_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/recommend_panel_bg_color"
+                android:layout_marginTop="9dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/ami_recommend_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="13dp"
+                    android:text="@string/ami_recommend_panel_title"
+                    android:textColor="#00a6ce"
+                    android:textSize="12sp" />
+
+                <View
+                    android:id="@+id/ami_recommend_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/ami_recommend_title"
+                    android:background="@color/recommend_panel_line_color" />
+
+                <com.cydroid.note.app.view.NoteGrideView
+                    android:id="@+id/ami_recommend_grid_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ami_recommend_line"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginEnd="9dp"
+                    android:numColumns="2" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/favor_recommend_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:background="@color/recommend_panel_bg_color"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/favor_recommend_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="13dp"
+                    android:text="@string/favor_recommend_panel_title"
+                    android:textColor="#00a6ce"
+                    android:textSize="12sp" />
+
+                <View
+                    android:id="@+id/favor_recommend_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/favor_recommend_title"
+                    android:background="@color/recommend_panel_line_color" />
+
+                <com.cydroid.note.app.view.NoteGrideView
+                    android:id="@+id/favor_recommend_grid_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/favor_recommend_line"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginEnd="9dp"
+                    android:numColumns="2" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

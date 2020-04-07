@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Ескертпелер</string>
+    <string name="app_name_outside">Ескертпелер</string>
+    <string name="button_sure">ОК</string>
+    <string name="button_cancel">Бас тарту</string>
+    <string name="button_delete">Жою</string>
+    <string name="note_main_activity_title_layout_title_text">Назар аударыңыз</string>
+    <string name="note_action_del_string">Жою</string>
+    <string name="note_action_edit_string">Өзгерту</string>
+    <string name="note_action_share_string">Жалпыға қол жетімдік беру</string>
+    <string name="dialog_negative_text">Жабу</string>
+    <string name="alert_time_early">Уақыт бітті,қайтадан орнатыныз</string>
+    <string name="default_label_meeting">Жиналыс</string>
+    <string name="label_selector_dialog_custom_label_text">Аты</string>
+    <plurals name="number_of_items_selected">
+        <item quantity="zero">Таңдалды:%1$d</item>
+        <item quantity="one">Таңдалды:%1$d</item>
+        <item quantity="other">Таңдалды:%1$d</item>
+    </plurals>
+    <string name="select_all">Барлығын таңдау</string>
+    <string name="unselect_all">Барлығыннан бас тарту</string>
+    <string name="note_tip_loading">Жүктеу</string>
+    <string name="note_tip_loadFinish">Музыка жоқ</string>
+    <string name="import_backup_config_dialog_btn_cancel">Бас тарту</string>
+    <string name="import_backup_config_dialog_btn_import">Импорт</string>
+    <string name="import_backup_progress_dialog_title">Импорт</string>
+    <string name="setting_title">Икемдеулер</string>
+    <string name="version_update">Нұсқаны жаңарту</string>
+    <string name="network_error">Желі қателігі</string>
+    <string name="dialog_update">Жаңарту</string>
+    <string name="dialog_install">Орнату</string>
+    <string name="down_load_dialog_msg">Жүктелуде</string>
+    <string name="alert_user_cancle">Шығу</string>
+    <string name="password_set_successed_sure">ОК</string>
+    <string name="encrypt_switch_close">Жабу</string>
+    <string name="encrypt_select_cancel">Бас тарту</string>
+</resources>

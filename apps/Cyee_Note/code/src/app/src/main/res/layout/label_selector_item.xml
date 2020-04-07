@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ChickBgEffect"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/label_selector_dialog_list_item_height"
+    android:minHeight="@dimen/label_selector_dialog_list_item_height">
+
+    <!-- Gionee wanghaiyan modified on 2016-12-27 for 55368 -->
+    <!-- android:buttonTint="@color/check_box_state_color" -->
+    <cyee.widget.CyeeCheckBox
+        android:id="@+id/label_select_list_item_checkbox"
+        android:layout_width="@dimen/label_selector_dialog_checkbox_width"
+        android:layout_height="@dimen/label_selector_dialog_list_item_height"
+        android:layout_alignParentEnd="true"
+        android:background="@null"
+        android:clickable="false" />
+
+    <TextView
+        android:id="@+id/label_select_list_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_selector_dialog_list_item_height"
+        android:layout_toStartOf="@id/label_select_list_item_checkbox"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/label_selector_dialog_padding_left"
+        android:textColor="@color/label_selector_dialog_list_item_text_color"
+        android:textSize="@dimen/label_selector_dialog_list_item_text_size" />
+
+</RelativeLayout>

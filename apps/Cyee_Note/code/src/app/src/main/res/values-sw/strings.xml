@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="button_cancel">Ghairi</string>
+    <string name="button_delete">Futa</string>
+    <string name="note_action_del_string">Futa</string>
+    <string name="select_all">Chagua zote</string>
+    <string name="import_backup_config_dialog_btn_cancel">Ghairi</string>
+    <string name="encrypt_select_cancel">Ghairi</string>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cyee.widget.CyeeTextView
+        android:id="@+id/authority_alert_user_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cyee_confirm_dialog_title_height"
+        android:gravity="start|bottom"
+        android:paddingBottom="@dimen/authority_alert_user_title_bottom"
+        android:paddingStart="@dimen/cyee_confirm_dialog_title_left_padding"
+        android:textColor="@color/system_stress_color"
+        android:textSize="@dimen/cyee_confirm_dialog_title_text_size"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cyee_confirm_dialog_tips_container_height">
+
+        <cyee.widget.CyeeTextView
+            android:id="@+id/authority_alert_user_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/data_flow_dialog_content_margin"
+            android:layout_marginEnd="@dimen/data_flow_dialog_content_margin"
+            android:layout_marginTop="@dimen/data_flow_dialog_content_margin"
+            android:maxLines="5"
+            android:scrollbars="vertical"
+            android:text="@string/data_flow_alert_user_content"
+            android:textColor="@color/dialog_text_color"
+            android:textSize="@dimen/data_flow_dialog_content_textsize" />
+
+        <cyee.widget.CyeeCheckBox
+            android:id="@+id/authority_alert_user_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/home_note_item_content_margin_bottom"
+            android:layout_marginStart="@dimen/data_flow_dialog_checkbox_margin"
+            android:layout_marginTop="@dimen/home_note_item_content_margin_bottom"
+            android:checked="true"
+            android:text="@string/data_flow_alert_user_checkbox"
+            android:textColor="@color/dialog_hint_text_color"
+            android:textSize="@dimen/data_flow_dialog_checkbox_textsize" />
+    </RelativeLayout>
+
+</LinearLayout>

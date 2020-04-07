@@ -1,0 +1,312 @@
+<resources>
+
+    <!--AbstractNoteActivity-->
+    <dimen name="abstract_note_activity_title_height">50dp</dimen>
+    <dimen name="abstract_note_activity_footer_height">54dp</dimen>
+
+    <!-- home activity, note, note item -->
+    <dimen name="home_activity_horizontal_margin">8dp</dimen>
+    <dimen name="home_activity_vertical_margin">8dp</dimen>
+
+    <!--note_main_activity_title_layout-->
+    <dimen name="note_main_activity_title_layout_title_text_size">18sp</dimen>
+    <dimen name="note_main_activity_title_layout_title_left_margin">20dp</dimen>
+    <dimen name="note_main_activity_title_icon_width">50dp</dimen>
+
+    <!--note_main_activity_action_mode_title_layout-->
+    <dimen name="note_main_activity_action_mode_title_layout_back_icon_width">50dp</dimen>
+    <dimen name="note_main_activity_action_mode_title_layout_text_left_margin">20dp</dimen>
+    <dimen name="note_main_activity_action_mode_title_layout_text_size">18sp</dimen>
+    <dimen name="note_main_activity_action_mode_title_layout_select_button_text_size">16sp</dimen>
+    <dimen name="note_main_activity_action_mode_title_layout_select_btn_left_padding">20dp</dimen>
+    <dimen name="note_main_activity_action_mode_title_layout_select_btn_right_padding">20dp</dimen>
+
+    <!--note_main_activity_action_mode_footer_layout-->
+    <dimen name="note_main_activity_action_mode_footer_layout_divide_height">1dp</dimen>
+    <dimen name="note_main_activity_action_mode_footer_layout_item_width">84dp</dimen>
+    <dimen name="note_main_activity_action_mode_footer_layout_item_drawable_padding">2dp</dimen>
+    <dimen name="note_main_activity_action_mode_footer_layout_item_top_padding">4dp</dimen>
+    <dimen name="note_main_activity_action_mode_footer_layout_item_text_size">10sp</dimen>
+
+
+    <integer name="home_note_item_column">2</integer>
+    <integer name="home_note_list_item_column">1</integer>
+    <dimen name="home_note_item_gap">8dp</dimen>
+    <dimen name="home_note_item_height">210dp</dimen>
+    <dimen name="home_note_item_image_height">113dp</dimen>
+    <dimen name="home_note_item_text_height">105dp</dimen>
+    <dimen name="home_note_item_text_padding_left">9dp</dimen>
+    <dimen name="home_note_item_text_padding_right">9dp</dimen>
+    <dimen name="home_note_item_text_padding_top">15dp</dimen>
+    <dimen name="home_note_item_text_padding_bottom">13dp</dimen>
+    <dimen name="home_note_item_reminder_width">21dp</dimen>
+    <dimen name="home_note_item_reminder_margin_left">5dp</dimen>
+    <dimen name="home_note_item_content_margin_top">2dp</dimen>
+    <dimen name="home_note_item_content_margin_bottom">3dp</dimen>
+    <!--Chenyee wanghaiyan 2018-9-13 modify for CSW1707BN-343 begin-->
+    <dimen name="home_note_item_title_size">16dp</dimen>
+    <dimen name="home_note_item_time_size">8dp</dimen>
+    <dimen name="home_note_item_content_size">12dp</dimen>
+    <!--Chenyee wanghaiyan 2018-9-13 modify for CSW1707BN-343 end-->
+
+    <dimen name="home_note_list_item_padding_top">14dp</dimen>
+    <dimen name="home_note_list_item_padding_left">16dp</dimen>
+
+    <!-- home activity, search-->
+    <dimen name="search_view_left_margin">2dp</dimen>
+    <dimen name="search_view_right_margin">20dp</dimen>
+    <dimen name="search_view_height">32dp</dimen>
+    <dimen name="search_view_text_view_left_margin">8dp</dimen>
+    <dimen name="search_view_text_size">14sp</dimen>
+    <dimen name="search_page_horizon_padding">20dp</dimen>
+    <dimen name="search_page_label_title_height">40dp</dimen>
+    <dimen name="search_page_label_title_padding_bottom">7dp</dimen>
+    <dimen name="search_page_label_item_height">56dp</dimen>
+    <dimen name="search_page_label_title_size">14sp</dimen>
+    <dimen name="search_page_label_item_size">18sp</dimen>
+
+    <!--note_main_activity_search_title_layout-->
+    <dimen name="note_main_activity_search_title_layout_back_icon_width">50dp</dimen>
+
+    <!-- Edit page -->
+    <dimen name="edit_note_item_margin">20dp</dimen>
+    <dimen name="edit_note_item_cursor_width">2dp</dimen>
+
+    <dimen name="edit_note_label_item_height">19dp</dimen>
+    <dimen name="edit_note_label_item_text_horizon_padding">10dp</dimen>
+    <dimen name="edit_note_label_item_horizon_margin">11dp</dimen>
+    <dimen name="edit_note_label_item_vertical_margin">9dp</dimen>
+    <dimen name="edit_note_label_item_text_size">12sp</dimen>
+
+    <dimen name="list_note_item_iamge_width">91dp</dimen>
+    <dimen name="list_note_item_iamge_height">64dp</dimen>
+
+    <dimen name="edit_note_item_image_height">194dp</dimen>
+    <dimen name="edit_note_item_sound_width">120dp</dimen>
+    <dimen name="edit_note_item_sound_height">35dp</dimen>
+    <dimen name="edit_note_item_sound_point_radius">3dp</dimen>
+    <dimen name="edit_note_item_sound_point_offset_left">8dp</dimen>
+    <dimen name="edit_note_item_sound_point_offset_right">6dp</dimen>
+    <dimen name="edit_note_item_sound_duration_offset_left">34dp</dimen>
+    <dimen name="edit_note_item_sound_duration_size">16sp</dimen>
+    <dimen name="edit_note_item_bill_width">31dp</dimen>
+    <dimen name="edit_note_item_time_size">12sp</dimen>
+    <dimen name="edit_note_item_reminder_size">10sp</dimen>
+    <dimen name="edit_note_item_reminder_gap">12dp</dimen>
+    <dimen name="edit_note_item_signature_size">12sp</dimen>
+
+    <dimen name="edit_note_content_padding_left">20dp</dimen>
+    <dimen name="edit_note_content_padding_right">20dp</dimen>
+    <dimen name="edit_note_content_padding_bottom">80dp</dimen>
+    <dimen name="edit_note_content_padding_bottom_signal">120dp</dimen>
+    <dimen name="edit_note_content_line_padding_top">9dp</dimen>
+    <dimen name="edit_note_content_line_padding_bottom">14dp</dimen>
+    <dimen name="edit_note_content_margin_top">-12dp</dimen>
+    <dimen name="edit_note_title_text_size">18sp</dimen>
+    <dimen name="edit_note_content_text_size">14sp</dimen>
+    <dimen name="edit_note_title_height">38dp</dimen>
+
+    <dimen name="new_note_menu_bar_height">40dp</dimen>
+    <dimen name="new_note_content_cursor_padding_bottom">-22dp</dimen>
+    <dimen name="new_note_title_cursor_padding_bottom">-22dp</dimen>
+    <dimen name="new_note_menu_ver_line_height">14.299988dp</dimen>
+
+
+    <!--reminder selector dialog  -->
+    <dimen name="datetime_title_height">40dp</dimen>
+    <dimen name="datetime_title_padding_left">30dp</dimen>
+    <dimen name="datetime_title_padding_right">30dp</dimen>
+    <dimen name="datetime_button_height">52dp</dimen>
+
+
+    <!--attachment selector dialog  -->
+    <dimen name="attachmeng_selector_dialog_height">237dp</dimen>
+    <integer name="attachment_selector_dialog_grid_column">3</integer>
+    <dimen name="attachment_selector_dialog_grid_padding_left">34dp</dimen>
+    <dimen name="attachment_selector_dialog_grid_padding_right">34dp</dimen>
+    <dimen name="attachment_selector_dialog_grid_item_image_size">60dp</dimen>
+    <dimen name="attachment_selector_dialog_grid_item_text_margin_top">4dp</dimen>
+    <dimen name="attachment_selector_dialog_grid_item_text_size">10sp</dimen>
+
+    <!--sound recorder/play dialog  -->
+    <dimen name="sound_recorder_dialog_height">100dp</dimen>
+    <dimen name="sound_recorder_dialog_point_margin_left">28dp</dimen>
+    <dimen name="sound_recorder_dialog_point_radius">11dp</dimen>
+    <dimen name="sound_recorder_dialog_time_margin_left">18dp</dimen>
+    <dimen name="sound_recorder_dialog_time_size">27sp</dimen>
+    <dimen name="sound_recorder_dialog_button_margin_right">25dp</dimen>
+    <dimen name="sound_recorder_dialog_button_bg_inner_radius">51dp</dimen>
+    <dimen name="sound_recorder_dialog_button_bg_size">56dp</dimen>
+    <dimen name="sound_recorder_dialog_button_bg_ring_thickness">5dp</dimen>
+
+    <!--label select dialog  -->
+    <dimen name="label_selector_dialog_padding_left">20dp</dimen>
+    <dimen name="label_selector_dialog_custom_label_height">40dp</dimen>
+    <dimen name="label_selector_dialog_custom_label_text_size">18sp</dimen>
+    <dimen name="label_selector_dialog_checkbox_width">56dp</dimen>
+    <dimen name="label_selector_dialog_list_item_height">56dp</dimen>
+    <dimen name="label_selector_dialog_list_item_text_size">16sp</dimen>
+    <dimen name="label_selector_dialog_list_max_height">280dp</dimen>
+    <dimen name="label_selector_dialog_button_height">52dp</dimen>
+    <dimen name="label_selector_dialog_button_text_size">18sp</dimen>
+    <dimen name="label_selector_dialog_checkbox_margin_right">4dip</dimen>
+
+    <!--label custom activity  -->
+    <dimen name="label_custom_title_layout_back_icon_width">50dp</dimen>
+    <dimen name="label_custom_title_layout_text_left_margin">20dp</dimen>
+    <dimen name="label_custom_title_layout_text_size">18sp</dimen>
+    <dimen name="label_custom_edit_height">32dp</dimen>
+    <dimen name="label_custom_edit_margin_left">16dp</dimen>
+    <dimen name="label_custom_edit_margin_right">16dp</dimen>
+    <dimen name="label_custom_edit_margin_top">9dp</dimen>
+    <dimen name="label_custom_edit_margin_bottom">9dp</dimen>
+    <dimen name="label_custom_edit_text_size">14sp</dimen>
+    <dimen name="label_custom_edit_text_padding_left">8dp</dimen>
+    <integer name="label_custom_edit_text_max_length">12</integer>
+    <dimen name="label_custom_list_item_height">56dp</dimen>
+    <dimen name="label_custom_list_item_padding_left">20dp</dimen>
+    <dimen name="label_custom_list_item_padding_right">4dp</dimen>
+    <dimen name="label_custom_list_item_text_size">18sp</dimen>
+
+    <dimen name="signature_text_size">14sp</dimen>
+
+    <!-- sound image span -->
+    <dimen name="red_dot_circle_x">6dp</dimen>
+    <dimen name="red_dot_circle_y">6dp</dimen>
+    <dimen name="red_dot_circle_radius">3dp</dimen>
+    <dimen name="record_time_text_size">16sp</dimen>
+    <dimen name="record_text_left_margin">20dp</dimen>
+    <dimen name="record_play_margin_left">287dp</dimen>
+
+    <dimen name="note_image_span_default_tip_text_size">16sp</dimen>
+    <dimen name="note_image_span_default_drawable_padding">29dp</dimen>
+    <dimen name="note_image_span_default_text_top_padding">16dp</dimen>
+
+    <!-- note tip-->
+    <dimen name="note_tip_image_top_margin">100dp</dimen>
+    <dimen name="note_tip_text_top_margin">7dp</dimen>
+    <dimen name="note_tip_text_size">16sp</dimen>
+    <dimen name="picture_generate_textsize">20sp</dimen>
+
+    <!--preview activity-->
+    <dimen name="ami_tag_circle_radius">2dp</dimen>
+    <dimen name="ami_tag_circle_coorx">22dp</dimen>
+    <dimen name="ami_tag_text_coorx">30dp</dimen>
+    <dimen name="share_ami_tag_textsize">10sp</dimen>
+
+    <!--import backup config dialog content-->
+    <dimen name="import_backup_dialog_content_margin">20dp</dimen>
+    <dimen name="import_backup_checkbox_text_size">12sp</dimen>
+
+    <dimen name="import_backup_progress_dialog_message_top_padding">20dp</dimen>
+    <dimen name="import_backup_progress_dialog_message_left_padding">20dp</dimen>
+    <dimen name="import_backup_progress_dialog_message_right_padding">20dp</dimen>
+    <dimen name="import_backup_progress_dialog_checkbox_top_margin">14dp</dimen>
+    <dimen name="import_backup_progress_dialog_checkbox_left_margin">20dp</dimen>
+    <dimen name="import_backup_progress_dialog_checkbox_right_margin">20dp</dimen>
+    <dimen name="import_backup_progress_dialog_checkbox_bottom_margin">20dp</dimen>
+
+    <!--aboutus activity-->
+    <dimen name="aboutus_note_content_textsize">16sp</dimen>
+    <dimen name="aboutus_version_content_textsize">12sp</dimen>
+    <dimen name="aboutus_copyright_content_textsize">10sp</dimen>
+    <dimen name="aboutus_launcher_icon_top_margin">106dp</dimen>
+    <dimen name="aboutus_note_text_top_margin">5dp</dimen>
+    <dimen name="aboutus_version_text_top_margin">8dp</dimen>
+    <dimen name="aboutus_copyright_text_bottom_margin">16dp</dimen>
+
+    <!--widget-->
+    <dimen name="widget_time_size">10sp</dimen>
+    <dimen name="widget_text_title_margin_top_2x">12dp</dimen>
+    <dimen name="widget_text_title_margin_left_2x">12dp</dimen>
+    <dimen name="widget_alarm_margin_right_2x">10dp</dimen>
+    <dimen name="widget_text_content_margin_top_2x">16dp</dimen>
+    <dimen name="widget_time_margin_bottom_2x">12dp</dimen>
+    <dimen name="widget_time_margin_top_2x">16dp</dimen>
+
+    <dimen name="widget_photo_height_4x">141dp</dimen>
+    <dimen name="widget_width_4x">249dp</dimen>
+    <dimen name="widget_text_height_4x">166dp</dimen>
+    <dimen name="widget_text_title_margin_top_4x">15dp</dimen>
+    <dimen name="widget_text_content_margin_top_4x">13dp</dimen>
+    <dimen name="widget_text_margin_left_4x">15dp</dimen>
+    <dimen name="widget_time_margin_top_4x">12dp</dimen>
+    <dimen name="widget_time_margin_left_4x">15dp</dimen>
+    <dimen name="widget_time_margin_bottom_4x">15dp</dimen>
+    <dimen name="widget_time_margin_right_4x">15dp</dimen>
+    <dimen name="widget_alarm_margin_right_4x">11dp</dimen>
+    <dimen name="widget_bg_widht_2x">127dip</dimen>
+    <dimen name="widget_bg_height_2x">145dip</dimen>
+    <dimen name="widget_bg_widht_image_4x">249dip</dimen>
+    <dimen name="widget_bg_height_image_4x">307dip</dimen>
+    <integer name="widget_content_lines_2x">4</integer>
+
+    <dimen name="recommend_item_height">56dp</dimen>
+    <dimen name="recommend_item_text_size">16sp</dimen>
+
+    <dimen name="attach_selector_pic_height">132dip</dimen>
+    <dimen name="attach_selector_pic_default_widht">90dip</dimen>
+    <dimen name="attach_selector_checkbox_margin">4dip</dimen>
+    <dimen name="attach_selector_pic_size_threshold">30dip</dimen>
+
+    <dimen name="data_flow_dialog_content_margin">20dp</dimen>
+    <dimen name="data_flow_dialog_checkbox_margin">16dp</dimen>
+    <dimen name="data_flow_dialog_content_textsize">16sp</dimen>
+    <dimen name="data_flow_checkbox_textsize">12sp</dimen>
+    <dimen name="data_flow_dialog_checkbox_textsize">12sp</dimen>
+
+    <dimen name="ai_tipview_increment_padding">8dip</dimen>
+    <dimen name="ai_tipview_hide_to_left_threshold">20dp</dimen>
+
+    <dimen name="passwrod_title_margin_top">87dp</dimen>
+    <dimen name="password_input_margin_top">27dp</dimen>
+    <dimen name="password_forget_margin_top">30dp</dimen>
+    <dimen name="password_forget_padding">8dp</dimen>
+    <dimen name="password_set_padding_left_right">16dp</dimen>
+
+    <dimen name="password_protect_dilog_title_height">46dp</dimen>
+    <dimen name="title_more_dialog_padding_left_right">20dp</dimen>
+    <dimen name="title_more_dialog_text_size">16sp</dimen>
+    <dimen name="title_more_dialog_text_view_height">52dp</dimen>
+    <dimen name="note_main_fragment_tips_padding_left_right">16dp</dimen>
+
+    <dimen name="question_select_dialog_item">52dp</dimen>
+    <dimen name="question_select_dialog_text_padding_right">48dp</dimen>
+    <dimen name="question_select_dialog_padding">20dp</dimen>
+    <dimen name="question_select_dialog_text_size">16sp</dimen>
+    <dimen name="question_select_dialog_check_height_width">30dp</dimen>
+
+    <dimen name="encrypt_select_cancel_confirm_item">50dp</dimen>
+    <dimen name="encrypt_select_cancel_confirm_item_margin">20dp</dimen>
+    <dimen name="encrypt_select_cancel_confirm_text_size">18sp</dimen>
+    <dimen name="encrypt_select_count_container_height">40dp</dimen>
+    <dimen name="encrypt_select_count_text_size">16sp</dimen>
+
+    <dimen name="password_set_successed_congratulations_container_height">105dp</dimen>
+    <dimen name="password_set_successed_congratulations_margin_top">23dp</dimen>
+    <dimen name="password_set_successed_congratulations_text_size">20sp</dimen>
+    <dimen name="password_set_successed_padding">16dp</dimen>
+    <dimen name="password_set_successed_tips_container_margin_top">66dp</dimen>
+    <dimen name="password_set_successed_tips_text_size">14sp</dimen>
+    <dimen name="password_set_successed_button_text_size">16sp</dimen>
+    <dimen name="password_set_successed_congratulations_margin_bottom">46dp</dimen>
+
+    <dimen name="weather_text_margin_left">10dp</dimen>
+    <dimen name="weather_text_size">14sp</dimen>
+    <dimen name="weather_text_margin">8dp</dimen>
+    <dimen name="weather_city_max_length">180dp</dimen>
+    <dimen name="weather_container_height">36dp</dimen>
+
+    <dimen name="list_note_item_padding_right">8dp</dimen>
+    <dimen name="authority_alert_user_title_bottom">7dp</dimen>
+    <dimen name="cyee_confirm_dialog_tips_container_height">162dp</dimen>
+
+    <dimen name="password_protect_btn_height">48dp</dimen>
+    <dimen name="password_protect_margin_padding">16dp</dimen>
+    <dimen name="password_protect_btn_text_size">16sp</dimen>
+    <dimen name="extended_imageview_freya_action_bar_back_width">50dp</dimen>
+    <dimen name="extended_imageview_freya_action_bar_title_text_and_back_gap">20dp</dimen>
+    <dimen name="extended_imageview_freya_action_bar_title_text_size">18sp</dimen>
+    <dimen name="extended_textview_freya_action_bar_text_padding">20dp</dimen>
+    <dimen name="extended_textview_freya_action_bar_select_reverse_text_size">16sp</dimen>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/encrypt_user_guide"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/new_guide_line_background"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/guideline_private_tip_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/guide_private_album" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/guideline_private_tip_img"
+        android:layout_marginTop="42dp"
+        android:gravity="center_horizontal"
+        android:paddingStart="54dp"
+        android:paddingEnd="54dp"
+        android:text="@string/guideline_enter_private_album"
+        android:textColor="#80ffffff"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/btn_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="68dp"
+        android:background="@drawable/chick_bg_drawable"
+        android:src="@drawable/guide_exit" />
+</RelativeLayout>

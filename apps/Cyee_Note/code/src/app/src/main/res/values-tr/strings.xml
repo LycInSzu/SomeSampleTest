@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Notlar</string>
+    <string name="search_hint">Notlarda ara</string>
+    <string name="app_name_outside">Notlar</string>
+    <string name="button_sure">Tamam</string>
+    <string name="button_cancel">İptal</string>
+    <string name="button_delete">Sil</string>
+    <string name="note_main_activity_title_layout_title_text">Notlar</string>
+    <string name="note_action_del_string">Sil</string>
+    <string name="note_action_edit_string">Ekle</string>
+    <string name="note_action_share_string">Paylaş</string>
+    <string name="dialog_negative_text">Kapat</string>
+    <string name="alert_time_early">Zaman aşımı, lütfen yeniden ayarlayın</string>
+    <string name="default_label_life">Günlük hayat</string>
+    <string name="default_label_meeting">Toplantı</string>
+    <string name="default_label_travel">Seyahat</string>
+    <string name="default_label_inspiration">İlham</string>
+    <string name="label_selector_dialog_custom_label_text">Etiket</string>
+    <plurals name="number_of_items_selected">
+        <item quantity="zero">%1$d Seçili</item>
+        <item quantity="one">%1$d Seçili</item>
+        <item quantity="other">%1$d Seçili</item>
+    </plurals>
+    <string name="select_all">Tümünü seç</string>
+    <string name="unselect_all">Tüm seçimi kaldır</string>
+    <string name="title_hint">Başlık giriniz</string>
+    <string name="title_focus_hint">Başlık giriniz</string>
+    <string name="content_hint">İçerik giriniz</string>
+    <string name="note_tip_loading">Yükleniyor...</string>
+    <string name="note_tip_loadFinish">İçerik yok</string>
+    <string name="import_backup_config_dialog_btn_cancel">İptal</string>
+    <string name="import_backup_config_dialog_btn_import">İçe aktar</string>
+    <string name="import_backup_progress_dialog_title">İçe aktar</string>
+    <string name="setting_title">Ayarlar</string>
+    <string name="inscribed_signature">Tescil imzası</string>
+    <string name="version_update">Sürüm güncelleme</string>
+    <!-- Gionee liwenbin 2016-10-17 modify for CR01762429 begin -->
+    <!-- Gionee liwenbin 2016-10-17 modify for CR01762429 end -->
+    <string name="about_us">Hakkımızda</string>
+    <string name="signature_input_hint">Lütfen imzanızı girin</string>
+    <string name="network_error">Bağlantı hatası</string>
+    <string name="server_error">Sunucu hatası</string>
+    <string name="upgrading">Güncelleniyor…</string>
+    <string name="verify_failed">Doğrulanmadı</string>
+    <string name="low_memory">Düşük hafıza</string>
+    <string name="dialog_update">Güncelle</string>
+    <string name="dialog_install">Yükle</string>
+    <string name="down_load_dialog_msg">İndiriliyor</string>
+    <string name="search_page_label_title">Etikete göre göster</string>
+    <string name="attachment_enter_camera_fail">Kamera yok</string>
+    <string name="create_picture">Resim hazırlanıyor…</string>
+    <!-- Gionee liwenbin 2016-10-27 modify for CR01762429 begin -->
+    <string name="share_preview">Önizlemeyi paylaş</string>
+    <!-- Gionee liwenbin 2016-10-27 modify for CR01762429 begin -->
+    <string name="file_save_toast_text">Resim şuraya kaydediliyor: </string>
+    <string name="note_action_del_message">Seçilen notu silmek istediğinize emin misiniz?</string>
+    <string name="authorization_failed">Bu özelliği kullanmak için izin alınamadı.</string>
+    <string name="note_tip_searchFinish">İçerik için eşleşme yok</string>
+    <string name="app_widget2x2">Notlar2x2</string>
+    <string name="app_widget4x4">Notlar4x4</string>
+    <string name="modified_password">Şifreyi değiştir</string>
+    <string name="security_os_footer_secrete_space">Özel Alan</string>
+    <!--Gionee <GN_Bug> <zhang_han> <20170623> modify for 161345 begin-->
+    <string name="trash">Çöp</string>
+    <string name="security_os_footer_search">Ara</string>
+    <string name="note_action_search_string">Ara</string>
+    <string name="note_action_setting_string">Ayarlar</string>
+    <!--Gionee <GN_Bug> <zhang_han> <20170623> modify for 161345 end-->
+    <!--Gionee <GN_Oversea_Req> <heqianjin> <20170708> modify for 167514 begin-->
+    <string name="max_content_input_mum_limit">Girilebilecek maksimum karakter sayısına ulaşıldı.</string>
+    <!--Gionee <GN_Oversea_Req> <heqianjin> <20170708> modify for 167514 end-->
+    <string name="no_sdcard">SD kart yok</string>
+    <string name="note_storage_inner">Telefon hafızası</string>
+    <string name="data_flow_alert_user_checkbox">Tekrar hatırlatma</string>
+    <string name="alert_user_title_str">Sunucu istemi</string>
+    <string name="alert_user_ok">Devam</string>
+    <string name="alert_user_cancle">Çık</string>
+    <string name="download_compelete">İndirme tamamlandı</string>
+    <string name="download_unsurpport_hint">Desteklenmeyen tür</string>
+    <string name="vsq_confirm_btn_text">Onayla</string>
+    <string name="note_action_encrypt_string">Şifrele</string>
+    <string name="note_action_decrypt_string">Şifre çözme</string>
+    <string name="password_set_successed_title">Ayarlama başarılı</string>
+    <string name="forget_password">Şifremi unuttum</string>
+    <string name="sq_q_text_tip">S:</string>
+    <string name="sq_a_text_tip">C:</string>
+    <string name="encrypt_hint_manager_dialog_sure">Şifrele</string>
+    <string name="title_more_dialog_title">Diğer</string>
+    <string name="encrypt_switch_close">Kapat</string>
+    <string name="encrypt_switch_open">Aç</string>
+    <string name="security_os_footer_add">Ekle</string>
+    <string name="encrypt_select_confirm">Onayla</string>
+    <string name="encrypt_select_cancel">İptal</string>
+    <string name="encrypt_fail">Şifreleme başarısız</string>
+    <string name="encrypt_success">Şifreleme başarılı</string>
+    <string name="trash_recover">Kurtarma</string>
+    <plurals name="trash_left_days">
+        <item quantity="zero">%1$d gün kaldı</item>
+        <item quantity="one">%1$d gün kaldı</item>
+        <item quantity="other">%1$d gün kaldı</item>
+    </plurals>
+    <string name="unkown">Bilinmiyor</string>
+    <string name="download">İndir</string>
+    <string name="down_load_fail_msg">İndirme başarısız</string>
+    <string name="file_note_found">Dosya bulunamadı</string>
+    <string name="label_custom_action_bar_title">Özel etiket</string>
+    <string name="label_custom_edit_text_hint">Etiket girin</string>
+    <string name="label_custom_exist">Bu etiket zaten var, lütfen tekrar deneyin.</string>
+    <string name="label_custom_delete_attention">Etiket silinene kadar not silinmez, etiketi silmek istediğinizden emin misiniz?</string>
+    <string name="add_image_fail">Resim eklerken hata oluştu</string>
+    <string name="note_tip_search">Sorgu kapsamında</string>
+    <string name="create_picture_fail">Resim oluştururken hata oluştu</string>
+    <string name="create_picture_create_bmp_fail">İçerik çok uzun , sistem resim oluştururken hata oluştu.</string>
+    <string name="create_picture_fail_no_space">Resmi yapmak için yeterli alan yok</string>
+    <string name="file_save_fail_toast_text">Dosyayı kaydetmek için yeterli alan yok</string>
+    <string name="file_save_fail_origin_no_exist">Orijinal dosyayı kaybettiniz , bu yüzden resim kaydedilemedi</string>
+    <string name="date_upgrade_message">Not Defteri verilerini güncelliyor, lütfen biraz bekleyin.</string>
+    <string name="import_backup_config_dialog_title">Not defteri içe aktarılıyor</string>
+    <string name="import_backup_config_dialog_message">Yeni tasarımın bu sürümünde, yerel yedeklemeler desteklenmiyor. Henüz aktarılamayan bazı veri yedeklemenizi algıladık. Lütfen, bu verileri kaybetmemek için zamanında içe aktarın.</string>
+    <string name="import_backup_config_dialog_checkbox_text">Artık ipuçları yok</string>
+    <string name="import_backup_progress_dialog_message">Not defteri verileri içe aktarılıyor</string>
+    <string name="import_backup_fail_message">
+Alma işlemi bir sorunla karşılaştı, lütfen bellek kartınızda en az %1$dMB boş alan bulunduğundan emin olun. Program, bir dahaki sefer başlatıldığında içe aktarılması gerekip gerekmediğini kontrol etmek için geri dönecektir.</string>
+    <string name="attachment_record_focus_fail">Şuanki kayıt ekipmanları meşgul, kaydedilemedi ..</string>
+    <string name="attachment_sound_paly_focus_fail">Şuanki kayıt ekipmanları meşgul, çalınamıyor.</string>
+    <string name="attachment_record_permission_hint">Lütfen verilen ses kaydının iznini kontrol edin</string>
+    <string name="max_pic_input_mum_limit">Girilebilecek maksimum resim sayısına ulaşıldı.</string>
+    <string name="no_version">Şuanki sürümünüz en son sürüm</string>
+    <string name="progress_checking">Yeni sürüm kontrol ediliyor,lütfen bekleyiniz…</string>
+    <string name="aboutus_version_content_text">Sürüm:V</string>
+    <string name="aboutus_copyright_content_text">Copyright©2015 Casper Bilgisayar Sistemleri</string>
+    <string name="no_space">Alan yok</string>
+    <string name="file_not_found">Dosya bulunamadı</string>
+    <string name="local_file_verify_failed">Yerel dosyayı doğrulama başarısız</string>
+    <string name="dialog_update_compelete">Yeni sürüm bulundu.Lütfen uygulamanızı güncelleyin!</string>
+    <string name="dialog_update_or_not">,\n\n Şuan güncelleniyor mu?</string>
+    <string name="down_load_paused_msg">İndirme duraklatıldı</string>
+    <string name="time_am">AM</string>
+    <string name="time_pm">PM</string>
+    <string name="message_media_record_time_max">Maksimum kayıt zamanı aşıldı.Lütfen kaydı durdurun.</string>
+    <string name="ai_activity_title">AI</string>
+    <string name="ami_recommend_panel_title">Casper Önerisi</string>
+    <string name="favor_recommend_panel_title">Favor Önerisi</string>
+    <string name="recommend_search_hint_text">Anahtar kelimeleri girin</string>
+    <string name="ai_activity_not_network_tip">Geçerli ağ bağlantısı kesildi, aynı zamanda ağ araması da kesildi</string>
+    <string name="alert_remaining_chars">Hala silmeniz gereken  <xliff:g id="file">%d</xliff:g> karakterler</string>
+    <string name="alert_remaining_char">Hala silmeniz gereken  <xliff:g id="file">%d</xliff:g> karakterler</string>
+    <string name="data_flow_alert_user_title">Not kullanmaya hoş geldiniz</string>
+    <string name="data_flow_alert_user_content">Uygulama, aşağıdaki izinlere sahip olmanız gerekir: \n Ağ bağlantısı, ses kaydı, fotoğraf çekme, harici saklama alanına erişim. Devam etmek istiyor musunuz?</string>
+    <string name="notification_title">resmi indir</string>
+    <string name="download_poto_hint">Resmi şuraya indir:</string>
+    <string name="vsq_tip_text">* Şifre koruma sorusunun cevabını onaylamak için</string>
+    <string name="choose_question_dialog_title">Soru</string>
+    <string name="setting_secret_name">Hatırlatan şifreleme</string>
+    <string name="setting_secret_tip">Not defterinin özel içeriği için hatırlatan şifreleme</string>
+    <string name="guideline_enter_private_album">Ana sayfada iki parmağınızla aşağı doğru kaydırın ve özel notları girin.</string>
+    <string name="modified_protect_question">Şifre koruma sorularını değiştir</string>
+    <string name="secret_room">Arka oda</string>
+    <string name="setting_password">4 haneli şifrenizi ayarlayın</string>
+    <string name="verification_password">Şifreyi doğrula</string>
+    <string name="password_error_hint">Şifre yanlış. %1$s giriş hakkınız kaldı.</string>
+    <string name="setting_password_hint">Özel notlarınızı ayarlamadan önce lütfen ilk olarak şifre ayarlarını yapınız.</string>
+    <string name="ensure_password">Şifreyi Onayla</string>
+    <string name="password_not_match">Şifre eşleşmedi. Lütfen tekrar deneyin</string>
+    <string name="enter_password">Lütfen şifrenizi girin</string>
+    <string name="enter_password_later">Lütfen %1$s dakika sonra tekrar deneyin</string>
+    <string name="verify_sq_activity_title">Şifre korumayı doğrula</string>
+    <string name="setting_password_protect_QA">Şifre korumayı ayarla</string>
+    <string name="answer_incorrect">Yanlış cevap</string>
+    <string name="note_content_notChange_hint">
+İçerik değiştirilmedi ve daha önce kaydettiniz</string>
+    <string name="encrypt_hint_title">Şifreleme ipucu</string>
+    <string name="encrypt_hint_content">Notta bir güvenlik riski var. Şifrelemenizi öneririz.</string>
+    <string name="successful_modification">Değiştirme başarılı</string>
+    <string name="password_set_successed_congratulations">Tebrikler !</string>
+    <string name="password_set_successed">Şifre ayarları başarıyla gerçekleştirildi.</string>
+    <string name="password_set_successed_tips">Lütfen aşağıdaki hususlara dikkat edin:</string>
+    <string name="password_set_successed_tips_first">1. Temizleme araçlarını kullanırken NoteMedia seçmeyin aksi takdirde şifrelenmiş not defterinin görüntülerine ve kasetlerine göz atamazsınız.</string>
+    <string name="password_set_successed_tips_second">2. Not defterini şifreledikten sonra uygulamayı kaldırmayın, aksi takdirde şifreli not defteri alamayacaktır.</string>
+    <string name="password_set_successed_sure">Tamam</string>
+    <string name="encrypt_main_note_tip_load_finish">
+Burası boş. Bazı küçük sırları eklemek ister misiniz? Not defterine göz atarken buraya eklemek için "şifreleme" düğmesine tıklayın.</string>
+    <string name="confirm_protect_question">Güvenlik sorgusunun kaydedilmiş cevabını onayla</string>
+    <string name="protect_question_empty">Güvenlik sorusu boş bırakılamaz</string>
+    <string name="encrypt_main_activity_security_os_title">Şifrelenmiş notlar</string>
+    <string name="encrypt_main_activity_security_os_add_tip">İçerik yok</string>
+    <string name="encrypt_select_count_text">Hiçbir öğe seçili değil</string>
+    <string name="encrypt_main_note_security_os_tip_load_finish">Ekli not yok</string>
+    <string name="encrypt_note_action_del_message">
+Seçilen notları silmek istediğinizden emin misiniz? \nSeçilen notların içeriği sonsuza kadar silinir!</string>
+    <string name="encrypt_finish_hint_for_security_os">Şifrelenmiş özel alan</string>
+    <string name="decrypt_finish_hint">Şifre çözümleme tamamlandı.</string>
+    <string name="add_pics">Resimleri ekle</string>
+    <string name="decrypt_fail">Şifre çözümleme başarısız</string>
+    <string name="delete_hint">Siliniyor , lütfen tekrar deneyin</string>
+    <string name="encrypt_hint">Şifreleniyor, lütfen tekrar deneyin</string>
+    <string name="decrypt_hint">Şifre çözümleniyor ,lütfen tekrar deneyin</string>
+    <string name="recovery_hint">Kurtarılıyor , lütfen tekrar deneyin</string>
+    <string name="partial_encrypt">%1$s  şifreleme başarılı , %2$s  şifreleme hatası.</string>
+    <string name="partial_decrypt">%1$s  şifre çözümleme başarılı , %2$s  şifre çözümleme hatalı</string>
+    <string name="trash_first_delete_alert">Silinmiş notlar Çöp Kutusu\'na taşınacak (Ayarlar-&gt; Çöp Kutusu) ve yedi gün sonra temizlenecekler. \nTemizlik\'te silebilir veya onları kurtarabilirsiniz.</string>
+    <string name="trash_recover_hint">Kurtarılıyor , lütfen tekrar deneyin</string>
+    <string name="trash_delete_message">Seçilen notları sonsuza dek silmek istediğinizden emin misiniz?</string>
+    <string name="install_amiweather_tip">Casper hava durumu , hava durumu sağlayacaktır. Telefonunuzda Casper hava durumunu tespit edemiyoruz. İndirip kurmak istiyor musunuz ?</string>
+    <string name="install_amicalendar_tip">Casper takvimi takvim hizmeti sağlayacaktır. Telefonunuzda Casper takvim uygulamasını algılayamıyoruz. Uygulamayı indirmek ve yüklemek istiyor musunuz?</string>
+    <string name="no_network">Şebeke kullanılamıyor</string>
+    <string name="no_pictures">Hafıza kartında resim yok</string>
+    <string name="add_attach_fail">Üzgünüz , bu dosya biçimi desteklenmiyor</string>
+    <string name="long_bitmap_add_failed">
+Resmin boyutu çok büyük, eklenemedi</string>
+    <string name="goto_weather_failed">Uygulama bulunamıyor!</string>
+    <string name="record_fail">Kaydetme başarısız</string>
+</resources>

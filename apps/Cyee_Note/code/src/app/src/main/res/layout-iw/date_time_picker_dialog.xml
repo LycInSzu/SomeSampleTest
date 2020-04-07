@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/datetime_title_height"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/datetime_title_padding_left"
+        android:paddingEnd="@dimen/datetime_title_padding_right">
+
+        <TextView
+            android:id="@+id/reminder_date_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/system_stress_color" />
+
+        <TextView
+            android:id="@+id/reminder_time_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/datetime_title_text_normal_color" />
+    </LinearLayout>
+    <!--Gionee <GN_Oversea_Req> <fujiabing> <20170512> add for 135396 begin-->
+    <cyee.widget.CyeeDatePicker
+        android:id="@+id/reminder_datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+	android:layoutDirection="ltr"
+        android:spinnersShown="true" />
+
+    <cyee.widget.CyeeTimePicker
+        android:id="@+id/reminder_timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:timePickerMode="spinner"
+	android:layoutDirection="ltr"
+        android:visibility="gone" />
+    <!--Gionee <GN_Oversea_Req> <fujiabing> <20170512> add for 135396 end-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/datetime_button_height"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/reminder_cancel"
+            style="@style/ChickBgEffect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/button_cancel"
+            android:textColor="@color/dialog_cancel_text_color"
+            android:textSize="@dimen/label_selector_dialog_button_text_size" />
+
+        <TextView
+            android:id="@+id/reminder_delete"
+            style="@style/ChickBgEffect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/button_delete"
+            android:textColor="@color/dialog_cancel_text_color"
+            android:textSize="@dimen/label_selector_dialog_button_text_size"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/reminder_sure"
+            style="@style/ChickBgEffect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/button_sure"
+            android:textColor="@color/dialog_ok_text_color"
+            android:textSize="@dimen/label_selector_dialog_button_text_size" />
+
+    </LinearLayout>
+
+</LinearLayout>

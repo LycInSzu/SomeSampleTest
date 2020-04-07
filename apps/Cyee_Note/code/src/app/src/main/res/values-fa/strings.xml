@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2012 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">یادداشت</string>
+    <string name="app_name_outside">یادداشت ها</string>
+    <string name="button_sure">تایید</string>
+    <string name="button_cancel">لغو</string>
+    <string name="button_delete">پاک کردن</string>
+    <string name="file_note_found">فایل پیدا نشد</string>
+    <string name="search_hint">جستجو یادداشت ها</string>
+    <string name="search_page_label_title">نمایش بابرچسب</string>
+    <string name="note_main_activity_title_layout_title_text">یادداشت</string>
+    <string name="note_action_del_string">پاک کردن</string>
+    <string name="note_action_edit_string">جدید</string>
+    <string name="note_action_share_string">اشتراک گذاری</string>
+    <string name="note_action_del_message">ایامطمین هستید می خواهید یادداشت‌های انتخاب شده را پاک کنید؟</string>
+    <string name="dialog_negative_text">مرخص کردن</string>
+    <string name="alert_time_early">زمان قبل،لطفا مجددا" راه اندازی کنید</string>
+    <string name="attachment_enter_camera_fail">دوربین دردسترس نیست</string>
+    <string name="default_label_life">زندگی</string>
+    <string name="default_label_meeting">ملاقات</string>
+    <string name="default_label_travel">مسافرت</string>
+    <string name="default_label_inspiration">الهام گرفتن</string>
+    <string name="label_selector_dialog_custom_label_text">برچسب</string>
+    <string name="label_custom_action_bar_title">برچسب سفارشی</string>
+    <string name="label_custom_edit_text_hint">برچسب ورودی</string>
+    <string name="label_custom_exist">برچسب به وجودآمد، دوباره وارد کنید</string>
+    <string name="label_custom_delete_attention">در حالی برچسب پاک شده است یادداشت‌هاپاک نخواهند شد،ایا مطمین هستید که می خواهید برچسب راپاک کنید؟</string>
+    <plurals name="number_of_items_selected">
+        <item quantity="zero">انتخاب شده %1$d</item>
+        <item quantity="one">انتخاب شده %1$d</item>
+        <item quantity="other">انتخاب شده %1$d</item>
+    </plurals>
+    <string name="select_all">انتخاب همه</string>
+    <string name="unselect_all">لغو انتخاب همه</string>
+    <string name="title_hint">وارد کردن عنوان</string>
+    <string name="title_focus_hint">وارد کردن عنوان</string>
+    <string name="content_hint">وارد کردن محتوا</string>
+    <string name="add_image_fail">اضافه کردن تصویر ناموفق بود</string>
+    <string name="note_tip_loading">در حال بارگذاری</string>
+    <string name="note_tip_loadFinish">بی محتوا</string>
+    <string name="note_tip_search">در صف</string>
+    <string name="note_tip_searchFinish">هیچ مشابهی برای محتوا یافت نشد</string>
+    <string name="create_picture">ایجاد کردن یک تصور...</string>
+    <string name="create_picture_fail">خطا در ایجاد تصویر</string>
+    <string name="create_picture_create_bmp_fail">محتوا بیش از حد طولانی است، سیستم یک تصویر از خطا تولید می کند</string>
+    <string name="create_picture_fail_no_space">بخاطر عدم وجود فضای کافی قادر به تولید عکس نیست</string>
+    <string name="share_preview">اشتراک گذاری نمایه</string>
+    <string name="file_save_toast_text">"تصویر ذخیره شد در"</string>
+    <string name="file_save_fail_toast_text">ذخیره سازی به دلیل عدم وجود فضای کافی امکان پذیر نیست</string>
+    <string name="file_save_fail_origin_no_exist">ذخیره سازی تصویر به دلیل از دست رفتن فایل اصلی قابل انجام نیست</string>
+    <string name="date_upgrade_message">در حال بروزرسانی داده‌های دفترچه، لطفا یک لحظه صبرکنید</string>
+    <string name="import_backup_config_dialog_title">دفترچه وارد شد</string>
+    <string name="import_backup_config_dialog_message">عملکرد دیگر پشتیبانی نمی شود،مشخص شده است که نسخه پشتیبان شما هنوز وارد نشده است، لطفا در زمان مناسب نسخه پشتیبان را وارد کنید</string>
+    <string name="import_backup_config_dialog_btn_cancel">لغو</string>
+    <string name="import_backup_config_dialog_btn_import">وارد کردن</string>
+    <string name="import_backup_config_dialog_checkbox_text">دیگر راهنمایی‌ها وجود ندارند</string>
+    <string name="import_backup_progress_dialog_title">وارد کردن</string>
+    <string name="import_backup_progress_dialog_message">وارد کردن داده‌های دفترچه</string>
+    <string name="attachment_record_permission_hint">لطفا اجازه موافقت ضبط صدا را بررسی کنید</string>
+    <string name="max_content_input_mum_limit">محدودیت محتوای ورودی به حداکثر رسیده است</string>
+    <string name="setting_title">تنظیمات</string>
+    <string name="inscribed_signature">ثبت کردن امضا</string>
+    <string name="version_update">نسخه جدید</string>
+    <string name="no_version">نسخه اخیر جدیدترین است</string>
+    <string name="progress_checking">درحال بررسی نسخه، لطفا یک لحظه منتظر بمانید</string>
+    <string name="about_us">درباره ما</string>
+    <string name="signature_input_hint">لطفا امضا وارد کنید</string>
+    <string name="aboutus_version_content_text">نسخه:V</string>
+    <string name="aboutus_copyright_content_text">حق نشر@2015 شنرن شرکت تولید وسایل ارتبلطی</string>
+    <string name="network_error">خطا درشبکه</string>
+    <string name="no_space">فضا نا کافی</string>
+    <string name="file_not_found">فایل پیدا نشد</string>
+    <string name="local_file_verify_failed">خطا در تایید فایل محلی</string>
+    <string name="server_error">خطا در سرور</string>
+    <string name="upgrading">به روز رسانی</string>
+    <string name="verify_failed">خطا در تایید</string>
+    <string name="no_sdcard">کارت حافظه وجود ندارد</string>
+    <string name="low_memory">حافظه کم است</string>
+    <string name="dialog_update_compelete">به روز رسانی شد!آخرین نسخه V یافت شد</string>
+    <string name="dialog_update_or_not">،/n/nآیا بروزرسانی شده است ؟</string>
+    <string name="dialog_update">بروزرسانی</string>
+    <string name="dialog_install">نصب کردن</string>
+    <string name="down_load_dialog_msg">درحال دریافت کردن</string>
+    <string name="app_widget2x2">یادداشت 2 در 2</string>
+    <string name="app_widget4x4">یادداشت 4 در 4</string>
+    <string name="time_am">قبل از ظهر</string>
+    <string name="time_pm">بعد از ظهر</string>
+    <string name="message_media_record_time_max">زمان ضبط کردن به حداکثر رسیده است،ضبط کردن را متوقف کنید</string>
+    <string name="authorization_failed">اجازه برای این ویژگی داده نمی شود</string>
+    <string name="note_storage_inner">حافظه داخلی</string>
+    <string name="alert_remaining_chars">شما هنوز نیاز به حذف <xliff:g id="file">%d</xliff:g> کاراکتر دارید</string>
+    <string name="alert_remaining_char">شما هنوز نیاز به حذف <xliff:g id="file">%d</xliff:g> کاراکتر دارید</string>
+    <string name="note_content_notChange_hint">محتوا تغییری نکرده است و شما آن را از قبل ذخیره کرده اید</string>
+    <string name="alert_user_ok">ادامه</string>
+    <string name="alert_user_cancle">خروج</string>
+    <string name="sq_q_text_tip">Q:</string>
+    <string name="sq_a_text_tip">A:</string>
+    <string name="encrypt_switch_close">بستن</string>
+    <string name="encrypt_select_cancel">لغو</string>
+    <string name="download">دریافت کردن</string>
+</resources>

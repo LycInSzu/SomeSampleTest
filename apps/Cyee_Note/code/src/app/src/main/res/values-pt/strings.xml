@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Notas</string>
+    <string name="search_hint">Por favor introduza</string>
+    <string name="app_name_outside">Notas</string>
+    <string name="button_sure">OK</string>
+    <string name="button_cancel">Cancelar</string>
+    <string name="button_delete">Apagar</string>
+    <string name="note_main_activity_title_layout_title_text">Nota</string>
+    <string name="note_action_del_string">Apagar</string>
+    <string name="note_action_edit_string">Editar</string>
+    <string name="note_action_share_string">Partilhar</string>
+    <string name="dialog_negative_text">Ignorar</string>
+    <string name="alert_time_early">Tempo ultrapassado, por favor instale novamente</string>
+    <string name="default_label_meeting">Reunião</string>
+    <string name="label_selector_dialog_custom_label_text">Nome</string>
+    <plurals name="number_of_items_selected">
+        <item quantity="zero">%1$d selecionado(s)</item>
+        <item quantity="one">%1$d selecionado(s)</item>
+        <item quantity="other">%1$d selecionado(s)</item>
+    </plurals>
+    <string name="select_all">Selecionar tudo</string>
+    <string name="unselect_all">Desmarcar todos</string>
+    <string name="note_tip_loading">A carregar</string>
+    <string name="note_tip_loadFinish">Sem conteúdo</string>
+    <string name="import_backup_config_dialog_btn_cancel">Cancelar</string>
+    <string name="import_backup_config_dialog_btn_import">Importar</string>
+    <string name="import_backup_progress_dialog_title">Importar</string>
+    <string name="setting_title">Definição</string>
+    <string name="version_update">Atualização de versão</string>
+    <string name="about_us">Acerca de</string>
+    <string name="network_error">Erro de rede</string>
+    <string name="server_error">Erro de servidor</string>
+    <string name="dialog_update">Atualizar</string>
+    <string name="dialog_install">Instalar</string>
+    <string name="down_load_dialog_msg">A fazer download</string>
+    <string name="encrypt_switch_close">Fechar</string>
+    <string name="encrypt_select_cancel">Cancelar</string>
+</resources>

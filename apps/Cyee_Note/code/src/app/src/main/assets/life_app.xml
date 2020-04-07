@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<life_app>
+    <app
+        titleResName="life_app_note"
+        appUri="http://assets.gionee.com/attachs/weather/holiday/Ami_Note.apk"
+        iconResName="about_ami_note"
+        pageName="com.gionee.aminote" />
+
+    <app
+        titleResName="life_app_album"
+        appUri="http://assets.gionee.com/attachs/weather/holiday/Ami_Gallery.apk"
+        iconResName="about_ami_gallery"
+        pageName="com.gionee.freya.gallery" />
+
+    <app
+        titleResName="life_app_calendar"
+        appUri="http://assets.gionee.com/attachs/weather/holiday/Ami_Calendar.apk"
+        iconResName="about_ami_calendar"
+        pageName="com.gionee.amicalendar" />
+
+    <app
+        titleResName="life_app_weather"
+        appUri="http://assets.gionee.com/attachs/weather/holiday/Ami_Weather-share.apk"
+        iconResName="about_ami_weather"
+        pageName="com.gionee.amiweather" />
+</life_app>

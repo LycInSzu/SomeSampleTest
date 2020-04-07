@@ -1,0 +1,26 @@
+<resources>
+
+    <style name="RippleEffect">
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="ChickBgEffect">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="noteCardChickBgEffect">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="NewNoteViewItemBg" parent="@style/RippleEffect">
+        <item name="android:tintMode">src_in</item>
+        <item name="android:tint">@color/action_bar_image_color</item>
+    </style>
+
+    <style name="ListSelectorEffect">
+        <item name="android:listSelector">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="label_custom_edit_button_style" parent="RippleEffect"></style>
+
+</resources>

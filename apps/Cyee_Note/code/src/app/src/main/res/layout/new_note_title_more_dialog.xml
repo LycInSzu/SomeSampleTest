@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cyee.widget.CyeeTextView
+        android:id="@+id/title_more_encrypt_or_decrypt"
+        style="@style/ChickBgEffect"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_more_dialog_text_view_height"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/title_more_dialog_padding_left_right"
+        android:paddingEnd="@dimen/title_more_dialog_padding_left_right"
+        android:text="@string/note_action_encrypt_string"
+        android:textColor="@color/title_more_dialog_text_color"
+        android:textSize="@dimen/title_more_dialog_text_size" />
+
+    <cyee.widget.CyeeTextView
+        android:id="@+id/title_more_delete"
+        style="@style/ChickBgEffect"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_more_dialog_text_view_height"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/title_more_dialog_padding_left_right"
+        android:paddingEnd="@dimen/title_more_dialog_padding_left_right"
+        android:text="@string/button_delete"
+        android:textColor="@color/title_more_dialog_text_color"
+        android:textSize="@dimen/title_more_dialog_text_size" />
+</LinearLayout>

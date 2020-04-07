@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Notas</string>
+    <string name="app_widget2x2">Notas 2x2</string>
+    <string name="app_widget4x4">Notas 4x4</string>
+    <string name="search_hint">Introducir</string>
+    <string name="app_name_outside">Notas</string>
+    <string name="button_sure">OK</string>
+    <string name="button_cancel">Cancelar</string>
+    <string name="button_delete">Eliminar</string>
+    <string name="note_main_activity_title_layout_title_text">Notas</string>
+    <string name="note_action_del_string">Eliminar</string>
+    <!--Gionee pangzhen 2016-9-20 modify for CR01762431 begin-->
+    <string name="note_action_edit_string">Crear</string>
+    <!--Gionee pangzhen 2016-9-20 modify for CR01762431 end-->
+    <string name="note_action_share_string">Compartir</string>
+    <string name="dialog_negative_text">Rechazar</string>
+    <string name="default_label_life">Vida</string>
+    <string name="default_label_meeting">Reunión</string>
+    <string name="default_label_travel">Viaje</string>
+    <string name="label_selector_dialog_custom_label_text">Etiqueta</string>
+    <plurals name="number_of_items_selected">
+        <item quantity="zero">%1$d Seleccionado</item>
+        <item quantity="one">%1$d Seleccionado</item>
+        <item quantity="other">%1$d Seleccionados</item>
+    </plurals>
+    <string name="select_all">Sel.todo</string>
+    <string name="unselect_all">Desha.todo</string>
+    <string name="note_tip_loading">Cargando</string>
+    <string name="note_tip_loadFinish">No hay contenido</string>
+    <string name="import_backup_config_dialog_btn_cancel">Cancelar</string>
+    <string name="import_backup_config_dialog_btn_import">Importar</string>
+    <string name="import_backup_progress_dialog_title">Importar</string>
+    <string name="setting_title">Ajustes</string>
+    <!--string name="inscribed_signature">Firma</string-->
+    <string name="version_update">Versión de actualización</string>
+    <string name="about_us">Quiénes somos</string>
+    <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626568 begin -->
+    <string name="signature_input_hint">Por favor ingrese su firma</string>
+    <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626568 end -->
+    <string name="network_error">Error de red</string>
+    <string name="server_error">Error en el servidor</string>
+    <string name="upgrading">Actualizando</string>
+    <string name="verify_failed">Error de verificación</string>
+    <string name="dialog_update">Actualización</string>
+    <string name="dialog_install">Instalar</string>
+    <string name="down_load_dialog_msg">Downloading</string>
+    <string name="file_note_found">Archivo no encontrado</string>
+    <string name="search_page_label_title">Ver por la etiqueta</string>
+    <!--Gionee pangzhen 2016-9-20 modify for CR01762431 begin-->
+    <string name="note_action_del_message">¿Esta seguro que desea eliminar las notas seleccionadas?</string>
+    <!--Gionee pangzhen 2016-9-20 modify for CR01762431 end-->
+    <string name="alert_time_early">Tiempo antes de ahora, resetear</string>
+    <string name="attachment_enter_camera_fail">No hay camara</string>
+    <string name="default_label_inspiration">Inspiración</string>
+    <string name="label_custom_action_bar_title">Etiqueta personalizada</string>
+    <string name="label_custom_edit_text_hint">Etiqueta de entrada</string>
+    <string name="label_custom_exist">Existe la etiqueta, ingrese otra vez</string>
+    <string name="label_custom_delete_attention">No va a borrar notas mientras que la etiqueta se elimina, ¿está seguro de eliminar la etiqueta?</string>
+    <string name="title_hint">Ingreso de título</string>
+    <string name="title_focus_hint">Ingreso de título</string>
+    <string name="content_hint">Ingreso de contenido</string>
+    <string name="add_image_fail">Agregar imágenes fallo</string>
+    <string name="note_tip_search">Bajo consulta</string>
+    <string name="note_tip_searchFinish">No hay resultados para el contenido</string>
+    <string name="create_picture">La creación de la imagen ...</string>
+    <string name="create_picture_fail">Generar fallo de la imagen</string>
+    <string name="create_picture_create_bmp_fail">El contenido es demasiado largo, el sistema genera un cuadro de falla</string>
+    <string name="create_picture_fail_no_space">No tiene suficiente espacio de almacenamiento para generar una imagen</string>
+    <string name="share_preview">Compartir previsualización</string>
+    <string name="file_save_toast_text">"La imagen se guarda en"</string>
+    <string name="file_save_fail_toast_text">No hay suficiente espacio para guardar</string>
+    <string name="file_save_fail_origin_no_exist">El archivo original no se encuentra, no puede guardar la imagen</string>
+    <string name="date_upgrade_message">Es la actualización de los datos de la libreta, por favor espere un momento</string>
+    <string name="import_backup_config_dialog_title">Bloc de notas de importación</string>
+    <string name="import_backup_config_dialog_message">En esta versión la función de backup local ya no esta soportada. Se detecto que tiene un backup de datos no importados, realice un backup para no perder los datos.</string>
+    <string name="import_backup_config_dialog_checkbox_text">No hay sugerencias más largas</string>
+    <string name="import_backup_progress_dialog_message">Importación de datos de la libreta</string>
+    <string name="import_backup_fail_message">El proceso de importación ha detectado un problema, por favor, compruebe si el espacio restante de la tarjeta de memoria es mayor que %1$dMB, el programa volverá a comprobar si es necesario importar en el siguiente arranque.</string>
+    <string name="attachment_record_permission_hint">Por favor, compruebe el permiso de registro de sonido concedido</string>
+    <string name="max_content_input_mum_limit">Se ha alcanzado el límite del contenido máximo de entrada.</string>
+    <string name="inscribed_signature">Firma inscrita</string>
+    <string name="no_version">La versión actual es la última</string>
+    <string name="progress_checking">Esta comprobando la versión, por favor espere un momento ...</string>
+    <!--string name="signature_input_hint">Por favor ingrese firma</string-->
+    <string name="aboutus_version_content_text">Version: V</string>
+    <string name="aboutus_copyright_content_text">Copyright © 2015 equipos de comunicación de Shenzhen Gionee Co., Ltd. Todos los derechos reservados</string>
+    <string name="no_space">Sin espacio</string>
+    <string name="file_not_found">Archivo no encontrado</string>
+    <string name="local_file_verify_failed">Fallo la verificación del archivo local</string>
+    <string name="no_sdcard">Ninguna tarjeta SD</string>
+    <string name="low_memory">Baja memoria</string>
+    <string name="dialog_update_compelete">Actualizar! Se detecto la ultima versión</string>
+    <string name="dialog_update_or_not">,\n\nIs se actualizo?</string>
+    <string name="time_am">AM</string>
+    <string name="time_pm">PM</string>
+    <string name="message_media_record_time_max">La hora de registro es máximo, se detiene la grabación</string>
+    <string name="authorization_failed">No se puede obtener el permiso para utilizar este servicio</string>
+    <string name="note_storage_inner">Almacenamiento del teléfono</string>
+    <string name="note_content_notChange_hint">El contenido no cambio y lo ha guardado antes</string>
+    <string name="alert_user_cancle">Salir</string>
+    <string name="sq_q_text_tip">Q:</string>
+    <string name="sq_a_text_tip">A:</string>
+    <string name="encrypt_switch_close">Cerrar</string>
+    <string name="encrypt_select_cancel">Cancelar</string>
+    <string name="download">Descargar</string>
+</resources>

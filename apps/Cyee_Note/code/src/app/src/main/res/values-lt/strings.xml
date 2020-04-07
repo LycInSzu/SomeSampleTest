@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Pastabos</string>
+    <string name="app_name_outside">Pastabos</string>
+    <string name="button_sure">Gerai</string>
+    <string name="button_cancel">Atšaukti</string>
+    <string name="button_delete">Ištrinti</string>
+    <string name="file_note_found">Failas nerastas</string>
+    <string name="search_hint">Paieškos pastabos</string>
+    <string name="search_page_label_title">Rodyti pagal etiketes</string>
+    <string name="note_main_activity_title_layout_title_text">Pastaba</string>
+    <string name="note_action_del_string">Ištrinti</string>
+    <string name="note_action_edit_string">Naujiena</string>
+    <string name="note_action_share_string">Bendrinti naudojant</string>
+    <string name="note_action_del_message">Tikrai ištrinti pažymėtas pastabas?</string>
+    <string name="dialog_negative_text">Atsisakyti</string>
+    <string name="alert_time_early">Ankstesnis laikas, grąžinkite</string>
+    <string name="attachment_enter_camera_fail">Nėra fotoaparato</string>
+    <string name="default_label_life">Gyvenimas</string>
+    <string name="default_label_meeting">Susitikimas</string>
+    <string name="default_label_travel">Kelionė</string>
+    <string name="default_label_inspiration">Įkvėpimas</string>
+    <string name="label_selector_dialog_custom_label_text">Etiketė</string>
+    <string name="label_custom_action_bar_title">Individuali etiketė</string>
+    <string name="label_custom_edit_text_hint">Įvesti etiketę</string>
+    <string name="label_custom_exist">Etiketė yra, įveskite dar kartą</string>
+    <string name="label_custom_delete_attention">Trinant etiketę pastabos nebus ištrintos, tikrai norite ištrinti etiketę?</string>
+    <plurals name="number_of_items_selected">
+        <item quantity="zero">%1$d pažymėta</item>
+        <item quantity="one">%1$d pažymėta</item>
+        <item quantity="other">%1$d pažymėta</item>
+    </plurals>
+    <string name="select_all">Pasirinkti viską</string>
+    <string name="unselect_all">Atšaukti visų pasirinkimą</string>
+    <string name="title_hint">Įvesti antraštę</string>
+    <string name="title_focus_hint">Įvesti antraštę</string>
+    <string name="content_hint">Įvesti turinį</string>
+    <string name="add_image_fail">Nepavyko įtraukti paveikslėlių</string>
+    <string name="note_tip_loading">Įkeliama</string>
+    <string name="note_tip_loadFinish">Nėra turinio</string>
+    <string name="note_tip_search">Pagal užklausą</string>
+    <string name="note_tip_searchFinish">Nėra turinio atitikmenų</string>
+    <string name="create_picture">Kuriamas paveikslėlis...</string>
+    <string name="create_picture_fail">Nepavyko sukurti paveikslėlio</string>
+    <string name="create_picture_create_bmp_fail">Turinys per ilgas, sistema generuoja trikties atvaizdą</string>
+    <string name="create_picture_fail_no_space">Neturite pakankamai vietos atvaizdui sukurti</string>
+    <string name="share_preview">Bendrinti peržiūrą</string>
+    <string name="file_save_toast_text">Atvaizdas saugomas</string>
+    <string name="file_save_fail_toast_text">Nepakanka vietos išsaugoti</string>
+    <string name="file_save_fail_origin_no_exist">Trūksta failo originalo, negalima išsaugoti atvaizdo</string>
+    <string name="date_upgrade_message">Notepad duomenys atnaujinami, minutėlę luktelėkite</string>
+    <string name="import_backup_config_dialog_title">Importuoti Notepad</string>
+    <string name="import_backup_config_dialog_message">Tai naujo dizaino versija, vietinių atsarginių kopijų funkcija nebepalaikoma. Nustatyta, kad atsarginė duomenų kopija neimportuota, laiku pateikite atsarginę duomenų kopiją, kad neprarastumėte.</string>
+    <string name="import_backup_config_dialog_btn_cancel">Atšaukti</string>
+    <string name="import_backup_config_dialog_btn_import">Importuoti</string>
+    <string name="import_backup_config_dialog_checkbox_text">Nebėra patarimų</string>
+    <string name="import_backup_progress_dialog_title">Importuoti</string>
+    <string name="import_backup_progress_dialog_message">Notepad duomenys importuojami</string>
+    <string name="import_backup_fail_message">Kilo importavimo proceso problema, patikrinkite, ar atminties kortelėje liko daugiau nei %1$dMB vietos, programa grįš patikrinti, ar reikia importuoti tolesnę įkrovą.</string>
+    <string name="attachment_record_permission_hint">Patikrinkite suteiktą garso įrašo leidimą</string>
+    <string name="max_content_input_mum_limit">Pasiektas maks. galimo įvesti turinio limitas.</string>
+    <string name="setting_title">Nustatymas</string>
+    <string name="inscribed_signature">Įrašytas parašas</string>
+    <string name="version_update">Versijos naujiniai</string>
+    <string name="no_version">Danartinė versija yra naujausia</string>
+    <string name="progress_checking">Versija tikrinama, minutėlę luktelėkite...</string>
+    <string name="about_us">Apie mus</string>
+    <string name="signature_input_hint">Įveskite parašą</string>
+    <string name="aboutus_version_content_text">Versija:V</string>
+    <string name="aboutus_copyright_content_text">Autorių teisės©2015, Allview Mobile Co., Ltd. Visos teisės saugomos</string>
+    <string name="network_error">tinklo klaida</string>
+    <string name="no_space">nėra vietos</string>
+    <string name="file_not_found">Failas nerastas</string>
+    <string name="local_file_verify_failed">nepavyko patvirtinti vietinio failo</string>
+    <string name="server_error">serverio klaida</string>
+    <string name="upgrading">atnaujinimas</string>
+    <string name="verify_failed">nepavyko patvirtinti</string>
+    <string name="no_sdcard">nėra SD kortelės</string>
+    <string name="low_memory">mažai atminties</string>
+    <string name="dialog_update_compelete">Atnaujinimas! Aptikta naujausia versija V</string>
+    <string name="dialog_update_or_not">,\n\nDabar atnaujinta?</string>
+    <string name="dialog_update">Naujinimas</string>
+    <string name="dialog_install">Įdiegti</string>
+    <string name="down_load_dialog_msg">Atsisiunčiama</string>
+    <string name="app_widget2x2">Pastaba 2x2</string>
+    <string name="app_widget4x4">Pastaba 4x4</string>
+    <string name="time_am">priešpiet</string>
+    <string name="time_pm">popiet</string>
+    <string name="message_media_record_time_max">Įrašo laikas maksimalus, sustabdykite įrašymą</string>
+    <string name="authorization_failed">Negalima gauti leidimo naudoti šią funkciją</string>
+    <string name="note_storage_inner">Telefono atmintis</string>
+    <string name="note_widget_hint">Paspausdami įtraukite pastabą</string>
+    <string name="alert_remaining_chars">Tebereikia ištrinti <xliff:g id="file">%d</xliff:g> simbolius</string>
+    <string name="alert_remaining_char">Tebereikia ištrinti <xliff:g id="file">%d</xliff:g> simbolį</string>
+    <string name="alert_user_ok">Tęsti</string>
+    <string name="alert_user_cancle">Baigti</string>
+    <string name="sq_q_text_tip">K.:</string>
+    <string name="sq_a_text_tip">A.:</string>
+    <string name="encrypt_switch_close">Uždaryti</string>
+    <string name="encrypt_select_cancel">Atšaukti</string>
+    <string name="download">Parsiųsti</string>
+</resources>

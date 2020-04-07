@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/note_tip_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_marginTop="@dimen/note_tip_image_top_margin"
+            android:src="@drawable/note_tip_image" />
+
+        <cyee.widget.CyeeTextView
+            android:id="@+id/note_tip_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/note_tip_text_top_margin"
+            android:textSize="@dimen/note_tip_text_size" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/home_activity_horizontal_margin">
+
+        <com.cydroid.note.app.view.NoteRecyclerView
+            android:id="@+id/search_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:paddingBottom="4dp"
+            android:paddingLeft="@dimen/home_activity_horizontal_margin"
+            android:scrollbars="vertical" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/recycle_ecoration_bg"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/search_label"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_activity_background"
+        android:orientation="vertical">
+
+        <cyee.widget.CyeeTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_page_label_title_height"
+            android:gravity="bottom"
+            android:paddingBottom="@dimen/search_page_label_title_padding_bottom"
+            android:paddingStart="@dimen/search_page_horizon_padding"
+            android:paddingEnd="@dimen/search_page_horizon_padding"
+            android:text="@string/search_page_label_title"
+            android:textColor="@color/search_page_label_title_color"
+            android:textSize="@dimen/search_page_label_title_size" />
+
+        <ListView
+            android:id="@+id/search_label_list"
+            style="@style/ListSelectorEffect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null" />
+    </LinearLayout>
+
+</FrameLayout>

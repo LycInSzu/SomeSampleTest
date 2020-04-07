@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/footer_bar_seperator_line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <ImageView
+            android:id="@id/action_label"
+            style="@style/RippleEffect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="center" />
+
+        <ImageView
+            android:id="@id/action_bill"
+            style="@style/RippleEffect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="center" />
+
+        <ImageView
+            android:id="@id/action_reminder"
+            style="@style/RippleEffect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="center" />
+
+        <ImageView
+            android:id="@id/action_recorde"
+            style="@style/RippleEffect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="center" />
+
+        <ImageView
+            android:id="@id/action_camera"
+            style="@style/RippleEffect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="center" />
+
+        <ImageView
+            android:id="@id/action_gallery"
+            style="@style/RippleEffect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="center" />
+
+    </LinearLayout>
+</merge>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <cyee.widget.CyeeTextView
+        android:id="@+id/cyee_determinate_progress_dialog_id_message"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cyee_determinate_progress_dialog_title_height"
+        android:gravity="start|bottom"
+        android:paddingBottom="@dimen/cyee_determinate_progress_dialog_title_bottom_padding"
+        android:paddingStart="@dimen/cyee_determinate_progress_dialog_title_left_padding"
+        android:textColor="@color/system_stress_color"
+        android:textSize="@dimen/cyee_determinate_progress_dialog_title_text_size" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/cyee_determinate_progress_dialog_message_margin">
+
+        <cyee.widget.CyeeTextView
+            android:id="@+id/cyee_determinate_progress_dialog_id_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/cyee_determinate_progress_dialog_button_number_left_margin"
+            android:textColor="@color/cyee_determinate_progress_dialog_message_text_color"
+            android:textSize="@dimen/cyee_determinate_progress_dialog_message_text_size" />
+
+        <ProgressBar
+            android:id="@+id/cyee_determinate_progress_dialog_id_progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/cyee_determinate_progress_dialog_id_progress"
+            android:progressBackgroundTint="@color/cyee_determinate_progress_background_color"
+            android:progressTint="@color/system_stress_color" />
+    </RelativeLayout>
+
+</LinearLayout>

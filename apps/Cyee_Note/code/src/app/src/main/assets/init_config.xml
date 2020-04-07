@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<notes>
+<!--GIONEE: wanghaiyan 2015-12-21 modify for CR01612555 begin-->
+<!--
+    <note contentSpan="image-0-15-default_note_dream_day.jpg"
+        contentText=":image:&#xA;有时，我们总是习惯，&#xA;坐在一段时光里，&#xA;静静的看着另一段时光，&#xA;时光吞噬了年华，&#xA;青春淹没了等待。&#xA;那里，也由最初的静默，&#xA;悄悄的上演了一段被遗忘编织的梦，&#xA;于是，突兀的青春，牵引着云朵，&#xA;仰望着漫天素白的蒲公英，&#xA;把心轻轻的捏成了记忆的模样，&#xA;那把吉他依旧尘封在那里。"
+        labels="" source="app" time="1432051202371"
+        title="梦·时光" />
+
+    <note contentSpan="image-0-15-default_note_hourglass.jpg"
+        contentText=":image:&#xA;回忆，在时间中沉淀，&#xA;时间，在回忆中消失，&#xA;感触，在重覆中麻木，&#xA;我们，在麻木中重覆，&#xA;爱情，在指缝间承诺，&#xA;指缝，在爱情下交缠，&#xA;没有，在拥有中挣扎，&#xA;拥有，在挣扎里回忆。"
+        labels="生活-旅游" source="app" time="1432051202370"
+        title="时间沙漏" />
+
+    <note contentSpan="image-0-15-default_note_shopping.jpg::bill-16-44-false::bill-45-63-false::bill-64-81-true::bill-82-100-true::bill-101-118-false"
+        contentText=":image:&#xA;:bill:The Body Shop&#xA;:bill:珮夫人&#xA;:bill:面膜&#xA;:bill:护肤品&#xA;:bill:包包"
+        labels=""
+        source="app" time="1432051202369" title="血拼HK清单" />
+
+    <note contentSpan=""
+        contentText="从客厅洒进来昏暗的橙色灯光，&#xA;房间弥漫轻柔的音乐声，&#xA;棉被里露出的半个身体，&#xA;脑袋下枕着宜家蔬菜娃娃，&#xA;小狗身上散发的独特动物味道，&#xA;屏幕上敲打出漂亮的中文字体，&#xA;没有目的及主题的日志，&#xA;这是每天都期待的最放松的时刻。"
+        labels="" source="app" time="1432051202368" title="" />
+
+    <note contentSpan=""
+        contentText="时间轮回，回忆重播，&#xA;画面浮现，像是昨天，&#xA;我像一个瞌睡虫，&#xA;坐着时光机穿梭回忆，&#xA;会意的微笑，由内而发，&#xA;时间停止，那一刻醒了，&#xA;原来只是自导自演，&#xA;快乐不缺乏伤感，&#xA;完美不缺乏遗憾，&#xA;一切都是那么自然、随性，&#xA;勾勒出那现实与幻想的完美与不完美，&#xA;此时此景只有那一丝丝的念想。"
+        labels="" source="app" time="1432051202367" title="忆" />
+
+    <displaymode displaymode="2" />
+
+    <!--    <note
+            title="近期待办事项"
+            contentText=":bill:早上10点开周会&#xA;:bill:整理会议记录发送给相关同事&#xA;:bill:中午12点半国航航班&#xA;:bill:下午汇报近期市场工作&#xA;:bill:处理相关邮件&#xA;:bill:拟定明天主要工作内容"
+            contentSpan="bill-0-23-true::bill-24-52-false::bill-53-78-false::bill-79-104-false::bill-105-126-true::bill-127-152-false"
+            labels=""
+            time="1432051202366"
+            source="app"
+            />
+
+        <note
+            title="记事本头脑风暴记录"
+            contentText=":image:&#xA;用户画像：商务人士。&#xA;产品定位：根据商务人士品味定制的“耐用型”记事本。&#xA;设计理念：视觉设计充分体现商务人士的格调，采用浅棕色主色调，搭配轻牛皮纸质感来营造简约、耐用的感受。&#xA;交互设计和功能基于简单实用的宗旨，重点打造快捷记录功能，避免功能累赘，交互复杂化。&#xA;提炼重点功能：&#xA;1.轻牛皮纸视觉风格背景。&#xA; 2.待办事项功能。&#xA;3.定时提醒功能。&#xA;4.添加录音、图片、实时拍摄。&#xA;5.标签式分类整理。&#xA;6.关键字内容搜索。&#xA;7.图片式分享，不受限于第三方平台。"
+            contentSpan="image-0-15-default_note_brainstorming.jpg"
+            labels="会议"
+            time="1432051202365"
+            source="app"
+            />
+
+        <note
+            title=""
+            contentText="1.传统货币基金&#xA;优点：由于申购赎回相对没有那么频繁，收益率较为稳定，也相对较高。这一类产品一般没有申购赎回的限额，不用担心在资金紧张时赎回不了或者资金宽松时申购不了。&#xA;缺点：流动性差。它购买需要2个工作日确认，确认后才可以赎回，而赎回到账一般也需要2个工作日，这样来看的话，需要确定资金在4个工作日内不用才可以放心购买。&#xA;2.银行理财产品&#xA;优点：大部分没有限额，流动性好。在买入卖出上限制比较少，操作更为灵活，当天买入，当天就可以退出。&#xA;缺点：具有门槛的限制，信息披露不透明。需要开立相应银行账户才可以购买，且一般都以5万元起。&#xA;3.交易所国债逆回购&#xA;优点：当日资金可用的流动性和安全性都比较好。这类工具选定购买期限，到期自动转回。&#xA;缺点：以年化收益率报价，价格波动较大。如果现金管理时间不确定，需要持续不断的进行1天逆回购，而其他工具只需要买入，需要现金时卖出即可。"
+            contentSpan=""
+            labels=""
+            time="1432051202364"
+            source="app"
+            />
+
+        <note
+            title="周游"
+            contentText=":image:&#xA;出差、加班、开会，好不容易忙完公司的事情，&#xA;终于可以好好的给自己放松一下了，&#xA;周末，带着一家人去了海边度假，&#xA;感觉自己好久没有抽出时间来陪伴他们，&#xA;看着他们漫步在海边，&#xA;心里还是有些愧疚…"
+            contentSpan="image-0-15-default_note_travel.jpg"
+            labels=""
+            time="1432051202363"
+            source="app"
+            />
+
+        <displaymode
+            displaymode="1"/>
+            -->
+
+</notes>

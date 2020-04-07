@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@+id/preview_activity_title_layout_back"
+        style="@style/RippleEffect"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:scaleType="center"/>
+
+    <TextView
+        android:id="@+id/share_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/note_main_activity_title_layout_title_left_margin"
+        android:layout_toStartOf="@+id/preview_activity_title_layout_share"
+        android:layout_toEndOf="@+id/preview_activity_title_layout_back"
+        android:gravity="left|center_vertical"
+        android:text="@string/share_preview"
+        android:textSize="@dimen/note_main_activity_title_layout_title_text_size" />
+
+    <ImageView
+        android:id="@+id/preview_activity_title_layout_share"
+        style="@style/RippleEffect"
+        android:layout_width="@dimen/note_main_activity_title_icon_width"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@+id/preview_activity_title_layout_save"
+        android:visibility="gone"
+        android:scaleType="center" />
+
+    <ImageView
+        android:id="@+id/preview_activity_title_layout_save"
+        style="@style/RippleEffect"
+        android:layout_width="@dimen/note_main_activity_title_icon_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:scaleType="center" />
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="note_main_activity_title_layout_title_text_color">#99000000</color>
+    <color name="note_main_activity_title_layout_icon_tint_color">#828282</color>
+
+    <color name="action_bar_image_color_unabled">#cecece</color>
+    <color name="action_bar_image_color_normal">#828282</color>
+    <color name="new_note_title_share_color_disable">#cecece</color>
+    <color name="new_note_title_color_enable">#828282</color>
+    <!--<color name="abstract_note_activity_root_bg_color">#fafafa</color>-->
+    <color name="dialog_background">#fdfdfd</color>
+    <color name="home_activity_background">#fafafa</color>
+    <color name="search_view_background_color">#1a000000</color>
+    <color name="label_custom_edit_text_background">#1a000000</color>
+
+    <color name="action_bar_text_color_normal">#80000000</color>
+    <color name="action_bar_text_color_unabled">#30000000</color>
+    <color name="note_mian_acitivity_window_bg">#fafafa</color>
+    <color name="recommend_search_panel_bg_color">#1a000000</color>
+
+
+</resources>

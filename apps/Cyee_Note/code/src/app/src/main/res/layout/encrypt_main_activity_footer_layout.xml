@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/footer_encrypt_action_container"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/note_main_activity_action_mode_footer_layout_divide_height"
+        android:background="@color/note_main_activity_action_mode_footer_layout_divide_color" />
+
+    <LinearLayout
+        android:id="@+id/action_del_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="top|center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/footer_decrypt_action"
+            style="@style/RippleEffect"
+            android:layout_width="@dimen/note_main_activity_action_mode_footer_layout_item_width"
+            android:layout_height="match_parent"
+            android:drawablePadding="@dimen/note_main_activity_action_mode_footer_layout_item_drawable_padding"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/note_main_activity_action_mode_footer_layout_item_top_padding"
+            android:text="@string/note_action_decrypt_string"
+            android:textColor="@color/action_bar_text_color"
+            android:textSize="@dimen/note_main_activity_action_mode_footer_layout_item_text_size" />
+
+        <TextView
+            android:id="@+id/footer_delete_action"
+            style="@style/RippleEffect"
+            android:layout_width="@dimen/note_main_activity_action_mode_footer_layout_item_width"
+            android:layout_height="match_parent"
+            android:drawablePadding="@dimen/note_main_activity_action_mode_footer_layout_item_drawable_padding"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/note_main_activity_action_mode_footer_layout_item_top_padding"
+            android:text="@string/note_action_del_string"
+            android:textColor="@color/action_bar_text_color"
+            android:textSize="@dimen/note_main_activity_action_mode_footer_layout_item_text_size" />
+    </LinearLayout>
+
+
+</RelativeLayout>

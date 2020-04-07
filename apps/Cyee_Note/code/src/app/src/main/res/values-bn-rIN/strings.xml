@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- common string -->
+  <string name="app_name">নোট</string>
+  <string name="app_name_outside">নোট</string>
+  <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626813 begin -->
+  <string name="button_sure">ওকে</string>
+  <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626813 end -->
+  <string name="button_cancel">বাতিল করুন</string>
+  <string name="button_delete">মুছে দেবেন</string>
+    <string name="file_note_found">ফাইল খুজে পাওয়া যায়নি</string>
+  <!-- home activity, search-->
+  <string name="search_hint">নোট খুঁজুন</string>
+  <string name="search_page_label_title">লেবেল অনুসারে দেখুন</string>
+  <string name="note_main_activity_title_layout_title_text">নোট</string>
+    <string name="note_action_del_string">মুছে দেবেন</string>
+  <!-- gionee wanghaiyan modify on 2016-12-07 for 40606 begin -->
+  <string name="note_action_edit_string">নতুন</string>
+  <!-- gionee wanghaiyan modify on 2016-12-07 for 40606 end -->
+  <string name="note_action_share_string">শেয়ার করুন</string>
+  <string name="note_action_del_message">নির্বাচিত নোটগুলি ডিলিট করতে নিশ্চিত?</string>
+  <string name="dialog_negative_text">খারিজ করুন</string>
+    <string name="alert_time_early">সময় বর্তমানের থেকে পেছনে, অনুগ্রহ করে রিসেট করুন</string>
+  <!-- Edit page , attachment -->
+    <string name="attachment_enter_camera_fail">কোন ক্যামেরা নেই</string>
+  <!--label select dialog  -->
+  <string name="default_label_life">জীবন</string>
+  <string name="default_label_meeting">মিটিং</string>
+  <string name="default_label_travel">ভ্রমণ</string>
+  <string name="default_label_inspiration">অনুপ্রেরণা</string>
+  <string name="label_selector_dialog_custom_label_text">লেবেল</string>
+  <!--label select dialog  -->
+  <string name="label_custom_action_bar_title">কাস্টম লেবেল</string>
+  <string name="label_custom_edit_text_hint">লেবেল ইনপুট করুন</string>
+  <string name="label_custom_exist">লেবেল আছে, আবার ইনপুট করুন</string>
+  <string name="label_custom_delete_attention">লেবেলটি ডিলিট করা থাকলে এটি নোটগুলিকে ডিলিট করবে না, আপনি কি লেবেলটি ডিলিট করতে নিশ্চিত?</string>
+  <plurals name="number_of_items_selected">
+    <item quantity="zero">%1$d নির্বাচিত</item>
+    <item quantity="one">%1$d নির্বাচিত</item>
+    <item quantity="other">%1$d নির্বাচিত</item>
+  </plurals>
+  <string name="select_all">সবগুলি নির্বাচন করুন</string>
+  <string name="unselect_all">সবগুলি অনির্বাচিত করুন</string>
+  <!--NewNoteActivity-->
+  <string name="title_hint">শিরোনাম ইনপুট করুন</string>
+  <string name="title_focus_hint">শিরোনাম ইনপুট করুন</string>
+  <string name="content_hint">কণ্টেণ্ট ইনপুট করুন</string>
+  <string name="add_image_fail">ছবি যোগ করতে ব্যর্থ</string>
+  <string name="note_tip_loading">লোড হচ্ছে</string>
+  <string name="note_tip_loadFinish">কোনো কণ্টেণ্ট নেই</string>
+  <string name="note_tip_search">জিজ্ঞাসাধীন</string>
+  <string name="note_tip_searchFinish">কণ্টেণ্টের কোন মিল পাওয়া যায়নি</string>
+  <!--PreviewPictureMakeProxy-->
+  <string name="create_picture">ছবি তৈরি করা হচ্ছে...</string>
+  <string name="create_picture_fail">ছবি জেনারেট করতে ব্যর্থ হয়েছে</string>
+  <string name="create_picture_create_bmp_fail">কণ্টেণ্ট অনেক বড়, সিস্টেমটি বিফলতার একটি ছবি উৎপন্ন করেছে</string>
+  <string name="create_picture_fail_no_space">একটি ছবি বানানোর মতো স্টোরেজে পর্যাপ্ত জায়গা নেই</string>
+  <!--PreviewActivity-->
+    <string name="share_preview">প্রিভিউ শেয়ার করুন</string>
+    <string name="file_save_toast_text">"এতে ছবি সেভ হয় "</string>
+  <string name="file_save_fail_toast_text">সেভ করার জন্য পর্যাপ্ত জায়গা নেই</string>
+  <string name="file_save_fail_origin_no_exist">আসল ফাইলটি নেই, ছবিটি সেভ করা যাবে না</string>
+  <string name="date_upgrade_message">নোটপ্যাড ডেটা অপলোড করছে, অনুগ্রহ করে এক মুহুর্ত অপেক্ষা করুন</string>
+  <string name="import_backup_config_dialog_title">নোটপ্যাড ইম্পোর্ট</string>
+  <string name="import_backup_config_dialog_message">নতুন ডিজাইনের এই ভার্সনে লোকাল ব্যাকআপ ফাংশন আর সাপোর্ট করে না. শনাক্ত করা হয়েছে যে আপনার ব্যাকআপ করা ডেটা একনও ইম্পোর্ট করা হয়নি, অনুগ্রহ করে সময়মত সেটি ইম্পোর্ট করুন নাহলে সেটি হারিয়ে যেতে পারে.</string>
+  <string name="import_backup_config_dialog_btn_cancel">বাতিল করুন</string>
+  <string name="import_backup_config_dialog_btn_import">ইম্পোর্ট করুন</string>
+  <string name="import_backup_config_dialog_checkbox_text">আর কোন পরামর্শ নেই</string>
+  <string name="import_backup_progress_dialog_title">ইম্পোর্ট করুন</string>
+  <string name="import_backup_progress_dialog_message">নোটপ্যাড ডেটা ইম্পোর্ট করা হচ্ছে</string>
+  <string name="import_backup_fail_message">ইম্পোর্ট প্রক্রিয়াতে একটি সমস্যা হয়েছে, আপনার মেমরি কার্ডের বাকি স্পেস %1$dMB এর বেশি আছে কিনা চেক করুন, পরবর্তী বুটে আপনার এটি ইম্পোর্ট করা প্রয়োজন কিনা তা প্রোগ্রামটি চেক করবে.</string>
+    <string name="attachment_record_permission_hint">অনুগ্রহ করে সাউন্ড রেকর্ডের অনুমতি আছে কি নেই চেক করুন</string>
+  <string name="max_content_input_mum_limit">কণ্টেণ্ট ইনপুটের সর্বোচ্চ সীমায় পৌঁছে গেছে.</string>
+  <string name="max_pic_input_mum_limit">ছবির সংখ্যা সর্বোচ্চ সীমায় পৌঁছে গেছে.</string>
+  <string name="setting_title">সেটিং</string>
+  <string name="inscribed_signature">অঙ্কিত স্বাক্ষর</string>
+  <string name="version_update">ভার্সন আপডেট</string>
+  <string name="no_version">বর্তমান ফাইলটি লেটেস্ট</string>
+  <string name="progress_checking">ভার্সন চেক করা হচ্ছে, অনুগ্রহ করে একটু অপেক্ষা করুন...</string>
+    <string name="about_us">আমাদের সম্পর্কে</string>
+  <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626568 begin -->
+  <string name="signature_input_hint">অনুগ্রহ করে সই ইনপুট করুন</string>
+  <!-- gionee wanghaiyan modify on 2016-1-20 for CR01626568 end -->
+    <string name="aboutus_version_content_text">ভার্সন:V</string>
+  <string name="aboutus_copyright_content_text">কপিরাইট©2015 Shenzhen Gionee communication equipment Co., Ltd. সর্বসত্ত্ব সংরক্ষিত.</string>
+  <string name="network_error">নেটওয়ার্ক ত্রুটি</string>
+  <string name="no_space">কোন স্পেস নেই</string>
+  <string name="file_not_found">ফাইল খুজে পাওয়া যায়নি</string>
+  <string name="local_file_verify_failed">লোকাল ফাইল যাচাই করতে ব্যর্থ</string>
+  <string name="server_error">সার্ভার ত্রুটি</string>
+  <string name="upgrading">আপগ্রেড হচ্ছে...</string>
+  <string name="verify_failed">যাচাইকরণ ব্যর্থ</string>
+  <string name="no_sdcard">কোন SD কার্ড নেই</string>
+  <string name="low_memory">কম মেমরি</string>
+  <string name="dialog_update_compelete">একটা নতুন ভার্সন পাওয়া গেছে. অনুগ্রহ করে লেটেস্ট ভার্সনে আপগ্রেড করুন.</string>
+  <string name="dialog_update_or_not">,\n\nআপডেট হয়ে গেছে?</string>
+  <string name="dialog_update">আপডেট করুন</string>
+  <string name="dialog_install">ইনস্টল করুন</string>
+    <string name="down_load_dialog_msg">ডাউনলোড হচ্ছে...</string>
+  <string name="down_load_paused_msg">ডাউনলোড পজ করা হয়েছে</string>
+  <string name="widget_click_add_note">নোট যোগ করতে ক্লিক করুন</string>
+  <string name="app_widget2x2">Note2x2</string>
+  <string name="app_widget4x4">Note4x4</string>
+  <string name="time_am">AM</string>
+  <string name="time_pm">PM</string>
+  <string name="message_media_record_time_max">রেকর্ডের সময় সর্বোচ্চতে পৌঁছে গেছে. অনুগ্রহ করে রেকর্ডিং বন্ধ করুন.</string>
+    <string name="ai_activity_title">AI</string>
+  <string name="ami_recommend_panel_title">Ami Recommend</string>
+  <string name="favor_recommend_panel_title">ফেভর সুপারিশ</string>
+  <string name="recommend_search_hint_text">ইনপুট কী ওয়ার্ড</string>
+  <string name="authorization_failed">এই বৈশিষ্ট্য ব্যবহার করার অনুমতি পাওয়া যাবে না</string>
+  <string name="ai_activity_not_network_tip">বর্তমান নেটওয়ার্কের সংযোগ বিচ্ছিন্ন হয়েছে, কিন্তু নেটওয়ার্ক সার্চও</string>
+    <string name="note_storage_inner">ফোন স্টোরেজ</string>
+    <string name="alert_remaining_chars">এখনও আপনাকে <xliff:g id="file">%d</xliff:g>অক্ষর ডিলিট করতে হবে</string>
+  <string name="alert_remaining_char">এখনও আপনাকে <xliff:g id="file">%d</xliff:g>অক্ষর ডিলিট করতে হবে</string>
+  <string name="data_flow_alert_user_title">নোট ব্যবহার করতে স্বাগত</string>
+  <string name="data_flow_alert_user_content">অ্যাক্সেস করতে অনুমতি দেয় যখন অ্যাপ ব্যবহার করে:\nনেটওয়ার্ক সংযোগস্থাপন, অডিও রেকর্ড করে, ফোটো নেয়, আপনার এক্সটারনাল স্টোরেজের কণ্টেণ্ট অ্যাক্সেস করে \nএগোতে চান?</string>
+  <string name="data_flow_alert_user_checkbox">কখনও মনে করাবে না</string>
+  <string name="alert_user_title_str">সিস্টেম প্রম্পট</string>
+  <string name="alert_user_ok">এগিয়ে যান</string>
+  <string name="alert_user_cancle">বেরিয়ে যান</string>
+    <string name="notification_title">ছবি ডাউনলোড করুন</string>
+  <string name="download_poto_hint">তে ছবি ডাউনলোড করুন：</string>
+  <string name="download_compelete">ডাউনলোড সম্পূর্ণ</string>
+  <string name="download_unsurpport_hint">সাপোর্ট না করা টাইপ</string>
+  <string name="vsq_tip_text">* পাসওয়ার্ড সুরক্ষার প্রশ্নের উত্তর নিশ্চিত করতে</string>
+    <string name="vsq_confirm_btn_text">নিশ্চিত করুন</string>
+    <string name="choose_question_dialog_title">প্রশ্ন</string>
+  <string name="setting_secret_name">এনক্রিপশন রিমাইন্ডিং</string>
+  <string name="setting_secret_tip">নোটপ্যাডের ব্যক্তিগত কন্টেন্টের জন্য এনক্রিপশন রিমাইন্ডিং</string>
+  <string name="guideline_enter_private_album">হোম পেজে দু-আঙ্গুলে নীচে স্লাইড করুন এবং ব্যক্তিগত নোট এন্টার করুন.</string>
+  <string name="note_action_encrypt_string">এনক্রিপ্ট করবেন</string>
+  <string name="note_action_decrypt_string">ডিক্রিপ্ট করুন</string>
+  <string name="password_set_successed_title">সেট সফল</string>
+  <string name="modified_password">পাসওয়ার্ড পরিবর্তন করুন</string>
+  <string name="modified_protect_question">পাসওয়ার্ড সুরক্ষা প্রশ্ন পরিবর্তন করুন</string>
+  <string name="secret_room">পিছনের রুম</string>
+  <string name="forget_password">পাসওয়ার্ড ভুলে গেছেন</string>
+  <string name="setting_password">আপনার চার ডিজিটের পাসওয়ার্ড সেট করুন</string>
+  <string name="verification_password">পাসওয়ার্ড যাচাই করুন</string>
+  <string name="password_error_hint">পাসওয়ার্ডটি ভুল, %1$s বার এন্টার করতে পারেন</string>
+  <string name="setting_password_hint">প্রাইভেট নোট ব্যবহার করার আগে, অনুগ্রহ করে পাসওয়ার্ড সেট করুন</string>
+  <string name="ensure_password">পাসওয়ার্ড নিশ্চিত করুন</string>
+  <string name="password_not_match">পাসওয়ার্ড মেলে না, পুনরায় চেষ্টা করুন</string>
+  <string name="enter_password">অনুগ্রহ করে আপনার পাসওয়ার্ড দিন</string>
+  <string name="enter_password_later">অনুগ্রহ করে %1$s মিনিটে পুনরায় চেষ্টা করুন</string>
+  <string name="verify_sq_activity_title">পাসওয়ার্ড সুরক্ষা যাচাই করুন</string>
+  <string name="setting_password_protect_QA">পাসওয়ার্ড সুরক্ষা সেট করুন</string>
+  <string name="answer_incorrect">ভুল উত্তর</string>
+    <string name="sq_q_text_tip">Q:</string>
+  <string name="sq_a_text_tip">এ:</string>
+  <string name="note_content_notChange_hint">কণ্ট্যাক্ট পরিবর্তন করা হয়নি এবং আপনি আগেই সেভ করেছেন</string>
+    <string name="encrypt_hint_title">টিপস এনক্রিপ্ট করুন</string>
+  <string name="encrypt_hint_content">নোটের গোপনীয়তাকে লিক করার ঝুঁকি আছে, এটি প্রস্তাবিত যে এনক্রিপ্ট করুন </string>
+  <string name="encrypt_hint_manager_dialog_sure">এনক্রিপ্ট করবেন</string>
+  <string name="successful_modification">সফলভাবে পরিবর্তন করা হয়েছে</string>
+  <string name="password_set_successed_congratulations">অভিনন্দন!</string>
+  <string name="password_set_successed">আপনি সফলভাবে পাসওয়ার্ড সেট করেছেন</string>
+  <string name="password_set_successed_tips">অনুগ্রহ করে নিম্নলিখিত ম্যাটার নোট করুন:</string>
+  <string name="password_set_successed_tips_first">1. সিলেক্ট করবেন না. ক্লিনিং টুল ব্যবহার করার সময় মিডিয়া নোট করুন, অন্যথা এনক্রিপ্ট করা নোটপ্যাডের ছবি এবং টেপ ব্রাউজ করা যাবে না.</string>
+  <string name="password_set_successed_tips_second">2. নোটপ্যাড এনক্রিপটিং-এর পর অ্যাপ্লিকেশন আনইনস্টল করবেন না, তাহলে এনক্রিপ্ট করা নোটপ্যাড আর পাবেন না.</string>
+  <string name="password_set_successed_sure">ওকে</string>
+  <string name="encrypt_main_note_tip_load_finish">এখানে এটি খালি. আপনি গোপন কিছু যোগ করতে চান? একটি নোটপ্যাড ব্রাউজ করার সময় \"এনক্রিপশন\" বোতামে ক্লিক করুন.</string>
+  <!-- GIONEE wanghaiyan 2016-12-17 modify for 47298 begin-->
+  <string name="title_more_dialog_title">অন্যান্য</string>
+  <!-- GIONEE wanghaiyan 2016-12-17 modify for 47298 end-->
+  <string name="confirm_protect_question"> সেভড পাসওয়ার্ড সুরক্ষার প্রশ্নের উত্তর নিশ্চিত করুন</string>
+  <string name="protect_question_empty">এই নিরাপত্তা প্রশ্ন খালি রাখা যাবে না</string>
+  <string name="encrypt_switch_close">বন্ধ করুন</string>
+  <string name="encrypt_switch_open">খুলুন</string>
+  <string name="security_os_footer_add">যোগ করুন</string>
+  <string name="security_os_footer_search">সার্চ করুন</string>
+  <string name="security_os_footer_secrete_space">প্রাইভেট স্পেস</string>
+  <string name="encrypt_main_activity_security_os_title">নোট এনক্রিপ্ট করা হয়েছে</string>
+  <string name="encrypt_main_activity_security_os_add_tip">কোনো কণ্টেণ্ট নেই</string>
+  <string name="encrypt_select_confirm">নিশ্চিত করুন</string>
+  <string name="encrypt_select_cancel">বাতিল করুন</string>
+  <string name="encrypt_select_count_text">কোন আইটেম সিলেক্ট করা নেই</string>
+  <string name="encrypt_main_note_security_os_tip_load_finish">কোন নোট যোগ করা হয়নি.</string>
+  <string name="encrypt_note_action_del_message">নির্বাচিত নোট ডিলিট করতে আপনি নিশ্চিত?\nনির্বাচিত নোটের কণ্টেণ্টটি চিরতরের মত ডিলিট হয়ে যাবে!</string>
+  <string name="encrypt_finish_hint_for_security_os">ব্যক্তিগত স্পেসে এনক্রিপ্ট করা হয়েছে</string>
+  <string name="decrypt_finish_hint">ডিক্রিপ্ট করা সম্পূর্ণ হয়ে গেছে</string>
+  <string name="add_pics">ছবিটি যোগ করুন</string>
+  <string name="encrypt_fail">এনক্রিপশন ব্যর্থ</string>
+  <string name="decrypt_fail">ডিক্রিপ্ট করা ব্যর্থ</string>
+  <string name="encrypt_success">এনক্রিপশন সফল</string>
+    <string name="delete_hint">ডিলিট হচ্ছে, অনুগ্রহ করে পরে আবার চেষ্টা করুন</string>
+  <string name="encrypt_hint">এনক্রিপ্ট হচ্ছে, অনুগ্রহ করে এটি পরে পুনরায় চেষ্টা করুন</string>
+  <string name="decrypt_hint">ডিক্রিপ্ট হচ্ছে, অনুগ্রহ করে এটি পরে আবার চেষ্টা করুন</string>
+  <string name="recovery_hint">রিকভার হচ্ছে, অনুগ্রহ করে এটি পরে পুনরায় চেষ্টা করুন</string>
+  <string name="partial_encrypt">%1$s এনক্রিপশন সফল, %2$s এনক্রিপশন বিফল. </string>
+  <string name="partial_decrypt">%1$s ডিক্রিপশন সফল, %2$s ডিক্রিপশন বিফল. </string>
+  <!--Trash-->
+  <string name="trash">ট্র্যাশ</string>
+  <!-- GIONEE wanghaiyan 2017-02-05 modify for 67550 begin-->
+  <string name="trash_first_delete_alert">ডিলিট করা নোট থ্র্যাশে মুভ হবে(সেটিং->থ্র্যাশ) এবং তারা সাত দিন পরে একবারে ক্লিন আপ হয়ে যাবে. \n আপনি তাদের থ্র্যাশে ডিলিট বা রিকভার করতে পারেন.</string>
+  <!-- GIONEE wanghaiyan  2017-02-05 modify for 67550 end-->
+  <string name="trash_recover">উদ্ধার</string>
+  <plurals name="trash_left_days">
+    <item quantity="zero">"%1$d দিন বাকি আছে"</item>
+    <item quantity="one">"%1$d দিন বাকি আছে"</item>
+    <item quantity="other">"%1$d দিন বাকি আছে"</item>
+  </plurals>
+  <string name="trash_recover_hint">রিকভার হচ্ছে, অনুগ্রহ করে এটি পরে পুনরায় চেষ্টা করুন</string>
+  <string name="trash_delete_message">নির্বাচিত নোট একেবারের জন্য ডিলিট করতে নিশ্চিত?</string>
+    <string name="note_action_search_string">সার্চ করুন</string>
+  <string name="note_action_setting_string">সেটিং</string>
+  <string name="unkown">অজ্ঞাত</string>
+  <string name="download">ডাউনলোড করুন</string>
+  <string name="down_load_fail_msg">ডাউনলোড বিফল</string>
+  <string name="install_amiweather_tip">Ami Weather আবহাওয়ার পূর্বাভাষ দেবে, ফোনের শনাক্তকরণে Ami Weather ইন্সটল করা নেই, Weather-এ গিয়ে ডাউনলোড এবং ইন্সটল করুন</string>
+  <string name="install_amicalendar_tip">Ami calendar ক্যালেণ্ডার পরিষেবা দেয়, ফোনের সনাক্তকরণ Ami calendar-এ ইন্সটল হয়নি, ডাউনলোড এবং ইন্সটল করতে চান কিনা</string>
+  <string name="no_network">নেটাওয়ার্ক ব্যবহার হয়নি</string>
+  <string name="no_pictures">স্টোরেজ কার্ডে কোন ছবি নেই.</string>
+
+    <string name="add_attach_fail">দুঃখিত, এই ফাইল ফরম্যাট সাপোর্ট করে না.</string>
+  <string name="long_bitmap_add_failed">ছবির দৈর্ঘ্য সীমার বাইরে, যোগ করা ব্যর্থ হয়ে গেছে</string>
+</resources>

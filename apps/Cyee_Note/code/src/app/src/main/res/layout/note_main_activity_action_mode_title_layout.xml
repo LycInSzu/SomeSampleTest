@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@id/note_main_activity_action_mode_title_layout_back"
+        style="@style/RippleEffect"
+        android:layout_width="@dimen/note_main_activity_action_mode_title_layout_back_icon_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:scaleType="center" />
+    <!--Gionee wanghaiyan 2017-4-11 modify for 107499 begin-->
+    <TextView
+        android:id="@id/note_main_activity_action_mode_title_layout_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/note_main_activity_action_mode_title_layout_text_left_margin"
+        android:layout_toStartOf="@id/note_main_activity_action_mode_title_layout_select"
+        android:layout_toEndOf="@id/note_main_activity_action_mode_title_layout_back"
+        android:ellipsize="marquee"
+        android:gravity="start|center_vertical"
+        android:singleLine="true"
+        android:textSize="@dimen/note_main_activity_action_mode_title_layout_text_size" />
+    <!--Gionee wanghaiyan 2017-4-11 modify for 107499 end-->
+    <TextView
+        android:id="@id/note_main_activity_action_mode_title_layout_select"
+        style="@style/RippleEffect"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:gravity="end|center_vertical"
+        android:paddingStart="@dimen/note_main_activity_action_mode_title_layout_select_btn_left_padding"
+        android:paddingEnd="@dimen/note_main_activity_action_mode_title_layout_select_btn_right_padding"
+        android:textSize="@dimen/note_main_activity_action_mode_title_layout_select_button_text_size" />
+
+</RelativeLayout>

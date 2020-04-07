@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- home activity, note, note item -->
+    <item name="note_item_container" type="id" />
+    <item name="note_item_image" type="id" />
+    <item name="note_item_reminder" type="id" />
+    <item name="note_item_title" type="id" />
+    <item name="note_item_checkbox" type="id" />
+    <item name="note_item_time" type="id" />
+    <item name="note_item_content" type="id" />
+    <item name="note_item_content_onclick_view" type="id" />
+    <item name="note_item_card_bottom_view" type="id" />
+
+    <item name="abstract_note_activity_layout_root" type="id" />
+    <item name="abstract_note_activity_layout_head" type="id" />
+    <item name="abstract_note_activity_layout_title" type="id" />
+    <item name="abstract_note_activity_layout_content" type="id" />
+    <item name="abstract_note_activity_layout_footer" type="id" />
+
+    <item name="note_main_activity_title_layout_search" type="id" />
+    <item name="note_main_activity_title_layout_edit" type="id" />
+
+    <item name="note_main_activity_action_mode_title_layout_back" type="id" />
+    <item name="note_main_activity_action_mode_title_layout_text" type="id" />
+    <item name="note_main_activity_action_mode_title_layout_select" type="id" />
+
+    <item name="action_label" type="id" />
+    <item name="action_bill" type="id" />
+    <item name="action_reminder" type="id" />
+    <item name="action_gallery" type="id" />
+    <item name="action_recorde" type="id" />
+    <item name="action_camera" type="id" />
+    <item name="action_online_image" type="id" />
+
+    <item name="new_note_activity_title_layout_back" type="id" />
+    <item name="new_note_activity_title_layout_share" type="id" />
+    <item name="new_note_activity_title_layout_delete" type="id" />
+
+    <item name="note_main_activity_search_title_layout_back" type="id" />
+
+    <item name="label_note_activity_title_layout_back" type="id" />
+    <item name="label_note_activity_title_layout_title" type="id" />
+
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string-array name="password_protect_question">
+        <item>Care este data ta de naștere?</item>
+        <item>Care este activitatea preferată?</item>
+        <item>Care este sportul preferat?</item>
+        <item>Care este idolul preferat?</item>
+        <item>Care este numele celui mai apropiat prieten?</item>
+    </string-array>
+</resources>

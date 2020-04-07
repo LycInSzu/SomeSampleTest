@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_selector_dialog_custom_label_height"
+        android:paddingStart="@dimen/label_selector_dialog_padding_left">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="7dip"
+            android:singleLine="true"
+            android:text="@string/label_selector_dialog_custom_label_text"
+            android:textColor="@color/system_stress_color"
+            android:textSize="@dimen/label_selector_dialog_custom_label_text_size" />
+
+        <cyee.widget.CyeeCheckBox
+            android:id="@+id/label_select_custom_label"
+            style="@style/ChickBgEffect"
+            android:layout_width="@dimen/label_selector_dialog_checkbox_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="4dip"
+            android:layout_marginEnd="@dimen/label_selector_dialog_checkbox_margin_right"
+            android:scaleType="centerInside" />
+
+    </RelativeLayout>
+
+    <com.cydroid.note.app.LabelSelectorListView
+        android:id="@+id/label_select_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null" />
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="app_info_load_picture" type="id" />
+    <item name="app_info_load_arrow" type="id" />
+    <item name="app_info_load_name" type="id" />
+    <dimen name="info_load_arrow_translateX">4dp</dimen>
+    <dimen name="info_load_arrow_translateY">4dp</dimen>
+    <dimen name="info_load_text_top_margin">9dp</dimen>
+    <dimen name="info_load_text_size">12sp</dimen>
+    <color name="info_load_text_color">#806b5b4e</color>
+</resources>

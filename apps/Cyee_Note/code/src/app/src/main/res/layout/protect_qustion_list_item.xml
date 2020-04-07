@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/question_select_dialog_item">
+
+    <TextView
+        android:id="@+id/question_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/question_select_dialog_item"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:paddingEnd="@dimen/question_select_dialog_text_padding_right"
+        android:paddingStart="@dimen/question_select_dialog_padding"
+        android:textColor="@color/question_select_dialog_text_color"
+        android:textSize="@dimen/question_select_dialog_text_size" />
+
+    <RadioButton
+        android:id="@+id/question_list_item_select"
+        android:layout_width="@dimen/question_select_dialog_check_height_width"
+        android:layout_height="@dimen/question_select_dialog_check_height_width"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/question_select_dialog_padding"
+        android:clickable="false"
+        android:focusable="false" />
+</RelativeLayout>

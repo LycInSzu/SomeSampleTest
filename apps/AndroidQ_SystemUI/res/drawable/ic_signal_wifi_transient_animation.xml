@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<animated-vector
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@drawable/ic_qs_wifi_disconnected_dg" >
-    <target
-        android:name="path_qs_wifi"
-        android:animation="@anim/ic_qs_transient_animation" />
-</animated-vector>

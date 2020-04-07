@@ -1,8 +1,0 @@
-java_library_static {
-    name: "com.mediatek.keyguard.ext",
-    srcs: ["src/**/*.java"],
-    libs: [
-        "mediatek-framework",
-        "mediatek-common",
-    ],
-}

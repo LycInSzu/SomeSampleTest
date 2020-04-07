@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+************************************************************************
+*History:
+*
+*1.Bug_id:XWLYS-55 WTK_FUNNY_SCREEN_SHOT chenkai
+*  Description: Create for funny screen shot (20160413)
+*
+************************************************************************
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/loading_bg"
+    android:gravity="center"
+    android:minHeight="60dp"
+    android:minWidth="330dp"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <!-- Tolerance -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:text="@string/long_set_tolerance_title"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="8"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tolerance_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#000000" />
+
+            <SeekBar
+                android:id="@+id/tolerance_seek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:progressDrawable="@drawable/long_set_progress"
+                android:thumb="@drawable/detail_icon_schedule_ball" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tolerance_auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/long_set_auto"
+            android:textColor="@color/long_set_text" />
+    </LinearLayout>
+
+    <!-- Upper status -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:text="@string/long_set_upper_status_title"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="8"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/upper_status_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#000000" />
+
+            <SeekBar
+                android:id="@+id/upper_status_seek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:progressDrawable="@drawable/long_set_progress"
+                android:thumb="@drawable/detail_icon_schedule_ball" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/upper_status_auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/long_set_auto"
+            android:textColor="@color/long_set_text" />
+    </LinearLayout>
+    <!-- Down status -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:text="@string/long_set_down_status_title"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="8"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/down_status_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#000000" />
+
+            <SeekBar
+                android:id="@+id/down_status_seek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:progressDrawable="@drawable/long_set_progress"
+                android:thumb="@drawable/detail_icon_schedule_ball" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/down_status_auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/long_set_auto"
+            android:textColor="@color/long_set_text" />
+    </LinearLayout>
+
+</LinearLayout>

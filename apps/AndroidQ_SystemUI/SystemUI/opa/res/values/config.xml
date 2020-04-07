@@ -1,0 +1,4 @@
+<resources>
+    <!-- SystemUIFactory component -->
+    <string name="config_systemUIFactoryComponent" translatable="false">com.google.android.systemui.SystemUIGoogleFactory</string>
+</resources>

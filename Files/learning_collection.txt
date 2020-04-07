@@ -1732,8 +1732,23 @@ Android平台中蓝牙系统从上到下主要包括Java框架中的BlueTooth类
 被配对是指两台设备知晓彼此的存在，具有可用于身份验证的共享链路密钥，并且能够与彼此建立加密连接。
 被连接是指设备当前共享一个 RFCOMM 通道，并且能够向彼此传输数据。当前的 Android Bluetooth API 要求规定，只有先对设备进行配对，然后才能建立 RFCOMM 连接。在使用 Bluetooth API 发起加密连接时，系统会自动执行配对。
 
+4、BLE
+1）、当用户使用 BLE 将其设备与其他设备配对时，用户设备上的所有应用都可以访问在这两个设备间传输的数据。因此，如果您的应用捕获敏感数据，您应实现应用层安全以保护此类数据的私密性。
 
+您仅能扫描蓝牙 LE 设备或传统蓝牙设备，正如蓝牙概览中所述。您无法同时扫描蓝牙 LE 设备和传统蓝牙设备。
 
+2）、如果您要声明您的应用仅适用于支持 BLE 的设备，请在应用清单中添加以下内容：
+<uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+如果您希望应用适用于不支持 BLE 的设备，则您应仍将此元素添加到应用清单中，但设置 required="false"。然后您可以在运行时使用 PackageManager.hasSystemFeature() 确定 BLE 的可用性：
+// Use this check to determine whether BLE is supported on the device. Then
+// you can selectively disable BLE-related features.
+if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
+    Toast.makeText(this, R.string.ble_not_supported, Toast.LENGTH_SHORT).show();
+    finish();
+}
+
+3）、BluetoothGattCharacteristic
+对于BLE，真正进行数据传输都是通过BluetoothGattCharacteristic。过蓝牙发送数据给外围设备就是往这些 Characteristic 中的 Value 字段写入数据；外围设备发送数据给手机就是监听这些 Charateristic 中的 Value 字段有没有变化，如果发生了变化，手机的 BLE API 就会收到一个监听的回调。
 
 
 

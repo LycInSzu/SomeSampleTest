@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+                android:oneshot="false" >
+
+    <!-- animation-list 帧动画 -->
+    <!-- android:oneshot的值为 false代表播放多次，true代表只播放一次 -->
+    <!-- duration代表每张图片的播放时间 ,定义一个持续时间为50毫秒的动画帧 -->
+    <item
+        android:drawable="@drawable/faceunlock1"
+        android:duration="50"/>
+    <item
+        android:drawable="@drawable/faceunlock2"
+        android:duration="50"/>
+    <item
+        android:drawable="@drawable/faceunlock3"
+        android:duration="50"/>
+    <item
+        android:drawable="@drawable/faceunlock4"
+        android:duration="50"/>
+
+    <item
+        android:drawable="@drawable/faceunlock5"
+        android:duration="50"/>
+    <item
+        android:drawable="@drawable/faceunlock6"
+        android:duration="50"/>
+    <item
+        android:drawable="@drawable/faceunlock7"
+        android:duration="50"/>
+    <item
+        android:drawable="@drawable/faceunlock8"
+        android:duration="50"/>
+    <item
+        android:drawable="@drawable/faceunlock9"
+        android:duration="50"/>
+    <item
+        android:drawable="@drawable/faceunlock10"
+        android:duration="50"/>
+    <item
+        android:drawable="@drawable/faceunlock11"
+        android:duration="50"/>
+    <item
+        android:drawable="@drawable/faceunlock12"
+        android:duration="50"/>
+
+    <item
+        android:drawable="@drawable/faceunlock13"
+        android:duration="50"/>
+    <item
+        android:drawable="@drawable/faceunlock14"
+        android:duration="50"/>
+    <item
+        android:drawable="@drawable/faceunlock15"
+        android:duration="50"/>
+    <item
+        android:drawable="@drawable/faceunlock16"
+        android:duration="50"/>
+
+</animation-list>

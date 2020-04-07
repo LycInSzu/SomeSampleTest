@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Copiers>
+
+    <!-- 
+    srcPath: the source path 
+    dstPath: the dst path 
+    don't forget the '/' at the end of the path
+    now doesn't support external SDCARD,just support internal SDCARD and inner rom
+    -->
+
+    <!--
+    in android P,this method does work ,
+    but filesgo will both display storage/emulated/0/Movies/movie.mp4 and /system/media/custom/Movies/movie.mp4
+    so wired!
+
+    <Copier dstPath="/storage/emulated/0/Movies" srcPath="/system/media/custom/Movies" />
+    <Copier dstPath="/storage/emulated/0/Music" srcPath="/system/media/custom/Music" />
+    -->
+
+    <!--
+    in android P,this method donsen't work ,
+    so wired!
+
+    <Copier dstPath="/storage/sdcard0/Movies" srcPath="/system/media/custom/Movies" />
+    <Copier dstPath="/storage/sdcard0/Music" srcPath="/system/media/custom/Music" />
+    -->
+
+    <!--use this method , put both mp3 mp4 in /system/media/custom/audio_video ,
+    in CopyMasterWTK.java  doCopy(), add this
+    if (dstRealPath.endsWith(".mp4")) {
+        dstRealPath = dstRealPath.replace("Music", "Movies");
+    }-->
+
+    <Copier
+        dstPath="/storage/emulated/0/Music"
+        srcPath="/system/media/custom/audio_video" />
+    <Copier srcPath="/product/media/custom/Wallpapers" dstPath="/storage/emulated/0/Wallpapers"/>
+
+</Copiers>
